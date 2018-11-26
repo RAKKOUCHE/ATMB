@@ -1,0 +1,32 @@
+﻿namespace DeviceLibrary
+{
+    partial class CHopper : CccTalk
+    {
+        public new enum Header : byte
+        {
+            REQUESTHIGHLOWSTATUS = 217,
+            MODIFYPAYOUTABSOLUTECOUNT =208,
+            REQUESTPAYOUTABSOLUTECOUNT=207,
+            MODIFYPAYOUTCAPACITY=187,
+            REQUESTPAYOUTCAPACITY=186,
+            MODIFYPAYOUTFLOAT=175,
+            REQUESTPAYOUTFLOAT=174,
+            EMERGENCYSTOP=172,
+            REQUESTHOPPERCOIN=171,
+            REQUESTHOPPERDISPENSECOUNT = 168,
+            DISPENSEHOPPERCOINS=167,
+            REQUESTHOPPERSTATUS=166,
+            MODIFYVARIABLESET=165,
+            ENABLEHOPPER=164,
+            TESTHOPPER=163,
+            PUMPRNG = 161,
+            REQUESTCIPHERKEY = 160,
+            DISPENSEHOPPERVALUE = 134,
+            REQUESTHOPPERPOLLINGVALUE = 133,
+            EMERGENCYSTOPVALUE = 132,
+            REQUESTHOPPERCOINVALUE = 131,
+            REQUESTINDEXEDDHOPPERDISPENSECOUNT = 130,
+            REQUESTENCRYPTEDHOPPERSTATUS= 109,
+        }
+    }
+}

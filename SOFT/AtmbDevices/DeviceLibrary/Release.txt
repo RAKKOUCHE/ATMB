@@ -1,0 +1,44 @@
+﻿** ****************************************************************************
+ * \brief dll de gestion des périphériques de gestion des espèces sur les bornes de péages
+ * \details
+ * \date 2018.11.24
+ * \author Rachid AKKOUCHE
+ *******************************************************************************/
+
+/** ****************************************************************************
+ * \mainpage  DOCUMENTATION SOFTWARE
+ * 
+ *  <b>     RASoftware</b><BR>
+ *	        2 rue Georges MELIES<BR>
+ *          78390 BOIS D'ARCY<BR>
+*	        +33 651 60 40 4<BR>
+ *	<a href = "http://www.rasoftware.fr">http://www.rasoftware.fr </a> <BR><BR>
+ *
+ * <CENTER>Copyright<b>© RASoftware</b> 2018 </CENTER>  <BR>
+ * 
+ *  
+ * The information contained here-in is the property of RASoftware and is not 
+ * to be disclosed or used without the prior written permission of RASoftware. 
+ * This	copyright extends to all media in which this information may be 
+ * preserved including magnetic storage, computer print-out or visual 		
+ * display.                                                                  
+ * <CENTER>--------------------------------------------------------</CENTER><BR><BR>
+ * 
+ * 
+ * <b>Change history</b>
+ * 
+ * <b>Rev. 09.0.39 </b>   2018 11 24<br>
+ *
+ * \n Modification
+ * -# Mise en place de la documentation
+ *
+ * <b>Rev. 09.0.40 </b>   2018 11 26<br>
+ *
+ * \n Bug
+ * -# Echec d'initialisation introduit dans la version 09.0.39
+ *
+ * \n Modification
+ * -# Correction du bug sur l'échec d'initialisation
+ *
+ */
+/*****************************************************************************/

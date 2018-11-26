@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ccTalkInstance" xml:space="preserve">
+    <value>Instanciation ccTalk.</value>
+    <comment>Message lors de l'instanciation de la classe ccTalk</comment>
+  </data>
+  <data name="noccTalkDevice" xml:space="preserve">
+    <value>{0} Lecture impossible, pas de bus ccTalk ou pas de periphérique ccTalk reconnu ou periphérique HS sur le port {1}.</value>
+    <comment>Message indiquant qu'aucun périphériques ccTalk n'a répondu</comment>
+  </data>
+  <data name="busOKfinded" xml:space="preserve">
+    <value>Bus ccTalk trouvé sur le port {0}.</value>
+    <comment>Message indiquant la découverte d'un port série connecté sur le bus ccTalk.</comment>
+  </data>
+  <data name="echo" xml:space="preserve">
+    <value>Echo : </value>
+  </data>
+  <data name="erreur" xml:space="preserve">
+    <value>ERREUR {0} {1} {2}.</value>
+    <comment>Message d'erreur dans le log</comment>
+  </data>
+  <data name="erreurPort" xml:space="preserve">
+    <value>Erreur de conversion du numero de port {0}.</value>
+    <comment>Message d'erreur indiquant une erreur dans le numéro de part.</comment>
+  </data>
+  <data name="readAnswerDevice" xml:space="preserve">
+    <value>Lecture de la réponse du périphérique.</value>
+    <comment>Message indiquant l'attente de la réponse du périphérique.</comment>
+  </data>
+  <data name="readEcho" xml:space="preserve">
+    <value>Lecture de l'écho.</value>
+  </data>
+  <data name="search_ccTalk" xml:space="preserve">
+    <value>Recherche du port série ccTalk.</value>
+    <comment>Message de démarrage de la recherche du port utilisé par le bus ccTalk.</comment>
+  </data>
+  <data name="sendCmd" xml:space="preserve">
+    <value>Envoi de la commande {0} au {1}</value>
+    <comment>Message indiquant la commande envoyee.</comment>
+  </data>
+  <data name="txtAnswer" xml:space="preserve">
+    <value>Réponse : </value>
+  </data>
+  <data name="txtMessageSended" xml:space="preserve">
+    <value>Message envoyé : </value>
+  </data>
+  <data name="verifSerialPort" xml:space="preserve">
+    <value>Vérification sur le port série {0}.</value>
+    <comment>Message indiquant le port série en cours de recherche.</comment>
+  </data>
+  <data name="callDll" xml:space="preserve">
+    <value>Appel de la dll</value>
+    <comment>Message indiquant l'utilisation de la dll.</comment>
+  </data>
+  <data name="hello" xml:space="preserve">
+    <value>HELLO</value>
+  </data>
+  <data name="starLine" xml:space="preserve">
+    <value>*************************************************</value>
+  </data>
+  <data name="delayPolling" xml:space="preserve">
+    <value>Delai maximum entre 2 commande pour le {0} est de {1} ms</value>
+    <comment>Message donnant le délai maximum entre 2 commandes en millisecondes</comment>
+  </data>
+  <data name="polling" xml:space="preserve">
+    <value>Lecture du délai de polling</value>
+    <comment>Message indiquant que la fonction de lecture du polling  est appelée.</comment>
+  </data>
+  <data name="getPolling" xml:space="preserve">
+    <value>Demande du délai de polling pour le {0}</value>
+    <comment>Message indiquant une requête sur le délai de polling au périphérique</comment>
+  </data>
+  <data name="getManufacturer" xml:space="preserve">
+    <value>Demande de l'identifiant du fabricant du {0}</value>
+    <comment>Message indiquant la demande du nom du fabricant.</comment>
+  </data>
+  <data name="erreurPollingPriority" xml:space="preserve">
+    <value>Impossible de lire la délai du polling {0}</value>
+    <comment>Message indiquant qu'il est impossible de lire le délai de polling</comment>
+  </data>
+  <data name="buildCode" xml:space="preserve">
+    <value>Le build code du {0} est {1}</value>
+  </data>
+  <data name="dataBaseVersion" xml:space="preserve">
+    <value>La version de la data base du {0} est {1}</value>
+  </data>
+  <data name="equipementID" xml:space="preserve">
+    <value>L'identitification de l'equipement est {0}</value>
+  </data>
+  <data name="erreurCmd" xml:space="preserve">
+    <value>Impossible d'effectuer la commande {0} sur le {1}</value>
+  </data>
+  <data name="getBuildCode" xml:space="preserve">
+    <value>Demande du code de fabrication du {0}</value>
+    <comment>Message indiquant la demande du build code.</comment>
+  </data>
+  <data name="getByte" xml:space="preserve">
+    <value>Lecture de l'octet dans  le {0}</value>
+  </data>
+  <data name="getDataBaseVersion" xml:space="preserve">
+    <value>Demande de la version de la data base du {0}</value>
+  </data>
+  <data name="getEquipementID" xml:space="preserve">
+    <value>Le périphérique est un {0}</value>
+  </data>
+  <data name="getProductCode" xml:space="preserve">
+    <value>Demande du code produit du  {0}</value>
+    <comment>Message indiquant la demande du code produit</comment>
+  </data>
+  <data name="getSN" xml:space="preserve">
+    <value>Demande du numéro de série du {0}</value>
+  </data>
+  <data name="getSWRev" xml:space="preserve">
+    <value>Demande de la vérivision software du {0}</value>
+  </data>
+  <data name="getText" xml:space="preserve">
+    <value>Lecture de la chaine ASCII dans le {0}</value>
+  </data>
+  <data name="manufacturer" xml:space="preserve">
+    <value>L'identifiant du fabricant du {0} est {1} </value>
+  </data>
+  <data name="productCode" xml:space="preserve">
+    <value>Le code produit du {0} est {1} </value>
+  </data>
+  <data name="serialNumber" xml:space="preserve">
+    <value>Le numéro de série du {0} est {1} </value>
+  </data>
+  <data name="swRev" xml:space="preserve">
+    <value>La revision software du {0} est {1}</value>
+  </data>
+  <data name="testMotor" xml:space="preserve">
+    <value>Test moteur {0}</value>
+  </data>
+  <data name="testSolenoid" xml:space="preserve">
+    <value>Test des bobines du {0}</value>
+  </data>
+  <data name="cmdMotorPelicano" xml:space="preserve">
+    <value>Commande {0} moteur du pelicano </value>
+  </data>
+  <data name="cmdMotorPelicanoInProgress" xml:space="preserve">
+    <value>Le moteur du pelicano est activé.</value>
+  </data>
+  <data name="cmdMotorPelicanoMode" xml:space="preserve">
+    <value>Activation du moteur du pelicano commande {0}</value>
+  </data>
+  <data name="cmdSelfTest" xml:space="preserve">
+    <value>Effectue un self test du {0}</value>
+  </data>
+  <data name="errGetInhibitStatus" xml:space="preserve">
+    <value>Impossible de lire le masque d'inhibition des canaux du {0}</value>
+  </data>
+  <data name="errInhibitStatus" xml:space="preserve">
+    <value>Impossible de modifier l'habitation des canaux du {0}</value>
+  </data>
+  <data name="errMotorPelicano" xml:space="preserve">
+    <value>Impossible d'executer la commande sur le moteur du pelicano</value>
+  </data>
+  <data name="getInhibitStatus" xml:space="preserve">
+    <value>Lecture du masque d'inhibitiion des canaux du {0}</value>
+  </data>
+  <data name="getMasterInhibt" xml:space="preserve">
+    <value>Lecture de l'inhibition du {0}</value>
+  </data>
+  <data name="inhibitStatus" xml:space="preserve">
+    <value>Modifie l'habilitation  des canaux du {0} {1} {2}</value>
+  </data>
+  <data name="inhibitStatusResult" xml:space="preserve">
+    <value>le {0} est {1}</value>
+  </data>
+  <data name="selfTest" xml:space="preserve">
+    <value>Le résultat du self test du {0} est {1}</value>
+  </data>
+  <data name="activationCV" xml:space="preserve">
+    <value>Activation du {0}</value>
+  </data>
+  <data name="deactivationCV" xml:space="preserve">
+    <value>Desactivation du {0}</value>
+  </data>
+  <data name="errMasterInhibitStatus" xml:space="preserve">
+    <value>Impossible d'enregistrer le master inhibit status du {0}</value>
+  </data>
+  <data name="sendMasterInhibitStatus" xml:space="preserve">
+    <value>Envoie la commande master inhibit {0} au {1}</value>
+  </data>
+</root>

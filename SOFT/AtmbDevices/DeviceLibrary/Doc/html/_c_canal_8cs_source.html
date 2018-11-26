@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ATMB DeviceLibrary:  Fichier source de D:/Projets/ATMB/SOFTWARE/AtmbTestDevices/DeviceLibrary/CCanal.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="RASoftware.bmp"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ATMB DeviceLibrary
+   &#160;<span id="projectnumber">0.9.0.39</span>
+   </div>
+   <div id="projectbrief">Dll de gestion des périphériques traitant les espèces sur les bornes de péages TMB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_c_canal_8cs_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CCanal.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_c_canal_8cs.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespace_device_library.html">    1</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_device_library.html">DeviceLibrary</a></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_device_library_1_1_c_canal.html">    6</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code" href="class_device_library_1_1_c_canal.html">CCanal</a></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_device_library_1_1_c_coin_validator.html">CCoinValidator</a> CVOwner;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_device_library_1_1_c_canal.html#a5b9fc2885e84a372334c45007f8b5cf8">   16</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_device_library_1_1_c_canal_1_1_c_coind_i_d.html">CCoindID</a> <a class="code" href="class_device_library_1_1_c_canal.html#a5b9fc2885e84a372334c45007f8b5cf8">coinId</a>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_device_library_1_1_c_canal.html#a15c9982533901ed86fcc0562a03d67df">   21</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_device_library_1_1_c_canal_1_1_c_sorter.html">CSorter</a> <a class="code" href="class_device_library_1_1_c_canal.html#a15c9982533901ed86fcc0562a03d67df">sorter</a>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">private</span> byte hopperToLoad;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">public</span> byte <a class="code" href="class_device_library_1_1_c_canal.html#a4b920e01736bd1a067401c6cc76e2e4e">HopperToLoad</a></div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_device_library_1_1_c_canal.html#a4b920e01736bd1a067401c6cc76e2e4e">   28</a></span>&#160;        {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">get</span> =&gt; hopperToLoad;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">set</span> =&gt; hopperToLoad = value;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_device_library_1_1_c_canal.html#a5cb0d553ef6f6edc5a7268b1a427767b">   36</a></span>&#160;        <span class="keyword">public</span> byte <a class="code" href="class_device_library_1_1_c_canal.html#a5cb0d553ef6f6edc5a7268b1a427767b">Number</a>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">long</span> <a class="code" href="class_device_library_1_1_c_canal.html#a01b652a04377f5daeb275adbad9ae1c2">CoinIn</a></div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_device_library_1_1_c_canal.html#a01b652a04377f5daeb275adbad9ae1c2">   42</a></span>&#160;        {</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">get</span> =&gt; <a class="code" href="class_device_library_1_1_ccc_talk.html">CccTalk</a>.<a class="code" href="class_device_library_1_1_ccc_talk.html#a3810c0aa448865e19afff87a946fee5d">counters</a>.<a class="code" href="class_device_library_1_1_ccoins_counters.html#ae75de715aba60bff644ebd5193c30452">coinsInAccepted</a>[<a class="code" href="class_device_library_1_1_c_canal.html#a5cb0d553ef6f6edc5a7268b1a427767b">Number</a> - 1];</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">set</span> =&gt; <a class="code" href="class_device_library_1_1_ccc_talk.html">CccTalk</a>.<a class="code" href="class_device_library_1_1_ccc_talk.html#a3810c0aa448865e19afff87a946fee5d">counters</a>.<a class="code" href="class_device_library_1_1_ccoins_counters.html#ae75de715aba60bff644ebd5193c30452">coinsInAccepted</a>[<a class="code" href="class_device_library_1_1_c_canal.html#a5cb0d553ef6f6edc5a7268b1a427767b">Number</a> - 1] = value;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">long</span> <a class="code" href="class_device_library_1_1_c_canal.html#ac80e273e29e18b3f2b598aaf9f04506f">MontantIn</a></div><div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_device_library_1_1_c_canal.html#ac80e273e29e18b3f2b598aaf9f04506f">   51</a></span>&#160;        {</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keyword">get</span> =&gt; <a class="code" href="class_device_library_1_1_ccc_talk.html">CccTalk</a>.<a class="code" href="class_device_library_1_1_ccc_talk.html#a3810c0aa448865e19afff87a946fee5d">counters</a>.<a class="code" href="class_device_library_1_1_ccoins_counters.html#af660ed03f005088af19e254c486f3c70">amountCoinInAccepted</a>[<a class="code" href="class_device_library_1_1_c_canal.html#a5cb0d553ef6f6edc5a7268b1a427767b">Number</a> - 1];</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keyword">set</span> =&gt; <a class="code" href="class_device_library_1_1_ccc_talk.html">CccTalk</a>.<a class="code" href="class_device_library_1_1_ccc_talk.html#a3810c0aa448865e19afff87a946fee5d">counters</a>.<a class="code" href="class_device_library_1_1_ccoins_counters.html#af660ed03f005088af19e254c486f3c70">amountCoinInAccepted</a>[<a class="code" href="class_device_library_1_1_c_canal.html#a5cb0d553ef6f6edc5a7268b1a427767b">Number</a> - 1] = value;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_device_library_1_1_c_canal.html#a31af2f08cfb27d40798116fdc0cfb372">   61</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_device_library_1_1_c_canal.html#a31af2f08cfb27d40798116fdc0cfb372">CCanal</a>(byte number, <a class="code" href="class_device_library_1_1_c_coin_validator.html">CCoinValidator</a> owner)</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_device_library_1_1_c_canal.html#a5cb0d553ef6f6edc5a7268b1a427767b">Number</a> = number;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            CVOwner = owner;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="class_device_library_1_1_c_canal.html#a5b9fc2885e84a372334c45007f8b5cf8">coinId</a> = <span class="keyword">new</span> <a class="code" href="class_device_library_1_1_c_canal_1_1_c_coind_i_d.html">CCoindID</a>(<span class="keyword">this</span>);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="class_device_library_1_1_c_canal.html#a15c9982533901ed86fcc0562a03d67df">sorter</a> = <span class="keyword">new</span> <a class="code" href="class_device_library_1_1_c_canal_1_1_c_sorter.html">CSorter</a>(<span class="keyword">this</span>);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div><div class="ttc" id="class_device_library_1_1_c_canal_html"><div class="ttname"><a href="class_device_library_1_1_c_canal.html">DeviceLibrary.CCanal</a></div><div class="ttdoc">Class d&amp;#39;un canal </div><div class="ttdef"><b>Definition:</b> <a href="_c_canal_8cs_source.html#l00006">CCanal.cs:6</a></div></div>
+<div class="ttc" id="class_device_library_1_1_ccc_talk_html_a3810c0aa448865e19afff87a946fee5d"><div class="ttname"><a href="class_device_library_1_1_ccc_talk.html#a3810c0aa448865e19afff87a946fee5d">DeviceLibrary.CccTalk.counters</a></div><div class="ttdeci">static CcoinsCounters counters</div><div class="ttdoc">Compteurs </div><div class="ttdef"><b>Definition:</b> <a href="_c_ctalk_8cs_source.html#l00050">CCtalk.cs:50</a></div></div>
+<div class="ttc" id="class_device_library_1_1_c_canal_html_ac80e273e29e18b3f2b598aaf9f04506f"><div class="ttname"><a href="class_device_library_1_1_c_canal.html#ac80e273e29e18b3f2b598aaf9f04506f">DeviceLibrary.CCanal.MontantIn</a></div><div class="ttdeci">long MontantIn</div><div class="ttdoc">Montant introduit dans le canal </div><div class="ttdef"><b>Definition:</b> <a href="_c_canal_8cs_source.html#l00051">CCanal.cs:51</a></div></div>
+<div class="ttc" id="class_device_library_1_1_c_coin_validator_html"><div class="ttname"><a href="class_device_library_1_1_c_coin_validator.html">DeviceLibrary.CCoinValidator</a></div><div class="ttdoc">Class CCoinValidator </div><div class="ttdef"><b>Definition:</b> <a href="_c_coin_validator_8cs_source.html#l00010">CCoinValidator.cs:10</a></div></div>
+<div class="ttc" id="class_device_library_1_1_c_canal_html_a31af2f08cfb27d40798116fdc0cfb372"><div class="ttname"><a href="class_device_library_1_1_c_canal.html#a31af2f08cfb27d40798116fdc0cfb372">DeviceLibrary.CCanal.CCanal</a></div><div class="ttdeci">CCanal(byte number, CCoinValidator owner)</div><div class="ttdoc">Constructeur </div><div class="ttdef"><b>Definition:</b> <a href="_c_canal_8cs_source.html#l00061">CCanal.cs:61</a></div></div>
+<div class="ttc" id="class_device_library_1_1_c_canal_html_a15c9982533901ed86fcc0562a03d67df"><div class="ttname"><a href="class_device_library_1_1_c_canal.html#a15c9982533901ed86fcc0562a03d67df">DeviceLibrary.CCanal.sorter</a></div><div class="ttdeci">CSorter sorter</div><div class="ttdef"><b>Definition:</b> <a href="_c_canal_8cs_source.html#l00021">CCanal.cs:21</a></div></div>
+<div class="ttc" id="class_device_library_1_1_c_canal_1_1_c_sorter_html"><div class="ttname"><a href="class_device_library_1_1_c_canal_1_1_c_sorter.html">DeviceLibrary.CCanal.CSorter</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_sorter_8cs_source.html#l00010">CSorter.cs:10</a></div></div>
+<div class="ttc" id="class_device_library_1_1_c_canal_html_a4b920e01736bd1a067401c6cc76e2e4e"><div class="ttname"><a href="class_device_library_1_1_c_canal.html#a4b920e01736bd1a067401c6cc76e2e4e">DeviceLibrary.CCanal.HopperToLoad</a></div><div class="ttdeci">byte HopperToLoad</div><div class="ttdef"><b>Definition:</b> <a href="_c_canal_8cs_source.html#l00028">CCanal.cs:28</a></div></div>
+<div class="ttc" id="class_device_library_1_1_ccoins_counters_html_af660ed03f005088af19e254c486f3c70"><div class="ttname"><a href="class_device_library_1_1_ccoins_counters.html#af660ed03f005088af19e254c486f3c70">DeviceLibrary.CcoinsCounters.amountCoinInAccepted</a></div><div class="ttdeci">long [] amountCoinInAccepted</div><div class="ttdef"><b>Definition:</b> <a href="_ccounters_8cs_source.html#l00014">Ccounters.cs:14</a></div></div>
+<div class="ttc" id="class_device_library_1_1_c_canal_html_a01b652a04377f5daeb275adbad9ae1c2"><div class="ttname"><a href="class_device_library_1_1_c_canal.html#a01b652a04377f5daeb275adbad9ae1c2">DeviceLibrary.CCanal.CoinIn</a></div><div class="ttdeci">long CoinIn</div><div class="ttdoc">Nombre de pièces reconnues par le canal. </div><div class="ttdef"><b>Definition:</b> <a href="_c_canal_8cs_source.html#l00042">CCanal.cs:42</a></div></div>
+<div class="ttc" id="class_device_library_1_1_ccc_talk_html"><div class="ttname"><a href="class_device_library_1_1_ccc_talk.html">DeviceLibrary.CccTalk</a></div><div class="ttdef"><b>Definition:</b> <a href="_ccc_talk_8_header_8cs_source.html#l00003">CccTalk.Header.cs:3</a></div></div>
+<div class="ttc" id="class_device_library_1_1_c_canal_html_a5b9fc2885e84a372334c45007f8b5cf8"><div class="ttname"><a href="class_device_library_1_1_c_canal.html#a5b9fc2885e84a372334c45007f8b5cf8">DeviceLibrary.CCanal.coinId</a></div><div class="ttdeci">CCoindID coinId</div><div class="ttdef"><b>Definition:</b> <a href="_c_canal_8cs_source.html#l00016">CCanal.cs:16</a></div></div>
+<div class="ttc" id="class_device_library_1_1_ccoins_counters_html_ae75de715aba60bff644ebd5193c30452"><div class="ttname"><a href="class_device_library_1_1_ccoins_counters.html#ae75de715aba60bff644ebd5193c30452">DeviceLibrary.CcoinsCounters.coinsInAccepted</a></div><div class="ttdeci">long [] coinsInAccepted</div><div class="ttdef"><b>Definition:</b> <a href="_ccounters_8cs_source.html#l00013">Ccounters.cs:13</a></div></div>
+<div class="ttc" id="class_device_library_1_1_c_canal_1_1_c_coind_i_d_html"><div class="ttname"><a href="class_device_library_1_1_c_canal_1_1_c_coind_i_d.html">DeviceLibrary.CCanal.CCoindID</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_coind_i_d_8cs_source.html#l00013">CCoindID.cs:13</a></div></div>
+<div class="ttc" id="namespace_device_library_html"><div class="ttname"><a href="namespace_device_library.html">DeviceLibrary</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_canal_8cs_source.html#l00001">CCanal.cs:1</a></div></div>
+<div class="ttc" id="class_device_library_1_1_c_canal_html_a5cb0d553ef6f6edc5a7268b1a427767b"><div class="ttname"><a href="class_device_library_1_1_c_canal.html#a5cb0d553ef6f6edc5a7268b1a427767b">DeviceLibrary.CCanal.Number</a></div><div class="ttdeci">byte Number</div><div class="ttdef"><b>Definition:</b> <a href="_c_canal_8cs_source.html#l00036">CCanal.cs:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ef17207d069a71f169fdde842b8bccd0.html">SOFTWARE</a></li><li class="navelem"><a class="el" href="dir_65e8cc5eac2254129d15ebe9da713ca9.html">AtmbTestDevices</a></li><li class="navelem"><a class="el" href="dir_956838d678615f87b838244bdbc9d20a.html">DeviceLibrary</a></li><li class="navelem"><a class="el" href="_c_canal_8cs.html">CCanal.cs</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>
