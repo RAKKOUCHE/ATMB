@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['dispensecoins',['DispenseCoins',['../class_device_library_1_1_c_hopper.html#adc0fd478490e3ef5e255f7bc2f64f506',1,'DeviceLibrary::CHopper']]],
-  ['dispose',['Dispose',['../class_device_library_1_1_c_devices_manage.html#a369960a1c585a85b637c7c217f927e1f',1,'DeviceLibrary::CDevicesManage']]],
-  ['distribute',['Distribute',['../class_device_library_1_1_c_hopper.html#a1161f40b938189953cede1eb8a844672',1,'DeviceLibrary::CHopper']]]
+  ['disablehopper',['DisableHopper',['../d2/d39/classDeviceLibrary_1_1CHopper.html#a249817ca4a7fdb2bbf651a9be1568882',1,'DeviceLibrary::CHopper']]],
+  ['dispensecoins',['DispenseCoins',['../d2/d39/classDeviceLibrary_1_1CHopper.html#a2d282b7d5031ca4be7d99fac03871d95',1,'DeviceLibrary::CHopper']]],
+  ['dispose',['Dispose',['../d7/d2d/classDeviceLibrary_1_1CDevicesManage.html#a6e2d745cdb7a7b983f861ed6a9a541a7',1,'DeviceLibrary::CDevicesManage']]],
+  ['distribute',['Distribute',['../d2/d39/classDeviceLibrary_1_1CHopper.html#a93956c45e9bdd105a6a927c128d911ef',1,'DeviceLibrary::CHopper']]]
 ];

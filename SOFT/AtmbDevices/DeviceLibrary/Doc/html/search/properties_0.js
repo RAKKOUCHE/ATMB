@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['activationcv',['activationCV',['../class_device_library_1_1messages_text.html#a1b8c8f4de98cd13953372dac6cf288da',1,'DeviceLibrary::messagesText']]],
-  ['amountinhopper',['AmountInHopper',['../class_device_library_1_1_c_hopper.html#a0a7c83ec2bf3e3ac22e6585e6c0ff4ae',1,'DeviceLibrary::CHopper']]],
-  ['amountloadedinhopper',['AmountLoadedInHopper',['../class_device_library_1_1_c_hopper.html#a9a68e629bcbc3cfc2c6828516e2a152d',1,'DeviceLibrary::CHopper']]],
-  ['amountout',['AmountOut',['../class_device_library_1_1_c_hopper.html#a341c4cee94631414e512d7edf2d3b2fc',1,'DeviceLibrary::CHopper']]]
+  ['acceptlimitfeature',['AcceptLimitFeature',['../db/dfe/classDeviceLibrary_1_1CPelicano.html#a9e2ec1a39172848cf1104436c3eac99c',1,'DeviceLibrary::CPelicano']]],
+  ['activationcv',['activationCV',['../d6/df2/classDeviceLibrary_1_1messagesText.html#a51332493426d88d2bb420527bb9760e8',1,'DeviceLibrary::messagesText']]],
+  ['amountinhopper',['AmountInHopper',['../d2/d39/classDeviceLibrary_1_1CHopper.html#a04f57f151b3a7c10770373d2a5f768e3',1,'DeviceLibrary::CHopper']]],
+  ['amountloadedinhopper',['AmountLoadedInHopper',['../d2/d39/classDeviceLibrary_1_1CHopper.html#aaa2df703ea43f650e17b324ef8be8338',1,'DeviceLibrary::CHopper']]],
+  ['amountout',['AmountOut',['../d2/d39/classDeviceLibrary_1_1CHopper.html#ae670553b5f68b1c0ed37beecfb596c21',1,'DeviceLibrary::CHopper']]]
 ];

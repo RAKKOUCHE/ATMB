@@ -31,7 +31,7 @@ var menudata={children:[
 {text:"Classes",url:"annotated.html",children:[
 {text:"Liste des classes",url:"annotated.html"},
 {text:"Index des classes",url:"classes.html"},
-{text:"Hiérarchie des classes",url:"hierarchy.html"},
+{text:"Hiérarchie des classes",url:"inherits.html"},
 {text:"Membres de classe",url:"functions.html",children:[
 {text:"Tout",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
@@ -52,7 +52,9 @@ var menudata={children:[
 {text:"s",url:"functions_s.html#index_s"},
 {text:"t",url:"functions_t.html#index_t"},
 {text:"v",url:"functions_v.html#index_v"},
-{text:"w",url:"functions_w.html#index_w"}]},
+{text:"w",url:"functions_w.html#index_w"},
+{text:"z",url:"functions_z.html#index_z"},
+{text:"~",url:"functions_0x7e.html#index_0x7e"}]},
 {text:"Fonctions",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"c",url:"functions_func.html#index_c"},
@@ -62,10 +64,13 @@ var menudata={children:[
 {text:"i",url:"functions_func.html#index_i"},
 {text:"l",url:"functions_func.html#index_l"},
 {text:"m",url:"functions_func.html#index_m"},
+{text:"o",url:"functions_func.html#index_o"},
 {text:"p",url:"functions_func.html#index_p"},
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
-{text:"t",url:"functions_func.html#index_t"}]},
+{text:"t",url:"functions_func.html#index_t"},
+{text:"z",url:"functions_func.html#index_z"},
+{text:"~",url:"functions_func.html#index_0x7e"}]},
 {text:"Variables",url:"functions_vars.html",children:[
 {text:"a",url:"functions_vars.html#index_a"},
 {text:"b",url:"functions_vars.html#index_b"},
@@ -75,6 +80,7 @@ var menudata={children:[
 {text:"f",url:"functions_vars.html#index_f"},
 {text:"h",url:"functions_vars.html#index_h"},
 {text:"i",url:"functions_vars.html#index_i"},
+{text:"l",url:"functions_vars.html#index_l"},
 {text:"m",url:"functions_vars.html#index_m"},
 {text:"n",url:"functions_vars.html#index_n"},
 {text:"o",url:"functions_vars.html#index_o"},
@@ -82,7 +88,8 @@ var menudata={children:[
 {text:"r",url:"functions_vars.html#index_r"},
 {text:"s",url:"functions_vars.html#index_s"},
 {text:"t",url:"functions_vars.html#index_t"},
-{text:"v",url:"functions_vars.html#index_v"}]},
+{text:"v",url:"functions_vars.html#index_v"},
+{text:"w",url:"functions_vars.html#index_w"}]},
 {text:"Énumérations",url:"functions_enum.html"},
 {text:"Propriétés",url:"functions_prop.html",children:[
 {text:"a",url:"functions_prop.html#index_a"},

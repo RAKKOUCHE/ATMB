@@ -126,7 +126,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tbToPay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1174, 31</value>
+    <value>1200, 58</value>
   </data>
   <data name="tbToPay.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -151,13 +151,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbToPay.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="labelAmountToPay.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="labelAmountToPay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1083, 29</value>
+    <value>1109, 56</value>
   </data>
   <data name="labelAmountToPay.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -181,34 +181,34 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelAmountToPay.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
-  <data name="btnExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="buttonExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
-  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1174, 447</value>
+  <data name="buttonExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1200, 988</value>
   </data>
-  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonExit.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="btnExit.Text" xml:space="preserve">
+  <data name="buttonExit.Text" xml:space="preserve">
     <value>&amp;Quitter</value>
   </data>
-  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
-    <value>btnExit</value>
+  <data name="&gt;&gt;buttonExit.Name" xml:space="preserve">
+    <value>buttonExit</value>
   </data>
-  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonExit.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonExit.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="&gt;&gt;buttonExit.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>119, 17</value>
@@ -232,10 +232,10 @@
     <value> </value>
   </data>
   <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 487</value>
+    <value>0, 1028</value>
   </data>
   <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1286, 24</value>
+    <value>1312, 24</value>
   </data>
   <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -250,7 +250,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
@@ -259,7 +259,7 @@
     <value>Top, Right</value>
   </data>
   <data name="labelAmountReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1083, 55</value>
+    <value>1109, 82</value>
   </data>
   <data name="labelAmountReceived.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -283,13 +283,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelAmountReceived.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="tbReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="tbReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1174, 57</value>
+    <value>1200, 84</value>
   </data>
   <data name="tbReceived.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -313,13 +313,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbReceived.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="labelAmountRemaining.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="labelAmountRemaining.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1083, 81</value>
+    <value>1109, 108</value>
   </data>
   <data name="labelAmountRemaining.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -343,13 +343,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelAmountRemaining.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="tbRemaining.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="tbRemaining.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1174, 83</value>
+    <value>1200, 110</value>
   </data>
   <data name="tbRemaining.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -373,13 +373,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbRemaining.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="tbDenomination.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="tbDenomination.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1174, 109</value>
+    <value>1200, 136</value>
   </data>
   <data name="tbDenomination.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -403,7 +403,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbDenomination.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="labelDenomination.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -412,7 +412,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelDenomination.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1083, 108</value>
+    <value>1109, 135</value>
   </data>
   <data name="labelDenomination.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -436,7 +436,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelDenomination.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <metadata name="contextMenuStripClear.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>228, 17</value>
@@ -456,32 +456,167 @@
   <data name="&gt;&gt;contextMenuStripClear.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tbInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 31</value>
+  <data name="buttonHoppers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="tbInfo.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="buttonHoppers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1200, 959</value>
   </data>
-  <data name="tbInfo.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Both</value>
+  <data name="buttonHoppers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
   </data>
-  <data name="tbInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>750, 232</value>
+  <data name="buttonHoppers.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="tbInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="buttonHoppers.Text" xml:space="preserve">
+    <value>&amp;Hoppers</value>
   </data>
-  <data name="&gt;&gt;tbInfo.Name" xml:space="preserve">
-    <value>tbInfo</value>
+  <data name="&gt;&gt;buttonHoppers.Name" xml:space="preserve">
+    <value>buttonHoppers</value>
   </data>
-  <data name="&gt;&gt;tbInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;buttonHoppers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tbInfo.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonHoppers.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;tbInfo.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;buttonHoppers.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonCounters.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="buttonCounters.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonCounters.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1200, 901</value>
+  </data>
+  <data name="buttonCounters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="buttonCounters.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="buttonCounters.Text" xml:space="preserve">
+    <value>&amp;Compteurs</value>
+  </data>
+  <data name="&gt;&gt;buttonCounters.Name" xml:space="preserve">
+    <value>buttonCounters</value>
+  </data>
+  <data name="&gt;&gt;buttonCounters.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCounters.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonCounters.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonRAZCompteurs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="buttonRAZCompteurs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonRAZCompteurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1200, 930</value>
+  </data>
+  <data name="buttonRAZCompteurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="buttonRAZCompteurs.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="buttonRAZCompteurs.Text" xml:space="preserve">
+    <value>R.&amp;A.Z Compteurs</value>
+  </data>
+  <data name="&gt;&gt;buttonRAZCompteurs.Name" xml:space="preserve">
+    <value>buttonRAZCompteurs</value>
+  </data>
+  <data name="&gt;&gt;buttonRAZCompteurs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonRAZCompteurs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonRAZCompteurs.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 24</value>
+  </data>
+  <data name="labelInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="labelInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="labelInfo.Text" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.Name" xml:space="preserve">
+    <value>labelInfo</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.Parent" xml:space="preserve">
+    <value>groupBoxPieces</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="Nom.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Nom.HeaderText" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Nom.Width" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <metadata name="Montant.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Montant.HeaderText" xml:space="preserve">
+    <value>Montant/Nbre</value>
+  </data>
+  <data name="Montant.Width" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="dataGridViewCompteurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>762, 45</value>
+  </data>
+  <data name="dataGridViewCompteurs.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="dataGridViewCompteurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 439</value>
+  </data>
+  <data name="dataGridViewCompteurs.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCompteurs.Name" xml:space="preserve">
+    <value>dataGridViewCompteurs</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCompteurs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCompteurs.Parent" xml:space="preserve">
+    <value>groupBoxPieces</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCompteurs.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="Identifiant.HeaderText" xml:space="preserve">
     <value>Identifiant</value>
@@ -583,7 +718,7 @@
     <value>41</value>
   </data>
   <data name="dataGridViewHopper.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 270</value>
+    <value>6, 284</value>
   </data>
   <data name="dataGridViewHopper.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>None</value>
@@ -592,7 +727,7 @@
     <value>750, 200</value>
   </data>
   <data name="dataGridViewHopper.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>17</value>
   </data>
   <data name="&gt;&gt;dataGridViewHopper.Name" xml:space="preserve">
     <value>dataGridViewHopper</value>
@@ -601,169 +736,310 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewHopper.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>groupBoxPieces</value>
   </data>
   <data name="&gt;&gt;dataGridViewHopper.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="buttonHoppers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="buttonHoppers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1174, 418</value>
-  </data>
-  <data name="buttonHoppers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="buttonHoppers.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="buttonHoppers.Text" xml:space="preserve">
-    <value>&amp;Hoppers</value>
-  </data>
-  <data name="&gt;&gt;buttonHoppers.Name" xml:space="preserve">
-    <value>buttonHoppers</value>
-  </data>
-  <data name="&gt;&gt;buttonHoppers.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonHoppers.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonHoppers.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="Nom.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Nom.HeaderText" xml:space="preserve">
-    <value>Nom</value>
-  </data>
-  <data name="Nom.Width" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <metadata name="Montant.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Montant.HeaderText" xml:space="preserve">
-    <value>Montant/Nbre</value>
-  </data>
-  <data name="Montant.Width" type="System.Int32, mscorlib">
-    <value>111</value>
-  </data>
-  <data name="dataGridViewCompteurs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>768, 31</value>
-  </data>
-  <data name="dataGridViewCompteurs.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="dataGridViewCompteurs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 439</value>
-  </data>
-  <data name="dataGridViewCompteurs.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewCompteurs.Name" xml:space="preserve">
-    <value>dataGridViewCompteurs</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewCompteurs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewCompteurs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewCompteurs.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="buttonCounters.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="buttonCounters.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonCounters.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1174, 360</value>
-  </data>
-  <data name="buttonCounters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="buttonCounters.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="buttonCounters.Text" xml:space="preserve">
-    <value>&amp;Compteurs</value>
-  </data>
-  <data name="&gt;&gt;buttonCounters.Name" xml:space="preserve">
-    <value>buttonCounters</value>
-  </data>
-  <data name="&gt;&gt;buttonCounters.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonCounters.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonCounters.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="buttonRAZCompteurs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="buttonRAZCompteurs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonRAZCompteurs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1174, 389</value>
-  </data>
-  <data name="buttonRAZCompteurs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="buttonRAZCompteurs.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="buttonRAZCompteurs.Text" xml:space="preserve">
-    <value>R.&amp;A.Z Compteurs</value>
-  </data>
-  <data name="&gt;&gt;buttonRAZCompteurs.Name" xml:space="preserve">
-    <value>buttonRAZCompteurs</value>
-  </data>
-  <data name="&gt;&gt;buttonRAZCompteurs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonRAZCompteurs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonRAZCompteurs.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="labelInfo.AutoSize" type="System.Boolean, mscorlib">
+  <data name="tbInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 45</value>
+  </data>
+  <data name="tbInfo.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="labelInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  <data name="tbInfo.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
   </data>
-  <data name="labelInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 10</value>
+  <data name="tbInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 232</value>
   </data>
-  <data name="labelInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
+  <data name="tbInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
-  <data name="labelInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="&gt;&gt;tbInfo.Name" xml:space="preserve">
+    <value>tbInfo</value>
   </data>
-  <data name="labelInfo.Text" xml:space="preserve">
-    <value>Info</value>
+  <data name="&gt;&gt;tbInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelInfo.Name" xml:space="preserve">
-    <value>labelInfo</value>
+  <data name="&gt;&gt;tbInfo.Parent" xml:space="preserve">
+    <value>groupBoxPieces</value>
   </data>
-  <data name="&gt;&gt;labelInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tbInfo.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;labelInfo.Parent" xml:space="preserve">
+  <data name="groupBoxPieces.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="groupBoxPieces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1084, 497</value>
+  </data>
+  <data name="groupBoxPieces.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="groupBoxPieces.Text" xml:space="preserve">
+    <value>Pièces</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPieces.Name" xml:space="preserve">
+    <value>groupBoxPieces</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPieces.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPieces.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelInfo.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;groupBoxPieces.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 24</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Montant/Nbre</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.Width" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>762, 45</value>
+  </data>
+  <data name="dataGridView1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 439</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Identifiant</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.ToolTipText" xml:space="preserve">
+    <value>Identifiant du hopper</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Valeur</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="dataGridViewCheckBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Présent</value>
+  </data>
+  <data name="dataGridViewCheckBoxColumn1.ToolTipText" xml:space="preserve">
+    <value>Présence du hopper</value>
+  </data>
+  <data name="dataGridViewCheckBoxColumn1.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>A dist.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn5.ToolTipText" xml:space="preserve">
+    <value>Nombre de pièces à distribuer</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn5.Width" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Distrib.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn6.ToolTipText" xml:space="preserve">
+    <value>Nombre de pièces distribuées</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn6.Width" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>Level Soft</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn7.ToolTipText" xml:space="preserve">
+    <value>Etat calculé des niveaux du hopper</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn7.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>Level Hard</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn8.ToolTipText" xml:space="preserve">
+    <value>Etat hardware des niveaux hard du hopper</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn8.Width" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="dataGridViewCheckBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Vider</value>
+  </data>
+  <data name="dataGridViewCheckBoxColumn2.ToolTipText" xml:space="preserve">
+    <value>Cocher pour vider le hopper</value>
+  </data>
+  <data name="dataGridViewCheckBoxColumn2.Width" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>Recharge</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn9.ToolTipText" xml:space="preserve">
+    <value>Nombre de pièces à recharger dans le hopper</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <metadata name="dataGridViewCheckBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewCheckBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="dataGridViewCheckBoxColumn3.ToolTipText" xml:space="preserve">
+    <value>Cocher pour effectuer la recharge des compteurs du hopper</value>
+  </data>
+  <data name="dataGridViewCheckBoxColumn3.Width" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="dataGridView2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 284</value>
+  </data>
+  <data name="dataGridView2.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dataGridView2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 200</value>
+  </data>
+  <data name="dataGridView2.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Name" xml:space="preserve">
+    <value>dataGridView2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 45</value>
+  </data>
+  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBox1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 232</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 522</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1084, 502</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Billets</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -834,7 +1110,7 @@
     <value>Zoom</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1286, 511</value>
+    <value>1312, 1052</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -896,6 +1172,18 @@
   <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;Nom.Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="&gt;&gt;Nom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Montant.Name" xml:space="preserve">
+    <value>Montant</value>
+  </data>
+  <data name="&gt;&gt;Montant.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Identifiant.Name" xml:space="preserve">
     <value>Identifiant</value>
   </data>
@@ -956,17 +1244,77 @@
   <data name="&gt;&gt;ToLoad.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Nom.Name" xml:space="preserve">
-    <value>Nom</value>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn1</value>
   </data>
-  <data name="&gt;&gt;Nom.Type" xml:space="preserve">
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Montant.Name" xml:space="preserve">
-    <value>Montant</value>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn2</value>
   </data>
-  <data name="&gt;&gt;Montant.Type" xml:space="preserve">
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCheckBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewCheckBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCheckBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn6</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn7</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn8</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCheckBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewCheckBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCheckBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn9</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCheckBoxColumn3.Name" xml:space="preserve">
+    <value>dataGridViewCheckBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCheckBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

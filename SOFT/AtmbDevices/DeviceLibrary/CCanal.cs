@@ -1,28 +1,28 @@
 ﻿namespace DeviceLibrary
 {
     /// <summary>
-    /// Class d'un canal
+    /// Class 
     /// </summary>
     public partial class CCanal
     {
         /// <summary>
-        /// 
+        /// Class contenant les informations sur un canal
         /// </summary>
         private CCoinValidator CVOwner;
 
         /// <summary>
-        /// 
+        /// Identification de la pièce reconnue dans le canal
         /// </summary>
         public CCoindID coinId;
 
         /// <summary>
-        /// 
+        /// Instance des chemins utilisés pour trier la pièce reconnue dans le canal
         /// </summary>
         public CSorter sorter;
-
+        
         private byte hopperToLoad;
         /// <summary>
-        /// 
+        /// Hopper vers lequel sera dirigé la pièce reconnue
         /// </summary>
         public byte HopperToLoad
         {
@@ -31,7 +31,7 @@
         }
 
         /// <summary>
-        /// 
+        /// Numéro du canal
         /// </summary>
         public byte Number;
 

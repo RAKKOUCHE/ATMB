@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['coinmode',['CoinMode',['../class_device_library_1_1_c_hopper_variable_set.html#a6d46e753370657ed1e4f4ab7bea0dacf',1,'DeviceLibrary::CHopperVariableSet']]],
-  ['coinpresent',['CoinPresent',['../class_device_library_1_1_c_pelicano.html#a87743bbef8551b7349239f48892309c5',1,'DeviceLibrary::CPelicano']]],
-  ['cpelicanoheadererror',['CPelicanoHeaderError',['../class_device_library_1_1_c_pelicano.html#a29bce99363071abc05ecfe3aeaebdbcd',1,'DeviceLibrary::CPelicano']]],
-  ['cverrorcodes',['CVErrorCodes',['../class_device_library_1_1_c_coin_validator.html#a68c5b73cc3b337502d9f92154d933591',1,'DeviceLibrary::CCoinValidator']]],
-  ['cvstatus',['CVStatus',['../class_device_library_1_1_c_coin_validator.html#a62ce7ca9d0cc8ef92edb58f06a34add1',1,'DeviceLibrary::CCoinValidator']]]
+  ['ccmdmotors',['CcmdMotors',['../db/dfe/classDeviceLibrary_1_1CPelicano.html#a28859fdb3852459a0e099def0d314486',1,'DeviceLibrary::CPelicano']]],
+  ['coinmode',['CoinMode',['../dc/dd5/classDeviceLibrary_1_1CHopperVariableSet.html#a9d52ded0c63889f61bbb6013a34093d3',1,'DeviceLibrary::CHopperVariableSet']]],
+  ['coinpresent',['CoinPresent',['../db/dfe/classDeviceLibrary_1_1CPelicano.html#a61df2e3024bd32c6b5f3ca2af309f3e4',1,'DeviceLibrary::CPelicano']]],
+  ['cpelicanoheadererror',['CPelicanoHeaderError',['../db/dfe/classDeviceLibrary_1_1CPelicano.html#a1462845a0c32f99b744f8361dd4c1704',1,'DeviceLibrary::CPelicano']]],
+  ['cverrorcodes',['CVErrorCodes',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#ace81e6103cea9b79f02bcef8d270121d',1,'DeviceLibrary::CCoinValidator']]],
+  ['cvstatus',['CVStatus',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#a873c00f8bff88020c3038b42e74f844a',1,'DeviceLibrary::CCoinValidator']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['masterdisable',['MasterDisable',['../class_device_library_1_1_ccash_reader.html#acd4d9cf6f8ee0299f5521b6ff6fabc57',1,'DeviceLibrary::CcashReader']]],
-  ['masterenable',['MasterEnable',['../class_device_library_1_1_ccash_reader.html#aec351cc4aeaf3fd814808de16bbc97f7',1,'DeviceLibrary::CcashReader']]]
+  ['masterdisable',['MasterDisable',['../da/d38/classDeviceLibrary_1_1CcashReader.html#ada528ca78ea344ac5be19e9857ed6ba0',1,'DeviceLibrary::CcashReader']]],
+  ['masterenable',['MasterEnable',['../da/d38/classDeviceLibrary_1_1CcashReader.html#ae95f57dd6d45db2b07e394678f0b91ff',1,'DeviceLibrary::CcashReader']]],
+  ['messagestext',['messagesText',['../d6/df2/classDeviceLibrary_1_1messagesText.html#ab218dc08a13768c9992e2a782df8ad9f',1,'DeviceLibrary::messagesText']]]
 ];

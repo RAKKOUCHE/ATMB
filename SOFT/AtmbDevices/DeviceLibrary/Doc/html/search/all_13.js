@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['wakeup_5fto',['WAKEUP_TO',['../class_device_library_1_1_c_coin_validator.html#a68c5b73cc3b337502d9f92154d933591a875eb06a96859ac39b2ff14d3a5360de',1,'DeviceLibrary::CCoinValidator']]],
-  ['writeblocks',['WriteBlocks',['../class_device_library_1_1_c_memory_storage.html#aad3f07ff5ba905a568178e1418adbccf',1,'DeviceLibrary::CMemoryStorage']]],
-  ['writebytesperblock',['WriteBytesPerBlock',['../class_device_library_1_1_c_memory_storage.html#a4a4f80a523648f2987095bd16740816f',1,'DeviceLibrary::CMemoryStorage']]],
-  ['writedatablock',['WRITEDATABLOCK',['../class_device_library_1_1_ccc_talk.html#a22f8eb6526627d4203e53ce7dbd3052aaf42de9fb76d8e85f35c258b77e2ff02a',1,'DeviceLibrary::CccTalk']]]
+  ['wakeup_5fto',['WAKEUP_TO',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#ace81e6103cea9b79f02bcef8d270121da875eb06a96859ac39b2ff14d3a5360de',1,'DeviceLibrary::CCoinValidator']]],
+  ['writeblocks',['WriteBlocks',['../d3/dfc/classDeviceLibrary_1_1CMemoryStorage.html#a7efc17d39cc3a595e5655b9b1f7b3088',1,'DeviceLibrary.CMemoryStorage.WriteBlocks()'],['../d3/dfc/classDeviceLibrary_1_1CMemoryStorage.html#a85c6035ca9013b40df5fcbf804ec8ef4',1,'DeviceLibrary.CMemoryStorage.writeBlocks()']]],
+  ['writebytesperblock',['WriteBytesPerBlock',['../d3/dfc/classDeviceLibrary_1_1CMemoryStorage.html#a88ec7612876e14e52ac3a6367893be6e',1,'DeviceLibrary.CMemoryStorage.WriteBytesPerBlock()'],['../d3/dfc/classDeviceLibrary_1_1CMemoryStorage.html#a218bcd99363b0746bdfae214f115d200',1,'DeviceLibrary.CMemoryStorage.writeBytesPerBlock()']]],
+  ['writedatablock',['WRITEDATABLOCK',['../d9/d1b/classDeviceLibrary_1_1CccTalk.html#ad32a347320b13a2313d6d0f60c4d450eaf42de9fb76d8e85f35c258b77e2ff02a',1,'DeviceLibrary::CccTalk']]]
 ];

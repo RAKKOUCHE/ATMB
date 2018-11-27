@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['selftestresult',['SelfTestResult',['../class_device_library_1_1_ccc_talk.html#a179570d2d8f6f95d52ccafb98d20c790',1,'DeviceLibrary::CccTalk']]],
-  ['softlevel',['SoftLevel',['../class_device_library_1_1_c_device_1_1_c_level.html#a83c2976bc299331f1c355e806299bb1f',1,'DeviceLibrary::CDevice::CLevel']]]
+  ['reason',['Reason',['../d8/de8/namespaceDeviceLibrary.html#af38960e2d1da2c992b2232eb3f285c4e',1,'DeviceLibrary']]],
+  ['registrepos',['RegistrePos',['../d2/d39/classDeviceLibrary_1_1CHopper.html#a538dac41440d2eecac1b67c6d6e6fba0',1,'DeviceLibrary::CHopper']]]
 ];

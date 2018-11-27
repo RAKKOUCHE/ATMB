@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['variable',['Variable',['../class_device_library_1_1_c_hopper_variable_set.html#a3b79d051f89692abb5d34ae3f4e946be',1,'DeviceLibrary::CHopperVariableSet']]]
+  ['trashdoor',['TrashDoor',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#ae07354e0ffb21baeb259be22264a3e46',1,'DeviceLibrary::CCoinValidator']]]
 ];

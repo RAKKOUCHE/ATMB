@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['testmotor',['testMotor',['../class_device_library_1_1messages_text.html#a93f4723ab6c2e8f342ace9d99b302555',1,'DeviceLibrary::messagesText']]],
-  ['testsolenoid',['testSolenoid',['../class_device_library_1_1messages_text.html#a19dcdd2a0c76cdbc8f4c7179da6c9b3d',1,'DeviceLibrary::messagesText']]],
-  ['trashlid',['TrashLid',['../class_device_library_1_1_c_coin_validator.html#aec2db3e243a0eb073f5392c41ee0c354',1,'DeviceLibrary::CCoinValidator']]],
-  ['txtanswer',['txtAnswer',['../class_device_library_1_1messages_text.html#a419304b9107134f10dc4b155581aa087',1,'DeviceLibrary::messagesText']]],
-  ['txtmessagesended',['txtMessageSended',['../class_device_library_1_1messages_text.html#aec4481f3887107f375c6a9d5644a3d2e',1,'DeviceLibrary::messagesText']]]
+  ['testmotor',['testMotor',['../d6/df2/classDeviceLibrary_1_1messagesText.html#a006a8ac95094e9788e6fa9a882f5a293',1,'DeviceLibrary::messagesText']]],
+  ['testsolenoid',['testSolenoid',['../d6/df2/classDeviceLibrary_1_1messagesText.html#a78ed17d24aeecb993ba55f36753eceeb',1,'DeviceLibrary::messagesText']]],
+  ['total',['Total',['../d5/d2e/classDeviceLibrary_1_1Properties_1_1Settings.html#a780cc94695a31cfce0116b2b49683470',1,'DeviceLibrary::Properties::Settings']]],
+  ['totalbill',['TotalBill',['../d5/d2e/classDeviceLibrary_1_1Properties_1_1Settings.html#afeddbf8f361b05bceda18fe4d40bc65e',1,'DeviceLibrary::Properties::Settings']]],
+  ['totalcoins',['TotalCoins',['../d5/d2e/classDeviceLibrary_1_1Properties_1_1Settings.html#ab62f2899ccf0623c7be784c77255b23a',1,'DeviceLibrary::Properties::Settings']]],
+  ['trashlid',['TrashLid',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#afd0b7ecd61c0368b03efc9b2f2fb5d78',1,'DeviceLibrary::CCoinValidator']]],
+  ['txtanswer',['txtAnswer',['../d6/df2/classDeviceLibrary_1_1messagesText.html#a995bea81b565052f568b5f95033509cf',1,'DeviceLibrary::messagesText']]],
+  ['txtmessagesended',['txtMessageSended',['../d6/df2/classDeviceLibrary_1_1messagesText.html#afaaaea6fd8a10ee4d4421bbe7284ae14',1,'DeviceLibrary::messagesText']]]
 ];

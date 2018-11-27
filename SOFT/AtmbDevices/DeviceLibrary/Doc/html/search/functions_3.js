@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['empty',['Empty',['../class_device_library_1_1_c_hopper.html#ae47327ae35305769239ffd9922081d57',1,'DeviceLibrary::CHopper']]],
-  ['exceptionatmb',['ExceptionATMB',['../class_device_library_1_1_exception_a_t_m_b.html#aa6fe860703be67f33965ed272ba745ea',1,'DeviceLibrary.ExceptionATMB.ExceptionATMB()'],['../class_device_library_1_1_exception_a_t_m_b.html#a18b103295b8b26cb4d414ef1297daeb5',1,'DeviceLibrary.ExceptionATMB.ExceptionATMB(string Message)']]]
+  ['empty',['Empty',['../d2/d39/classDeviceLibrary_1_1CHopper.html#ae9d0f84a5bb15c855fd8082b03bb794a',1,'DeviceLibrary::CHopper']]],
+  ['enablehopper',['EnableHopper',['../d2/d39/classDeviceLibrary_1_1CHopper.html#aa4f8aabe7bc2b9eb6e677fb2f5ddcd38',1,'DeviceLibrary::CHopper']]],
+  ['exceptionatmb',['ExceptionATMB',['../d6/d73/classDeviceLibrary_1_1ExceptionATMB.html#adb04369bc876c57854d23d9fe8d836ec',1,'DeviceLibrary.ExceptionATMB.ExceptionATMB()'],['../d6/d73/classDeviceLibrary_1_1ExceptionATMB.html#aafdab05a1d9aa06bb2ba4a167584d7dc',1,'DeviceLibrary.ExceptionATMB.ExceptionATMB(string Message)']]]
 ];

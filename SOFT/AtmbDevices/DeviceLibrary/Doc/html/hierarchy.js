@@ -1,47 +1,53 @@
 var hierarchy =
 [
-    [ "DeviceLibrary.CCanal", "class_device_library_1_1_c_canal.html", null ],
-    [ "DeviceLibrary.CCanal.CCoindID", "class_device_library_1_1_c_canal_1_1_c_coind_i_d.html", null ],
-    [ "DeviceLibrary.CcoinsCounters", "class_device_library_1_1_ccoins_counters.html", null ],
-    [ "DeviceLibrary.CCoinValidator.CCVcreditBuffer", "class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer.html", null ],
-    [ "DeviceLibrary.CDevice", "class_device_library_1_1_c_device.html", [
-      [ "DeviceLibrary.CccTalk", "class_device_library_1_1_ccc_talk.html", [
-        [ "DeviceLibrary.CcashReader", "class_device_library_1_1_ccash_reader.html", [
-          [ "DeviceLibrary.CCoinValidator", "class_device_library_1_1_c_coin_validator.html", [
-            [ "DeviceLibrary.CPelicano", "class_device_library_1_1_c_pelicano.html", null ],
-            [ "DeviceLibrary.CPelicano", "class_device_library_1_1_c_pelicano.html", null ],
-            [ "DeviceLibrary.CPelicano", "class_device_library_1_1_c_pelicano.html", null ],
-            [ "DeviceLibrary.CPelicano", "class_device_library_1_1_c_pelicano.html", null ],
-            [ "DeviceLibrary.CPelicano", "class_device_library_1_1_c_pelicano.html", null ]
+    [ "CCanal", "d4/d71/classDeviceLibrary_1_1CCanal.html", null ],
+    [ "CCanal.CCoindID", "db/d43/classDeviceLibrary_1_1CCanal_1_1CCoindID.html", null ],
+    [ "CCanal.CSorter", "d9/d47/classDeviceLibrary_1_1CCanal_1_1CSorter.html", null ],
+    [ "CcoinsCounters", "d4/d2a/classDeviceLibrary_1_1CcoinsCounters.html", null ],
+    [ "CCoinValidator.CCVcreditBuffer", "da/d79/classDeviceLibrary_1_1CCoinValidator_1_1CCVcreditBuffer.html", null ],
+    [ "CCoinValidator.CErroCV", "db/d41/classDeviceLibrary_1_1CCoinValidator_1_1CErroCV.html", null ],
+    [ "CDevice", "d9/d42/classDeviceLibrary_1_1CDevice.html", [
+      [ "CccTalk", "d9/d1b/classDeviceLibrary_1_1CccTalk.html", [
+        [ "CcashReader", "da/d38/classDeviceLibrary_1_1CcashReader.html", [
+          [ "CCoinValidator", "dd/db6/classDeviceLibrary_1_1CCoinValidator.html", [
+            [ "CPelicano", "db/dfe/classDeviceLibrary_1_1CPelicano.html", null ],
+            [ "CPelicano", "db/dfe/classDeviceLibrary_1_1CPelicano.html", null ],
+            [ "CPelicano", "db/dfe/classDeviceLibrary_1_1CPelicano.html", null ],
+            [ "CPelicano", "db/dfe/classDeviceLibrary_1_1CPelicano.html", null ],
+            [ "CPelicano", "db/dfe/classDeviceLibrary_1_1CPelicano.html", null ]
           ] ],
-          [ "DeviceLibrary.CCoinValidator", "class_device_library_1_1_c_coin_validator.html", null ],
-          [ "DeviceLibrary.CCoinValidator", "class_device_library_1_1_c_coin_validator.html", null ],
-          [ "DeviceLibrary.CCoinValidator", "class_device_library_1_1_c_coin_validator.html", null ],
-          [ "DeviceLibrary.CCoinValidator", "class_device_library_1_1_c_coin_validator.html", null ]
+          [ "CCoinValidator", "dd/db6/classDeviceLibrary_1_1CCoinValidator.html", null ],
+          [ "CCoinValidator", "dd/db6/classDeviceLibrary_1_1CCoinValidator.html", null ],
+          [ "CCoinValidator", "dd/db6/classDeviceLibrary_1_1CCoinValidator.html", null ],
+          [ "CCoinValidator", "dd/db6/classDeviceLibrary_1_1CCoinValidator.html", null ]
         ] ],
-        [ "DeviceLibrary.CcashReader", "class_device_library_1_1_ccash_reader.html", null ],
-        [ "DeviceLibrary.CHopper", "class_device_library_1_1_c_hopper.html", null ],
-        [ "DeviceLibrary.CHopper", "class_device_library_1_1_c_hopper.html", null ]
+        [ "CcashReader", "da/d38/classDeviceLibrary_1_1CcashReader.html", null ],
+        [ "CHopper", "d2/d39/classDeviceLibrary_1_1CHopper.html", null ],
+        [ "CHopper", "d2/d39/classDeviceLibrary_1_1CHopper.html", null ]
       ] ],
-      [ "DeviceLibrary.CccTalk", "class_device_library_1_1_ccc_talk.html", null ],
-      [ "DeviceLibrary.CccTalk", "class_device_library_1_1_ccc_talk.html", null ]
+      [ "CccTalk", "d9/d1b/classDeviceLibrary_1_1CccTalk.html", null ],
+      [ "CccTalk", "d9/d1b/classDeviceLibrary_1_1CccTalk.html", null ]
     ] ],
-    [ "DeviceLibrary.CDevicesManage", "class_device_library_1_1_c_devices_manage.html", null ],
-    [ "DeviceLibrary.CHopper.CHopperStatus.CDispensedResult", "class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result.html", null ],
-    [ "DeviceLibrary.CHopper.CEmptyCount", "class_device_library_1_1_c_hopper_1_1_c_empty_count.html", null ],
-    [ "DeviceLibrary.CCoinValidator.CErroCV", "class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v.html", null ],
-    [ "DeviceLibrary.CHopper.CHopperCoinId", "class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id.html", null ],
-    [ "DeviceLibrary.CHopper.CHopperStatus", "class_device_library_1_1_c_hopper_1_1_c_hopper_status.html", null ],
-    [ "DeviceLibrary.CHopperVariableSet", "class_device_library_1_1_c_hopper_variable_set.html", null ],
-    [ "DeviceLibrary.CDevice.CInserted", "class_device_library_1_1_c_device_1_1_c_inserted.html", null ],
-    [ "DeviceLibrary.CDevice.CLevel", "class_device_library_1_1_c_device_1_1_c_level.html", null ],
-    [ "DeviceLibrary.CMemoryStorage", "class_device_library_1_1_c_memory_storage.html", null ],
-    [ "DeviceLibrary.CCanal.CSorter", "class_device_library_1_1_c_canal_1_1_c_sorter.html", null ],
+    [ "CDevice.CInserted", "d3/dff/classDeviceLibrary_1_1CDevice_1_1CInserted.html", null ],
+    [ "CDevice.CLevel", "de/d9e/classDeviceLibrary_1_1CDevice_1_1CLevel.html", null ],
+    [ "CDevicesManage", "d7/d2d/classDeviceLibrary_1_1CDevicesManage.html", null ],
+    [ "CHopper.CEmptyCount", "d0/d10/classDeviceLibrary_1_1CHopper_1_1CEmptyCount.html", null ],
+    [ "CHopper.CHopperCoinId", "d2/d82/classDeviceLibrary_1_1CHopper_1_1CHopperCoinId.html", null ],
+    [ "CHopper.CHopperError", "de/d45/classDeviceLibrary_1_1CHopper_1_1CHopperError.html", null ],
+    [ "CHopper.CHopperStatus", "db/db8/classDeviceLibrary_1_1CHopper_1_1CHopperStatus.html", null ],
+    [ "CHopper.CHopperStatus.CDispensedResult", "dd/db7/classDeviceLibrary_1_1CHopper_1_1CHopperStatus_1_1CDispensedResult.html", null ],
+    [ "CHopperVariableSet", "dc/dd5/classDeviceLibrary_1_1CHopperVariableSet.html", null ],
+    [ "CMemoryStorage", "d3/dfc/classDeviceLibrary_1_1CMemoryStorage.html", null ],
+    [ "messagesText", "d6/df2/classDeviceLibrary_1_1messagesText.html", null ],
+    [ "Resources", "d0/daf/classDeviceLibrary_1_1Properties_1_1Resources.html", null ],
+    [ "Resource1", "db/d0f/classDeviceLibrary_1_1Resource1.html", null ],
     [ "EventArgs", null, [
-      [ "DeviceLibrary.CalertEventArgs", "class_device_library_1_1_calert_event_args.html", null ]
+      [ "CalertEventArgs", "d2/d06/classDeviceLibrary_1_1CalertEventArgs.html", null ]
     ] ],
     [ "Exception", null, [
-      [ "DeviceLibrary.ExceptionATMB", "class_device_library_1_1_exception_a_t_m_b.html", null ]
+      [ "ExceptionATMB", "d6/d73/classDeviceLibrary_1_1ExceptionATMB.html", null ]
     ] ],
-    [ "DeviceLibrary.messagesText", "class_device_library_1_1messages_text.html", null ]
+    [ "ApplicationSettingsBase", null, [
+      [ "Settings", "d5/d2e/classDeviceLibrary_1_1Properties_1_1Settings.html", null ]
+    ] ]
 ];

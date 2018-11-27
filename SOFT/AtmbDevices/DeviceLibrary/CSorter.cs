@@ -5,26 +5,32 @@ namespace DeviceLibrary
     {
 
         /// <summary>
-        /// 
+        /// Class gérant les informations concernant un chemin de triage d'un canal
         /// </summary>
         public class CSorter
         {
             /// <summary>
-            /// 
+            /// Header ccTalk utilisé pour le triage
             /// </summary>
             private enum Header : byte
             {
+                ///<summary>
+                ///Demande du chemin utilisé pour trier une pièce reconnue
+                ///</summary>
                 REQUESTSORTERPATH = 209,
+                ///<summary>
+                ///Enregistre chemin utilisé pour trier une pièce reconnue
+                ///</summary>
                 MODIFYSORTERPATH = 210,
             }
 
             /// <summary>
-            /// 
+            /// Canal propriétaire de la class
             /// </summary>
             private CCanal CanalOwner;
 
             /// <summary>
-            /// Chemin utilisé dans le trieur de 1 à 8
+            /// Chemin utilisé dans le trieur (de 1 à 8)
             /// </summary>
             public byte PathSorter
             {
@@ -33,7 +39,7 @@ namespace DeviceLibrary
             }
 
             /// <summary>
-            /// 
+            /// Chemin de substitusion.
             /// </summary>
             public byte[] OverPath;
 

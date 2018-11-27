@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['tension',['Tension',['../class_device_library_1_1_c_hopper_variable_set.html#a816c9c3bacbc51aa30ea4eb8ea7ae6bd',1,'DeviceLibrary::CHopperVariableSet']]],
-  ['totalamount',['TotalAmount',['../class_device_library_1_1_c_device_1_1_c_inserted.html#af8489940b66b948f63c38c86051416be',1,'DeviceLibrary::CDevice::CInserted']]],
-  ['totalamountcash',['totalAmountCash',['../class_device_library_1_1_ccoins_counters.html#a92df718cc64594753421a0d4d88750d9',1,'DeviceLibrary::CcoinsCounters']]],
-  ['totalamountcashin',['totalAmountCashIn',['../class_device_library_1_1_ccoins_counters.html#a2f831cbda82d6b8f7af320354d58ed2f',1,'DeviceLibrary::CcoinsCounters']]],
-  ['totalamountcashout',['totalAmountCashOut',['../class_device_library_1_1_ccoins_counters.html#a94ba3ee5333d441ee3b2c3dc64191676',1,'DeviceLibrary::CcoinsCounters']]]
+  ['sizeofbufferout',['sizeOfBufferOut',['../d9/d1b/classDeviceLibrary_1_1CccTalk.html#a107988f680b35783c733e9088c0abfab',1,'DeviceLibrary::CccTalk']]],
+  ['softlevel',['softLevel',['../de/d9e/classDeviceLibrary_1_1CDevice_1_1CLevel.html#a008f4966ae67d430fb52fc4b439a84fd',1,'DeviceLibrary::CDevice::CLevel']]],
+  ['sorter',['sorter',['../d4/d71/classDeviceLibrary_1_1CCanal.html#a908458c673cc2c107a289622da5d2d06',1,'DeviceLibrary::CCanal']]],
+  ['sorterpath',['sorterPath',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#a3fce581c826698759b87344845244d4a',1,'DeviceLibrary::CCoinValidator']]],
+  ['state',['state',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#a4f10aad5990123f34c8297c57122eaaf',1,'DeviceLibrary.CCoinValidator.state()'],['../d2/d39/classDeviceLibrary_1_1CHopper.html#a4f10aad5990123f34c8297c57122eaaf',1,'DeviceLibrary.CHopper.state()']]]
 ];

@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using DeviceLibrary;
-using System.Threading;
 
 namespace AtmbTestDevices
 {
@@ -27,6 +26,11 @@ namespace AtmbTestDevices
         private int ToPayByClient;
 
         /// <summary>
+        /// Indique si le montant perçu doit être remis à zéro.
+        /// </summary>
+        private bool isMontantPercuReset;
+
+        /// <summary>
         /// Fonction exectutée lors du chargement de la fenêtre.
         /// </summary>
         /// <param name="sender"></param>
@@ -36,6 +40,7 @@ namespace AtmbTestDevices
         {
             deviceManage = new CDevicesManage();
             deviceManage.CallAlert += new CDevicesManage.AlertEventHandler(MsgFromdll);
+            isMontantPercuReset = false;
         }
 
         /// <summary>
@@ -45,11 +50,15 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void TBAmountToPay_Leave(object sender, EventArgs e)
         {
-            if (decimal.TryParse(tbToPay.Text, out decimal value))
+            if(decimal.TryParse(tbToPay.Text, out decimal value))
             {
                 ToPayByClient = (int)(value * 100);
                 tbToPay.Text = $"{value:c2}";
                 deviceManage.SetToPay(ToPayByClient);
+                if(isMontantPercuReset)
+                {
+                    tbReceived.Text = $"{ (0.00):c2}";
+                }
             }
             else
             {
@@ -62,7 +71,7 @@ namespace AtmbTestDevices
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void BtnExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -85,7 +94,7 @@ namespace AtmbTestDevices
         private void MsgFromdll(object sender, CalertEventArgs e)
         {
             Action a;
-            switch (e.reason)
+            switch(e.reason)
             {
                 case Reason.MONEYINTRODUCTED:
                 {
@@ -94,16 +103,21 @@ namespace AtmbTestDevices
                         int remaining = (ToPayByClient - CDevice.denominationInserted.TotalAmount);
                         tbInfo.AppendText($"Pièce reconnue : Canal {((CDevice.CInserted)e.donnee).CVChannel} trieur {((CDevice.CInserted)e.donnee).CVPath} valeur  {(decimal)((CDevice.CInserted)e.donnee).ValeurCent / 100:c2}\r\n\r\n");
                         tbReceived.Text = $"{((decimal)((CDevice.CInserted)e.donnee).TotalAmount) / 100:c2}";
-                        if (remaining < 1)
+                        if(remaining < 1)
                         {
                             tbRemaining.Text = $"{ (0.00):c2}";
+                            if(CDevice.denominationInserted.TotalAmount > 0)
+                            {
+                                tbToPay.Text = $"{ (0.00):c2}";
+                                isMontantPercuReset = true;
+                            }
                         }
                         else
                         {
                             tbRemaining.Text = $"{((decimal)remaining) / 100:c2}";
                             tbDenomination.Text = $"{((decimal)((CDevice.CInserted)e.donnee).ValeurCent) / 100:c2}";
                         }
-
+                        ButtonCounters_Click(sender, e);
                     };
                     break;
                 }
@@ -132,19 +146,22 @@ namespace AtmbTestDevices
                 }
                 case Reason.HOPPERERROR:
                 {
-                    a = () => { };
+                    a = () =>
+                    {
+                        tbInfo.AppendText(string.Format("Erreur sur le ", ((CHopper.CHopperError)e.donnee).nameHopper));
+                    };
                     break;
                 }
                 case Reason.HOPPERHWLEVELCHANGED:
                 {
                     a = () =>
                     {
-                        foreach (DataGridViewRow ligne in dataGridViewHopper.Rows)
+                        foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
                         {
-                            if ((bool)(ligne.Cells["Present"].Value) && (ligne.Cells["Identifiant"].Value.ToString() == ((CDevice.CLevel)e.donnee).ID))
+                            if((bool)(ligne.Cells["Present"].Value) && (ligne.Cells["Identifiant"].Value.ToString() == ((CDevice.CLevel)e.donnee).ID))
                             {
                                 ligne.Cells["LevelHW"].Value = ((CDevice.CLevel)e.donnee).hardLevel;
-                                if ((((CDevice.CLevel)e.donnee).hardLevel == CDevice.CLevel.HardLevel.VIDE) || (((CDevice.CLevel)e.donnee).hardLevel == CDevice.CLevel.HardLevel.PLEIN))
+                                if((((CDevice.CLevel)e.donnee).hardLevel == CDevice.CLevel.HardLevel.VIDE) || (((CDevice.CLevel)e.donnee).hardLevel == CDevice.CLevel.HardLevel.PLEIN))
                                 {
                                     ligne.Cells["LevelHW"].Style.BackColor = Color.Red;
                                 }
@@ -158,17 +175,16 @@ namespace AtmbTestDevices
                     };
                     break;
                 }
-
                 case Reason.HOPPERSWLEVELCHANGED:
                 {
                     a = () =>
                     {
-                        foreach (DataGridViewRow ligne in dataGridViewHopper.Rows)
+                        foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
                         {
-                            if ((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == ((CDevice.CLevel)e.donnee).ID))
+                            if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == ((CDevice.CLevel)e.donnee).ID))
                             {
                                 ligne.Cells["LevelSW"].Value = ((CDevice.CLevel)e.donnee).softLevel;
-                                switch (((CDevice.CLevel)e.donnee).softLevel)
+                                switch(((CDevice.CLevel)e.donnee).softLevel)
                                 {
                                     case CDevice.CLevel.SoftLevel.PLEIN:
                                     case CDevice.CLevel.SoftLevel.VIDE:
@@ -222,48 +238,39 @@ namespace AtmbTestDevices
                 }
                 case Reason.DLLLREADY:
                 {
-                    a=()=>
-                    {
-                        byte byIndex = 0;
-                        foreach (CHopper hopper in deviceManage.Hoppers)
-                        {
-                            if (hopper.IsPresent)
-                            {
-                                dataGridViewHopper.Rows.Add(string.Format("Hopper {0}", hopper.Number), (decimal)hopper.CoinValue / 100, hopper.IsPresent, 0, 0, "", "", false, hopper.DefaultFilling, false);
-                            }
-                            else
-                            {
-                                dataGridViewHopper.Rows.Add(string.Format("Hopper {0}", hopper.Number), string.Empty, hopper.IsPresent);
-                            }
-                            dataGridViewHopper.Rows[byIndex].DefaultCellStyle.BackColor = hopper.IsPresent ? Color.LimeGreen : Color.Red;
-                            dataGridViewHopper["ToDispense", byIndex].Style.BackColor = Color.White;
-                            dataGridViewHopper["ToEmpty", byIndex].Style.BackColor =
-                            dataGridViewHopper["ToDispense", byIndex].Style.BackColor =
-                            dataGridViewHopper["ToLoad", byIndex].Style.BackColor =
-                            dataGridViewHopper["Reload", byIndex].Style.BackColor = Color.White;
+                    a = () =>
+                      {
+                          byte byIndex = 0;
+                          foreach(CHopper hopper in deviceManage.Hoppers)
+                          {
+                              if(hopper.IsPresent)
+                              {
+                                  dataGridViewHopper.Rows.Add(string.Format("Hopper {0}", hopper.Number), (decimal)hopper.CoinValue / 100, hopper.IsPresent, 0, 0, "", "", false, hopper.DefaultFilling, false);
+                              }
+                              else
+                              {
+                                  dataGridViewHopper.Rows.Add(string.Format("Hopper {0}", hopper.Number), string.Empty, hopper.IsPresent);
+                              }
+                              dataGridViewHopper.Rows[byIndex].DefaultCellStyle.BackColor = hopper.IsPresent ? Color.LimeGreen : Color.Red;
+                              dataGridViewHopper["ToDispense", byIndex].Style.BackColor = Color.White;
+                              dataGridViewHopper["ToEmpty", byIndex].Style.BackColor =
+                              dataGridViewHopper["ToDispense", byIndex].Style.BackColor =
+                              dataGridViewHopper["ToLoad", byIndex].Style.BackColor =
+                              dataGridViewHopper["Reload", byIndex].Style.BackColor = Color.White;
 
-                            ++byIndex;
-                        }
-                        ButtonCounters_Click(sender, e);
-                        stripLabelCom.Text = deviceManage.GetSerialPort();
-                        Refresh();
-                    };
+                              ++byIndex;
+                          }
+                          ButtonCounters_Click(sender, e);
+                          stripLabelCom.Text = deviceManage.GetSerialPort();
+                          Refresh();
+                      };
                     break;
                 }
                 default:
-                    a = () => { };
-                    break;
+                a = () => { };
+                break;
             }
-            Invoke(a);            
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        ///// <param name="e"></param>
-        private void FormMain_Shown(object sender, EventArgs e)
-        {
+            Invoke(a);
         }
 
         /// <summary>
@@ -288,12 +295,12 @@ namespace AtmbTestDevices
             dataGridViewCompteurs.Rows.Add("Total rendu", string.Format("{0:c2}", (decimal)CccTalk.counters.totalAmountCashOut / 100));
             dataGridViewCompteurs.Rows.Add("Total borne", string.Format("{0:c2}", (decimal)CccTalk.counters.totalAmountCash / 100));
             dataGridViewCompteurs.Rows.Add("Trop perçu", string.Format("{0:c2}", (decimal)CccTalk.counters.amountOverPay / 100));
-            foreach (CCanal canal in deviceManage.monnayeur.canaux)
+            foreach(CCanal canal in deviceManage.monnayeur.canaux)
             {
                 dataGridViewCompteurs.Rows.Add($"CV nombre canal {canal.Number}", canal.CoinIn);
                 dataGridViewCompteurs.Rows.Add($"CV montant canal {canal.Number}", $"{(decimal)canal.MontantIn / 100:c2}");
             }
-            foreach (CHopper hopper in deviceManage.Hoppers)
+            foreach(CHopper hopper in deviceManage.Hoppers)
             {
                 dataGridViewCompteurs.Rows.Add($"{hopper.ToString()} niveau", hopper.CoinsInHopper);
                 dataGridViewCompteurs.Rows.Add($"{hopper.ToString()} montant in", $"{(decimal)hopper.AmountInHopper / 100:c2}");
@@ -313,12 +320,12 @@ namespace AtmbTestDevices
         {
             try
             {
-                if ((e.ColumnIndex == 7) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
+                if((e.ColumnIndex == 7) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
                 {
                     dataGridViewHopper["ToLoad", e.RowIndex].Value = false;
                     dataGridViewHopper["ToDispense", e.RowIndex].Value = 0;
                 }
-                if ((e.ColumnIndex == 9) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
+                if((e.ColumnIndex == 9) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
                 {
                     dataGridViewHopper["ToEmpty", e.RowIndex].Value = false;
                 }
@@ -337,29 +344,29 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void ButtonHoppers_Click(object sender, EventArgs e)
         {
-            foreach (CHopper hopper in deviceManage.Hoppers)
+            foreach(CHopper hopper in deviceManage.Hoppers)
             {
-                if (hopper.IsPresent)
+                if(hopper.IsPresent)
                 {
-                    foreach (DataGridViewRow ligne in dataGridViewHopper.Rows)
+                    foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
                     {
-                        if (hopper.ToString() == ligne.Cells["Identifiant"].Value.ToString())
+                        if(hopper.ToString() == ligne.Cells["Identifiant"].Value.ToString())
                         {
-                            if (Convert.ToByte(ligne.Cells["ToDispense"].Value) > 0)
+                            if(Convert.ToByte(ligne.Cells["ToDispense"].Value) > 0)
                             {
                                 hopper.Distribute(Convert.ToByte(ligne.Cells["ToDispense"].Value));
                                 ligne.Cells["ToDispense"].Value = 0.ToString();
                             }
                             else
                             {
-                                if ((bool)ligne.Cells["ToEmpty"].Value)
+                                if((bool)ligne.Cells["ToEmpty"].Value)
                                 {
                                     ligne.Cells["ToEmpty"].Value = false;
                                     hopper.Empty();
                                 }
                                 else
                                 {
-                                    if ((bool)ligne.Cells["ToLoad"].Value)
+                                    if((bool)ligne.Cells["ToLoad"].Value)
                                     {
                                         ligne.Cells["ToLoad"].Value = false;
                                         hopper.LoadHopper(Convert.ToInt64(ligne.Cells["Reload"].Value));
@@ -382,11 +389,11 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void DataGridViewHopper_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)
+            if(e.RowIndex > -1)
             {
-                if (e.ColumnIndex == 3)
+                if(e.ColumnIndex == 3)
                 {
-                    if (byte.TryParse((string)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value, out byte number))
+                    if(byte.TryParse((string)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value, out byte number))
                     {
                         dataGridViewHopper["ToLoad", e.RowIndex].Value = false;
                         dataGridViewHopper["ToEmpty", e.RowIndex].Value = false;
@@ -417,7 +424,7 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void ButtonRAZCompteurs_Click(object sender, EventArgs e)
         {
-           CccTalk.ResetCounters();
+            CccTalk.ResetCounters();
             ButtonCounters_Click(sender, e);
         }
     }

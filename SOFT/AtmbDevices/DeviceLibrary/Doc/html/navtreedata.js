@@ -23,7 +23,7 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "ATMB DeviceLibrary", "index.html", [
+  [ "ATMB Devicelibrary", "index.html", [
     [ "DOCUMENTATION SOFTWARE", "index.html", null ],
     [ "Paquetages", "namespaces.html", [
       [ "Paquetages", "namespaces.html", "namespaces_dup" ],
@@ -53,9 +53,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_assembly_info_8cs.html",
-"class_device_library_1_1_c_coin_validator.html#a68c5b73cc3b337502d9f92154d933591aa6c8fed14ab5411a4efe88068c4a99d9",
-"class_device_library_1_1_c_hopper_variable_set.html#ac41108d80eb84d8f3c4a17b7823eb267"
+"annotated.html",
+"d4/d21/CDevicesManage_8cs_source.html",
+"d9/d1b/classDeviceLibrary_1_1CccTalk.html#ad32a347320b13a2313d6d0f60c4d450ea3ea83e192f7d50bb0bd2b51a5f4883e1",
+"dd/db6/classDeviceLibrary_1_1CCoinValidator.html#a3bd28578df3763a675997b4958bde2db"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

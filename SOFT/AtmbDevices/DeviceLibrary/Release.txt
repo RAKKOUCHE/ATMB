@@ -11,7 +11,7 @@
  *  <b>     RASoftware</b><BR>
  *	        2 rue Georges MELIES<BR>
  *          78390 BOIS D'ARCY<BR>
-*	        +33 651 60 40 4<BR>
+*	        +33 651 60 40 47<BR>
  *	<a href = "http://www.rasoftware.fr">http://www.rasoftware.fr </a> <BR><BR>
  *
  * <CENTER>Copyright<b>© RASoftware</b> 2018 </CENTER>  <BR>
@@ -26,19 +26,27 @@
  * 
  * 
  * <b>Change history</b>
- * 
- * <b>Rev. 09.0.39 </b>   2018 11 24<br>
+ * ---------------------
  *
+ * <b>Rev. 09.0.39 </b>   2018 11 24<br>
  * \n Modification
  * -# Mise en place de la documentation
  *
  * <b>Rev. 09.0.40 </b>   2018 11 26<br>
- *
  * \n Bug
  * -# Echec d'initialisation introduit dans la version 09.0.39
  *
  * \n Modification
  * -# Correction du bug sur l'échec d'initialisation
+ *
+ * <b>Rev. 09.0.41 </b>   2018 11 26<br>
+ * \n Modification
+ * -# Gestion des erreurs des hopper
+ * -# Complément de la documentation
+ *
+ * <b>Rev. 09.0.42 </b>   2018 11 27<br>
+ * \n Modification
+ * -# Complément de la documentation
  *
  */
 /*****************************************************************************/

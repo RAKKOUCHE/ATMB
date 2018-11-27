@@ -238,6 +238,12 @@ namespace DeviceLibrary
                             hopper.isEmptied = false;
                             OnHopperEmptied(hopper);
                         }
+                        if(hopper.isHopperError)
+                        {
+                            hopper.ResetDevice();
+                            hopper.Init();
+                            OnHopperError(hopper);
+                        }
                     }
                 }
                 if (monnayeur.errorCV.errorText != CCoinValidator.CVErrorCodes.NULL)
@@ -395,8 +401,23 @@ namespace DeviceLibrary
             }
         }
 
-        private void OnHopperError()
+        private void OnHopperError(CHopper hopper)
         {
+            try
+            {
+                CalertEventArgs alertEventArgs = new CalertEventArgs
+                {
+                    reason = Reason.HOPPERERROR,
+                    donnee = hopper.errorHopper,
+                };
+                CallAlert(new object(), alertEventArgs);
+                hopper.ResetDevice();
+                hopper.Init();
+            }
+            catch(Exception E)
+            {
+                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+            }
 
         }
 

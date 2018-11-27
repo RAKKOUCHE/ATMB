@@ -2,29 +2,26 @@
 
 namespace DeviceLibrary
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public partial class CCanal
     {
         /// <summary>
-        /// 
+        /// Class gérant l'identification des pièces
         /// </summary>
         public class CCoindID
         {
             /// <summary>
-            /// 
+            /// Command ccTalk demandant l'identification de la pièce du canal.
             /// </summary>
             private const byte REQUESTCOINID = 184;
 
             /// <summary>
-            /// 
+            /// Instance du canal de la pièce.
             /// </summary>
             private CCanal CanalOwner;
 
             private string countryCode;
             /// <summary>
-            /// code d'identification du pays émetteur.
+            /// Code d'identification du pays émetteur.
             /// </summary>
             public string CountryCode
             {
@@ -42,10 +39,10 @@ namespace DeviceLibrary
                 set => valeurCent = value;
             }
 
+            private char issue;
             /// <summary>
             /// Version des données d'identification.
             /// </summary>
-            private char issue;
             public char Issue
             {
                 get => issue;
@@ -55,7 +52,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Lit l'identification de la pièce acceptée dans le canal passé en paramètre.
             /// </summary>
-            /// <remarks>Header 184</remarks>
+            /// <remarks>voir <see cref = "REQUESTCOINID"/> </remarks>
             public void GetCoinId()
             {
                 try

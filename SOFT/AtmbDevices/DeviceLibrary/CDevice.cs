@@ -5,9 +5,11 @@ using System.Text;
 
 namespace DeviceLibrary
 {
+    /// <summary>
+    /// Classe abstraite parent de tous les périphériques
+    /// </summary>
     public abstract partial class CDevice
     {
-
         /// <summary>
         /// 
         /// </summary>
@@ -43,10 +45,10 @@ namespace DeviceLibrary
             get;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         private bool isPresent;
+        /// <summary>
+        /// Flag indiquant si le hopper est detecté.
+        /// </summary>
         public bool IsPresent
         {
             get => isPresent;

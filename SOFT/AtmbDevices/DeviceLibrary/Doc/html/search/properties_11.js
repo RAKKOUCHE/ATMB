@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['writeblocks',['WriteBlocks',['../class_device_library_1_1_c_memory_storage.html#aad3f07ff5ba905a568178e1418adbccf',1,'DeviceLibrary::CMemoryStorage']]],
-  ['writebytesperblock',['WriteBytesPerBlock',['../class_device_library_1_1_c_memory_storage.html#a4a4f80a523648f2987095bd16740816f',1,'DeviceLibrary::CMemoryStorage']]]
+  ['writeblocks',['WriteBlocks',['../d3/dfc/classDeviceLibrary_1_1CMemoryStorage.html#a7efc17d39cc3a595e5655b9b1f7b3088',1,'DeviceLibrary::CMemoryStorage']]],
+  ['writebytesperblock',['WriteBytesPerBlock',['../d3/dfc/classDeviceLibrary_1_1CMemoryStorage.html#a88ec7612876e14e52ac3a6367893be6e',1,'DeviceLibrary::CMemoryStorage']]]
 ];

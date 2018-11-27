@@ -10,7 +10,13 @@ namespace DeviceLibrary
         /// </summary>
         private enum OptionFlag
         {
+            /// <summary>
+            /// Limitation de l'acceptation non implémentée
+            /// </summary>
             UNSUPPORTED = 0,
+            /// <summary>
+            /// Limitation de l'acceptation implémentée
+            /// </summary>
             SUPPORTED = 1,
         }
 
@@ -19,14 +25,20 @@ namespace DeviceLibrary
         /// </summary>
         protected enum CoinPresent
         {
+            /// <summary>
+            /// Pas de pièce dans le container.
+            /// </summary>
             NOCOIN = 0,
+            /// <summary>
+            /// Au monis une pièce présent dans le container.
+            /// </summary>
             COINPRESENT = 1,
         }
 
+        private CoinPresent coinInContainer;
         /// <summary>
         /// Contient l'indicateur de présence de pièce dans le container.
         /// </summary>
-        private CoinPresent coinInContainer;
         protected CoinPresent CoinInContainer
         {
             get => coinInContainer;
@@ -67,8 +79,9 @@ namespace DeviceLibrary
         /// Vérifie si une pièce est présente dans le cointainer.
         /// </summary>
         /// <returns>
-        /// true si au moins une pièce est présente dans le bol
-        /// false s'il n'y a pas de pièce</returns>
+        /// true si au moins une pièce est présente dans le bol\n
+        /// false s'il n'y a pas de pièce
+        /// </returns>
         public bool GetIsCoinPresent()
         {
             bool result = false;
@@ -96,7 +109,7 @@ namespace DeviceLibrary
         /// Retourne le traitement d'une limite d'acceptation.
         /// </summary>
         /// <returns>
-        /// UNSUPPORTED si l'option de limit d'acceptation est désactivée.
+        /// UNSUPPORTED si l'option de limit d'acceptation est désactivée.\n
         /// SUPPORTED si l'option de limit d'acceptation est activée.
         /// </returns>
         private OptionFlag AcceptLimitFeature
@@ -147,8 +160,8 @@ namespace DeviceLibrary
         /// <summary>
         /// Commande moteur du pelicano.
         /// </summary>
-        /// <bufferParam name="command">Sous-command de la fonction.</bufferParam>
-        /// <bufferParam name="data">vitesse en pourcentage.</bufferParam>
+        /// <param name="command">Sous-command de la fonction.</param>
+        /// <param name="data">vitesse en pourcentage.</param>
         /// <returns>Donnée dépendant de la sous command.</returns>
         private byte ActivateMotor(CcmdMotors command, byte data = 0)
         {
@@ -236,7 +249,7 @@ namespace DeviceLibrary
         /// Renvoie la vitesse du moteur.
         /// </summary>
         /// <returns>
-        /// La vitesse du moteur en pourcentage.
+        /// La vitesse du moteur en pourcentage.\n
         /// 0 si la command ne renvoit rien.
         /// </returns>
         public byte SpeedMotor
@@ -280,7 +293,7 @@ namespace DeviceLibrary
         /// Renvoie le pocket time
         /// </summary>
         /// <returns>
-        /// Le délai entre 2 trous dans le disque * 4 ms;
+        /// Le délai entre 2 trous dans le disque * 4 ms.\n
         /// 0 si la fonction ne retourne pas la valeur
         /// </returns>
         private byte PocketTime
@@ -378,7 +391,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Tâche de la machine d'état du Pelicano
         /// </summary>
         public override void TaskCheckEventCV()
         {
@@ -444,10 +457,6 @@ namespace DeviceLibrary
             CDevicesManage.Log.Info("Instanciation de la classe CPelicano.");
             coinInContainer = CoinPresent.NOCOIN;
             ExitSensor = LowerSensor.FREE;
-            //if (SpeedMotor != 200)
-            //{
-            //    SpeedMotor = 100;
-            //}
             TestSolenoid(0XFF);
 #if !DEBUG
             TrashCycle();

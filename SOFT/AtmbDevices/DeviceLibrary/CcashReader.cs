@@ -2,8 +2,11 @@
 
 namespace DeviceLibrary
 {
+    ///<summary>
+    /// Class abstraite utilisé par les moyens de paiement.
+    ///</summary>
     public abstract partial class CcashReader : CccTalk
-    {
+    {        
         /// <summary>
         /// Tableau de conversion des unités dans la réponse au polling priority.
         /// </summary>
@@ -14,14 +17,19 @@ namespace DeviceLibrary
         /// </summary>
         protected enum InhibitStatus
         {
+        /// <summary>
+        /// Périphérique désactivé
+        /// </summary>
             DISABLED = 0,
+        /// <summary>
+        /// Périphérique activé
+        /// </summary>
             ENABLED = 1,
         }
 
         private byte[] inhibitMask;
-
         /// <summary>
-        /// 
+        /// Masque d'ihnibition (2 octets pour 16 canaux)
         /// </summary>
         protected byte[] InhibitMask
         {
@@ -73,8 +81,11 @@ namespace DeviceLibrary
         /// <summary>
         /// Active ou desactive le moyen de paiment
         /// </summary>
-        /// <bufferParam name="isEnable"></bufferParam>
-        /// <remarks>Header 228</remarks>
+        /// <param name="status">= 1 pour activer , 0 pour désactiver</param>
+        /// <remarks>
+        /// Header 228    \n
+        /// Les 7 bits de poids fort ne sont pas considérés.
+        /// </remarks>
         private void SetMasterInhibit(InhibitStatus status)
         {
             try

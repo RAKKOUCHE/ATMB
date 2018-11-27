@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['payouttimeout',['PAYOUTTIMEOUT',['../class_device_library_1_1_c_hopper_variable_set.html#a3b79d051f89692abb5d34ae3f4e946bea2ce47c5981a3b2d40b2dea2bcc857dfe',1,'DeviceLibrary::CHopperVariableSet']]],
-  ['performselftest',['PERFORMSELFTEST',['../class_device_library_1_1_ccash_reader.html#af4bdeeddb7c89dd2b54f86978f5e9866ae268218a830fbe959f8a433163e8187a',1,'DeviceLibrary::CcashReader']]],
-  ['permanentlimited',['PERMANENTLIMITED',['../class_device_library_1_1_c_memory_storage.html#a212a4301a9ee4074c52046fc8b36fb7aaab49f8e53c5270f77a021603d479de15',1,'DeviceLibrary::CMemoryStorage']]],
-  ['permanentunlimited',['PERMANENTUNLIMITED',['../class_device_library_1_1_c_memory_storage.html#a212a4301a9ee4074c52046fc8b36fb7aa5aa3ba7df83ac7f584293cb274ae3fa9',1,'DeviceLibrary::CMemoryStorage']]],
-  ['pinnumber',['PINNUMBER',['../class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a9cb9d4ef7914bee6cdedcf7524b6d5ef',1,'DeviceLibrary::CHopper']]],
-  ['plein',['PLEIN',['../class_device_library_1_1_c_device_1_1_c_level.html#a83c2976bc299331f1c355e806299bb1fa7ec21e24df39ba83c2d56f47d4932957',1,'DeviceLibrary.CDevice.CLevel.PLEIN()'],['../class_device_library_1_1_c_device_1_1_c_level.html#a3f3169da53d5beebdac25e401982101aa7ec21e24df39ba83c2d56f47d4932957',1,'DeviceLibrary.CDevice.CLevel.PLEIN()']]],
-  ['powerfail',['POWERFAIL',['../class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01ab77007e73cc2dd997f4ab2846a075e01',1,'DeviceLibrary::CHopper']]],
-  ['powerup',['POWERUP',['../class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01ab3e172b7afeb285bddcec5aee2be298e',1,'DeviceLibrary::CHopper']]],
-  ['pumprng',['PUMPRNG',['../class_device_library_1_1_c_hopper.html#ab8e15517b29b9562c7d7e8616d61c855ab3b80d8e35f9bf8fd78fbb4ebf2e065d',1,'DeviceLibrary::CHopper']]]
+  ['ok',['OK',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#a873c00f8bff88020c3038b42e74f844aae0aa021e21dddbd6d8cecec71e9cf564',1,'DeviceLibrary.CCoinValidator.OK()'],['../de/d9e/classDeviceLibrary_1_1CDevice_1_1CLevel.html#a6b5018ad40c63fd80ad4f9593e37f2a6ae0aa021e21dddbd6d8cecec71e9cf564',1,'DeviceLibrary.CDevice.CLevel.OK()'],['../de/d9e/classDeviceLibrary_1_1CDevice_1_1CLevel.html#af85d662cfc2089cfa899dad70f8ea530ae0aa021e21dddbd6d8cecec71e9cf564',1,'DeviceLibrary.CDevice.CLevel.OK()'],['../db/dfe/classDeviceLibrary_1_1CPelicano.html#a1462845a0c32f99b744f8361dd4c1704ae0aa021e21dddbd6d8cecec71e9cf564',1,'DeviceLibrary.CPelicano.OK()'],['../d9/d1b/classDeviceLibrary_1_1CccTalk.html#a24e5e02467beb24247a5b9aa8bd345c7ae0aa021e21dddbd6d8cecec71e9cf564',1,'DeviceLibrary.CccTalk.OK()']]],
+  ['open',['OPEN',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#ae07354e0ffb21baeb259be22264a3e46aa38bd5138bf35514df41a1795ebbf5c3',1,'DeviceLibrary::CCoinValidator']]],
+  ['operatemotor',['OPERATEMOTOR',['../d9/d1b/classDeviceLibrary_1_1CccTalk.html#ad32a347320b13a2313d6d0f60c4d450ea9163ec519df517704db337f07ea927d6',1,'DeviceLibrary::CccTalk']]],
+  ['optoblockedpermanently',['OPTOBLOCKEDPERMANENTLY',['../d2/d39/classDeviceLibrary_1_1CHopper.html#a538dac41440d2eecac1b67c6d6e6fba0a3597b58c77eec0e7e44fa0f3be8c8e65',1,'DeviceLibrary::CHopper']]],
+  ['optopathblocked',['OPTOPATHBLOCKED',['../d2/d39/classDeviceLibrary_1_1CHopper.html#a538dac41440d2eecac1b67c6d6e6fba0a84c9b37d0d3499483dae26abd03c62d3',1,'DeviceLibrary::CHopper']]],
+  ['optoshortcircuit',['OPTOSHORTCIRCUIT',['../d2/d39/classDeviceLibrary_1_1CHopper.html#a538dac41440d2eecac1b67c6d6e6fba0ad8dffe032a7fbd1f7291f20a1d24fff9',1,'DeviceLibrary::CHopper']]],
+  ['optoshortcircuitidle',['OPTOSHORTCIRCUITIDLE',['../d2/d39/classDeviceLibrary_1_1CHopper.html#a538dac41440d2eecac1b67c6d6e6fba0aced9f2887aace32933e6db874aa8d6e5',1,'DeviceLibrary::CHopper']]]
 ];

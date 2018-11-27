@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['search_5fcctalk',['search_ccTalk',['../class_device_library_1_1messages_text.html#a3bce2e18d1b8dbc3d29446f4c1fc7cc7',1,'DeviceLibrary::messagesText']]],
-  ['selftest',['SelfTest',['../class_device_library_1_1_ccash_reader.html#a40798e7b17783bffe4d59b67ef57a430',1,'DeviceLibrary.CcashReader.SelfTest()'],['../class_device_library_1_1messages_text.html#a848d1437acc274997c7e914263ed490a',1,'DeviceLibrary.messagesText.selfTest()']]],
-  ['sendcmd',['sendCmd',['../class_device_library_1_1messages_text.html#a6cdf49693beb3766d1b9a2ca4c582a43',1,'DeviceLibrary::messagesText']]],
-  ['sendmasterinhibitstatus',['sendMasterInhibitStatus',['../class_device_library_1_1messages_text.html#a36eee29e70368828dc0fb2ff7ec98ac0',1,'DeviceLibrary::messagesText']]],
-  ['serialnumber',['serialNumber',['../class_device_library_1_1messages_text.html#a3e4012cb4d076ab167356a3e9319aa36',1,'DeviceLibrary.messagesText.serialNumber()'],['../class_device_library_1_1_ccc_talk.html#a6b615dcccbe32e3c9166b0fdb0a74236',1,'DeviceLibrary.CccTalk.SerialNumber()'],['../class_device_library_1_1_c_device.html#a5d542b0634e0024751d1e6df6975e0b8',1,'DeviceLibrary.CDevice.SerialNumber()'],['../class_device_library_1_1_c_pelicano.html#a74a1a52309b0331bb2f6510c698a7183',1,'DeviceLibrary.CPelicano.SerialNumber()']]],
-  ['simplepoll',['SimplePoll',['../class_device_library_1_1_ccc_talk.html#a576e09f74dc509dcd7919eceae9cc7de',1,'DeviceLibrary::CccTalk']]],
-  ['speedmotor',['SpeedMotor',['../class_device_library_1_1_c_pelicano.html#a7f5c785d7c8107df1bc22912700438bc',1,'DeviceLibrary::CPelicano']]],
-  ['starline',['starLine',['../class_device_library_1_1messages_text.html#a8290edf9a6414b63b8276cb192fd2975',1,'DeviceLibrary::messagesText']]],
-  ['state',['State',['../class_device_library_1_1_c_coin_validator.html#a38527f741c0cee761a37bff50bafbd20',1,'DeviceLibrary.CCoinValidator.State()'],['../class_device_library_1_1_c_hopper.html#aa9f1e8689d187df5894527e7c02dc875',1,'DeviceLibrary.CHopper.State()']]],
-  ['status',['Status',['../class_device_library_1_1_c_coin_validator.html#ac45ed64d9685ac636e48b00510c7654e',1,'DeviceLibrary::CCoinValidator']]],
-  ['swrev',['SWRev',['../class_device_library_1_1_ccc_talk.html#a687a695bef6d7f25f8fe7148948d04bc',1,'DeviceLibrary.CccTalk.SWRev()'],['../class_device_library_1_1messages_text.html#aba7fce2b30af5a62fecfce3f6920ac80',1,'DeviceLibrary.messagesText.swRev()']]]
+  ['search_5fcctalk',['search_ccTalk',['../d6/df2/classDeviceLibrary_1_1messagesText.html#a0c40e7437b5fdbe16a1fed35d2724436',1,'DeviceLibrary::messagesText']]],
+  ['selftest',['selfTest',['../d6/df2/classDeviceLibrary_1_1messagesText.html#aefc41665f12b0783da5e91308e7afc3f',1,'DeviceLibrary.messagesText.selfTest()'],['../da/d38/classDeviceLibrary_1_1CcashReader.html#a60cb585263b543310bb254c142204a73',1,'DeviceLibrary.CcashReader.SelfTest()']]],
+  ['sendcmd',['sendCmd',['../d6/df2/classDeviceLibrary_1_1messagesText.html#a858fa1b20eb1e1d23730bbdd3d366cea',1,'DeviceLibrary::messagesText']]],
+  ['sendmasterinhibitstatus',['sendMasterInhibitStatus',['../d6/df2/classDeviceLibrary_1_1messagesText.html#a5432e51b6f2acc3f73e1736c475c9c00',1,'DeviceLibrary::messagesText']]],
+  ['serialnumber',['SerialNumber',['../d9/d1b/classDeviceLibrary_1_1CccTalk.html#a9b3cab5928759184c52cc2f593e93278',1,'DeviceLibrary.CccTalk.SerialNumber()'],['../d9/d42/classDeviceLibrary_1_1CDevice.html#a56b5d70bf8a7e0050aa0c980285dae06',1,'DeviceLibrary.CDevice.SerialNumber()'],['../db/dfe/classDeviceLibrary_1_1CPelicano.html#a9b3cab5928759184c52cc2f593e93278',1,'DeviceLibrary.CPelicano.SerialNumber()'],['../d6/df2/classDeviceLibrary_1_1messagesText.html#a22248d5005f91728b723f7deb2eb17b2',1,'DeviceLibrary.messagesText.serialNumber()']]],
+  ['simplepoll',['SimplePoll',['../d9/d1b/classDeviceLibrary_1_1CccTalk.html#a89b0fdee5eb538b0e260ad3037a2d96b',1,'DeviceLibrary::CccTalk']]],
+  ['sorterpath',['SorterPath',['../d9/d47/classDeviceLibrary_1_1CCanal_1_1CSorter.html#a5f4fbdd2286dffe6f76d39772416b3eb',1,'DeviceLibrary::CCanal::CSorter']]],
+  ['speedmotor',['SpeedMotor',['../db/dfe/classDeviceLibrary_1_1CPelicano.html#a4ccbcff74d4881e5ff276b568aad892a',1,'DeviceLibrary::CPelicano']]],
+  ['starline',['starLine',['../d6/df2/classDeviceLibrary_1_1messagesText.html#a5134dde23b2d3231863ac452e6b6cf3f',1,'DeviceLibrary::messagesText']]],
+  ['state',['State',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#abbdaec1628f978e9d288cfc39d58b5fe',1,'DeviceLibrary.CCoinValidator.State()'],['../d2/d39/classDeviceLibrary_1_1CHopper.html#abbdaec1628f978e9d288cfc39d58b5fe',1,'DeviceLibrary.CHopper.State()']]],
+  ['status',['Status',['../dd/db6/classDeviceLibrary_1_1CCoinValidator.html#ad475c028b3cb511357e4e102aaa14b57',1,'DeviceLibrary::CCoinValidator']]],
+  ['swrev',['SWRev',['../d9/d1b/classDeviceLibrary_1_1CccTalk.html#a74a32b436fbe54b17b6fff4496aab869',1,'DeviceLibrary.CccTalk.SWRev()'],['../d6/df2/classDeviceLibrary_1_1messagesText.html#a1c7586024a193ebc5d6c594c10d50a28',1,'DeviceLibrary.messagesText.swRev()']]]
 ];

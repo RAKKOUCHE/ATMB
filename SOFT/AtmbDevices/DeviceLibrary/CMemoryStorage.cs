@@ -8,38 +8,50 @@ namespace DeviceLibrary
     public class CMemoryStorage
     {
         /// <summary>
-        /// 
+        /// Mode de gestion du maintien des informations en mémoire
         /// </summary>
         public enum MemoryKeepType : byte
         {
+            /// <summary>
+            /// Volatiles effacées par un reset.
+            /// </summary>
             VOLATILLOSTONRESET = 0,
+            /// <summary>
+            /// Volatiles effacées lors de la coupure de l'alimentation
+            /// </summary>
             VOLATILLOSTONPOWERDOWN = 1,
+            /// <summary>
+            /// Permanent usage limité
+            /// </summary>
             PERMANENTLIMITED = 2,
+            /// <summary>
+            /// Permanent sans limite
+            /// </summary>
             PERMANENTUNLIMITED = 3,
         }
 
         /// <summary>
-        /// 
+        /// Contient le type de maintien de la mémoire
         /// </summary>
         private MemoryKeepType memoryType;
 
         /// <summary>
-        /// 
+        /// Nombre de blocs de données valable en lecture.
         /// </summary>
         private byte readBlocks;
 
         /// <summary>
-        /// 
+        /// Nombre d'octet contenu dans un bloc de lecture.
         /// </summary>
         private byte readBytesPerBlock;
 
         /// <summary>
-        /// 
+        /// Nombre de blocs de données valable en écriture.
         /// </summary>
         private byte writeBlocks;
 
         /// <summary>
-        /// 
+        /// Nombre d'octets contenus dans un bloc d'écriture.
         /// </summary>
         private byte writeBytesPerBlock;
 
@@ -55,7 +67,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Lit les informations sur la gestion de la mémoire de sauvegarde
         /// </summary>
         public void GetDataStorageAvailability()
         {
@@ -79,7 +91,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Type de maintien de la mémoire
         /// </summary>
         /// <returns></returns>
         public MemoryKeepType MemoryType
@@ -92,7 +104,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Nombre de blocs en lecture
         /// </summary>
         public byte ReadBlocks
         {
@@ -104,7 +116,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Nombre d'octets par bloc en lecture
         /// </summary>
         public byte ReadBytesPerBlock
         {
@@ -116,7 +128,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Nombre de blocs en lectures.
         /// </summary>
         public byte WriteBlocks
         {
@@ -128,7 +140,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Nombre d'octets par bloc en lectures
         /// </summary>
         public byte WriteBytesPerBlock
         {
@@ -140,7 +152,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Lecture d'un bloc de données.
         /// </summary>
         /// <param name="BlockNumber"></param>
         /// <param name="data"></param>
@@ -167,7 +179,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Enregistrement d'un bloc de données.
         /// </summary>
         /// <param name="BlockNumber"></param>
         /// <param name="data"></param>

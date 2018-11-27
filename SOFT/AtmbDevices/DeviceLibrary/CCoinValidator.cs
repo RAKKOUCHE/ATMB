@@ -1,20 +1,31 @@
 ﻿using System;
-using System.IO;
 using System.Threading;
 
 namespace DeviceLibrary
 {
     /// <summary>
-    /// Class CCoinValidator
+    /// Class gérant le monnayeur.
     /// </summary>
     public partial class CCoinValidator : CcashReader
     {
+        /// <summary>
+        ///
+        /// </summary>
         public class CErroCV
         {
+        /// <summary>
+        ///
+        /// </summary>
             public byte code;
+        /// <summary>
+        ///
+        /// </summary>
             public CVErrorCodes errorText;
         }
 
+        /// <summary>
+        ///
+        /// </summary>
         public CErroCV errorCV;
 
         /// <summary>
@@ -22,8 +33,17 @@ namespace DeviceLibrary
         /// </summary>
         protected enum CVStatus
         {
+        /// <summary>
+        ///
+        /// </summary>
             OK = 0,
+        /// <summary>
+        ///
+        /// </summary>
             COINRETURNACTIVATED = 1,
+        /// <summary>
+        ///
+        /// </summary>
             COSACTIVATED = 2,
         }
 
@@ -32,7 +52,13 @@ namespace DeviceLibrary
         /// </summary>
         protected enum TrashDoor
         {
+        /// <summary>
+        ///
+        /// </summary>
             CLOSED = 0,
+        /// <summary>
+        ///
+        /// </summary>
             OPEN = 1,
         }
 
@@ -41,7 +67,13 @@ namespace DeviceLibrary
         /// </summary>
         protected enum LowerSensor
         {
+        /// <summary>
+        ///
+        /// </summary>
             FREE = 0,
+        /// <summary>
+        ///
+        /// </summary>
             BUSY = 1,
         }
 
@@ -51,64 +83,64 @@ namespace DeviceLibrary
         public const byte numChannel = 16;
 
         /// <summary>
-        /// Tableau contenant l'identification des pièces identifiables.
+        /// Tableau contenant l'identification des pièces.
         /// </summary>
         //public CCoindID[] coinIDs;
 
+        private byte backEventCounter;
         /// <summary>
         /// Sauvegarde du compteur d'événement.
         /// </summary>
-        private byte backEventCounter;
         protected byte BackEventCounter
         {
             get => backEventCounter;
             set => backEventCounter = value;
         }
 
+        private bool isCVToBeDeactivated;
         /// <summary>
         /// Indique si le monnayeur doit être adtivé.
         /// </summary>
-        private bool isCVToBeDeactivated;
         public bool IsCVToBeDeactivated
         {
             get => isCVToBeDeactivated;
             set => isCVToBeDeactivated = value;
         }
 
+        private bool isCVToBeActivated;
         /// <summary>
         /// Indique si le monnayeur doit être adtivé.
         /// </summary>
-        private bool isCVToBeActivated;
         public bool IsCVToBeActivated
         {
             get => isCVToBeActivated;
             set => isCVToBeActivated = value;
         }
 
-        /// <summary>
-        ///Ccontient l'indicateur d'ouverture du containner. 
-        /// </summary>
         private TrashDoor trashLid;
+        /// <summary>
+        /// Contient l'indicateur d'ouverture du containner. 
+        /// </summary>
         protected TrashDoor TrashLid
         {
             get => trashLid;
             set => trashLid = value;
         }
 
+        private LowerSensor exitSensor;
         /// <summary>
         /// Indique si les optiques de sortie sont libre.
         /// </summary>
-        private LowerSensor exitSensor;
         protected LowerSensor ExitSensor
         {
             get => exitSensor;
             set => exitSensor = value;
         }
 
+        private byte channelInProgress;
         /// <summary>
         /// Numéro du canal en cours d'utilisation.
         /// </summary>
-        private byte channelInProgress;
         protected byte ChannelInProgress
         {
             get => channelInProgress;
@@ -116,29 +148,24 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Tableau contenant les directions utilisées par le trieur
-        /// </summary>
-        //protected CSorter[] sorters;
-
-        /// <summary>
         /// Buffer contenant les informations sur les pièces lues ou les erreurs rencontrées
         /// </summary>
         public CCVcreditBuffer creditBuffer;
 
-        /// <summary>
-        /// 
-        /// </summary>
         private byte overrideMask;
+        /// <summary>
+        /// Masque des chemins optionnels
+        /// </summary>
         protected byte OverrideMask
         {
             get => overrideMask;
             set => overrideMask = value;
         }
 
+        private Etat state;
         /// <summary>
         /// Etat de la machie d'état.
         /// </summary>
-        private Etat state;
         protected Etat State
         {
             get => state;
@@ -146,12 +173,12 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Tableau des canaux
         /// </summary>
         public CCanal[] canaux;
 
         /// <summary>
-        /// 
+        /// Thread de gestion de la machine d'état du monnayeur.
         /// </summary>
         public Thread CVTask;
 
@@ -171,13 +198,13 @@ namespace DeviceLibrary
             {
                 CDevicesManage.Log.Info("Instancation de la classe CCoinValidator.");
                 DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
-                if (!(IsPresent = SimplePoll))
+                if(!(IsPresent = SimplePoll))
                 {
                     Thread.Sleep(100);
                     ResetDevice();
                     IsPresent = SimplePoll;
                 }
-                if (IsPresent)
+                if(IsPresent)
                 {
                     //                    coinIDs = new CCoindID[numChannel];
                     errorCV = new CErroCV();
@@ -185,7 +212,7 @@ namespace DeviceLibrary
                     CVTask = new Thread(TaskCheckEventCV);
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -206,7 +233,7 @@ namespace DeviceLibrary
                     dataBaseVersion = GetByte(Header.REQUESTDATABASEVER);
                     CDevicesManage.Log.Info(messagesText.dataBaseVersion, DeviceAddress, dataBaseVersion);
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -225,13 +252,13 @@ namespace DeviceLibrary
             {
                 CDevicesManage.Log.Info(messagesText.testSolenoid, DeviceAddress);
                 byte[] bufferParam = { mask };
-                if (!IsCmdccTalkSended(DeviceAddress, Header.TESTSOLENOID, (byte)bufferParam.Length, bufferParam, null))
+                if(!IsCmdccTalkSended(DeviceAddress, Header.TESTSOLENOID, (byte)bufferParam.Length, bufferParam, null))
                 {
                     CDevicesManage.Log.Error(messagesText.erreurCmd, Header.TESTSOLENOID, DeviceAddress);
                     throw new Exception(messagesText.erreurCmd);
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 return false;
@@ -249,12 +276,12 @@ namespace DeviceLibrary
             {
                 CDevicesManage.Log.Info("Définit le masque d'override des trieurs {0}", DeviceAddress);
                 byte[] bufferParam = { mask };
-                if (!IsCmdccTalkSended(DeviceAddress, Header.MODIFYOVERRIDESTATUS, (byte)bufferParam.Length, bufferParam, null))
+                if(!IsCmdccTalkSended(DeviceAddress, Header.MODIFYOVERRIDESTATUS, (byte)bufferParam.Length, bufferParam, null))
                 {
                     CDevicesManage.Log.Error("Impossible de modifier l'override status du {0}", DeviceAddress);
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -276,7 +303,7 @@ namespace DeviceLibrary
                     result = GetByte(Header.REQUESTOVERRIDESTATUS);
                     CDevicesManage.Log.Info("Le masque d'override des trieurs du {0} et {1}", DeviceAddress, result);
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -294,12 +321,12 @@ namespace DeviceLibrary
             {
                 CDevicesManage.Log.Info("Enregisrement du chemin de sortie par défaut {0} ({1})", DeviceAddress, defaultPath);
                 byte[] bufferParam = { defaultPath };
-                if (!IsCmdccTalkSended(DeviceAddress, Header.MODIFYDEFAULTSORTERPATH, (byte)bufferParam.Length, bufferParam, null))
+                if(!IsCmdccTalkSended(DeviceAddress, Header.MODIFYDEFAULTSORTERPATH, (byte)bufferParam.Length, bufferParam, null))
                 {
                     CDevicesManage.Log.Error("Impossible de modifier le chemin par défaut {0}", DeviceAddress);
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -320,7 +347,7 @@ namespace DeviceLibrary
                     CDevicesManage.Log.Info("Lecture du chemin de tri par défaut du {0}", DeviceAddress);
                     CDevicesManage.Log.Info("Le chemin par défaut du {0} est {1}", result = GetByte(Header.REQUESTDEFAULTSORTERPATH));
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -341,7 +368,7 @@ namespace DeviceLibrary
                 {
                     status = (CVStatus)GetByte(Header.REQUESTSTATUS);
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -359,13 +386,14 @@ namespace DeviceLibrary
                 CDevicesManage.Log.Debug("Lecture du buffer des crédits et des codes erreurs {0}", DeviceAddress);
                 int eventNumber = (BackEventCounter < creditBuffer.EventCounter) ? creditBuffer.EventCounter - BackEventCounter : 255 + creditBuffer.EventCounter - BackEventCounter;
                 BackEventCounter = creditBuffer.EventCounter;
-                if (eventNumber > 5)
+                if(eventNumber > 5)
                 {
                     throw new Exception("Trop d'évenements dans le buffer de credit ou code erreur");
                 }
-                for (int i = 0; i < eventNumber; i++)
+                for(int i = 0; i < eventNumber; i++)
                 {
-                    if (creditBuffer.Result[i, 0] == 0)
+                    byte channelNumber = creditBuffer.Result[i, 0];
+                    if(channelNumber == 0)
                     {
                         errorCV.code = creditBuffer.Result[i, 1];
                         errorCV.errorText = (CVErrorCodes)creditBuffer.Result[i, 1];
@@ -374,34 +402,36 @@ namespace DeviceLibrary
                     else
                     {
                         denominationInserted.IdDevice = EquipementCategory;
-
-                        denominationInserted.ValeurCent = canaux[creditBuffer.Result[i, 0] - 1].coinId.ValeurCent;
-                        denominationInserted.CVChannel = creditBuffer.Result[i, 0];
+                        denominationInserted.ValeurCent = canaux[channelNumber - 1].coinId.ValeurCent;
+                        denominationInserted.CVChannel = channelNumber;
                         denominationInserted.CVPath = creditBuffer.Result[i, 1];
-                        denominationInserted.TotalAmount += canaux[creditBuffer.Result[i, 0] - 1].coinId.ValeurCent;
+                        denominationInserted.TotalAmount += canaux[channelNumber - 1].coinId.ValeurCent;
                         counters.totalAmountCashIn += denominationInserted.ValeurCent;
+                        counters.amountCoinInAccepted[channelNumber - 1] += denominationInserted.ValeurCent;
+                        ++counters.coinsInAccepted[channelNumber - 1];
                         counters.totalAmountCash += denominationInserted.ValeurCent;
-                        ++counters.coinsInAccepted[creditBuffer.Result[i, 0] - 1];
-                        if(canaux[creditBuffer.Result[i, 0] - 1].HopperToLoad == 0)
+                        if(canaux[channelNumber - 1].HopperToLoad == 0)
                         {
-
+                            counters.totalAmountInCashBox = denominationInserted.ValeurCent;
                         }
-                        counters.amountCoinInAccepted[creditBuffer.Result[i, 0] - 1] += denominationInserted.ValeurCent;
-                        counters.amountInHopper[canaux[creditBuffer.Result[i, 0] - 1].HopperToLoad - 1] += denominationInserted.ValeurCent;
-                        counters.amountInHopper[canaux[creditBuffer.Result[i,0]-1].HopperToLoad - 1] += denominationInserted.ValeurCent;
+                        else
+                        {
+                            counters.amountInHopper[canaux[channelNumber - 1].HopperToLoad - 1] += denominationInserted.ValeurCent;
+                            ++counters.coinsInHopper[canaux[channelNumber - 1].HopperToLoad - 1];
+                        }
                         counters.SaveCounters();
-                        CDevicesManage.Log.Debug("Une pièce de {0:C2} a été reconnue", (decimal)canaux[creditBuffer.Result[i, 0] - 1].coinId.ValeurCent / 100);
+                        CDevicesManage.Log.Debug("Une pièce de {0:C2} a été reconnue", (decimal)canaux[channelNumber - 1].coinId.ValeurCent / 100);
                     }
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
         /// <summary>
-        /// 
+        /// Initialisation du monnayeur.
         /// </summary>
         public void Init()
         {
@@ -409,11 +439,11 @@ namespace DeviceLibrary
             BackEventCounter = 0;
             MasterDisable();
             canaux = new CCanal[numChannel];
-            for (byte i = 0; i < numChannel; i++)
+            for(byte i = 0; i < numChannel; i++)
             {
                 canaux[i] = new CCanal((byte)(i + 1), this);
                 canaux[i].coinId.GetCoinId();
-                
+
             }
             creditBuffer = new CCVcreditBuffer(this);
             CDevicesManage.Log.Trace("Simple poll sur {0} a {1}", DeviceAddress, SimplePoll ? "réussi" : "echoué");
@@ -436,14 +466,14 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Machine d'état
+        /// Machine d'état du monnayeur.
         /// </summary>
         protected virtual void CheckState()
         {
             try
             {
                 CDevicesManage.Log.Info("Vérification de la machine d'état du {0}", DeviceAddress);
-                switch (State)
+                switch(State)
                 {
                     case Etat.STATE_INIT:
                     {
@@ -459,9 +489,9 @@ namespace DeviceLibrary
                         do
                         {
                             CDevicesManage.Log.Debug("Reset du {0} Essai {1}", DeviceAddress, loop);
-                        } while (!ResetDevice() && (++loop < 4));
+                        } while(!ResetDevice() && (++loop < 4));
                         Thread.Sleep(100);
-                        if (loop == 0)
+                        if(loop == 0)
                         {
                             CDevicesManage.Log.Error("Impossible d'effectuer le reset du Pelicano");
                             //TODO envoyé le message d'erreur.
@@ -471,7 +501,7 @@ namespace DeviceLibrary
                     case Etat.STATE_SIMPLEPOLL:
                     {
                         CDevicesManage.Log.Debug("Simple poll sur {0}", DeviceAddress);
-                        if (!SimplePoll)
+                        if(!SimplePoll)
                         {
                             CDevicesManage.Log.Info("Echec du simple poll sur le {0}", DeviceAddress);
                             //TODO message d'erreur.
@@ -531,7 +561,7 @@ namespace DeviceLibrary
                         CDevicesManage.Log.Info("Effectue le self-test du {0}", DeviceAddress);
                         SelfTestResult result = SelfTest;
                         string message = string.Format("Le self-test du {0} indque l'erreur {1}", DeviceAddress, result);
-                        if (result == SelfTestResult.OK)
+                        if(result == SelfTestResult.OK)
                         {
                             CDevicesManage.Log.Info("Le self-test du {0} n'indique pas d'erreur", DeviceAddress);
                         }
@@ -543,7 +573,7 @@ namespace DeviceLibrary
                     }
                     case Etat.STATE_GETCOINID:
                     {
-                        foreach (CCanal canal in canaux)
+                        foreach(CCanal canal in canaux)
                         {
                             canal.coinId.GetCoinId();
                             CDevicesManage.Log.Info("Le code pays du canal {0} est {1}, la valeur est {2}, la version est {3}", canal.Number, canal.coinId.CountryCode, canal.coinId.ValeurCent, canal.coinId.Issue);
@@ -614,7 +644,7 @@ namespace DeviceLibrary
                     {
                         //todo lire les pièces autorisees dans le fichier de paramètre et comparer les masks
                         //si les masks sont identiques passer à l'dentification des pièces.
-                        CDevicesManage.Log.Info("lecture des chemins de tris du {0}", DeviceAddress);                        
+                        CDevicesManage.Log.Info("lecture des chemins de tris du {0}", DeviceAddress);
                         foreach(CCanal canal in canaux)
                         {
                             CDevicesManage.Log.Info("La sortie du trieur pour le canal {0} du {1} est {2}", canal.sorter.PathSorter);
@@ -624,7 +654,7 @@ namespace DeviceLibrary
                     case Etat.STATE_SETSORTERPATH:
                     {
                         CDevicesManage.Log.Info("Enregistrement du chemin de tri {0} pour le canal {1}", sorterPath, channelInProgress);
-                        canaux[ChannelInProgress].sorter.SetSorterPath(sorterPath);                        
+                        canaux[ChannelInProgress].sorter.SetSorterPath(sorterPath);
                         break;
                     }
                     case Etat.STATE_GETDEFAULTSORTERPATH:
@@ -648,14 +678,14 @@ namespace DeviceLibrary
                 }
                 State = Etat.STATE_GETCREDITBUFFER;
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
         /// <summary>
-        /// 
+        /// Les donnees variables du monnaayeur.
         /// </summary>
         /// <returns></returns>
         public byte[] VariablesSet
@@ -666,12 +696,12 @@ namespace DeviceLibrary
                 try
                 {
                     CDevicesManage.Log.Info("Lecture de l'ensemble des variables du {0}", DeviceAddress);
-                    if (IsCmdccTalkSended(DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, bufferIn))
+                    if(IsCmdccTalkSended(DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, bufferIn))
                     {
                         CDevicesManage.Log.Info("variableSetToRead");
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -685,29 +715,29 @@ namespace DeviceLibrary
         public override void TaskCheckEventCV()
         {
             CDevicesManage.Log.Debug("Tâche de lecture des évenements concernant du {0}", DeviceAddress);
-            while (true)
+            while(true)
             {
                 try
                 {
                     mutexCCTalk.WaitOne();
                     CheckState();
-                    if (IsCVToBeActivated)
+                    if(IsCVToBeActivated)
                     {
                         State = Etat.STATE_ENABLEMASTER;
                         IsCVToBeActivated = false;
                     }
-                    if (IsCVToBeDeactivated)
+                    if(IsCVToBeDeactivated)
                     {
                         State = Etat.STATE_DISABLEMASTER;
                         isCVToBeDeactivated = false;
                     }
 
-                    if (backEventCounter != creditBuffer.EventCounter)
+                    if(backEventCounter != creditBuffer.EventCounter)
                     {
                         State = Etat.STATE_CHECKCREDIBUFFER;
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), "Exception dans le thread du monnayeur : " + E.Message, E.StackTrace);
                 }
@@ -717,7 +747,7 @@ namespace DeviceLibrary
                     {
                         mutexCCTalk.ReleaseMutex();
                     }
-                    catch (Exception)
+                    catch(Exception)
                     {
                     }
                 }
