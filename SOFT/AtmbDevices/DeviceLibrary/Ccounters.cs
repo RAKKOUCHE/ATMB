@@ -4,7 +4,7 @@ using System.IO;
 namespace DeviceLibrary
 {
     /// <summary>
-    /// 
+    /// Class des compteurs
     /// </summary>
     [Serializable()]
     public class CcoinsCounters

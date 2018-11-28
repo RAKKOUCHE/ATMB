@@ -3,6 +3,9 @@ using System.Threading;
 
 namespace DeviceLibrary
 {
+    /// <summary>
+    /// Class du Pelicano
+    /// </summary>
     public partial class CPelicano : CCoinValidator
     {
         /// <summary>

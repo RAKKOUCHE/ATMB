@@ -2,6 +2,9 @@
 {
     public partial class CCoinValidator : CcashReader
     {
+        /** \addtogroup Header
+         * @{
+         */
         /// <summary>
         /// Liste des headers spécifiques au monnayeur
         /// </summary>

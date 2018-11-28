@@ -1,0 +1,250 @@
+\hypertarget{class_device_library_1_1_c_hopper_variable_set}{}\section{Device\+Library.\+C\+Hopper\+Variable\+Set Class Reference}
+\label{class_device_library_1_1_c_hopper_variable_set}\index{Device\+Library.\+C\+Hopper\+Variable\+Set@{Device\+Library.\+C\+Hopper\+Variable\+Set}}
+
+
+Classe des variables du hopper  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacf}{Coin\+Mode}} \+: byte \{ \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacfa5dd17b223b1713eff15e96575133d991}{Coin\+Mode.\+M\+U\+L\+T\+I\+C\+O\+I\+N\+S\+M\+O\+DE}} = 0, 
+\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacfad989518c433e0f8cd3d13553971ae26d}{Coin\+Mode.\+S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enumération des modes de distribution. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946be}{Variable}} \+: byte \{ \newline
+\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea4813867da2e7cbfd225e950893f2063b}{Variable.\+C\+U\+R\+R\+E\+N\+T\+L\+I\+M\+IT}} = 0, 
+\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea07f83719bd6b4fbe57de5df0adcd6040}{Variable.\+M\+O\+T\+O\+R\+S\+T\+O\+P\+D\+E\+L\+AY}} = 1, 
+\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea2ce47c5981a3b2d40b2dea2bcc857dfe}{Variable.\+P\+A\+Y\+O\+U\+T\+T\+I\+M\+E\+O\+UT}} = 2, 
+\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea07eaaced542a660738d0b539a58d1b51}{Variable.\+M\+A\+X\+C\+U\+R\+R\+E\+NT}} = 3, 
+\newline
+\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bead989518c433e0f8cd3d13553971ae26d}{Variable.\+S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE}} = 3, 
+\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea7040277bb149f1bd783b3f78ad856099}{Variable.\+S\+U\+P\+P\+L\+Y\+V\+O\+L\+T\+A\+GE}} = 4, 
+\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946beaf12ce2bca6832b6bcb08478fb3d50026}{Variable.\+C\+O\+N\+N\+E\+C\+T\+O\+R\+A\+D\+D\+R\+E\+SS}} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Enumération des index des variables \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a1567005412479877bf1b888e5dc2290b}{Get\+Variable\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Lecture des variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a1286acc7b9df9309ed0577bfb80366f7}{Set\+Variable}} (double current\+Limit, byte motor\+Stop\+Delay, byte payout\+TO, \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacf}{Coin\+Mode}} single\+Coin\+Mode)
+\begin{DoxyCompactList}\small\item\em Enregistrement des variables \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_ac41108d80eb84d8f3c4a17b7823eb267}{C\+Hopper\+Variable\+Set}} (\mbox{\hyperlink{class_device_library_1_1_c_hopper}{C\+Hopper}} owner)
+\begin{DoxyCompactList}\small\item\em Consructeur \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a878c99ad40cf59721df6cbb6eca89c4a}{Current\+Limit}} =$>$ Math.\+Round(Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea4813867da2e7cbfd225e950893f2063b}{Variable.\+C\+U\+R\+R\+E\+N\+T\+L\+I\+M\+IT}}) / 17.\+1, 2)
+\begin{DoxyCompactList}\small\item\em Lecture et conversion de la limite de courant \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a2543100f16a6382ce5e3a8836d5dcd6e}{Motor\+Stop\+Delay}} =$>$ Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea07f83719bd6b4fbe57de5df0adcd6040}{Variable.\+M\+O\+T\+O\+R\+S\+T\+O\+P\+D\+E\+L\+AY}})
+\begin{DoxyCompactList}\small\item\em Lecture du delai pour arrêter le moteur. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a45d7b128b6601b10c94103e94413da7e}{Payout\+Delay\+TO}} =$>$ (byte)(Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea2ce47c5981a3b2d40b2dea2bcc857dfe}{Variable.\+P\+A\+Y\+O\+U\+T\+T\+I\+M\+E\+O\+UT}}) / 3)
+\begin{DoxyCompactList}\small\item\em Lecture du delay pour la distribution d\textquotesingle{}un pièce. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a028cfdeb39a1890d2d91f55717c28811}{Maxcurrent}} =$>$ Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea07eaaced542a660738d0b539a58d1b51}{Variable.\+M\+A\+X\+C\+U\+R\+R\+E\+NT}}) / 17.\+1
+\begin{DoxyCompactList}\small\item\em Lecture et conversion du courant maximum \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a816c9c3bacbc51aa30ea4eb8ea7ae6bd}{Tension}} =$>$ Math.\+Round((0.\+2 + Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea7040277bb149f1bd783b3f78ad856099}{Variable.\+S\+U\+P\+P\+L\+Y\+V\+O\+L\+T\+A\+GE}}) $\ast$ 0.\+127), 2)
+\begin{DoxyCompactList}\small\item\em Lecture et conversion de la tension maximum. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_ad10cd1f59fe7737b96eadfa251b88df9}{Connector\+Address}} =$>$ Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946beaf12ce2bca6832b6bcb08478fb3d50026}{Variable.\+C\+O\+N\+N\+E\+C\+T\+O\+R\+A\+D\+D\+R\+E\+SS}})
+\begin{DoxyCompactList}\small\item\em Lecture de l\textquotesingle{}adresse physique du hopper \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+byte \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a4ab954fb5d79fdaa7d4cebc7922b3c78}{Variable\+Set\+To\+Read}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Buffer du résultat de la commande de lecture des variables du hopper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe des variables du hopper 
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacf}\label{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacf}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Coin\+Mode@{Coin\+Mode}}
+\index{Coin\+Mode@{Coin\+Mode}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Coin\+Mode}{CoinMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacf}{Device\+Library.\+C\+Hopper\+Variable\+Set.\+Coin\+Mode}} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumération des modes de distribution. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+U\+L\+T\+I\+C\+O\+I\+N\+S\+M\+O\+DE@{M\+U\+L\+T\+I\+C\+O\+I\+N\+S\+M\+O\+DE}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!M\+U\+L\+T\+I\+C\+O\+I\+N\+S\+M\+O\+DE@{M\+U\+L\+T\+I\+C\+O\+I\+N\+S\+M\+O\+DE}}}\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacfa5dd17b223b1713eff15e96575133d991}\label{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacfa5dd17b223b1713eff15e96575133d991}} 
+M\+U\+L\+T\+I\+C\+O\+I\+N\+S\+M\+O\+DE&Plusieurs pièces peuvent être distribuées en 1 opération. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE@{S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE@{S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE}}}\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacfad989518c433e0f8cd3d13553971ae26d}\label{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacfad989518c433e0f8cd3d13553971ae26d}} 
+S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE&Une seule pièce peut être distribuée par opération. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946be}\label{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946be}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Variable@{Variable}}
+\index{Variable@{Variable}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Variable}{Variable}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946be}{Device\+Library.\+C\+Hopper\+Variable\+Set.\+Variable}} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumération des index des variables 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+U\+R\+R\+E\+N\+T\+L\+I\+M\+IT@{C\+U\+R\+R\+E\+N\+T\+L\+I\+M\+IT}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!C\+U\+R\+R\+E\+N\+T\+L\+I\+M\+IT@{C\+U\+R\+R\+E\+N\+T\+L\+I\+M\+IT}}}\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea4813867da2e7cbfd225e950893f2063b}\label{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea4813867da2e7cbfd225e950893f2063b}} 
+C\+U\+R\+R\+E\+N\+T\+L\+I\+M\+IT&Limit de courant avant d\textquotesingle{}inverser la rotation du moteur \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+O\+T\+O\+R\+S\+T\+O\+P\+D\+E\+L\+AY@{M\+O\+T\+O\+R\+S\+T\+O\+P\+D\+E\+L\+AY}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!M\+O\+T\+O\+R\+S\+T\+O\+P\+D\+E\+L\+AY@{M\+O\+T\+O\+R\+S\+T\+O\+P\+D\+E\+L\+AY}}}\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea07f83719bd6b4fbe57de5df0adcd6040}\label{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea07f83719bd6b4fbe57de5df0adcd6040}} 
+M\+O\+T\+O\+R\+S\+T\+O\+P\+D\+E\+L\+AY&Délai pour arrêter le moteur après distribution. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+Y\+O\+U\+T\+T\+I\+M\+E\+O\+UT@{P\+A\+Y\+O\+U\+T\+T\+I\+M\+E\+O\+UT}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!P\+A\+Y\+O\+U\+T\+T\+I\+M\+E\+O\+UT@{P\+A\+Y\+O\+U\+T\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea2ce47c5981a3b2d40b2dea2bcc857dfe}\label{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea2ce47c5981a3b2d40b2dea2bcc857dfe}} 
+P\+A\+Y\+O\+U\+T\+T\+I\+M\+E\+O\+UT&Temps sans distribution pour arrêter le moteur si une pièce doit être distribuée. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+X\+C\+U\+R\+R\+E\+NT@{M\+A\+X\+C\+U\+R\+R\+E\+NT}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!M\+A\+X\+C\+U\+R\+R\+E\+NT@{M\+A\+X\+C\+U\+R\+R\+E\+NT}}}\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea07eaaced542a660738d0b539a58d1b51}\label{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea07eaaced542a660738d0b539a58d1b51}} 
+M\+A\+X\+C\+U\+R\+R\+E\+NT&Maximum de consomation de courant accepté. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE@{S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE@{S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE}}}\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bead989518c433e0f8cd3d13553971ae26d}\label{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bead989518c433e0f8cd3d13553971ae26d}} 
+S\+I\+N\+G\+L\+E\+C\+O\+I\+N\+M\+O\+DE&Mode pièce par pièce. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+U\+P\+P\+L\+Y\+V\+O\+L\+T\+A\+GE@{S\+U\+P\+P\+L\+Y\+V\+O\+L\+T\+A\+GE}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!S\+U\+P\+P\+L\+Y\+V\+O\+L\+T\+A\+GE@{S\+U\+P\+P\+L\+Y\+V\+O\+L\+T\+A\+GE}}}\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea7040277bb149f1bd783b3f78ad856099}\label{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea7040277bb149f1bd783b3f78ad856099}} 
+S\+U\+P\+P\+L\+Y\+V\+O\+L\+T\+A\+GE&Tension actuelle d\textquotesingle{}alimentation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+O\+N\+N\+E\+C\+T\+O\+R\+A\+D\+D\+R\+E\+SS@{C\+O\+N\+N\+E\+C\+T\+O\+R\+A\+D\+D\+R\+E\+SS}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!C\+O\+N\+N\+E\+C\+T\+O\+R\+A\+D\+D\+R\+E\+SS@{C\+O\+N\+N\+E\+C\+T\+O\+R\+A\+D\+D\+R\+E\+SS}}}\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946beaf12ce2bca6832b6bcb08478fb3d50026}\label{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946beaf12ce2bca6832b6bcb08478fb3d50026}} 
+C\+O\+N\+N\+E\+C\+T\+O\+R\+A\+D\+D\+R\+E\+SS&Adresse physique du hopper \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_ac41108d80eb84d8f3c4a17b7823eb267}\label{class_device_library_1_1_c_hopper_variable_set_ac41108d80eb84d8f3c4a17b7823eb267}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!C\+Hopper\+Variable\+Set@{C\+Hopper\+Variable\+Set}}
+\index{C\+Hopper\+Variable\+Set@{C\+Hopper\+Variable\+Set}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{C\+Hopper\+Variable\+Set()}{CHopperVariableSet()}}
+{\footnotesize\ttfamily Device\+Library.\+C\+Hopper\+Variable\+Set.\+C\+Hopper\+Variable\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_device_library_1_1_c_hopper}{C\+Hopper}}}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consructeur 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a1567005412479877bf1b888e5dc2290b}\label{class_device_library_1_1_c_hopper_variable_set_a1567005412479877bf1b888e5dc2290b}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Get\+Variable\+Set@{Get\+Variable\+Set}}
+\index{Get\+Variable\+Set@{Get\+Variable\+Set}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Get\+Variable\+Set()}{GetVariableSet()}}
+{\footnotesize\ttfamily void Device\+Library.\+C\+Hopper\+Variable\+Set.\+Get\+Variable\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lecture des variables. 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a1286acc7b9df9309ed0577bfb80366f7}\label{class_device_library_1_1_c_hopper_variable_set_a1286acc7b9df9309ed0577bfb80366f7}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Set\+Variable@{Set\+Variable}}
+\index{Set\+Variable@{Set\+Variable}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Set\+Variable()}{SetVariable()}}
+{\footnotesize\ttfamily void Device\+Library.\+C\+Hopper\+Variable\+Set.\+Set\+Variable (\begin{DoxyParamCaption}\item[{double}]{current\+Limit,  }\item[{byte}]{motor\+Stop\+Delay,  }\item[{byte}]{payout\+TO,  }\item[{\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a6d46e753370657ed1e4f4ab7bea0dacf}{Coin\+Mode}}}]{single\+Coin\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enregistrement des variables 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Limit} & Limit de courant avant l\textquotesingle{}inversion de la rotaiton\\
+\hline
+{\em motor\+Stop\+Delay} & Delai pour arrêter le moteur après la distribution.\\
+\hline
+{\em payout\+TO} & Le délai maximum pour la distribution d\textquotesingle{}une pièce.\\
+\hline
+{\em single\+Coin\+Mode} & Single coin ou non.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_ad10cd1f59fe7737b96eadfa251b88df9}\label{class_device_library_1_1_c_hopper_variable_set_ad10cd1f59fe7737b96eadfa251b88df9}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Connector\+Address@{Connector\+Address}}
+\index{Connector\+Address@{Connector\+Address}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Connector\+Address}{ConnectorAddress}}
+{\footnotesize\ttfamily byte Device\+Library.\+C\+Hopper\+Variable\+Set.\+Connector\+Address =$>$ Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946beaf12ce2bca6832b6bcb08478fb3d50026}{Variable.\+C\+O\+N\+N\+E\+C\+T\+O\+R\+A\+D\+D\+R\+E\+SS}})}
+
+
+
+Lecture de l\textquotesingle{}adresse physique du hopper 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a878c99ad40cf59721df6cbb6eca89c4a}\label{class_device_library_1_1_c_hopper_variable_set_a878c99ad40cf59721df6cbb6eca89c4a}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Current\+Limit@{Current\+Limit}}
+\index{Current\+Limit@{Current\+Limit}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Current\+Limit}{CurrentLimit}}
+{\footnotesize\ttfamily double Device\+Library.\+C\+Hopper\+Variable\+Set.\+Current\+Limit =$>$ Math.\+Round(Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea4813867da2e7cbfd225e950893f2063b}{Variable.\+C\+U\+R\+R\+E\+N\+T\+L\+I\+M\+IT}}) / 17.\+1, 2)}
+
+
+
+Lecture et conversion de la limite de courant 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a028cfdeb39a1890d2d91f55717c28811}\label{class_device_library_1_1_c_hopper_variable_set_a028cfdeb39a1890d2d91f55717c28811}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Maxcurrent@{Maxcurrent}}
+\index{Maxcurrent@{Maxcurrent}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Maxcurrent}{Maxcurrent}}
+{\footnotesize\ttfamily double Device\+Library.\+C\+Hopper\+Variable\+Set.\+Maxcurrent =$>$ Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea07eaaced542a660738d0b539a58d1b51}{Variable.\+M\+A\+X\+C\+U\+R\+R\+E\+NT}}) / 17.\+1}
+
+
+
+Lecture et conversion du courant maximum 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a2543100f16a6382ce5e3a8836d5dcd6e}\label{class_device_library_1_1_c_hopper_variable_set_a2543100f16a6382ce5e3a8836d5dcd6e}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Motor\+Stop\+Delay@{Motor\+Stop\+Delay}}
+\index{Motor\+Stop\+Delay@{Motor\+Stop\+Delay}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Motor\+Stop\+Delay}{MotorStopDelay}}
+{\footnotesize\ttfamily byte Device\+Library.\+C\+Hopper\+Variable\+Set.\+Motor\+Stop\+Delay =$>$ Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea07f83719bd6b4fbe57de5df0adcd6040}{Variable.\+M\+O\+T\+O\+R\+S\+T\+O\+P\+D\+E\+L\+AY}})}
+
+
+
+Lecture du delai pour arrêter le moteur. 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a45d7b128b6601b10c94103e94413da7e}\label{class_device_library_1_1_c_hopper_variable_set_a45d7b128b6601b10c94103e94413da7e}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Payout\+Delay\+TO@{Payout\+Delay\+TO}}
+\index{Payout\+Delay\+TO@{Payout\+Delay\+TO}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Payout\+Delay\+TO}{PayoutDelayTO}}
+{\footnotesize\ttfamily byte Device\+Library.\+C\+Hopper\+Variable\+Set.\+Payout\+Delay\+TO =$>$ (byte)(Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea2ce47c5981a3b2d40b2dea2bcc857dfe}{Variable.\+P\+A\+Y\+O\+U\+T\+T\+I\+M\+E\+O\+UT}}) / 3)}
+
+
+
+Lecture du delay pour la distribution d\textquotesingle{}un pièce. 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a816c9c3bacbc51aa30ea4eb8ea7ae6bd}\label{class_device_library_1_1_c_hopper_variable_set_a816c9c3bacbc51aa30ea4eb8ea7ae6bd}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Tension@{Tension}}
+\index{Tension@{Tension}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Tension}{Tension}}
+{\footnotesize\ttfamily double Device\+Library.\+C\+Hopper\+Variable\+Set.\+Tension =$>$ Math.\+Round((0.\+2 + Get\+Variable(\mbox{\hyperlink{class_device_library_1_1_c_hopper_variable_set_a3b79d051f89692abb5d34ae3f4e946bea7040277bb149f1bd783b3f78ad856099}{Variable.\+S\+U\+P\+P\+L\+Y\+V\+O\+L\+T\+A\+GE}}) $\ast$ 0.\+127), 2)}
+
+
+
+Lecture et conversion de la tension maximum. 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_hopper_variable_set_a4ab954fb5d79fdaa7d4cebc7922b3c78}\label{class_device_library_1_1_c_hopper_variable_set_a4ab954fb5d79fdaa7d4cebc7922b3c78}} 
+\index{Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}!Variable\+Set\+To\+Read@{Variable\+Set\+To\+Read}}
+\index{Variable\+Set\+To\+Read@{Variable\+Set\+To\+Read}!Device\+Library\+::\+C\+Hopper\+Variable\+Set@{Device\+Library\+::\+C\+Hopper\+Variable\+Set}}
+\subsubsection{\texorpdfstring{Variable\+Set\+To\+Read}{VariableSetToRead}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} Device\+Library.\+C\+Hopper\+Variable\+Set.\+Variable\+Set\+To\+Read\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Buffer du résultat de la commande de lecture des variables du hopper. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Projets/\+A\+T\+M\+B/\+S\+O\+F\+T/\+Atmb\+Devices/\+Device\+Library/C\+Variable\+Set.\+cs\end{DoxyCompactItemize}

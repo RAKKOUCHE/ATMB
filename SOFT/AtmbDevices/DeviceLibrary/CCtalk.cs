@@ -6,9 +6,11 @@ using System.Threading;
 
 namespace DeviceLibrary
 {
+    /// <summary>
+    /// Class ccTalk
+    /// </summary>
     public partial class CccTalk : CDevice
     {
-
         /// <summary>
         /// Nom du fichier contenant les compteurs.
         /// </summary>

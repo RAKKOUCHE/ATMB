@@ -6,7 +6,7 @@
     <members>
         <member name="T:DeviceLibrary.CCanal">
             <summary>
-            Class 
+            Class d'un canal d'un périphérique de paiement
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCanal.CVOwner">
@@ -57,11 +57,14 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCanal.CCoindID.REQUESTCOINID">
+            \addtogroup Header
+            @{
             <summary>
             Command ccTalk demandant l'identification de la pièce du canal.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCanal.CCoindID.CanalOwner">
+            @}
             <summary>
             Instance du canal de la pièce.
             </summary>
@@ -147,10 +150,12 @@
         </member>
         <member name="T:DeviceLibrary.CcashReader">
             <summary>
-             Class abstraite utilisé par les moyens de paiement.
+            Class abstraite utilisé par les moyens de paiement.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CcashReader.Header">
+            \addtogroup Header
+            @}
             <summary>
             Enumeration des headers concernant les moyens de peiement
             </summary>
@@ -283,7 +288,7 @@
         </member>
         <member name="T:DeviceLibrary.CcoinsCounters">
             <summary>
-            
+            Class des compteurs
             </summary>
         </member>
         <member name="F:DeviceLibrary.CcoinsCounters.totalAmountInCashBox">
@@ -368,7 +373,32 @@
         </member>
         <member name="T:DeviceLibrary.CDevice.CInserted">
             <summary>
-            
+             Classe des pièces insérées
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.ValeurCent">
+            <summary>
+            Montant nominal en centimes de la pièce insérée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.CVChannel">
+            <summary>
+            Canal correpsondant à la pièce insérée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.CVPath">
+            <summary>
+            Chemin de tri utilisé 
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.TotalAmount">
+            <summary>
+            Montant inséré depuis le début de la transaction.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.BackTotalAmount">
+            <summary>
+            Sauvegarde du montant total inséré depuis le début de la transaction.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CDevice.CLevel">
@@ -381,10 +411,94 @@
             Enumération des niveaux soft
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.VIDE">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessous ou égal au niveau vide indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.BAS">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessous ou égal au niveau d'alerte bas indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.OK">
+            <summary>
+            Le nombre de pièces dans périphérique est compris entre le niveau d'alerte bas et le niveau d'alerte au indiqués dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.HAUT">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessus ou égal au niveau d'alerte haut indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.PLEIN">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessus ou égal au niveau plein indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.INCONNU">
+            <summary>
+            Le nombre de pièces dans périphérique ou le fichier paramètre n'ont pas été encore lus.
+            </summary>
+        </member>
         <member name="T:DeviceLibrary.CDevice.CLevel.HardLevel">
             <summary>
-            Enumération des niveaux soft
+            Enumération des niveaux Hard
             </summary>
+            <remarks>Determinés par la lecture des sondes de niveau du périphérique</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.VIDE">
+            <summary>
+            Le périphérique est vide.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.OK">
+            <summary>
+            Aucune sonde n'est activée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.PLEIN">
+            <summary>
+            Le périphérique est plein
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.INCONNU">
+            <summary>
+            Les sondes n'ont pas été encore interrogées.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.ID">
+            <summary>
+            Nom du périphérique
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.softLevel">
+            <summary>
+            Variable contenant le niveau du périphérique par rapport aux paramètres et au compteurs.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.hardLevel">
+            <summary>
+            Variable contenant le niveau du périphérique par rapport à ses sondes hardware.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.isSoftLevelChanged">
+            <summary>
+            Boolean indiquant qu'un changement de niveau soft est intervenu.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.isHardLevelChanged">
+            <summary>
+            Boolean indiquant qu'un changement de niveau hard est intervenu.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.CLevel.#ctor(DeviceLibrary.CDevice.CLevel.SoftLevel,DeviceLibrary.CDevice.CLevel.HardLevel)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="softlevel">Niveau soft, par défaut inconnu</param>
+            <param name="hardLevel">Niveau hard, par défaut inconnu</param>
+            <remarks>Le fait d'avoir les niveaux à l'état inconnu permet de provoqué un évenement permettant de déterminé le niveau actuel.</remarks>
         </member>
         <member name="F:DeviceLibrary.CDevice.deviceLevel">
             <summary>
@@ -424,7 +538,7 @@
         </member>
         <member name="T:DeviceLibrary.CMemoryStorage">
             <summary>
-            
+            Classe des paramètres de stockage des variables en mémoire.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CMemoryStorage.MemoryKeepType">
@@ -534,15 +648,20 @@
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.CCVcreditBuffer">
             <summary>
-            
+            Classe du buffer des credits ou des codes erreurs.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CCoinValidator.CCVcreditBuffer.eventCounter">
+        <member name="F:DeviceLibrary.CCoinValidator.CCVcreditBuffer.owner">
+            <summary>
+            Instance de la classe proprietaire du buffer.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.CCVcreditBuffer.EventCounter">
             <summary>
             Compteur d'évenements crédits ou erreurs
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CCoinValidator.CCVcreditBuffer.result">
+        <member name="P:DeviceLibrary.CCoinValidator.CCVcreditBuffer.Result">
             <summary>
             Buffer contenant les informations sur les évenements.
             </summary>
@@ -775,6 +894,8 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.Header">
+            \addtogroup Header
+            @{
             <summary>
             Liste des headers spécifiques au monnayeur
             </summary>
@@ -1072,6 +1193,393 @@
             
              </summary>
         </member>
+        <member name="T:DeviceLibrary.CCoinValidator.CVErrorCodes">
+            \addtogroup Erreur
+            @{
+            <summary>
+            Enumération des codes erreur du monnayeur
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.NULL">
+            <summary>
+            Pas d'erreur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.REJECTCOIN">
+            <summary>
+            Pièce non reconnue.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN">
+            <summary>
+            Pièces refusée 
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.MULTIPLEWINDOWS">
+            <summary>
+            Plusieurs canaux reconnaissent la pièce.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.WAKEUP_TO">
+            <summary>
+            Delai de réveil dépassé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.VALIDATION_TO">
+            <summary>
+            Temps d'identification dépassé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.CREDITSENSOR_TO">
+            <summary>
+            Délai de passage devant le sensor de crédit dépassé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.SORTEROPTO_TO">
+            <summary>
+            Délaide passage devant le sensor du trieur dépassé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.TOOCLOSECOIN">
+            <summary>
+            2 pièces trop rapprochées pour l'dentification.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.ACCEPTGATENOTREADY">
+            <summary>
+            La porte d'acceptation n'est pas prête.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.CREDITSENSORNOTREADY">
+            <summary>
+            Le sensor de crédit n'est pas prêt.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.SORTERNOTREADY">
+            <summary>
+            Le trieur n'est pas prêt.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.REJECTCOINNOTCLEARED">
+            <summary>
+            Le passage de rejet est occupé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.VALIDATORSENSORNOTREADY">
+            <summary>
+            Le sensor de validation n'est pas prêt.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.CREDITSENSORBLOCKED">
+            <summary>
+            Le sensor de crédit est bloqué.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.SORTEROPTOBLOCKED">
+            <summary>
+            Le sensor optique du trieur est bloqué.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.CREDITSEQERROR">
+            <summary>
+            Séquence de crédit erronée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COINGOINGBACK">
+            <summary>
+            Retour en arrière de la pièce.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COINTOOFAST">
+            <summary>
+            Passage trop rapide.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COINTOOSLOW">
+            <summary>
+            Passage trop lent.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COSMECHACTIVED">
+            <summary>
+            Le mechanisme anti pêche activé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.DCEOPTO_TO">
+            <summary>
+            Dual coin entry opto delai dépassé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.DCEOPTONOTSEE">
+            <summary>
+            Opto DCE non vu.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.CREDITSENSORREACHEDEARLY">
+            <summary>
+            Credit sensor atteint trop tôt.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.REJECTEDCOIN2">
+            <summary>
+            Pièce rejetée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.REJECTSLUG">
+            <summary>
+            Fausse pièce rejetée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.REJECTSENSORBLOCKED">
+            <summary>
+            Sensor de rejet bloqué.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.GAMESOVERLOAD">
+            <summary>
+            Montant nécessaire introduit trop lentement.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.MAXCOINMETERPULSESEXCEEDED">
+            <summary>
+            Nombre maximum d'impulsions dépassé
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.ACCEPTGATEOPENNOTCLOSED">
+            <summary>
+            Porte d'acceptation ouverte.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.ACCEPTGATECLOSEDNOTOPEN">
+            <summary>
+            Porte d'acceptation non ouverte.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.MANIFOLDTIMEOUT">
+            <summary>
+            Délai dans le séparateur trop long.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.MANIFOLDOPTOBLOCKED">
+            <summary>
+            Opto coupleur du séparateur bloqué.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.MANIFOLDNOTREADY">
+            <summary>
+            Séparateur pas prêt.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.SECURITYSTATUSCHANGED">
+            <summary>
+            Les critères de sécurité ont changé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.MOTOREXCEPTION">
+            <summary>
+            Problem sur le moteur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.SWALLOWEDCOIN">
+            <summary>
+            Pièce avalée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COIN2FAST">
+            <summary>
+            Passage trop rapide.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COIN2SLOW">
+            <summary>
+            Passage trop lent.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COININCORRECTLYSORTED">
+            <summary>
+            Tri incorrecte.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.EXTERNALLIGHTATTACK">
+            <summary>
+            Tentative de fraude à la lumiere
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_1">
+            <summary>
+            Pièce 1 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_2">
+            <summary>
+            Pièce 2 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_3">
+            <summary>
+            Pièce 3 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_4">
+            <summary>
+            Pièce 4 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_5">
+            <summary>
+            Pièce 5 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_6">
+            <summary>
+            Pièce 6 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_7">
+            <summary>
+            Pièce 7 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_8">
+            <summary>
+            Pièce 8 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_9">
+            <summary>
+            Pièce 9 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_10">
+            <summary>
+            Pièce 10 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_11">
+            <summary>
+            Pièce 11 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_12">
+            <summary>
+            Pièce 12 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_13">
+            <summary>
+            Pièce 13 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_14">
+            <summary>
+            Pièce 14 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_15">
+            <summary>
+            Pièce 15 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_16">
+            <summary>
+            Pièce 16 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_17">
+            <summary>
+            Pièce 17 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_18">
+            <summary>
+            Pièce 18 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_19">
+            <summary>
+            Pièce 19 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_20">
+            <summary>
+            Pièce 20 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_21">
+            <summary>
+            Pièce 21 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_22">
+            <summary>
+            Pièce 22 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_23">
+            <summary>
+            Pièce 23 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_24">
+            <summary>
+            Pièce 24 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_25">
+            <summary>
+            Pièce 25 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_26">
+            <summary>
+            Pièce 26 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_27">
+            <summary>
+            Pièce 27 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_28">
+            <summary>
+            Pièce 28 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_29">
+            <summary>
+            Pièce 29 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_30">
+            <summary>
+            Pièce 30 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_31">
+            <summary>
+            Pièce 31 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN_32">
+            <summary>
+            Pièce 32 inhibée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.DATABLOCKREQUESTED">
+            <summary>
+            Bloc de données requis
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COINRETURNMECHACTIVATED">
+            <summary>
+            Mechanisme de rejet activé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.UNSPECIFIEDALARM">
+            <summary>
+            Alarme inconnue.
+            </summary>
+        </member>
         <member name="T:DeviceLibrary.DefaultDevicesAddress">
             <summary>
             Enumération des périphériques et leurs adresses.
@@ -1144,10 +1652,12 @@
         </member>
         <member name="T:DeviceLibrary.CccTalk">
             <summary>
-            Header core ccTalk
+            Class ccTalk
             </summary>
         </member>
         <member name="T:DeviceLibrary.CccTalk.Header">
+            \addtogroup Header
+            @{
             <summary>
             Enumération des headers communs à tous les périphériques ccTalk.
             </summary>
@@ -1467,18 +1977,280 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CccTalk.SelfTestResult">
+            \addtogroup Erreur
+            @{
             <summary>
             Liste des fautes possibles retournées par un self test.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.OK">
+            <summary>
+            OK
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORCHECKSUM">
+            <summary>
+            Erreur de checksum
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORCOILMEASUREMENT">
+            <summary>
+            Erreur sur une bobine de mesure.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORCREDITSENSOR">
+            <summary>
+            Erreur sur le senseur de crédit.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORPIEZOSENSOR">
+            <summary>
+            Erreur sur le sensor piezzo.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORREFLECTIVESENSOR">
+            <summary>
+            Erreur sur le réflecteur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORDIAMETERSENSOR">
+            <summary>
+            Erreur sur les senseurs de diamètre.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORONWAKEUPSENSOR">
+            <summary>
+            Erreur sur le sensor d'éveil
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERROREXITSENSOR">
+            <summary>
+            Erreur sur le senseur de sortie
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.NVRAMCHECKSUM">
+            <summary>
+            Erreur sur le checkcum de la mémoire flash.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORKEYPAD">
+            <summary>
+            Erreur sur le clavier.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORBUTTON">
+            <summary>
+            Error sur un bouton de contact.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORDISPLAY">
+            <summary>
+            Erreur sur l'afficheur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.COINAUDITERROR">
+            <summary>
+            Erreur sur l'audit des pièces.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORONREJECTSENSOR">
+            <summary>
+            Erreur sur le senseur de rejet.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORONCOINRETURNMECH">
+            <summary>
+            Erreur sur le système de rejet.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORCOSMECH">
+            <summary>
+            Erreur sur le système anti-fishing
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORRIM">
+            <summary>
+            Erreur sur le senseur RIM
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORTHERMISTOR">
+            <summary>
+            Erreur sur le thermistor.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORMOTOR">
+            <summary>
+            Erreur moteur
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORPAYOUTSENSOR">
+            <summary>
+            Erreur sur le senseur de sortie du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORLEVELSENSOR">
+            <summary>
+            Erreur sur un senseur de niveau.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORDATABLOCKCHECSUM">
+            <summary>
+            Erreur sur le checksum d'un blco de données.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORINTERNALCOM">
+            <summary>
+            Port série interne en défaut
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORPOWERSUPPLY">
+            <summary>
+            Alimentation en dehors des valeurs limits.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORTEMP">
+            <summary>
+            La température externe est en dehors des valeurs limites définie dans le spécification du périphérique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORDCE">
+            <summary>
+            Erreur dans le systeme 2 entrées.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORBVSENSOR">
+            <summary>
+            Erreur senseur dans le lecteur de billets.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORBVTRANSPORT">
+            <summary>
+            Erreur dans le déplacement du billet dans le lecteur de billets.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORSTACKER">
+            <summary>
+            Defaut dans l'empileur
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.BILLJAMMED">
+            <summary>
+            Bourrage billet
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORTESTRAM">
+            <summary>
+            Erreur dans la RAM.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORSTRINGSENSOR">
+            <summary>
+            Erreur dans le système anti-fishing du lecteur de billet.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORACCEPTGATEOPEN">
+            <summary>
+            Erreur la porte d'acceptation est ouverte.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORACCEPTGATECLOSE">
+            <summary>
+            Erreur la porte d'acceptation est fermée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.STACKERMISSING">
+            <summary>
+            L'empileur est absent.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.STACKERFULL">
+            <summary>
+            L'empileur est plein.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORERASEFLASHMEM">
+            <summary>
+            Echec de l'effacement de la mémoire flash.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORWRITEFLASHMEM">
+            <summary>
+            Echec de l'écriture de la mémoire flash.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORSLAVEDEVICE">
+            <summary>
+            Defaut de communication avec le périphérique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERROROPTOSENSOR">
+            <summary>
+            Erreur sur un optocoupleur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORBATTERY">
+            <summary>
+            Erreur batterie
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORDOOROPEN">
+            <summary>
+            La porte est restée ouverte
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORMICROSWITCH">
+            <summary>
+            Erreur sur un microswitch.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORRTC">
+            <summary>
+            Erreur sur l'horloge en temps réel.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORFW">
+            <summary>
+            Erreur Firmware.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORINIT">
+            <summary>
+            Erreur d'initialisation.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORCURRENTSUPPLY">
+            <summary>
+            Le périphérique est utilisé en dehors des limites de courant deéfinie par le fabricant.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.FORCEBOOTLOADERMODE">
+            <summary>
+            Mode bootloader forcé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.COINJAM">
+            <summary>
+            Bourrage pièces.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.DISKBLOCKED">
+            <summary>
+            Débloqué.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORUNKNOW">
+            <summary>
+            Erreur inconnue.
+            </summary>
+        </member>
         <member name="T:DeviceLibrary.CHopper">
             <summary>
-            
+            Classe des hoppers
             </summary>
         </member>
         <member name="T:DeviceLibrary.CHopper.CHopperStatus">
             <summary>
-            
+            Classe des status des hoppers
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.CHopperStatus.Owner">
@@ -1488,7 +2260,7 @@
         </member>
         <member name="T:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult">
             <summary>
-            
+            Classe des resultats d'une distribution.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.HopperNumber">
@@ -1560,7 +2332,7 @@
         </member>
         <member name="F:DeviceLibrary.CHopper.CHopperStatus.dispensedResult">
             <summary>
-            
+            Instance de la classe CDispenseResult.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CHopper.CHopperStatus.GetHopperStatus">
@@ -1625,6 +2397,8 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.RegistrePos.MAXCURRENTEXCEEDED">
+            \addtogroup Erreur
+            @{
             <summary>
             La consommation de courant a dépassée celle autorisée.
             </summary>
@@ -1641,6 +2415,7 @@
             <remarks>Utilisé pour detecté le hopper vide lors du vidage.</remarks>
         </member>
         <member name="F:DeviceLibrary.CHopper.RegistrePos.SINGLEPAYOUT">
+            @}
             <summary>
             Le pièce par pièce est activé.
             </summary>
@@ -1651,6 +2426,8 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.RegistrePos.CHECKSUMA">
+            \addtogroup Erreur
+            @{
             <summary>
             Le checksum du bloc A de la mémoire non-volatile est erroné.
             </summary>
@@ -1696,6 +2473,7 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.RegistrePos.DISABLED">
+            @}
             <summary>
             Le hopper n'est pas activé.
             </summary>
@@ -2164,6 +2942,8 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CHopper.Header">
+            \addtogroup Header
+            @{
             <summary>
             Liste des commandes ccTalk spécifiques aux hoppers
             </summary>
@@ -2414,6 +3194,52 @@
             Consructeur
             </summary>
         </member>
+        <member name="T:DeviceLibrary.CPelicano">
+            <summary>
+            Class du Pelicano
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CPelicano.CcmdMotors">
+            <summary>
+            Enumération des commandes du moteur du Pelicano
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.CcmdMotors.TRASH1">
+            <summary>
+            Ouve la trappe de rejet, fait tourner le moteur et referme la trappe de rejet.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.CcmdMotors.TRASH2">
+            <summary>
+            non utilisé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.CcmdMotors.TRASH3">
+            <summary>
+            Non utilisé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.CcmdMotors.CPR">
+            <summary>
+            Non documentée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.CcmdMotors.SETSPEED">
+            <summary>
+            Definie la vitesse de rotation du disque
+            </summary>
+            <remarks>100 = 3 pièces, 133 = 4 pièces, ect...</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.CcmdMotors.GETSPEED">
+            <summary>
+            Lit la vitesse de rotation du disque.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.CcmdMotors.GETPOCKETIME">
+            <summary>
+            Lit le délai entre 2 trous du disque par pas de 4ms.
+            </summary>
+        </member>
         <member name="T:DeviceLibrary.CPelicano.OptionFlag">
             <summary>
             Enumération des status de la limitation de l'acceptation.
@@ -2528,6 +3354,28 @@
         <member name="M:DeviceLibrary.CPelicano.#ctor">
             <summary>
             Constructeur
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CPelicano.Header">
+            \addtogroup Header
+            @{
+            <summary>
+            Liste des commandes spécifiques au Pelicano
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.Header.READOPTOSTATES">
+            <summary>
+            Lecture des optocoupleurs à la sortie des pièces.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.Header.REQUESTOPTIONFLAG">
+            <summary>
+            Lecture des caractèristiques d'acceptation.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.Header.SETGETACCEPTLIMIT">
+            <summary>
+            Fixe ou lit les limites d'acceptation.
             </summary>
         </member>
         <member name="T:DeviceLibrary.Reason">

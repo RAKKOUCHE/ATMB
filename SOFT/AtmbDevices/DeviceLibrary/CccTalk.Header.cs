@@ -1,10 +1,10 @@
 ﻿namespace DeviceLibrary
 {
-    /// <summary>
-    /// Header core ccTalk
-    /// </summary>
     public partial class CccTalk : CDevice
     {
+        /** \addtogroup Header
+         * @{
+         */
         /// <summary>
         /// Enumération des headers communs à tous les périphériques ccTalk.
         /// </summary>

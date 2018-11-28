@@ -1,8 +1,10 @@
 ﻿namespace DeviceLibrary
 {
-
     public abstract partial class CcashReader : CccTalk
     {
+        /** \addtogroup Header
+         * @}
+         */
         /// <summary>
         /// Enumeration des headers concernant les moyens de peiement
         /// </summary>
@@ -37,7 +39,7 @@
             ///Cette commande demande le masque d'inhibition géneral du périphérique            
             /// </summary>
             /// <remarks>voir <see cref="MODIFYMASTERINHIBITSTATUS"/></remarks>
-            REQUESTMASTERINHIBITSTATUS = 227,
+            REQUESTMASTERINHIBITSTATUS = 227,            
         }
-    }
+    }    
 }

@@ -1,7 +1,7 @@
 ﻿namespace DeviceLibrary
 {
     /// <summary>
-    /// Class 
+    /// Class d'un canal d'un périphérique de paiement
     /// </summary>
     public partial class CCanal
     {

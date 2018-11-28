@@ -1,0 +1,197 @@
+\hypertarget{class_device_library_1_1_c_memory_storage}{}\section{Device\+Library.\+C\+Memory\+Storage Class Reference}
+\label{class_device_library_1_1_c_memory_storage}\index{Device\+Library.\+C\+Memory\+Storage@{Device\+Library.\+C\+Memory\+Storage}}
+
+
+Classe des paramètres de stockage des variables en mémoire.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7a}{Memory\+Keep\+Type}} \+: byte \{ \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aa963ae5bd1a56f051a5218b3a8b3f7e2a}{Memory\+Keep\+Type.\+V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+R\+E\+S\+ET}} = 0, 
+\mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aa6ca056f5fe86139cd47875ac8d244a3e}{Memory\+Keep\+Type.\+V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+P\+O\+W\+E\+R\+D\+O\+WN}} = 1, 
+\mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aaab49f8e53c5270f77a021603d479de15}{Memory\+Keep\+Type.\+P\+E\+R\+M\+A\+N\+E\+N\+T\+L\+I\+M\+I\+T\+ED}} = 2, 
+\mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aa5aa3ba7df83ac7f584293cb274ae3fa9}{Memory\+Keep\+Type.\+P\+E\+R\+M\+A\+N\+E\+N\+T\+U\+N\+L\+I\+M\+I\+T\+ED}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Mode de gestion du maintien des informations en mémoire \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a1f469e7acead36a0223f798f5a2d9de9}{C\+Memory\+Storage}} (\mbox{\hyperlink{class_device_library_1_1_ccc_talk}{Ccc\+Talk}} owner)
+\begin{DoxyCompactList}\small\item\em Constructeur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_af329c7962b7095cc2f15dd5a22d0fcfd}{Get\+Data\+Storage\+Availability}} ()
+\begin{DoxyCompactList}\small\item\em Lit les informations sur la gestion de la mémoire de sauvegarde \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a7517e6ae450e6c26be181fa187d98ed0}{Get\+Data\+Block}} (byte Block\+Number, ref object data)
+\begin{DoxyCompactList}\small\item\em Lecture d\textquotesingle{}un bloc de données. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a8220a45c5b071e142269665113554702}{Set\+Data\+Block}} (byte Block\+Number, object data)
+\begin{DoxyCompactList}\small\item\em Enregistrement d\textquotesingle{}un bloc de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7a}{Memory\+Keep\+Type}} \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a2c8371a87602ea9abac9191c69ba0c8e}{Memory\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type de maintien de la mémoire \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a5149e18293f087e168b57cec9278357b}{Read\+Blocks}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre de blocs en lecture \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_ae098f13e143c3bcc40d3c68ee7d93297}{Read\+Bytes\+Per\+Block}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre d\textquotesingle{}octets par bloc en lecture \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_aad3f07ff5ba905a568178e1418adbccf}{Write\+Blocks}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre de blocs en lectures. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a4a4f80a523648f2987095bd16740816f}{Write\+Bytes\+Per\+Block}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre d\textquotesingle{}octets par bloc en lectures \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe des paramètres de stockage des variables en mémoire. 
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7a}\label{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7a}} 
+\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!Memory\+Keep\+Type@{Memory\+Keep\+Type}}
+\index{Memory\+Keep\+Type@{Memory\+Keep\+Type}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}
+\subsubsection{\texorpdfstring{Memory\+Keep\+Type}{MemoryKeepType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7a}{Device\+Library.\+C\+Memory\+Storage.\+Memory\+Keep\+Type}} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Mode de gestion du maintien des informations en mémoire 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+R\+E\+S\+ET@{V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+R\+E\+S\+ET}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+R\+E\+S\+ET@{V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+R\+E\+S\+ET}}}\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aa963ae5bd1a56f051a5218b3a8b3f7e2a}\label{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aa963ae5bd1a56f051a5218b3a8b3f7e2a}} 
+V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+R\+E\+S\+ET&Volatiles effacées par un reset. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+P\+O\+W\+E\+R\+D\+O\+WN@{V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+P\+O\+W\+E\+R\+D\+O\+WN}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+P\+O\+W\+E\+R\+D\+O\+WN@{V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+P\+O\+W\+E\+R\+D\+O\+WN}}}\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aa6ca056f5fe86139cd47875ac8d244a3e}\label{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aa6ca056f5fe86139cd47875ac8d244a3e}} 
+V\+O\+L\+A\+T\+I\+L\+L\+O\+S\+T\+O\+N\+P\+O\+W\+E\+R\+D\+O\+WN&Volatiles effacées lors de la coupure de l\textquotesingle{}alimentation \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+E\+R\+M\+A\+N\+E\+N\+T\+L\+I\+M\+I\+T\+ED@{P\+E\+R\+M\+A\+N\+E\+N\+T\+L\+I\+M\+I\+T\+ED}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!P\+E\+R\+M\+A\+N\+E\+N\+T\+L\+I\+M\+I\+T\+ED@{P\+E\+R\+M\+A\+N\+E\+N\+T\+L\+I\+M\+I\+T\+ED}}}\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aaab49f8e53c5270f77a021603d479de15}\label{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aaab49f8e53c5270f77a021603d479de15}} 
+P\+E\+R\+M\+A\+N\+E\+N\+T\+L\+I\+M\+I\+T\+ED&Permanent usage limité \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+E\+R\+M\+A\+N\+E\+N\+T\+U\+N\+L\+I\+M\+I\+T\+ED@{P\+E\+R\+M\+A\+N\+E\+N\+T\+U\+N\+L\+I\+M\+I\+T\+ED}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!P\+E\+R\+M\+A\+N\+E\+N\+T\+U\+N\+L\+I\+M\+I\+T\+ED@{P\+E\+R\+M\+A\+N\+E\+N\+T\+U\+N\+L\+I\+M\+I\+T\+ED}}}\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aa5aa3ba7df83ac7f584293cb274ae3fa9}\label{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7aa5aa3ba7df83ac7f584293cb274ae3fa9}} 
+P\+E\+R\+M\+A\+N\+E\+N\+T\+U\+N\+L\+I\+M\+I\+T\+ED&Permanent sans limite \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a1f469e7acead36a0223f798f5a2d9de9}\label{class_device_library_1_1_c_memory_storage_a1f469e7acead36a0223f798f5a2d9de9}} 
+\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!C\+Memory\+Storage@{C\+Memory\+Storage}}
+\index{C\+Memory\+Storage@{C\+Memory\+Storage}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}
+\subsubsection{\texorpdfstring{C\+Memory\+Storage()}{CMemoryStorage()}}
+{\footnotesize\ttfamily Device\+Library.\+C\+Memory\+Storage.\+C\+Memory\+Storage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_device_library_1_1_ccc_talk}{Ccc\+Talk}}}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a7517e6ae450e6c26be181fa187d98ed0}\label{class_device_library_1_1_c_memory_storage_a7517e6ae450e6c26be181fa187d98ed0}} 
+\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!Get\+Data\+Block@{Get\+Data\+Block}}
+\index{Get\+Data\+Block@{Get\+Data\+Block}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}
+\subsubsection{\texorpdfstring{Get\+Data\+Block()}{GetDataBlock()}}
+{\footnotesize\ttfamily void Device\+Library.\+C\+Memory\+Storage.\+Get\+Data\+Block (\begin{DoxyParamCaption}\item[{byte}]{Block\+Number,  }\item[{ref object}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lecture d\textquotesingle{}un bloc de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Block\+Number} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_af329c7962b7095cc2f15dd5a22d0fcfd}\label{class_device_library_1_1_c_memory_storage_af329c7962b7095cc2f15dd5a22d0fcfd}} 
+\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!Get\+Data\+Storage\+Availability@{Get\+Data\+Storage\+Availability}}
+\index{Get\+Data\+Storage\+Availability@{Get\+Data\+Storage\+Availability}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}
+\subsubsection{\texorpdfstring{Get\+Data\+Storage\+Availability()}{GetDataStorageAvailability()}}
+{\footnotesize\ttfamily void Device\+Library.\+C\+Memory\+Storage.\+Get\+Data\+Storage\+Availability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lit les informations sur la gestion de la mémoire de sauvegarde 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a8220a45c5b071e142269665113554702}\label{class_device_library_1_1_c_memory_storage_a8220a45c5b071e142269665113554702}} 
+\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!Set\+Data\+Block@{Set\+Data\+Block}}
+\index{Set\+Data\+Block@{Set\+Data\+Block}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}
+\subsubsection{\texorpdfstring{Set\+Data\+Block()}{SetDataBlock()}}
+{\footnotesize\ttfamily void Device\+Library.\+C\+Memory\+Storage.\+Set\+Data\+Block (\begin{DoxyParamCaption}\item[{byte}]{Block\+Number,  }\item[{object}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enregistrement d\textquotesingle{}un bloc de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Block\+Number} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a2c8371a87602ea9abac9191c69ba0c8e}\label{class_device_library_1_1_c_memory_storage_a2c8371a87602ea9abac9191c69ba0c8e}} 
+\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!Memory\+Type@{Memory\+Type}}
+\index{Memory\+Type@{Memory\+Type}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}
+\subsubsection{\texorpdfstring{Memory\+Type}{MemoryType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_device_library_1_1_c_memory_storage_a212a4301a9ee4074c52046fc8b36fb7a}{Memory\+Keep\+Type}} Device\+Library.\+C\+Memory\+Storage.\+Memory\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Type de maintien de la mémoire 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a5149e18293f087e168b57cec9278357b}\label{class_device_library_1_1_c_memory_storage_a5149e18293f087e168b57cec9278357b}} 
+\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!Read\+Blocks@{Read\+Blocks}}
+\index{Read\+Blocks@{Read\+Blocks}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}
+\subsubsection{\texorpdfstring{Read\+Blocks}{ReadBlocks}}
+{\footnotesize\ttfamily byte Device\+Library.\+C\+Memory\+Storage.\+Read\+Blocks\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre de blocs en lecture 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_ae098f13e143c3bcc40d3c68ee7d93297}\label{class_device_library_1_1_c_memory_storage_ae098f13e143c3bcc40d3c68ee7d93297}} 
+\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!Read\+Bytes\+Per\+Block@{Read\+Bytes\+Per\+Block}}
+\index{Read\+Bytes\+Per\+Block@{Read\+Bytes\+Per\+Block}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}
+\subsubsection{\texorpdfstring{Read\+Bytes\+Per\+Block}{ReadBytesPerBlock}}
+{\footnotesize\ttfamily byte Device\+Library.\+C\+Memory\+Storage.\+Read\+Bytes\+Per\+Block\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre d\textquotesingle{}octets par bloc en lecture 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_aad3f07ff5ba905a568178e1418adbccf}\label{class_device_library_1_1_c_memory_storage_aad3f07ff5ba905a568178e1418adbccf}} 
+\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!Write\+Blocks@{Write\+Blocks}}
+\index{Write\+Blocks@{Write\+Blocks}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}
+\subsubsection{\texorpdfstring{Write\+Blocks}{WriteBlocks}}
+{\footnotesize\ttfamily byte Device\+Library.\+C\+Memory\+Storage.\+Write\+Blocks\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre de blocs en lectures. 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_memory_storage_a4a4f80a523648f2987095bd16740816f}\label{class_device_library_1_1_c_memory_storage_a4a4f80a523648f2987095bd16740816f}} 
+\index{Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}!Write\+Bytes\+Per\+Block@{Write\+Bytes\+Per\+Block}}
+\index{Write\+Bytes\+Per\+Block@{Write\+Bytes\+Per\+Block}!Device\+Library\+::\+C\+Memory\+Storage@{Device\+Library\+::\+C\+Memory\+Storage}}
+\subsubsection{\texorpdfstring{Write\+Bytes\+Per\+Block}{WriteBytesPerBlock}}
+{\footnotesize\ttfamily byte Device\+Library.\+C\+Memory\+Storage.\+Write\+Bytes\+Per\+Block\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre d\textquotesingle{}octets par bloc en lectures 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Projets/\+A\+T\+M\+B/\+S\+O\+F\+T/\+Atmb\+Devices/\+Device\+Library/C\+Memory\+Storage.\+cs\end{DoxyCompactItemize}

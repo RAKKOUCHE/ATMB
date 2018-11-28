@@ -9,10 +9,14 @@ namespace DeviceLibrary
         /// </summary>
         public class CCoindID
         {
+            /** \addtogroup Header
+             * @{
+             */
             /// <summary>
             /// Command ccTalk demandant l'identification de la pièce du canal.
             /// </summary>
             private const byte REQUESTCOINID = 184;
+            /** @}*/
 
             /// <summary>
             /// Instance du canal de la pièce.
@@ -60,10 +64,10 @@ namespace DeviceLibrary
                     CDevicesManage.Log.Info("Lecture de l'identification de la pièce acceptée dans le canal {0} du {1}", CanalOwner.Number, CanalOwner.CVOwner.DeviceAddress);
                     byte[] bufferIn = { 46, 46, 46, 46, 46, 46 };
                     byte[] bufferParam = { CanalOwner.Number };
-                    if (CanalOwner.CVOwner.IsCmdccTalkSended(CanalOwner.CVOwner.DeviceAddress, REQUESTCOINID, (byte)bufferParam.Length, bufferParam, bufferIn))
+                    if(CanalOwner.CVOwner.IsCmdccTalkSended(CanalOwner.CVOwner.DeviceAddress, REQUESTCOINID, (byte)bufferParam.Length, bufferParam, bufferIn))
                     {
                         CountryCode = ((char)bufferIn[0]).ToString() + ((char)bufferIn[1]).ToString();
-                        if (CountryCode == "..")
+                        if(CountryCode == "..")
                         {
                             valeurCent = 0;
                             Issue = '-';
@@ -76,7 +80,7 @@ namespace DeviceLibrary
                         }
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }

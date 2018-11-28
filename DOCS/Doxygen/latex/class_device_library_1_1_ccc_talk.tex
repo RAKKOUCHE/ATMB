@@ -1,0 +1,463 @@
+\hypertarget{class_device_library_1_1_ccc_talk}{}\section{Device\+Library.\+Ccc\+Talk Class Reference}
+\label{class_device_library_1_1_ccc_talk}\index{Device\+Library.\+Ccc\+Talk@{Device\+Library.\+Ccc\+Talk}}
+
+
+Class cc\+Talk  
+
+
+Inheritance diagram for Device\+Library.\+Ccc\+Talk\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.691100cm]{class_device_library_1_1_ccc_talk}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___header_ga22f8eb6526627d4203e53ce7dbd3052a}{Header}} \+: byte \{ \newline
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aaf6daafc242a3bea0cfdf8deaac4cbdfe}{Header.\+F\+A\+C\+T\+O\+R\+Y\+S\+E\+T\+UP}} = 255, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa28989b1e5d1316cb7695aa363f531a97}{Header.\+S\+I\+M\+P\+L\+E\+P\+O\+LL}} = 254, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa909355816ff6e7e959619e23789f2227}{Header.\+A\+D\+D\+R\+E\+S\+S\+P\+O\+LL}} = 253, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa44aba6ad436073d338560f89aa8f6154}{Header.\+A\+D\+D\+R\+E\+S\+S\+C\+L\+A\+SH}} = 252, 
+\newline
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa2dcd6749aa763943ba4b2f6b62962505}{Header.\+A\+D\+D\+R\+E\+S\+S\+C\+H\+A\+N\+GE}} = 251, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa4ddfc0abc8dafde9a696ba71824c1f72}{Header.\+A\+D\+D\+R\+E\+S\+S\+R\+A\+N\+D\+OM}} = 250, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa0b86a65dca9c484a7bde9fca38803f0b}{Header.\+R\+E\+Q\+U\+E\+S\+T\+V\+A\+R\+I\+A\+B\+L\+E\+S\+ET}} = 247, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aab513d3b7fc4b96e054937fb6fbbb0729}{Header.\+R\+E\+Q\+U\+E\+S\+T\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+ID}} = 246, 
+\newline
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aae7716221fdaec83804880e8765cf7d10}{Header.\+R\+E\+Q\+U\+E\+S\+T\+E\+Q\+U\+I\+P\+E\+M\+E\+N\+T\+C\+A\+T\+E\+G\+O\+R\+Y\+ID}} = 245, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aaaf384971e229ef28c276b9779bd81388}{Header.\+R\+E\+Q\+U\+E\+S\+T\+P\+R\+O\+D\+U\+C\+T\+C\+O\+DE}} = 244, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa3227e2092fc0766e61a1a732de61062d}{Header.\+R\+E\+Q\+U\+E\+S\+T\+SN}} = 242, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa7e17eee28297a1c7131d78d335dc3dc7}{Header.\+R\+E\+Q\+U\+E\+S\+T\+S\+W\+R\+EV}} = 241, 
+\newline
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa9163ec519df517704db337f07ea927d6}{Header.\+O\+P\+E\+R\+A\+T\+E\+M\+O\+T\+OR}} = 239, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aaf7401a2b001f90c26bb2be51b83799b3}{Header.\+R\+E\+A\+D\+O\+P\+T\+O\+S\+T\+A\+T\+ES}} = 236, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa4236a0843d4f19fe52b9c493eb437802}{Header.\+E\+N\+T\+E\+R\+N\+E\+W\+P\+I\+N\+N\+U\+M\+B\+ER}} = 219, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aaf8106609f05a253f413197be056fba71}{Header.\+E\+N\+T\+E\+R\+P\+I\+N\+N\+U\+M\+B\+ER}} = 218, 
+\newline
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aad598c36cca844abd31f22322ef8670c7}{Header.\+R\+E\+Q\+U\+E\+S\+T\+D\+A\+T\+A\+S\+T\+O\+R\+A\+G\+E\+A\+V\+A\+I\+L\+A\+B\+I\+L\+I\+TY}} = 216, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aaf4d3266005046022ff52ffa5c3f3f0c3}{Header.\+R\+E\+A\+D\+D\+A\+T\+A\+B\+L\+O\+CK}} = 215, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aaf42de9fb76d8e85f35c258b77e2ff02a}{Header.\+W\+R\+I\+T\+E\+D\+A\+T\+A\+B\+L\+O\+CK}} = 214, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa3ea83e192f7d50bb0bd2b51a5f4883e1}{Header.\+R\+E\+Q\+U\+E\+S\+T\+B\+U\+I\+L\+D\+C\+O\+DE}} = 192, 
+\newline
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aaaa233eaf5d8e09ef8ca6c3c120ee0388}{Header.\+R\+E\+Q\+U\+E\+S\+T\+B\+A\+S\+E\+Y\+E\+AR}} = 170, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aadd771b5014d8dfb2d691b886c0d0154c}{Header.\+R\+E\+Q\+U\+E\+S\+T\+A\+D\+D\+R\+E\+S\+S\+M\+O\+DE}} = 169, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aae924a1d3fed578124d2542b501b9d5be}{Header.\+M\+O\+D\+I\+F\+Y\+V\+A\+R\+I\+A\+B\+L\+E\+S\+ET}} = 165, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa7179596553bfb00fe3a54fb1c4f46d2e}{Header.\+S\+W\+I\+T\+C\+H\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+C\+O\+DE}} = 137, 
+\newline
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa175f64a90ae2bf6edd145a17609268a1}{Header.\+S\+T\+O\+R\+E\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+C\+O\+DE}} =136, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa802706a9238e2928077f97736854bad4}{Header.\+B\+U\+SY}} = 6, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa3860aef5aa76641c6959d1a5de94b216}{Header.\+N\+AK}} = 5, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aa233ae98d8a18c499eb4b798360aa02ef}{Header.\+R\+E\+Q\+U\+E\+S\+T\+C\+O\+M\+M\+S\+R\+E\+V\+I\+S\+I\+ON}} = 4, 
+\newline
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aafb4cfb0ac631109fa01bdbd70ba8e166}{Header.\+C\+L\+E\+A\+R\+C\+O\+M\+M\+S\+S\+T\+A\+T\+U\+S\+V\+A\+R\+I\+A\+B\+L\+ES}} = 3, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aaacaa18d8173ad7149b61185d29c4f3bb}{Header.\+R\+E\+Q\+U\+E\+S\+T\+C\+O\+M\+M\+S\+S\+T\+A\+T\+U\+S\+V\+A\+R\+I\+A\+B\+L\+ES}} = 2, 
+\mbox{\hyperlink{group___header_gga22f8eb6526627d4203e53ce7dbd3052aab87acc3ce509b6e2b20a564607eb06d8}{Header.\+R\+E\+S\+E\+T\+D\+E\+V\+I\+CE}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enumération des headers communs à tous les périphériques cc\+Talk. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___erreur_ga179570d2d8f6f95d52ccafb98d20c790}{Self\+Test\+Result}} \{ \newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790ae0aa021e21dddbd6d8cecec71e9cf564}{Self\+Test\+Result.\+OK}} = 0, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a82728633b7a7c49ed136d5c3aa605861}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+C\+H\+E\+C\+K\+S\+UM}} = 1, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790aa4c8c213e52281611bbc2d726f23959a}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+C\+O\+I\+L\+M\+E\+A\+S\+U\+R\+E\+M\+E\+NT}} = 2, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a4ef2b74a0cc5d6393ce608c54b1861f0}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+C\+R\+E\+D\+I\+T\+S\+E\+N\+S\+OR}} = 3, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a45609713be805992c730f031ff8f54ca}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+P\+I\+E\+Z\+O\+S\+E\+N\+S\+OR}} =4, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790abe71e29807fc8e2627732f98b625dd63}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+R\+E\+F\+L\+E\+C\+T\+I\+V\+E\+S\+E\+N\+S\+OR}} = 5, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a06c7dd879850f00fcce4a46b4f0f4baf}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+D\+I\+A\+M\+E\+T\+E\+R\+S\+E\+N\+S\+OR}} = 6, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790afd502fbfb573105b14080349c146d0da}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+O\+N\+W\+A\+K\+E\+U\+P\+S\+E\+N\+S\+OR}} = 7, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790afc13d39d093e34a09c0a0314e20048ee}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+E\+X\+I\+T\+S\+E\+N\+S\+OR}} = 8, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a0c4861a28780ce88a698758dde79d029}{Self\+Test\+Result.\+N\+V\+R\+A\+M\+C\+H\+E\+C\+K\+S\+UM}} = 9, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790adbe12f65a0cd3985f952f395ee8ff65d}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+K\+E\+Y\+P\+AD}} = 14, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a543b5fd5ff186ca8f13b355ac0edc446}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+B\+U\+T\+T\+ON}} = 15, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a921d7ae7f037c6fc8b9dc65cd11562eb}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+D\+I\+S\+P\+L\+AY}} = 16, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a07bcbb954c85682dc9897bbce2f4465c}{Self\+Test\+Result.\+C\+O\+I\+N\+A\+U\+D\+I\+T\+E\+R\+R\+OR}} = 17, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790ad7821dc039e60525debddf85ce046024}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+O\+N\+R\+E\+J\+E\+C\+T\+S\+E\+N\+S\+OR}} = 18, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790ac83370dde56d0f3b5313682a04ad7670}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+O\+N\+C\+O\+I\+N\+R\+E\+T\+U\+R\+N\+M\+E\+CH}} = 19, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790af032d38e084b27c8bc8fc272c9b1d9ad}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+C\+O\+S\+M\+E\+CH}} = 20, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790ae1ae427e9a19c79560a4298b49ad7aad}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+R\+IM}} = 21, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790ac4c0edc9040440850d32e07b63e99e71}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+T\+H\+E\+R\+M\+I\+S\+T\+OR}} = 22, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790ae48b541e05c3de25f7c19f32e905421e}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+M\+O\+T\+OR}} = 23, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a2b062c09a10f709598a9a3b22349fb13}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+P\+A\+Y\+O\+U\+T\+S\+E\+N\+S\+OR}} = 26, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790aeecc3076ef1f092d654d0572732d8fae}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+L\+E\+V\+E\+L\+S\+E\+N\+S\+OR}} = 27, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a188f9098e533155473b37511e1608b41}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+D\+A\+T\+A\+B\+L\+O\+C\+K\+C\+H\+E\+C\+S\+UM}} = 30, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a98fbededc5219d4233faf4f4dfecb8b8}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+I\+N\+T\+E\+R\+N\+A\+L\+C\+OM}} = 32, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a5b756a3101dde017415ebfb924123352}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+P\+O\+W\+E\+R\+S\+U\+P\+P\+LY}} = 33, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790ac7f53b99909b3d23ed52c89a2c4251a1}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+T\+E\+MP}} = 34, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a6ad548781f29d837560c33c17f76bcbf}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+D\+CE}} = 35, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790afd6e0d70f810e3936dca24e2c9e88366}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+B\+V\+S\+E\+N\+S\+OR}} = 36, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790ae2320146778712445e1bda765a3827e4}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+B\+V\+T\+R\+A\+N\+S\+P\+O\+RT}} = 37, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a80572a1d9e446f50c294b206b8724b87}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+S\+T\+A\+C\+K\+ER}} = 38, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a2cd8c522b6febe25beae6dd244557faa}{Self\+Test\+Result.\+B\+I\+L\+L\+J\+A\+M\+M\+ED}} = 39, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790aae684db02df998c0503f38b901302cb3}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+T\+E\+S\+T\+R\+AM}} = 40, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a8cc746f58e0de79fe992db40e266fc89}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+S\+T\+R\+I\+N\+G\+S\+E\+N\+S\+OR}} = 41, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a233e99ec360a60f14d17ad4e088398ee}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+A\+C\+C\+E\+P\+T\+G\+A\+T\+E\+O\+P\+EN}} = 42, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790aef82674b077701d481db50067a39dadf}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+A\+C\+C\+E\+P\+T\+G\+A\+T\+E\+C\+L\+O\+SE}} = 43, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a3f14cb8d189627ff94c09e37485d5e4d}{Self\+Test\+Result.\+S\+T\+A\+C\+K\+E\+R\+M\+I\+S\+S\+I\+NG}} = 44, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a3753cc88724c8753903f0c00fb2a70ec}{Self\+Test\+Result.\+S\+T\+A\+C\+K\+E\+R\+F\+U\+LL}} = 45, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a64b9b8a79fbd8e516d73d947f23789f5}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+E\+R\+A\+S\+E\+F\+L\+A\+S\+H\+M\+EM}} = 46, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a47a8bac7b81fb8860aa60a0c27abfa9e}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+W\+R\+I\+T\+E\+F\+L\+A\+S\+H\+M\+EM}} = 47, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a6971f8ba4fd456e6028307790060416e}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+S\+L\+A\+V\+E\+D\+E\+V\+I\+CE}} = 48, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a5f416c3c0f2315e101772fb4afa19159}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+O\+P\+T\+O\+S\+E\+N\+S\+OR}} = 49, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790abc304fceb86fed05a9c1480ae161e105}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+B\+A\+T\+T\+E\+RY}} = 50, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a2e7bbba7a345ba75be6d7afa5099e4b2}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+D\+O\+O\+R\+O\+P\+EN}} = 51, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790aaccb25b7024f8a8457070b5f219cc8cb}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+M\+I\+C\+R\+O\+S\+W\+I\+T\+CH}} = 52, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a452e48f2270532eeb8a7d1a08b2bffa9}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+R\+TC}} = 53, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a17067ea1451de42b4bf3752122768b55}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+FW}} = 54, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a742a02b5a464f1e436fe1ce890b537a8}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+I\+N\+IT}} = 55, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a83c9f2a51be490451be24a146c1d808b}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+C\+U\+R\+R\+E\+N\+T\+S\+U\+P\+P\+LY}} = 56, 
+\newline
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790ad7e9c71913cffcaabd565eaee9cf52b8}{Self\+Test\+Result.\+F\+O\+R\+C\+E\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R\+M\+O\+DE}} = 57, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a5fd22f0fcfa09dee2ad29a0653ed7963}{Self\+Test\+Result.\+C\+O\+I\+N\+J\+AM}} = 253, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790acaf20830f50dde044b5d55b78bd4ccfe}{Self\+Test\+Result.\+D\+I\+S\+K\+B\+L\+O\+C\+K\+ED}} = 254, 
+\mbox{\hyperlink{group___erreur_gga179570d2d8f6f95d52ccafb98d20c790a17871c6d9d47f1e52c2681e98a1a9143}{Self\+Test\+Result.\+E\+R\+R\+O\+R\+U\+N\+K\+N\+OW}} = 255
+ \}
+\begin{DoxyCompactList}\small\item\em Liste des fautes possibles retournées par un self test. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_library_1_1_ccc_talk_acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90}{Ccc\+Talk}} ()
+\begin{DoxyCompactList}\small\item\em Construteur de la class \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_library_1_1_ccc_talk_ab986f5ca49ce60e90442b54682f34b62}{Is\+Cmdcc\+Talk\+Sended}} (\mbox{\hyperlink{namespace_device_library_a4ca177654b0e196e5a5f5275fb4ea5ee}{Default\+Devices\+Address}} Peripherique, object Commande, byte Len\+Param, byte\mbox{[}$\,$\mbox{]} Parameter, object answer)
+\begin{DoxyCompactList}\small\item\em Envoie une commande et recoit la réponse \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a9069f40563639ecc85dac7dd9c212cee}{Reset\+Device}} ()
+\begin{DoxyCompactList}\small\item\em State\+Reset software du périphérique. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a9e6bea86795ec29fde4e6071256eff76}{Reset\+Counters}} ()
+\begin{DoxyCompactList}\small\item\em Remise à zéro des compteurs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{class_device_library_1_1_ccc_talk_ad5c6d1287d0c049bdbf4fda8cb19c1ef}{file\+Counter\+Name}} = \char`\"{}Counters.\+mtr\char`\"{}
+\begin{DoxyCompactList}\small\item\em Nom du fichier contenant les compteurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Serial\+Port \mbox{\hyperlink{class_device_library_1_1_ccc_talk_acda9f65e6498cce0d3e51ad1b587ede4}{Port\+Serie}}
+\begin{DoxyCompactList}\small\item\em Port série utilisée par le bus cc\+Talk \end{DoxyCompactList}\item 
+static Mutex \mbox{\hyperlink{class_device_library_1_1_ccc_talk_aabbbe46d911d826c39712d8aecd10786}{mutex\+C\+C\+Talk}} = new Mutex()
+\item 
+static \mbox{\hyperlink{class_device_library_1_1_ccoins_counters}{Ccoins\+Counters}} \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a3810c0aa448865e19afff87a946fee5d}{counters}}
+\begin{DoxyCompactList}\small\item\em Compteurs \end{DoxyCompactList}\item 
+static Stream \mbox{\hyperlink{class_device_library_1_1_ccc_talk_ada638d9c9c453de40591720409ef4b54}{counters\+File}}
+\begin{DoxyCompactList}\small\item\em Fichier des compteurs. \end{DoxyCompactList}\item 
+static Binary\+Formatter \mbox{\hyperlink{class_device_library_1_1_ccc_talk_aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f}{counter\+Serializer}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+byte \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a5f67f62cb03d573225712813348408ad}{Get\+Byte}} (object header)
+\begin{DoxyCompactList}\small\item\em Lit un octet dans le périphérique \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static object \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a43ca834802480b1171030f7ad063c559}{verrou}} = new object()
+\begin{DoxyCompactList}\small\item\em Verrou du thread \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_device_library_a4ca177654b0e196e5a5f5275fb4ea5ee}{Default\+Devices\+Address}} \mbox{\hyperlink{class_device_library_1_1_ccc_talk_aff70a9d7d6adc3e95593259d17751cb8}{Device\+Address}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Adresse du périphérique. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a73a84f7534b5b9ff129897b86d483f48}{Manufacturer}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}identifiant du fabricant. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_device_library_1_1_ccc_talk_ae73c18703dae000c9f725a44fae17f1a}{Build\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Code de production du périphérique. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_device_library_1_1_ccc_talk_abd92229809b4474129b15e638fd56da7}{Product\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Code produit du périphérique. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a3cb80b7a82cc363e0dcefd1f31ced8a2}{Equipement\+Category}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Code produit du périphérique. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a6b615dcccbe32e3c9166b0fdb0a74236}{Serial\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retourne le numéro de série du pelicano \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a687a695bef6d7f25f8fe7148948d04bc}{S\+W\+Rev}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retourne la révision software \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_device_library_1_1_ccc_talk_af78c9d598eaebc02a257d52353ab257c}{Comms\+Revision}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a576e09f74dc509dcd7919eceae9cc7de}{Simple\+Poll}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Simple poll du périphérique. \end{DoxyCompactList}\item 
+virtual byte \mbox{\hyperlink{class_device_library_1_1_ccc_talk_a4ea55bd396398405345e50cb699c0ead}{Opto\+States}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class cc\+Talk 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90}\label{class_device_library_1_1_ccc_talk_acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Ccc\+Talk@{Ccc\+Talk}}
+\index{Ccc\+Talk@{Ccc\+Talk}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Ccc\+Talk()}{CccTalk()}}
+{\footnotesize\ttfamily Device\+Library.\+Ccc\+Talk.\+Ccc\+Talk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construteur de la class 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a5f67f62cb03d573225712813348408ad}\label{class_device_library_1_1_ccc_talk_a5f67f62cb03d573225712813348408ad}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Get\+Byte@{Get\+Byte}}
+\index{Get\+Byte@{Get\+Byte}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Get\+Byte()}{GetByte()}}
+{\footnotesize\ttfamily byte Device\+Library.\+Ccc\+Talk.\+Get\+Byte (\begin{DoxyParamCaption}\item[{object}]{header }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Lit un octet dans le périphérique 
+
+
+\begin{DoxyParams}{Parameters}
+{\em header} & Header de la requête\\
+\hline
+\end{DoxyParams}
+
+
+La valeur de l\textquotesingle{}octet retourné est 255
+
+\begin{DoxyReturn}{Returns}
+la valeur de l\textquotesingle{}octet demandé
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_ab986f5ca49ce60e90442b54682f34b62}\label{class_device_library_1_1_ccc_talk_ab986f5ca49ce60e90442b54682f34b62}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Is\+Cmdcc\+Talk\+Sended@{Is\+Cmdcc\+Talk\+Sended}}
+\index{Is\+Cmdcc\+Talk\+Sended@{Is\+Cmdcc\+Talk\+Sended}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Is\+Cmdcc\+Talk\+Sended()}{IsCmdccTalkSended()}}
+{\footnotesize\ttfamily bool Device\+Library.\+Ccc\+Talk.\+Is\+Cmdcc\+Talk\+Sended (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_device_library_a4ca177654b0e196e5a5f5275fb4ea5ee}{Default\+Devices\+Address}}}]{Peripherique,  }\item[{object}]{Commande,  }\item[{byte}]{Len\+Param,  }\item[{byte \mbox{[}$\,$\mbox{]}}]{Parameter,  }\item[{object}]{answer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Envoie une commande et recoit la réponse 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Peripherique} & Adresse du périphérique\\
+\hline
+{\em Commande} & Header de la commande envoyée\\
+\hline
+{\em Len\+Param} & Longeur des paramètres\\
+\hline
+{\em Parameter} & Buffer des paramètres\\
+\hline
+{\em answer} & Objet contenant les paramètres de retour le cas échéant\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a9e6bea86795ec29fde4e6071256eff76}\label{class_device_library_1_1_ccc_talk_a9e6bea86795ec29fde4e6071256eff76}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Reset\+Counters@{Reset\+Counters}}
+\index{Reset\+Counters@{Reset\+Counters}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Reset\+Counters()}{ResetCounters()}}
+{\footnotesize\ttfamily static void Device\+Library.\+Ccc\+Talk.\+Reset\+Counters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Remise à zéro des compteurs 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a9069f40563639ecc85dac7dd9c212cee}\label{class_device_library_1_1_ccc_talk_a9069f40563639ecc85dac7dd9c212cee}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Reset\+Device@{Reset\+Device}}
+\index{Reset\+Device@{Reset\+Device}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Reset\+Device()}{ResetDevice()}}
+{\footnotesize\ttfamily bool Device\+Library.\+Ccc\+Talk.\+Reset\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+State\+Reset software du périphérique. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a3810c0aa448865e19afff87a946fee5d}\label{class_device_library_1_1_ccc_talk_a3810c0aa448865e19afff87a946fee5d}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!counters@{counters}}
+\index{counters@{counters}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{counters}{counters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_device_library_1_1_ccoins_counters}{Ccoins\+Counters}} Device\+Library.\+Ccc\+Talk.\+counters\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compteurs 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f}\label{class_device_library_1_1_ccc_talk_aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!counter\+Serializer@{counter\+Serializer}}
+\index{counter\+Serializer@{counter\+Serializer}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{counter\+Serializer}{counterSerializer}}
+{\footnotesize\ttfamily Binary\+Formatter Device\+Library.\+Ccc\+Talk.\+counter\+Serializer\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_ada638d9c9c453de40591720409ef4b54}\label{class_device_library_1_1_ccc_talk_ada638d9c9c453de40591720409ef4b54}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!counters\+File@{counters\+File}}
+\index{counters\+File@{counters\+File}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{counters\+File}{countersFile}}
+{\footnotesize\ttfamily Stream Device\+Library.\+Ccc\+Talk.\+counters\+File\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Fichier des compteurs. 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_ad5c6d1287d0c049bdbf4fda8cb19c1ef}\label{class_device_library_1_1_ccc_talk_ad5c6d1287d0c049bdbf4fda8cb19c1ef}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!file\+Counter\+Name@{file\+Counter\+Name}}
+\index{file\+Counter\+Name@{file\+Counter\+Name}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{file\+Counter\+Name}{fileCounterName}}
+{\footnotesize\ttfamily const string Device\+Library.\+Ccc\+Talk.\+file\+Counter\+Name = \char`\"{}Counters.\+mtr\char`\"{}}
+
+
+
+Nom du fichier contenant les compteurs. 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_aabbbe46d911d826c39712d8aecd10786}\label{class_device_library_1_1_ccc_talk_aabbbe46d911d826c39712d8aecd10786}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!mutex\+C\+C\+Talk@{mutex\+C\+C\+Talk}}
+\index{mutex\+C\+C\+Talk@{mutex\+C\+C\+Talk}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{mutex\+C\+C\+Talk}{mutexCCTalk}}
+{\footnotesize\ttfamily Mutex Device\+Library.\+Ccc\+Talk.\+mutex\+C\+C\+Talk = new Mutex()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_acda9f65e6498cce0d3e51ad1b587ede4}\label{class_device_library_1_1_ccc_talk_acda9f65e6498cce0d3e51ad1b587ede4}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Port\+Serie@{Port\+Serie}}
+\index{Port\+Serie@{Port\+Serie}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Port\+Serie}{PortSerie}}
+{\footnotesize\ttfamily Serial\+Port Device\+Library.\+Ccc\+Talk.\+Port\+Serie\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Port série utilisée par le bus cc\+Talk 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a43ca834802480b1171030f7ad063c559}\label{class_device_library_1_1_ccc_talk_a43ca834802480b1171030f7ad063c559}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!verrou@{verrou}}
+\index{verrou@{verrou}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{verrou}{verrou}}
+{\footnotesize\ttfamily object Device\+Library.\+Ccc\+Talk.\+verrou = new object()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Verrou du thread 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_ae73c18703dae000c9f725a44fae17f1a}\label{class_device_library_1_1_ccc_talk_ae73c18703dae000c9f725a44fae17f1a}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Build\+Code@{Build\+Code}}
+\index{Build\+Code@{Build\+Code}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Build\+Code}{BuildCode}}
+{\footnotesize\ttfamily string Device\+Library.\+Ccc\+Talk.\+Build\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Code de production du périphérique. 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_af78c9d598eaebc02a257d52353ab257c}\label{class_device_library_1_1_ccc_talk_af78c9d598eaebc02a257d52353ab257c}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Comms\+Revision@{Comms\+Revision}}
+\index{Comms\+Revision@{Comms\+Revision}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Comms\+Revision}{CommsRevision}}
+{\footnotesize\ttfamily string Device\+Library.\+Ccc\+Talk.\+Comms\+Revision\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_aff70a9d7d6adc3e95593259d17751cb8}\label{class_device_library_1_1_ccc_talk_aff70a9d7d6adc3e95593259d17751cb8}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Device\+Address@{Device\+Address}}
+\index{Device\+Address@{Device\+Address}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Device\+Address}{DeviceAddress}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_device_library_a4ca177654b0e196e5a5f5275fb4ea5ee}{Default\+Devices\+Address}} Device\+Library.\+Ccc\+Talk.\+Device\+Address\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Adresse du périphérique. 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a3cb80b7a82cc363e0dcefd1f31ced8a2}\label{class_device_library_1_1_ccc_talk_a3cb80b7a82cc363e0dcefd1f31ced8a2}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Equipement\+Category@{Equipement\+Category}}
+\index{Equipement\+Category@{Equipement\+Category}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Equipement\+Category}{EquipementCategory}}
+{\footnotesize\ttfamily string Device\+Library.\+Ccc\+Talk.\+Equipement\+Category\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Code produit du périphérique. 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a73a84f7534b5b9ff129897b86d483f48}\label{class_device_library_1_1_ccc_talk_a73a84f7534b5b9ff129897b86d483f48}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Manufacturer@{Manufacturer}}
+\index{Manufacturer@{Manufacturer}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Manufacturer}{Manufacturer}}
+{\footnotesize\ttfamily override string Device\+Library.\+Ccc\+Talk.\+Manufacturer\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Retourne l\textquotesingle{}identifiant du fabricant. 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a4ea55bd396398405345e50cb699c0ead}\label{class_device_library_1_1_ccc_talk_a4ea55bd396398405345e50cb699c0ead}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Opto\+States@{Opto\+States}}
+\index{Opto\+States@{Opto\+States}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Opto\+States}{OptoStates}}
+{\footnotesize\ttfamily virtual byte Device\+Library.\+Ccc\+Talk.\+Opto\+States\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_abd92229809b4474129b15e638fd56da7}\label{class_device_library_1_1_ccc_talk_abd92229809b4474129b15e638fd56da7}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Product\+Code@{Product\+Code}}
+\index{Product\+Code@{Product\+Code}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Product\+Code}{ProductCode}}
+{\footnotesize\ttfamily override string Device\+Library.\+Ccc\+Talk.\+Product\+Code\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Code produit du périphérique. 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a6b615dcccbe32e3c9166b0fdb0a74236}\label{class_device_library_1_1_ccc_talk_a6b615dcccbe32e3c9166b0fdb0a74236}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Serial\+Number@{Serial\+Number}}
+\index{Serial\+Number@{Serial\+Number}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Serial\+Number}{SerialNumber}}
+{\footnotesize\ttfamily override int Device\+Library.\+Ccc\+Talk.\+Serial\+Number\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Retourne le numéro de série du pelicano 
+
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a576e09f74dc509dcd7919eceae9cc7de}\label{class_device_library_1_1_ccc_talk_a576e09f74dc509dcd7919eceae9cc7de}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!Simple\+Poll@{Simple\+Poll}}
+\index{Simple\+Poll@{Simple\+Poll}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{Simple\+Poll}{SimplePoll}}
+{\footnotesize\ttfamily bool Device\+Library.\+Ccc\+Talk.\+Simple\+Poll\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Simple poll du périphérique. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_device_library_1_1_ccc_talk_a687a695bef6d7f25f8fe7148948d04bc}\label{class_device_library_1_1_ccc_talk_a687a695bef6d7f25f8fe7148948d04bc}} 
+\index{Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}!S\+W\+Rev@{S\+W\+Rev}}
+\index{S\+W\+Rev@{S\+W\+Rev}!Device\+Library\+::\+Ccc\+Talk@{Device\+Library\+::\+Ccc\+Talk}}
+\subsubsection{\texorpdfstring{S\+W\+Rev}{SWRev}}
+{\footnotesize\ttfamily string Device\+Library.\+Ccc\+Talk.\+S\+W\+Rev\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Retourne la révision software 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Projets/\+A\+T\+M\+B/\+S\+O\+F\+T/\+Atmb\+Devices/\+Device\+Library/Ccc\+Talk.\+Header.\+cs\item 
+D\+:/\+Projets/\+A\+T\+M\+B/\+S\+O\+F\+T/\+Atmb\+Devices/\+Device\+Library/C\+Ctalk.\+cs\end{DoxyCompactItemize}

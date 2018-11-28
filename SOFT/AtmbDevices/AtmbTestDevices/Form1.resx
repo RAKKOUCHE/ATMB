@@ -187,7 +187,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="buttonExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1200, 988</value>
+    <value>1200, 867</value>
   </data>
   <data name="buttonExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -232,7 +232,7 @@
     <value> </value>
   </data>
   <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1028</value>
+    <value>0, 907</value>
   </data>
   <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>1312, 24</value>
@@ -460,7 +460,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="buttonHoppers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1200, 959</value>
+    <value>1200, 838</value>
   </data>
   <data name="buttonHoppers.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -490,7 +490,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCounters.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1200, 901</value>
+    <value>1200, 780</value>
   </data>
   <data name="buttonCounters.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -520,7 +520,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonRAZCompteurs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1200, 930</value>
+    <value>1200, 809</value>
   </data>
   <data name="buttonRAZCompteurs.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -543,39 +543,6 @@
   <data name="&gt;&gt;buttonRAZCompteurs.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="labelInfo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 24</value>
-  </data>
-  <data name="labelInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
-  </data>
-  <data name="labelInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="labelInfo.Text" xml:space="preserve">
-    <value>Info</value>
-  </data>
-  <data name="&gt;&gt;labelInfo.Name" xml:space="preserve">
-    <value>labelInfo</value>
-  </data>
-  <data name="&gt;&gt;labelInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelInfo.Parent" xml:space="preserve">
-    <value>groupBoxPieces</value>
-  </data>
-  <data name="&gt;&gt;labelInfo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="Nom.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -595,13 +562,13 @@
     <value>111</value>
   </data>
   <data name="dataGridViewCompteurs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>762, 45</value>
+    <value>762, 19</value>
   </data>
   <data name="dataGridViewCompteurs.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
   <data name="dataGridViewCompteurs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 439</value>
+    <value>310, 416</value>
   </data>
   <data name="dataGridViewCompteurs.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -616,7 +583,7 @@
     <value>groupBoxPieces</value>
   </data>
   <data name="&gt;&gt;dataGridViewCompteurs.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="Identifiant.HeaderText" xml:space="preserve">
     <value>Identifiant</value>
@@ -718,7 +685,7 @@
     <value>41</value>
   </data>
   <data name="dataGridViewHopper.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 284</value>
+    <value>6, 235</value>
   </data>
   <data name="dataGridViewHopper.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>None</value>
@@ -739,10 +706,10 @@
     <value>groupBoxPieces</value>
   </data>
   <data name="&gt;&gt;dataGridViewHopper.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="tbInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 45</value>
+    <value>6, 19</value>
   </data>
   <data name="tbInfo.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -751,7 +718,7 @@
     <value>Both</value>
   </data>
   <data name="tbInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>750, 232</value>
+    <value>750, 210</value>
   </data>
   <data name="tbInfo.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -766,13 +733,13 @@
     <value>groupBoxPieces</value>
   </data>
   <data name="&gt;&gt;tbInfo.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="groupBoxPieces.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
   <data name="groupBoxPieces.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1084, 497</value>
+    <value>1084, 440</value>
   </data>
   <data name="groupBoxPieces.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -790,39 +757,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBoxPieces.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  <data name="textBox1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 210</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 24</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Info</value>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -844,13 +805,13 @@
     <value>111</value>
   </data>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>762, 45</value>
+    <value>762, 19</value>
   </data>
   <data name="dataGridView1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 439</value>
+    <value>310, 416</value>
   </data>
   <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -967,7 +928,7 @@
     <value>41</value>
   </data>
   <data name="dataGridView2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 284</value>
+    <value>6, 235</value>
   </data>
   <data name="dataGridView2.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>None</value>
@@ -990,38 +951,11 @@
   <data name="&gt;&gt;dataGridView2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 45</value>
-  </data>
-  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBox1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Both</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>750, 232</value>
-  </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 522</value>
+    <value>12, 458</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1084, 502</value>
+    <value>1084, 443</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -1039,7 +973,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1110,7 +1044,7 @@
     <value>Zoom</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1312, 1052</value>
+    <value>1312, 931</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

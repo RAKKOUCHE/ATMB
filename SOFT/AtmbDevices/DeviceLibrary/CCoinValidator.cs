@@ -401,7 +401,6 @@ namespace DeviceLibrary
                     }
                     else
                     {
-                        denominationInserted.IdDevice = EquipementCategory;
                         denominationInserted.ValeurCent = canaux[channelNumber - 1].coinId.ValeurCent;
                         denominationInserted.CVChannel = channelNumber;
                         denominationInserted.CVPath = creditBuffer.Result[i, 1];

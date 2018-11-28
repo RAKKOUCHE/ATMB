@@ -5,7 +5,7 @@ namespace DeviceLibrary
     public partial class CHopper
     {
         /// <summary>
-        /// 
+        /// Classe des status des hoppers
         /// </summary>
         public class CHopperStatus
         {
@@ -15,7 +15,7 @@ namespace DeviceLibrary
             private readonly CHopper Owner;
 
             /// <summary>
-            /// 
+            /// Classe des resultats d'une distribution.
             /// </summary>
             public class CDispensedResult
             {
@@ -123,7 +123,7 @@ namespace DeviceLibrary
             }
 
             /// <summary>
-            /// 
+            /// Instance de la classe CDispenseResult.
             /// </summary>
             public CDispensedResult dispensedResult;
 

@@ -7,26 +7,29 @@ namespace DeviceLibrary
     public partial class CCoinValidator : CcashReader
     {
         /// <summary>
-        /// 
+        /// Classe du buffer des credits ou des codes erreurs.
         /// </summary>
         public class CCVcreditBuffer
         {
+            /// <summary>
+            /// Instance de la classe proprietaire du buffer.
+            /// </summary>
             private CCoinValidator owner;
 
+            private byte eventCounter;
             /// <summary>
             /// Compteur d'évenements crédits ou erreurs
             /// </summary>
-            private byte eventCounter;
             public byte EventCounter
             {
                 get => eventCounter;
                 set => eventCounter = value;
             }
 
+            private byte[,] result;
             /// <summary>
             /// Buffer contenant les informations sur les évenements.
             /// </summary>
-            private byte[,] result;
             public byte[,] Result
             {
                 get => result;

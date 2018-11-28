@@ -72,7 +72,6 @@
             this.buttonCounters = new System.Windows.Forms.Button();
             this.buttonRAZCompteurs = new System.Windows.Forms.Button();
             this.groupBoxPieces = new System.Windows.Forms.GroupBox();
-            this.labelInfo = new System.Windows.Forms.Label();
             this.dataGridViewCompteurs = new System.Windows.Forms.DataGridView();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Montant = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,7 +88,6 @@
             this.ToLoad = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tbInfo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -244,18 +242,12 @@
             // groupBoxPieces
             // 
             this.groupBoxPieces.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.groupBoxPieces.Controls.Add(this.labelInfo);
             this.groupBoxPieces.Controls.Add(this.dataGridViewCompteurs);
             this.groupBoxPieces.Controls.Add(this.dataGridViewHopper);
             this.groupBoxPieces.Controls.Add(this.tbInfo);
             resources.ApplyResources(this.groupBoxPieces, "groupBoxPieces");
             this.groupBoxPieces.Name = "groupBoxPieces";
             this.groupBoxPieces.TabStop = false;
-            // 
-            // labelInfo
-            // 
-            resources.ApplyResources(this.labelInfo, "labelInfo");
-            this.labelInfo.Name = "labelInfo";
             // 
             // dataGridViewCompteurs
             // 
@@ -435,18 +427,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Controls.Add(this.textBox1);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
             // 
             // dataGridView1
             // 
@@ -645,7 +631,7 @@
             this.Controls.Add(this.labelAmountToPay);
             this.Controls.Add(this.tbToPay);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -686,7 +672,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStripClear;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.GroupBox groupBoxPieces;
-        private System.Windows.Forms.Label labelInfo;
         private System.Windows.Forms.DataGridView dataGridViewCompteurs;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Montant;
@@ -703,7 +688,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn ToLoad;
         private System.Windows.Forms.TextBox tbInfo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

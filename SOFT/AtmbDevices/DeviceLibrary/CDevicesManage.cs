@@ -108,7 +108,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Masque des canaux activés.
         /// </summary>
-        internal static byte[] EnableChannels
+        public static byte[] EnableChannels
         {
             get
             {

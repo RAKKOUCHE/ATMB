@@ -3,6 +3,9 @@ using System.Threading;
 
 namespace DeviceLibrary
 {
+    /// <summary>
+    /// Classe des hoppers
+    /// </summary>
     public partial class CHopper : CccTalk
     {
         /// <summary>
@@ -52,6 +55,9 @@ namespace DeviceLibrary
         /// </summary>
         public enum RegistrePos : byte
         {
+            /** \addtogroup Erreur
+             * @{
+             */
             /// <summary>
             /// La consommation de courant a dépassée celle autorisée.
             /// </summary>
@@ -65,6 +71,7 @@ namespace DeviceLibrary
             /// </summary>
             /// <remarks>Utilisé pour detecté le hopper vide lors du vidage.</remarks>
             TOOCCURED = 0X02,
+            /**@}*/
             /// <summary>
             /// Le pièce par pièce est activé.
             /// </summary>
@@ -73,6 +80,9 @@ namespace DeviceLibrary
             /// La rotation du moteur a été inversée lors de la dernière distribution pour corriger un bourrage
             /// </summary>
             MOTORREVERSED = 0X04,
+            /** \addtogroup Erreur
+             * @{
+             */
             /// <summary>
             /// Le checksum du bloc A de la mémoire non-volatile est erroné.
             /// </summary>
@@ -109,6 +119,7 @@ namespace DeviceLibrary
             /// L'alimentation a été coupée pendant une distribution
             /// </summary>
             POWERFAIL = 0X40,
+            /**@}*/
             /// <summary>
             /// Le hopper n'est pas activé.
             /// </summary>
@@ -207,7 +218,7 @@ namespace DeviceLibrary
             /// <param name="NameHopper">Identification du hopper.</param>
             public CHopperError(string NameHopper)
             {
-                this.nameHopper = NameHopper;
+                nameHopper = NameHopper;
             }
         }
 
@@ -1033,7 +1044,7 @@ namespace DeviceLibrary
                 if(IsPresent)
                 {
                     memoryStorage = new CMemoryStorage(this);
-                    errorHopper = new CHopperError(this.ToString());
+                    errorHopper = new CHopperError(ToString());
                     CDevicesManage.Log.Info("Categorie d'équipement du Hopper {0} {1}", Number, EquipementCategory);
                     CDevicesManage.Log.Info(OptoStates != 0 ? "Au moins un optocoupleur est occupé" : "Les optocoupleur sont libres");
                     CDevicesManage.Log.Info("Le courant maximum auorisé pour le hopper {0} est de {1}", DeviceAddress, variables.CurrentLimit);
@@ -1282,11 +1293,14 @@ namespace DeviceLibrary
         /// <param name="numberToDispense">Nombre de token à distribuer</param>
         public void Distribute(byte numberToDispense)
         {
-            CoinsToDistribute = numberToDispense;
-            State = Etat.DISPENSE;
-            while(State != Etat.IDLE)
-                ;
-            SubCounters(dispenseStatus.CoinsPaid);
+            if(!((deviceLevel.hardLevel == CLevel.HardLevel.VIDE) || (deviceLevel.softLevel == CLevel.SoftLevel.VIDE)))
+            {
+                CoinsToDistribute = numberToDispense;
+                State = Etat.DISPENSE;
+                while(State != Etat.IDLE)
+                    ;
+                SubCounters(dispenseStatus.CoinsPaid);
+            }
         }
 
         /// <summary>

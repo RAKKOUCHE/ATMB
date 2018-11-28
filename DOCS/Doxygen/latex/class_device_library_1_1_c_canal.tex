@@ -1,0 +1,133 @@
+\hypertarget{class_device_library_1_1_c_canal}{}\section{Device\+Library.\+C\+Canal Class Reference}
+\label{class_device_library_1_1_c_canal}\index{Device\+Library.\+C\+Canal@{Device\+Library.\+C\+Canal}}
+
+
+Class d\textquotesingle{}un canal d\textquotesingle{}un périphérique de paiement  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_device_library_1_1_c_canal_1_1_c_coind_i_d}{C\+Coind\+ID}}
+\begin{DoxyCompactList}\small\item\em Class gérant l\textquotesingle{}identification des pièces \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_device_library_1_1_c_canal_1_1_c_sorter}{C\+Sorter}}
+\begin{DoxyCompactList}\small\item\em Class gérant les informations concernant un chemin de triage d\textquotesingle{}un canal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_library_1_1_c_canal_a31af2f08cfb27d40798116fdc0cfb372}{C\+Canal}} (byte number, \mbox{\hyperlink{class_device_library_1_1_c_coin_validator}{C\+Coin\+Validator}} owner)
+\begin{DoxyCompactList}\small\item\em Constructeur \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_library_1_1_c_canal_1_1_c_coind_i_d}{C\+Coind\+ID}} \mbox{\hyperlink{class_device_library_1_1_c_canal_a5b9fc2885e84a372334c45007f8b5cf8}{coin\+Id}}
+\begin{DoxyCompactList}\small\item\em Identification de la pièce reconnue dans le canal \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_library_1_1_c_canal_1_1_c_sorter}{C\+Sorter}} \mbox{\hyperlink{class_device_library_1_1_c_canal_a15c9982533901ed86fcc0562a03d67df}{sorter}}
+\begin{DoxyCompactList}\small\item\em Instance des chemins utilisés pour trier la pièce reconnue dans le canal \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_device_library_1_1_c_canal_a5cb0d553ef6f6edc5a7268b1a427767b}{Number}}
+\begin{DoxyCompactList}\small\item\em Numéro du canal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+byte \mbox{\hyperlink{class_device_library_1_1_c_canal_a4b920e01736bd1a067401c6cc76e2e4e}{Hopper\+To\+Load}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Hopper vers lequel sera dirigé la pièce reconnue \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{class_device_library_1_1_c_canal_a01b652a04377f5daeb275adbad9ae1c2}{Coin\+In}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre de pièces reconnues par le canal. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{class_device_library_1_1_c_canal_ac80e273e29e18b3f2b598aaf9f04506f}{Montant\+In}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Montant introduit dans le canal \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class d\textquotesingle{}un canal d\textquotesingle{}un périphérique de paiement 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_canal_a31af2f08cfb27d40798116fdc0cfb372}\label{class_device_library_1_1_c_canal_a31af2f08cfb27d40798116fdc0cfb372}} 
+\index{Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}!C\+Canal@{C\+Canal}}
+\index{C\+Canal@{C\+Canal}!Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}}
+\subsubsection{\texorpdfstring{C\+Canal()}{CCanal()}}
+{\footnotesize\ttfamily Device\+Library.\+C\+Canal.\+C\+Canal (\begin{DoxyParamCaption}\item[{byte}]{number,  }\item[{\mbox{\hyperlink{class_device_library_1_1_c_coin_validator}{C\+Coin\+Validator}}}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Numéro du canal\\
+\hline
+{\em owner} & Nécessaire pour effectuer les commandes\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_canal_a5b9fc2885e84a372334c45007f8b5cf8}\label{class_device_library_1_1_c_canal_a5b9fc2885e84a372334c45007f8b5cf8}} 
+\index{Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}!coin\+Id@{coin\+Id}}
+\index{coin\+Id@{coin\+Id}!Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}}
+\subsubsection{\texorpdfstring{coin\+Id}{coinId}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_device_library_1_1_c_canal_1_1_c_coind_i_d}{C\+Coind\+ID}} Device\+Library.\+C\+Canal.\+coin\+Id}
+
+
+
+Identification de la pièce reconnue dans le canal 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_canal_a5cb0d553ef6f6edc5a7268b1a427767b}\label{class_device_library_1_1_c_canal_a5cb0d553ef6f6edc5a7268b1a427767b}} 
+\index{Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}!Number@{Number}}
+\index{Number@{Number}!Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}}
+\subsubsection{\texorpdfstring{Number}{Number}}
+{\footnotesize\ttfamily byte Device\+Library.\+C\+Canal.\+Number}
+
+
+
+Numéro du canal 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_canal_a15c9982533901ed86fcc0562a03d67df}\label{class_device_library_1_1_c_canal_a15c9982533901ed86fcc0562a03d67df}} 
+\index{Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}!sorter@{sorter}}
+\index{sorter@{sorter}!Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}}
+\subsubsection{\texorpdfstring{sorter}{sorter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_device_library_1_1_c_canal_1_1_c_sorter}{C\+Sorter}} Device\+Library.\+C\+Canal.\+sorter}
+
+
+
+Instance des chemins utilisés pour trier la pièce reconnue dans le canal 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_device_library_1_1_c_canal_a01b652a04377f5daeb275adbad9ae1c2}\label{class_device_library_1_1_c_canal_a01b652a04377f5daeb275adbad9ae1c2}} 
+\index{Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}!Coin\+In@{Coin\+In}}
+\index{Coin\+In@{Coin\+In}!Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}}
+\subsubsection{\texorpdfstring{Coin\+In}{CoinIn}}
+{\footnotesize\ttfamily long Device\+Library.\+C\+Canal.\+Coin\+In\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Nombre de pièces reconnues par le canal. 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_canal_a4b920e01736bd1a067401c6cc76e2e4e}\label{class_device_library_1_1_c_canal_a4b920e01736bd1a067401c6cc76e2e4e}} 
+\index{Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}!Hopper\+To\+Load@{Hopper\+To\+Load}}
+\index{Hopper\+To\+Load@{Hopper\+To\+Load}!Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}}
+\subsubsection{\texorpdfstring{Hopper\+To\+Load}{HopperToLoad}}
+{\footnotesize\ttfamily byte Device\+Library.\+C\+Canal.\+Hopper\+To\+Load\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Hopper vers lequel sera dirigé la pièce reconnue 
+
+\mbox{\Hypertarget{class_device_library_1_1_c_canal_ac80e273e29e18b3f2b598aaf9f04506f}\label{class_device_library_1_1_c_canal_ac80e273e29e18b3f2b598aaf9f04506f}} 
+\index{Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}!Montant\+In@{Montant\+In}}
+\index{Montant\+In@{Montant\+In}!Device\+Library\+::\+C\+Canal@{Device\+Library\+::\+C\+Canal}}
+\subsubsection{\texorpdfstring{Montant\+In}{MontantIn}}
+{\footnotesize\ttfamily long Device\+Library.\+C\+Canal.\+Montant\+In\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Montant introduit dans le canal 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Projets/\+A\+T\+M\+B/\+S\+O\+F\+T/\+Atmb\+Devices/\+Device\+Library/C\+Canal.\+cs\end{DoxyCompactItemize}

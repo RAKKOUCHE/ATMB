@@ -3,7 +3,7 @@
 namespace DeviceLibrary
 {
     /// <summary>
-    /// 
+    /// Classe des paramètres de stockage des variables en mémoire.
     /// </summary>
     public class CMemoryStorage
     {

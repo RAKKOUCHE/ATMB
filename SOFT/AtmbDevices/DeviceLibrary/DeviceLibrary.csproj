@@ -83,10 +83,7 @@
     <Compile Include="CHopper.Header.cs" />
     <Compile Include="CPelicano.CmdMotors.cs" />
     <Compile Include="CPelicano.cs" />
-    <Compile Include="CPelicano.Error.cs" />
-    <Compile Include="CPelicano.Etat.cs" />
     <Compile Include="CPelicano.Header.cs" />
-    <Compile Include="ExceptionATMB.cs" />
     <Compile Include="CDevicesManage.cs" />
     <Compile Include="messagesText.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

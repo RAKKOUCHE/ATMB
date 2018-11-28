@@ -1,10 +1,10 @@
 ﻿namespace DeviceLibrary
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public partial class CHopper : CccTalk
     {
+        /** \addtogroup Header
+         * @{
+         */
         /// <summary>
         /// Liste des commandes ccTalk spécifiques aux hoppers
         /// </summary>
@@ -97,10 +97,10 @@
             /// </summary>
             /// <remarks>Commande fonctionnant sur les hoppers multiple.</remarks>
             REQUESTHOPPERCOINVALUE = 131,
-/// <summary>
-/// Cette commande demande le nombre de pièce d'un type distribué
-/// </summary>
-/// <remarks>Cette commande est reservée aux hopperx multiple</remarks>
+            /// <summary>
+            /// Cette commande demande le nombre de pièce d'un type distribué
+            /// </summary>
+            /// <remarks>Cette commande est reservée aux hopperx multiple</remarks>
             REQUESTINDEXEDDHOPPERDISPENSECOUNT = 130,
             /// <summary>
             /// Cette commande demande l'état du chiffrage du hopper
