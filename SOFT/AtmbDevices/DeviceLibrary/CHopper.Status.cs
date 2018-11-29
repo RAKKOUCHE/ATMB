@@ -1,8 +1,14 @@
-﻿using System;
+﻿/// \file CHopper.Status.cs
+/// \brief Fichier contenant la classe CHopperStatus
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+using System;
 
 namespace DeviceLibrary
 {
-    public partial class CHopper
+    public partial class CHopper : CccTalk
     {
         /// <summary>
         /// Classe des status des hoppers

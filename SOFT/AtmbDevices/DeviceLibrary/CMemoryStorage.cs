@@ -1,4 +1,10 @@
-﻿using System;
+﻿/// \file CMemoryStorage.cs
+/// \brief Fichier contenant la classe CMemoryStorage
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+using System;
 
 namespace DeviceLibrary
 {

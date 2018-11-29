@@ -1,11 +1,16 @@
-﻿using System;
+﻿/// \file CDevicesManage.cs
+/// \brief Fichier principal de la dll.
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Xml;
 using NLog;
-
 
 namespace DeviceLibrary
 {
@@ -145,6 +150,9 @@ namespace DeviceLibrary
 
         /*-------------------------------------------------------*/
 
+        /// <summary>
+        /// Cette fonction lit, pour chaque canal, les chemins de tris et les hoppers devant être rechargés lors de l'insertion d'une pièce dans le monnayeur
+        /// </summary>
         private void SetSortersAndHoppersToLoad()
         {
             try
@@ -165,6 +173,9 @@ namespace DeviceLibrary
             }
         }
 
+        /// <summary>
+        /// Effectue le rendu monnaie.
+        /// </summary>
         private void ChangeBack()
         {
             try
@@ -211,6 +222,9 @@ namespace DeviceLibrary
             }
         }
 
+        /// <summary>
+        /// Tâche principale de la dll
+        /// </summary>
         private void TaskMessage()
         {
             while(true)
@@ -230,6 +244,10 @@ namespace DeviceLibrary
                             if(!hopper.isEmptyingInProgress)
                             {
                                 OnHopperDispensed(hopper);
+                            }
+                            else
+                            {
+                                hopper.isEmptyingInProgress = false;
                             }
                         }
                         if(hopper.deviceLevel.isSoftLevelChanged)
@@ -278,6 +296,9 @@ namespace DeviceLibrary
             }
         }
 
+        /// <summary>
+        /// Cette fonction lit les paramètres des hoppers.
+        /// </summary>
         private void ReadParamHopper()
         {
             try
@@ -352,7 +373,6 @@ namespace DeviceLibrary
                         }
                     }
                 }
-
             }
             catch(Exception E)
             {
@@ -360,6 +380,10 @@ namespace DeviceLibrary
             }
         }
 
+        /// <summary>
+        /// Evénement levé lorsque le hopper est vidé.
+        /// </summary>
+        /// <param name="hopper"></param>
         private void OnHopperEmptied(CHopper hopper)
         {
             try
@@ -375,9 +399,12 @@ namespace DeviceLibrary
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
-            hopper.isEmptyingInProgress = false;
         }
 
+        /// <summary>
+        /// Evénement levé lorsqu'un changement d'état d'une sonde de niveau d'un hopper est detecté.
+        /// </summary>
+        /// <param name="hopper"></param>
         private void OnHopperHardLevelChanged(CHopper hopper)
         {
             try
@@ -395,6 +422,10 @@ namespace DeviceLibrary
             }
         }
 
+        /// <summary>
+        /// Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper 
+        /// </summary>
+        /// <param name="hopper"></param>
         private void OnHopperSoftLevelChanged(CHopper hopper)
         {
             try
@@ -402,7 +433,7 @@ namespace DeviceLibrary
                 CalertEventArgs alertEventArgs = new CalertEventArgs
                 {
                     reason = Reason.HOPPERSWLEVELCHANGED,
-                    donnee = hopper.deviceLevel ,
+                    donnee = hopper.deviceLevel,
                 };
                 CallAlert(new object(), alertEventArgs);
             }
@@ -412,6 +443,10 @@ namespace DeviceLibrary
             }
         }
 
+        /// <summary>
+        /// Evéenemnt levé lorsqu'une error est detectée sur un hopper.
+        /// </summary>
+        /// <param name="hopper"></param>
         private void OnHopperError(CHopper hopper)
         {
             try
@@ -432,6 +467,10 @@ namespace DeviceLibrary
 
         }
 
+        /// <summary>
+        /// Evénement levé lorsque la distribution est terminée.
+        /// </summary>
+        /// <param name="hopper"></param>
         private void OnHopperDispensed(CHopper hopper)
         {
             try
@@ -450,7 +489,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Evénement levé lors de la cloture de la transaction.
         /// </summary>
         private void OnCashClose()
         {
@@ -468,7 +507,9 @@ namespace DeviceLibrary
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
         }
-
+        /// <summary>
+        /// Evénement levé lors de l'ouverture des moyens de paiement.
+        /// </summary>
         private void OnCashOpen()
         {
             try
@@ -486,6 +527,9 @@ namespace DeviceLibrary
             }
         }
 
+        /// <summary>
+        /// Evémenment levé lors de l'introduction d'une pièce.
+        /// </summary>
         private void OnMoneyReceived()
         {
             try
@@ -504,6 +548,9 @@ namespace DeviceLibrary
             }
         }
 
+        /// <summary>
+        /// Evénement levé lors de la détection d'une erreur sur le monnayeur.
+        /// </summary>
         private void OnCVError()
         {
             try
@@ -521,6 +568,9 @@ namespace DeviceLibrary
             }
         }
 
+        /// <summary>
+        /// Evénement levé lorsque la dll est prête.
+        /// </summary>
         private void OnDllReady()
         {
             try
@@ -619,11 +669,11 @@ namespace DeviceLibrary
                     Hoppers.Add(new CHopper(i));
                 }
                 ReadParamHopper();
+                Hoppers.Sort((x, y) => y.CoinValue.CompareTo(x.CoinValue));
                 foreach(CHopper hopper in Hoppers)
                 {
                     hopper.Init();
                 }
-                Hoppers.Sort((x, y) => y.CoinValue.CompareTo(x.CoinValue));
                 monnayeur.CVTask.Start();
                 MsgTask = new Thread(TaskMessage);
                 MsgTask.Start();

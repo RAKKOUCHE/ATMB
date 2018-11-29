@@ -1,4 +1,10 @@
-﻿namespace DeviceLibrary
+﻿/// \file SelfTestResult.cs
+/// \brief Fichier contenant l'énumération des commandes ccTalk spécifiques aux monnayeurs.
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHEnamespace DeviceLibrary
+
+namespace DeviceLibrary
 {
     public partial class CccTalk : CDevice
     {
@@ -11,7 +17,7 @@
         /// Liste des fautes possibles retournées par un self test.
         /// </summary>
         public enum SelfTestResult
-        {
+    {
             /// <summary>
             /// OK
             /// </summary>
@@ -57,7 +63,7 @@
             /// </summary>
             ERRORKEYPAD = 14,
             /// <summary>
-            /// Error sur un bouton de contact.
+            /// Code sur un bouton de contact.
             /// </summary>
             ERRORBUTTON = 15,
             /// <summary>

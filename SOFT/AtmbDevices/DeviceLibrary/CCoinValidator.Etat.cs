@@ -4,11 +4,9 @@
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
-using System;
-
+using System;                        
 namespace DeviceLibrary
 {
-
     public partial class CCoinValidator : CcashReader
     {
         /// \addtogroup Etats

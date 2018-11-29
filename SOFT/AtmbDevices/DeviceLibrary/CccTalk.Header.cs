@@ -1,8 +1,9 @@
 ﻿/// \file CccTalk.Header.cs
-/// \brief Fichier contenant les commandes communes à  tous les périphériques ccTalk.
+/// \brief Fichier contenant l'énumération des commandes communes à  tous les périphériques ccTalk.
 /// \date 28 11 2018
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
+
 namespace DeviceLibrary
 {
     public partial class CccTalk : CDevice

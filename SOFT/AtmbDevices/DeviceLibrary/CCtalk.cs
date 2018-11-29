@@ -1,4 +1,10 @@
-﻿using System;
+﻿/// \file CCtalk.cs
+/// \brief Fichier contenant la classe CccTalk
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+using System;
 using System.IO;
 using System.IO.Ports;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -433,7 +439,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Lecture de version ccTalk utilisée par le périphérique.
         /// </summary>
         protected string CommsRevision
         {
@@ -525,11 +531,12 @@ namespace DeviceLibrary
             counters = null;
             counters = new CcoinsCounters();
             counters.SaveCounters();
-            CccTalk.countersFile.Close();
+            CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
+            CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
         }
 
         /// <summary>
-        /// 
+        /// Lecture de l'etat des otpocoupleurs du périphériques.
         /// </summary>
         public virtual byte OptoStates
         {

@@ -1,4 +1,10 @@
-﻿namespace DeviceLibrary
+﻿/// \file CCoinValidator.Header.cs
+/// \brief Fichier contenant l'énumération des commandes ccTalk spécifiques aux monnayeurs.
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+namespace DeviceLibrary
 {
     public partial class CCoinValidator : CcashReader
     {

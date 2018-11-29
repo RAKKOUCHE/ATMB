@@ -1,4 +1,10 @@
-﻿using System;
+﻿/// \file CDevice.cs
+/// \brief Fichier contenant la classe CDevice.
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

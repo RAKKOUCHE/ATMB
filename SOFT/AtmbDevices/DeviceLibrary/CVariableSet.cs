@@ -1,4 +1,10 @@
-﻿using System;
+﻿/// \file CVariableSet.cs
+/// \brief Fichier contenant la classe CHopperVariableSet.
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+using System;
 
 namespace DeviceLibrary
 {

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/// \file CSorter.cs
+/// \brief Fichier contenant la classe CSorter.
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+using System;
 namespace DeviceLibrary
 {
     public partial class CCanal

@@ -154,9 +154,9 @@
             <ID>1</ID>
             <Address>3</Address>
             <Devise>EUR</Devise>
-            <Valeur>20</Valeur>
+            <Valeur>5</Valeur>
             <Recharge>500</Recharge>
-            <Critique>false</Critique>
+            <Critique>true</Critique>
             <Niveaux>
                 <Plein>1000</Plein>
                 <Haut>800</Haut>
@@ -168,7 +168,7 @@
             <ID>2</ID>
             <Address>4</Address>
             <Devise>EUR</Devise>
-            <Valeur>5</Valeur>
+            <Valeur>20</Valeur>
             <Recharge>500</Recharge>
             <Critique>false</Critique>
             <Niveaux>

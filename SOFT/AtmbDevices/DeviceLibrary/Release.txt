@@ -39,4 +39,7 @@
  * - Vérification du niveau des hoppers avant distribution.
  * - Modifications de la méthode de calcul pour la distribution.
  * - Evenement sur les hoppers critiques en erreur ou  vides.
+ * - Correction d'un bug sur les niveaux soft.
+ * - Correction d'un bug sur la remise à zéro des compteurs.
+ *
  */

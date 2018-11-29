@@ -1,4 +1,10 @@
-﻿namespace DeviceLibrary
+﻿/// \file CVErrorCodes.cs
+/// \brief Fichier contenant la classe CVErrorCodes.
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+namespace DeviceLibrary
 {
     public partial class CCoinValidator : CcashReader
     {
@@ -6,7 +12,10 @@
         /// @{        
         /// <summary>
         /// Groupe des codes erreur renvoyés par les périphériques
-        /// </summary>
+        /// </summary>        
+        ///<summary>
+        ///Enumération des codes erreurs retournés par le monnayeur.
+        ///</summary>
         public enum CVErrorCodes : byte
         {
             /// <summary>

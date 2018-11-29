@@ -1,9 +1,11 @@
-﻿/// \file CcashReader.cs
-/// \brief Fichier contenant la classe abstraite CcashReader
+﻿/// \file CHopper.cs
+/// \brief Fichier contenant la classe CHopper.
 /// \date 28 11 2018
-/// \version 1.0.0
+/// \version 1.1
+/// Modification du traitements des erreurs du hopper.
+/// Création de sous fichiers contenant les classes.
 /// \author Rachid AKKOUCHE
-/// 
+
 using System;
 using System.Threading;
 
@@ -30,138 +32,6 @@ namespace DeviceLibrary
         private const int polllDelayLevel = 1;
 
         /// <summary>
-        /// Liste des réponses contenu dans le registre
-        /// </summary>
-        public enum RegistrePos : byte
-        {
-            /// <summary>
-            /// Pas d'erreur.
-            ///</summary>
-            NULL = 0,
-            /// <summary>
-            /// Le pièce par pièce est activé.
-            /// </summary>
-            SINGLEPAYOUT = 0X02,
-            /// \addtogroup Erreurs
-            /// @{        
-            /// <summary>
-            /// Groupe des codes erreur renvoyés par les périphériques
-            /// </summary>
-            /// <summary>
-            /// La rotation du moteur a été inversée lors de la dernière distribution pour corriger un bourrage
-            /// </summary>
-            MOTORREVERSED = 0X04,
-            /// <summary>
-            /// Le hopper n'est pas activé.
-            /// </summary>
-            DISABLED = 0X80,
-            /// <summary>
-            /// Le hopper est protéger par un code PIN
-            /// </summary>
-            PINNUMBER = 0X80,
-            /// <summary>
-            /// La consommation de courant a dépassée celle autorisée.
-            /// </summary>
-            MAXCURRENTEXCEEDED = 0X01,
-            /// <summary>
-            /// Un opto est est activé en permanence
-            /// </summary>
-            OPTOSHORTCIRCUIT = 0X01,
-            /// <summary>
-            /// Le temps alloué pour l'éjection d'une pièce a été depassé.
-            /// </summary>
-            /// <remarks>Utilisé pour detecté le hopper vide lors du vidage.</remarks>
-            TOOCCURED = 0X02,
-            /// <summary>
-            /// Le checksum du bloc A de la mémoire non-volatile est erroné.
-            /// </summary>
-            CHECKSUMA = 0X04,
-            /// <summary>
-            /// L'opto coupleur de sortie est bloqué
-            /// </summary>
-            OPTOPATHBLOCKED = 0X08,
-            /// <summary>
-            /// Le checksum du bloc A de la mémoire non-volatile est erroné.
-            /// </summary>
-            CHECKSUMB = 0X08,
-            /// <summary>
-            /// L'optocoupleur est en court-circuit au repos
-            /// </summary>
-            OPTOSHORTCIRCUITIDLE = 0X10,
-            /// <summary>
-            /// Le checksum du bloc A de la mémoire non-volatile est erroné.
-            /// </summary>
-            CHECKSUMC = 0X10,
-            /// <summary>
-            /// Un optocoupleur est bloqué en permanence
-            /// </summary>
-            OPTOBLOCKEDPERMANENTLY = 0X20,
-            /// <summary>
-            /// Le checksum du bloc A de la mémoire non-volatile est erroné.
-            /// </summary>
-            CHECKSUMD = 0X20,
-            /// <summary>
-            /// Le hopper a été alimenté et le reset n'a pas encore été effectué.
-            /// </summary>
-            POWERUP = 0X40,
-            /// <summary>
-            /// L'alimentation a été coupée pendant une distribution
-            /// </summary>
-            POWERFAIL = 0X40,
-            /// @}
-
-        }
-
-        /// <summary>
-        /// Masque des niveau             
-        /// </summary>
-        private enum LevelMask : byte
-        {
-            /// <summary>
-            /// Mask indiquant si le niveau base est atteint.
-            /// </summary>
-            LOLEVELREACHED = 0x01,
-
-            /// <summary>
-            /// Mask indiquant si le niveau haut est atteint.
-            /// </summary>
-            HILEVEREACHED = 0x02,
-
-            /// <summary>
-            /// Mask indiquant si le niveau bas est implémenté.
-            /// </summary>
-            LOLEVELIMPLEMENTED = 0x10,
-
-            /// <summary>
-            /// Mask indiquant si le niveau haut est implémenté.
-            /// </summary>
-            HILEVELIMPLEMENTED = 0x20,
-        }
-
-        /// <summary>
-        /// Class contenant les résultats du vidage du hopper.
-        /// </summary>
-        public class CEmptyCount
-        {
-            /// <summary>
-            /// Nombre de pièces comptées durant le vidage
-            /// </summary>
-            public long counter;
-            /// <summary>
-            /// Montant distribué pendant le vidage.
-            /// </summary>
-            public long amountCounter;
-            /// <summary>
-            /// Différence entre le nombre de pièces dans les compteurs et le nombre de pièces distribuées pendant le vidage.
-            /// </summary>
-            public long delta;
-            /// <summary>
-            /// Différence entre le montant distribué et le montant dans les compteurs.
-            /// </summary>
-            public long amountDelta;
-        }
-
-        /// <summary>
         /// Identification de la dénomination de la pièce gerée par le hopper
         /// </summary>
         public class CHopperCoinId
@@ -178,34 +48,6 @@ namespace DeviceLibrary
             /// Révision du data set
             /// </summary>
             public char Issue;
-        }
-
-        /// <summary>
-        /// Classe contenant les informations sur une erreur survenue dans le hopper
-        /// </summary>
-        public class CHopperError
-        {
-            /// <summary>
-            /// Numéro du hopper
-            /// </summary>
-            public string nameHopper;
-            /// <summary>
-            /// Code d'erreur du hopper
-            /// </summary>
-            public RegistrePos codeError;
-            /// <summary>
-            /// Indique si le hopper est nécessaire pour le fonctionnement du système.
-            /// </summary>
-            public bool isHopperCritical;
-
-            /// <summary>
-            /// Constructeur de la class CHopperError.
-            /// </summary>
-            /// <param name="NameHopper">Identification du hopper.</param>
-            public CHopperError(string NameHopper)
-            {
-                nameHopper = NameHopper;
-            }
         }
 
         /// <summary>
@@ -355,7 +197,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isMaxCurrentExceeded;
             }
         }
@@ -368,7 +210,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isTOOccured;
             }
         }
@@ -381,7 +223,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isMotorReversed;
             }
         }
@@ -394,7 +236,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isOptoPathBlocked;
             }
         }
@@ -407,7 +249,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isShortCircuit;
             }
         }
@@ -433,7 +275,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isPowerUpDetected;
             }
         }
@@ -446,7 +288,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isPayoutDisabled;
             }
         }
@@ -459,7 +301,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isOptoShorCircuit;
             }
         }
@@ -472,7 +314,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isSingleCoinMode;
             }
         }
@@ -485,7 +327,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isCheckSumAError;
             }
         }
@@ -498,7 +340,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isCheckSumBError;
             }
         }
@@ -511,7 +353,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isCheckSumCError;
             }
         }
@@ -524,7 +366,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isCheckSumDError;
             }
         }
@@ -537,7 +379,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isPowerFailMemoryWrite;
             }
         }
@@ -550,7 +392,7 @@ namespace DeviceLibrary
         {
             get
             {
-                errorHopper.codeError = TestHopper();
+                errorHopper.Code = TestHopper();
                 return isPINEnabled;
             }
         }
@@ -786,7 +628,7 @@ namespace DeviceLibrary
                     CDevicesManage.Log.Info("Lecture de l'identification de la pièce traitée par le hopper {0}", Number);
                     if(IsCmdccTalkSended(DeviceAddress, Header.REQUESTHOPPERCOIN, 0, null, bufferIn))
                     {
-                        result.CountryCode = bufferIn[0].ToString() + bufferIn[1].ToString();
+                        result.CountryCode = ((char)bufferIn[0]).ToString() + ((char)bufferIn[1]).ToString();
                         if((bufferIn[2] >= 0x30) && (bufferIn[2] >= 0x30) && (bufferIn[2] >= 0x30))
                         {
                             result.ValeurCent = (byte)(((bufferIn[2] - 0x30) * 100) + ((bufferIn[3] - 0x30) * 10) + (bufferIn[4] - 0x30));
@@ -937,65 +779,62 @@ namespace DeviceLibrary
         /// <summary>
         /// Lecture des registres du hopper.
         /// </summary>
-        private RegistrePos TestHopper()
+        private HopperError TestHopper()
         {
-            RegistrePos result = RegistrePos.NULL;
+            HopperError result = HopperError.NULL;
             try
             {
-                CDevicesManage.Log.Info("Lecture des registres du {0}", DeviceAddress);
+                CDevicesManage.Log.Info("Lecture des registres et des erreurs du {0}", DeviceAddress);
                 byte[] bufferIn = { 0, 0 };
                 if(IsCmdccTalkSended(DeviceAddress, Header.TESTHOPPER, 0, null, bufferIn))
                 {
                     if(isMaxCurrentExceeded = (bufferIn[0] & (byte)RegistrePos.MAXCURRENTEXCEEDED) > 0)
                     {
-                        result = RegistrePos.MAXCURRENTEXCEEDED;
+                        result = HopperError.MAXCURRENTEXCEEDED;
                     };
-                    if(isTOOccured = (bufferIn[0] & (byte)RegistrePos.TOOCCURED) > 0)
-                    {
-                        result = RegistrePos.TOOCCURED;
-                    };
+                    isTOOccured = (bufferIn[0] & (byte)RegistrePos.TOOCCURED) > 0;
                     if(isMotorReversed = (bufferIn[0] & (byte)RegistrePos.MOTORREVERSED) > 0)
                     {
-                        result = RegistrePos.MOTORREVERSED;
+                        result = HopperError.MOTORREVERSED;
                     };
                     if(isOptoPathBlocked = (bufferIn[0] & (byte)RegistrePos.OPTOPATHBLOCKED) > 0)
                     {
-                        result = RegistrePos.OPTOPATHBLOCKED;
+                        result = HopperError.OPTOPATHBLOCKED;
                     };
                     if(isShortCircuit = (bufferIn[0] & (byte)RegistrePos.OPTOSHORTCIRCUITIDLE) > 0)
                     {
-                        result = RegistrePos.OPTOSHORTCIRCUITIDLE;
+                        result = HopperError.OPTOSHORTCIRCUITIDLE;
                     };
                     if(isOptoPermanentlyBlocked = (bufferIn[0] & (byte)RegistrePos.OPTOBLOCKEDPERMANENTLY) > 0)
                     {
-                        result = RegistrePos.OPTOBLOCKEDPERMANENTLY;
+                        result = HopperError.OPTOBLOCKEDPERMANENTLY;
                     };
                     isPowerUpDetected = (bufferIn[0] & (byte)RegistrePos.POWERUP) > 0;
                     isPayoutDisabled = (bufferIn[0] & (byte)RegistrePos.DISABLED) > 0;
                     if(isOptoShorCircuit = (bufferIn[1] & (byte)RegistrePos.OPTOSHORTCIRCUIT) > 0)
                     {
-                        result = RegistrePos.OPTOSHORTCIRCUIT;
+                        result = HopperError.OPTOSHORTCIRCUIT;
                     };
                     isSingleCoinMode = (bufferIn[1] & (byte)RegistrePos.SINGLEPAYOUT) > 0;
                     if(isCheckSumAError = (bufferIn[1] & (byte)RegistrePos.CHECKSUMA) > 0)
                     {
-                        result = RegistrePos.CHECKSUMA;
+                        result = HopperError.CHECKSUMA;
                     }
                     if(isCheckSumBError = (bufferIn[1] & (byte)RegistrePos.CHECKSUMB) > 0)
                     {
-                        result = RegistrePos.CHECKSUMB;
+                        result = HopperError.CHECKSUMB;
                     }
                     if(isCheckSumCError = (bufferIn[1] & (byte)RegistrePos.CHECKSUMC) > 0)
                     {
-                        result = RegistrePos.CHECKSUMC;
+                        result = HopperError.CHECKSUMC;
                     };
                     if(isCheckSumDError = (bufferIn[1] & (byte)RegistrePos.CHECKSUMD) > 0)
                     {
-                        result = RegistrePos.CHECKSUMD;
+                        result = HopperError.CHECKSUMD;
                     };
                     if(isPowerFailMemoryWrite = (bufferIn[1] & (byte)RegistrePos.POWERFAIL) > 0)
                     {
-                        result = RegistrePos.POWERFAIL;
+                        result = HopperError.POWERFAIL;
                     };
                     isPINEnabled = (bufferIn[1] & (byte)RegistrePos.PINNUMBER) > 0;
                 }
@@ -1025,10 +864,10 @@ namespace DeviceLibrary
                     errorHopper = new CHopperError(ToString());
                     CDevicesManage.Log.Info("Categorie d'équipement du Hopper {0} {1}", Number, EquipementCategory);
                     CDevicesManage.Log.Info(OptoStates != 0 ? "Au moins un optocoupleur est occupé" : "Les optocoupleur sont libres");
-                    CDevicesManage.Log.Info("Le courant maximum auorisé pour le hopper {0} est de {1}", DeviceAddress, variables.CurrentLimit);
+                    CDevicesManage.Log.Info("Le courant maximum autorisé pour le hopper {0} est de {1}", DeviceAddress, variables.CurrentLimit);
                     CDevicesManage.Log.Info("Le délai pour arrêter le motor du hopper {0} est de {1}", DeviceAddress, variables.MotorStopDelay);
 
-                    CDevicesManage.Log.Info("Le délai maximum de vérification pour la distribution de pièce du hopper {0} est de {1}", DeviceAddress, variables.PayoutDelayTO);
+                    CDevicesManage.Log.Info("Le délai maximum de vérification pour la distribution de pièce du hopper {0} est de {1} secondes", DeviceAddress, variables.PayoutDelayTO);
                     CDevicesManage.Log.Info("Le courant maximum utilisé par le hopper {0} est de {1}", DeviceAddress, variables.Maxcurrent);
                     double tension = variables.Tension;
                     if((tension > 26) || (tension < 19))
@@ -1102,30 +941,30 @@ namespace DeviceLibrary
                         deviceLevel.isHardLevelChanged = true;
                         deviceLevel.hardLevel = CLevel.HardLevel.PLEIN;
                     }
-                    if(!deviceLevel.isSoftLevelChanged && (deviceLevel.softLevel != CLevel.SoftLevel.OK) && (counters.coinsInHopper[Number - 1] > LevelLOSoft) &&
-                        (counters.coinsInHopper[Number - 1] < LevelHISoft))
+                    if(!deviceLevel.isSoftLevelChanged && (deviceLevel.softLevel != CLevel.SoftLevel.OK) && (CoinsInHopper >= LevelLOSoft) &&
+                        (CoinsInHopper < LevelHISoft))
                     {
                         deviceLevel.isSoftLevelChanged = true;
                         deviceLevel.softLevel = CLevel.SoftLevel.OK;
                     }
-                    if(!deviceLevel.isSoftLevelChanged && (deviceLevel.softLevel != CLevel.SoftLevel.VIDE) && (counters.coinsInHopper[Number - 1] < LevelEmptySoft))
+                    if(!deviceLevel.isSoftLevelChanged && (deviceLevel.softLevel != CLevel.SoftLevel.VIDE) && (CoinsInHopper < LevelEmptySoft))
                     {
                         deviceLevel.isSoftLevelChanged = true;
                         deviceLevel.softLevel = CLevel.SoftLevel.VIDE;
                     }
-                    if(!deviceLevel.isSoftLevelChanged && (deviceLevel.softLevel != CLevel.SoftLevel.BAS) && (counters.coinsInHopper[Number - 1] > LevelEmptySoft) &&
-                            (counters.coinsInHopper[Number - 1] < LevelLOSoft))
+                    if(!deviceLevel.isSoftLevelChanged && (deviceLevel.softLevel != CLevel.SoftLevel.BAS) && (CoinsInHopper >= LevelEmptySoft) &&
+                            (CoinsInHopper < LevelLOSoft))
                     {
                         deviceLevel.isSoftLevelChanged = true;
                         deviceLevel.softLevel = CLevel.SoftLevel.BAS;
                     }
-                    if(!deviceLevel.isSoftLevelChanged && (deviceLevel.softLevel != CLevel.SoftLevel.HAUT) && (counters.coinsInHopper[Number - 1] > LevelHISoft) &&
-                        (counters.coinsInHopper[Number - 1] < LevelFullSoft))
+                    if(!deviceLevel.isSoftLevelChanged && (deviceLevel.softLevel != CLevel.SoftLevel.HAUT) && (CoinsInHopper > LevelHISoft) &&
+                        (CoinsInHopper < LevelFullSoft))
                     {
                         deviceLevel.isSoftLevelChanged = true;
                         deviceLevel.softLevel = CLevel.SoftLevel.HAUT;
                     }
-                    if(!deviceLevel.isSoftLevelChanged && (deviceLevel.softLevel != CLevel.SoftLevel.PLEIN) && (LevelFullSoft < counters.coinsInHopper[Number - 1]))
+                    if(!deviceLevel.isSoftLevelChanged && (deviceLevel.softLevel != CLevel.SoftLevel.PLEIN) && (LevelFullSoft < CoinsInHopper))
                     {
                         deviceLevel.isSoftLevelChanged = true;
                         deviceLevel.softLevel = CLevel.SoftLevel.PLEIN;
@@ -1163,10 +1002,11 @@ namespace DeviceLibrary
                     emptyCount.amountDelta += emptyCount.delta * CoinValue;
                 } while(!IsTOOccured);
                 SubCounters(emptyCount.counter);
-                counters.amountInHopper[Number - 1] = counters.coinsInHopper[Number - 1] = 0;
+                AmountInHopper = CoinsInHopper = 0;
                 counterSerializer.Serialize(countersFile, counters);
                 CheckLevel();
                 isEmptied = true;
+                Thread.Sleep(200);
             }
             catch(Exception E)
             {
@@ -1187,19 +1027,22 @@ namespace DeviceLibrary
                     deviceLevel.ID = ToString();
                     CheckLevel();
                     isEmptied =
-                    isDispensed = false;
+                    isDispensed = false;                    
                     State = Etat.IDLE;
+                    if(CoinsToDistribute > 0)
+                    {
+                        State = Etat.IDLE;
+                    }
                     break;
                 }
                 case Etat.DISPENSE:
                 {
-                    if(coinsToDistribute > 0)
+                    if(CoinsToDistribute > 0)
                     {
                         IsDispensed = false;
-                        isHopperError = !((errorHopper.codeError == RegistrePos.NULL) || (isEmptyingInProgress && (errorHopper.codeError == RegistrePos.TOOCCURED)));
-                        //isHopperError =  ((errorHopper.codeError = TestHopper()) != RegistrePos.TOOCCURED) && ((errorHopper.codeError = TestHopper() != RegistrePos.NULL);
-                        dispenseStatus.dispensedResult.CoinToDispense = coinsToDistribute;
-                        dispenseStatus.dispensedResult.AmountToDispense = (int)(coinsToDistribute * CoinValue);
+                        isHopperError = (errorHopper.Code = TestHopper()) != HopperError.NULL;
+                        dispenseStatus.dispensedResult.CoinToDispense = CoinsToDistribute;
+                        dispenseStatus.dispensedResult.AmountToDispense = (int)(CoinsToDistribute * CoinValue);
                         EnableHopper();
                         PumpRNG();
                         GetCipherKey();
@@ -1228,10 +1071,7 @@ namespace DeviceLibrary
                 case Etat.ENDDISPENSE:
                 {
                     CheckLevel();
-                    errorHopper.codeError = TestHopper();
-                    isHopperError = !((errorHopper.codeError == RegistrePos.NULL) || (isEmptyingInProgress && (errorHopper.codeError == RegistrePos.TOOCCURED)));
-
-                    //                    isHopperError = ((errorHopper.codeError = TestHopper()) != RegistrePos.TOOCCURED) && ((errorHopper.codeError = TestHopper()) != RegistrePos.NULL);
+                    isHopperError = (errorHopper.Code = TestHopper()) != HopperError.NULL;
                     if(CoinsToDistribute != dispenseStatus.CoinsPaid)
                     {
                         //TODO indiquant l'erreur

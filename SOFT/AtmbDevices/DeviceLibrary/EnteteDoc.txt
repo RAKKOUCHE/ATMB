@@ -1,0 +1,33 @@
+
+/** 
+ * \mainpage  DOCUMENTATION SOFTWARE
+ * 
+ *
+ *
+ *
+ * \brief dll de gestion des périphériques de traitement des espèces sur les bornes de péages.
+ * \details 
+ * \date 2018.11.24
+ * \author Rachid AKKOUCHE
+ * \version 0.9.0.44
+ *
+ * <CENTER>Copyright<b>© RASoftware</b> 2018 </CENTER>  <BR>
+ * 
+ *  <b>     RASoftware</b><BR>
+ *	        2 rue Georges MELIES<BR>
+ *          78390 BOIS D'ARCY<BR>
+ *	        +33 651 60 40 47<BR>
+ *	<a href = "http://www.rasoftware.fr">http://www.rasoftware.fr </a> <BR><BR>
+ *
+ * 
+ * 
+ *
+ * > The information contained here-in is the property of RASoftware and is not     
+ * > to be disclosed or used without the prior written permission of RASoftware.    
+ * > This	copyright extends to all media in which this information may be         
+ * > preserved including magnetic storage, computer print-out or visual display.    
+ * <BR>
+ * <BR>
+ * - - - -
+ *
+ */

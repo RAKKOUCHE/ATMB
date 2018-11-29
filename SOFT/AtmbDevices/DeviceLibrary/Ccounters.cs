@@ -1,4 +1,10 @@
-﻿using System;
+﻿/// \file Ccounters.cs
+/// \brief Fichier contenant la classe CcoinsCounters
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+using System;
 using System.IO;
 
 namespace DeviceLibrary

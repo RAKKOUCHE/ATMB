@@ -1,4 +1,10 @@
-﻿namespace DeviceLibrary
+﻿/// \file CPelicano.CmdMotors.cs
+/// \brief Fichier contenant l'énumération des commandes moteurs du Pelicano
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+namespace DeviceLibrary
 {
     public partial class CPelicano : CCoinValidator
     {

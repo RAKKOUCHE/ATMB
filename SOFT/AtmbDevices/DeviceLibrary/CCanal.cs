@@ -3,17 +3,24 @@
 /// \date 28 11 2018
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
+
 namespace DeviceLibrary
 {
     /// <summary>
     /// Class d'un canal d'un périphérique de paiement
     /// </summary>    
+    /// \details Cette classe contient et gère les paramètres d'un canal*/
     public partial class CCanal
     {
         /// <summary>
-        /// Class contenant les informations sur un canal
+        /// Instance propriètaire du canal
         /// </summary>
         private CCoinValidator CVOwner;
+
+        /// <summary>
+        /// Numéro du canal
+        /// </summary>
+        public byte Number;
 
         /// <summary>
         /// Identification de la pièce reconnue dans le canal
@@ -21,7 +28,7 @@ namespace DeviceLibrary
         public CCoindID coinId;
 
         /// <summary>
-        /// Instance des chemins utilisés pour trier la pièce reconnue dans le canal
+        /// Instance des chemins utilisés pour trier la pièce reconnue dans le canal.
         /// </summary>
         public CSorter sorter;
         
@@ -34,11 +41,6 @@ namespace DeviceLibrary
             get => hopperToLoad;
             set => hopperToLoad = value;
         }
-
-        /// <summary>
-        /// Numéro du canal
-        /// </summary>
-        public byte Number;
 
         /// <summary>
         /// Nombre de pièces reconnues par le canal.

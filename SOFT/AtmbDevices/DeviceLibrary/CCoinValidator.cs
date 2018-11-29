@@ -1,9 +1,9 @@
-﻿/// \file CCoindID.cs
-/// \brief Fichier contenant la classe CCoinID.
+﻿/// \file CCoinValidator.cs
+/// \brief Fichier contenant la classe CCoinValidator
 /// \date 28 11 2018
 /// \version 1.0.0
-/// \author Rachid AKKOUCHE
- 
+/// \author Rachid AKKOUCHE 
+
 using System;
 using System.Threading;
 
@@ -15,7 +15,7 @@ namespace DeviceLibrary
     public partial class CCoinValidator : CcashReader
     {
         /// <summary>
-        ///
+        /// Classe des erreurs du monnayeur.
         /// </summary>
         public class CErroCV
         {
@@ -30,25 +30,25 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        ///
+        /// Instance de la classe des erreurs du monnayeurs.
         /// </summary>
         public CErroCV errorCV;
 
         /// <summary>
-        /// 
+        /// Enumération des codes d'état du monnayeurs.
         /// </summary>
         protected enum CVStatus
         {
             /// <summary>
-            ///
+            /// Monnayeur à l'état normal
             /// </summary>
             OK = 0,
             /// <summary>
-            ///
+            /// Le mechanisme de rendu de pièce est activé.
             /// </summary>
             COINRETURNACTIVATED = 1,
             /// <summary>
-            ///
+            /// Le système anti-fishing est activé.
             /// </summary>
             COSACTIVATED = 2,
         }
@@ -59,11 +59,11 @@ namespace DeviceLibrary
         protected enum TrashDoor
         {
             /// <summary>
-            ///
+            /// Trappe de sortie du Pelicano fermée.
             /// </summary>
             CLOSED = 0,
             /// <summary>
-            ///
+            /// Trappe de sortie du Pelcano ouverte.
             /// </summary>
             OPEN = 1,
         }
@@ -74,11 +74,11 @@ namespace DeviceLibrary
         protected enum LowerSensor
         {
             /// <summary>
-            ///
+            /// Senseurs de sortie sont libres.
             /// </summary>
             FREE = 0,
             /// <summary>
-            ///
+            /// Un senseur de sortie est occupée.
             /// </summary>
             BUSY = 1,
         }
@@ -214,7 +214,6 @@ namespace DeviceLibrary
                 }
                 if(IsPresent)
                 {
-                    //                    coinIDs = new CCoindID[numChannel];
                     errorCV = new CErroCV();
                     ResetDevice();
                     CVTask = new Thread(TaskCheckEventCV);

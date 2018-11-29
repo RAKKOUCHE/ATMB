@@ -148,7 +148,7 @@ namespace AtmbTestDevices
                 {
                     a = () =>
                     {
-                        tbInfo.AppendText($"Erreur {((CHopper.CHopperError)e.donnee).codeError} sur le {((CHopper.CHopperError)e.donnee).nameHopper}\r\n");
+                        tbInfo.AppendText($"Erreur {((CHopper.CHopperError)e.donnee).Code} sur le {((CHopper.CHopperError)e.donnee).nameHopper}\r\n");
                         if(((CHopper.CHopperError)e.donnee).isHopperCritical)
                         {
                             MessageBox.Show(((CHopper.CHopperError)e.donnee).nameHopper);
@@ -277,7 +277,7 @@ namespace AtmbTestDevices
         }
 
         /// <summary>
-        /// 
+        /// Quitte l'applciation.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -288,7 +288,7 @@ namespace AtmbTestDevices
         }
 
         /// <summary>
-        /// 
+        /// Lecture forcée des compteurs.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -318,7 +318,7 @@ namespace AtmbTestDevices
         }
 
         /// <summary>
-        /// 
+        /// Traite les flags dans les colonnes de la grille des hoppers.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -389,7 +389,7 @@ namespace AtmbTestDevices
         }
 
         /// <summary>
-        /// 
+        /// Effectue le traitement des valeurs saisie dans la grille des hoppers.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -414,7 +414,7 @@ namespace AtmbTestDevices
         }
 
         /// <summary>
-        /// 
+        /// Efface les logs.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -424,7 +424,7 @@ namespace AtmbTestDevices
         }
 
         /// <summary>
-        /// 
+        /// Remise à zéro des compteurs.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

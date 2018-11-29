@@ -1,4 +1,10 @@
-﻿namespace DeviceLibrary
+﻿/// \file CInserted.cs
+/// \brief Fichier contenant la classe CInserted
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+
+namespace DeviceLibrary
 {
     public abstract partial class CDevice
     {
