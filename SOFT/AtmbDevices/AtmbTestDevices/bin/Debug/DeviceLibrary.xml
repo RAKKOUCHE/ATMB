@@ -7,7 +7,7 @@
         <member name="T:DeviceLibrary.CCanal">
             <summary>
             Class d'un canal d'un périphérique de paiement
-            </summary>
+            </summary>    
         </member>
         <member name="F:DeviceLibrary.CCanal.CVOwner">
             <summary>
@@ -57,8 +57,11 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCanal.CCoindID.REQUESTCOINID">
-            \addtogroup Header
+            \addtogroup Headers
             @{
+            <summary>
+            Groupe des commandes ccTalk.
+            </summary>        
             <summary>
             Command ccTalk demandant l'identification de la pièce du canal.
             </summary>
@@ -154,10 +157,13 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CcashReader.Header">
-            \addtogroup Header
-            @}
+            \addtogroup Headers
+            @{
             <summary>
-            Enumeration des headers concernant les moyens de peiement
+            Groupe des commandes ccTalk.
+            </summary>        
+            <summary>
+            Enumeration des concernant concernant les moyens de paiement
             </summary>
         </member>
         <member name="F:DeviceLibrary.CcashReader.Header.REQUESTPOLLINGPRIORITY">
@@ -291,12 +297,12 @@
             Class des compteurs
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CcoinsCounters.totalAmountInCashBox">
+        <member name="F:DeviceLibrary.CcoinsCounters.totalAmountInCB">
             <summary>
             Montant total dans la caisse
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CcoinsCounters.totalAmountCashIn">
+        <member name="F:DeviceLibrary.CcoinsCounters.totalAmountCashInCV">
             <summary>
             Montant total accepté dans le monnayeur.
             </summary>
@@ -306,7 +312,12 @@
             Montant total retrourné
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CcoinsCounters.totalAmountCash">
+        <member name="F:DeviceLibrary.CcoinsCounters.totalAmountRelaod">
+            <summary>
+            Montant rechargé dans les hoppers.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CcoinsCounters.totalAmountInCabinet">
             <summary>
             Montant total contenu dans les hoppers et la caisse.
             </summary>
@@ -502,7 +513,7 @@
         </member>
         <member name="F:DeviceLibrary.CDevice.deviceLevel">
             <summary>
-            
+            Niveaux des périphériques.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CDevice.denominationInserted">
@@ -894,83 +905,91 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.Header">
-            \addtogroup Header
+            \addtogroup Headers
             @{
+            <summary>
+            Groupe des commandes ccTalk.
+            </summary>        
             <summary>
             Liste des headers spécifiques au monnayeur
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.REQUESTSTATUS">
             <summary>
-            
+            Cette commande demande le status du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.REQUESTDATABASEVER">
             <summary>
-            
+            Cette commande demande la base de donnée de calibration du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.TESTSOLENOID">
             <summary>
-            
+            Cette commande active un ou plusieurs activateurs du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.TESTOUTPUTLINES">
             <summary>
-            
+            Cette commande active les lignes de sorties du monnayyeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.READINPUTLINES">
             <summary>
-            
+            Cette commande demande l'état des lignes d'entrées du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.READOPTOSTATES">
             <summary>
-            
+            Cette commande demande l'état des optocoupleurs du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.READBUFFERCREDIT">
             <summary>
-            
+            Cette commande demande la lecture du buffer de crédit ou des codes d'erreur du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.MODIFYOVERRIDESTATUS">
             <summary>
-            
+            Cette commande enregistre l'octet d'override des tris du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.REQUESTOVERRIDESTATUS">
             <summary>
-            
+            Cette commande demande l'octet d'override des tris du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.REQUESTOPTIONFLAG">
             <summary>
-            
+            Cette commande demande l'octet des options des tris du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.MODIFYSORTERPATH">
             <summary>
-            
+            Cette commande enregistre les chemins de tris d'un canal du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.MODIFYDEFAULTSORTERPATH">
             <summary>
-            
+            Cette commande enregistre le chemin de tri par défaut du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.REQUESTDEFAULTSORTERPATH">
             <summary>
-            
+            Cette commande demande le chemin de tri par défaut du monnayeur.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Header.SETACCEPTLIMIT">
             <summary>
-            
+            Cette commande enregistre les limites d'acceptation du monnayeur par transaction.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.Etat">
+            \addtogroup Etats
+            @{
+            <summary>
+            Groupe des états des machines d'états des périphériques.
+            </summary>
             <summary>
             Etat de la machine d'état du CV.
             </summary>
@@ -986,218 +1005,200 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_SIMPLEPOLL">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour un polling de vérification.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETPOLLINGPRIORITY">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour obtenir le delai maximum entre 2 lectures du buffer des crédits et des codes erreurs.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_SETPOLLINGDELAY">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour fixer le délai de lectures entre 2 lectures du buffer des crédits et des codes erreurs.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETSTATUS">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture du status du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETMANUFACTURERID">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture de l'identification du fabricant du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETEQUIPEMENTCATEGORY">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture de la catégorie du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETPRODUCTCODE">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture du code produit du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETBUILDCODE">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture du code de production du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETDATABASEVERSION">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture de version des données du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETSERIALNUMBER">
-             <summary>
-            
-             </summary>
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture du numéro de série du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETSOFTWAREREVISION">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture de la révision software du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_TESTSOLENOID">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour le test des activateurs du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_TRASHEMPTY">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour vider le container du Pelicano.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_SETSPEEDMOTOR">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour définir la vitesse de rotation du disque du pelicano.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETSPEEDMOTOR">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture de la vitesse de rotation du disque du Pelciano.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETPOCKET">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture du temps entre 2 trous du disque du Pelciano.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_CHECKTRASHDOOR">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour lire l'état de la trappe du container du Pelicano.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_CHECKLOWERSENSOR">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour vérifier l'état des senseurs de sortie du Pelicano.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_SELF_TEST">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour effectuer un test interne du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_SETINHIBITSTATUS">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour fixer l'inhibition des canaux du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETINHIBITSTATUS">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture de l'inhibiton des canaux périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETCREDITBUFFER">
-             <summary>
-            
-             </summary>
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture du buffer de credits ou des codes d'erreur du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_SETMASTERINHIBIT">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour activer ou désactiver le périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_DISABLEMASTER">
-             <summary>
-            
-             </summary>
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour désactiver le périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_ENABLEMASTER">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour activer le périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETMASTERINHIBT">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture de l'inhibition générale du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_SETOVERRIDE">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour enregistre l'octet d'override du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETOVERRIDE">
-             <summary>
-            
-             </summary>
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture de l'octet d'override du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETOPTION">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture des options du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_SETSORTERPATH">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour l'enregistrement des chemins de tri pour un canal du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETSORTERPATH">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture  des chemins de tri pour un canal du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_SETDEFAULTSORTERPATH">
-             <summary>
-            
-             </summary>
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour l'enregistrement du chemin de tri par defaut pour le périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETDEFAULTSORTERPATH">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture du chemin de tri par defaut pour le périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETCOINID">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour la lecture de l'identification de la pièce reconnue dans un canal du périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_ACCEPTLIMIT">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour fixer les limites de pièces à accepter pour une transaction dans un périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_COMMSREVISION">
-             <summary>
-            
-             </summary>
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour lire la version ccTalk utiliser par le périphérique.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_CHECKCREDIBUFFER">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat pour analyser le buffer de crédit.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_IDLE">
-             <summary>
-            
-             </summary>
+            <summary>
+            Etat quand le périphérique est inactif.
+            </summary>
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.CVErrorCodes">
-            \addtogroup Erreur
-            @{
+            \addtogroup Erreurs
+            @{        
             <summary>
-            Enumération des codes erreur du monnayeur
+            Groupe des codes erreur renvoyés par les périphériques
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.NULL">
@@ -1656,10 +1657,13 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CccTalk.Header">
-            \addtogroup Header
+            \addtogroup Headers
             @{
             <summary>
-            Enumération des headers communs à tous les périphériques ccTalk.
+            Groupe des commandes ccTalk.
+            </summary>        
+            <summary>
+            Enumération des commandes communnes à tous les périphériques ccTalk.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CccTalk.Header.FACTORYSETUP">
@@ -1674,7 +1678,7 @@
         </member>
         <member name="F:DeviceLibrary.CccTalk.Header.ADDRESSPOLL">
             <summary>
-            Commande broadcast permettant de déterminer l'adresse utilisée par chaque périphérique
+            Commande broadcast permettant de déterminer l'adresse utilisée par chaque périphérique.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CccTalk.Header.ADDRESSCLASH">
@@ -1977,8 +1981,11 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CccTalk.SelfTestResult">
-            \addtogroup Erreur
-            @{
+            \addtogroup Erreurs
+            @{        
+            <summary>
+            Groupe des codes erreur renvoyés par les périphériques
+            </summary>
             <summary>
             Liste des fautes possibles retournées par un self test.
             </summary>
@@ -2361,44 +2368,42 @@
             Delai en secondes entre 2 vérication de niveau
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CHopper.Etat">
-            <summary>
-            Etat de la machine d'état des hoppers
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.RESET">
-            <summary>
-            Etat initial
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.DISPENSE">
-            <summary>
-            Traitement d'une demande de distribution
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.DISPENSEINPROGRESS">
-            <summary>
-            Distribution en cours
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.ENDDISPENSE">
-            <summary>
-            Traitement fin de distribution
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.IDLE">
-            <summary>
-            Inactif
-            </summary>
-        </member>
         <member name="T:DeviceLibrary.CHopper.RegistrePos">
             <summary>
-            
+            Liste des réponses contenu dans le registre
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.NULL">
+             <summary>
+             Pas d'erreur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.SINGLEPAYOUT">
+            <summary>
+            Le pièce par pièce est activé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.MOTORREVERSED">
+            \addtogroup Erreurs
+            @{        
+            <summary>
+            Groupe des codes erreur renvoyés par les périphériques
+            </summary>
+            <summary>
+            La rotation du moteur a été inversée lors de la dernière distribution pour corriger un bourrage
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.DISABLED">
+            <summary>
+            Le hopper n'est pas activé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.PINNUMBER">
+            <summary>
+            Le hopper est protéger par un code PIN
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.RegistrePos.MAXCURRENTEXCEEDED">
-            \addtogroup Erreur
-            @{
             <summary>
             La consommation de courant a dépassée celle autorisée.
             </summary>
@@ -2414,20 +2419,7 @@
             </summary>
             <remarks>Utilisé pour detecté le hopper vide lors du vidage.</remarks>
         </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.SINGLEPAYOUT">
-            @}
-            <summary>
-            Le pièce par pièce est activé.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.MOTORREVERSED">
-            <summary>
-            La rotation du moteur a été inversée lors de la dernière distribution pour corriger un bourrage
-            </summary>
-        </member>
         <member name="F:DeviceLibrary.CHopper.RegistrePos.CHECKSUMA">
-            \addtogroup Erreur
-            @{
             <summary>
             Le checksum du bloc A de la mémoire non-volatile est erroné.
             </summary>
@@ -2470,17 +2462,6 @@
         <member name="F:DeviceLibrary.CHopper.RegistrePos.POWERFAIL">
             <summary>
             L'alimentation a été coupée pendant une distribution
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.DISABLED">
-            @}
-            <summary>
-            Le hopper n'est pas activé.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.PINNUMBER">
-            <summary>
-            Le hopper est protéger par un code PIN
             </summary>
         </member>
         <member name="T:DeviceLibrary.CHopper.LevelMask">
@@ -2563,9 +2544,14 @@
             Numéro du hopper
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperError.CodeError">
+        <member name="F:DeviceLibrary.CHopper.CHopperError.codeError">
             <summary>
-            Code error
+            Code d'erreur du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperError.isHopperCritical">
+            <summary>
+            Indique si le hopper est nécessaire pour le fonctionnement du système.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CHopper.CHopperError.#ctor(System.String)">
@@ -2587,6 +2573,11 @@
         <member name="F:DeviceLibrary.CHopper.hopperCoinID">
             <summary>
             Objet contenant l'identification des pièces contenus.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.isEmptyingInProgress">
+            <summary>
+            Flag indiquant qu'un vidage est en cours.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.isEmptied">
@@ -2942,10 +2933,13 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CHopper.Header">
-            \addtogroup Header
+            \addtogroup Headers
             @{
             <summary>
-            Liste des commandes ccTalk spécifiques aux hoppers
+            Groupe des commandes ccTalk.
+            </summary>        
+            <summary>
+            Enumération des commandes spécifiques aux hoppers
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.Header.REQUESTHIGHLOWSTATUS">
@@ -3067,6 +3061,41 @@
             Cette commande demande l'état du chiffrage du hopper
             </summary>
             <remarks>Non documenté pour des raisons de sécurité.</remarks>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.Etat">
+            \addtogroup Etats
+            @{
+            <summary>
+            Groupe des états des machines d'états des périphériques.
+            </summary>
+            <summary>
+            Etat de la machine d'état des hoppers
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.RESET">
+            <summary>
+            Etat initial
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.DISPENSE">
+            <summary>
+            Traitement d'une demande de distribution
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.DISPENSEINPROGRESS">
+            <summary>
+            Distribution en cours
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.ENDDISPENSE">
+            <summary>
+            Traitement fin de distribution
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.IDLE">
+            <summary>
+            Inactif
+            </summary>
         </member>
         <member name="T:DeviceLibrary.CHopperVariableSet">
             <summary>
@@ -3357,10 +3386,13 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CPelicano.Header">
-            \addtogroup Header
+            \addtogroup Headers
             @{
             <summary>
-            Liste des commandes spécifiques au Pelicano
+            Groupe des commandes ccTalk.
+            </summary>        
+            <summary>
+            Enumération des commandes spécifiques au Pelicano
             </summary>
         </member>
         <member name="F:DeviceLibrary.CPelicano.Header.READOPTOSTATES">
@@ -3485,12 +3517,17 @@
             
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.SetToPay(System.Int32)">
+        <member name="M:DeviceLibrary.CDevicesManage.OpenTransaction(System.Int32)">
             <summary>
-            Reçoit le montant à payer.
+            Ouvre une transaction le montant à payer.
             </summary>
             <param name="value">montant en centimes à payer</param>
             <remarks>Provoque l'ouverture des moyens de paiement.</remarks>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManage.CloseTransaction">
+            <summary>
+            Cloture la transaction en cours
+            </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManage.GetSerialPort">
             <summary>

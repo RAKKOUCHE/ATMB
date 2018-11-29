@@ -49,7 +49,7 @@ var searchData=
   ['requestvariableset',['REQUESTVARIABLESET',['../group___header.html#gga22f8eb6526627d4203e53ce7dbd3052aa0b86a65dca9c484a7bde9fca38803f0b',1,'DeviceLibrary::CccTalk']]],
   ['reset',['RESET',['../class_device_library_1_1_c_hopper.html#a5f54d84c3b2a93420c8ff69b1351c77aab5859d8721cfdc0312b2838b9c985bc1',1,'DeviceLibrary::CHopper']]],
   ['resetcounters',['ResetCounters',['../class_device_library_1_1_ccc_talk.html#a9e6bea86795ec29fde4e6071256eff76',1,'DeviceLibrary::CccTalk']]],
-  ['resetdevice',['RESETDEVICE',['../group___header.html#gga22f8eb6526627d4203e53ce7dbd3052aab87acc3ce509b6e2b20a564607eb06d8',1,'DeviceLibrary.CccTalk.RESETDEVICE()'],['../class_device_library_1_1_ccc_talk.html#a9069f40563639ecc85dac7dd9c212cee',1,'DeviceLibrary.CccTalk.ResetDevice()']]],
+  ['resetdevice',['ResetDevice',['../class_device_library_1_1_ccc_talk.html#a9069f40563639ecc85dac7dd9c212cee',1,'DeviceLibrary.CccTalk.ResetDevice()'],['../group___header.html#gga22f8eb6526627d4203e53ce7dbd3052aab87acc3ce509b6e2b20a564607eb06d8',1,'DeviceLibrary.CccTalk.RESETDEVICE()']]],
   ['resourcemanager',['ResourceManager',['../class_device_library_1_1messages_text.html#a031636cf4621ff551aa62648e5c08b4b',1,'DeviceLibrary::messagesText']]],
   ['result',['Result',['../class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer.html#a78845c21ba07dfdf73e85b1992ee94c0',1,'DeviceLibrary::CCoinValidator::CCVcreditBuffer']]]
 ];

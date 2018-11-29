@@ -17,6 +17,7 @@ var searchData=
   ['chopperstatus',['CHopperStatus',['../class_device_library_1_1_c_hopper_1_1_c_hopper_status.html#a4c22d7f49dade95cb88e239e94db7200',1,'DeviceLibrary::CHopper::CHopperStatus']]],
   ['choppervariableset',['CHopperVariableSet',['../class_device_library_1_1_c_hopper_variable_set.html#ac41108d80eb84d8f3c4a17b7823eb267',1,'DeviceLibrary::CHopperVariableSet']]],
   ['clevel',['CLevel',['../class_device_library_1_1_c_device_1_1_c_level.html#af8d6eec343773bf4581ecfc85fa2ff45',1,'DeviceLibrary::CDevice::CLevel']]],
+  ['closetransaction',['CloseTransaction',['../class_device_library_1_1_c_devices_manage.html#a4bf7edbc6a2147169527ffa5b8233fc3',1,'DeviceLibrary::CDevicesManage']]],
   ['cmemorystorage',['CMemoryStorage',['../class_device_library_1_1_c_memory_storage.html#a1f469e7acead36a0223f798f5a2d9de9',1,'DeviceLibrary::CMemoryStorage']]],
   ['cpelicano',['CPelicano',['../class_device_library_1_1_c_pelicano.html#aef2cd2553815e501b455b7304e3b80fe',1,'DeviceLibrary::CPelicano']]],
   ['csorter',['CSorter',['../class_device_library_1_1_c_canal_1_1_c_sorter.html#a45e0fa5899f6d78de268976c1a9f1887',1,'DeviceLibrary::CCanal::CSorter']]]

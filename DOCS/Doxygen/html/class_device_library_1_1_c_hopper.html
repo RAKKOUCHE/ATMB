@@ -125,28 +125,29 @@ Public Types</h2></td></tr>
 <tr class="memdesc:a5f54d84c3b2a93420c8ff69b1351c77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Etat de la machine d'état des hoppers  <a href="class_device_library_1_1_c_hopper.html#a5f54d84c3b2a93420c8ff69b1351c77a">More...</a><br /></td></tr>
 <tr class="separator:a5f54d84c3b2a93420c8ff69b1351c77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afce8f2089a688f1d3fdf9db91242fb01"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01">RegistrePos</a> : byte { <br />
-&#160;&#160;<b>Erreur</b>, 
+&#160;&#160;<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a6c3e226b4d4795d518ab341b0824ec29">RegistrePos.NULL</a> = 0, 
+<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a2c6dbfb7f793fa40620ac62174479d61">RegistrePos.SINGLEPAYOUT</a> = 0X02, 
+<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a6f836722e3e4f3c3a219159530d2e965">RegistrePos.MOTORREVERSED</a> = 0X04, 
+<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a055c1a591abb0e8cd86dc969727bcc0b">RegistrePos.DISABLED</a> = 0X80, 
+<br />
+&#160;&#160;<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a9cb9d4ef7914bee6cdedcf7524b6d5ef">RegistrePos.PINNUMBER</a> = 0X80, 
+<b>Erreur</b>, 
 <a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a352f5cd9841dc6e7e999caee1c876c11">RegistrePos.MAXCURRENTEXCEEDED</a> = 0X01, 
 <a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01ad8dffe032a7fbd1f7291f20a1d24fff9">RegistrePos.OPTOSHORTCIRCUIT</a> = 0X01, 
-<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a89249c979952ff149dff1f387f78fe0c">RegistrePos.TOOCCURED</a> = 0X02, 
 <br />
-&#160;&#160;<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a2c6dbfb7f793fa40620ac62174479d61">RegistrePos.SINGLEPAYOUT</a> = 0X02, 
-<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a6f836722e3e4f3c3a219159530d2e965">RegistrePos.MOTORREVERSED</a> = 0X04, 
-<b>Erreur</b>, 
+&#160;&#160;<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a89249c979952ff149dff1f387f78fe0c">RegistrePos.TOOCCURED</a> = 0X02, 
 <a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01ae24020ff08165f92b4d9649daecd0842">RegistrePos.CHECKSUMA</a> = 0X04, 
-<br />
-&#160;&#160;<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a84c9b37d0d3499483dae26abd03c62d3">RegistrePos.OPTOPATHBLOCKED</a> = 0X08, 
+<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a84c9b37d0d3499483dae26abd03c62d3">RegistrePos.OPTOPATHBLOCKED</a> = 0X08, 
 <a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a61592fb0b332b2fcc7d57d8efade7246">RegistrePos.CHECKSUMB</a> = 0X08, 
-<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01aced9f2887aace32933e6db874aa8d6e5">RegistrePos.OPTOSHORTCIRCUITIDLE</a> = 0X10, 
+<br />
+&#160;&#160;<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01aced9f2887aace32933e6db874aa8d6e5">RegistrePos.OPTOSHORTCIRCUITIDLE</a> = 0X10, 
 <a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a18179929e477a9f8fd21d888e8f7a326">RegistrePos.CHECKSUMC</a> = 0X10, 
-<br />
-&#160;&#160;<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a3597b58c77eec0e7e44fa0f3be8c8e65">RegistrePos.OPTOBLOCKEDPERMANENTLY</a> = 0X20, 
+<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a3597b58c77eec0e7e44fa0f3be8c8e65">RegistrePos.OPTOBLOCKEDPERMANENTLY</a> = 0X20, 
 <a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a51a993adb4ff5f07953ff92ac1fa14a9">RegistrePos.CHECKSUMD</a> = 0X20, 
-<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01ab3e172b7afeb285bddcec5aee2be298e">RegistrePos.POWERUP</a> = 0X40, 
-<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01ab77007e73cc2dd997f4ab2846a075e01">RegistrePos.POWERFAIL</a> = 0X40, 
 <br />
-&#160;&#160;<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a055c1a591abb0e8cd86dc969727bcc0b">RegistrePos.DISABLED</a> = 0X80, 
-<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a9cb9d4ef7914bee6cdedcf7524b6d5ef">RegistrePos.PINNUMBER</a> = 0X80
+&#160;&#160;<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01ab3e172b7afeb285bddcec5aee2be298e">RegistrePos.POWERUP</a> = 0X40, 
+<a class="el" href="class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01ab77007e73cc2dd997f4ab2846a075e01">RegistrePos.POWERFAIL</a> = 0X40, 
+<b></b>
 <br />
  }</td></tr>
 <tr class="separator:afce8f2089a688f1d3fdf9db91242fb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -363,6 +364,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2489ae3898da396040859ec4c86bd3e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a2489ae3898da396040859ec4c86bd3e0">isHopperError</a></td></tr>
 <tr class="memdesc:a2489ae3898da396040859ec4c86bd3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique la présence d'une erreur sur le hopper  <a href="#a2489ae3898da396040859ec4c86bd3e0">More...</a><br /></td></tr>
 <tr class="separator:a2489ae3898da396040859ec4c86bd3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78b1d599715ada39ff0a032db1703a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#aa78b1d599715ada39ff0a032db1703a0">isEmptyingInProgress</a></td></tr>
+<tr class="memdesc:aa78b1d599715ada39ff0a032db1703a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indiquant qu'un vidage est en cours.  <a href="#aa78b1d599715ada39ff0a032db1703a0">More...</a><br /></td></tr>
+<tr class="separator:aa78b1d599715ada39ff0a032db1703a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13463c888437b418637de1d7e2cd4231"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a13463c888437b418637de1d7e2cd4231">isEmptied</a></td></tr>
 <tr class="memdesc:a13463c888437b418637de1d7e2cd4231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le hopper a été vidé  <a href="#a13463c888437b418637de1d7e2cd4231">More...</a><br /></td></tr>
 <tr class="separator:a13463c888437b418637de1d7e2cd4231"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -393,6 +397,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ad5c6d1287d0c049bdbf4fda8cb19c1ef inherit pub_attribs_class_device_library_1_1_ccc_talk"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_device_library_1_1_c_device"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_device_library_1_1_c_device')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_device_library_1_1_c_device.html">DeviceLibrary.CDevice</a></td></tr>
 <tr class="memitem:ae70218e48d761e45c66226ab7ea40e48 inherit pub_attribs_class_device_library_1_1_c_device"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_device_library_1_1_c_device_1_1_c_level.html">CLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_device.html#ae70218e48d761e45c66226ab7ea40e48">deviceLevel</a></td></tr>
+<tr class="memdesc:ae70218e48d761e45c66226ab7ea40e48 inherit pub_attribs_class_device_library_1_1_c_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Niveaux des périphériques.  <a href="class_device_library_1_1_c_device.html#ae70218e48d761e45c66226ab7ea40e48">More...</a><br /></td></tr>
 <tr class="separator:ae70218e48d761e45c66226ab7ea40e48 inherit pub_attribs_class_device_library_1_1_c_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -421,52 +426,52 @@ Properties</h2></td></tr>
 <tr class="memitem:aa9f1e8689d187df5894527e7c02dc875"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_device_library_1_1_c_hopper.html#a5f54d84c3b2a93420c8ff69b1351c77a">Etat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#aa9f1e8689d187df5894527e7c02dc875">State</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:aa9f1e8689d187df5894527e7c02dc875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Etat de la machine d'état des hoppers  <a href="#aa9f1e8689d187df5894527e7c02dc875">More...</a><br /></td></tr>
 <tr class="separator:aa9f1e8689d187df5894527e7c02dc875"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a045b85a17c558f578649aca5d387561b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a045b85a17c558f578649aca5d387561b">IsMaxCurrentExceeded</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a045b85a17c558f578649aca5d387561b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a045b85a17c558f578649aca5d387561b">IsMaxCurrentExceeded</a><code> [get]</code></td></tr>
 <tr class="memdesc:a045b85a17c558f578649aca5d387561b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant qu'un dépassement du courant maximun a été atteint.  <a href="#a045b85a17c558f578649aca5d387561b">More...</a><br /></td></tr>
 <tr class="separator:a045b85a17c558f578649aca5d387561b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf2e0f18bd630e28e89aea2f45ef6a19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#adf2e0f18bd630e28e89aea2f45ef6a19">IsTOOccured</a><code> [get, set]</code></td></tr>
+<tr class="memitem:adf2e0f18bd630e28e89aea2f45ef6a19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#adf2e0f18bd630e28e89aea2f45ef6a19">IsTOOccured</a><code> [get]</code></td></tr>
 <tr class="memdesc:adf2e0f18bd630e28e89aea2f45ef6a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant qu'un dépassement du temps alloué pour l'éjection d'une pièce est survenu.  <a href="#adf2e0f18bd630e28e89aea2f45ef6a19">More...</a><br /></td></tr>
 <tr class="separator:adf2e0f18bd630e28e89aea2f45ef6a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e9bbbee8c2ec524e36442a66482d41f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a9e9bbbee8c2ec524e36442a66482d41f">IsMotorReversed</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a9e9bbbee8c2ec524e36442a66482d41f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a9e9bbbee8c2ec524e36442a66482d41f">IsMotorReversed</a><code> [get]</code></td></tr>
 <tr class="memdesc:a9e9bbbee8c2ec524e36442a66482d41f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant que suite à une surconsomation la rotation du moteur a été inversée pour corriger un bourrage.  <a href="#a9e9bbbee8c2ec524e36442a66482d41f">More...</a><br /></td></tr>
 <tr class="separator:a9e9bbbee8c2ec524e36442a66482d41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba941b8ab4317792660483f287171363"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#aba941b8ab4317792660483f287171363">IsOptoPathBlocked</a><code> [get, set]</code></td></tr>
+<tr class="memitem:aba941b8ab4317792660483f287171363"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#aba941b8ab4317792660483f287171363">IsOptoPathBlocked</a><code> [get]</code></td></tr>
 <tr class="memdesc:aba941b8ab4317792660483f287171363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant que la sortie est bloquée.  <a href="#aba941b8ab4317792660483f287171363">More...</a><br /></td></tr>
 <tr class="separator:aba941b8ab4317792660483f287171363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa52f0af92ae272576ec14a79c6356e96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#aa52f0af92ae272576ec14a79c6356e96">IsShortCircuit</a><code> [get, set]</code></td></tr>
+<tr class="memitem:aa52f0af92ae272576ec14a79c6356e96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#aa52f0af92ae272576ec14a79c6356e96">IsShortCircuit</a><code> [get]</code></td></tr>
 <tr class="memdesc:aa52f0af92ae272576ec14a79c6356e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant que la sortie est en court-circuit.  <a href="#aa52f0af92ae272576ec14a79c6356e96">More...</a><br /></td></tr>
 <tr class="separator:aa52f0af92ae272576ec14a79c6356e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7168dd39fa5f937164d357c3236321d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#ad7168dd39fa5f937164d357c3236321d">IsOptoPermanentlyBlocked</a><code> [get, set]</code></td></tr>
+<tr class="memitem:ad7168dd39fa5f937164d357c3236321d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#ad7168dd39fa5f937164d357c3236321d">IsOptoPermanentlyBlocked</a><code> [get]</code></td></tr>
 <tr class="memdesc:ad7168dd39fa5f937164d357c3236321d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant qu'un optocloupleur est bloqué en permanence.  <a href="#ad7168dd39fa5f937164d357c3236321d">More...</a><br /></td></tr>
 <tr class="separator:ad7168dd39fa5f937164d357c3236321d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a9d29bab15e199a614d991b6b860c5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a5a9d29bab15e199a614d991b6b860c5a">IsPowerUpDetected</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a5a9d29bab15e199a614d991b6b860c5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a5a9d29bab15e199a614d991b6b860c5a">IsPowerUpDetected</a><code> [get]</code></td></tr>
 <tr class="memdesc:a5a9d29bab15e199a614d991b6b860c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant que le hopper est alimenté et un reset n'est pas encore effectué  <a href="#a5a9d29bab15e199a614d991b6b860c5a">More...</a><br /></td></tr>
 <tr class="separator:a5a9d29bab15e199a614d991b6b860c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f728eaab6f916a56b0927cfef1c836f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a5f728eaab6f916a56b0927cfef1c836f">IsPayoutDisabled</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a5f728eaab6f916a56b0927cfef1c836f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a5f728eaab6f916a56b0927cfef1c836f">IsPayoutDisabled</a><code> [get]</code></td></tr>
 <tr class="memdesc:a5f728eaab6f916a56b0927cfef1c836f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant que le hopper n'est pas activé  <a href="#a5f728eaab6f916a56b0927cfef1c836f">More...</a><br /></td></tr>
 <tr class="separator:a5f728eaab6f916a56b0927cfef1c836f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afca797bea58cb663b8b3784df7c9dc65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#afca797bea58cb663b8b3784df7c9dc65">IsOptoShorCircuit</a><code> [get, set]</code></td></tr>
+<tr class="memitem:afca797bea58cb663b8b3784df7c9dc65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#afca797bea58cb663b8b3784df7c9dc65">IsOptoShorCircuit</a><code> [get]</code></td></tr>
 <tr class="memdesc:afca797bea58cb663b8b3784df7c9dc65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant qu'un optocoupleur est en court-circuit  <a href="#afca797bea58cb663b8b3784df7c9dc65">More...</a><br /></td></tr>
 <tr class="separator:afca797bea58cb663b8b3784df7c9dc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8bdea555bab297e4533885935005ad9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#ac8bdea555bab297e4533885935005ad9">IsSingleCoinMode</a><code> [get, set]</code></td></tr>
+<tr class="memitem:ac8bdea555bab297e4533885935005ad9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#ac8bdea555bab297e4533885935005ad9">IsSingleCoinMode</a><code> [get]</code></td></tr>
 <tr class="memdesc:ac8bdea555bab297e4533885935005ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant que le hopper est en mode pièce par pièce.  <a href="#ac8bdea555bab297e4533885935005ad9">More...</a><br /></td></tr>
 <tr class="separator:ac8bdea555bab297e4533885935005ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6b53cde806c99f06e7ab4e51044c68c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#ab6b53cde806c99f06e7ab4e51044c68c">IsCheckSumAError</a><code> [get, set]</code></td></tr>
+<tr class="memitem:ab6b53cde806c99f06e7ab4e51044c68c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#ab6b53cde806c99f06e7ab4e51044c68c">IsCheckSumAError</a><code> [get]</code></td></tr>
 <tr class="memdesc:ab6b53cde806c99f06e7ab4e51044c68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant qu'une erreur de checksum dans le bloc de données A est survenue.  <a href="#ab6b53cde806c99f06e7ab4e51044c68c">More...</a><br /></td></tr>
 <tr class="separator:ab6b53cde806c99f06e7ab4e51044c68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97fc7f01be900cd25941c1cc0d1ff053"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a97fc7f01be900cd25941c1cc0d1ff053">IsCheckSumBError</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a97fc7f01be900cd25941c1cc0d1ff053"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a97fc7f01be900cd25941c1cc0d1ff053">IsCheckSumBError</a><code> [get]</code></td></tr>
 <tr class="memdesc:a97fc7f01be900cd25941c1cc0d1ff053"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant qu'une erreur de checksum dans le bloc de données B est survenue.  <a href="#a97fc7f01be900cd25941c1cc0d1ff053">More...</a><br /></td></tr>
 <tr class="separator:a97fc7f01be900cd25941c1cc0d1ff053"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcd01eec19d5cefaaf8f7a8a748777c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#abcd01eec19d5cefaaf8f7a8a748777c1">IsCheckSumCError</a><code> [get, set]</code></td></tr>
+<tr class="memitem:abcd01eec19d5cefaaf8f7a8a748777c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#abcd01eec19d5cefaaf8f7a8a748777c1">IsCheckSumCError</a><code> [get]</code></td></tr>
 <tr class="memdesc:abcd01eec19d5cefaaf8f7a8a748777c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant qu'une erreur de checksum dans le bloc de données B est survenue.  <a href="#abcd01eec19d5cefaaf8f7a8a748777c1">More...</a><br /></td></tr>
 <tr class="separator:abcd01eec19d5cefaaf8f7a8a748777c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af21105cacff9feef51796a71f1066d6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#af21105cacff9feef51796a71f1066d6c">IsCheckSumDError</a><code> [get, set]</code></td></tr>
+<tr class="memitem:af21105cacff9feef51796a71f1066d6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#af21105cacff9feef51796a71f1066d6c">IsCheckSumDError</a><code> [get]</code></td></tr>
 <tr class="memdesc:af21105cacff9feef51796a71f1066d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant qu'une erreur de checksum dans le bloc de données D est survenue.  <a href="#af21105cacff9feef51796a71f1066d6c">More...</a><br /></td></tr>
 <tr class="separator:af21105cacff9feef51796a71f1066d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6ddbdf218466891ec4df5b618f22b57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#ab6ddbdf218466891ec4df5b618f22b57">IsPowerFailMemoryWrite</a><code> [get, set]</code></td></tr>
+<tr class="memitem:ab6ddbdf218466891ec4df5b618f22b57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#ab6ddbdf218466891ec4df5b618f22b57">IsPowerFailMemoryWrite</a><code> [get]</code></td></tr>
 <tr class="memdesc:ab6ddbdf218466891ec4df5b618f22b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant qu'une chute de tension a eu lieu pendant une écriture mémoire.  <a href="#ab6ddbdf218466891ec4df5b618f22b57">More...</a><br /></td></tr>
 <tr class="separator:ab6ddbdf218466891ec4df5b618f22b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cba5628502ed179dc886abe0e553879"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a6cba5628502ed179dc886abe0e553879">IsPINEnabled</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a6cba5628502ed179dc886abe0e553879"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a6cba5628502ed179dc886abe0e553879">IsPINEnabled</a><code> [get]</code></td></tr>
 <tr class="memdesc:a6cba5628502ed179dc886abe0e553879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bolean indiquant qu'un code pin est utilisé par le hopper  <a href="#a6cba5628502ed179dc886abe0e553879">More...</a><br /></td></tr>
 <tr class="separator:a6cba5628502ed179dc886abe0e553879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11dafc48a8a680909486f10a61b80de1"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_library_1_1_c_hopper.html#a11dafc48a8a680909486f10a61b80de1">CoinsToDistribute</a><code> [get, set]</code></td></tr>
@@ -647,16 +652,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p></p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a352f5cd9841dc6e7e999caee1c876c11"></a>MAXCURRENTEXCEEDED&#160;</td><td class="fielddoc"><p>La consommation de courant a dépassée celle autorisée. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a6c3e226b4d4795d518ab341b0824ec29"></a>NULL&#160;</td><td class="fielddoc"><p>summary&gt; Pas d'erreur. /summary&gt; </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a2c6dbfb7f793fa40620ac62174479d61"></a>SINGLEPAYOUT&#160;</td><td class="fielddoc"><p>Le pièce par pièce est activé. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a6f836722e3e4f3c3a219159530d2e965"></a>MOTORREVERSED&#160;</td><td class="fielddoc"><p>La rotation du moteur a été inversée lors de la dernière distribution pour corriger un bourrage </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a055c1a591abb0e8cd86dc969727bcc0b"></a>DISABLED&#160;</td><td class="fielddoc"><p>Le hopper n'est pas activé. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a9cb9d4ef7914bee6cdedcf7524b6d5ef"></a>PINNUMBER&#160;</td><td class="fielddoc"><p>Le hopper est protéger par un code PIN </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a352f5cd9841dc6e7e999caee1c876c11"></a>MAXCURRENTEXCEEDED&#160;</td><td class="fielddoc"><p>La consommation de courant a dépassée celle autorisée. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01ad8dffe032a7fbd1f7291f20a1d24fff9"></a>OPTOSHORTCIRCUIT&#160;</td><td class="fielddoc"><p>Un opto est est activé en permanence </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a89249c979952ff149dff1f387f78fe0c"></a>TOOCCURED&#160;</td><td class="fielddoc"><p>Le temps alloué pour l'éjection d'une pièce a été depassé. </p>
 <p>Utilisé pour detecté le hopper vide lors du vidage.</p>
-</td></tr>
-<tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a2c6dbfb7f793fa40620ac62174479d61"></a>SINGLEPAYOUT&#160;</td><td class="fielddoc"><p>Le pièce par pièce est activé. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a6f836722e3e4f3c3a219159530d2e965"></a>MOTORREVERSED&#160;</td><td class="fielddoc"><p>La rotation du moteur a été inversée lors de la dernière distribution pour corriger un bourrage </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01ae24020ff08165f92b4d9649daecd0842"></a>CHECKSUMA&#160;</td><td class="fielddoc"><p>Le checksum du bloc A de la mémoire non-volatile est erroné. </p>
 </td></tr>
@@ -675,10 +686,6 @@ Additional Inherited Members</h2></td></tr>
 <tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01ab3e172b7afeb285bddcec5aee2be298e"></a>POWERUP&#160;</td><td class="fielddoc"><p>Le hopper a été alimenté et le reset n'a pas encore été effectué. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01ab77007e73cc2dd997f4ab2846a075e01"></a>POWERFAIL&#160;</td><td class="fielddoc"><p>L'alimentation a été coupée pendant une distribution </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a055c1a591abb0e8cd86dc969727bcc0b"></a>DISABLED&#160;</td><td class="fielddoc"><p>Le hopper n'est pas activé. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afce8f2089a688f1d3fdf9db91242fb01a9cb9d4ef7914bee6cdedcf7524b6d5ef"></a>PINNUMBER&#160;</td><td class="fielddoc"><p>Le hopper est protéger par un code PIN </p>
 </td></tr>
 </table>
 
@@ -1175,6 +1182,22 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="aa78b1d599715ada39ff0a032db1703a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78b1d599715ada39ff0a032db1703a0">&#9670;&nbsp;</a></span>isEmptyingInProgress</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DeviceLibrary.CHopper.isEmptyingInProgress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag indiquant qu'un vidage est en cours. </p>
+
+</div>
+</div>
 <a id="a2489ae3898da396040859ec4c86bd3e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2489ae3898da396040859ec4c86bd3e0">&#9670;&nbsp;</a></span>isHopperError</h2>
 
@@ -1536,7 +1559,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1560,7 +1583,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1584,7 +1607,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1608,7 +1631,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1777,7 +1800,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1801,7 +1824,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1825,7 +1848,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1849,7 +1872,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1873,7 +1896,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1897,7 +1920,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1921,7 +1944,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1945,7 +1968,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1969,7 +1992,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1993,7 +2016,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2017,7 +2040,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2041,7 +2064,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

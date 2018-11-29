@@ -116,26 +116,26 @@ namespace DeviceLibrary
                 try
                 {
                     XmlNodeList canauxList = parametersFile.GetElementsByTagName("Canal");
-                    foreach (XmlNode channel in canauxList)
+                    foreach(XmlNode channel in canauxList)
                     {
                         byte.TryParse(channel.ChildNodes[0].InnerText, out byte numChannel);
-                        if (numChannel < 9)
+                        if(numChannel < 9)
                         {
-                            if (channel.ChildNodes[1].InnerText == "true")
+                            if(channel.ChildNodes[1].InnerText == "true")
                             {
                                 result[0] += (byte)(1 << (numChannel - 1));
                             }
                         }
                         else
                         {
-                            if (channel.ChildNodes[1].InnerText == "true")
+                            if(channel.ChildNodes[1].InnerText == "true")
                             {
                                 result[1] += (byte)(1 << (numChannel - 9));
                             }
                         }
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
                 }
@@ -150,7 +150,7 @@ namespace DeviceLibrary
             try
             {
                 XmlNodeList canauxList = parametersFile.GetElementsByTagName("Canal");
-                foreach (XmlNode channel in canauxList)
+                foreach(XmlNode channel in canauxList)
                 {
                     byte.TryParse(channel.ChildNodes[0].InnerText, out byte numChannel);
                     byte.TryParse(channel.ChildNodes[2].InnerText, out byte pathSorter);
@@ -159,7 +159,7 @@ namespace DeviceLibrary
                     monnayeur.canaux[numChannel - 1].HopperToLoad = hopperToLoad;
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -170,36 +170,42 @@ namespace DeviceLibrary
             try
             {
                 int rest = CDevice.denominationInserted.TotalAmount - toPay;
-                if (rest > 0)
+                if(rest > 0)
                 {
-                    foreach (CHopper hopper in Hoppers)
+                    foreach(CHopper hopper in Hoppers)
                     {
-                        if (hopper.IsPresent && (hopper.CoinValue > 0) && (hopper.CoinValue <= rest))
+                        if(hopper.IsPresent &&
+                            (hopper.deviceLevel.softLevel != CDevice.CLevel.SoftLevel.VIDE) &&
+                            (hopper.deviceLevel.hardLevel != CDevice.CLevel.HardLevel.VIDE) &&
+                            (hopper.CoinValue > 0) &&
+                            (hopper.CoinValue <= rest))
                         {
                             hopper.CoinsToDistribute = (byte)(rest / hopper.CoinValue);
-                            if ((rest -= (int)(hopper.CoinsToDistribute * hopper.CoinValue)) == 0)
+                            if((rest -= (int)(hopper.CoinsToDistribute * hopper.CoinValue)) == 0)
                             {
                                 break;
                             }
                         }
                     }
-                    foreach (CHopper hopper in Hoppers)
+                    foreach(CHopper hopper in Hoppers)
                     {
-                        if (hopper.IsPresent && (hopper.CoinsToDistribute > 0))
+                        if(hopper.IsPresent && (hopper.CoinsToDistribute > 0))
                         {
                             hopper.State = CHopper.Etat.DISPENSE;
                         }
                     }
-                    foreach (CHopper hopper in Hoppers)
+                    foreach(CHopper hopper in Hoppers)
                     {
-                        if (hopper.IsPresent)
+                        if(hopper.IsPresent)
                         {
-                            while (hopper.State != CHopper.Etat.IDLE) ;
+                            while(hopper.State != CHopper.Etat.IDLE)
+                                ;
+                            hopper.SubCounters(hopper.dispenseStatus.CoinsPaid);
                         }
                     }
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -207,54 +213,59 @@ namespace DeviceLibrary
 
         private void TaskMessage()
         {
-            while (true)
+            while(true)
             {
-                if (isDllReady)
+                if(isDllReady)
                 {
                     isDllReady = false;
                     OnDllReady();
                 }
-                foreach (CHopper hopper in Hoppers)
+                foreach(CHopper hopper in Hoppers)
                 {
-                    if (hopper.IsPresent)
+                    if(hopper.IsPresent)
                     {
-                        if (hopper.IsDispensed)
+                        if(hopper.IsDispensed)
                         {
                             hopper.IsDispensed = false;
-                            OnHopperDispensed(hopper);
+                            if(!hopper.isEmptyingInProgress)
+                            {
+                                OnHopperDispensed(hopper);
+                            }
                         }
-                        if (hopper.deviceLevel.isSoftLevelChanged)
+                        if(hopper.deviceLevel.isSoftLevelChanged)
                         {
                             hopper.deviceLevel.isSoftLevelChanged = false;
                             OnHopperSoftLevelChanged(hopper);
                         }
-                        if ((hopper.deviceLevel.isHardLevelChanged))
+                        if((hopper.deviceLevel.isHardLevelChanged))
                         {
                             hopper.deviceLevel.isHardLevelChanged = false;
                             OnHopperHardLevelChanged(hopper);
                         }
-                        if (hopper.isEmptied)
+                        if(hopper.isEmptied)
                         {
                             hopper.isEmptied = false;
                             OnHopperEmptied(hopper);
                         }
                         if(hopper.isHopperError)
                         {
+                            hopper.isHopperError = false;
                             hopper.ResetDevice();
                             hopper.Init();
+                            hopper.errorHopper.isHopperCritical = hopper.IsCritical;
                             OnHopperError(hopper);
                         }
                     }
                 }
-                if (monnayeur.errorCV.errorText != CCoinValidator.CVErrorCodes.NULL)
+                if(monnayeur.errorCV.errorText != CCoinValidator.CVErrorCodes.NULL)
                 {
                     OnCVError();
                     monnayeur.errorCV.errorText = CCoinValidator.CVErrorCodes.NULL;
                 }
-                if (CDevice.denominationInserted.BackTotalAmount != CDevice.denominationInserted.TotalAmount)
+                if(CDevice.denominationInserted.BackTotalAmount != CDevice.denominationInserted.TotalAmount)
                 {
                     OnMoneyReceived();
-                    if ((toPay - CDevice.denominationInserted.TotalAmount) < 1)
+                    if((toPay - CDevice.denominationInserted.TotalAmount) < 1)
                     {
                         monnayeur.IsCVToBeDeactivated = true;
                         OnCashClose();
@@ -263,7 +274,6 @@ namespace DeviceLibrary
                     }
                     CDevice.denominationInserted.BackTotalAmount = CDevice.denominationInserted.TotalAmount;
                 }
-
                 Thread.Sleep(100);
             }
         }
@@ -274,11 +284,11 @@ namespace DeviceLibrary
             {
                 XmlNodeList parametersHopperList = parametersFile.GetElementsByTagName("Hopper");
                 byte byIndex = 0;
-                foreach (XmlNode n in parametersHopperList)
+                foreach(XmlNode n in parametersHopperList)
                 {
-                    foreach (XmlElement e in n)
+                    foreach(XmlElement e in n)
                     {
-                        switch (e.Name)
+                        switch(e.Name)
                         {
                             case "ID":
                             {
@@ -303,9 +313,9 @@ namespace DeviceLibrary
                             }
                             case "Niveaux":
                             {
-                                foreach (XmlElement e2 in e.ChildNodes)
+                                foreach(XmlElement e2 in e.ChildNodes)
                                 {
-                                    switch (e2.Name)
+                                    switch(e2.Name)
                                     {
                                         case "Plein":
                                         {
@@ -344,7 +354,7 @@ namespace DeviceLibrary
                 }
 
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -361,10 +371,11 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
+            hopper.isEmptyingInProgress = false;
         }
 
         private void OnHopperHardLevelChanged(CHopper hopper)
@@ -378,7 +389,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -391,11 +402,11 @@ namespace DeviceLibrary
                 CalertEventArgs alertEventArgs = new CalertEventArgs
                 {
                     reason = Reason.HOPPERSWLEVELCHANGED,
-                    donnee = hopper.deviceLevel
+                    donnee = hopper.deviceLevel ,
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -432,7 +443,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -452,7 +463,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -469,7 +480,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -487,7 +498,7 @@ namespace DeviceLibrary
                 Console.Beep();
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -504,7 +515,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -521,30 +532,40 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
         }
 
         /// <summary>
-        /// Reçoit le montant à payer.
+        /// Ouvre une transaction le montant à payer.
         /// </summary>
         /// <param name="value">montant en centimes à payer</param>
         /// <remarks>Provoque l'ouverture des moyens de paiement.</remarks>
-        public void SetToPay(int value)
+        public void OpenTransaction(int value)
         {
             try
             {
-                if (monnayeur.IsCVToBeActivated = (toPay = value) > CDevice.denominationInserted.TotalAmount)
+                if(monnayeur.IsCVToBeActivated = (toPay = value) > CDevice.denominationInserted.TotalAmount)
                 {
                     OnCashOpen();
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
+        }
+
+        /// <summary>
+        /// Cloture la transaction en cours
+        /// </summary>
+        public void CloseTransaction()
+        {
+            monnayeur.IsCVToBeDeactivated = true;
+            CDevice.denominationInserted.TotalAmount = toPay = 0;
+            OnCashClose();
         }
 
         /// <summary>
@@ -568,7 +589,7 @@ namespace DeviceLibrary
                 parametersFile.Load(ParamFileName);
                 CccTalk.counters = new CcoinsCounters();
                 CccTalk.counterSerializer = new BinaryFormatter();
-                if (!File.Exists(CccTalk.fileCounterName))
+                if(!File.Exists(CccTalk.fileCounterName))
                 {
                     CccTalk.countersFile = File.Create(CccTalk.fileCounterName);
                     CccTalk.counterSerializer.Serialize(CccTalk.countersFile, CccTalk.counters);
@@ -578,13 +599,13 @@ namespace DeviceLibrary
                 CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
                 CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
                 monnayeur = new CCoinValidator();
-                if (!monnayeur.IsPresent)
+                if(!monnayeur.IsPresent)
                 {
                     throw new Exception("Pas de monnayeur detecté.");
                 }
                 else
                 {
-                    if (monnayeur.ProductCode == "BV")
+                    if(monnayeur.ProductCode == "BV")
                     {
                         monnayeur = new CPelicano();
                         ((CPelicano)monnayeur).SpeedMotor = Convert.ToByte(parametersFile.SelectSingleNode("/CashParameters/CoinValidator/SpeedMTR").InnerText);
@@ -593,12 +614,12 @@ namespace DeviceLibrary
                     SetSortersAndHoppersToLoad();
                 }
                 Hoppers = new List<CHopper>();
-                for (byte i = 1; i < 9; i++)
+                for(byte i = 1; i < 9; i++)
                 {
                     Hoppers.Add(new CHopper(i));
                 }
                 ReadParamHopper();
-                foreach (CHopper hopper in Hoppers)
+                foreach(CHopper hopper in Hoppers)
                 {
                     hopper.Init();
                 }
@@ -608,7 +629,7 @@ namespace DeviceLibrary
                 MsgTask.Start();
                 isDllReady = true;
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -627,7 +648,7 @@ namespace DeviceLibrary
             {
                 CccTalk.countersFile.Close();
             }
-            catch (Exception)
+            catch(Exception)
             {
 
             }
@@ -635,10 +656,10 @@ namespace DeviceLibrary
             {
                 monnayeur.CVTask.Abort();
             }
-            catch (Exception)
+            catch(Exception)
             {
             }
-            foreach (CHopper h in Hoppers)
+            foreach(CHopper h in Hoppers)
             {
                 try
                 {

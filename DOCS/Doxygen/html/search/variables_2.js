@@ -2,7 +2,7 @@ var searchData=
 [
   ['canaux',['canaux',['../class_device_library_1_1_c_coin_validator.html#afdeb88b9e7e981afd51bd1322e9f89e9',1,'DeviceLibrary::CCoinValidator']]],
   ['code',['code',['../class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v.html#a645b37f5a1414ee05ef237a4afbd8e43',1,'DeviceLibrary::CCoinValidator::CErroCV']]],
-  ['codeerror',['CodeError',['../class_device_library_1_1_c_hopper_1_1_c_hopper_error.html#aed857b78c9f0e03b364b35a9cebe58d1',1,'DeviceLibrary::CHopper::CHopperError']]],
+  ['codeerror',['codeError',['../class_device_library_1_1_c_hopper_1_1_c_hopper_error.html#a90797e7b2066041378d0febf2e3337d5',1,'DeviceLibrary::CHopper::CHopperError']]],
   ['coinid',['coinId',['../class_device_library_1_1_c_canal.html#a5b9fc2885e84a372334c45007f8b5cf8',1,'DeviceLibrary::CCanal']]],
   ['coinsinaccepted',['coinsInAccepted',['../class_device_library_1_1_ccoins_counters.html#ae75de715aba60bff644ebd5193c30452',1,'DeviceLibrary::CcoinsCounters']]],
   ['coinsinhopper',['coinsInHopper',['../class_device_library_1_1_ccoins_counters.html#a7e5058caf13293a4622949c84f6e46de',1,'DeviceLibrary::CcoinsCounters']]],

@@ -7,6 +7,7 @@ var searchData=
   ['cashclosed',['CASHCLOSED',['../namespace_device_library.html#aecf5c8419c6482aed0b21decb1663754a1e6108a5eb452674d7f51aedbd45a29f',1,'DeviceLibrary']]],
   ['cashopened',['CASHOPENED',['../namespace_device_library.html#aecf5c8419c6482aed0b21decb1663754adfa418a7f626fcbd28a514d80ca04317',1,'DeviceLibrary']]],
   ['ccanal',['CCanal',['../class_device_library_1_1_c_canal.html',1,'DeviceLibrary.CCanal'],['../class_device_library_1_1_c_canal.html#a31af2f08cfb27d40798116fdc0cfb372',1,'DeviceLibrary.CCanal.CCanal()']]],
+  ['ccanal_2ecs',['CCanal.cs',['../_c_canal_8cs.html',1,'']]],
   ['ccashreader',['CcashReader',['../class_device_library_1_1_ccash_reader.html',1,'DeviceLibrary']]],
   ['ccctalk',['CccTalk',['../class_device_library_1_1_ccc_talk.html',1,'DeviceLibrary.CccTalk'],['../class_device_library_1_1_ccc_talk.html#acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90',1,'DeviceLibrary.CccTalk.CccTalk()']]],
   ['ccoindid',['CCoindID',['../class_device_library_1_1_c_canal_1_1_c_coind_i_d.html',1,'DeviceLibrary.CCanal.CCoindID'],['../class_device_library_1_1_c_canal_1_1_c_coind_i_d.html#ac2a7783bef16f50936b86c40cf9d6b73',1,'DeviceLibrary.CCanal.CCoindID.CCoindID()']]],
@@ -36,13 +37,14 @@ var searchData=
   ['clearcommsstatusvariables',['CLEARCOMMSSTATUSVARIABLES',['../group___header.html#gga22f8eb6526627d4203e53ce7dbd3052aafb4cfb0ac631109fa01bdbd70ba8e166',1,'DeviceLibrary::CccTalk']]],
   ['clevel',['CLevel',['../class_device_library_1_1_c_device_1_1_c_level.html',1,'DeviceLibrary.CDevice.CLevel'],['../class_device_library_1_1_c_device_1_1_c_level.html#af8d6eec343773bf4581ecfc85fa2ff45',1,'DeviceLibrary.CDevice.CLevel.CLevel()']]],
   ['closed',['CLOSED',['../class_device_library_1_1_c_coin_validator.html#aec7d217f486dbce4458a64bc071fa19da110ccf2f5d2ff4eda1fd1a494293467d',1,'DeviceLibrary::CCoinValidator']]],
+  ['closetransaction',['CloseTransaction',['../class_device_library_1_1_c_devices_manage.html#a4bf7edbc6a2147169527ffa5b8233fc3',1,'DeviceLibrary::CDevicesManage']]],
   ['cmdmotorpelicano',['cmdMotorPelicano',['../class_device_library_1_1messages_text.html#ac961f592dd67ea083a505482617c823b',1,'DeviceLibrary::messagesText']]],
   ['cmdmotorpelicanoinprogress',['cmdMotorPelicanoInProgress',['../class_device_library_1_1messages_text.html#aa5a99445dd360fad1b310b74d9be7bf6',1,'DeviceLibrary::messagesText']]],
   ['cmdmotorpelicanomode',['cmdMotorPelicanoMode',['../class_device_library_1_1messages_text.html#a5ae581131aa224503a54e4a29aa82916',1,'DeviceLibrary::messagesText']]],
   ['cmdselftest',['cmdSelfTest',['../class_device_library_1_1messages_text.html#a11e70bc1bf9a2de56400fbab90cb153f',1,'DeviceLibrary::messagesText']]],
   ['cmemorystorage',['CMemoryStorage',['../class_device_library_1_1_c_memory_storage.html',1,'DeviceLibrary.CMemoryStorage'],['../class_device_library_1_1_c_memory_storage.html#a1f469e7acead36a0223f798f5a2d9de9',1,'DeviceLibrary.CMemoryStorage.CMemoryStorage()']]],
   ['code',['code',['../class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v.html#a645b37f5a1414ee05ef237a4afbd8e43',1,'DeviceLibrary::CCoinValidator::CErroCV']]],
-  ['codeerror',['CodeError',['../class_device_library_1_1_c_hopper_1_1_c_hopper_error.html#aed857b78c9f0e03b364b35a9cebe58d1',1,'DeviceLibrary::CHopper::CHopperError']]],
+  ['codeerror',['codeError',['../class_device_library_1_1_c_hopper_1_1_c_hopper_error.html#a90797e7b2066041378d0febf2e3337d5',1,'DeviceLibrary::CHopper::CHopperError']]],
   ['coin2fast',['COIN2FAST',['../group___erreur.html#gga68c5b73cc3b337502d9f92154d933591ada03008cb56819752dd1fe201c4c1be9',1,'DeviceLibrary::CCoinValidator']]],
   ['coin2slow',['COIN2SLOW',['../group___erreur.html#gga68c5b73cc3b337502d9f92154d933591ad4f375ed800d463da94afc540bf8d22e',1,'DeviceLibrary::CCoinValidator']]],
   ['coinacceptor',['CoinAcceptor',['../namespace_device_library.html#a4ca177654b0e196e5a5f5275fb4ea5eeae7ca2ac311799e100facb48c3eb68f0c',1,'DeviceLibrary']]],
@@ -93,5 +95,6 @@ var searchData=
   ['cverrorcodes',['CVErrorCodes',['../group___erreur.html#ga68c5b73cc3b337502d9f92154d933591',1,'DeviceLibrary::CCoinValidator']]],
   ['cvpath',['CVPath',['../class_device_library_1_1_c_device_1_1_c_inserted.html#a66163183a1fdfe890af777cb3560b288',1,'DeviceLibrary::CDevice::CInserted']]],
   ['cvstatus',['CVStatus',['../class_device_library_1_1_c_coin_validator.html#a62ce7ca9d0cc8ef92edb58f06a34add1',1,'DeviceLibrary::CCoinValidator']]],
-  ['cvtask',['CVTask',['../class_device_library_1_1_c_coin_validator.html#ada11d6936d839ad456e2bd9e66f3eb31',1,'DeviceLibrary::CCoinValidator']]]
+  ['cvtask',['CVTask',['../class_device_library_1_1_c_coin_validator.html#ada11d6936d839ad456e2bd9e66f3eb31',1,'DeviceLibrary::CCoinValidator']]],
+  ['change_20history',['Change history',['../_release.html',1,'']]]
 ];

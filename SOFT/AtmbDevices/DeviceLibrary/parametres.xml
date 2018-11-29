@@ -175,7 +175,7 @@
                 <Plein>1000</Plein>
                 <Haut>800</Haut>
                 <Bas>100</Bas>
-                <Vide>20</Vide>
+                <Vide>10</Vide>
             </Niveaux>
         </Hopper>
         <Hopper>
@@ -184,12 +184,12 @@
             <Devise>EUR</Devise>
             <Valeur>10</Valeur>
             <Recharge>500</Recharge>
-            <Critique>false</Critique>
+            <Critique>true</Critique>
             <Niveaux>
                 <Plein>1000</Plein>
                 <Haut>800</Haut>
                 <Bas>100</Bas>
-                <Vide>20</Vide>
+                <Vide>10</Vide>
             </Niveaux>
         </Hopper>
         <Hopper>

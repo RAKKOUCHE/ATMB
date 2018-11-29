@@ -1,4 +1,9 @@
-﻿using System;
+﻿/// \file CcashReader.cs
+/// \brief Fichier contenant la classe abstraite CcashReader
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+using System;
 
 namespace DeviceLibrary
 {

@@ -1,12 +1,19 @@
-﻿namespace DeviceLibrary
+﻿/// \file CcashReader.Header.cs
+/// \brief Fichier les commandes ccTalk spécifiques aux accepteurs
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+namespace DeviceLibrary
 {
     public abstract partial class CcashReader : CccTalk
     {
-        /** \addtogroup Header
-         * @}
-         */
+        /// \addtogroup Headers
+        /// @{
         /// <summary>
-        /// Enumeration des headers concernant les moyens de peiement
+        /// Groupe des commandes ccTalk.
+        /// </summary>        
+        /// <summary>
+        /// Enumeration des concernant concernant les moyens de paiement
         /// </summary>
         protected new enum Header : byte
         {
@@ -28,7 +35,6 @@
             /// Demande le masque d'inhibition
             /// </summary>
             /// <remarks>voir <see cref = "MODIFYINHIBITSTATUS"/> </remarks>
-
             REQUESTINHIBITSTATUS = 230,
             /// <summary>
             /// Cette commande envoie un masque d'inhibition géneral au périphérique.
@@ -41,5 +47,6 @@
             /// <remarks>voir <see cref="MODIFYMASTERINHIBITSTATUS"/></remarks>
             REQUESTMASTERINHIBITSTATUS = 227,            
         }
-    }    
+        /// @}
+    }
 }

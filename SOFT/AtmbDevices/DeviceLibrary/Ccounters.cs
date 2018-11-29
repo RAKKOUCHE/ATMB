@@ -12,19 +12,23 @@ namespace DeviceLibrary
         /// <summary>
         /// Montant total dans la caisse
         /// </summary>
-        public long totalAmountInCashBox;
+        public long totalAmountInCB;
         /// <summary>
         /// Montant total accepté dans le monnayeur.
         /// </summary>
-        public long totalAmountCashIn;
+        public long totalAmountCashInCV;
         /// <summary>
         /// Montant total retrourné
         /// </summary>
         public long totalAmountCashOut;
         /// <summary>
+        /// Montant rechargé dans les hoppers.
+        /// </summary>
+        public long totalAmountRelaod;
+        /// <summary>
         /// Montant total contenu dans les hoppers et la caisse.
         /// </summary>
-        public long totalAmountCash;
+        public long totalAmountInCabinet;
         /// <summary>
         ///Montant des trop perçus.
         /// </summary>
@@ -67,9 +71,9 @@ namespace DeviceLibrary
         /// </summary>
         public CcoinsCounters()
         {
-            totalAmountCashIn = 0;
+            totalAmountCashInCV = 0;
             totalAmountCashOut = 0;
-            totalAmountCash = 0;
+            totalAmountInCabinet = 0;
             amountOverPay = 0;
             coinsInAccepted = new long[CCoinValidator.numChannel];
             amountCoinInAccepted = new long[CCoinValidator.numChannel];

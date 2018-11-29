@@ -54,7 +54,7 @@ namespace AtmbTestDevices
             {
                 ToPayByClient = (int)(value * 100);
                 tbToPay.Text = $"{value:c2}";
-                deviceManage.SetToPay(ToPayByClient);
+                deviceManage.OpenTransaction(ToPayByClient);
                 if(isMontantPercuReset)
                 {
                     tbReceived.Text = $"{ (0.00):c2}";
@@ -148,7 +148,11 @@ namespace AtmbTestDevices
                 {
                     a = () =>
                     {
-                        tbInfo.AppendText(string.Format("Erreur sur le ", ((CHopper.CHopperError)e.donnee).nameHopper));
+                        tbInfo.AppendText($"Erreur {((CHopper.CHopperError)e.donnee).codeError} sur le {((CHopper.CHopperError)e.donnee).nameHopper}\r\n");
+                        if(((CHopper.CHopperError)e.donnee).isHopperCritical)
+                        {
+                            MessageBox.Show(((CHopper.CHopperError)e.donnee).nameHopper);
+                        }
                     };
                     break;
                 }
@@ -160,7 +164,6 @@ namespace AtmbTestDevices
                         {
                             if((bool)(ligne.Cells["Present"].Value) && (ligne.Cells["Identifiant"].Value.ToString() == ((CDevice.CLevel)e.donnee).ID))
                             {
-                                ligne.Cells["LevelHW"].Value = ((CDevice.CLevel)e.donnee).hardLevel;
                                 if((((CDevice.CLevel)e.donnee).hardLevel == CDevice.CLevel.HardLevel.VIDE) || (((CDevice.CLevel)e.donnee).hardLevel == CDevice.CLevel.HardLevel.PLEIN))
                                 {
                                     ligne.Cells["LevelHW"].Style.BackColor = Color.Red;
@@ -169,7 +172,7 @@ namespace AtmbTestDevices
                                 {
                                     ligne.Cells["LevelHW"].Style.BackColor = Color.LimeGreen;
                                 }
-                                break;
+                                ligne.Cells["LevelHW"].Value = ((CDevice.CLevel)e.donnee).hardLevel;
                             }
                         }
                     };
@@ -183,7 +186,6 @@ namespace AtmbTestDevices
                         {
                             if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == ((CDevice.CLevel)e.donnee).ID))
                             {
-                                ligne.Cells["LevelSW"].Value = ((CDevice.CLevel)e.donnee).softLevel;
                                 switch(((CDevice.CLevel)e.donnee).softLevel)
                                 {
                                     case CDevice.CLevel.SoftLevel.PLEIN:
@@ -204,7 +206,7 @@ namespace AtmbTestDevices
                                         break;
                                     }
                                 }
-                                break;
+                                ligne.Cells["LevelSW"].Value = ((CDevice.CLevel)e.donnee).softLevel;
                             }
                         }
                     };
@@ -262,6 +264,7 @@ namespace AtmbTestDevices
                           }
                           ButtonCounters_Click(sender, e);
                           stripLabelCom.Text = deviceManage.GetSerialPort();
+                          deviceManage.CloseTransaction();
                           Refresh();
                       };
                     break;
@@ -281,6 +284,7 @@ namespace AtmbTestDevices
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             deviceManage.Dispose();
+            Application.Exit();
         }
 
         /// <summary>
@@ -291,10 +295,12 @@ namespace AtmbTestDevices
         private void ButtonCounters_Click(object sender, EventArgs e)
         {
             dataGridViewCompteurs.Rows.Clear();
-            dataGridViewCompteurs.Rows.Add("Total introduit", string.Format("{0:c2}", (decimal)CccTalk.counters.totalAmountCashIn / 100));
-            dataGridViewCompteurs.Rows.Add("Total rendu", string.Format("{0:c2}", (decimal)CccTalk.counters.totalAmountCashOut / 100));
-            dataGridViewCompteurs.Rows.Add("Total borne", string.Format("{0:c2}", (decimal)CccTalk.counters.totalAmountCash / 100));
-            dataGridViewCompteurs.Rows.Add("Trop perçu", string.Format("{0:c2}", (decimal)CccTalk.counters.amountOverPay / 100));
+            dataGridViewCompteurs.Rows.Add("Total caisse", $"{(decimal)CccTalk.counters.totalAmountInCB / 100:c2}");
+            dataGridViewCompteurs.Rows.Add("Total introduit", $"{(decimal)CccTalk.counters.totalAmountCashInCV / 100:c2}");
+            dataGridViewCompteurs.Rows.Add("Total chargé", $"{(decimal)CccTalk.counters.totalAmountRelaod / 100:c2}");
+            dataGridViewCompteurs.Rows.Add("Total rendu", $"{(decimal)CccTalk.counters.totalAmountCashOut / 100:c2}");
+            dataGridViewCompteurs.Rows.Add("Total borne", $"{(decimal)CccTalk.counters.totalAmountInCabinet / 100:c2}");
+            dataGridViewCompteurs.Rows.Add("Trop perçu", $"{(decimal)CccTalk.counters.amountOverPay / 100:c2}");
             foreach(CCanal canal in deviceManage.monnayeur.canaux)
             {
                 dataGridViewCompteurs.Rows.Add($"CV nombre canal {canal.Number}", canal.CoinIn);
@@ -426,6 +432,16 @@ namespace AtmbTestDevices
         {
             CccTalk.ResetCounters();
             ButtonCounters_Click(sender, e);
+        }
+
+        /// <summary>
+        /// Cloture de la transaction en cours.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonFinTrans_Click(object sender, EventArgs e)
+        {
+            deviceManage.CloseTransaction();
         }
     }
 }

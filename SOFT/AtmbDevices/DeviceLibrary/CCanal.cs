@@ -1,8 +1,13 @@
-﻿namespace DeviceLibrary
+﻿/// \file CCanal.cs
+/// \brief Fichier contenant la classe CCanal
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+namespace DeviceLibrary
 {
     /// <summary>
     /// Class d'un canal d'un périphérique de paiement
-    /// </summary>
+    /// </summary>    
     public partial class CCanal
     {
         /// <summary>

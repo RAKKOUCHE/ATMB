@@ -1,12 +1,19 @@
-﻿namespace DeviceLibrary
+﻿/// \file CccTalk.Header.cs
+/// \brief Fichier contenant les commandes communes à  tous les périphériques ccTalk.
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+namespace DeviceLibrary
 {
     public partial class CccTalk : CDevice
     {
-        /** \addtogroup Header
-         * @{
-         */
+        /// \addtogroup Headers
+        /// @{
         /// <summary>
-        /// Enumération des headers communs à tous les périphériques ccTalk.
+        /// Groupe des commandes ccTalk.
+        /// </summary>        
+        /// <summary>
+        /// Enumération des commandes communnes à tous les périphériques ccTalk.
         /// </summary>
         public enum Header : byte
         {
@@ -19,7 +26,7 @@
             /// </summary>
             SIMPLEPOLL = 254,
             /// <summary>
-            /// Commande broadcast permettant de déterminer l'adresse utilisée par chaque périphérique
+            /// Commande broadcast permettant de déterminer l'adresse utilisée par chaque périphérique.
             /// </summary>
             ADDRESSPOLL = 253,
             /// <summary>
@@ -109,7 +116,7 @@
             /// <summary>
             /// Cette commande enregistre le code de chiffrage du périphérique.
             /// </summary>
-            STOREENCRYPTIONCODE=136,
+            STOREENCRYPTIONCODE = 136,
             /// <summary>
             /// Réponse renvoyé par le périphérique s'il ne peut traiter la commande parce-qu'il est occupé.
             /// </summary>
@@ -135,5 +142,6 @@
             /// </summary>
             RESETDEVICE = 1,
         }
+        /// @}
     }
 }

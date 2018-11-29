@@ -26,6 +26,5 @@ var searchData=
   ['distribute',['Distribute',['../class_device_library_1_1_c_hopper.html#a1161f40b938189953cede1eb8a844672',1,'DeviceLibrary::CHopper']]],
   ['dlllready',['DLLLREADY',['../namespace_device_library.html#aecf5c8419c6482aed0b21decb1663754a02329a248129261e531c515aabab49eb',1,'DeviceLibrary']]],
   ['donnee',['donnee',['../class_device_library_1_1_calert_event_args.html#a8af6a2546770e991696afd97029e57ff',1,'DeviceLibrary::CalertEventArgs']]],
-  ['documentation_20software',['DOCUMENTATION SOFTWARE',['../index.html',1,'']]],
   ['properties',['Properties',['../namespace_device_library_1_1_properties.html',1,'DeviceLibrary']]]
 ];

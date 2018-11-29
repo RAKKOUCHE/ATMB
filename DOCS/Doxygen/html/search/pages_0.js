@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['documentation_20software',['DOCUMENTATION SOFTWARE',['../index.html',1,'']]]
+  ['change_20history',['Change history',['../_release.html',1,'']]]
 ];

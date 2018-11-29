@@ -2,11 +2,10 @@
 {
     public partial class CCoinValidator : CcashReader
     {
-        /** \addtogroup Erreur
-         * @{
-         */
+        /// \addtogroup Erreurs
+        /// @{        
         /// <summary>
-        /// Enumération des codes erreur du monnayeur
+        /// Groupe des codes erreur renvoyés par les périphériques
         /// </summary>
         public enum CVErrorCodes : byte
         {

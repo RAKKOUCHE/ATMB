@@ -2,9 +2,11 @@
 {
     public partial class CccTalk : CDevice
     {
-        /** \addtogroup Erreur
-         * @{
-         */       
+        /// \addtogroup Erreurs
+        /// @{        
+        /// <summary>
+        /// Groupe des codes erreur renvoyés par les périphériques
+        /// </summary>
         /// <summary>
         /// Liste des fautes possibles retournées par un self test.
         /// </summary>
@@ -29,7 +31,7 @@
             /// <summary>
             /// Erreur sur le sensor piezzo.
             /// </summary>
-            ERRORPIEZOSENSOR =4,
+            ERRORPIEZOSENSOR = 4,
             /// <summary>
             /// Erreur sur le réflecteur.
             /// </summary>
@@ -219,5 +221,6 @@
             /// </summary>
             ERRORUNKNOW = 255,
         }
+        /// @}
     }
 }

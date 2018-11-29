@@ -11,7 +11,7 @@ namespace DeviceLibrary
     public abstract partial class CDevice
     {
         /// <summary>
-        /// 
+        /// Niveaux des périphériques.
         /// </summary>
         public CLevel deviceLevel;
 

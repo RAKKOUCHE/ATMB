@@ -8,7 +8,7 @@ var searchData=
   ['masterenable',['MasterEnable',['../class_device_library_1_1_ccash_reader.html#aec351cc4aeaf3fd814808de16bbc97f7',1,'DeviceLibrary::CcashReader']]],
   ['masterinhibitstatus',['MasterInhibitStatus',['../class_device_library_1_1_ccash_reader.html#ad6efa8899adedbb445d7f7cb4af0c159',1,'DeviceLibrary::CcashReader']]],
   ['maxcoinmeterpulsesexceeded',['MAXCOINMETERPULSESEXCEEDED',['../group___erreur.html#gga68c5b73cc3b337502d9f92154d933591acb5a7731b62453102c5cd6211bc6a6f8',1,'DeviceLibrary::CCoinValidator']]],
-  ['maxcurrent',['MAXCURRENT',['../class_device_library_1_1_c_hopper_variable_set.html#a3b79d051f89692abb5d34ae3f4e946bea07eaaced542a660738d0b539a58d1b51',1,'DeviceLibrary.CHopperVariableSet.MAXCURRENT()'],['../class_device_library_1_1_c_hopper_variable_set.html#a028cfdeb39a1890d2d91f55717c28811',1,'DeviceLibrary.CHopperVariableSet.Maxcurrent()']]],
+  ['maxcurrent',['Maxcurrent',['../class_device_library_1_1_c_hopper_variable_set.html#a028cfdeb39a1890d2d91f55717c28811',1,'DeviceLibrary.CHopperVariableSet.Maxcurrent()'],['../class_device_library_1_1_c_hopper_variable_set.html#a3b79d051f89692abb5d34ae3f4e946bea07eaaced542a660738d0b539a58d1b51',1,'DeviceLibrary.CHopperVariableSet.MAXCURRENT()']]],
   ['maxcurrentexceeded',['MAXCURRENTEXCEEDED',['../class_device_library_1_1_c_hopper.html#afce8f2089a688f1d3fdf9db91242fb01a352f5cd9841dc6e7e999caee1c876c11',1,'DeviceLibrary::CHopper']]],
   ['maxhopper',['maxHopper',['../class_device_library_1_1_c_hopper.html#a109908437c130d0e5f081f13ab48c98c',1,'DeviceLibrary::CHopper']]],
   ['memorykeeptype',['MemoryKeepType',['../class_device_library_1_1_c_memory_storage.html#a212a4301a9ee4074c52046fc8b36fb7a',1,'DeviceLibrary::CMemoryStorage']]],

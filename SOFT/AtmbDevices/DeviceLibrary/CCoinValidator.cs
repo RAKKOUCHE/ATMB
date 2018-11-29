@@ -1,4 +1,10 @@
-﻿using System;
+﻿/// \file CCoindID.cs
+/// \brief Fichier contenant la classe CCoinID.
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+ 
+using System;
 using System.Threading;
 
 namespace DeviceLibrary
@@ -13,13 +19,13 @@ namespace DeviceLibrary
         /// </summary>
         public class CErroCV
         {
-        /// <summary>
-        ///
-        /// </summary>
+            /// <summary>
+            ///
+            /// </summary>
             public byte code;
-        /// <summary>
-        ///
-        /// </summary>
+            /// <summary>
+            ///
+            /// </summary>
             public CVErrorCodes errorText;
         }
 
@@ -33,17 +39,17 @@ namespace DeviceLibrary
         /// </summary>
         protected enum CVStatus
         {
-        /// <summary>
-        ///
-        /// </summary>
+            /// <summary>
+            ///
+            /// </summary>
             OK = 0,
-        /// <summary>
-        ///
-        /// </summary>
+            /// <summary>
+            ///
+            /// </summary>
             COINRETURNACTIVATED = 1,
-        /// <summary>
-        ///
-        /// </summary>
+            /// <summary>
+            ///
+            /// </summary>
             COSACTIVATED = 2,
         }
 
@@ -52,13 +58,13 @@ namespace DeviceLibrary
         /// </summary>
         protected enum TrashDoor
         {
-        /// <summary>
-        ///
-        /// </summary>
+            /// <summary>
+            ///
+            /// </summary>
             CLOSED = 0,
-        /// <summary>
-        ///
-        /// </summary>
+            /// <summary>
+            ///
+            /// </summary>
             OPEN = 1,
         }
 
@@ -67,13 +73,13 @@ namespace DeviceLibrary
         /// </summary>
         protected enum LowerSensor
         {
-        /// <summary>
-        ///
-        /// </summary>
+            /// <summary>
+            ///
+            /// </summary>
             FREE = 0,
-        /// <summary>
-        ///
-        /// </summary>
+            /// <summary>
+            ///
+            /// </summary>
             BUSY = 1,
         }
 
@@ -117,6 +123,7 @@ namespace DeviceLibrary
             set => isCVToBeActivated = value;
         }
 
+        //TODO A déplacer vers PELICANO
         private TrashDoor trashLid;
         /// <summary>
         /// Contient l'indicateur d'ouverture du containner. 
@@ -136,6 +143,7 @@ namespace DeviceLibrary
             get => exitSensor;
             set => exitSensor = value;
         }
+        //todo jusqu'ici
 
         private byte channelInProgress;
         /// <summary>
@@ -405,13 +413,13 @@ namespace DeviceLibrary
                         denominationInserted.CVChannel = channelNumber;
                         denominationInserted.CVPath = creditBuffer.Result[i, 1];
                         denominationInserted.TotalAmount += canaux[channelNumber - 1].coinId.ValeurCent;
-                        counters.totalAmountCashIn += denominationInserted.ValeurCent;
+                        counters.totalAmountCashInCV += denominationInserted.ValeurCent;
                         counters.amountCoinInAccepted[channelNumber - 1] += denominationInserted.ValeurCent;
                         ++counters.coinsInAccepted[channelNumber - 1];
-                        counters.totalAmountCash += denominationInserted.ValeurCent;
+                        counters.totalAmountInCabinet += denominationInserted.ValeurCent;
                         if(canaux[channelNumber - 1].HopperToLoad == 0)
                         {
-                            counters.totalAmountInCashBox = denominationInserted.ValeurCent;
+                            counters.totalAmountInCB = denominationInserted.ValeurCent;
                         }
                         else
                         {

@@ -10,8 +10,10 @@ Class principale
 \item 
 delegate void \mbox{\hyperlink{class_device_library_1_1_c_devices_manage_a76f84b8a18500338f67d33123aa3332a}{Alert\+Event\+Handler}} (object sender, \mbox{\hyperlink{class_device_library_1_1_calert_event_args}{Calert\+Event\+Args}} e)
 \item 
-void \mbox{\hyperlink{class_device_library_1_1_c_devices_manage_aa97972b2301cbe60090f74e7276c2c52}{Set\+To\+Pay}} (int value)
-\begin{DoxyCompactList}\small\item\em Reçoit le montant à payer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_library_1_1_c_devices_manage_a207100abcf87d3e21768d5284d84a100}{Open\+Transaction}} (int value)
+\begin{DoxyCompactList}\small\item\em Ouvre une transaction le montant à payer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_library_1_1_c_devices_manage_a4bf7edbc6a2147169527ffa5b8233fc3}{Close\+Transaction}} ()
+\begin{DoxyCompactList}\small\item\em Cloture la transaction en cours \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_device_library_1_1_c_devices_manage_a6b10aa601256c13d54c8c4642b029e10}{Get\+Serial\+Port}} ()
 \begin{DoxyCompactList}\small\item\em Renvoi le nom du port série utilisé par le bus cc\+Talk \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_device_library_1_1_c_devices_manage_a56177d99576c5d63e3233458a2a70ae1}{C\+Devices\+Manage}} ()
@@ -73,6 +75,16 @@ Constructeur de la classe principale
 {\em e} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_device_library_1_1_c_devices_manage_a4bf7edbc6a2147169527ffa5b8233fc3}\label{class_device_library_1_1_c_devices_manage_a4bf7edbc6a2147169527ffa5b8233fc3}} 
+\index{Device\+Library\+::\+C\+Devices\+Manage@{Device\+Library\+::\+C\+Devices\+Manage}!Close\+Transaction@{Close\+Transaction}}
+\index{Close\+Transaction@{Close\+Transaction}!Device\+Library\+::\+C\+Devices\+Manage@{Device\+Library\+::\+C\+Devices\+Manage}}
+\subsubsection{\texorpdfstring{Close\+Transaction()}{CloseTransaction()}}
+{\footnotesize\ttfamily void Device\+Library.\+C\+Devices\+Manage.\+Close\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cloture la transaction en cours 
+
 \mbox{\Hypertarget{class_device_library_1_1_c_devices_manage_a369960a1c585a85b637c7c217f927e1f}\label{class_device_library_1_1_c_devices_manage_a369960a1c585a85b637c7c217f927e1f}} 
 \index{Device\+Library\+::\+C\+Devices\+Manage@{Device\+Library\+::\+C\+Devices\+Manage}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!Device\+Library\+::\+C\+Devices\+Manage@{Device\+Library\+::\+C\+Devices\+Manage}}
@@ -93,15 +105,15 @@ Fonction libérant les ressources
 
 Renvoi le nom du port série utilisé par le bus cc\+Talk 
 
-\mbox{\Hypertarget{class_device_library_1_1_c_devices_manage_aa97972b2301cbe60090f74e7276c2c52}\label{class_device_library_1_1_c_devices_manage_aa97972b2301cbe60090f74e7276c2c52}} 
-\index{Device\+Library\+::\+C\+Devices\+Manage@{Device\+Library\+::\+C\+Devices\+Manage}!Set\+To\+Pay@{Set\+To\+Pay}}
-\index{Set\+To\+Pay@{Set\+To\+Pay}!Device\+Library\+::\+C\+Devices\+Manage@{Device\+Library\+::\+C\+Devices\+Manage}}
-\subsubsection{\texorpdfstring{Set\+To\+Pay()}{SetToPay()}}
-{\footnotesize\ttfamily void Device\+Library.\+C\+Devices\+Manage.\+Set\+To\+Pay (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{class_device_library_1_1_c_devices_manage_a207100abcf87d3e21768d5284d84a100}\label{class_device_library_1_1_c_devices_manage_a207100abcf87d3e21768d5284d84a100}} 
+\index{Device\+Library\+::\+C\+Devices\+Manage@{Device\+Library\+::\+C\+Devices\+Manage}!Open\+Transaction@{Open\+Transaction}}
+\index{Open\+Transaction@{Open\+Transaction}!Device\+Library\+::\+C\+Devices\+Manage@{Device\+Library\+::\+C\+Devices\+Manage}}
+\subsubsection{\texorpdfstring{Open\+Transaction()}{OpenTransaction()}}
+{\footnotesize\ttfamily void Device\+Library.\+C\+Devices\+Manage.\+Open\+Transaction (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Reçoit le montant à payer. 
+Ouvre une transaction le montant à payer. 
 
 
 \begin{DoxyParams}{Parameters}

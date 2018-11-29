@@ -2,11 +2,13 @@
 {
     public partial class CPelicano: CCoinValidator
     {
-        /** \addtogroup Header
-         * @{
-         */
+        /// \addtogroup Headers
+        /// @{
         /// <summary>
-        /// Liste des commandes spécifiques au Pelicano
+        /// Groupe des commandes ccTalk.
+        /// </summary>        
+        /// <summary>
+        /// Enumération des commandes spécifiques au Pelicano
         /// </summary>
         private new enum Header : byte
         {

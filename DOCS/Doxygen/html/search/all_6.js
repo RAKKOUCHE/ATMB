@@ -3,7 +3,7 @@ var searchData=
   ['gamesoverload',['GAMESOVERLOAD',['../group___erreur.html#gga68c5b73cc3b337502d9f92154d933591acd4f575618900c07705e0f3ed6a72a16',1,'DeviceLibrary::CCoinValidator']]],
   ['getbuffercredit',['GetBufferCredit',['../class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer.html#aefd4b396be72cd71df3589250525b1a4',1,'DeviceLibrary::CCoinValidator::CCVcreditBuffer']]],
   ['getbuildcode',['getBuildCode',['../class_device_library_1_1messages_text.html#a2ff352411ad8af876fe7fb650e091aa5',1,'DeviceLibrary::messagesText']]],
-  ['getbyte',['getByte',['../class_device_library_1_1messages_text.html#a76120e98024c293607801a782c164899',1,'DeviceLibrary.messagesText.getByte()'],['../class_device_library_1_1_ccc_talk.html#a5f67f62cb03d573225712813348408ad',1,'DeviceLibrary.CccTalk.GetByte()']]],
+  ['getbyte',['GetByte',['../class_device_library_1_1_ccc_talk.html#a5f67f62cb03d573225712813348408ad',1,'DeviceLibrary.CccTalk.GetByte()'],['../class_device_library_1_1messages_text.html#a76120e98024c293607801a782c164899',1,'DeviceLibrary.messagesText.getByte()']]],
   ['getcoinid',['GetCoinId',['../class_device_library_1_1_c_canal_1_1_c_coind_i_d.html#ab5613c7ed033e568c1b3963780f152b8',1,'DeviceLibrary::CCanal::CCoindID']]],
   ['getdatabaseversion',['getDataBaseVersion',['../class_device_library_1_1messages_text.html#ab9e7a38bdab6ee7cce1c2f701e1e5fa1',1,'DeviceLibrary::messagesText']]],
   ['getdatablock',['GetDataBlock',['../class_device_library_1_1_c_memory_storage.html#a7517e6ae450e6c26be181fa187d98ed0',1,'DeviceLibrary::CMemoryStorage']]],

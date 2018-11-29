@@ -2,11 +2,13 @@
 {
     public partial class CHopper : CccTalk
     {
-        /** \addtogroup Header
-         * @{
-         */
+        /// \addtogroup Headers
+        /// @{
         /// <summary>
-        /// Liste des commandes ccTalk spécifiques aux hoppers
+        /// Groupe des commandes ccTalk.
+        /// </summary>        
+        /// <summary>
+        /// Enumération des commandes spécifiques aux hoppers
         /// </summary>
         public new enum Header : byte
         {

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/// \file CCoindID.cs
+/// \brief Fichier contenant la classe CCoinID.
+/// \date 28 11 2018
+/// \version 1.0.0
+/// \author Rachid AKKOUCHE
+using System;
 
 namespace DeviceLibrary
 {
@@ -9,9 +14,11 @@ namespace DeviceLibrary
         /// </summary>
         public class CCoindID
         {
-            /** \addtogroup Header
-             * @{
-             */
+            /// \addtogroup Headers
+            /// @{
+            /// <summary>
+            /// Groupe des commandes ccTalk.
+            /// </summary>        
             /// <summary>
             /// Command ccTalk demandant l'identification de la pièce du canal.
             /// </summary>
