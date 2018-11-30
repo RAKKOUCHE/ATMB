@@ -682,7 +682,10 @@ namespace DeviceLibrary
                         break;
                     }
                 }
-                State = Etat.STATE_GETCREDITBUFFER;
+                if(ProductCode != "BV")
+                {
+                    State = Etat.STATE_GETCREDITBUFFER;
+                }
             }
             catch(Exception E)
             {

@@ -84,9 +84,13 @@ namespace DeviceLibrary
         internal static Logger Log = NLog.LogManager.GetCurrentClassLogger();
         internal string ParamFileName = "parametres.xml";
         private static XmlDocument parametersFile = new XmlDocument();
-        private int toPay;
         private Thread MsgTask;
         private bool isDllReady;
+
+        /// <summary>
+        /// Variable contenant le montant à payer.
+        /// </summary>
+        public static int toPay;
 
         /// <summary>
         /// Instance du monnayeur
@@ -211,7 +215,7 @@ namespace DeviceLibrary
                         {
                             while(hopper.State != CHopper.Etat.IDLE)
                                 ;
-                            hopper.SubCounters(hopper.dispenseStatus.CoinsPaid);
+                            //hopper.SubCounters(hopper.dispenseStatus.CoinsPaid);
                         }
                     }
                 }
@@ -265,11 +269,9 @@ namespace DeviceLibrary
                             hopper.isEmptied = false;
                             OnHopperEmptied(hopper);
                         }
-                        if(hopper.isHopperError)
+                        if(hopper.IsHopperError)
                         {
-                            hopper.isHopperError = false;
-                            hopper.ResetDevice();
-                            hopper.Init();
+                            hopper.IsHopperError = false;
                             hopper.errorHopper.isHopperCritical = hopper.IsCritical;
                             OnHopperError(hopper);
                         }
@@ -457,8 +459,6 @@ namespace DeviceLibrary
                     donnee = hopper.errorHopper,
                 };
                 CallAlert(new object(), alertEventArgs);
-                hopper.ResetDevice();
-                hopper.Init();
             }
             catch(Exception E)
             {
@@ -507,6 +507,7 @@ namespace DeviceLibrary
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
         }
+
         /// <summary>
         /// Evénement levé lors de l'ouverture des moyens de paiement.
         /// </summary>
@@ -627,6 +628,18 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// Remise à zéro des compteurs.
+        /// </summary>
+        public void ResetCounters()
+        {
+            CccTalk.ResetCounters();
+            foreach(CHopper hopper in Hoppers)
+            {
+                hopper.CheckLevel();
+            }
+        }
+
+        /// <summary>
         /// Constructeur de la classe principale
         /// </summary>
         public CDevicesManage()
@@ -727,7 +740,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Destructeur
         /// </summary>
         ~CDevicesManage()
         {

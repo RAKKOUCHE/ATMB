@@ -54,6 +54,7 @@ namespace AtmbTestDevices
             {
                 ToPayByClient = (int)(value * 100);
                 tbToPay.Text = $"{value:c2}";
+                tbDenomination.Text = $"{0:c2}";
                 deviceManage.OpenTransaction(ToPayByClient);
                 if(isMontantPercuReset)
                 {
@@ -103,6 +104,7 @@ namespace AtmbTestDevices
                         int remaining = (ToPayByClient - CDevice.denominationInserted.TotalAmount);
                         tbInfo.AppendText($"Pièce reconnue : Canal {((CDevice.CInserted)e.donnee).CVChannel} trieur {((CDevice.CInserted)e.donnee).CVPath} valeur  {(decimal)((CDevice.CInserted)e.donnee).ValeurCent / 100:c2}\r\n\r\n");
                         tbReceived.Text = $"{((decimal)((CDevice.CInserted)e.donnee).TotalAmount) / 100:c2}";
+                        tbDenomination.Text = $"{((decimal)((CDevice.CInserted)e.donnee).ValeurCent) / 100:c2}";
                         if(remaining < 1)
                         {
                             tbRemaining.Text = $"{ (0.00):c2}";
@@ -115,7 +117,6 @@ namespace AtmbTestDevices
                         else
                         {
                             tbRemaining.Text = $"{((decimal)remaining) / 100:c2}";
-                            tbDenomination.Text = $"{((decimal)((CDevice.CInserted)e.donnee).ValeurCent) / 100:c2}";
                         }
                         ButtonCounters_Click(sender, e);
                     };
@@ -126,6 +127,7 @@ namespace AtmbTestDevices
                     a = () =>
                     {
                         tbInfo.AppendText($"Erreur coin validator - code : { ((CCoinValidator.CErroCV)e.donnee).code} raison : { ((CCoinValidator.CErroCV)e.donnee).errorText}\r\n\r\n");
+                        ButtonCounters_Click(sender, e);
                     };
                     break;
                 }
@@ -135,6 +137,7 @@ namespace AtmbTestDevices
                     {
                         stripLabelCashReaderStatus.BackColor = Color.Red;
                         stripLabelCashReaderStatus.Text = "Encaissement fermé";
+                        ButtonCounters_Click(sender, e);
                     };
                     break;
                 }
@@ -142,6 +145,7 @@ namespace AtmbTestDevices
                 {
                     stripLabelCashReaderStatus.BackColor = Color.GreenYellow;
                     a = () => stripLabelCashReaderStatus.Text = "Encaissement Ouvert";
+                    ButtonCounters_Click(sender, e);
                     break;
                 }
                 case Reason.HOPPERERROR:
@@ -151,7 +155,7 @@ namespace AtmbTestDevices
                         tbInfo.AppendText($"Erreur {((CHopper.CHopperError)e.donnee).Code} sur le {((CHopper.CHopperError)e.donnee).nameHopper}\r\n");
                         if(((CHopper.CHopperError)e.donnee).isHopperCritical)
                         {
-                            MessageBox.Show(((CHopper.CHopperError)e.donnee).nameHopper);
+                            MessageBox.Show(string.Format("Erreur {0} sur le {1}.\r\nCe hopper est nécessaire au fonctionnement de la borne.", ((CHopper.CHopperError)e.donnee).Code, ((CHopper.CHopperError)e.donnee).nameHopper));
                         }
                     };
                     break;
@@ -167,6 +171,7 @@ namespace AtmbTestDevices
                                 if((((CDevice.CLevel)e.donnee).hardLevel == CDevice.CLevel.HardLevel.VIDE) || (((CDevice.CLevel)e.donnee).hardLevel == CDevice.CLevel.HardLevel.PLEIN))
                                 {
                                     ligne.Cells["LevelHW"].Style.BackColor = Color.Red;
+                                    MessageBox.Show(string.Format("{0} critique", ((CDevice.CLevel)e.donnee).ID));
                                 }
                                 else
                                 {
@@ -175,6 +180,7 @@ namespace AtmbTestDevices
                                 ligne.Cells["LevelHW"].Value = ((CDevice.CLevel)e.donnee).hardLevel;
                             }
                         }
+                        ButtonCounters_Click(sender, e);
                     };
                     break;
                 }
@@ -186,6 +192,10 @@ namespace AtmbTestDevices
                         {
                             if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == ((CDevice.CLevel)e.donnee).ID))
                             {
+                                if(((CDevice.CLevel)e.donnee).softLevel == CDevice.CLevel.SoftLevel.VIDE)
+                                {
+                                    MessageBox.Show(string.Format("{0} critique", ((CDevice.CLevel)e.donnee).ID));
+                                }
                                 switch(((CDevice.CLevel)e.donnee).softLevel)
                                 {
                                     case CDevice.CLevel.SoftLevel.PLEIN:
@@ -209,6 +219,7 @@ namespace AtmbTestDevices
                                 ligne.Cells["LevelSW"].Value = ((CDevice.CLevel)e.donnee).softLevel;
                             }
                         }
+                        ButtonCounters_Click(sender, e);
                     };
                     break;
                 }
@@ -223,6 +234,7 @@ namespace AtmbTestDevices
                         tbInfo.AppendText($"Montant distribué : {(decimal)((CHopper.CHopperStatus.CDispensedResult)e.donnee).MontantPaid / 100:c2}\r\n");
                         tbInfo.AppendText($"Nombre de pièces non distribuées : {((CHopper.CHopperStatus.CDispensedResult)e.donnee).CoinsUnpaid}\r\n");
                         tbInfo.AppendText($"Montant non distribué : {(decimal)((CHopper.CHopperStatus.CDispensedResult)e.donnee).MontantUnpaid / 100:c2}\r\n\r\n");
+                        ButtonCounters_Click(sender, e);
                     };
                     break;
                 }
@@ -235,6 +247,7 @@ namespace AtmbTestDevices
                         tbInfo.AppendText($"Montant {(decimal)((CHopper)e.donnee).emptyCount.amountCounter / 100:c2}\r\n");
                         tbInfo.AppendText($"Différence en pièces {((CHopper)e.donnee).emptyCount.delta}\r\n");
                         tbInfo.AppendText($"Différence montant {(decimal)((CHopper)e.donnee).emptyCount.amountDelta / 100:c2}\r\n\r\n");
+                        ButtonCounters_Click(sender, e);
                     };
                     break;
                 }
@@ -265,14 +278,13 @@ namespace AtmbTestDevices
                           ButtonCounters_Click(sender, e);
                           stripLabelCom.Text = deviceManage.GetSerialPort();
                           deviceManage.CloseTransaction();
-                          Refresh();
                       };
                     break;
                 }
                 default:
                 a = () => { };
                 break;
-            }
+            }            
             Invoke(a);
         }
 
@@ -297,7 +309,7 @@ namespace AtmbTestDevices
             dataGridViewCompteurs.Rows.Clear();
             dataGridViewCompteurs.Rows.Add("Total caisse", $"{(decimal)CccTalk.counters.totalAmountInCB / 100:c2}");
             dataGridViewCompteurs.Rows.Add("Total introduit", $"{(decimal)CccTalk.counters.totalAmountCashInCV / 100:c2}");
-            dataGridViewCompteurs.Rows.Add("Total chargé", $"{(decimal)CccTalk.counters.totalAmountRelaod / 100:c2}");
+            dataGridViewCompteurs.Rows.Add("Total chargé", $"{(decimal)CccTalk.counters.totalAmountReload / 100:c2}");
             dataGridViewCompteurs.Rows.Add("Total rendu", $"{(decimal)CccTalk.counters.totalAmountCashOut / 100:c2}");
             dataGridViewCompteurs.Rows.Add("Total borne", $"{(decimal)CccTalk.counters.totalAmountInCabinet / 100:c2}");
             dataGridViewCompteurs.Rows.Add("Trop perçu", $"{(decimal)CccTalk.counters.amountOverPay / 100:c2}");
@@ -430,7 +442,7 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void ButtonRAZCompteurs_Click(object sender, EventArgs e)
         {
-            CccTalk.ResetCounters();
+            deviceManage.ResetCounters();
             ButtonCounters_Click(sender, e);
         }
 

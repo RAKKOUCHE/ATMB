@@ -55,10 +55,16 @@ namespace DeviceLibrary
         /// </summary>
         public CHopperError errorHopper;
 
+        private bool isHopperError;
         /// <summary>
         /// Indique la présence d'une erreur sur le hopper
         /// </summary>
-        public bool isHopperError;
+        public bool IsHopperError
+        {
+            get => isHopperError;
+            set => isHopperError = value;
+        }
+
 
         /// <summary>
         /// Objet contenant l'identification des pièces contenus.
@@ -94,6 +100,11 @@ namespace DeviceLibrary
         /// Objet contenant le status de la distribution en cours.
         /// </summary>
         public CHopperStatus dispenseStatus;
+
+        /// <summary>
+        /// Boolean indiquant que le hopper est operationel.
+        /// </summary>
+        private bool isOnError;
 
         private uint coinValue;
         /// <summary>
@@ -649,6 +660,7 @@ namespace DeviceLibrary
             }
         }
 
+
         /// <summary>
         /// Lit les informations du compteur interne du hopper
         /// </summary>
@@ -862,7 +874,7 @@ namespace DeviceLibrary
                 {
                     memoryStorage = new CMemoryStorage(this);
                     errorHopper = new CHopperError(ToString());
-                    CDevicesManage.Log.Info("Categorie d'équipement du Hopper {0} {1}", Number, EquipementCategory);
+                    CDevicesManage.Log.Info("Categorie d'équipement du {0} {1}", ToString(), EquipementCategory);
                     CDevicesManage.Log.Info(OptoStates != 0 ? "Au moins un optocoupleur est occupé" : "Les optocoupleur sont libres");
                     CDevicesManage.Log.Info("Le courant maximum autorisé pour le hopper {0} est de {1}", DeviceAddress, variables.CurrentLimit);
                     CDevicesManage.Log.Info("Le délai pour arrêter le motor du hopper {0} est de {1}", DeviceAddress, variables.MotorStopDelay);
@@ -919,7 +931,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Véfication des niveaux du hopper.
         /// </summary>
-        public void CheckLevel(object state = null)
+        public void CheckLevel()
         {
             mutexLevel.WaitOne();
             try
@@ -969,6 +981,10 @@ namespace DeviceLibrary
                         deviceLevel.isSoftLevelChanged = true;
                         deviceLevel.softLevel = CLevel.SoftLevel.PLEIN;
                     }
+                    if(deviceLevel.isHardLevelChanged || deviceLevel.isSoftLevelChanged)
+                    {
+                        deviceLevel.isHopperCritical = IsCritical;
+                    }
                 }
             }
             catch(Exception E)
@@ -999,9 +1015,12 @@ namespace DeviceLibrary
                     emptyCount.counter += dispenseStatus.CoinsPaid;
                     emptyCount.amountCounter = emptyCount.counter * CoinValue;
                     emptyCount.delta -= dispenseStatus.CoinsPaid;
-                    emptyCount.amountDelta += emptyCount.delta * CoinValue;
-                } while(!IsTOOccured);
-                SubCounters(emptyCount.counter);
+                    emptyCount.amountDelta = emptyCount.delta * CoinValue;
+                } while(!IsTOOccured && !IsHopperError);
+
+
+
+                //SubCounters(emptyCount.counter);
                 AmountInHopper = CoinsInHopper = 0;
                 counterSerializer.Serialize(countersFile, counters);
                 CheckLevel();
@@ -1027,12 +1046,13 @@ namespace DeviceLibrary
                     deviceLevel.ID = ToString();
                     CheckLevel();
                     isEmptied =
-                    isDispensed = false;                    
+                    isDispensed = false;
                     State = Etat.IDLE;
                     if(CoinsToDistribute > 0)
                     {
-                        State = Etat.IDLE;
+                        State = Etat.DISPENSE;
                     }
+                    IsHopperError = isOnError = (errorHopper.Code = TestHopper()) != HopperError.NULL;
                     break;
                 }
                 case Etat.DISPENSE:
@@ -1040,7 +1060,7 @@ namespace DeviceLibrary
                     if(CoinsToDistribute > 0)
                     {
                         IsDispensed = false;
-                        isHopperError = (errorHopper.Code = TestHopper()) != HopperError.NULL;
+                        IsHopperError = isOnError = (errorHopper.Code = TestHopper()) != HopperError.NULL;
                         dispenseStatus.dispensedResult.CoinToDispense = CoinsToDistribute;
                         dispenseStatus.dispensedResult.AmountToDispense = (int)(CoinsToDistribute * CoinValue);
                         EnableHopper();
@@ -1059,31 +1079,43 @@ namespace DeviceLibrary
                 {
                     if(dispenseStatus.CoinsRemaining == 0)
                     {
-                        if(IsTOOccured)
-                        {
-                            CoinsInHopper = 0;
-                            AmountInHopper = 0;
-                        }
+                        //if(IsTOOccured)
+                        //{
+                        //    CoinsInHopper = 0;
+                        //    AmountInHopper = 0;
+                        //}
                         State = Etat.ENDDISPENSE;
                     }
                     break;
                 }
                 case Etat.ENDDISPENSE:
                 {
-                    CheckLevel();
-                    isHopperError = (errorHopper.Code = TestHopper()) != HopperError.NULL;
+                    IsHopperError = isOnError = (errorHopper.Code = TestHopper()) != HopperError.NULL;
                     if(CoinsToDistribute != dispenseStatus.CoinsPaid)
                     {
                         //TODO indiquant l'erreur
                     }
                     IsDispensed = true;
                     SubCounters(dispenseStatus.CoinsPaid);
+                    CheckLevel();
                     CoinsToDistribute = 0;
                     State = Etat.IDLE;
                     break;
                 }
                 case Etat.IDLE:
                 {
+                    if(isOnError && !isHopperError)
+                    {
+                        if(ResetDevice())
+                        {
+                            if(!(isOnError = (TestHopper() != HopperError.NULL)))
+                            {
+                                CoinsToDistribute = 0;
+                                isEmptyingInProgress = false;
+                                EnableHopper();
+                            }
+                        }
+                    }
                     if(--delaypollLevel <= 0)
                     {
                         delaypollLevel = polllDelayLevel * 1000;
@@ -1120,7 +1152,6 @@ namespace DeviceLibrary
                 State = Etat.DISPENSE;
                 while(State != Etat.IDLE)
                     ;
-                SubCounters(dispenseStatus.CoinsPaid);
             }
         }
 
@@ -1132,12 +1163,20 @@ namespace DeviceLibrary
         {
             counters.totalAmountInCabinet -= CoinsNumber * CoinValue;
             counters.totalAmountCashOut += CoinsNumber * CoinValue;
-            CoinsInHopper -= CoinsNumber;
-            AmountInHopper = CoinsInHopper * CoinValue;
+            if(!isOnError && IsTOOccured)
+            {
+                CoinsInHopper = 0;
+                AmountInHopper = 0;
+            }
+            else
+            {
+
+                CoinsInHopper -= CoinsNumber;
+                AmountInHopper = CoinsInHopper * CoinValue;
+            }
             CoinsOut += CoinsNumber;
             AmountOut = CoinsOut * coinValue;
             counters.SaveCounters();
-            //            CheckLevel();
         }
 
         /// <summary>
@@ -1151,7 +1190,7 @@ namespace DeviceLibrary
             AmountInHopper = CoinsInHopper * CoinValue;
             CoinsLoadedInHopper += CoinsNumber;
             AmountLoadedInHopper += CoinsLoadedInHopper * CoinValue;
-            counters.totalAmountRelaod += CoinsInHopper * CoinValue;
+            counters.totalAmountReload += CoinsInHopper * CoinValue;
             counters.SaveCounters();
             CheckLevel();
         }

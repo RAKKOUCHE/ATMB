@@ -470,7 +470,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// StateReset software du périphérique.
+        /// Reset software du périphérique.
         /// </summary>
         public bool ResetDevice()
         {
@@ -532,7 +532,7 @@ namespace DeviceLibrary
             counters = new CcoinsCounters();
             counters.SaveCounters();
             CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
-            CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
+            CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);            
         }
 
         /// <summary>

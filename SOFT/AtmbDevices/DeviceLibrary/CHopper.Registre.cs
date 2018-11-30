@@ -1,4 +1,4 @@
-﻿/// \file CHopper.Registre
+﻿/// \file CHopper.Registre.cs
 /// \brief Fichier contenant la liste des états dans les registres.
 /// \date 30 11 2018
 /// \version 1.0.0

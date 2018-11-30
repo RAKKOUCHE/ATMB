@@ -36,7 +36,7 @@
                 <Position>1</Position> 
                 <Enable>true</Enable> 
                 <PathSorter>1</PathSorter> 
-                <HopperToLoad>3</HopperToLoad> 
+                <HopperToLoad>1</HopperToLoad> 
                 <Valeur>5</Valeur> 
             </Canal>
             <Canal>
@@ -50,7 +50,7 @@
                 <Position>3</Position>
                 <Enable>true</Enable>
                 <PathSorter>3</PathSorter>
-                <HopperToLoad>0</HopperToLoad>
+                <HopperToLoad>2</HopperToLoad>
                 <Valeur>20</Valeur>
             </Canal>
             <Canal>

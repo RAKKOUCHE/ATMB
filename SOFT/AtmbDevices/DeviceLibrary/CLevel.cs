@@ -5,13 +5,13 @@
 /// \author Rachid AKKOUCHE
 
 namespace DeviceLibrary
-{
-    public abstract partial class CDevice
+{    public abstract partial class CDevice
     {
         /// \defgroup Niveaux Niveaux hoppers
         /// <summary>Groupe des niveaux physiques et logiciels.</summary>
+        
         /// <summary>
-        /// Class des niveaux des hopeprs.
+        /// Classe des niveaux des hopeprs.
         /// </summary>
         public class CLevel
         {
@@ -86,6 +86,10 @@ namespace DeviceLibrary
             /// Boolean indiquant qu'un changement de niveau soft est intervenu.
             /// </summary>
             public bool isSoftLevelChanged;
+            /// <summary>
+            /// Boolean indiquant si le hopper est nécessaire au fonctionnement de la borne.
+            /// </summary>
+            public bool isHopperCritical;
             /// <summary>
             /// Boolean indiquant qu'un changement de niveau hard est intervenu.
             /// </summary>

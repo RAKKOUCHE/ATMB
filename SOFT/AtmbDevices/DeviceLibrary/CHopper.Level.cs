@@ -1,4 +1,4 @@
-﻿/// \file CHopper.Level
+﻿/// \file CHopper.Level.cs
 /// \brief Fichier contenant l'énumération des niveaux hard.
 /// \date 28 11 2018
 /// \version 1.0.0

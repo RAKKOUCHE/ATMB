@@ -25,3 +25,17 @@ D:\Projets\ATMB\SOFTWARE\AtmbTestDevices\DeviceLibrary\obj\Release\DeviceLibrary
 D:\Projets\ATMB\SOFTWARE\AtmbTestDevices\DeviceLibrary\obj\Release\DeviceLibrary.csproj.CopyComplete
 D:\Projets\ATMB\SOFTWARE\AtmbTestDevices\DeviceLibrary\obj\Release\DeviceLibrary.dll
 D:\Projets\ATMB\SOFTWARE\AtmbTestDevices\DeviceLibrary\obj\Release\DeviceLibrary.pdb
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Release\NLog.config
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Release\DeviceLibrary.dll.config
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Release\DeviceLibrary.dll
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Release\DeviceLibrary.pdb
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Release\NLog.dll
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Release\NLog.xml
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.csprojAssemblyReference.cache
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.messagesText.resources
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.Properties.Resources.resources
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.csproj.GenerateResource.cache
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.csproj.CoreCompileInputs.cache
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.csproj.CopyComplete
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.dll
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.pdb

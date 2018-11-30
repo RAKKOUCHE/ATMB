@@ -30,7 +30,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Montant rechargé dans les hoppers.
         /// </summary>
-        public long totalAmountRelaod;
+        public long totalAmountReload;
         /// <summary>
         /// Montant total contenu dans les hoppers et la caisse.
         /// </summary>

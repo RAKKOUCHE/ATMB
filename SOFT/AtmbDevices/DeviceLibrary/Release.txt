@@ -41,5 +41,13 @@
  * - Evenement sur les hoppers critiques en erreur ou  vides.
  * - Correction d'un bug sur les niveaux soft.
  * - Correction d'un bug sur la remise à zéro des compteurs.
+ * - Modification du traitement des erreurs hopper
+ * - Eclatement du fichier Chopper.
+ *
+  * Rev. 09.01.00   2018 11 30<br>
+ * -------------------------------------
+ * ### Modifications
+ * - Correction sur les compteurs
+ * - Chaine ccTalk complétement opérationnel avec 1 Eagle et 2 compact hopper MKII.
  *
  */

@@ -313,7 +313,7 @@
             Montant total retrourné
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CcoinsCounters.totalAmountRelaod">
+        <member name="F:DeviceLibrary.CcoinsCounters.totalAmountReload">
             <summary>
             Montant rechargé dans les hoppers.
             </summary>
@@ -759,7 +759,7 @@
             Instance de la class CerrorHopper
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.isHopperError">
+        <member name="P:DeviceLibrary.CHopper.IsHopperError">
             <summary>
             Indique la présence d'une erreur sur le hopper
             </summary>
@@ -797,6 +797,11 @@
         <member name="F:DeviceLibrary.CHopper.dispenseStatus">
             <summary>
             Objet contenant le status de la distribution en cours.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.isOnError">
+            <summary>
+            Boolean indiquant que le hopper est operationel.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CHopper.CoinValue">
@@ -1082,7 +1087,7 @@
             Initialisation du hopper
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CHopper.CheckLevel(System.Object)">
+        <member name="M:DeviceLibrary.CHopper.CheckLevel">
             <summary>
             Véfication des niveaux du hopper.
             </summary>
@@ -1412,6 +1417,11 @@
         <member name="F:DeviceLibrary.CDevice.CLevel.isSoftLevelChanged">
             <summary>
             Boolean indiquant qu'un changement de niveau soft est intervenu.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.isHopperCritical">
+            <summary>
+            Boolean indiquant si le hopper est nécessaire au fonctionnement de la borne.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CDevice.CLevel.isHardLevelChanged">
@@ -2875,7 +2885,7 @@
         </member>
         <member name="M:DeviceLibrary.CccTalk.ResetDevice">
             <summary>
-            StateReset software du périphérique.
+            Reset software du périphérique.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CccTalk.SimplePoll">
@@ -3382,7 +3392,7 @@
             </summary>
             <remarks>Header 236</remarks>
         </member>
-        <member name="M:DeviceLibrary.CPelicano.GetIsCoinPresent">
+        <member name="P:DeviceLibrary.CPelicano.IsCoinPresent">
             <summary>
             Vérifie si une pièce est présente dans le cointainer.
             </summary>
@@ -3557,6 +3567,11 @@
             Class principale
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CDevicesManage.toPay">
+            <summary>
+            Variable contenant le montant à payer.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CDevicesManage.monnayeur">
             <summary>
             Instance du monnayeur
@@ -3676,6 +3691,11 @@
             Renvoi le nom du port série utilisé par le bus ccTalk
             </summary>
         </member>
+        <member name="M:DeviceLibrary.CDevicesManage.ResetCounters">
+            <summary>
+            Remise à zéro des compteurs.
+            </summary>
+        </member>
         <member name="M:DeviceLibrary.CDevicesManage.#ctor">
             <summary>
             Constructeur de la classe principale
@@ -3688,7 +3708,7 @@
         </member>
         <member name="M:DeviceLibrary.CDevicesManage.Finalize">
             <summary>
-            
+            Destructeur
             </summary>
         </member>
         <member name="T:DeviceLibrary.messagesText">
