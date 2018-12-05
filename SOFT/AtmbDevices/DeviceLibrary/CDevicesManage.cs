@@ -81,16 +81,40 @@ namespace DeviceLibrary
     /// </summary>
     public class CDevicesManage
     {
-        internal static Logger Log = NLog.LogManager.GetCurrentClassLogger();
-        internal string ParamFileName = "parametres.xml";
+        /// <summary>
+        /// Instance le la class Logger utilisée pour les logs.
+        /// </summary>
+        internal static Logger Log;
+
+        /// <summary>
+        /// Nom du fichier des paramètres.
+        /// </summary>
+        internal string ParamFileName;
+
+        /// <summary>
+        /// Instance de la classe XmlDocument permettant la lecture des fichiers XML.
+        /// </summary>
         private static XmlDocument parametersFile = new XmlDocument();
+
+        /// <summary>
+        /// Thread de la classe principale.
+        /// </summary>
         private Thread MsgTask;
+
+        /// <summary>
+        /// Boolean indiquant si la dll est initialiasée.
+        /// </summary>
         private bool isDllReady;
 
+        private static int toPay;
         /// <summary>
         /// Variable contenant le montant à payer.
         /// </summary>
-        public static int toPay;
+        public static int ToPay
+        {
+            get => toPay;
+            set => toPay = value;
+        }
 
         /// <summary>
         /// Instance du monnayeur
@@ -125,33 +149,34 @@ namespace DeviceLibrary
                 try
                 {
                     XmlNodeList canauxList = parametersFile.GetElementsByTagName("Canal");
-                    foreach(XmlNode channel in canauxList)
+                    foreach (XmlNode channel in canauxList)
                     {
-                        byte.TryParse(channel.ChildNodes[0].InnerText, out byte numChannel);
-                        if(numChannel < 9)
+                        byte posChannel = 0;
+                        foreach (XmlElement e in channel)
                         {
-                            if(channel.ChildNodes[1].InnerText == "true")
+                            switch (e.Name)
                             {
-                                result[0] += (byte)(1 << (numChannel - 1));
-                            }
-                        }
-                        else
-                        {
-                            if(channel.ChildNodes[1].InnerText == "true")
-                            {
-                                result[1] += (byte)(1 << (numChannel - 9));
+                                case "Position":
+                                {
+                                    posChannel = byte.Parse(e.InnerText);
+                                    break;
+                                }
+                                case "Enable":
+                                {
+                                    result[(posChannel < 9) ? 0 : 1] += (byte)(Convert.ToByte(e.InnerText == "true") << ((posChannel < 9) ? posChannel - 1 : posChannel - 9));
+                                    break;
+                                }
                             }
                         }
                     }
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
                 }
                 return result;
             }
         }
-
         /*-------------------------------------------------------*/
 
         /// <summary>
@@ -162,16 +187,38 @@ namespace DeviceLibrary
             try
             {
                 XmlNodeList canauxList = parametersFile.GetElementsByTagName("Canal");
-                foreach(XmlNode channel in canauxList)
+                foreach (XmlNode channel in canauxList)
                 {
-                    byte.TryParse(channel.ChildNodes[0].InnerText, out byte numChannel);
-                    byte.TryParse(channel.ChildNodes[2].InnerText, out byte pathSorter);
-                    byte.TryParse(channel.ChildNodes[3].InnerText, out byte hopperToLoad);
-                    monnayeur.canaux[numChannel - 1].sorter.PathSorter = pathSorter;
-                    monnayeur.canaux[numChannel - 1].HopperToLoad = hopperToLoad;
+                    byte posChannel = 0;
+                    byte pathSorter = 0;
+                    byte hopperToLoad = 0;
+                    foreach (XmlElement e in channel)
+                    {
+                        switch (e.Name)
+                        {
+                            case "Position":
+                            {
+                                posChannel = byte.Parse(e.InnerText);
+                                break;
+                            }
+                            case "PathSorter":
+                            {
+                                pathSorter = byte.Parse(e.InnerText);
+                                break;
+                            }
+                            case "HopperToLoad":
+                            {
+                                hopperToLoad = byte.Parse(e.InnerText);
+                                break;
+                            }
+                        }
+                    }
+                    monnayeur.canaux[posChannel - 1].sorter.PathSorter = pathSorter;
+                    monnayeur.canaux[posChannel - 1].HopperToLoad = hopperToLoad;
+
                 }
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -184,43 +231,42 @@ namespace DeviceLibrary
         {
             try
             {
-                int rest = CDevice.denominationInserted.TotalAmount - toPay;
-                if(rest > 0)
+                int rest = CDevice.denominationInserted.TotalAmount - ToPay;
+                if (rest > 0)
                 {
-                    foreach(CHopper hopper in Hoppers)
+                    foreach (CHopper hopper in Hoppers)
                     {
-                        if(hopper.IsPresent &&
+                        if (hopper.IsPresent &&
                             (hopper.deviceLevel.softLevel != CDevice.CLevel.SoftLevel.VIDE) &&
                             (hopper.deviceLevel.hardLevel != CDevice.CLevel.HardLevel.VIDE) &&
                             (hopper.CoinValue > 0) &&
                             (hopper.CoinValue <= rest))
                         {
                             hopper.CoinsToDistribute = (byte)(rest / hopper.CoinValue);
-                            if((rest -= (int)(hopper.CoinsToDistribute * hopper.CoinValue)) == 0)
+                            if ((rest -= (int)(hopper.CoinsToDistribute * hopper.CoinValue)) == 0)
                             {
                                 break;
                             }
                         }
                     }
-                    foreach(CHopper hopper in Hoppers)
+                    foreach (CHopper hopper in Hoppers)
                     {
-                        if(hopper.IsPresent && (hopper.CoinsToDistribute > 0))
+                        if (hopper.IsPresent && (hopper.CoinsToDistribute > 0))
                         {
                             hopper.State = CHopper.Etat.DISPENSE;
                         }
                     }
-                    foreach(CHopper hopper in Hoppers)
+                    foreach (CHopper hopper in Hoppers)
                     {
-                        if(hopper.IsPresent)
+                        if (hopper.IsPresent)
                         {
-                            while(hopper.State != CHopper.Etat.IDLE)
-                                ;
-                            //hopper.SubCounters(hopper.dispenseStatus.CoinsPaid);
+                            while (hopper.State != CHopper.Etat.IDLE) ;
+                            ;
                         }
                     }
                 }
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -231,45 +277,41 @@ namespace DeviceLibrary
         /// </summary>
         private void TaskMessage()
         {
-            while(true)
+            while (true)
             {
-                if(isDllReady)
+                if (isDllReady)
                 {
                     isDllReady = false;
                     OnDllReady();
                 }
-                foreach(CHopper hopper in Hoppers)
+                foreach (CHopper hopper in Hoppers)
                 {
-                    if(hopper.IsPresent)
+                    if (hopper.IsPresent)
                     {
-                        if(hopper.IsDispensed)
+                        if (hopper.IsDispensed)
                         {
                             hopper.IsDispensed = false;
-                            if(!hopper.isEmptyingInProgress)
+                            if (!hopper.isEmptyingInProgress)
                             {
                                 OnHopperDispensed(hopper);
                             }
-                            else
-                            {
-                                hopper.isEmptyingInProgress = false;
-                            }
                         }
-                        if(hopper.deviceLevel.isSoftLevelChanged)
+                        if (hopper.deviceLevel.isSoftLevelChanged)
                         {
                             hopper.deviceLevel.isSoftLevelChanged = false;
                             OnHopperSoftLevelChanged(hopper);
                         }
-                        if((hopper.deviceLevel.isHardLevelChanged))
+                        if ((hopper.deviceLevel.isHardLevelChanged))
                         {
                             hopper.deviceLevel.isHardLevelChanged = false;
                             OnHopperHardLevelChanged(hopper);
                         }
-                        if(hopper.isEmptied)
+                        if (hopper.isEmptied)
                         {
                             hopper.isEmptied = false;
                             OnHopperEmptied(hopper);
                         }
-                        if(hopper.IsHopperError)
+                        if (hopper.IsHopperError)
                         {
                             hopper.IsHopperError = false;
                             hopper.errorHopper.isHopperCritical = hopper.IsCritical;
@@ -277,20 +319,25 @@ namespace DeviceLibrary
                         }
                     }
                 }
-                if(monnayeur.errorCV.errorText != CCoinValidator.CVErrorCodes.NULL)
+                if (monnayeur.errorCV.errorText != CCoinValidator.CVErrorCodes.NULL)
                 {
                     OnCVError();
                     monnayeur.errorCV.errorText = CCoinValidator.CVErrorCodes.NULL;
                 }
-                if(CDevice.denominationInserted.BackTotalAmount != CDevice.denominationInserted.TotalAmount)
+                if (CDevice.denominationInserted.BackTotalAmount != CDevice.denominationInserted.TotalAmount)
                 {
                     OnMoneyReceived();
-                    if((toPay - CDevice.denominationInserted.TotalAmount) < 1)
+
+                    if ((monnayeur.ProductCode != "BV") || !((CPelicano)monnayeur).IsCoinPresent)
                     {
-                        monnayeur.IsCVToBeDeactivated = true;
-                        OnCashClose();
-                        ChangeBack();
-                        CDevice.denominationInserted.TotalAmount = 0;
+                        if (((ToPay - CDevice.denominationInserted.TotalAmount) < 1))
+                        {
+                            monnayeur.IsCVToBeDeactivated = true;
+                            //OnCashClose();
+                            ChangeBack();
+                            CloseTransaction();
+                            CDevice.denominationInserted.TotalAmount = 0;
+                        }
                     }
                     CDevice.denominationInserted.BackTotalAmount = CDevice.denominationInserted.TotalAmount;
                 }
@@ -307,11 +354,11 @@ namespace DeviceLibrary
             {
                 XmlNodeList parametersHopperList = parametersFile.GetElementsByTagName("Hopper");
                 byte byIndex = 0;
-                foreach(XmlNode n in parametersHopperList)
+                foreach (XmlNode n in parametersHopperList)
                 {
-                    foreach(XmlElement e in n)
+                    foreach (XmlElement e in n)
                     {
-                        switch(e.Name)
+                        switch (e.Name)
                         {
                             case "ID":
                             {
@@ -336,9 +383,9 @@ namespace DeviceLibrary
                             }
                             case "Niveaux":
                             {
-                                foreach(XmlElement e2 in e.ChildNodes)
+                                foreach (XmlElement e2 in e.ChildNodes)
                                 {
-                                    switch(e2.Name)
+                                    switch (e2.Name)
                                     {
                                         case "Plein":
                                         {
@@ -376,7 +423,7 @@ namespace DeviceLibrary
                     }
                 }
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -397,7 +444,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -418,7 +465,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -439,7 +486,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -460,7 +507,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -482,7 +529,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -502,7 +549,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -522,7 +569,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -543,7 +590,7 @@ namespace DeviceLibrary
                 Console.Beep();
                 CallAlert(new object(), alertEventArgs);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -563,7 +610,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -583,7 +630,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -598,12 +645,12 @@ namespace DeviceLibrary
         {
             try
             {
-                if(monnayeur.IsCVToBeActivated = (toPay = value) > CDevice.denominationInserted.TotalAmount)
+                if (monnayeur.IsCVToBeActivated = ((ToPay = value) > CDevice.denominationInserted.TotalAmount) && (monnayeur.ProductCode != "BV"))
                 {
                     OnCashOpen();
                 }
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -615,7 +662,7 @@ namespace DeviceLibrary
         public void CloseTransaction()
         {
             monnayeur.IsCVToBeDeactivated = true;
-            CDevice.denominationInserted.TotalAmount = toPay = 0;
+            CDevice.denominationInserted.TotalAmount = ToPay = 0;
             OnCashClose();
         }
 
@@ -633,9 +680,9 @@ namespace DeviceLibrary
         public void ResetCounters()
         {
             CccTalk.ResetCounters();
-            foreach(CHopper hopper in Hoppers)
+            foreach (CHopper hopper in Hoppers)
             {
-                hopper.CheckLevel();
+                hopper.State = CHopper.Etat.CHECKLEVEL;
             }
         }
 
@@ -644,15 +691,18 @@ namespace DeviceLibrary
         /// </summary>
         public CDevicesManage()
         {
-            isDllReady = false;
             try
             {
+                isDllReady = false;
+                Log = NLog.LogManager.GetCurrentClassLogger();
+                ParamFileName = "parametres.xml";
+
                 Log.Info("\r\n\r\n\r\n{0}\r\n", messagesText.callDll);
                 ParamFileName = Directory.GetCurrentDirectory() + "\\" + ParamFileName;
                 parametersFile.Load(ParamFileName);
                 CccTalk.counters = new CcoinsCounters();
                 CccTalk.counterSerializer = new BinaryFormatter();
-                if(!File.Exists(CccTalk.fileCounterName))
+                if (!File.Exists(CccTalk.fileCounterName))
                 {
                     CccTalk.countersFile = File.Create(CccTalk.fileCounterName);
                     CccTalk.counterSerializer.Serialize(CccTalk.countersFile, CccTalk.counters);
@@ -662,28 +712,29 @@ namespace DeviceLibrary
                 CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
                 CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
                 monnayeur = new CCoinValidator();
-                if(!monnayeur.IsPresent)
+                if (!monnayeur.IsPresent)
                 {
                     throw new Exception("Pas de monnayeur detecté.");
                 }
                 else
                 {
-                    if(monnayeur.ProductCode == "BV")
+                    if (monnayeur.ProductCode == "BV")
                     {
                         monnayeur = new CPelicano();
                         ((CPelicano)monnayeur).SpeedMotor = Convert.ToByte(parametersFile.SelectSingleNode("/CashParameters/CoinValidator/SpeedMTR").InnerText);
                     }
+                    //GetInhibitStateChannels();
                     monnayeur.Init();
                     SetSortersAndHoppersToLoad();
                 }
                 Hoppers = new List<CHopper>();
-                for(byte i = 1; i < 9; i++)
+                for (byte i = 1; i < 9; i++)
                 {
                     Hoppers.Add(new CHopper(i));
                 }
                 ReadParamHopper();
                 Hoppers.Sort((x, y) => y.CoinValue.CompareTo(x.CoinValue));
-                foreach(CHopper hopper in Hoppers)
+                foreach (CHopper hopper in Hoppers)
                 {
                     hopper.Init();
                 }
@@ -692,12 +743,9 @@ namespace DeviceLibrary
                 MsgTask.Start();
                 isDllReady = true;
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
-            }
-            finally
-            {
             }
         }
 
@@ -711,7 +759,7 @@ namespace DeviceLibrary
             {
                 CccTalk.countersFile.Close();
             }
-            catch(Exception)
+            catch (Exception)
             {
 
             }
@@ -719,10 +767,10 @@ namespace DeviceLibrary
             {
                 monnayeur.CVTask.Abort();
             }
-            catch(Exception)
+            catch (Exception)
             {
             }
-            foreach(CHopper h in Hoppers)
+            foreach (CHopper h in Hoppers)
             {
                 try
                 {

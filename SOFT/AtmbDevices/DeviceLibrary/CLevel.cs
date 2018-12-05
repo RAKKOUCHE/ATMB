@@ -5,16 +5,18 @@
 /// \author Rachid AKKOUCHE
 
 namespace DeviceLibrary
-{    public abstract partial class CDevice
+{
+    public abstract partial class CDevice
     {
-        /// \defgroup Niveaux Niveaux hoppers
-        /// <summary>Groupe des niveaux physiques et logiciels.</summary>
-        
         /// <summary>
         /// Classe des niveaux des hopeprs.
         /// </summary>
         public class CLevel
         {
+            /// \addtogroup Niveaux Niveaux hoppers
+            /// <summary>Groupe des niveaux physiques et logiciels.</summary>
+            /// @{
+
             /// <summary>
             /// Enumération des niveaux soft
             /// </summary>
@@ -69,7 +71,8 @@ namespace DeviceLibrary
                 /// </summary>
                 INCONNU,
             }
-
+            /// @}
+            
             /// <summary>
             /// Nom du périphérique
             /// </summary>

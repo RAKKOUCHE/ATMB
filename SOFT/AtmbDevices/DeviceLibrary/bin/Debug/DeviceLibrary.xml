@@ -1280,15 +1280,21 @@
             <summary>
             Traitement d'une demande de distribution
             </summary>
+            
         </member>
         <member name="F:DeviceLibrary.CHopper.Etat.DISPENSEINPROGRESS">
             <summary>
             Distribution en cours
-            </summary>
+            </summary>            
         </member>
         <member name="F:DeviceLibrary.CHopper.Etat.ENDDISPENSE">
             <summary>
             Traitement fin de distribution
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.CHECKLEVEL">
+            <summary>
+            Vérification des niveaux du  hopper,
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.Etat.IDLE">
@@ -1332,13 +1338,14 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CDevice.CLevel">
-            \defgroup Niveaux Niveaux hoppers
-            <summary>Groupe des niveaux physiques et logiciels.</summary>
             <summary>
-            Class des niveaux des hopeprs.
+            Classe des niveaux des hopeprs.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CDevice.CLevel.SoftLevel">
+            \addtogroup Niveaux Niveaux hoppers
+            <summary>Groupe des niveaux physiques et logiciels.</summary>
+            @{
             <summary>
             Enumération des niveaux soft
             </summary>
@@ -1400,6 +1407,7 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CDevice.CLevel.ID">
+            @}
             <summary>
             Nom du périphérique
             </summary>
@@ -1468,9 +1476,14 @@
             Flag indiquant si le hopper est detecté.
             </summary>
         </member>
+        <member name="M:DeviceLibrary.CDevice.Init">
+            <summary>
+            Initialisation des périphériques.
+            </summary>
+        </member>
         <member name="M:DeviceLibrary.CDevice.#ctor">
             <summary>
-            
+            Constructeur
             </summary>
         </member>
         <member name="T:DeviceLibrary.CMemoryStorage">
@@ -2904,9 +2917,9 @@
             Lecture de l'etat des otpocoupleurs du périphériques.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CccTalk.Finalize">
+        <member name="M:DeviceLibrary.CccTalk.Init">
             <summary>
-            Destructeur
+            Initialisation des périphériques ccTalk
             </summary>
         </member>
         <member name="T:DeviceLibrary.CccTalk.SelfTestResult">
@@ -3567,7 +3580,32 @@
             Class principale
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManage.toPay">
+        <member name="F:DeviceLibrary.CDevicesManage.Log">
+            <summary>
+            Instance le la class Logger utilisée pour les logs.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevicesManage.ParamFileName">
+            <summary>
+            Nom du fichier des paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevicesManage.parametersFile">
+            <summary>
+            Instance de la classe XmlDocument permettant la lecture des fichiers XML.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevicesManage.MsgTask">
+            <summary>
+            Thread de la classe principale.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevicesManage.isDllReady">
+            <summary>
+            Boolean indiquant si la dll est initialiasée.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CDevicesManage.ToPay">
             <summary>
             Variable contenant le montant à payer.
             </summary>

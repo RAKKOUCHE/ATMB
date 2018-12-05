@@ -6,7 +6,7 @@
 
 namespace DeviceLibrary
 {
-    public partial class CccTalk : CDevice
+    public abstract partial class CccTalk : CDevice
     {
         /// \addtogroup Headers
         /// @{

@@ -23,18 +23,28 @@ namespace DeviceLibrary
             /// Etat initial
             /// </summary>
             RESET,
+
             /// <summary>
             /// Traitement d'une demande de distribution
             /// </summary>
+            /// 
             DISPENSE,
+
             /// <summary>
             /// Distribution en cours
-            /// </summary>
+            /// </summary>            
             DISPENSEINPROGRESS,
+            
             /// <summary>
             /// Traitement fin de distribution
             /// </summary>
             ENDDISPENSE,
+
+            /// <summary>
+            /// Vérification des niveaux du  hopper,
+            /// </summary>
+            CHECKLEVEL,
+
             /// <summary>
             /// Inactif
             /// </summary>

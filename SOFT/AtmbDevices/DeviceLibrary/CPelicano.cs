@@ -65,7 +65,7 @@ namespace DeviceLibrary
                 byte result = 0XFF;
                 try
                 {
-                    if((result = base.OptoStates) == 0XFF)
+                    if ((result = base.OptoStates) == 0XFF)
                     {
                         CDevicesManage.Log.Error("Impossible de lire l'état des optos coupleur du {0}", DeviceAddress);
                     }
@@ -76,7 +76,7 @@ namespace DeviceLibrary
                         ExitSensor = ((result & 0x04) > 0) ? LowerSensor.BUSY : LowerSensor.FREE;
                     }
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -98,7 +98,7 @@ namespace DeviceLibrary
                 bool result = false;
                 try
                 {
-                    if(OptoStates != 0xFF)
+                    if (OptoStates != 0xFF)
                     {
                         result = (coinInContainer == CoinPresent.COINPRESENT);
                     }
@@ -107,7 +107,7 @@ namespace DeviceLibrary
                         CDevicesManage.Log.Error("Impossible de lire l'état des optocoupleurs du pelicano");
                     }
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -135,7 +135,7 @@ namespace DeviceLibrary
                     byte byResult = GetByte(CCoinValidator.Header.REQUESTOPTIONFLAG);
                     result = (byResult & 16) > 0 ? OptionFlag.SUPPORTED : OptionFlag.UNSUPPORTED;
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -155,12 +155,12 @@ namespace DeviceLibrary
                 try
                 {
                     CDevicesManage.Log.Info(messagesText.getSN, DeviceAddress);
-                    if(!IsCmdccTalkSended(DeviceAddress, CccTalk.Header.REQUESTSN, 0, null, bufferIn))
+                    if (!IsCmdccTalkSended(DeviceAddress, CccTalk.Header.REQUESTSN, 0, null, bufferIn))
                     {
                         CDevicesManage.Log.Error(messagesText.erreurCmd, CccTalk.Header.REQUESTSN, DeviceAddress);
                     }
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -182,7 +182,7 @@ namespace DeviceLibrary
                 byte[] bufferIn = { 0 };
                 byte[] bufferParam;
                 CDevicesManage.Log.Info(messagesText.cmdMotorPelicano, command, data);
-                if(command == CcmdMotors.SETSPEED)
+                if (command == CcmdMotors.SETSPEED)
                 {
                     bufferParam = new byte[] { (byte)command, data };
                 }
@@ -190,11 +190,11 @@ namespace DeviceLibrary
                 {
                     bufferParam = new byte[] { (byte)command };
                 }
-                if(!IsCmdccTalkSended(DeviceAddress, CccTalk.Header.OPERATEMOTOR, (command == CcmdMotors.SETSPEED) ? (byte)2 : (byte)1, bufferParam, bufferIn))
+                if (!IsCmdccTalkSended(DeviceAddress, CccTalk.Header.OPERATEMOTOR, (command == CcmdMotors.SETSPEED) ? (byte)2 : (byte)1, bufferParam, bufferIn))
                 {
                     CDevicesManage.Log.Error(messagesText.errMotorPelicano);
                 }
-                if((command == CcmdMotors.GETSPEED) || (command == CcmdMotors.GETPOCKETIME))
+                if ((command == CcmdMotors.GETSPEED) || (command == CcmdMotors.GETPOCKETIME))
                 {
                     return bufferIn[0];
                 }
@@ -203,7 +203,7 @@ namespace DeviceLibrary
                     return 0xFF;
                 }
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -218,7 +218,7 @@ namespace DeviceLibrary
             try
             {
                 CDevicesManage.Log.Info(messagesText.cmdMotorPelicanoMode, level);
-                if(ActivateMotor(level) != 0xFF)
+                if (ActivateMotor(level) != 0xFF)
                 {
                     CDevicesManage.Log.Error("Impossible d'activer le moteur du pelicano");
                 }
@@ -227,7 +227,7 @@ namespace DeviceLibrary
                     CDevicesManage.Log.Info(messagesText.cmdMotorPelicanoInProgress);
                 }
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -241,7 +241,7 @@ namespace DeviceLibrary
             try
             {
                 CDevicesManage.Log.Info(messagesText.cmdMotorPelicanoMode, CcmdMotors.CPR);
-                if(ActivateMotor(CcmdMotors.CPR) != 0xFF)
+                if (ActivateMotor(CcmdMotors.CPR) != 0xFF)
                 {
                     CDevicesManage.Log.Error(messagesText.errMotorPelicano);
                 }
@@ -250,7 +250,7 @@ namespace DeviceLibrary
                     CDevicesManage.Log.Info(messagesText.cmdMotorPelicanoInProgress);
                 }
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -274,7 +274,7 @@ namespace DeviceLibrary
                     CDevicesManage.Log.Info(messagesText.cmdMotorPelicanoMode, CcmdMotors.GETSPEED);
                     result = ActivateMotor(CcmdMotors.GETSPEED);
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -285,7 +285,7 @@ namespace DeviceLibrary
                 try
                 {
                     CDevicesManage.Log.Info(messagesText.cmdMotorPelicanoMode, CcmdMotors.SETSPEED);
-                    if(ActivateMotor(CcmdMotors.SETSPEED, value) != 0xFF)
+                    if (ActivateMotor(CcmdMotors.SETSPEED, value) != 0xFF)
                     {
                         CDevicesManage.Log.Error(messagesText.errMotorPelicano);
                     }
@@ -294,7 +294,7 @@ namespace DeviceLibrary
                         CDevicesManage.Log.Info("La vitesse du moteur est fixée à {0}%", value);
                     }
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -318,7 +318,7 @@ namespace DeviceLibrary
                     CDevicesManage.Log.Info(messagesText.cmdMotorPelicanoMode, CcmdMotors.GETPOCKETIME);
                     result = ActivateMotor(CcmdMotors.GETPOCKETIME);
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -334,19 +334,20 @@ namespace DeviceLibrary
             try
             {
                 base.CheckState();
-                switch(State)
+                switch (State)
                 {
                     case Etat.STATE_TRASHEMPTY:
                     {
                         CDevicesManage.Log.Info("Evacuation des pièces du container du Pelicano");
                         TrashCycle();
-                        Thread.Sleep(6000);
+                        State = Etat.STATE_DISABLEMASTER;
+                        Thread.Sleep(5000);
                         break;
                     }
                     case Etat.STATE_CHECKTRASHDOOR:
                     {
                         CDevicesManage.Log.Info("Vérification de la porte du container du Pelicano");
-                        if(OptoStates != 0xFF)
+                        if (OptoStates != 0xFF)
                         {
                             CDevicesManage.Log.Info("La porte du container du Pelicano est", TrashLid);
                         }
@@ -359,7 +360,7 @@ namespace DeviceLibrary
                     case Etat.STATE_CHECKLOWERSENSOR:
                     {
                         CDevicesManage.Log.Info("Vérification de l'absence d'obstacle dans les sorties du Pelicano.");
-                        if(OptoStates != 0xFF)
+                        if (OptoStates != 0xFF)
                         {
                             CDevicesManage.Log.Info("Les sortie du Pelicano est {0}", ExitSensor);
                         }
@@ -394,9 +395,8 @@ namespace DeviceLibrary
                         break;
                     }
                 }
-                State = Etat.STATE_IDLE;
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -408,63 +408,76 @@ namespace DeviceLibrary
         public override void TaskCheckEventCV()
         {
             State = Etat.STATE_IDLE;
-            while(true)
+            while (true)
             {
-                while(!IsCoinPresent)
-                {
-                    try
-                    {
-                        mutexCCTalk.WaitOne();
-                        CDevicesManage.Log.Debug("Etat Pelicano {0}", State);
-                        CheckState();
-                    }
-                    catch(Exception E)
-                    {
-                        CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                    }
-                    finally
-                    {
-                        mutexCCTalk.ReleaseMutex();
-                    }
-                    Thread.Sleep(PollingDelay);
-                }
-
                 try
                 {
-                    mutexCCTalk.WaitOne();
-                    if(CDevicesManage.toPay < 1)
+                    if (IsCVToBeActivated)
                     {
-                        State = Etat.STATE_TRASHEMPTY;
-                        CheckState();
+                        State = Etat.STATE_ENABLEMASTER;
+                        IsCVToBeActivated = false;
                     }
                     else
                     {
-                        State = Etat.STATE_ENABLEMASTER;
-                        CheckState();
-                        do
+                        if (IsCVToBeDeactivated)
                         {
-                            CDevicesManage.Log.Debug("Etat Pelicano {0}", State);
-                            Thread.Sleep(PollingDelay);
-                            State = Etat.STATE_GETCREDITBUFFER;
-                            CheckState();
-                            State = Etat.STATE_CHECKCREDIBUFFER;
-                            CheckState();
-                            Thread.Sleep(PollingDelay);
-                            State = Etat.STATE_GETCREDITBUFFER;
-                            CheckState();
-
-                        } while(BackEventCounter != creditBuffer.EventCounter);
+                            State = Etat.STATE_DISABLEMASTER;
+                            IsCVToBeDeactivated = false;
+                        }
+                        else
+                        {
+                            if (BackEventCounter != creditBuffer.EventCounter)
+                            {
+                                State = Etat.STATE_CHECKCREDIBUFFER;
+                            }
+                            else
+                            {
+                                if (IsCoinPresent)
+                                {
+                                    if (CDevicesManage.ToPay < 1)
+                                    {
+                                        if(MasterInhibitStatus == InhibitStatus.ENABLED)
+                                        {
+                                            IsCVToBeDeactivated = true;
+                                        }
+                                        else
+                                        {
+                                            State = Etat.STATE_TRASHEMPTY;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (MasterInhibitStatus == InhibitStatus.ENABLED)
+                                        {
+                                            State = Etat.STATE_GETCREDITBUFFER;
+                                        }
+                                        else
+                                        {
+                                            IsCVToBeActivated = true;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    State = Etat.STATE_GETCREDITBUFFER;
+                                }
+                            }
+                        }
                     }
+                    mutexCCTalk.WaitOne();
+                    CheckState();
+                    mutexCCTalk.ReleaseMutex();
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 finally
                 {
+                    mutexCCTalk.WaitOne();
                     mutexCCTalk.ReleaseMutex();
+                    Thread.Sleep(PollingDelay);
                 }
-                State = Etat.STATE_IDLE;
             }
         }
 

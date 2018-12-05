@@ -15,7 +15,7 @@ namespace DeviceLibrary
     /// <summary>
     /// Class ccTalk
     /// </summary>
-    public partial class CccTalk : CDevice
+    public abstract partial class CccTalk : CDevice
     {
         /// <summary>
         /// Nom du fichier contenant les compteurs.
@@ -79,15 +79,15 @@ namespace DeviceLibrary
                 if(PortSerie == null)
                 {
                     CDevicesManage.Log.Info(messagesText.search_ccTalk);
-                    PortSerie = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One)
-                    {
-                        ReadTimeout = 100,
-                        WriteTimeout = 100
-                    };
                     string[] ports = SerialPort.GetPortNames();
                     foreach(string port in ports)
                     {
-                        if(IsCcTalkPort(port))
+                        PortSerie = new SerialPort(port, 9600, Parity.None, 8, StopBits.One)
+                        {
+                            ReadTimeout = 100,
+                            WriteTimeout = 100,
+                        };
+                        if (IsCcTalkPort(port))
                         {
                             CDevicesManage.Log.Info(messagesText.busOKfinded, port);
                             break;
@@ -558,20 +558,12 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Destructeur
+        /// Initialisation des périphériques ccTalk
         /// </summary>
-        ~CccTalk()
+        public override void Init()
         {
-            try
-            {
-                countersFile.Close();
-            }
-            catch(Exception)
-            {
 
-            }
-
-        }
+        }        
 
     }
-}
+}                                 

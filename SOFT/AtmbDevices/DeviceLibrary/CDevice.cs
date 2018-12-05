@@ -62,7 +62,13 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        /// Initialisation des périphériques.
+        /// </summary>
+        public abstract void Init();
+
+
+        /// <summary>
+        /// Constructeur
         /// </summary>
         public CDevice()
         {

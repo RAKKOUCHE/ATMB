@@ -439,7 +439,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Initialisation du monnayeur.
         /// </summary>
-        public void Init()
+        public override void  Init()
         {
             CDevicesManage.Log.Info("Initialisation du {0}", DeviceAddress);
             BackEventCounter = 0;
@@ -452,7 +452,6 @@ namespace DeviceLibrary
 
             }
             creditBuffer = new CCVcreditBuffer(this);
-            CDevicesManage.Log.Trace("Simple poll sur {0} a {1}", DeviceAddress, SimplePoll ? "réussi" : "echoué");
             CDevicesManage.Log.Info("Identification du {0} \r\n//////////////////", DeviceAddress);
             CDevicesManage.Log.Info("Catégorie du périphérique : {0}", EquipementCategory);
             CDevicesManage.Log.Info("Fabricant : {0}", Manufacturer);
@@ -621,6 +620,7 @@ namespace DeviceLibrary
                     {
                         CDevicesManage.Log.Info("desactive le {0}", DeviceAddress);
                         MasterDisable();
+                        state = Etat.STATE_IDLE;
                         break;
                     }
                     case Etat.STATE_ENABLEMASTER:
@@ -675,6 +675,10 @@ namespace DeviceLibrary
                     case Etat.STATE_CHECKCREDIBUFFER:
                     {
                         CheckCreditBuffer();
+                        break;
+                    }
+                    case Etat.STATE_IDLE:
+                    {
                         break;
                     }
                     default:

@@ -17,7 +17,6 @@
  *	        2 rue Georges MELIES<BR>
  *          78390 BOIS D'ARCY<BR>
  *	        +33 651 60 40 47<BR>
- *	<a href = "http://www.rasoftware.fr">http://www.rasoftware.fr </a> <BR><BR>
  *
  * 
  * 

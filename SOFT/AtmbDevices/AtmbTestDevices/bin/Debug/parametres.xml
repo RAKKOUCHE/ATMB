@@ -36,110 +36,110 @@
                 <Position>1</Position> 
                 <Enable>true</Enable> 
                 <PathSorter>1</PathSorter> 
-                <HopperToLoad>1</HopperToLoad> 
-                <Valeur>5</Valeur> 
+                <HopperToLoad>0</HopperToLoad> 
+                <Valeur>1</Valeur> 
             </Canal>
             <Canal>
                 <Position>2</Position>
                 <Enable>true</Enable>
                 <PathSorter>2</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
-                <Valeur>10</Valeur>
+                <Valeur>2</Valeur>
             </Canal>
             <Canal>
                 <Position>3</Position>
                 <Enable>true</Enable>
                 <PathSorter>3</PathSorter>
-                <HopperToLoad>2</HopperToLoad>
-                <Valeur>20</Valeur>
+                <HopperToLoad>1</HopperToLoad>
+                <Valeur>5</Valeur>
             </Canal>
             <Canal>
                 <Position>4</Position>
                 <Enable>true</Enable>
-                <PathSorter>4</PathSorter>
+                <PathSorter>0</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
-                <Valeur>50</Valeur>
+                <Valeur>10</Valeur>
             </Canal>
             <Canal>
                 <Position>5</Position>
                 <Enable>true</Enable>
                 <PathSorter>1</PathSorter>
-                <HopperToLoad>0</HopperToLoad>
-                <Valeur>100</Valeur>
+                <HopperToLoad>2</HopperToLoad>
+                <Valeur>20</Valeur>
             </Canal>
             <Canal>
                 <Position>6</Position>
                 <Enable>true</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
-                <Valeur>200</Valeur>
+                <Valeur>50</Valeur>
             </Canal>
             <Canal>
                 <Position>7</Position>
-                <Enable>false</Enable>
+                <Enable>true</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
-                <Valeur>0</Valeur>
+                <Valeur>100</Valeur>
             </Canal>
             <Canal>
                 <Position>8</Position>
-                <Enable>false</Enable>
+                <Enable>true</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
-                <Valeur>0</Valeur>
+                <Valeur>200</Valeur>
             </Canal>
             <Canal>
                 <Position>9</Position>
-                <Enable>false</Enable>
+                <Enable>true</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
-                <Valeur>0</Valeur>
+                <Valeur>0,20</Valeur>
             </Canal>
             <Canal>
                 <Position>10</Position>
-                <Enable>false</Enable>
+                <Enable>true</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
-                <Valeur>0</Valeur>
+                <Valeur>0,50</Valeur>
             </Canal>
             <Canal>
                 <Position>11</Position>
-                <Enable>true</Enable>
+                <Enable>false</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
                 <Valeur>0</Valeur>
             </Canal>
             <Canal>
                 <Position>12</Position>
-                <Enable>true</Enable>
+                <Enable>false</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
                 <Valeur>0</Valeur>
             </Canal>
             <Canal>
                 <Position>13</Position>
-                <Enable>true</Enable>
+                <Enable>false</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
                 <Valeur>0</Valeur>
             </Canal>
             <Canal>
                 <Position>14</Position>
-                <Enable>true</Enable>
+                <Enable>false</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
                 <Valeur>0</Valeur>
             </Canal>
             <Canal>
                 <Position>15</Position>
-                <Enable>true</Enable>
+                <Enable>false</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
                 <Valeur>0</Valeur>
             </Canal>
             <Canal>
                 <Position>16</Position>
-                <Enable>true</Enable>
+                <Enable>false</Enable>
                 <PathSorter>1</PathSorter>
                 <HopperToLoad>0</HopperToLoad>
                 <Valeur>0</Valeur>
@@ -168,7 +168,7 @@
             <ID>2</ID>
             <Address>4</Address>
             <Devise>EUR</Devise>
-            <Valeur>20</Valeur>
+            <Valeur>5</Valeur>
             <Recharge>500</Recharge>
             <Critique>false</Critique>
             <Niveaux>
@@ -182,7 +182,7 @@
             <ID>3</ID>
             <Address>5</Address>
             <Devise>EUR</Devise>
-            <Valeur>10</Valeur>
+            <Valeur>20</Valeur>
             <Recharge>500</Recharge>
             <Critique>true</Critique>
             <Niveaux>

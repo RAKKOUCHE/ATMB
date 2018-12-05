@@ -48,3 +48,5 @@ D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.csproj.Co
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.csproj.CopyComplete
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.dll
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.pdb
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\BnrCtlDotNet.dll
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\BnrCtlDotNet40.dll
