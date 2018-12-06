@@ -1,3 +1,8 @@
 logs
 /SOFT/AtmbDevices/.vs/AtmbTestDevices/v15/*.suo
 doc_dll
+/SOFT/AtmbDevices/AtmbTestDevices/bin/Debug/logs/*.log
+/SOFT/AtmbDevices/AtmbTestDevices/bin/Release/logs/API.log
+/SOFT/AtmbDevices/AtmbTestDevices/bin/Release/logs/atmbdevices.log
+/SOFT/AtmbDevices/AtmbTestDevices/bin/Release/logs/Error.log
+/SOFT/AtmbDevices/AtmbTestDevices/bin/Release/logs/Requests.log

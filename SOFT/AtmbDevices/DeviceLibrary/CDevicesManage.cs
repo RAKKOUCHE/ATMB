@@ -745,6 +745,7 @@ namespace DeviceLibrary
                 monnayeur.CVTask.Start();
                 MsgTask = new Thread(Task);
                 MsgTask.Start();
+                //Thread.Sleep(2000);
                 IsDllReady = true;
             }
             catch (Exception E)

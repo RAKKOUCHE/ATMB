@@ -66,3 +66,4 @@ D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Release\fr\AtmbTestDevices.
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Release\AtmbTestDevices.csproj.CopyComplete
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Release\AtmbTestDevices.exe
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Release\AtmbTestDevices.pdb
+D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Release\BnrCtlDotNet40.dll

@@ -39,3 +39,4 @@ D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.csproj.
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.csproj.CopyComplete
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.dll
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Release\DeviceLibrary.pdb
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Release\BnrCtlDotNet40.dll

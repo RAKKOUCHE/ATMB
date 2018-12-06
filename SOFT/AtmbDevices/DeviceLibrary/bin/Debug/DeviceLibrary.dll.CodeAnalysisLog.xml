@@ -12,8 +12,8 @@
          <Members>
           <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2018-12-06 00:18:46Z" FixCategory="Breaking">
-             <Issue Name="DisposeBoolSignature" Certainty="95" Level="Error" Path="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary" File="CDevicesManage.cs" Line="761">Vérifiez que 'CDevicesManage.Dispose(bool)' est déclaré comme protected, virtual et unsealed.</Issue>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2018-12-06 00:35:42Z" FixCategory="Breaking">
+             <Issue Name="DisposeBoolSignature" Certainty="95" Level="Error" Path="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary" File="CDevicesManage.cs" Line="762">Vérifiez que 'CDevicesManage.Dispose(bool)' est déclaré comme protected, virtual et unsealed.</Issue>
             </Message>
            </Messages>
           </Member>
