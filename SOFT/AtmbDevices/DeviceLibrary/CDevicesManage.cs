@@ -1,4 +1,5 @@
-﻿/// \file CDevicesManage.cs
+﻿using NLog;
+/// \file CDevicesManage.cs
 /// \brief Fichier principal de la dll.
 /// \date 28 11 2018
 /// \version 1.0.0
@@ -10,7 +11,6 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Xml;
-using NLog;
 
 namespace DeviceLibrary
 {
@@ -79,7 +79,7 @@ namespace DeviceLibrary
     /// <summary>
     /// Class principale
     /// </summary>
-    public class CDevicesManage
+    public class CDevicesManage : IDisposable
     {
         /// <summary>
         /// Instance le la class Logger utilisée pour les logs.
@@ -101,10 +101,15 @@ namespace DeviceLibrary
         /// </summary>
         private Thread MsgTask;
 
+        private bool isDllReady;
         /// <summary>
         /// Boolean indiquant si la dll est initialiasée.
         /// </summary>
-        private bool isDllReady;
+        public bool IsDllReady
+        {
+            get => isDllReady;
+            set => isDllReady = value;
+        }
 
         private static int toPay;
         /// <summary>
@@ -172,11 +177,12 @@ namespace DeviceLibrary
                 }
                 catch (Exception E)
                 {
-                    Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                    Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 return result;
             }
         }
+
         /*-------------------------------------------------------*/
 
         /// <summary>
@@ -275,13 +281,13 @@ namespace DeviceLibrary
         /// <summary>
         /// Tâche principale de la dll
         /// </summary>
-        private void TaskMessage()
+        private void Task()
         {
             while (true)
             {
-                if (isDllReady)
+                if (IsDllReady)
                 {
-                    isDllReady = false;
+                    IsDllReady = false;
                     OnDllReady();
                 }
                 foreach (CHopper hopper in Hoppers)
@@ -693,13 +699,13 @@ namespace DeviceLibrary
         {
             try
             {
-                isDllReady = false;
                 Log = NLog.LogManager.GetCurrentClassLogger();
-                ParamFileName = "parametres.xml";
-
                 Log.Info("\r\n\r\n\r\n{0}\r\n", messagesText.callDll);
+                IsDllReady = false;
+                ParamFileName = "parametres.xml";
                 ParamFileName = Directory.GetCurrentDirectory() + "\\" + ParamFileName;
                 parametersFile.Load(ParamFileName);
+
                 CccTalk.counters = new CcoinsCounters();
                 CccTalk.counterSerializer = new BinaryFormatter();
                 if (!File.Exists(CccTalk.fileCounterName))
@@ -716,17 +722,15 @@ namespace DeviceLibrary
                 {
                     throw new Exception("Pas de monnayeur detecté.");
                 }
-                else
+                if (monnayeur.ProductCode == "BV")
                 {
-                    if (monnayeur.ProductCode == "BV")
-                    {
-                        monnayeur = new CPelicano();
-                        ((CPelicano)monnayeur).SpeedMotor = Convert.ToByte(parametersFile.SelectSingleNode("/CashParameters/CoinValidator/SpeedMTR").InnerText);
-                    }
-                    //GetInhibitStateChannels();
-                    monnayeur.Init();
-                    SetSortersAndHoppersToLoad();
+                    monnayeur = new CPelicano();
+                    ((CPelicano)monnayeur).SpeedMotor = Convert.ToByte(parametersFile.SelectSingleNode("/CashParameters/CoinValidator/SpeedMTR").InnerText);
                 }
+                //GetInhibitStateChannels();
+                //monnayeur.Init();
+                SetSortersAndHoppersToLoad();
+
                 Hoppers = new List<CHopper>();
                 for (byte i = 1; i < 9; i++)
                 {
@@ -739,9 +743,9 @@ namespace DeviceLibrary
                     hopper.Init();
                 }
                 monnayeur.CVTask.Start();
-                MsgTask = new Thread(TaskMessage);
+                MsgTask = new Thread(Task);
                 MsgTask.Start();
-                isDllReady = true;
+                IsDllReady = true;
             }
             catch (Exception E)
             {
@@ -753,46 +757,54 @@ namespace DeviceLibrary
         /// <summary>
         /// Fonction libérant les ressources
         /// </summary>
-        public void Dispose()
+        public virtual void Dispose(bool disposing)
         {
-            try
-            {
-                CccTalk.countersFile.Close();
-            }
-            catch (Exception)
-            {
-
-            }
-            try
-            {
-                monnayeur.CVTask.Abort();
-            }
-            catch (Exception)
-            {
-            }
-            foreach (CHopper h in Hoppers)
+            if (disposing)
             {
                 try
                 {
-                    h.HTask.Abort();
+                    CccTalk.countersFile.Close();
                 }
-                catch
+                catch (Exception)
                 {
 
                 }
+                try
+                {
+                    monnayeur.CVTask.Abort();
+                }
+                catch (Exception)
+                {
+                }
+                foreach (CHopper h in Hoppers)
+                {
+                    try
+                    {
+                        h.HTask.Abort();
+                    }
+                    catch
+                    {
+
+                    }
+                }
             }
+
             Log.Trace("Stop");
             Log.Trace("\r\n---------------------\r\n");
             NLog.LogManager.Shutdown();
-            GC.SuppressFinalize(this);
         }
 
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
         /// <summary>
         /// Destructeur
         /// </summary>
         ~CDevicesManage()
         {
-            Dispose();
+            Dispose(true);
         }
     }
 }

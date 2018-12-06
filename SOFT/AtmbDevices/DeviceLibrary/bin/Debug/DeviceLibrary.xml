@@ -4,6 +4,80 @@
         <name>DeviceLibrary</name>
     </assembly>
     <members>
+        <member name="T:DeviceLibrary.CBnrMei">
+            <summary>
+            Class du bnr
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBnrMei.BnrResetTimeOutInMS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CBnrMei.Etat">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBnrMei.state">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBnrMei.ev">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBnrMei.isPresent">
+            <summary>
+            Indique si un bnr est connecté.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBnrMei.result">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CBnrMei.CashOccured(Mei.Bnr.XfsCashOrder)">
+            <summary>
+            
+            </summary>
+            <param name="cashInOrder"></param>
+        </member>
+        <member name="M:DeviceLibrary.CBnrMei.IntermediateOccured(System.Int32,Mei.Bnr.OperationId,Mei.Bnr.IntermediateEvents,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identificationId"></param>
+            <param name="operationId"></param>
+            <param name="result"></param>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DeviceLibrary.CBnrMei.StatusOccured(Mei.Bnr.StatusChanged,Mei.Bnr.BnrXfsErrorCode,Mei.Bnr.BnrXfsErrorCode,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="status"></param>
+            <param name="result"></param>
+            <param name="extendedResult"></param>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DeviceLibrary.CBnrMei.Bnr_OperationCompletedEvent(System.Int32,Mei.Bnr.OperationId,Mei.Bnr.BnrXfsErrorCode,Mei.Bnr.BnrXfsErrorCode,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="identificationId"></param>
+            <param name="operationId"></param>
+            <param name="result"></param>
+            <param name="extendedResult"></param>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DeviceLibrary.CBnrMei.#ctor">
+            <summary>
+            Constructeur
+            </summary>
+        </member>
         <member name="T:DeviceLibrary.CCanal">
             <summary>
             Class d'un canal d'un périphérique de paiement
@@ -288,7 +362,7 @@
             </summary>
             <remarks>Header 232</remarks>
         </member>
-        <member name="M:DeviceLibrary.CcashReader.TaskCheckEventCV">
+        <member name="M:DeviceLibrary.CcashReader.Task">
             <summary>
             Tâche vérifiant les activitées du monnayeur
             </summary>
@@ -1126,7 +1200,7 @@
             </summary>
             <param name="CoinsNumber"></param>
         </member>
-        <member name="M:DeviceLibrary.CHopper.TaskHopper">
+        <member name="M:DeviceLibrary.CHopper.Task">
             <summary>
             Tâche de la machine d'état du hopper.
             </summary>
@@ -1460,6 +1534,11 @@
             Numéro de série du périphérique
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CDevice.bnr">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:DeviceLibrary.CDevice.Manufacturer">
             <summary>
             Identifiant du  fabricant
@@ -1474,6 +1553,11 @@
         <member name="P:DeviceLibrary.CDevice.IsPresent">
             <summary>
             Flag indiquant si le hopper est detecté.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.Task">
+            <summary>
+            Tâche du périphérique.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevice.Init">
@@ -1838,7 +1922,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:DeviceLibrary.CCoinValidator.TaskCheckEventCV">
+        <member name="M:DeviceLibrary.CCoinValidator.Task">
             <summary>
             Tâche de la machine d'état du monnayeur.
             </summary>
@@ -3470,7 +3554,7 @@
             Machine d'état du pelicano
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CPelicano.TaskCheckEventCV">
+        <member name="M:DeviceLibrary.CPelicano.Task">
             <summary>
             Tâche de la machine d'état du Pelicano
             </summary>
@@ -3600,7 +3684,7 @@
             Thread de la classe principale.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManage.isDllReady">
+        <member name="P:DeviceLibrary.CDevicesManage.IsDllReady">
             <summary>
             Boolean indiquant si la dll est initialiasée.
             </summary>
@@ -3647,7 +3731,7 @@
             Effectue le rendu monnaie.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.TaskMessage">
+        <member name="M:DeviceLibrary.CDevicesManage.Task">
             <summary>
             Tâche principale de la dll
             </summary>
@@ -3739,7 +3823,7 @@
             Constructeur de la classe principale
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.Dispose">
+        <member name="M:DeviceLibrary.CDevicesManage.Dispose(System.Boolean)">
             <summary>
             Fonction libérant les ressources
             </summary>

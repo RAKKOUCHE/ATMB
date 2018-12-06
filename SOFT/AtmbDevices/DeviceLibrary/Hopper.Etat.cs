@@ -7,7 +7,7 @@
 
 namespace DeviceLibrary
 {
-    public partial class CHopper
+    public partial class CHopper : CccTalk
     {
         /// \addtogroup Etats
         /// @{

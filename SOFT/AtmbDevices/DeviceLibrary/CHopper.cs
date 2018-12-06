@@ -914,7 +914,7 @@ namespace DeviceLibrary
                     {
                         State = Etat.DISPENSE;
                     };
-                    HTask = new Thread(TaskHopper);
+                    HTask = new Thread(Task);
                     HTask.Start();
                 }
                 else
@@ -1197,7 +1197,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Tâche de la machine d'état du hopper.
         /// </summary>
-        public void TaskHopper()
+        public override void Task()
         {
             while (true)
             {

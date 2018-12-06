@@ -4,6 +4,8 @@
     <StartAction>Program</StartAction>
     <StartProgram>D:\Projets\ATMB\SOFTWARE\AtmbTestDevices\AtmbTestDevices\bin\Debug\AtmbTestDevices.exe</StartProgram>
     <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <StartAction>Program</StartAction>

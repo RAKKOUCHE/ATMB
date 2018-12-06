@@ -1,6 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\enterprise\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\DeviceLibrary.dll">
+   <Modules>
+    <Module Name="devicelibrary.dll">
+     <Namespaces>
+      <Namespace Name="DeviceLibrary">
+       <Types>
+        <Type Name="CDevicesManage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2018-12-06 00:18:46Z" FixCategory="Breaking">
+             <Issue Name="DisposeBoolSignature" Certainty="95" Level="Error" Path="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary" File="CDevicesManage.cs" Line="761">Vérifiez que 'CDevicesManage.Dispose(bool)' est déclaré comme protected, virtual et unsealed.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
+   <Name>Implémenter IDisposable correctement</Name>
+   <Description>Tous les types IDisposable doivent implémenter le modèle Dispose correctement.</Description>
+   <Resolution Name="DisposeBoolSignature">Vérifiez que {0} est déclaré comme protected, virtual et unsealed.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms244737.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
  <Localized>
   <String Key="Category">Catégorie</String>
   <String Key="Certainty">Certitude</String>

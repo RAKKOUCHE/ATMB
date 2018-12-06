@@ -113,10 +113,11 @@ namespace DeviceLibrary
             {
                 byte[] bufferIn = { 0x00, 0xFF, 0x55, 0xAA };
                 byte[] bufferOut = { 0XFF, 0X00, 0XAA, 0X55 };
+
                 PortSerie.PortName = NameOfPort;
                 PortSerie.Open();
-                PortSerie.Write(bufferOut, 0, 4);
-                for(byte byIndex = 0; byIndex < 4; byIndex++)
+                PortSerie.Write(bufferOut, 0, bufferOut.Length);
+                for(byte byIndex = 0; byIndex < bufferOut.Length; byIndex++)
                 {
                     bufferIn[byIndex] = (byte)PortSerie.ReadByte();
                     if(!(bufferOut[byIndex] == bufferIn[byIndex]))

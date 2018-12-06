@@ -4,10 +4,6 @@
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DeviceLibrary
 {
@@ -33,6 +29,10 @@ namespace DeviceLibrary
         {
             get;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        private static CBnrMei bnr;
 
         /// <summary>
         /// Identifiant du  fabricant
@@ -62,16 +62,25 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// Tâche du périphérique.
+        /// </summary>
+        public abstract void Task();
+
+        /// <summary>
         /// Initialisation des périphériques.
         /// </summary>
         public abstract void Init();
-
 
         /// <summary>
         /// Constructeur
         /// </summary>
         public CDevice()
         {
+            if (bnr == null)
+            {
+                bnr = new CBnrMei();
+            }
+
             if (denominationInserted == null)
             {
                 denominationInserted = new CInserted();

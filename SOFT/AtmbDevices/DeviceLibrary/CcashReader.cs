@@ -244,6 +244,9 @@ namespace DeviceLibrary
         /// <summary>
         /// Tâche vérifiant les activitées du monnayeur
         /// </summary>
-        public abstract void TaskCheckEventCV();
+        public override void Task()
+        {
+
+        }
     }
 }

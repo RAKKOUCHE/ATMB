@@ -214,9 +214,16 @@ namespace DeviceLibrary
                 }
                 if(IsPresent)
                 {
+                    canaux = new CCanal[numChannel];
+                    for (byte i = 0; i < numChannel; i++)
+                    {
+                        canaux[i] = new CCanal((byte)(i + 1), this);
+                        canaux[i].coinId.GetCoinId();
+
+                    }
                     errorCV = new CErroCV();
                     ResetDevice();
-                    CVTask = new Thread(TaskCheckEventCV);
+                    CVTask = new Thread(Task);
                 }
             }
             catch(Exception E)
@@ -444,13 +451,6 @@ namespace DeviceLibrary
             CDevicesManage.Log.Info("Initialisation du {0}", DeviceAddress);
             BackEventCounter = 0;
             MasterDisable();
-            canaux = new CCanal[numChannel];
-            for(byte i = 0; i < numChannel; i++)
-            {
-                canaux[i] = new CCanal((byte)(i + 1), this);
-                canaux[i].coinId.GetCoinId();
-
-            }
             creditBuffer = new CCVcreditBuffer(this);
             CDevicesManage.Log.Info("Identification du {0} \r\n//////////////////", DeviceAddress);
             CDevicesManage.Log.Info("Catégorie du périphérique : {0}", EquipementCategory);
@@ -482,9 +482,9 @@ namespace DeviceLibrary
                 {
                     case Etat.STATE_INIT:
                     {
-                        //TODO Lecture ds paramètres de pièces activées dans le fichier parametre.XML .
-                        CDevicesManage.Log.Debug("Initialisation Pelicano");
+                        CDevicesManage.Log.Debug("Initialisation monnayeur");
                         DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
+                        Init();
 
                         break;
                     }
@@ -725,7 +725,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Tâche de la machine d'état du monnayeur.
         /// </summary>
-        public override void TaskCheckEventCV()
+        public override void Task()
         {
             CDevicesManage.Log.Debug("Tâche de lecture des évenements concernant du {0}", DeviceAddress);
             while(true)

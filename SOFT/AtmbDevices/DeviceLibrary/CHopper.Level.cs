@@ -7,7 +7,7 @@
 
 namespace DeviceLibrary
 {
-    public partial class CHopper
+    public partial class CHopper : CccTalk
     {
         /// <summary>
         /// Masque des niveau             
