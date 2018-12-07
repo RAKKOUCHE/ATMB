@@ -9,13 +9,23 @@ namespace DeviceLibrary
     /// <summary>
     /// Class du bnr
     /// </summary>
-    internal class CBnrMei
+    internal class CBnrMei : IDisposable
     {
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static Bnr bnr = new Bnr();
-        private static BnrXfsErrorCode OCresult;
-        private static readonly XfsCashOrder cashOrder;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private static BnrXfsErrorCode oCresult;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static readonly XfsCashOrder cashOrder;
 
         /// <summary>
         /// 
@@ -31,20 +41,28 @@ namespace DeviceLibrary
             OPEN,
             RESET,
             GETMODULE,
+            GETSTATUS,
             IDLE,
             STOP,
-
         }
+
+        /// <summary>
+        /// Etat de la machine d'état du BNR.
+        /// </summary>
+        private Etat state;
+
+        /// <summary>
+        /// Thread du BNR.
+        /// </summary>
+        private Thread BnrTask;
 
         /// <summary>
         /// 
         /// </summary>
-        private Etat state;
-
-        Thread BnrTask;
+        //private AutoResetEvent evSupsendThread;
 
         /// <summary>
-        /// 
+        /// Evénement permettant de gérer les function asynchrone.
         /// </summary>
         private static AutoResetEvent ev;
 
@@ -52,11 +70,6 @@ namespace DeviceLibrary
         /// Indique si un bnr est connecté.
         /// </summary>
         public bool isPresent;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private readonly int result;
 
         /// <summary>
         /// 
@@ -74,7 +87,7 @@ namespace DeviceLibrary
         /// <param name="operationId"></param>
         /// <param name="result"></param>
         /// <param name="Data"></param>
-        private static void IntermediateOccured (int identificationId, OperationId operationId, IntermediateEvents result, object Data)
+        private static void IntermediateOccured(int identificationId, OperationId operationId, IntermediateEvents result, object Data)
         {
             switch (operationId)
             {
@@ -137,7 +150,6 @@ namespace DeviceLibrary
                 default:
                     break;
             }
-
             ev.Set();
         }
 
@@ -150,7 +162,6 @@ namespace DeviceLibrary
         /// <param name="Data"></param>
         private static void StatusOccured(StatusChanged status, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)
         {
-            DeviceStatus resulta;
             switch (status)
             {
                 case StatusChanged.MaintenanceStatusChanged:
@@ -164,7 +175,6 @@ namespace DeviceLibrary
                 case StatusChanged.DeviceStatusChanged:
                 {
                     Thread.Sleep(1);
-
                     break;
                 }
                 case StatusChanged.CashUnitThreshold:
@@ -176,7 +186,6 @@ namespace DeviceLibrary
                 default:
                     break;
             }
-
             ev.Set();
         }
 
@@ -190,7 +199,7 @@ namespace DeviceLibrary
         /// <param name="Data"></param>
         private static void Bnr_OperationCompletedEvent(int identificationId, OperationId operationId, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)
         {
-            OCresult = result;
+            oCresult = result;
             switch (operationId)
             {
                 case OperationId.BnrAutomaticBillTransfer:
@@ -252,7 +261,6 @@ namespace DeviceLibrary
                 default:
                     break;
             }
-
             ev.Set();
         }
 
@@ -263,6 +271,7 @@ namespace DeviceLibrary
                 switch (state)
                 {
                     case Etat.INIT:
+                    {
                         try
                         {
                             Bnr.OperationCompletedEvent += new OperationCompleted(Bnr_OperationCompletedEvent);
@@ -271,6 +280,7 @@ namespace DeviceLibrary
                             Bnr.StatusOccuredEvent += new StatusOccured(StatusOccured);
                             isPresent = true;
                             ev = new AutoResetEvent(false);
+//                            evSupsendThread = new AutoResetEvent(false);
                             state = Etat.OPEN;
                         }
                         catch (Exception E)
@@ -278,20 +288,24 @@ namespace DeviceLibrary
                             CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                         }
                         break;
+                    }
                     case Etat.OPEN:
+                    {
                         try
                         {
                             bnr.Open();
                             state = Etat.RESET;
                         }
-                        catch(Exception E)
+                        catch (Exception E)
                         {
                             isPresent = false;
                             CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                             state = Etat.STOP;
                         }
                         break;
+                    }
                     case Etat.RESET:
+                    {
                         try
                         {
                             if (bnr.Status.DeviceStatus != DeviceStatus.OnLine)
@@ -299,37 +313,72 @@ namespace DeviceLibrary
                                 ev.Reset();
                                 bnr.Reset();
                             }
-                            if(!ev.WaitOne(BnrResetTimeOutInMS))
+                            if (!ev.WaitOne(BnrResetTimeOutInMS))
                             {
                                 throw new Exception("Le reset du BNR a échoué!");
                             }
                             state = Etat.GETMODULE;
                         }
-                        catch(Exception E)
+                        catch (Exception E)
                         {
                             CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                             Thread.Sleep(BnrResetTimeOutInMS * 2);
                         }
                         break;
+                    }
                     case Etat.GETMODULE:
                     {
-                        foreach(Module m in bnr.Modules)
+                        try
                         {
-                            CDevicesManage.Log.Debug(m.ToString() + " "+ m.Status.OperationalStatus);
-                            Thread.Sleep(1);
+                            foreach (Module m in bnr.Modules)
+                            {
+                                CDevicesManage.Log.Debug(m.ToString() + " " + m.Status.OperationalStatus);
+                                Thread.Sleep(1);
+                            }
+                        }
+                        catch (Exception E)
+                        {
+                            CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                        }
+                        state = Etat.GETSTATUS;
+                        break;
+                    }
+                    case Etat.GETSTATUS:
+                    {
+                        try
+                        {
+                            
+                            CDevicesManage.Log.Debug(bnr.Status.PositionStatusList[0].ShutterStatus.ToString());
+                            CDevicesManage.Log.Debug(bnr.Status.PositionStatusList[1].ShutterStatus.ToString());
+                            CDevicesManage.Log.Debug(bnr.Status.ToString);
+                        }
+                        catch (Exception E)
+                        {
+                            CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                         }
                         state = Etat.IDLE;
                         break;
                     }
+
                     case Etat.IDLE:
                         break;
                     case Etat.STOP:
                     {
-                        BnrTask.Suspend();
+                        try
+                        {
+                            BnrTask.Abort();
+                        }
+                        catch (Exception E)
+                        {
+                            CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                        }
+                        //evSupsendThread.WaitOne();
                         break;
                     }
                     default:
+                    {
                         break;
+                    }
                 }
                 Thread.Sleep(500);
             }
@@ -351,5 +400,44 @@ namespace DeviceLibrary
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
+
+        #region IDisposable Support
+        private bool disposedValue = false; // To detect redundant calls
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="disposing"></param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    // TODO: dispose managed state (managed objects).
+                }
+
+                // TODO: free unmanaged resources (unmanaged objects) and override a finalizer below.
+                // TODO: set large fields to null.
+
+                disposedValue = true;
+            }
+        }
+
+        // TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
+        // ~CBnrMei() {
+        //   // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
+        //   Dispose(false);
+        // }
+
+        // This code added to correctly implement the disposable pattern.
+        public void Dispose()
+        {
+            // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
+            Dispose(true);
+            // TODO: uncomment the following line if the finalizer is overridden above.
+             GC.SuppressFinalize(this);
+        }
+        #endregion
     }
 }

@@ -9,6 +9,21 @@
             Class du bnr
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CBnrMei.bnr">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBnrMei.oCresult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBnrMei.cashOrder">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CBnrMei.BnrResetTimeOutInMS">
             <summary>
             
@@ -21,22 +36,22 @@
         </member>
         <member name="F:DeviceLibrary.CBnrMei.state">
             <summary>
-            
+            Etat de la machine d'état du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBnrMei.BnrTask">
+            <summary>
+            Thread du BNR.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBnrMei.ev">
             <summary>
-            
+            Evénement permettant de gérer les function asynchrone.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBnrMei.isPresent">
             <summary>
             Indique si un bnr est connecté.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBnrMei.result">
-            <summary>
-            
             </summary>
         </member>
         <member name="M:DeviceLibrary.CBnrMei.CashOccured(Mei.Bnr.XfsCashOrder)">
@@ -77,6 +92,12 @@
             <summary>
             Constructeur
             </summary>
+        </member>
+        <member name="M:DeviceLibrary.CBnrMei.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
         </member>
         <member name="T:DeviceLibrary.CCanal">
             <summary>
@@ -3826,6 +3847,11 @@
         <member name="M:DeviceLibrary.CDevicesManage.Dispose(System.Boolean)">
             <summary>
             Fonction libérant les ressources
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManage.Dispose">
+            <summary>
+            
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManage.Finalize">

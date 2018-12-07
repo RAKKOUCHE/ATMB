@@ -1,0 +1,20 @@
+digraph "Mei::Bnr::Module::Module"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Mei::Bnr::Module::Module\n|+ Status\l+ UseHistory\l+ RestartHistory\l+ FailureHistory\l+ BillCassetteExchangeHistory\l+ MaintenanceInfo\l+ Id\l+ Identification\l+ CashType\l|+ MaintenanceDone()\l+ UpdateFirmware()\l+ Park()\l+ RevertToBoot()\l+ ToString()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{Mei::Bnr::Module::Barcode\lReader::BarcodeReader\n|+ Status\l+ UseHistory\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00046.html",tooltip="BarcodeReader "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{Mei::Bnr::Module::Bundler\l::Bundler\n|+ Status\l+ UseHistory\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00054.html",tooltip="Bundler "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{Mei::Bnr::Module::Cashbox\l::Cashbox\n|+ Status\l+ UseHistory\l+ FailureHistory\l+ BillCassetteExchangeHistory\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00060.html",tooltip="Cashbox class "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{Mei::Bnr::Module::Loader\l::Loader\n|+ Status\l+ UseHistory\l+ FailureHistory\l+ BillCassetteExchangeHistory\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00087.html",tooltip="Loader "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{Mei::Bnr::Module::MainModule\l::MainModule\n|+ Status\l+ UseHistory\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00095.html",tooltip="MainModule "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node7 [label="{Mei::Bnr::Module::Recycler\l::Recycler\n|+ Status\l+ UseHistory\l+ BillCassetteExchangeHistory\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00114.html",tooltip="Recycler "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node8 [label="{Mei::Bnr::Module::Spine\l::Spine\n|+ Status\l+ UseHistory\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00123.html",tooltip="Spine "];
+}

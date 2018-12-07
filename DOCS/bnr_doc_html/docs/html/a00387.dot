@@ -1,0 +1,10 @@
+digraph "Mei::Bnr::Module::Bundler::Status"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Mei::Bnr::Module::Bundler\l::Status\n|+ ErrorCode\l+ FunctionStatus\l+ BillStorageStatus\l+ Items\l|+ ToString()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{Mei::Bnr::Module::Status\n||~ Status()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00127.html",tooltip="Module::Status "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{Mei::Bnr::Module::Status\lOverview\n|+ Id\l+ OperationalStatus\l|~ StatusOverview()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00128.html",tooltip="Module::StatusOverview "];
+}

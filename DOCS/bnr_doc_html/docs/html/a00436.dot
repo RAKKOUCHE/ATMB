@@ -1,0 +1,8 @@
+digraph "Mei::Bnr::Report::ApplicationLogEntry"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Mei::Bnr::Report::Application\lLogEntry\n|+ Reason\l+ LastResetReason\l+ Param1\l+ Param2\l+ ProcessedBillCntr\l+ ThreadId\l+ RunCount\l|~ ApplicationLogEntry()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{Mei::Bnr::Report::BillTransport\lLogEntry\n|+ Type\l+ ParentObject\l+ Time\l+ StepCount\l# logEntryType\l# parentObject\l# time\l# stepCount\l|~ Create()\l# BillTransportLogEntry()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00146.html",tooltip="BillTransportLogEntry. "];
+}

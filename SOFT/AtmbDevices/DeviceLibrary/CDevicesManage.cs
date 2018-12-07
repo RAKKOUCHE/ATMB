@@ -758,7 +758,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Fonction libérant les ressources
         /// </summary>
-        public virtual void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
             if (disposing)
             {
@@ -795,6 +795,9 @@ namespace DeviceLibrary
             NLog.LogManager.Shutdown();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Dispose()
         {
             Dispose(true);

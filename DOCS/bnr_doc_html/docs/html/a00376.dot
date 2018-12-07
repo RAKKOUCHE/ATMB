@@ -1,0 +1,22 @@
+digraph "Mei::Bnr::Module::Status"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Mei::Bnr::Module::Status\n||~ Status()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{Mei::Bnr::Module::Status\lOverview\n|+ Id\l+ OperationalStatus\l|~ StatusOverview()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00128.html",tooltip="Module::StatusOverview "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{Mei::Bnr::Module::Barcode\lReader::Status\n|+ ErrorCode\l+ Items\l|+ ToString()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00050.html",tooltip="BarcodeReader::Status "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{Mei::Bnr::Module::Bundler\l::Status\n|+ ErrorCode\l+ FunctionStatus\l+ BillStorageStatus\l+ Items\l|+ ToString()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00056.html",tooltip="Bundler::Status "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node5 [label="{Mei::Bnr::Module::Cashbox\l::Status\n|+ ErrorCode\l+ BillStorageStatus\l|+ ToString()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00062.html",tooltip="Cashbox::Status "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{Mei::Bnr::Module::Loader\l::Status\n|+ ErrorCode\l+ FunctionalStatus\l+ BillStorageStatus\l+ BillTransportStatus\l+ BillTransportSection\l+ CashTypeStatus\l+ Items\l|+ ToString()\l~ Status()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00089.html",tooltip="Loader::Status "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node7 [label="{Mei::Bnr::Module::MainModule\l::Status\n|+ ErrorCode\l+ BillTransportStatus\l+ BillTransportSection\l+ Items\l|+ ToString()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00104.html",tooltip="MainModuleStatus. "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node8 [label="{Mei::Bnr::Module::Recycler\l::Status\n|+ ErrorCode\l+ FunctionalStatus\l+ BillStorageStatus\l+ BillTransportStatus\l+ BillTransportSection\l+ CashTypeStatus\l+ Items\l|+ ToString()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00116.html",tooltip="Recycler::Status "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node9 [label="{Mei::Bnr::Module::Spine\l::Status\n|+ ErrorCode\l+ BillTransportStatus\l+ BillTransportSection\l+ Items\l|+ ToString()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00124.html",tooltip="Spine::Status "];
+}

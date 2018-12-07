@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Mei::Bnr::Module::Stored\lErrors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00130.html",tooltip="StoredErrors - container class for the current and last stored errors for a module. "];
+}

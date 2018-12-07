@@ -1,0 +1,15 @@
+digraph "Configuration"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node4 [label="Cash Units",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00340.html",tooltip="Definitions for BNR cash units information. "];
+  Node1 [label="BNR Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00333.html",tooltip="BNR Interface contains functions and properties that are related to the BNR System. "];
+  Node2 [label="General",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00338.html",tooltip="Definitions for BNR system configuration. "];
+  Node3 [label="Denominations",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00339.html",tooltip="Definitions for BNR denomination information. "];
+  Node0 [label="Configuration",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+}
