@@ -69,6 +69,7 @@
     <Compile Include="CcashReader.cs" />
     <Compile Include="CCoindID.cs" />
     <Compile Include="Ccounters.cs" />
+    <Compile Include="CEvent.cs" />
     <Compile Include="CHopper.CEmptyCount.cs" />
     <Compile Include="CHopper.Error.cs" />
     <Compile Include="CHopper.Level.cs" />
@@ -141,9 +142,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

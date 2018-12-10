@@ -11,12 +11,12 @@
         </member>
         <member name="F:DeviceLibrary.CBnrMei.bnr">
             <summary>
-            
+            Instanciation d'un BNR
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBnrMei.oCresult">
             <summary>
-            
+            Code Erreur XFS
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBnrMei.cashOrder">
@@ -39,9 +39,9 @@
             Etat de la machine d'état du BNR.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBnrMei.BnrTask">
+        <member name="F:DeviceLibrary.CBnrMei.bnrTask">
             <summary>
-            Thread du BNR.
+            Thread utilisé pour le BNR
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBnrMei.ev">

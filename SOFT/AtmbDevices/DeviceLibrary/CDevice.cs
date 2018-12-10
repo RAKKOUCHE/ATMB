@@ -4,6 +4,7 @@
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
+using System.Collections.Generic;
 
 namespace DeviceLibrary
 {
@@ -12,6 +13,17 @@ namespace DeviceLibrary
     /// </summary>
     public abstract partial class CDevice
     {
+
+        /// <summary>
+        /// Liste des évenement.
+        /// </summary>
+        static public List<CEvent> eventsList;
+
+        /// <summary>
+        /// Objet de verrouillage de l'accés à la liste des évenements.
+        /// </summary>
+        static public object eventLock;  
+
         /// <summary>
         /// Niveaux des périphériques.
         /// </summary>
@@ -85,6 +97,11 @@ namespace DeviceLibrary
             {
                 denominationInserted = new CInserted();
             }
+            if(eventsList == null)
+            {
+                eventsList = new List<CEvent>();
+            }
+            
         }
     }
 }

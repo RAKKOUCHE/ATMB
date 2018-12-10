@@ -13,12 +13,12 @@ namespace DeviceLibrary
     {
 
         /// <summary>
-        /// 
+        /// Instanciation d'un BNR
         /// </summary>
         public static Bnr bnr = new Bnr();
 
         /// <summary>
-        /// 
+        /// Code Erreur XFS
         /// </summary>
         private static BnrXfsErrorCode oCresult;
 
@@ -52,14 +52,9 @@ namespace DeviceLibrary
         private Etat state;
 
         /// <summary>
-        /// Thread du BNR.
+        /// Thread utilisé pour le BNR
         /// </summary>
-        private Thread BnrTask;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        //private AutoResetEvent evSupsendThread;
+        Thread bnrTask;
 
         /// <summary>
         /// Evénement permettant de gérer les function asynchrone.
@@ -92,65 +87,64 @@ namespace DeviceLibrary
             switch (operationId)
             {
                 case OperationId.BnrAutomaticBillTransfer:
-                    break;
+                break;
                 case OperationId.BnrEject:
-                    break;
+                break;
                 case OperationId.BnrConfigureCashUnit:
-                    break;
+                break;
                 case OperationId.BnrPark:
-                    break;
+                break;
                 case OperationId.BnrModulePark:
-                    break;
+                break;
                 case OperationId.BnrSelfTest:
-                    break;
+                break;
                 case OperationId.BnrCalibrateWithCoupon:
-                    break;
+                break;
                 case OperationId.BnrDeleteDenomination:
-                    break;
+                break;
                 case OperationId.BnrAddDenomination:
-                    break;
+                break;
                 case OperationId.BnrModuleUpdateFirmware:
-                    break;
+                break;
                 case OperationId.BnrNoOperation:
-                    break;
+                break;
                 case OperationId.Retract:
-                    break;
+                break;
                 case OperationId.Reject:
-                    break;
+                break;
                 case OperationId.Present:
-                    break;
+                break;
                 case OperationId.Empty:
-                    break;
+                break;
                 case OperationId.CashInRollBack:
-                    break;
+                break;
                 case OperationId.CashInEnd:
-                    break;
+                break;
                 case OperationId.CashIn:
-                    break;
+                break;
                 case OperationId.CashInStart:
-                    break;
+                break;
                 case OperationId.UpdateDenomination:
-                    break;
+                break;
                 case OperationId.QueryDenomination:
-                    break;
+                break;
                 case OperationId.SetDateTime:
-                    break;
+                break;
                 case OperationId.GetDateTime:
-                    break;
+                break;
                 case OperationId.UpdateCashUnit:
-                    break;
+                break;
                 case OperationId.QueryCashUnit:
-                    break;
+                break;
                 case OperationId.Dispense:
-                    break;
+                break;
                 case OperationId.Denominate:
-                    break;
+                break;
                 case OperationId.Reset:
-                    break;
+                break;
                 default:
-                    break;
+                break;
             }
-            ev.Set();
         }
 
         /// <summary>
@@ -165,26 +159,58 @@ namespace DeviceLibrary
             switch (status)
             {
                 case StatusChanged.MaintenanceStatusChanged:
-                    break;
+                break;
                 case StatusChanged.CashAvailable:
-                    break;
+                break;
                 case StatusChanged.CashTaken:
-                    break;
+                break;
                 case StatusChanged.TransportChanged:
-                    break;
+                break;
                 case StatusChanged.DeviceStatusChanged:
                 {
-                    Thread.Sleep(1);
+                    if (Data != null)
+                    {
+                        switch ((DeviceStatus)Data)
+
+                        {
+                            case DeviceStatus.HardwareError:
+                            {
+                                break;
+                            }
+                            case DeviceStatus.OffLine:
+                            {
+                                break;
+                            }
+                            case DeviceStatus.OnLine:
+                            {
+                                break;
+                            }
+                            case DeviceStatus.UserError:
+                            {
+                                break;
+                            }
+                            default:
+                            {
+                                break;
+                            }
+
+
+                        }
+
+
+
+
+                    }
                     break;
                 }
                 case StatusChanged.CashUnitThreshold:
-                    break;
+                break;
                 case StatusChanged.CashUnitConfigurationChanged:
-                    break;
+                break;
                 case StatusChanged.CashUnitChanged:
-                    break;
+                break;
                 default:
-                    break;
+                break;
             }
             ev.Set();
         }
@@ -203,63 +229,63 @@ namespace DeviceLibrary
             switch (operationId)
             {
                 case OperationId.BnrAutomaticBillTransfer:
-                    break;
+                break;
                 case OperationId.BnrEject:
-                    break;
+                break;
                 case OperationId.BnrConfigureCashUnit:
-                    break;
+                break;
                 case OperationId.BnrPark:
-                    break;
+                break;
                 case OperationId.BnrModulePark:
-                    break;
+                break;
                 case OperationId.BnrSelfTest:
-                    break;
+                break;
                 case OperationId.BnrCalibrateWithCoupon:
-                    break;
+                break;
                 case OperationId.BnrDeleteDenomination:
-                    break;
+                break;
                 case OperationId.BnrAddDenomination:
-                    break;
+                break;
                 case OperationId.BnrModuleUpdateFirmware:
-                    break;
+                break;
                 case OperationId.BnrNoOperation:
-                    break;
+                break;
                 case OperationId.Retract:
-                    break;
+                break;
                 case OperationId.Reject:
-                    break;
+                break;
                 case OperationId.Present:
-                    break;
+                break;
                 case OperationId.Empty:
-                    break;
+                break;
                 case OperationId.CashInRollBack:
-                    break;
+                break;
                 case OperationId.CashInEnd:
-                    break;
+                break;
                 case OperationId.CashIn:
-                    break;
+                break;
                 case OperationId.CashInStart:
-                    break;
+                break;
                 case OperationId.UpdateDenomination:
-                    break;
+                break;
                 case OperationId.QueryDenomination:
-                    break;
+                break;
                 case OperationId.SetDateTime:
-                    break;
+                break;
                 case OperationId.GetDateTime:
-                    break;
+                break;
                 case OperationId.UpdateCashUnit:
-                    break;
+                break;
                 case OperationId.QueryCashUnit:
-                    break;
+                break;
                 case OperationId.Dispense:
-                    break;
+                break;
                 case OperationId.Denominate:
-                    break;
+                break;
                 case OperationId.Reset:
-                    break;
+                break;
                 default:
-                    break;
+                break;
             }
             ev.Set();
         }
@@ -280,7 +306,6 @@ namespace DeviceLibrary
                             Bnr.StatusOccuredEvent += new StatusOccured(StatusOccured);
                             isPresent = true;
                             ev = new AutoResetEvent(false);
-//                            evSupsendThread = new AutoResetEvent(false);
                             state = Etat.OPEN;
                         }
                         catch (Exception E)
@@ -347,7 +372,7 @@ namespace DeviceLibrary
                     {
                         try
                         {
-                            
+
                             CDevicesManage.Log.Debug(bnr.Status.PositionStatusList[0].ShutterStatus.ToString());
                             CDevicesManage.Log.Debug(bnr.Status.PositionStatusList[1].ShutterStatus.ToString());
                             CDevicesManage.Log.Debug(bnr.Status.ToString);
@@ -361,18 +386,21 @@ namespace DeviceLibrary
                     }
 
                     case Etat.IDLE:
+                    {
+
+
                         break;
+                    }
                     case Etat.STOP:
                     {
                         try
                         {
-                            BnrTask.Abort();
+                            bnrTask.Abort();
                         }
                         catch (Exception E)
                         {
                             CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                         }
-                        //evSupsendThread.WaitOne();
                         break;
                     }
                     default:
@@ -392,8 +420,8 @@ namespace DeviceLibrary
             try
             {
                 state = Etat.INIT;
-                BnrTask = new Thread(Task);
-                BnrTask.Start();
+                bnrTask = new Thread(Task);
+                bnrTask.Start();
             }
             catch (Exception E)
             {
@@ -436,7 +464,7 @@ namespace DeviceLibrary
             // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
             Dispose(true);
             // TODO: uncomment the following line if the finalizer is overridden above.
-             GC.SuppressFinalize(this);
+            GC.SuppressFinalize(this);
         }
         #endregion
     }
