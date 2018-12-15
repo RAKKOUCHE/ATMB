@@ -405,7 +405,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Tâche de la machine d'état du Pelicano
         /// </summary>
-        public override void Task()
+        protected override void Task()
         {
             State = Etat.STATE_IDLE;
             while (true)

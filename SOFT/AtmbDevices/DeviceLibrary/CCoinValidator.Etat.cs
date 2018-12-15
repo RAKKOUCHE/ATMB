@@ -178,7 +178,11 @@ namespace DeviceLibrary
             /// <summary>
             /// Etat quand le périphérique est inactif.
             /// </summary>
-            STATE_IDLE = 0XFF,
+            STATE_IDLE,
+            /// <summary>
+            /// Arrêt de la tâche.
+            /// </summary>
+            STATE_STOP,
         }
         /// @}
     }

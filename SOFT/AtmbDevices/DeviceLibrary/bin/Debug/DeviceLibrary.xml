@@ -4,83 +4,93 @@
         <name>DeviceLibrary</name>
     </assembly>
     <members>
-        <member name="T:DeviceLibrary.CBnrMei">
+        <member name="T:DeviceLibrary.CBNR_CPI">
             <summary>
             Class du bnr
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBnrMei.bnr">
+        <member name="F:DeviceLibrary.CBNR_CPI.bnr">
             <summary>
-            Instanciation d'un BNR
+            Instance du bnr.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBnrMei.oCresult">
+        <member name="F:DeviceLibrary.CBNR_CPI.BNREvent">
+            <summary>
+            Contient les informations concernant un évenement.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CBNR_CPI.ProductCode">
+            <summary>
+            Code produit du périphérique.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CBNR_CPI.Manufacturer">
+            <summary>
+            Retourne l'identifiant du fabricant.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.oCresult">
             <summary>
             Code Erreur XFS
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBnrMei.cashOrder">
+        <member name="F:DeviceLibrary.CBNR_CPI.cashOrder">
             <summary>
-            
+            Instance de la classe contenant les informations sur le billet en traitenent.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBnrMei.BnrResetTimeOutInMS">
+        <member name="F:DeviceLibrary.CBNR_CPI.BnrResetTimeOutInMS">
             <summary>
-            
+            Délai maximum accordé pour effectur un reset
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CBnrMei.Etat">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBnrMei.state">
+        <member name="F:DeviceLibrary.CBNR_CPI.state">
             <summary>
             Etat de la machine d'état du BNR.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBnrMei.bnrTask">
+        <member name="F:DeviceLibrary.CBNR_CPI.bnrTask">
             <summary>
             Thread utilisé pour le BNR
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBnrMei.ev">
+        <member name="F:DeviceLibrary.CBNR_CPI.ev">
             <summary>
             Evénement permettant de gérer les function asynchrone.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBnrMei.isPresent">
+        <member name="F:DeviceLibrary.CBNR_CPI.isPresent">
             <summary>
             Indique si un bnr est connecté.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CBnrMei.CashOccured(Mei.Bnr.XfsCashOrder)">
+        <member name="M:DeviceLibrary.CBNR_CPI.CashOccured(Mei.Bnr.XfsCashOrder)">
             <summary>
-            
+            Levée pour une opération sur un billet.
             </summary>
             <param name="cashInOrder"></param>
         </member>
-        <member name="M:DeviceLibrary.CBnrMei.IntermediateOccured(System.Int32,Mei.Bnr.OperationId,Mei.Bnr.IntermediateEvents,System.Object)">
+        <member name="M:DeviceLibrary.CBNR_CPI.IntermediateOccured(System.Int32,Mei.Bnr.OperationId,Mei.Bnr.IntermediateEvents,System.Object)">
             <summary>
-            
+             Levée pour un évenment intermédiaure durant une opération .
             </summary>
             <param name="identificationId"></param>
             <param name="operationId"></param>
             <param name="result"></param>
             <param name="Data"></param>
         </member>
-        <member name="M:DeviceLibrary.CBnrMei.StatusOccured(Mei.Bnr.StatusChanged,Mei.Bnr.BnrXfsErrorCode,Mei.Bnr.BnrXfsErrorCode,System.Object)">
+        <member name="M:DeviceLibrary.CBNR_CPI.StatusOccured(Mei.Bnr.StatusChanged,Mei.Bnr.BnrXfsErrorCode,Mei.Bnr.BnrXfsErrorCode,System.Object)">
             <summary>
-            
+            Levée lors d'un changement d'état à eu lieu.
             </summary>
             <param name="status"></param>
             <param name="result"></param>
             <param name="extendedResult"></param>
             <param name="Data"></param>
         </member>
-        <member name="M:DeviceLibrary.CBnrMei.Bnr_OperationCompletedEvent(System.Int32,Mei.Bnr.OperationId,Mei.Bnr.BnrXfsErrorCode,Mei.Bnr.BnrXfsErrorCode,System.Object)">
+        <member name="M:DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent(System.Int32,Mei.Bnr.OperationId,Mei.Bnr.BnrXfsErrorCode,Mei.Bnr.BnrXfsErrorCode,System.Object)">
             <summary>
-            
+            Levée à la fin d; une opération.
             </summary>
             <param name="identificationId"></param>
             <param name="operationId"></param>
@@ -88,16 +98,71 @@
             <param name="extendedResult"></param>
             <param name="Data"></param>
         </member>
-        <member name="M:DeviceLibrary.CBnrMei.#ctor">
+        <member name="M:DeviceLibrary.CBNR_CPI.Init">
+            <summary>
+            Initialisation de la classe du BNR.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.Task">
+            <summary>
+            Machime d'état du bnr.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.#ctor">
             <summary>
             Constructeur
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CBnrMei.Dispose(System.Boolean)">
+        <member name="T:DeviceLibrary.CBNR_CPI.Etat">
+            \addtogroup Etats
+            @{
             <summary>
-            
+            Groupe des états des machines d'états des périphériques.
             </summary>
-            <param name="disposing"></param>
+            <summary>
+            Etat de la machine d'état du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_INIT">
+            <summary>
+            Initialisation du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_OPEN">
+            <summary>
+            Ouverture de la communication entre le BNR et le PC.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_RESET">
+            <summary>
+            Initialisation hardware.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_SETDATETIME">
+            <summary>
+            Enregistrement de la date.
+            </summary>
+            <remarks>Nécessaire pour les versions antéreures du BNR</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_GETMODULE">
+            <summary>
+            Lecture de la liste des modules.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_GETSTATUS">
+            <summary>
+            Lecture de l'état du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_IDLE">
+            <summary>
+            BNR en attente.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_STOP">
+            <summary>
+            Arrêt du BNR.
+            </summary>
         </member>
         <member name="T:DeviceLibrary.CCanal">
             <summary>
@@ -471,6 +536,226 @@
         <member name="M:DeviceLibrary.CcoinsCounters.SaveCounters">
             <summary>
             
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CDevice">
+            <summary>
+            Classe abstraite parent de tous les périphériques
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CDevice.CEvent">
+            <summary>
+            Class contenant les informations sur u évenement.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CEvent.reason">
+            <summary>
+            Raison de l'évenement.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CEvent.deviceId">
+            <summary>
+            Nom du périphérique
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CEvent.data">
+             <summary>
+             donnée concernant l'évenenement.
+             </summary>
+            <remarks>Dépend du périphérique et de l'évenement.</remarks>
+        </member>
+        <member name="T:DeviceLibrary.CDevice.CInserted">
+            <summary>
+             Classe des pièces insérées
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.ValeurCent">
+            <summary>
+            Montant nominal en centimes de la pièce insérée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.CVChannel">
+            <summary>
+            Canal correpsondant à la pièce insérée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.CVPath">
+            <summary>
+            Chemin de tri utilisé 
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.TotalAmount">
+            <summary>
+            Montant inséré depuis le début de la transaction.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.BackTotalAmount">
+            <summary>
+            Sauvegarde du montant total inséré depuis le début de la transaction.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CDevice.CLevel">
+            <summary>
+            Classe des niveaux des hopeprs.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CDevice.CLevel.SoftLevel">
+            \addtogroup Niveaux Niveaux hoppers
+            <summary>Groupe des niveaux physiques et logiciels.</summary>
+            @{
+            <summary>
+            Enumération des niveaux soft
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.VIDE">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessous ou égal au niveau vide indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.BAS">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessous ou égal au niveau d'alerte bas indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.OK">
+            <summary>
+            Le nombre de pièces dans périphérique est compris entre le niveau d'alerte bas et le niveau d'alerte au indiqués dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.HAUT">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessus ou égal au niveau d'alerte haut indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.PLEIN">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessus ou égal au niveau plein indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.INCONNU">
+            <summary>
+            Le nombre de pièces dans périphérique ou le fichier paramètre n'ont pas été encore lus.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CDevice.CLevel.HardLevel">
+            <summary>
+            Enumération des niveaux Hard
+            </summary>
+            <remarks>Determinés par la lecture des sondes de niveau du périphérique</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.VIDE">
+            <summary>
+            Le périphérique est vide.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.OK">
+            <summary>
+            Aucune sonde n'est activée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.PLEIN">
+            <summary>
+            Le périphérique est plein
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.INCONNU">
+            <summary>
+            Les sondes n'ont pas été encore interrogées.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.ID">
+            @}
+            <summary>
+            Nom du périphérique
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.softLevel">
+            <summary>
+            Variable contenant le niveau du périphérique par rapport aux paramètres et au compteurs.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.hardLevel">
+            <summary>
+            Variable contenant le niveau du périphérique par rapport à ses sondes hardware.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.isSoftLevelChanged">
+            <summary>
+            Boolean indiquant qu'un changement de niveau soft est intervenu.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.isHopperCritical">
+            <summary>
+            Boolean indiquant si le hopper est nécessaire au fonctionnement de la borne.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CLevel.isHardLevelChanged">
+            <summary>
+            Boolean indiquant qu'un changement de niveau hard est intervenu.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.CLevel.#ctor(DeviceLibrary.CDevice.CLevel.SoftLevel,DeviceLibrary.CDevice.CLevel.HardLevel)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="softlevel">Niveau soft, par défaut inconnu</param>
+            <param name="hardLevel">Niveau hard, par défaut inconnu</param>
+            <remarks>Le fait d'avoir les niveaux à l'état inconnu permet de provoqué un évenement permettant de déterminé le niveau actuel.</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.eventsList">
+            <summary>
+            Liste des évenement.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.eventListLock">
+            <summary>
+            Objet de verrouillage de l'accés à la liste des évenements.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.deviceLevel">
+            <summary>
+            Niveaux des périphériques.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.denominationInserted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.SerialNumber">
+            <summary>
+            Numéro de série du périphérique
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.Manufacturer">
+            <summary>
+            Identifiant du  fabricant
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.ProductCode">
+            <summary>
+            Fonction demandant le code produit
+            </summary>
+            <returns>Une chaîne de caractères contenant le code produit</returns>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.IsPresent">
+            <summary>
+            Flag indiquant si le hopper est detecté.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.Task">
+            <summary>
+            Tâche du périphérique.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.Init">
+            <summary>
+            Initialisation des périphériques.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.#ctor">
+            <summary>
+            Constructeur
             </summary>
         </member>
         <member name="T:DeviceLibrary.CHopper">
@@ -1366,229 +1651,44 @@
             Etat de la machine d'état des hoppers
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.RESET">
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_INIT">
             <summary>
-            Etat initial
+            Initialisation du hopper
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.DISPENSE">
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_RESET">
+            <summary>
+            Reset du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_DISPENSE">
             <summary>
             Traitement d'une demande de distribution
-            </summary>
-            
+            </summary>       
         </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.DISPENSEINPROGRESS">
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_DISPENSEINPROGRESS">
             <summary>
             Distribution en cours
             </summary>            
         </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.ENDDISPENSE">
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_ENDDISPENSE">
             <summary>
             Traitement fin de distribution
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.CHECKLEVEL">
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_CHECKLEVEL">
             <summary>
             Vérification des niveaux du  hopper,
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.IDLE">
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_IDLE">
             <summary>
             Inactif
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CDevice">
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_STOP">
             <summary>
-            Classe abstraite parent de tous les périphériques
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CDevice.CInserted">
-            <summary>
-             Classe des pièces insérées
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.ValeurCent">
-            <summary>
-            Montant nominal en centimes de la pièce insérée
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.CVChannel">
-            <summary>
-            Canal correpsondant à la pièce insérée
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.CVPath">
-            <summary>
-            Chemin de tri utilisé 
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.TotalAmount">
-            <summary>
-            Montant inséré depuis le début de la transaction.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.BackTotalAmount">
-            <summary>
-            Sauvegarde du montant total inséré depuis le début de la transaction.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CDevice.CLevel">
-            <summary>
-            Classe des niveaux des hopeprs.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CDevice.CLevel.SoftLevel">
-            \addtogroup Niveaux Niveaux hoppers
-            <summary>Groupe des niveaux physiques et logiciels.</summary>
-            @{
-            <summary>
-            Enumération des niveaux soft
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.VIDE">
-            <summary>
-            Le nombre de pièces dans périphérique est au dessous ou égal au niveau vide indiqué dans le fichier paramètres.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.BAS">
-            <summary>
-            Le nombre de pièces dans périphérique est au dessous ou égal au niveau d'alerte bas indiqué dans le fichier paramètres.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.OK">
-            <summary>
-            Le nombre de pièces dans périphérique est compris entre le niveau d'alerte bas et le niveau d'alerte au indiqués dans le fichier paramètres.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.HAUT">
-            <summary>
-            Le nombre de pièces dans périphérique est au dessus ou égal au niveau d'alerte haut indiqué dans le fichier paramètres.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.PLEIN">
-            <summary>
-            Le nombre de pièces dans périphérique est au dessus ou égal au niveau plein indiqué dans le fichier paramètres.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.INCONNU">
-            <summary>
-            Le nombre de pièces dans périphérique ou le fichier paramètre n'ont pas été encore lus.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CDevice.CLevel.HardLevel">
-            <summary>
-            Enumération des niveaux Hard
-            </summary>
-            <remarks>Determinés par la lecture des sondes de niveau du périphérique</remarks>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.VIDE">
-            <summary>
-            Le périphérique est vide.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.OK">
-            <summary>
-            Aucune sonde n'est activée.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.PLEIN">
-            <summary>
-            Le périphérique est plein
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.INCONNU">
-            <summary>
-            Les sondes n'ont pas été encore interrogées.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.ID">
-            @}
-            <summary>
-            Nom du périphérique
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.softLevel">
-            <summary>
-            Variable contenant le niveau du périphérique par rapport aux paramètres et au compteurs.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.hardLevel">
-            <summary>
-            Variable contenant le niveau du périphérique par rapport à ses sondes hardware.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.isSoftLevelChanged">
-            <summary>
-            Boolean indiquant qu'un changement de niveau soft est intervenu.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.isHopperCritical">
-            <summary>
-            Boolean indiquant si le hopper est nécessaire au fonctionnement de la borne.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.isHardLevelChanged">
-            <summary>
-            Boolean indiquant qu'un changement de niveau hard est intervenu.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.CLevel.#ctor(DeviceLibrary.CDevice.CLevel.SoftLevel,DeviceLibrary.CDevice.CLevel.HardLevel)">
-            <summary>
-            Constructeur
-            </summary>
-            <param name="softlevel">Niveau soft, par défaut inconnu</param>
-            <param name="hardLevel">Niveau hard, par défaut inconnu</param>
-            <remarks>Le fait d'avoir les niveaux à l'état inconnu permet de provoqué un évenement permettant de déterminé le niveau actuel.</remarks>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.deviceLevel">
-            <summary>
-            Niveaux des périphériques.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.denominationInserted">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.SerialNumber">
-            <summary>
-            Numéro de série du périphérique
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.bnr">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.Manufacturer">
-            <summary>
-            Identifiant du  fabricant
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.ProductCode">
-            <summary>
-            Fonction demandant le code produit
-            </summary>
-            <returns>Une chaîne de caractères contenant le code produit</returns>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.IsPresent">
-            <summary>
-            Flag indiquant si le hopper est detecté.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.Task">
-            <summary>
-            Tâche du périphérique.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.Init">
-            <summary>
-            Initialisation des périphériques.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.#ctor">
-            <summary>
-            Constructeur
+            interrompt la tâche.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CMemoryStorage">
@@ -1872,11 +1972,6 @@
             Chemin utilisé dans le trieur pour le canal
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CCoinValidator.#ctor">
-            <summary>
-            Constructeur de la class CCoinValidator
-            </summary>
-        </member>
         <member name="P:DeviceLibrary.CCoinValidator.DataBaseVersion">
             <summary>
             Renvoi la version de la data base.
@@ -1946,6 +2041,11 @@
         <member name="M:DeviceLibrary.CCoinValidator.Task">
             <summary>
             Tâche de la machine d'état du monnayeur.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CCoinValidator.#ctor">
+            <summary>
+            Constructeur de la class CCoinValidator
             </summary>
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.Header">
@@ -3660,6 +3760,11 @@
             Le hopper est vidé.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.Reason.BNRERREUR">
+            <summary>
+            Une erreur sur le BNR est survenue.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.Reason.DLLLREADY">
             <summary>
             La dll est prête.
@@ -3723,6 +3828,11 @@
         <member name="F:DeviceLibrary.CDevicesManage.Hoppers">
             <summary>
             Liste des hoppers
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevicesManage.bnX">
+            <summary>
+            Instance du BNR
             </summary>
         </member>
         <member name="T:DeviceLibrary.CDevicesManage.AlertEventHandler">
@@ -3815,6 +3925,11 @@
         <member name="M:DeviceLibrary.CDevicesManage.OnDllReady">
             <summary>
             Evénement levé lorsque la dll est prête.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManage.OnBNRErreur">
+            <summary>
+            
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManage.OpenTransaction(System.Int32)">

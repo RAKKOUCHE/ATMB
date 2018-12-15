@@ -56,6 +56,10 @@ namespace DeviceLibrary
         /// </summary>
         HOPPEREMPTIED,
         /// <summary>
+        /// Une erreur sur le BNR est survenue.
+        /// </summary>
+        BNRERREUR,
+        /// <summary>
         /// La dll est prête.
         /// </summary>
         DLLLREADY,
@@ -130,6 +134,13 @@ namespace DeviceLibrary
         /// Liste des hoppers
         /// </summary>
         public List<CHopper> Hoppers;
+
+
+        /// <summary>
+        /// Instance du BNR
+        /// </summary>
+        public CBNR_CPI bnX;
+
 
         /// <summary>
         /// 
@@ -259,14 +270,14 @@ namespace DeviceLibrary
                     {
                         if (hopper.IsPresent && (hopper.CoinsToDistribute > 0))
                         {
-                            hopper.State = CHopper.Etat.DISPENSE;
+                            hopper.State = CHopper.Etat.STATE_DISPENSE;
                         }
                     }
                     foreach (CHopper hopper in Hoppers)
                     {
                         if (hopper.IsPresent)
                         {
-                            while (hopper.State != CHopper.Etat.IDLE) ;
+                            while (hopper.State != CHopper.Etat.STATE_IDLE) ;
                             ;
                         }
                     }
@@ -285,6 +296,25 @@ namespace DeviceLibrary
         {
             while (true)
             {
+                while (CDevice.eventsList.Count > 0)
+                {
+                    lock (CDevice.eventListLock)
+                    {
+                        switch (CDevice.eventsList[0].reason)
+                        {
+                            case Reason.MONEYINTRODUCTED:
+                            {
+                                break;
+                            }
+                            case Reason.BNRERREUR:
+                            {
+                                OnBNRErreur();
+                                break;
+                            }
+                        }
+                        CDevice.eventsList.RemoveAt(0);
+                    }
+                }
                 if (IsDllReady)
                 {
                     IsDllReady = false;
@@ -643,6 +673,26 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        private void OnBNRErreur()
+        {
+            try
+            {
+                CalertEventArgs alertEventArgs = new CalertEventArgs
+                {
+                    reason = Reason.BNRERREUR,
+                    donnee = null,
+                };
+                CallAlert(new object(), alertEventArgs);
+            }
+            catch (Exception E)
+            {
+                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
         /// Ouvre une transaction le montant à payer.
         /// </summary>
         /// <param name="value">montant en centimes à payer</param>
@@ -688,7 +738,7 @@ namespace DeviceLibrary
             CccTalk.ResetCounters();
             foreach (CHopper hopper in Hoppers)
             {
-                hopper.State = CHopper.Etat.CHECKLEVEL;
+                hopper.State = CHopper.Etat.STATE_CHECKLEVEL;
             }
         }
 
@@ -717,6 +767,7 @@ namespace DeviceLibrary
                 CccTalk.countersFile = File.Open(CccTalk.fileCounterName, FileMode.Open, FileAccess.ReadWrite);
                 CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
                 CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
+                
                 monnayeur = new CCoinValidator();
                 if (!monnayeur.IsPresent)
                 {
@@ -742,11 +793,14 @@ namespace DeviceLibrary
                 {
                     hopper.Init();
                 }
+
+                bnX = new CBNR_CPI();
+
                 monnayeur.CVTask.Start();
+                
                 MsgTask = new Thread(Task);
                 MsgTask.Start();
-                //Thread.Sleep(2000);
-                IsDllReady = true;
+                /*IsDllReady = true;*/
             }
             catch (Exception E)
             {

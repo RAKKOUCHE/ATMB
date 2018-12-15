@@ -17,16 +17,16 @@ namespace DeviceLibrary
             /// <summary>
             /// Raison de l'évenement.
             /// </summary>
-            Reason reason;
+            public Reason reason;
             /// <summary>
             /// Nom du périphérique
             /// </summary>
-            string deviceId;
+            public string deviceId;
             /// <summary>
             /// donnée concernant l'évenenement.
             /// </summary>
             ///<remarks>Dépend du périphérique et de l'évenement.</remarks>
-            object data;
+            public object data;
         }
     }
 }

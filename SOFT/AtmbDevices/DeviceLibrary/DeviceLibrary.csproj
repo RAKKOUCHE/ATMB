@@ -63,7 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CBnrMei.cs" />
+    <Compile Include="CBNR_CPI.cs" />
+    <Compile Include="CBNR_CPI.Etat.cs" />
     <Compile Include="CCanal.cs" />
     <Compile Include="CcashReader.Header.cs" />
     <Compile Include="CcashReader.cs" />

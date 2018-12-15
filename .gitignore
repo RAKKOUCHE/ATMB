@@ -6,3 +6,5 @@ doc_dll
 /SOFT/AtmbDevices/AtmbTestDevices/bin/Release/logs/atmbdevices.log
 /SOFT/AtmbDevices/AtmbTestDevices/bin/Release/logs/Error.log
 /SOFT/AtmbDevices/AtmbTestDevices/bin/Release/logs/Requests.log
+/DOCS/bnr_doc_html/docs
+DOCS

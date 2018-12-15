@@ -1104,7 +1104,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ccTalk test</value>
+    <value>Cash test</value>
   </data>
   <data name="&gt;&gt;serialPort.Name" xml:space="preserve">
     <value>serialPort</value>
@@ -1147,6 +1147,66 @@
   </data>
   <data name="&gt;&gt;Montant.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Identifiant.Name" xml:space="preserve">
+    <value>Identifiant</value>
+  </data>
+  <data name="&gt;&gt;Identifiant.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Valeur.Name" xml:space="preserve">
+    <value>Valeur</value>
+  </data>
+  <data name="&gt;&gt;Valeur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Present.Name" xml:space="preserve">
+    <value>Present</value>
+  </data>
+  <data name="&gt;&gt;Present.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToDispense.Name" xml:space="preserve">
+    <value>ToDispense</value>
+  </data>
+  <data name="&gt;&gt;ToDispense.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dispensed.Name" xml:space="preserve">
+    <value>Dispensed</value>
+  </data>
+  <data name="&gt;&gt;Dispensed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LevelSW.Name" xml:space="preserve">
+    <value>LevelSW</value>
+  </data>
+  <data name="&gt;&gt;LevelSW.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LevelHW.Name" xml:space="preserve">
+    <value>LevelHW</value>
+  </data>
+  <data name="&gt;&gt;LevelHW.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToEmpty.Name" xml:space="preserve">
+    <value>ToEmpty</value>
+  </data>
+  <data name="&gt;&gt;ToEmpty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Reload.Name" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="&gt;&gt;Reload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToLoad.Name" xml:space="preserve">
+    <value>ToLoad</value>
+  </data>
+  <data name="&gt;&gt;ToLoad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn1</value>
@@ -1218,66 +1278,6 @@
     <value>dataGridViewCheckBoxColumn3</value>
   </data>
   <data name="&gt;&gt;dataGridViewCheckBoxColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Identifiant.Name" xml:space="preserve">
-    <value>Identifiant</value>
-  </data>
-  <data name="&gt;&gt;Identifiant.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Valeur.Name" xml:space="preserve">
-    <value>Valeur</value>
-  </data>
-  <data name="&gt;&gt;Valeur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Present.Name" xml:space="preserve">
-    <value>Present</value>
-  </data>
-  <data name="&gt;&gt;Present.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToDispense.Name" xml:space="preserve">
-    <value>ToDispense</value>
-  </data>
-  <data name="&gt;&gt;ToDispense.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Dispensed.Name" xml:space="preserve">
-    <value>Dispensed</value>
-  </data>
-  <data name="&gt;&gt;Dispensed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LevelSW.Name" xml:space="preserve">
-    <value>LevelSW</value>
-  </data>
-  <data name="&gt;&gt;LevelSW.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LevelHW.Name" xml:space="preserve">
-    <value>LevelHW</value>
-  </data>
-  <data name="&gt;&gt;LevelHW.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToEmpty.Name" xml:space="preserve">
-    <value>ToEmpty</value>
-  </data>
-  <data name="&gt;&gt;ToEmpty.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Reload.Name" xml:space="preserve">
-    <value>Reload</value>
-  </data>
-  <data name="&gt;&gt;Reload.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToLoad.Name" xml:space="preserve">
-    <value>ToLoad</value>
-  </data>
-  <data name="&gt;&gt;ToLoad.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

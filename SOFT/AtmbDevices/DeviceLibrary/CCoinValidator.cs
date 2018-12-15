@@ -196,42 +196,6 @@ namespace DeviceLibrary
         public byte sorterPath;
 
         /********************************************************************************/
-
-        /// <summary>
-        /// Constructeur de la class CCoinValidator
-        /// </summary>
-        public CCoinValidator()
-        {
-            try
-            {
-                CDevicesManage.Log.Info("Instancation de la classe CCoinValidator.");
-                DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
-                if(!(IsPresent = SimplePoll))
-                {
-                    Thread.Sleep(100);
-                    ResetDevice();
-                    IsPresent = SimplePoll;
-                }
-                if(IsPresent)
-                {
-                    canaux = new CCanal[numChannel];
-                    for (byte i = 0; i < numChannel; i++)
-                    {
-                        canaux[i] = new CCanal((byte)(i + 1), this);
-                        canaux[i].coinId.GetCoinId();
-
-                    }
-                    errorCV = new CErroCV();
-                    ResetDevice();
-                    CVTask = new Thread(Task);
-                }
-            }
-            catch(Exception E)
-            {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-            }
-        }
-
         /// <summary>
         /// Renvoi la version de la data base.
         /// </summary>
@@ -478,7 +442,7 @@ namespace DeviceLibrary
             try
             {
                 CDevicesManage.Log.Info("Vérification de la machine d'état du {0}", DeviceAddress);
-                switch(State)
+                switch (State)
                 {
                     case Etat.STATE_INIT:
                     {
@@ -494,9 +458,9 @@ namespace DeviceLibrary
                         do
                         {
                             CDevicesManage.Log.Debug("Reset du {0} Essai {1}", DeviceAddress, loop);
-                        } while(!ResetDevice() && (++loop < 4));
+                        } while (!ResetDevice() && (++loop < 4));
                         Thread.Sleep(100);
-                        if(loop == 0)
+                        if (loop == 0)
                         {
                             CDevicesManage.Log.Error("Impossible d'effectuer le reset du Pelicano");
                             //TODO envoyé le message d'erreur.
@@ -506,7 +470,7 @@ namespace DeviceLibrary
                     case Etat.STATE_SIMPLEPOLL:
                     {
                         CDevicesManage.Log.Debug("Simple poll sur {0}", DeviceAddress);
-                        if(!SimplePoll)
+                        if (!SimplePoll)
                         {
                             CDevicesManage.Log.Info("Echec du simple poll sur le {0}", DeviceAddress);
                             //TODO message d'erreur.
@@ -566,7 +530,7 @@ namespace DeviceLibrary
                         CDevicesManage.Log.Info("Effectue le self-test du {0}", DeviceAddress);
                         SelfTestResult result = SelfTest;
                         string message = string.Format("Le self-test du {0} indque l'erreur {1}", DeviceAddress, result);
-                        if(result == SelfTestResult.OK)
+                        if (result == SelfTestResult.OK)
                         {
                             CDevicesManage.Log.Info("Le self-test du {0} n'indique pas d'erreur", DeviceAddress);
                         }
@@ -578,7 +542,7 @@ namespace DeviceLibrary
                     }
                     case Etat.STATE_GETCOINID:
                     {
-                        foreach(CCanal canal in canaux)
+                        foreach (CCanal canal in canaux)
                         {
                             canal.coinId.GetCoinId();
                             CDevicesManage.Log.Info("Le code pays du canal {0} est {1}, la valeur est {2}, la version est {3}", canal.Number, canal.coinId.CountryCode, canal.coinId.ValeurCent, canal.coinId.Issue);
@@ -651,7 +615,7 @@ namespace DeviceLibrary
                         //todo lire les pièces autorisees dans le fichier de paramètre et comparer les masks
                         //si les masks sont identiques passer à l'dentification des pièces.
                         CDevicesManage.Log.Info("lecture des chemins de tris du {0}", DeviceAddress);
-                        foreach(CCanal canal in canaux)
+                        foreach (CCanal canal in canaux)
                         {
                             CDevicesManage.Log.Info("La sortie du trieur pour le canal {0} du {1} est {2}", canal.sorter.PathSorter);
                         }
@@ -681,17 +645,43 @@ namespace DeviceLibrary
                     {
                         break;
                     }
+
+                    case Etat.STATE_TRASHEMPTY:
+                        break;
+                    case Etat.STATE_SETSPEEDMOTOR:
+                        break;
+                    case Etat.STATE_GETSPEEDMOTOR:
+                        break;
+                    case Etat.STATE_GETPOCKET:
+                        break;
+                    case Etat.STATE_CHECKTRASHDOOR:
+                        break;
+                    case Etat.STATE_CHECKLOWERSENSOR:
+                        break;
+                    case Etat.STATE_SETMASTERINHIBIT:
+                        break;
+                    case Etat.STATE_GETOPTION:
+                        break;
+                    case Etat.STATE_ACCEPTLIMIT:
+                        break;
+                    case Etat.STATE_COMMSREVISION:
+                        break;
+                    case Etat.STATE_STOP:
+                    {
+
+                        break;
+                    }
                     default:
                     {
                         break;
                     }
                 }
-                if(ProductCode != "BV")
+                if (ProductCode != "BV")
                 {
                     State = Etat.STATE_GETCREDITBUFFER;
                 }
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -725,7 +715,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Tâche de la machine d'état du monnayeur.
         /// </summary>
-        public override void Task()
+        protected override void Task()
         {
             CDevicesManage.Log.Debug("Tâche de lecture des évenements concernant du {0}", DeviceAddress);
             while(true)
@@ -767,5 +757,43 @@ namespace DeviceLibrary
                 Thread.Sleep(PollingDelay);
             }
         }
+
+        /// <summary>
+        /// Constructeur de la class CCoinValidator
+        /// </summary>
+        public CCoinValidator()
+        {
+            try
+            {
+                CDevicesManage.Log.Info("Instancation de la classe CCoinValidator.");
+                DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
+                if (!(IsPresent = SimplePoll))
+                {
+                    Thread.Sleep(100);
+                    ResetDevice();
+                    IsPresent = SimplePoll;
+                }
+                state = Etat.STATE_ST
+                if (IsPresent)
+                {
+                    canaux = new CCanal[numChannel];
+                    for (byte i = 0; i < numChannel; i++)
+                    {
+                        canaux[i] = new CCanal((byte)(i + 1), this);
+                        canaux[i].coinId.GetCoinId();
+
+                    }
+                    errorCV = new CErroCV();
+                    ResetDevice();
+                    CVTask = new Thread(Task);
+                }
+            }
+            catch (Exception E)
+            {
+                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+
     }
 }

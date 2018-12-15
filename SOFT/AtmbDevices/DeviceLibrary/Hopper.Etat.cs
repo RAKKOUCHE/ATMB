@@ -20,36 +20,39 @@ namespace DeviceLibrary
         public enum Etat : byte
         {
             /// <summary>
-            /// Etat initial
+            /// Initialisation du hopper
             /// </summary>
-            RESET,
-
+            STATE_INIT,
+            /// <summary>
+            /// Reset du hopper
+            /// </summary>
+            STATE_RESET,
             /// <summary>
             /// Traitement d'une demande de distribution
-            /// </summary>
-            /// 
-            DISPENSE,
-
+            /// </summary>       
+            STATE_DISPENSE,
             /// <summary>
             /// Distribution en cours
             /// </summary>            
-            DISPENSEINPROGRESS,
-            
+            STATE_DISPENSEINPROGRESS,            
             /// <summary>
             /// Traitement fin de distribution
             /// </summary>
-            ENDDISPENSE,
-
+            STATE_ENDDISPENSE,
             /// <summary>
             /// Vérification des niveaux du  hopper,
             /// </summary>
-            CHECKLEVEL,
-
+            STATE_CHECKLEVEL,
             /// <summary>
             /// Inactif
             /// </summary>
-            IDLE = 0XFF,
+            STATE_IDLE,
+            /// <summary>
+            /// interrompt la tâche.
+            /// </summary>
+            STATE_STOP,
         }
+        /// @}
     }
 }
 

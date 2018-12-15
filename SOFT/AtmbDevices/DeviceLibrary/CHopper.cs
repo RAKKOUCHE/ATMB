@@ -869,7 +869,7 @@ namespace DeviceLibrary
         {
             try
             {
-                State = Etat.RESET;
+                State = Etat.STATE_RESET;
                 if (IsPresent)
                 {
                     memoryStorage = new CMemoryStorage(this);
@@ -912,7 +912,7 @@ namespace DeviceLibrary
                     EnableHopper();
                     if ((CoinsToDistribute > 0) || ((CoinsToDistribute = dispenseStatus.CoinsRemaining) > 0))
                     {
-                        State = Etat.DISPENSE;
+                        State = Etat.STATE_DISPENSE;
                     };
                     HTask = new Thread(Task);
                     HTask.Start();
@@ -1009,8 +1009,8 @@ namespace DeviceLibrary
                 do
                 {
                     CoinsToDistribute = 255;
-                    State = Etat.DISPENSE;
-                    while (State != Etat.IDLE)
+                    State = Etat.STATE_DISPENSE;
+                    while (State != Etat.STATE_IDLE)
                         ;
                     emptyCount.counter += dispenseStatus.CoinsPaid;
                     emptyCount.amountCounter = emptyCount.counter * CoinValue;
@@ -1036,20 +1036,20 @@ namespace DeviceLibrary
         {
             switch (State)
             {
-                case Etat.RESET:
+                case Etat.STATE_RESET:
                 {
                     delaypollLevel = polllDelayLevel * 1000;
                     deviceLevel.ID = ToString();
                     isEmptied = isDispensed = false;
                     if (CoinsToDistribute > 0)
                     {
-                        State = Etat.DISPENSE;
+                        State = Etat.STATE_DISPENSE;
                     }
                     IsHopperError = isOnError = (errorHopper.Code = TestHopper()) != HopperError.NULL;
-                    State = Etat.CHECKLEVEL;
+                    State = Etat.STATE_CHECKLEVEL;
                     break;
                 }
-                case Etat.DISPENSE:
+                case Etat.STATE_DISPENSE:
                 {
                     if (CoinsToDistribute > 0)
                     {
@@ -1061,7 +1061,7 @@ namespace DeviceLibrary
                         PumpRNG();
                         GetCipherKey();
                         DispenseCoins(CoinsToDistribute);
-                        State = Etat.DISPENSEINPROGRESS;
+                        State = Etat.STATE_DISPENSEINPROGRESS;
                     }
                     else
                     {
@@ -1069,7 +1069,7 @@ namespace DeviceLibrary
                     }
                     break;
                 }
-                case Etat.DISPENSEINPROGRESS:
+                case Etat.STATE_DISPENSEINPROGRESS:
                 {
                     if (dispenseStatus.CoinsRemaining == 0)
                     {
@@ -1078,11 +1078,11 @@ namespace DeviceLibrary
                         //    CoinsInHopper = 0;
                         //    AmountInHopper = 0;
                         //}
-                        State = Etat.ENDDISPENSE;
+                        State = Etat.STATE_ENDDISPENSE;
                     }
                     break;
                 }
-                case Etat.ENDDISPENSE:
+                case Etat.STATE_ENDDISPENSE:
                 {
                     IsHopperError = isOnError = (errorHopper.Code = TestHopper()) != HopperError.NULL;
                     if (CoinsToDistribute != dispenseStatus.CoinsPaid)
@@ -1092,16 +1092,16 @@ namespace DeviceLibrary
                     IsDispensed = true;
                     SubCounters(dispenseStatus.CoinsPaid);
                     CoinsToDistribute = 0;
-                    State = Etat.CHECKLEVEL;
+                    State = Etat.STATE_CHECKLEVEL;
                     break;
                 }
-                case Etat.CHECKLEVEL:
+                case Etat.STATE_CHECKLEVEL:
                 {
                     CheckLevel();
-                    State = Etat.IDLE;
+                    State = Etat.STATE_IDLE;
                     break;
                 }
-                case Etat.IDLE:
+                case Etat.STATE_IDLE:
                 {
                     if (isOnError && !isHopperError)
                     {
@@ -1118,7 +1118,7 @@ namespace DeviceLibrary
                     if (--delaypollLevel <= 0)
                     {
                         delaypollLevel = polllDelayLevel * 1000;
-                        State = Etat.CHECKLEVEL;
+                        State = Etat.STATE_CHECKLEVEL;
                     }
                     break;
                 }
@@ -1148,8 +1148,8 @@ namespace DeviceLibrary
             if (!((deviceLevel.hardLevel == CLevel.HardLevel.VIDE) || (deviceLevel.softLevel == CLevel.SoftLevel.VIDE)))
             {
                 CoinsToDistribute = numberToDispense;
-                State = Etat.DISPENSE;
-                while (State != Etat.IDLE)
+                State = Etat.STATE_DISPENSE;
+                while (State != Etat.STATE_IDLE)
                     ;
             }
         }
@@ -1191,13 +1191,13 @@ namespace DeviceLibrary
             AmountLoadedInHopper += CoinsLoadedInHopper * CoinValue;
             counters.totalAmountReload += CoinsInHopper * CoinValue;
             counters.SaveCounters();
-            State = Etat.CHECKLEVEL;
+            State = Etat.STATE_CHECKLEVEL;
         }
 
         /// <summary>
         /// Tâche de la machine d'état du hopper.
         /// </summary>
-        public override void Task()
+        protected override void Task()
         {
             while (true)
             {

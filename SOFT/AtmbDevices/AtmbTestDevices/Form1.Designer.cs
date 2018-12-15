@@ -34,6 +34,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -45,16 +55,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.tbToPay = new System.Windows.Forms.TextBox();
             this.labelAmountToPay = new System.Windows.Forms.Label();
@@ -79,6 +79,16 @@
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Montant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewHopper = new System.Windows.Forms.DataGridView();
+            this.Identifiant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valeur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Present = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ToDispense = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dispensed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LevelSW = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LevelHW = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ToEmpty = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Reload = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ToLoad = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tbInfo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -97,16 +107,6 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.buttonFinTrans = new System.Windows.Forms.Button();
-            this.Identifiant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valeur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Present = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ToDispense = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dispensed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LevelSW = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LevelHW = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ToEmpty = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Reload = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ToLoad = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.statusStrip.SuspendLayout();
             this.contextMenuStripClear.SuspendLayout();
             this.groupBoxPieces.SuspendLayout();
@@ -327,6 +327,117 @@
             this.dataGridViewHopper.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridViewHopper.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             // 
+            // Identifiant
+            // 
+            this.Identifiant.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.Identifiant.DefaultCellStyle = dataGridViewCellStyle5;
+            resources.ApplyResources(this.Identifiant, "Identifiant");
+            this.Identifiant.Name = "Identifiant";
+            this.Identifiant.ReadOnly = true;
+            // 
+            // Valeur
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Format = "c2";
+            this.Valeur.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Valeur.FillWeight = 50F;
+            resources.ApplyResources(this.Valeur, "Valeur");
+            this.Valeur.Name = "Valeur";
+            this.Valeur.ReadOnly = true;
+            this.Valeur.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Present
+            // 
+            this.Present.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.NullValue = false;
+            this.Present.DefaultCellStyle = dataGridViewCellStyle7;
+            resources.ApplyResources(this.Present, "Present");
+            this.Present.Name = "Present";
+            this.Present.ReadOnly = true;
+            this.Present.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Present.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ToDispense
+            // 
+            this.ToDispense.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.ToDispense.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ToDispense.FillWeight = 30F;
+            resources.ApplyResources(this.ToDispense, "ToDispense");
+            this.ToDispense.MaxInputLength = 3;
+            this.ToDispense.Name = "ToDispense";
+            // 
+            // Dispensed
+            // 
+            this.Dispensed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.Dispensed.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Dispensed.FillWeight = 30F;
+            resources.ApplyResources(this.Dispensed, "Dispensed");
+            this.Dispensed.MaxInputLength = 3;
+            this.Dispensed.Name = "Dispensed";
+            this.Dispensed.ReadOnly = true;
+            // 
+            // LevelSW
+            // 
+            this.LevelSW.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.LevelSW.DefaultCellStyle = dataGridViewCellStyle10;
+            resources.ApplyResources(this.LevelSW, "LevelSW");
+            this.LevelSW.Name = "LevelSW";
+            this.LevelSW.ReadOnly = true;
+            // 
+            // LevelHW
+            // 
+            this.LevelHW.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.LevelHW.DefaultCellStyle = dataGridViewCellStyle11;
+            resources.ApplyResources(this.LevelHW, "LevelHW");
+            this.LevelHW.Name = "LevelHW";
+            this.LevelHW.ReadOnly = true;
+            // 
+            // ToEmpty
+            // 
+            this.ToEmpty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.NullValue = false;
+            this.ToEmpty.DefaultCellStyle = dataGridViewCellStyle12;
+            this.ToEmpty.FillWeight = 50F;
+            resources.ApplyResources(this.ToEmpty, "ToEmpty");
+            this.ToEmpty.Name = "ToEmpty";
+            this.ToEmpty.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Reload
+            // 
+            this.Reload.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.Reload.DefaultCellStyle = dataGridViewCellStyle13;
+            resources.ApplyResources(this.Reload, "Reload");
+            this.Reload.Name = "Reload";
+            // 
+            // ToLoad
+            // 
+            this.ToLoad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.NullValue = false;
+            this.ToLoad.DefaultCellStyle = dataGridViewCellStyle14;
+            this.ToLoad.FillWeight = 50F;
+            resources.ApplyResources(this.ToLoad, "ToLoad");
+            this.ToLoad.Name = "ToLoad";
+            this.ToLoad.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // tbInfo
             // 
             this.tbInfo.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -527,117 +638,6 @@
             this.buttonFinTrans.Name = "buttonFinTrans";
             this.buttonFinTrans.UseVisualStyleBackColor = true;
             this.buttonFinTrans.Click += new System.EventHandler(this.ButtonFinTrans_Click);
-            // 
-            // Identifiant
-            // 
-            this.Identifiant.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.Identifiant.DefaultCellStyle = dataGridViewCellStyle5;
-            resources.ApplyResources(this.Identifiant, "Identifiant");
-            this.Identifiant.Name = "Identifiant";
-            this.Identifiant.ReadOnly = true;
-            // 
-            // Valeur
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Format = "c2";
-            this.Valeur.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Valeur.FillWeight = 50F;
-            resources.ApplyResources(this.Valeur, "Valeur");
-            this.Valeur.Name = "Valeur";
-            this.Valeur.ReadOnly = true;
-            this.Valeur.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Present
-            // 
-            this.Present.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.NullValue = false;
-            this.Present.DefaultCellStyle = dataGridViewCellStyle7;
-            resources.ApplyResources(this.Present, "Present");
-            this.Present.Name = "Present";
-            this.Present.ReadOnly = true;
-            this.Present.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Present.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ToDispense
-            // 
-            this.ToDispense.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.ToDispense.DefaultCellStyle = dataGridViewCellStyle8;
-            this.ToDispense.FillWeight = 30F;
-            resources.ApplyResources(this.ToDispense, "ToDispense");
-            this.ToDispense.MaxInputLength = 3;
-            this.ToDispense.Name = "ToDispense";
-            // 
-            // Dispensed
-            // 
-            this.Dispensed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.Dispensed.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Dispensed.FillWeight = 30F;
-            resources.ApplyResources(this.Dispensed, "Dispensed");
-            this.Dispensed.MaxInputLength = 3;
-            this.Dispensed.Name = "Dispensed";
-            this.Dispensed.ReadOnly = true;
-            // 
-            // LevelSW
-            // 
-            this.LevelSW.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.LevelSW.DefaultCellStyle = dataGridViewCellStyle10;
-            resources.ApplyResources(this.LevelSW, "LevelSW");
-            this.LevelSW.Name = "LevelSW";
-            this.LevelSW.ReadOnly = true;
-            // 
-            // LevelHW
-            // 
-            this.LevelHW.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.LevelHW.DefaultCellStyle = dataGridViewCellStyle11;
-            resources.ApplyResources(this.LevelHW, "LevelHW");
-            this.LevelHW.Name = "LevelHW";
-            this.LevelHW.ReadOnly = true;
-            // 
-            // ToEmpty
-            // 
-            this.ToEmpty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.NullValue = false;
-            this.ToEmpty.DefaultCellStyle = dataGridViewCellStyle12;
-            this.ToEmpty.FillWeight = 50F;
-            resources.ApplyResources(this.ToEmpty, "ToEmpty");
-            this.ToEmpty.Name = "ToEmpty";
-            this.ToEmpty.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Reload
-            // 
-            this.Reload.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.Reload.DefaultCellStyle = dataGridViewCellStyle13;
-            resources.ApplyResources(this.Reload, "Reload");
-            this.Reload.Name = "Reload";
-            // 
-            // ToLoad
-            // 
-            this.ToLoad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.NullValue = false;
-            this.ToLoad.DefaultCellStyle = dataGridViewCellStyle14;
-            this.ToLoad.FillWeight = 50F;
-            resources.ApplyResources(this.ToLoad, "ToLoad");
-            this.ToLoad.Name = "ToLoad";
-            this.ToLoad.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FormMain
             // 

@@ -17,12 +17,12 @@ namespace DeviceLibrary
         /// <summary>
         /// Liste des évenement.
         /// </summary>
-        static public List<CEvent> eventsList;
+        public static List<CEvent> eventsList;
 
         /// <summary>
         /// Objet de verrouillage de l'accés à la liste des évenements.
         /// </summary>
-        static public object eventLock;  
+        public static object eventListLock;  
 
         /// <summary>
         /// Niveaux des périphériques.
@@ -41,10 +41,6 @@ namespace DeviceLibrary
         {
             get;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        private static CBnrMei bnr;
 
         /// <summary>
         /// Identifiant du  fabricant
@@ -76,7 +72,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Tâche du périphérique.
         /// </summary>
-        public abstract void Task();
+        protected abstract void Task();
 
         /// <summary>
         /// Initialisation des périphériques.
@@ -88,20 +84,18 @@ namespace DeviceLibrary
         /// </summary>
         public CDevice()
         {
-            if (bnr == null)
-            {
-                bnr = new CBnrMei();
-            }
-
             if (denominationInserted == null)
             {
                 denominationInserted = new CInserted();
             }
-            if(eventsList == null)
+            if (eventsList == null)
             {
                 eventsList = new List<CEvent>();
             }
-            
+            if(eventListLock == null)
+            {
+                eventListLock = new object();
+            }            
         }
     }
 }
