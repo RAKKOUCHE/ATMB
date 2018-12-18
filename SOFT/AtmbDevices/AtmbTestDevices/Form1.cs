@@ -274,7 +274,6 @@ namespace AtmbTestDevices
                                   dataGridViewHopper["ToDispense", byIndex].Style.BackColor =
                                   dataGridViewHopper["ToLoad", byIndex].Style.BackColor =
                                   dataGridViewHopper["Reload", byIndex].Style.BackColor = Color.White;
-
                                   ++byIndex;
                               }
                           }
@@ -288,14 +287,16 @@ namespace AtmbTestDevices
                 {
                     a = () =>
                       {
-                          MessageBox.Show("erreur bnr!");
+                          MessageBox.Show(((CerrorBNR)((CDevice.CEvent)e.donnee).data).nameModule.ToString() + "\r\n" +
+                          ((ERROR_BNR)((CerrorBNR)((CDevice.CEvent)e.donnee).data).error).ToString(), ((CDevice.CEvent)e.donnee).deviceId.ToString());
                       };
                     break;
                 }
                 default:
                 {
-                    a = () => { };
-
+                    a = () =>
+                    {
+                    };
                     break;
                 }
             }

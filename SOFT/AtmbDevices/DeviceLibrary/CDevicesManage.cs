@@ -14,6 +14,7 @@ using System.Xml;
 
 namespace DeviceLibrary
 {
+
     /// <summary>
     /// Enumération des causes des événements
     /// </summary>
@@ -105,15 +106,10 @@ namespace DeviceLibrary
         /// </summary>
         private Thread MsgTask;
 
-        private bool isDllReady;
         /// <summary>
-        /// Boolean indiquant si la dll est initialiasée.
+        /// Evenement de la classe principale.
         /// </summary>
-        public bool IsDllReady
-        {
-            get => isDllReady;
-            set => isDllReady = value;
-        }
+        public CDevice.CEvent evenement;
 
         private static int toPay;
         /// <summary>
@@ -308,17 +304,34 @@ namespace DeviceLibrary
                             }
                             case Reason.BNRERREUR:
                             {
-                                OnBNRErreur();
+                                OnBNRErreur(CDevice.eventsList[0]);
                                 break;
                             }
+                            case Reason.DLLLREADY:
+                            {
+                                OnDllReady();
+                                break;
+                            }
+
+                            case Reason.COINVALIDATORERROR:
+                                break;
+                            case Reason.CASHCLOSED:
+                                break;
+                            case Reason.CASHOPENED:
+                                break;
+                            case Reason.HOPPERERROR:
+                                break;
+                            case Reason.HOPPERDISPENSED:
+                                break;
+                            case Reason.HOPPERHWLEVELCHANGED:
+                                break;
+                            case Reason.HOPPERSWLEVELCHANGED:
+                                break;
+                            case Reason.HOPPEREMPTIED:
+                                break;
                         }
                         CDevice.eventsList.RemoveAt(0);
                     }
-                }
-                if (IsDllReady)
-                {
-                    IsDllReady = false;
-                    OnDllReady();
                 }
                 foreach (CHopper hopper in Hoppers)
                 {
@@ -369,7 +382,7 @@ namespace DeviceLibrary
                         if (((ToPay - CDevice.denominationInserted.TotalAmount) < 1))
                         {
                             monnayeur.IsCVToBeDeactivated = true;
-                            //OnCashClose();
+                            bnX.IsBNRToBeDeactivated = true;
                             ChangeBack();
                             CloseTransaction();
                             CDevice.denominationInserted.TotalAmount = 0;
@@ -675,14 +688,14 @@ namespace DeviceLibrary
         /// <summary>
         /// 
         /// </summary>
-        private void OnBNRErreur()
+        private void OnBNRErreur(CDevice.CEvent evenement)
         {
             try
             {
                 CalertEventArgs alertEventArgs = new CalertEventArgs
                 {
                     reason = Reason.BNRERREUR,
-                    donnee = null,
+                    donnee = evenement,
                 };
                 CallAlert(new object(), alertEventArgs);
             }
@@ -703,6 +716,10 @@ namespace DeviceLibrary
             {
                 if (monnayeur.IsCVToBeActivated = ((ToPay = value) > CDevice.denominationInserted.TotalAmount) && (monnayeur.ProductCode != "BV"))
                 {
+                    if(CBNR_CPI.isPresent)
+                    {
+                        bnX.IsBNRToBeActivated = true;
+                    }
                     OnCashOpen();
                 }
             }
@@ -718,6 +735,7 @@ namespace DeviceLibrary
         public void CloseTransaction()
         {
             monnayeur.IsCVToBeDeactivated = true;
+            bnX.IsBNRToBeDeactivated = true;
             CDevice.denominationInserted.TotalAmount = ToPay = 0;
             OnCashClose();
         }
@@ -751,7 +769,7 @@ namespace DeviceLibrary
             {
                 Log = NLog.LogManager.GetCurrentClassLogger();
                 Log.Info("\r\n\r\n\r\n{0}\r\n", messagesText.callDll);
-                IsDllReady = false;
+                evenement = new CDevice.CEvent();
                 ParamFileName = "parametres.xml";
                 ParamFileName = Directory.GetCurrentDirectory() + "\\" + ParamFileName;
                 parametersFile.Load(ParamFileName);
@@ -767,7 +785,7 @@ namespace DeviceLibrary
                 CccTalk.countersFile = File.Open(CccTalk.fileCounterName, FileMode.Open, FileAccess.ReadWrite);
                 CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
                 CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
-                
+
                 monnayeur = new CCoinValidator();
                 if (!monnayeur.IsPresent)
                 {
@@ -778,8 +796,6 @@ namespace DeviceLibrary
                     monnayeur = new CPelicano();
                     ((CPelicano)monnayeur).SpeedMotor = Convert.ToByte(parametersFile.SelectSingleNode("/CashParameters/CoinValidator/SpeedMTR").InnerText);
                 }
-                //GetInhibitStateChannels();
-                //monnayeur.Init();
                 SetSortersAndHoppersToLoad();
 
                 Hoppers = new List<CHopper>();
@@ -789,18 +805,12 @@ namespace DeviceLibrary
                 }
                 ReadParamHopper();
                 Hoppers.Sort((x, y) => y.CoinValue.CompareTo(x.CoinValue));
-                foreach (CHopper hopper in Hoppers)
-                {
-                    hopper.Init();
-                }
 
                 bnX = new CBNR_CPI();
-
-                monnayeur.CVTask.Start();
-                
                 MsgTask = new Thread(Task);
                 MsgTask.Start();
-                /*IsDllReady = true;*/
+                evenement.reason = Reason.DLLLREADY;
+                CDevice.eventsList.Add(evenement);
             }
             catch (Exception E)
             {

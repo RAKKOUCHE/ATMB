@@ -412,6 +412,7 @@ namespace DeviceLibrary
         /// </summary>
         public override void  Init()
         {
+            DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
             CDevicesManage.Log.Info("Initialisation du {0}", DeviceAddress);
             BackEventCounter = 0;
             MasterDisable();
@@ -447,9 +448,7 @@ namespace DeviceLibrary
                     case Etat.STATE_INIT:
                     {
                         CDevicesManage.Log.Debug("Initialisation monnayeur");
-                        DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
                         Init();
-
                         break;
                     }
                     case Etat.STATE_RESET:
@@ -658,8 +657,6 @@ namespace DeviceLibrary
                         break;
                     case Etat.STATE_CHECKLOWERSENSOR:
                         break;
-                    case Etat.STATE_SETMASTERINHIBIT:
-                        break;
                     case Etat.STATE_GETOPTION:
                         break;
                     case Etat.STATE_ACCEPTLIMIT:
@@ -773,7 +770,7 @@ namespace DeviceLibrary
                     ResetDevice();
                     IsPresent = SimplePoll;
                 }
-                state = Etat.STATE_ST
+                state = Etat.STATE_STOP;
                 if (IsPresent)
                 {
                     canaux = new CCanal[numChannel];
@@ -781,11 +778,13 @@ namespace DeviceLibrary
                     {
                         canaux[i] = new CCanal((byte)(i + 1), this);
                         canaux[i].coinId.GetCoinId();
-
                     }
                     errorCV = new CErroCV();
                     ResetDevice();
+                    PollingDelay = PollingPriority * 2 / 3;
                     CVTask = new Thread(Task);
+                    state = Etat.STATE_INIT;
+                    CVTask.Start();
                 }
             }
             catch (Exception E)

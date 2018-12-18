@@ -4,6 +4,56 @@
         <name>DeviceLibrary</name>
     </assembly>
     <members>
+        <member name="T:DeviceLibrary.ERROR_BNR">
+            <summary>
+            Enumération des erreurs du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.ERROR_BNR.OK">
+            <summary>
+            Pas d'erreur
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.ERROR_BNR.BOURRAGE">
+            <summary>
+            Billet bloqué dans le BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.ERROR_BNR.BNR_OPEN">
+            <summary>
+            Le bnr est ouvert ou déverrouillé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.ERROR_BNR.TYPE_BILLET_ERREUR">
+            <summary>
+            Indique une erreurs sur le paramètrage d'un billet.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.ERROR_BNR.STOCKAGE_ERREUR">
+            <summary>
+            Erreur de stockage des billets.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.ERROR_BNR.DLL_NOT_FREE">
+            <summary>
+            Les dlls sont occupées.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CerrorBNR">
+            <summary>
+            Class des erreurs du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CerrorBNR.nameModule">
+            <summary>
+            Nom du module.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CerrorBNR.error">
+            <summary>
+            Code de l'error.
+            </summary>
+        </member>
         <member name="T:DeviceLibrary.CBNR_CPI">
             <summary>
             Class du bnr
@@ -29,11 +79,6 @@
             Retourne l'identifiant du fabricant.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.oCresult">
-            <summary>
-            Code Erreur XFS
-            </summary>
-        </member>
         <member name="F:DeviceLibrary.CBNR_CPI.cashOrder">
             <summary>
             Instance de la classe contenant les informations sur le billet en traitenent.
@@ -42,6 +87,11 @@
         <member name="F:DeviceLibrary.CBNR_CPI.BnrResetTimeOutInMS">
             <summary>
             Délai maximum accordé pour effectur un reset
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.BnrDefaultOperationTimeOutInMS">
+            <summary>
+            Delain maximum pour effectuer une opération.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.state">
@@ -62,6 +112,21 @@
         <member name="F:DeviceLibrary.CBNR_CPI.isPresent">
             <summary>
             Indique si un bnr est connecté.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.errorInfo">
+            <summary>
+            Instance de la class CerrorBNR.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CBNR_CPI.IsBNRToBeDeactivated">
+            <summary>
+            Indique si le monnayeur doit être adtivé.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CBNR_CPI.IsBNRToBeActivated">
+            <summary>
+            Indique si le monnayeur doit être adtivé.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CBNR_CPI.CashOccured(Mei.Bnr.XfsCashOrder)">
@@ -97,6 +162,11 @@
             <param name="result"></param>
             <param name="extendedResult"></param>
             <param name="Data"></param>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.HardwareError">
+            <summary>
+            Recherche de l'erreur et du module en erreur
+            </summary>
         </member>
         <member name="M:DeviceLibrary.CBNR_CPI.Init">
             <summary>
@@ -152,6 +222,16 @@
         <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_GETSTATUS">
             <summary>
             Lecture de l'état du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_DISABLE">
+            <summary>
+            Etat pour désactiver le périphérique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_ENABLE">
+            <summary>
+            Etat pour activer le périphérique.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_IDLE">
@@ -1379,12 +1459,6 @@
             Protection de l'opération de lecture des niveaux.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CHopper.#ctor(System.Byte)">
-            <summary>
-            Constructeur
-            </summary>
-            <param name="hopperNumber">Numéro du hopper</param>
-        </member>
         <member name="P:DeviceLibrary.CHopper.LevelStatus">
             <summary>
             Renvoi les informations sur les niveaux des hoppers
@@ -1510,6 +1584,12 @@
             <summary>
             Tâche de la machine d'état du hopper.
             </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.#ctor(System.Byte)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="hopperNumber">Numéro du hopper</param>
         </member>
         <member name="T:DeviceLibrary.CHopper.Header">
             \addtogroup Headers
@@ -2336,6 +2416,11 @@
         <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_IDLE">
             <summary>
             Etat quand le périphérique est inactif.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_STOP">
+            <summary>
+            Arrêt de la tâche.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.CVErrorCodes">
@@ -3810,9 +3895,9 @@
             Thread de la classe principale.
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CDevicesManage.IsDllReady">
+        <member name="F:DeviceLibrary.CDevicesManage.evenement">
             <summary>
-            Boolean indiquant si la dll est initialiasée.
+            Evenement de la classe principale.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CDevicesManage.ToPay">
@@ -3927,7 +4012,7 @@
             Evénement levé lorsque la dll est prête.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnBNRErreur">
+        <member name="M:DeviceLibrary.CDevicesManage.OnBNRErreur(DeviceLibrary.CDevice.CEvent)">
             <summary>
             
             </summary>

@@ -504,35 +504,6 @@ namespace DeviceLibrary
         private static Mutex mutexLevel = new Mutex();
 
         /*--------------------------------------------------------------*/
-
-        /// <summary>
-        /// Constructeur
-        /// </summary>
-        /// <param name="hopperNumber">Numéro du hopper</param>
-        public CHopper(byte hopperNumber)
-        {
-            CDevicesManage.Log.Info("Instanciation  du hopper {0}", hopperNumber);
-            DeviceAddress = (DefaultDevicesAddress)(hopperNumber + AddressBaseHoper);
-            Number = hopperNumber;
-            if (!(IsPresent = SimplePoll))
-            {
-                Thread.Sleep(200);
-                ResetDevice();
-                IsPresent = SimplePoll;
-            }
-            if (IsPresent)
-            {
-                isEmptyingInProgress = false;
-                deviceLevel = new CLevel();
-                variables = new CHopperVariableSet(this);
-                dispenseStatus = new CHopperStatus(this);
-                hopperCoinID = new CHopperCoinId();
-                emptyCount = new CEmptyCount();
-                cipherKey = new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 };
-                CoinsToDistribute = 0;
-            }
-        }
-
         /// <summary>
         /// Renvoi les informations sur les niveaux des hoppers
         /// </summary>
@@ -869,58 +840,58 @@ namespace DeviceLibrary
         {
             try
             {
-                State = Etat.STATE_RESET;
-                if (IsPresent)
-                {
-                    memoryStorage = new CMemoryStorage(this);
-                    errorHopper = new CHopperError(ToString());
-                    CDevicesManage.Log.Info("Categorie d'équipement du {0} {1}", ToString(), EquipementCategory);
-                    CDevicesManage.Log.Info(OptoStates != 0 ? "Au moins un optocoupleur est occupé" : "Les optocoupleur sont libres");
-                    CDevicesManage.Log.Info("Le courant maximum autorisé pour le hopper {0} est de {1}", DeviceAddress, variables.CurrentLimit);
-                    CDevicesManage.Log.Info("Le délai pour arrêter le motor du hopper {0} est de {1}", DeviceAddress, variables.MotorStopDelay);
+                isEmptyingInProgress = false;
+                deviceLevel = new CLevel();
+                variables = new CHopperVariableSet(this);
+                dispenseStatus = new CHopperStatus(this);
+                hopperCoinID = new CHopperCoinId();
+                emptyCount = new CEmptyCount();
+                cipherKey = new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 };
+                CoinsToDistribute = 0;
 
-                    CDevicesManage.Log.Info("Le délai maximum de vérification pour la distribution de pièce du hopper {0} est de {1} secondes", DeviceAddress, variables.PayoutDelayTO);
-                    CDevicesManage.Log.Info("Le courant maximum utilisé par le hopper {0} est de {1}", DeviceAddress, variables.Maxcurrent);
-                    double tension = variables.Tension;
-                    if ((tension > 26) || (tension < 19))
-                    {
-                        CDevicesManage.Log.Error("Tension d'alimentation anormale.");
-                    }
-                    CDevicesManage.Log.Info("La tension sur le hopper {0} est de {1}", DeviceAddress, tension);
-                    byte connectorAddress = variables.ConnectorAddress;
-                    if ((connectorAddress + 1 + AddressBaseHoper) != (byte)DeviceAddress)
-                    {
-                        CDevicesManage.Log.Error("Une différence d'adresse existe entre l'adresse logiciel et l'adresse physique du connecteur pour le hopper {0}, l'adresse physique du connecteur est : {1}", DeviceAddress, connectorAddress);
-                    }
-                    else
-                    {
-                        CDevicesManage.Log.Info("L'adresse physique du hopper est : {0} ", connectorAddress + 1 + AddressBaseHoper);
-                    }
-                    CDevicesManage.Log.Info("Le numéro de série du Hopper {0} {1} ", Number, SerialNumber);
-                    hopperCoinID = CoinId;
-                    CDevicesManage.Log.Info("Identification des pièces : Pays : {0}, Valeur : {1:C2}, version {2}", hopperCoinID.CountryCode, (decimal)hopperCoinID.ValeurCent / 100, hopperCoinID.Issue);
-                    CDevicesManage.Log.Info("Prise en compte du niveau bas : {0}", IsLowLevelImplemented);
-                    CDevicesManage.Log.Info("Prise en compte du niveau haut : {0} ", IsHighLevelImplemented);
-                    CDevicesManage.Log.Info("Nivau bas atteint : {0}", IsLowLevelReached);
-                    CDevicesManage.Log.Info("Niveau haut atteint : {0}", IsHighLevelReached);
-                    CDevicesManage.Log.Info("Le type de mémoire du hopper {0} est : {1}", Number, memoryStorage.MemoryType);
-                    CDevicesManage.Log.Info("Le nombre de bytes dans un bloc de lecture du hopper {0} est : {1}", Number, memoryStorage.ReadBytesPerBlock);
-                    CDevicesManage.Log.Info("Le nombre de blocs pouvant être lus du hopper {0} est : {1}", Number, memoryStorage.ReadBlocks);
-                    CDevicesManage.Log.Info("Le nombre de bytes dans un bloc d'écriture du hopper {0} est : {1}", Number, memoryStorage.WriteBytesPerBlock);
-                    CDevicesManage.Log.Info("Le nombre de blocs pouvant être dans le hopper {0} est : {1}", Number, memoryStorage.WriteBlocks);
-                    CDevicesManage.Log.Info("Il reste {0} pièce(s) à distribuer par le {1}", dispenseStatus.CoinsRemaining, DeviceAddress);
-                    EnableHopper();
-                    if ((CoinsToDistribute > 0) || ((CoinsToDistribute = dispenseStatus.CoinsRemaining) > 0))
-                    {
-                        State = Etat.STATE_DISPENSE;
-                    };
-                    HTask = new Thread(Task);
-                    HTask.Start();
+                memoryStorage = new CMemoryStorage(this);
+                errorHopper = new CHopperError(ToString());
+                CDevicesManage.Log.Info("Categorie d'équipement du {0} {1}", ToString(), EquipementCategory);
+                CDevicesManage.Log.Info(OptoStates != 0 ? "Au moins un optocoupleur est occupé" : "Les optocoupleur sont libres");
+                CDevicesManage.Log.Info("Le courant maximum autorisé pour le hopper {0} est de {1}", DeviceAddress, variables.CurrentLimit);
+                CDevicesManage.Log.Info("Le délai pour arrêter le motor du hopper {0} est de {1}", DeviceAddress, variables.MotorStopDelay);
+
+                CDevicesManage.Log.Info("Le délai maximum de vérification pour la distribution de pièce du hopper {0} est de {1} secondes", DeviceAddress, variables.PayoutDelayTO);
+                CDevicesManage.Log.Info("Le courant maximum utilisé par le hopper {0} est de {1}", DeviceAddress, variables.Maxcurrent);
+                double tension = variables.Tension;
+                if ((tension > 26) || (tension < 19))
+                {
+                    CDevicesManage.Log.Error("Tension d'alimentation anormale.");
+                }
+                CDevicesManage.Log.Info("La tension sur le hopper {0} est de {1}", DeviceAddress, tension);
+                byte connectorAddress = variables.ConnectorAddress;
+                if ((connectorAddress + 1 + AddressBaseHoper) != (byte)DeviceAddress)
+                {
+                    CDevicesManage.Log.Error("Une différence d'adresse existe entre l'adresse logiciel et l'adresse physique du connecteur pour le hopper {0}, l'adresse physique du connecteur est : {1}", DeviceAddress, connectorAddress);
                 }
                 else
                 {
-                    throw new Exception(string.Format("Le hopper {0} n'est pas opérationel et ne peut donc pas être initialisé. ", Number));
+                    CDevicesManage.Log.Info("L'adresse physique du hopper est : {0} ", connectorAddress + 1 + AddressBaseHoper);
                 }
+                CDevicesManage.Log.Info("Le numéro de série du Hopper {0} {1} ", Number, SerialNumber);
+                hopperCoinID = CoinId;
+                CDevicesManage.Log.Info("Identification des pièces : Pays : {0}, Valeur : {1:C2}, version {2}", hopperCoinID.CountryCode, (decimal)hopperCoinID.ValeurCent / 100, hopperCoinID.Issue);
+                CDevicesManage.Log.Info("Prise en compte du niveau bas : {0}", IsLowLevelImplemented);
+                CDevicesManage.Log.Info("Prise en compte du niveau haut : {0} ", IsHighLevelImplemented);
+                CDevicesManage.Log.Info("Nivau bas atteint : {0}", IsLowLevelReached);
+                CDevicesManage.Log.Info("Niveau haut atteint : {0}", IsHighLevelReached);
+                CDevicesManage.Log.Info("Le type de mémoire du hopper {0} est : {1}", Number, memoryStorage.MemoryType);
+                CDevicesManage.Log.Info("Le nombre de bytes dans un bloc de lecture du hopper {0} est : {1}", Number, memoryStorage.ReadBytesPerBlock);
+                CDevicesManage.Log.Info("Le nombre de blocs pouvant être lus du hopper {0} est : {1}", Number, memoryStorage.ReadBlocks);
+                CDevicesManage.Log.Info("Le nombre de bytes dans un bloc d'écriture du hopper {0} est : {1}", Number, memoryStorage.WriteBytesPerBlock);
+                CDevicesManage.Log.Info("Le nombre de blocs pouvant être dans le hopper {0} est : {1}", Number, memoryStorage.WriteBlocks);
+                CDevicesManage.Log.Info("Il reste {0} pièce(s) à distribuer par le {1}", dispenseStatus.CoinsRemaining, DeviceAddress);
+                EnableHopper();
+                if ((CoinsToDistribute > 0) || ((CoinsToDistribute = dispenseStatus.CoinsRemaining) > 0))
+                {
+                    State = Etat.STATE_DISPENSE;
+                };
+                State = Etat.STATE_RESET;
             }
             catch (Exception E)
             {
@@ -1036,6 +1007,11 @@ namespace DeviceLibrary
         {
             switch (State)
             {
+                case Etat.STATE_INIT:
+                {
+                    Init();
+                    break;
+                }
                 case Etat.STATE_RESET:
                 {
                     delaypollLevel = polllDelayLevel * 1000;
@@ -1122,6 +1098,11 @@ namespace DeviceLibrary
                     }
                     break;
                 }
+                case Etat.STATE_STOP:
+                {
+                    HTask.Abort();
+                    break;
+                }
                 default:
                 {
                     break;
@@ -1149,8 +1130,7 @@ namespace DeviceLibrary
             {
                 CoinsToDistribute = numberToDispense;
                 State = Etat.STATE_DISPENSE;
-                while (State != Etat.STATE_IDLE)
-                    ;
+                while (State != Etat.STATE_IDLE) ;
             }
         }
 
@@ -1201,35 +1181,41 @@ namespace DeviceLibrary
         {
             while (true)
             {
+                mutexCCTalk.WaitOne();
                 try
                 {
-                    mutexCCTalk.WaitOne();
-                    if (IsPresent)
-                    {
-                        try
-                        {
-                            CheckState();
-                        }
-                        catch (Exception E)
-                        {
-                            CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                        }
-                    }
+                    CheckState();
                 }
                 catch (Exception E)
                 {
                     CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
-                try
-                {
-                    mutexCCTalk.ReleaseMutex();
-
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                mutexCCTalk.ReleaseMutex();
                 Thread.Sleep(pollDelayHopper);
+            }
+        }
+
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="hopperNumber">Numéro du hopper</param>
+        public CHopper(byte hopperNumber)
+        {
+            CDevicesManage.Log.Info("Instanciation  du hopper {0}", hopperNumber);
+            DeviceAddress = (DefaultDevicesAddress)(hopperNumber + AddressBaseHoper);
+            Number = hopperNumber;
+            if (!(IsPresent = SimplePoll))
+            {
+                Thread.Sleep(200);
+                ResetDevice();
+                IsPresent = SimplePoll;
+                state = Etat.STATE_STOP;
+            }
+            if (IsPresent)
+            {
+                state = Etat.STATE_INIT;
+                HTask = new Thread(Task);
+                HTask.Start();
             }
         }
     }
