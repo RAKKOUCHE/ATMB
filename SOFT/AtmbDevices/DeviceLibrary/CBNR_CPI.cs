@@ -18,10 +18,6 @@ namespace DeviceLibrary
     public enum ERROR_BNR
     {
         /// <summary>
-        /// Pas d'erreur
-        /// </summary>
-        OK = 0,
-        /// <summary>
         /// Billet bloqué dans le BNR.
         /// </summary>
         BOURRAGE,

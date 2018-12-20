@@ -111,14 +111,13 @@ namespace DeviceLibrary
         /// </summary>
         public CDevice.CEvent evenement;
 
-        private static int toPay;
         /// <summary>
         /// Variable contenant le montant à payer.
         /// </summary>
         public static int ToPay
         {
-            get => toPay;
-            set => toPay = value;
+            get;
+            set;
         }
 
         /// <summary>
@@ -189,7 +188,6 @@ namespace DeviceLibrary
                 return result;
             }
         }
-
         /*-------------------------------------------------------*/
 
         /// <summary>
@@ -286,6 +284,31 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// Modifie le le chemin de tri du canal.
+        /// </summary>
+        /// <param name="canal">Canal du monnayeur</param>
+        /// <param name="sorter">chemin du trieur</param>
+        public void SetSorterPath(byte canal, byte sorter)
+        {
+            try
+            {
+                if (canal < 1 || canal > 16)
+                {
+                    throw new Exception("Le numéro de canal doit être compris entre 1 et 16");
+                }
+                if (sorter < 1 || sorter > 8)
+                {
+                    throw new Exception("Le numéro de chemin doit être compris entre 1 et 8");
+                }
+                monnayeur.canaux[canal].sorter.SetSorterPath(sorter);
+            }
+            catch (Exception E)
+            {
+                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
         /// Tâche principale de la dll
         /// </summary>
         private void Task()
@@ -314,21 +337,21 @@ namespace DeviceLibrary
                             }
 
                             case Reason.COINVALIDATORERROR:
-                                break;
+                            break;
                             case Reason.CASHCLOSED:
-                                break;
+                            break;
                             case Reason.CASHOPENED:
-                                break;
+                            break;
                             case Reason.HOPPERERROR:
-                                break;
+                            break;
                             case Reason.HOPPERDISPENSED:
-                                break;
+                            break;
                             case Reason.HOPPERHWLEVELCHANGED:
-                                break;
+                            break;
                             case Reason.HOPPERSWLEVELCHANGED:
-                                break;
+                            break;
                             case Reason.HOPPEREMPTIED:
-                                break;
+                            break;
                         }
                         CDevice.eventsList.RemoveAt(0);
                     }
@@ -350,7 +373,7 @@ namespace DeviceLibrary
                             hopper.deviceLevel.isSoftLevelChanged = false;
                             OnHopperSoftLevelChanged(hopper);
                         }
-                        if ((hopper.deviceLevel.isHardLevelChanged))
+                        if (hopper.deviceLevel.isHardLevelChanged)
                         {
                             hopper.deviceLevel.isHardLevelChanged = false;
                             OnHopperHardLevelChanged(hopper);
@@ -379,7 +402,7 @@ namespace DeviceLibrary
 
                     if ((monnayeur.ProductCode != "BV") || !((CPelicano)monnayeur).IsCoinPresent)
                     {
-                        if (((ToPay - CDevice.denominationInserted.TotalAmount) < 1))
+                        if ((ToPay - CDevice.denominationInserted.TotalAmount) < 1)
                         {
                             monnayeur.IsCVToBeDeactivated = true;
                             bnX.IsBNRToBeDeactivated = true;
@@ -716,7 +739,7 @@ namespace DeviceLibrary
             {
                 if (monnayeur.IsCVToBeActivated = ((ToPay = value) > CDevice.denominationInserted.TotalAmount) && (monnayeur.ProductCode != "BV"))
                 {
-                    if(CBNR_CPI.isPresent)
+                    if (CBNR_CPI.isPresent)
                     {
                         bnX.IsBNRToBeActivated = true;
                     }
@@ -767,7 +790,7 @@ namespace DeviceLibrary
         {
             try
             {
-                Log = NLog.LogManager.GetCurrentClassLogger();
+                Log = LogManager.GetCurrentClassLogger();
                 Log.Info("\r\n\r\n\r\n{0}\r\n", messagesText.callDll);
                 evenement = new CDevice.CEvent();
                 ParamFileName = "parametres.xml";
@@ -786,11 +809,19 @@ namespace DeviceLibrary
                 CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
                 CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
 
-                monnayeur = new CCoinValidator();
-                if (!monnayeur.IsPresent)
+                try
                 {
-                    throw new Exception("Pas de monnayeur detecté.");
+                    monnayeur = new CCoinValidator();
+                    if (!monnayeur.IsPresent)
+                    {
+                        throw new Exception("Pas de monnayeur detecté.");
+                    }
                 }
+                catch (Exception E)
+                {
+                    Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                }
+
                 if (monnayeur.ProductCode == "BV")
                 {
                     monnayeur = new CPelicano();
@@ -856,7 +887,7 @@ namespace DeviceLibrary
 
             Log.Trace("Stop");
             Log.Trace("\r\n---------------------\r\n");
-            NLog.LogManager.Shutdown();
+            LogManager.Shutdown();
         }
 
         /// <summary>

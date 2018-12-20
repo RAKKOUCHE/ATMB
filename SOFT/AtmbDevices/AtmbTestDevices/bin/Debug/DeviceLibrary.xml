@@ -9,11 +9,6 @@
             Enumération des erreurs du BNR.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.ERROR_BNR.OK">
-            <summary>
-            Pas d'erreur
-            </summary>
-        </member>
         <member name="F:DeviceLibrary.ERROR_BNR.BOURRAGE">
             <summary>
             Billet bloqué dans le BNR.
@@ -3946,6 +3941,13 @@
             <summary>
             Effectue le rendu monnaie.
             </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManage.SetSorterPath(System.Byte,System.Byte)">
+            <summary>
+            Modifie le le chemin de tri du canal.
+            </summary>
+            <param name="canal">Canal du monnayeur</param>
+            <param name="sorter">chemin du trieur</param>
         </member>
         <member name="M:DeviceLibrary.CDevicesManage.Task">
             <summary>
