@@ -59,7 +59,7 @@ namespace DeviceLibrary
                     byte result = 1;
                     try
                     {
-                        CDevicesManage.Log.Info("Lecture des informations sur le tri des pièces en sortie du canal {0} du {1}", CanalOwner.Number, CanalOwner.CVOwner.DeviceAddress);
+                        CDevicesManager.Log.Info("Lecture des informations sur le tri des pièces en sortie du canal {0} du {1}", CanalOwner.Number, CanalOwner.CVOwner.DeviceAddress);
                         byte[] bufferIn = { 0, 0, 0, 0 };
                         byte[] bufferParam = { CanalOwner.Number };
                         if (!CanalOwner.CVOwner.IsCmdccTalkSended(CanalOwner.CVOwner.DeviceAddress, Header.REQUESTSORTERPATH, (byte)bufferParam.Length, bufferParam, bufferIn))
@@ -71,7 +71,7 @@ namespace DeviceLibrary
                     }
                     catch (Exception E)
                     {
-                        CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                        CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                     }
                     return result;
                 }
@@ -85,7 +85,7 @@ namespace DeviceLibrary
             {
                 try
                 {
-                    CDevicesManage.Log.Info("Modifie le chemin de sortie du trieur pour le canal {0} chemin {1}", CanalOwner.Number, pathSorter);
+                    CDevicesManager.Log.Info("Modifie le chemin de sortie du trieur pour le canal {0} chemin {1}", CanalOwner.Number, pathSorter);
                     byte[] bufferParam = { CanalOwner.Number, pathSorter, OverPath[0], OverPath[1], OverPath[2] };
                     if (!CanalOwner.CVOwner.IsCmdccTalkSended(CanalOwner.CVOwner.DeviceAddress, Header.MODIFYSORTERPATH, (byte)bufferParam.Length, bufferParam, null))
                     {
@@ -94,7 +94,7 @@ namespace DeviceLibrary
                 }
                 catch (Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
             }
 

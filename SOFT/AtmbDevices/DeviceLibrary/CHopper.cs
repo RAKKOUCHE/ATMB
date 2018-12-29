@@ -515,7 +515,7 @@ namespace DeviceLibrary
                 byte result = 0;
                 try
                 {
-                    CDevicesManage.Log.Info("Lecture des informations sur les niveaux du hopper {0}", Number);
+                    CDevicesManager.Log.Info("Lecture des informations sur les niveaux du hopper {0}", Number);
                     result = GetByte(Header.REQUESTHIGHLOWSTATUS);
                     if (((result & (byte)LevelMask.LOLEVELREACHED) > 0) && ((result & (byte)LevelMask.HILEVEREACHED) > 0))
                     {
@@ -524,7 +524,7 @@ namespace DeviceLibrary
                 }
                 catch (Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 return result;
             }
@@ -538,7 +538,7 @@ namespace DeviceLibrary
             get
             {
                 bool result;
-                CDevicesManage.Log.Info("Niveau haut implémenté sur le hopper {0} : {1} : ", Number, result = ((LevelStatus & (byte)LevelMask.HILEVELIMPLEMENTED) > 0));
+                CDevicesManager.Log.Info("Niveau haut implémenté sur le hopper {0} : {1} : ", Number, result = ((LevelStatus & (byte)LevelMask.HILEVELIMPLEMENTED) > 0));
                 return result;
             }
         }
@@ -552,7 +552,7 @@ namespace DeviceLibrary
             get
             {
                 bool result;
-                CDevicesManage.Log.Info("Niveau bas implémenté sur le hopper {0} : {1} : ", Number, result = (LevelStatus & (byte)LevelMask.LOLEVELIMPLEMENTED) > 0);
+                CDevicesManager.Log.Info("Niveau bas implémenté sur le hopper {0} : {1} : ", Number, result = (LevelStatus & (byte)LevelMask.LOLEVELIMPLEMENTED) > 0);
                 return result;
             }
         }
@@ -565,7 +565,7 @@ namespace DeviceLibrary
             get
             {
                 bool result;
-                CDevicesManage.Log.Info("Niveau haut atteint sur le hopper {0} : {1} : ", Number, result = IsHighLevelImplemented && (LevelStatus & (byte)LevelMask.HILEVEREACHED) > 0);
+                CDevicesManager.Log.Info("Niveau haut atteint sur le hopper {0} : {1} : ", Number, result = IsHighLevelImplemented && (LevelStatus & (byte)LevelMask.HILEVEREACHED) > 0);
                 return result;
             }
         }
@@ -578,7 +578,7 @@ namespace DeviceLibrary
             get
             {
                 bool result;
-                CDevicesManage.Log.Info("Niveau bas atteint sur le hopper {0} : {1} : ", Number, result = IsLowLevelImplemented && (LevelStatus & (byte)LevelMask.LOLEVELREACHED) > 0);
+                CDevicesManager.Log.Info("Niveau bas atteint sur le hopper {0} : {1} : ", Number, result = IsLowLevelImplemented && (LevelStatus & (byte)LevelMask.LOLEVELREACHED) > 0);
                 return result;
             }
         }
@@ -590,7 +590,7 @@ namespace DeviceLibrary
         {
             get
             {
-                CDevicesManage.Log.Info("Arrêt d'urgence du hopper {0}", Number);
+                CDevicesManager.Log.Info("Arrêt d'urgence du hopper {0}", Number);
                 return GetByte(Header.EMERGENCYSTOP);
             }
         }
@@ -607,7 +607,7 @@ namespace DeviceLibrary
                 try
                 {
                     byte[] bufferIn = { 46, 46, 46, 46, 46, 46 };
-                    CDevicesManage.Log.Info("Lecture de l'identification de la pièce traitée par le hopper {0}", Number);
+                    CDevicesManager.Log.Info("Lecture de l'identification de la pièce traitée par le hopper {0}", Number);
                     if (IsCmdccTalkSended(DeviceAddress, Header.REQUESTHOPPERCOIN, 0, null, bufferIn))
                     {
                         result.CountryCode = ((char)bufferIn[0]).ToString() + ((char)bufferIn[1]).ToString();
@@ -620,12 +620,12 @@ namespace DeviceLibrary
                             result.ValeurCent = 0;
                         }
                         result.Issue = (char)bufferIn[5];
-                        CDevicesManage.Log.Debug("Le code pays de la pièce traitée par le hopper {0} est {1}, la valeur est de {2:C2}, la version est {3} ", Number, result.CountryCode, (decimal)result.ValeurCent / 100, result.Issue);
+                        CDevicesManager.Log.Debug("Le code pays de la pièce traitée par le hopper {0} est {1}, la valeur est de {2:C2}, la version est {3} ", Number, result.CountryCode, (decimal)result.ValeurCent / 100, result.Issue);
                     }
                 }
                 catch (Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 return result;
             }
@@ -641,11 +641,11 @@ namespace DeviceLibrary
             int result = 0;
             try
             {
-                CDevicesManage.Log.Info("Le nombre de pièces distribuées par le {0} est {1}", Number, result);
+                CDevicesManager.Log.Info("Le nombre de pièces distribuées par le {0} est {1}", Number, result);
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
             return result;
         }
@@ -659,7 +659,7 @@ namespace DeviceLibrary
             try
             {
                 byte[] enable = { 165 };
-                CDevicesManage.Log.Info("Autorise la distribution du {0}", DeviceAddress);
+                CDevicesManager.Log.Info("Autorise la distribution du {0}", DeviceAddress);
                 if (!IsCmdccTalkSended(DeviceAddress, Header.ENABLEHOPPER, (byte)enable.Length, enable, null))
                 {
                     throw new Exception(string.Format("Impossible d'autorisé la distribution sur le {0}", DeviceAddress));
@@ -667,7 +667,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -679,7 +679,7 @@ namespace DeviceLibrary
             try
             {
                 byte[] disable = { 0 };
-                CDevicesManage.Log.Info("Desactive l'autorisation de distribution du {0}", DeviceAddress);
+                CDevicesManager.Log.Info("Desactive l'autorisation de distribution du {0}", DeviceAddress);
                 if (!IsCmdccTalkSended(DeviceAddress, Header.ENABLEHOPPER, (byte)disable.Length, disable, null))
                 {
                     throw new Exception(string.Format("Impossible de désactiver le {0}", DeviceAddress));
@@ -687,7 +687,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
 
         }
@@ -699,7 +699,7 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info("Random number generator pumb");
+                CDevicesManager.Log.Info("Random number generator pumb");
                 Random rnd = new Random();
                 byte[] bufferParam = new byte[8];
                 rnd.NextBytes(bufferParam);
@@ -710,7 +710,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -721,7 +721,7 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Debug("Récupération de la clé de chiffrement");
+                CDevicesManager.Log.Debug("Récupération de la clé de chiffrement");
                 if (!IsCmdccTalkSended(DeviceAddress, Header.REQUESTCIPHERKEY, 0, null, cipherKey))
                 {
                     throw new Exception("Impossible de récupérer la clé de chiffrement.");
@@ -729,7 +729,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -744,7 +744,7 @@ namespace DeviceLibrary
             bool result = false;
             try
             {
-                CDevicesManage.Log.Debug("Lancement de la distribution par le hopper {0} de {1} pièces", Number, number);
+                CDevicesManager.Log.Debug("Lancement de la distribution par le hopper {0} de {1} pièces", Number, number);
                 byte[] bufferParam = { cipherKey[0], cipherKey[1], cipherKey[2], cipherKey[3], cipherKey[4], cipherKey[5], cipherKey[6], cipherKey[7], number };
                 if (!IsCmdccTalkSended(DeviceAddress, Header.DISPENSEHOPPERCOINS, (byte)bufferParam.Length, bufferParam, null))
                 {
@@ -754,7 +754,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
             return result;
         }
@@ -767,7 +767,7 @@ namespace DeviceLibrary
             HopperError result = HopperError.NULL;
             try
             {
-                CDevicesManage.Log.Info("Lecture des registres et des erreurs du {0}", DeviceAddress);
+                CDevicesManager.Log.Info("Lecture des registres et des erreurs du {0}", DeviceAddress);
                 byte[] bufferIn = { 0, 0 };
                 if (IsCmdccTalkSended(DeviceAddress, Header.TESTHOPPER, 0, null, bufferIn))
                 {
@@ -828,7 +828,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
             return result;
         }
@@ -851,41 +851,41 @@ namespace DeviceLibrary
 
                 memoryStorage = new CMemoryStorage(this);
                 errorHopper = new CHopperError(ToString());
-                CDevicesManage.Log.Info("Categorie d'équipement du {0} {1}", ToString(), EquipementCategory);
-                CDevicesManage.Log.Info(OptoStates != 0 ? "Au moins un optocoupleur est occupé" : "Les optocoupleur sont libres");
-                CDevicesManage.Log.Info("Le courant maximum autorisé pour le hopper {0} est de {1}", DeviceAddress, variables.CurrentLimit);
-                CDevicesManage.Log.Info("Le délai pour arrêter le motor du hopper {0} est de {1}", DeviceAddress, variables.MotorStopDelay);
+                CDevicesManager.Log.Info("Categorie d'équipement du {0} {1}", ToString(), EquipementCategory);
+                CDevicesManager.Log.Info(OptoStates != 0 ? "Au moins un optocoupleur est occupé" : "Les optocoupleur sont libres");
+                CDevicesManager.Log.Info("Le courant maximum autorisé pour le hopper {0} est de {1}", DeviceAddress, variables.CurrentLimit);
+                CDevicesManager.Log.Info("Le délai pour arrêter le motor du hopper {0} est de {1}", DeviceAddress, variables.MotorStopDelay);
 
-                CDevicesManage.Log.Info("Le délai maximum de vérification pour la distribution de pièce du hopper {0} est de {1} secondes", DeviceAddress, variables.PayoutDelayTO);
-                CDevicesManage.Log.Info("Le courant maximum utilisé par le hopper {0} est de {1}", DeviceAddress, variables.Maxcurrent);
+                CDevicesManager.Log.Info("Le délai maximum de vérification pour la distribution de pièce du hopper {0} est de {1} secondes", DeviceAddress, variables.PayoutDelayTO);
+                CDevicesManager.Log.Info("Le courant maximum utilisé par le hopper {0} est de {1}", DeviceAddress, variables.Maxcurrent);
                 double tension = variables.Tension;
                 if ((tension > 26) || (tension < 19))
                 {
-                    CDevicesManage.Log.Error("Tension d'alimentation anormale.");
+                    CDevicesManager.Log.Error("Tension d'alimentation anormale.");
                 }
-                CDevicesManage.Log.Info("La tension sur le hopper {0} est de {1}", DeviceAddress, tension);
+                CDevicesManager.Log.Info("La tension sur le hopper {0} est de {1}", DeviceAddress, tension);
                 byte connectorAddress = variables.ConnectorAddress;
                 if ((connectorAddress + 1 + AddressBaseHoper) != (byte)DeviceAddress)
                 {
-                    CDevicesManage.Log.Error("Une différence d'adresse existe entre l'adresse logiciel et l'adresse physique du connecteur pour le hopper {0}, l'adresse physique du connecteur est : {1}", DeviceAddress, connectorAddress);
+                    CDevicesManager.Log.Error("Une différence d'adresse existe entre l'adresse logiciel et l'adresse physique du connecteur pour le hopper {0}, l'adresse physique du connecteur est : {1}", DeviceAddress, connectorAddress);
                 }
                 else
                 {
-                    CDevicesManage.Log.Info("L'adresse physique du hopper est : {0} ", connectorAddress + 1 + AddressBaseHoper);
+                    CDevicesManager.Log.Info("L'adresse physique du hopper est : {0} ", connectorAddress + 1 + AddressBaseHoper);
                 }
-                CDevicesManage.Log.Info("Le numéro de série du Hopper {0} {1} ", Number, SerialNumber);
+                CDevicesManager.Log.Info("Le numéro de série du Hopper {0} {1} ", Number, SerialNumber);
                 hopperCoinID = CoinId;
-                CDevicesManage.Log.Info("Identification des pièces : Pays : {0}, Valeur : {1:C2}, version {2}", hopperCoinID.CountryCode, (decimal)hopperCoinID.ValeurCent / 100, hopperCoinID.Issue);
-                CDevicesManage.Log.Info("Prise en compte du niveau bas : {0}", IsLowLevelImplemented);
-                CDevicesManage.Log.Info("Prise en compte du niveau haut : {0} ", IsHighLevelImplemented);
-                CDevicesManage.Log.Info("Nivau bas atteint : {0}", IsLowLevelReached);
-                CDevicesManage.Log.Info("Niveau haut atteint : {0}", IsHighLevelReached);
-                CDevicesManage.Log.Info("Le type de mémoire du hopper {0} est : {1}", Number, memoryStorage.MemoryType);
-                CDevicesManage.Log.Info("Le nombre de bytes dans un bloc de lecture du hopper {0} est : {1}", Number, memoryStorage.ReadBytesPerBlock);
-                CDevicesManage.Log.Info("Le nombre de blocs pouvant être lus du hopper {0} est : {1}", Number, memoryStorage.ReadBlocks);
-                CDevicesManage.Log.Info("Le nombre de bytes dans un bloc d'écriture du hopper {0} est : {1}", Number, memoryStorage.WriteBytesPerBlock);
-                CDevicesManage.Log.Info("Le nombre de blocs pouvant être dans le hopper {0} est : {1}", Number, memoryStorage.WriteBlocks);
-                CDevicesManage.Log.Info("Il reste {0} pièce(s) à distribuer par le {1}", dispenseStatus.CoinsRemaining, DeviceAddress);
+                CDevicesManager.Log.Info("Identification des pièces : Pays : {0}, Valeur : {1:C2}, version {2}", hopperCoinID.CountryCode, (decimal)hopperCoinID.ValeurCent / 100, hopperCoinID.Issue);
+                CDevicesManager.Log.Info("Prise en compte du niveau bas : {0}", IsLowLevelImplemented);
+                CDevicesManager.Log.Info("Prise en compte du niveau haut : {0} ", IsHighLevelImplemented);
+                CDevicesManager.Log.Info("Nivau bas atteint : {0}", IsLowLevelReached);
+                CDevicesManager.Log.Info("Niveau haut atteint : {0}", IsHighLevelReached);
+                CDevicesManager.Log.Info("Le type de mémoire du hopper {0} est : {1}", Number, memoryStorage.MemoryType);
+                CDevicesManager.Log.Info("Le nombre de bytes dans un bloc de lecture du hopper {0} est : {1}", Number, memoryStorage.ReadBytesPerBlock);
+                CDevicesManager.Log.Info("Le nombre de blocs pouvant être lus du hopper {0} est : {1}", Number, memoryStorage.ReadBlocks);
+                CDevicesManager.Log.Info("Le nombre de bytes dans un bloc d'écriture du hopper {0} est : {1}", Number, memoryStorage.WriteBytesPerBlock);
+                CDevicesManager.Log.Info("Le nombre de blocs pouvant être dans le hopper {0} est : {1}", Number, memoryStorage.WriteBlocks);
+                CDevicesManager.Log.Info("Il reste {0} pièce(s) à distribuer par le {1}", dispenseStatus.CoinsRemaining, DeviceAddress);
                 EnableHopper();
                 if ((CoinsToDistribute > 0) || ((CoinsToDistribute = dispenseStatus.CoinsRemaining) > 0))
                 {
@@ -895,7 +895,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -960,7 +960,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
             mutexLevel.ReleaseMutex();
         }
@@ -996,7 +996,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -1041,7 +1041,7 @@ namespace DeviceLibrary
                     }
                     else
                     {
-                        CDevicesManage.Log.Debug(string.Format("Pas de pièces à distribuer pour le {0}", DeviceAddress));
+                        CDevicesManager.Log.Debug(string.Format("Pas de pièces à distribuer pour le {0}", DeviceAddress));
                     }
                     break;
                 }
@@ -1188,7 +1188,7 @@ namespace DeviceLibrary
                 }
                 catch (Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 mutexCCTalk.ReleaseMutex();
                 Thread.Sleep(pollDelayHopper);
@@ -1201,7 +1201,7 @@ namespace DeviceLibrary
         /// <param name="hopperNumber">Numéro du hopper</param>
         public CHopper(byte hopperNumber)
         {
-            CDevicesManage.Log.Info("Instanciation  du hopper {0}", hopperNumber);
+            CDevicesManager.Log.Info("Instanciation  du hopper {0}", hopperNumber);
             DeviceAddress = (DefaultDevicesAddress)(hopperNumber + AddressBaseHoper);
             Number = hopperNumber;
             if (!(IsPresent = SimplePoll))

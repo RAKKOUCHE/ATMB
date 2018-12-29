@@ -193,7 +193,7 @@
             Initialisation du BNR.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_OPEN">
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_OPEN_API">
             <summary>
             Ouverture de la communication entre le BNR et le PC.
             </summary>
@@ -3865,198 +3865,204 @@
             Objet contenant les infomations concernant l'événement.
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CDevicesManage">
+        <member name="T:DeviceLibrary.CDevicesManager">
             <summary>
             Class principale
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManage.Log">
+        <member name="F:DeviceLibrary.CDevicesManager.Log">
             <summary>
             Instance le la class Logger utilisée pour les logs.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManage.ParamFileName">
+        <member name="F:DeviceLibrary.CDevicesManager.ParamFileName">
             <summary>
             Nom du fichier des paramètres.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManage.parametersFile">
+        <member name="F:DeviceLibrary.CDevicesManager.parametersFile">
             <summary>
             Instance de la classe XmlDocument permettant la lecture des fichiers XML.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManage.MsgTask">
+        <member name="F:DeviceLibrary.CDevicesManager.MsgTask">
             <summary>
             Thread de la classe principale.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManage.evenement">
+        <member name="F:DeviceLibrary.CDevicesManager.evenement">
             <summary>
             Evenement de la classe principale.
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CDevicesManage.ToPay">
+        <member name="P:DeviceLibrary.CDevicesManager.ToPay">
             <summary>
             Variable contenant le montant à payer.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManage.monnayeur">
+        <member name="F:DeviceLibrary.CDevicesManager.monnayeur">
             <summary>
             Instance du monnayeur
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManage.Hoppers">
+        <member name="F:DeviceLibrary.CDevicesManager.Hoppers">
             <summary>
             Liste des hoppers
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManage.bnX">
+        <member name="F:DeviceLibrary.CDevicesManager.bnX">
             <summary>
             Instance du BNR
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CDevicesManage.AlertEventHandler">
+        <member name="T:DeviceLibrary.CDevicesManager.AlertEventHandler">
             <summary>
             
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="E:DeviceLibrary.CDevicesManage.CallAlert">
+        <member name="E:DeviceLibrary.CDevicesManager.CallAlert">
             <summary>
             Evenement levant un appel à la fonction déléguée.
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CDevicesManage.EnableChannels">
+        <member name="P:DeviceLibrary.CDevicesManager.EnableChannels">
             <summary>
             Masque des canaux activés.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.SetSortersAndHoppersToLoad">
+        <member name="M:DeviceLibrary.CDevicesManager.SetSortersAndHoppersToLoad">
             <summary>
             Cette fonction lit, pour chaque canal, les chemins de tris et les hoppers devant être rechargés lors de l'insertion d'une pièce dans le monnayeur
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.ChangeBack">
+        <member name="M:DeviceLibrary.CDevicesManager.ChangeBack">
             <summary>
             Effectue le rendu monnaie.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.SetSorterPath(System.Byte,System.Byte)">
+        <member name="M:DeviceLibrary.CDevicesManager.SetSorterPath(System.Byte,System.Byte)">
             <summary>
             Modifie le le chemin de tri du canal.
             </summary>
             <param name="canal">Canal du monnayeur</param>
             <param name="sorter">chemin du trieur</param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.Task">
+        <member name="M:DeviceLibrary.CDevicesManager.ManagerTask">
             <summary>
             Tâche principale de la dll
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.ReadParamHopper">
+        <member name="M:DeviceLibrary.CDevicesManager.ReadParamHopper">
             <summary>
             Cette fonction lit les paramètres des hoppers.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnHopperEmptied(DeviceLibrary.CHopper)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperEmptied(DeviceLibrary.CHopper)">
             <summary>
             Evénement levé lorsque le hopper est vidé.
             </summary>
             <param name="hopper"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnHopperHardLevelChanged(DeviceLibrary.CHopper)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged(DeviceLibrary.CHopper)">
             <summary>
             Evénement levé lorsqu'un changement d'état d'une sonde de niveau d'un hopper est detecté.
             </summary>
             <param name="hopper"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnHopperSoftLevelChanged(DeviceLibrary.CHopper)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged(DeviceLibrary.CHopper)">
             <summary>
             Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper 
             </summary>
             <param name="hopper"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnHopperError(DeviceLibrary.CHopper)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperError(DeviceLibrary.CHopper)">
             <summary>
             Evéenemnt levé lorsqu'une error est detectée sur un hopper.
             </summary>
             <param name="hopper"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnHopperDispensed(DeviceLibrary.CHopper)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperDispensed(DeviceLibrary.CHopper)">
             <summary>
             Evénement levé lorsque la distribution est terminée.
             </summary>
             <param name="hopper"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnCashClose">
+        <member name="M:DeviceLibrary.CDevicesManager.OnCashClose">
             <summary>
             Evénement levé lors de la cloture de la transaction.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnCashOpen">
+        <member name="M:DeviceLibrary.CDevicesManager.OnCashOpen">
             <summary>
             Evénement levé lors de l'ouverture des moyens de paiement.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnMoneyReceived">
+        <member name="M:DeviceLibrary.CDevicesManager.OnMoneyReceived">
             <summary>
             Evémenment levé lors de l'introduction d'une pièce.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnCVError">
+        <member name="M:DeviceLibrary.CDevicesManager.OnCVError">
             <summary>
             Evénement levé lors de la détection d'une erreur sur le monnayeur.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnDllReady">
+        <member name="M:DeviceLibrary.CDevicesManager.OnDllReady">
             <summary>
             Evénement levé lorsque la dll est prête.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OnBNRErreur(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnBNRErreur(DeviceLibrary.CDevice.CEvent)">
             <summary>
             
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.OpenTransaction(System.Int32)">
+        <member name="M:DeviceLibrary.CDevicesManager.OpenTransaction(System.Int32)">
             <summary>
             Ouvre une transaction le montant à payer.
             </summary>
             <param name="value">montant en centimes à payer</param>
             <remarks>Provoque l'ouverture des moyens de paiement.</remarks>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.CloseTransaction">
+        <member name="M:DeviceLibrary.CDevicesManager.EndTransaction">
             <summary>
             Cloture la transaction en cours
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.GetSerialPort">
+        <member name="M:DeviceLibrary.CDevicesManager.GetSerialPort">
             <summary>
             Renvoi le nom du port série utilisé par le bus ccTalk
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.ResetCounters">
+        <member name="M:DeviceLibrary.CDevicesManager.ResetCounters">
             <summary>
             Remise à zéro des compteurs.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.#ctor">
+        <member name="M:DeviceLibrary.CDevicesManager.BNRDispense(System.Decimal)">
+            <summary>
+            Envoi une demande de distribution au BNR
+            </summary>
+            <param name="Amount"></param>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.#ctor">
             <summary>
             Constructeur de la classe principale
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.Dispose(System.Boolean)">
+        <member name="M:DeviceLibrary.CDevicesManager.Dispose(System.Boolean)">
             <summary>
             Fonction libérant les ressources
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.Dispose">
+        <member name="M:DeviceLibrary.CDevicesManager.Dispose">
             <summary>
             
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManage.Finalize">
+        <member name="M:DeviceLibrary.CDevicesManager.Finalize">
             <summary>
             Destructeur
             </summary>

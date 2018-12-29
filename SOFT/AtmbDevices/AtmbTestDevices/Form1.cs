@@ -18,12 +18,14 @@ namespace AtmbTestDevices
         /// <summary>
         /// Instanciation de la classe principale de la dll
         /// </summary>
-        private CDevicesManage deviceManage;
+        private CDevicesManager deviceManage;
 
         /// <summary>
         /// Montant à payer 
         /// </summary>
         private int ToPayByClient;
+
+        private int ToDispenseBNR;
 
         /// <summary>
         /// Indique si le montant perçu doit être remis à zéro.
@@ -38,8 +40,8 @@ namespace AtmbTestDevices
         /// <remarks>Création des objets</remarks>
         private void Form1_Load(object sender, EventArgs e)
         {
-            deviceManage = new CDevicesManage();
-            deviceManage.CallAlert += new CDevicesManage.AlertEventHandler(MsgFromdll);
+            deviceManage = new CDevicesManager();
+            deviceManage.CallAlert += new CDevicesManager.AlertEventHandler(MsgFromdll);
             isMontantPercuReset = false;
         }
 
@@ -102,7 +104,7 @@ namespace AtmbTestDevices
                     a = () =>
                     {
                         int remaining = (ToPayByClient - CDevice.denominationInserted.TotalAmount);
-                        tbInfo.AppendText($"Pièce reconnue : Canal {((CDevice.CInserted)e.donnee).CVChannel} trieur {((CDevice.CInserted)e.donnee).CVPath} valeur  {(decimal)((CDevice.CInserted)e.donnee).ValeurCent / 100:c2}\r\n\r\n");
+                        tbInfo.AppendText($"Espèces introduites : Canal {((CDevice.CInserted)e.donnee).CVChannel} trieur {((CDevice.CInserted)e.donnee).CVPath} valeur  {(decimal)((CDevice.CInserted)e.donnee).ValeurCent / 100:c2}\r\n\r\n");
                         tbReceived.Text = $"{((decimal)((CDevice.CInserted)e.donnee).TotalAmount) / 100:c2}";
                         tbDenomination.Text = $"{((decimal)((CDevice.CInserted)e.donnee).ValeurCent) / 100:c2}";
                         if (remaining < 1)
@@ -279,7 +281,7 @@ namespace AtmbTestDevices
                           }
                           ButtonCounters_Click(sender, e);
                           stripLabelCom.Text = deviceManage.GetSerialPort();
-                          deviceManage.CloseTransaction();
+                          deviceManage.EndTransaction();
                       };
                     break;
                 }
@@ -468,7 +470,27 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void ButtonFinTrans_Click(object sender, EventArgs e)
         {
-            deviceManage.CloseTransaction();
+            deviceManage.EndTransaction();
+        }
+
+        private void BtnBNRDispense(object sender, EventArgs e)
+        {
+            deviceManage.BNRDispense(ToDispenseBNR);
+        }
+
+        private void TextBoxBNRDispense_Enter(object sender, EventArgs e)
+        {
+            ((TextBox)sender).Text = "";
+
+        }
+                          
+        private void TextBoxBNRDspense_Leave(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(textBoxBnrDispense.Text, out decimal value))
+            {
+                ToDispenseBNR = (int)(value * 100);
+                textBoxBnrDispense.Text = $"{value:c2}";
+            }
         }
     }
 }

@@ -80,7 +80,7 @@ namespace DeviceLibrary
             try
             {
                 byte[] bufferIn = { 0, 0, 0, 0, 0 };
-                CDevicesManage.Log.Info("Lecture des informations sur les capacités de lecture et écriture des données du {0} : ", Owner.DeviceAddress);
+                CDevicesManager.Log.Info("Lecture des informations sur les capacités de lecture et écriture des données du {0} : ", Owner.DeviceAddress);
                 if (Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTDATASTORAGEAVAILABILITY, 0, null, bufferIn))
                 {
                     memoryType = (MemoryKeepType)bufferIn[0];
@@ -92,7 +92,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -166,13 +166,13 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info("Lecture du bloc de données {0} du périphérique à l'adresse {1}", Owner.DeviceAddress);
+                CDevicesManager.Log.Info("Lecture du bloc de données {0} du périphérique à l'adresse {1}", Owner.DeviceAddress);
                 if (BlockNumber >= ReadBlocks)
                 {
                     throw new Exception(string.Format("Le bloc {0} n'est pas accessible", BlockNumber));
                 }
                 byte[] bufferParam = { BlockNumber };
-                CDevicesManage.Log.Info("Lecture du bloc de données {0} du périphérique à l'adresse {1}", Owner.DeviceAddress);
+                CDevicesManager.Log.Info("Lecture du bloc de données {0} du périphérique à l'adresse {1}", Owner.DeviceAddress);
                 if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.READDATABLOCK, (byte)bufferParam.Length, bufferParam, data))
                 {
                     throw new Exception(string.Format("Impossible de lire les données dans le bloc {0} du périphérique {1}", BlockNumber, Owner.DeviceAddress));
@@ -180,7 +180,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -193,7 +193,7 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info("Ecriture du bloc de données {0} du périphérique à l'adresse {1}", Owner.DeviceAddress);
+                CDevicesManager.Log.Info("Ecriture du bloc de données {0} du périphérique à l'adresse {1}", Owner.DeviceAddress);
                 if (BlockNumber >= ReadBlocks)
                 {
                     throw new Exception(string.Format("Le bloc {0} n'est pas accessible", BlockNumber));
@@ -209,7 +209,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
     }

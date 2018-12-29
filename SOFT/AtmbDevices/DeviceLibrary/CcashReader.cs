@@ -68,7 +68,7 @@ namespace DeviceLibrary
                 InhibitStatus result = InhibitStatus.DISABLED;
                 try
                 {
-                    CDevicesManage.Log.Info(messagesText.getMasterInhibt, DeviceAddress);
+                    CDevicesManager.Log.Info(messagesText.getMasterInhibt, DeviceAddress);
                     ;
                     byte[] bufferIn = { (byte)InhibitStatus.DISABLED };
                     if(IsCmdccTalkSended(DeviceAddress, Header.REQUESTMASTERINHIBITSTATUS, 0, null, bufferIn))
@@ -78,9 +78,9 @@ namespace DeviceLibrary
                 }
                 catch(Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
-                CDevicesManage.Log.Info(messagesText.inhibitStatusResult, DeviceAddress, result);
+                CDevicesManager.Log.Info(messagesText.inhibitStatusResult, DeviceAddress, result);
                 return result;
             }
         }
@@ -97,16 +97,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info(messagesText.sendMasterInhibitStatus, status, DeviceAddress);
+                CDevicesManager.Log.Info(messagesText.sendMasterInhibitStatus, status, DeviceAddress);
                 byte[] bufferParam = { (byte)status };
                 if(!IsCmdccTalkSended(DeviceAddress, Header.MODIFYMASTERINHIBITSTATUS, (byte)bufferParam.Length, bufferParam, null))
                 {
-                    CDevicesManage.Log.Error(messagesText.errMasterInhibitStatus, DeviceAddress);
+                    CDevicesManager.Log.Error(messagesText.errMasterInhibitStatus, DeviceAddress);
                 }
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
 
         }
@@ -118,12 +118,12 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info(messagesText.activationCV, DeviceAddress);
+                CDevicesManager.Log.Info(messagesText.activationCV, DeviceAddress);
                 SetMasterInhibit(InhibitStatus.ENABLED);
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -134,12 +134,12 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info(messagesText.deactivationCV, DeviceAddress);
+                CDevicesManager.Log.Info(messagesText.deactivationCV, DeviceAddress);
                 SetMasterInhibit(InhibitStatus.DISABLED);
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -155,17 +155,17 @@ namespace DeviceLibrary
                 byte[] bufferIn = { 0, 0 };
                 try
                 {
-                    CDevicesManage.Log.Info(messagesText.getPolling, DefaultDevicesAddress.CoinAcceptor);
+                    CDevicesManager.Log.Info(messagesText.getPolling, DefaultDevicesAddress.CoinAcceptor);
                     if(!IsCmdccTalkSended(DeviceAddress, Header.REQUESTPOLLINGPRIORITY, 0, null, bufferIn))
                     {
-                        CDevicesManage.Log.Error(messagesText.noccTalkDevice);
+                        CDevicesManager.Log.Error(messagesText.noccTalkDevice);
                     }
                 }
                 catch(Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
-                CDevicesManage.Log.Info(messagesText.delayPolling, DeviceAddress.ToString(), priorityUnit[bufferIn[0]] * bufferIn[1]);
+                CDevicesManager.Log.Info(messagesText.delayPolling, DeviceAddress.ToString(), priorityUnit[bufferIn[0]] * bufferIn[1]);
                 return priorityUnit[bufferIn[0]] * bufferIn[1];
             }
         }
@@ -179,15 +179,15 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info(messagesText.inhibitStatus, DeviceAddress, mask[0], mask[1]);
+                CDevicesManager.Log.Info(messagesText.inhibitStatus, DeviceAddress, mask[0], mask[1]);
                 if(!IsCmdccTalkSended(DeviceAddress, Header.MODIFYINHIBITSTATUS, (byte)mask.Length, mask, null))
                 {
-                    CDevicesManage.Log.Error(messagesText.errInhibitStatus, DeviceAddress);
+                    CDevicesManager.Log.Error(messagesText.errInhibitStatus, DeviceAddress);
                 }
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -199,7 +199,7 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info(messagesText.getInhibitStatus, DeviceAddress);
+                CDevicesManager.Log.Info(messagesText.getInhibitStatus, DeviceAddress);
                 if(!IsCmdccTalkSended(DeviceAddress, Header.REQUESTINHIBITSTATUS, 0, null, mask))
                 {
                     throw new Exception(string.Format("Impossible de lire le mask 'd'inhibition du {0}", DeviceAddress));
@@ -207,7 +207,7 @@ namespace DeviceLibrary
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -222,20 +222,20 @@ namespace DeviceLibrary
                 SelfTestResult result = SelfTestResult.OK;
                 try
                 {
-                    CDevicesManage.Log.Info(messagesText.cmdSelfTest, DeviceAddress);
+                    CDevicesManager.Log.Info(messagesText.cmdSelfTest, DeviceAddress);
                     result = (SelfTestResult)GetByte(Header.PERFORMSELFTEST);
                     if(result == SelfTestResult.OK)
                     {
-                        CDevicesManage.Log.Info(messagesText.selfTest, DeviceAddress, result);
+                        CDevicesManager.Log.Info(messagesText.selfTest, DeviceAddress, result);
                     }
                     else
                     {
-                        CDevicesManage.Log.Error(messagesText.selfTest, DeviceAddress, result);
+                        CDevicesManager.Log.Error(messagesText.selfTest, DeviceAddress, result);
                     }
                 }
                 catch(Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 return result;
             }

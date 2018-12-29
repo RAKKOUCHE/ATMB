@@ -207,13 +207,13 @@ namespace DeviceLibrary
                 byte dataBaseVersion = 0;
                 try
                 {
-                    CDevicesManage.Log.Info(messagesText.dataBaseVersion, DeviceAddress);
+                    CDevicesManager.Log.Info(messagesText.dataBaseVersion, DeviceAddress);
                     dataBaseVersion = GetByte(Header.REQUESTDATABASEVER);
-                    CDevicesManage.Log.Info(messagesText.dataBaseVersion, DeviceAddress, dataBaseVersion);
+                    CDevicesManager.Log.Info(messagesText.dataBaseVersion, DeviceAddress, dataBaseVersion);
                 }
                 catch(Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 return dataBaseVersion;
             }
@@ -228,17 +228,17 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info(messagesText.testSolenoid, DeviceAddress);
+                CDevicesManager.Log.Info(messagesText.testSolenoid, DeviceAddress);
                 byte[] bufferParam = { mask };
                 if(!IsCmdccTalkSended(DeviceAddress, Header.TESTSOLENOID, (byte)bufferParam.Length, bufferParam, null))
                 {
-                    CDevicesManage.Log.Error(messagesText.erreurCmd, Header.TESTSOLENOID, DeviceAddress);
+                    CDevicesManager.Log.Error(messagesText.erreurCmd, Header.TESTSOLENOID, DeviceAddress);
                     throw new Exception(messagesText.erreurCmd);
                 }
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 return false;
             }
             return true;
@@ -252,16 +252,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info("Définit le masque d'override des trieurs {0}", DeviceAddress);
+                CDevicesManager.Log.Info("Définit le masque d'override des trieurs {0}", DeviceAddress);
                 byte[] bufferParam = { mask };
                 if(!IsCmdccTalkSended(DeviceAddress, Header.MODIFYOVERRIDESTATUS, (byte)bufferParam.Length, bufferParam, null))
                 {
-                    CDevicesManage.Log.Error("Impossible de modifier l'override status du {0}", DeviceAddress);
+                    CDevicesManager.Log.Error("Impossible de modifier l'override status du {0}", DeviceAddress);
                 }
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -277,13 +277,13 @@ namespace DeviceLibrary
                 byte result = 0;
                 try
                 {
-                    CDevicesManage.Log.Info("Lecture du masque d'override des trieurs du {0}", DeviceAddress);
+                    CDevicesManager.Log.Info("Lecture du masque d'override des trieurs du {0}", DeviceAddress);
                     result = GetByte(Header.REQUESTOVERRIDESTATUS);
-                    CDevicesManage.Log.Info("Le masque d'override des trieurs du {0} et {1}", DeviceAddress, result);
+                    CDevicesManager.Log.Info("Le masque d'override des trieurs du {0} et {1}", DeviceAddress, result);
                 }
                 catch(Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 return result;
             }
@@ -297,16 +297,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info("Enregisrement du chemin de sortie par défaut {0} ({1})", DeviceAddress, defaultPath);
+                CDevicesManager.Log.Info("Enregisrement du chemin de sortie par défaut {0} ({1})", DeviceAddress, defaultPath);
                 byte[] bufferParam = { defaultPath };
                 if(!IsCmdccTalkSended(DeviceAddress, Header.MODIFYDEFAULTSORTERPATH, (byte)bufferParam.Length, bufferParam, null))
                 {
-                    CDevicesManage.Log.Error("Impossible de modifier le chemin par défaut {0}", DeviceAddress);
+                    CDevicesManager.Log.Error("Impossible de modifier le chemin par défaut {0}", DeviceAddress);
                 }
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -322,12 +322,12 @@ namespace DeviceLibrary
                 byte result = 0;
                 try
                 {
-                    CDevicesManage.Log.Info("Lecture du chemin de tri par défaut du {0}", DeviceAddress);
-                    CDevicesManage.Log.Info("Le chemin par défaut du {0} est {1}", result = GetByte(Header.REQUESTDEFAULTSORTERPATH));
+                    CDevicesManager.Log.Info("Lecture du chemin de tri par défaut du {0}", DeviceAddress);
+                    CDevicesManager.Log.Info("Le chemin par défaut du {0} est {1}", result = GetByte(Header.REQUESTDEFAULTSORTERPATH));
                 }
                 catch(Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 return result;
             }
@@ -348,7 +348,7 @@ namespace DeviceLibrary
                 }
                 catch(Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 return status;
             }
@@ -361,7 +361,7 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Debug("Lecture du buffer des crédits et des codes erreurs {0}", DeviceAddress);
+                CDevicesManager.Log.Debug("Lecture du buffer des crédits et des codes erreurs {0}", DeviceAddress);
                 int eventNumber = (BackEventCounter < creditBuffer.EventCounter) ? creditBuffer.EventCounter - BackEventCounter : 255 + creditBuffer.EventCounter - BackEventCounter;
                 BackEventCounter = creditBuffer.EventCounter;
                 if(eventNumber > 5)
@@ -375,7 +375,7 @@ namespace DeviceLibrary
                     {
                         errorCV.code = creditBuffer.Result[i, 1];
                         errorCV.errorText = (CVErrorCodes)creditBuffer.Result[i, 1];
-                        CDevicesManage.Log.Error("L'erreur {0} a été rencontré sur le {1}", (CCoinValidator.CVErrorCodes)creditBuffer.Result[i, 1], DeviceAddress);
+                        CDevicesManager.Log.Error("L'erreur {0} a été rencontré sur le {1}", (CCoinValidator.CVErrorCodes)creditBuffer.Result[i, 1], DeviceAddress);
                     }
                     else
                     {
@@ -397,13 +397,13 @@ namespace DeviceLibrary
                             ++counters.coinsInHopper[canaux[channelNumber - 1].HopperToLoad - 1];
                         }
                         counters.SaveCounters();
-                        CDevicesManage.Log.Debug("Une pièce de {0:C2} a été reconnue", (decimal)canaux[channelNumber - 1].coinId.ValeurCent / 100);
+                        CDevicesManager.Log.Debug("Une pièce de {0:C2} a été reconnue", (decimal)canaux[channelNumber - 1].coinId.ValeurCent / 100);
                     }
                 }
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -413,26 +413,26 @@ namespace DeviceLibrary
         public override void  Init()
         {
             DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
-            CDevicesManage.Log.Info("Initialisation du {0}", DeviceAddress);
+            CDevicesManager.Log.Info("Initialisation du {0}", DeviceAddress);
             BackEventCounter = 0;
             MasterDisable();
             creditBuffer = new CCVcreditBuffer(this);
-            CDevicesManage.Log.Info("Identification du {0} \r\n//////////////////", DeviceAddress);
-            CDevicesManage.Log.Info("Catégorie du périphérique : {0}", EquipementCategory);
-            CDevicesManage.Log.Info("Fabricant : {0}", Manufacturer);
-            CDevicesManage.Log.Info("Code du périphérique : {0}", ProductCode);
-            CDevicesManage.Log.Info("Code de fabrication : {0}", BuildCode);
-            CDevicesManage.Log.Info("Révision software : {0}", SWRev);
-            CDevicesManage.Log.Info("Version de la base de données : {0}", DataBaseVersion);
-            CDevicesManage.Log.Info("Test des bobines a {0}", TestSolenoid(0XFF) ? "réussi" : "echoué ");
-            CDevicesManage.Log.Info("Etat du {0} {1}", DeviceAddress, Status);
+            CDevicesManager.Log.Info("Identification du {0} \r\n//////////////////", DeviceAddress);
+            CDevicesManager.Log.Info("Catégorie du périphérique : {0}", EquipementCategory);
+            CDevicesManager.Log.Info("Fabricant : {0}", Manufacturer);
+            CDevicesManager.Log.Info("Code du périphérique : {0}", ProductCode);
+            CDevicesManager.Log.Info("Code de fabrication : {0}", BuildCode);
+            CDevicesManager.Log.Info("Révision software : {0}", SWRev);
+            CDevicesManager.Log.Info("Version de la base de données : {0}", DataBaseVersion);
+            CDevicesManager.Log.Info("Test des bobines a {0}", TestSolenoid(0XFF) ? "réussi" : "echoué ");
+            CDevicesManager.Log.Info("Etat du {0} {1}", DeviceAddress, Status);
             SetOverrideStatus(0XFF);
-            CDevicesManage.Log.Info("Chemin de sortie par défault : {0}", DefaultSorterPath);
-            CDevicesManage.Log.Info("Le délai de polling du périphérique est {0}", PollingDelay = PollingPriority * 2 / 3);
+            CDevicesManager.Log.Info("Chemin de sortie par défault : {0}", DefaultSorterPath);
+            CDevicesManager.Log.Info("Le délai de polling du périphérique est {0}", PollingDelay = PollingPriority * 2 / 3);
             creditBuffer.GetBufferCredit();
             backEventCounter = creditBuffer.EventCounter;
             SetDefaultSorterpath(1);
-            SetInhibitStatus(CDevicesManage.EnableChannels);
+            SetInhibitStatus(CDevicesManager.EnableChannels);
         }
 
         /// <summary>
@@ -442,12 +442,12 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info("Vérification de la machine d'état du {0}", DeviceAddress);
+                CDevicesManager.Log.Info("Vérification de la machine d'état du {0}", DeviceAddress);
                 switch (State)
                 {
                     case Etat.STATE_INIT:
                     {
-                        CDevicesManage.Log.Debug("Initialisation monnayeur");
+                        CDevicesManager.Log.Debug("Initialisation monnayeur");
                         Init();
                         break;
                     }
@@ -456,86 +456,86 @@ namespace DeviceLibrary
                         byte loop = 1;
                         do
                         {
-                            CDevicesManage.Log.Debug("Reset du {0} Essai {1}", DeviceAddress, loop);
+                            CDevicesManager.Log.Debug("Reset du {0} Essai {1}", DeviceAddress, loop);
                         } while (!ResetDevice() && (++loop < 4));
                         Thread.Sleep(100);
                         if (loop == 0)
                         {
-                            CDevicesManage.Log.Error("Impossible d'effectuer le reset du Pelicano");
+                            CDevicesManager.Log.Error("Impossible d'effectuer le reset du Pelicano");
                             //TODO envoyé le message d'erreur.
                         }
                         break;
                     }
                     case Etat.STATE_SIMPLEPOLL:
                     {
-                        CDevicesManage.Log.Debug("Simple poll sur {0}", DeviceAddress);
+                        CDevicesManager.Log.Debug("Simple poll sur {0}", DeviceAddress);
                         if (!SimplePoll)
                         {
-                            CDevicesManage.Log.Info("Echec du simple poll sur le {0}", DeviceAddress);
+                            CDevicesManager.Log.Info("Echec du simple poll sur le {0}", DeviceAddress);
                             //TODO message d'erreur.
                         }
                         break;
                     }
                     case Etat.STATE_GETEQUIPEMENTCATEGORY:
                     {
-                        CDevicesManage.Log.Debug("La catégorie de l'equipement est : {0} ", EquipementCategory);
+                        CDevicesManager.Log.Debug("La catégorie de l'equipement est : {0} ", EquipementCategory);
                         break;
                     }
                     case Etat.STATE_GETMANUFACTURERID:
                     {
-                        CDevicesManage.Log.Debug("Le code fabricant du {0} est : {1}", DeviceAddress, Manufacturer);
+                        CDevicesManager.Log.Debug("Le code fabricant du {0} est : {1}", DeviceAddress, Manufacturer);
                         break;
                     }
                     case Etat.STATE_GETPRODUCTCODE:
                     {
-                        CDevicesManage.Log.Debug("Le code du produit du {0} est : {1}", DeviceAddress, ProductCode);
+                        CDevicesManager.Log.Debug("Le code du produit du {0} est : {1}", DeviceAddress, ProductCode);
                         break;
                     }
                     case Etat.STATE_GETBUILDCODE:
                     {
-                        CDevicesManage.Log.Debug("Le build code du {0} est : {1}", DeviceAddress, BuildCode);
+                        CDevicesManager.Log.Debug("Le build code du {0} est : {1}", DeviceAddress, BuildCode);
                         break;
                     }
                     case Etat.STATE_GETSOFTWAREREVISION:
                     {
-                        CDevicesManage.Log.Debug("La révision du software du {0} est : {1}", DeviceAddress, SWRev);
+                        CDevicesManager.Log.Debug("La révision du software du {0} est : {1}", DeviceAddress, SWRev);
                         break;
                     }
                     case Etat.STATE_GETSERIALNUMBER:
                     {
-                        CDevicesManage.Log.Info("Le numéro de série du {0} est : {1}", DeviceAddress, SerialNumber);
+                        CDevicesManager.Log.Info("Le numéro de série du {0} est : {1}", DeviceAddress, SerialNumber);
                         break;
                     }
 
                     case Etat.STATE_GETDATABASEVERSION:
                     {
-                        CDevicesManage.Log.Debug("La version de la base de donnée du {0} est : {1}", DeviceAddress, DataBaseVersion);
+                        CDevicesManager.Log.Debug("La version de la base de donnée du {0} est : {1}", DeviceAddress, DataBaseVersion);
                         break;
                     }
                     case Etat.STATE_TESTSOLENOID:
                     {
-                        CDevicesManage.Log.Info("Test des bobines du {0}", DeviceAddress);
+                        CDevicesManager.Log.Info("Test des bobines du {0}", DeviceAddress);
                         TestSolenoid();
                         break;
                     }
                     case Etat.STATE_GETSTATUS:
                     {
-                        CDevicesManage.Log.Info("Lecture du status du {0}", DeviceAddress);
-                        CDevicesManage.Log.Info("Le status du {0} est {1}", DeviceAddress, Status);
+                        CDevicesManager.Log.Info("Lecture du status du {0}", DeviceAddress);
+                        CDevicesManager.Log.Info("Le status du {0} est {1}", DeviceAddress, Status);
                         break;
                     }
                     case Etat.STATE_SELF_TEST:
                     {
-                        CDevicesManage.Log.Info("Effectue le self-test du {0}", DeviceAddress);
+                        CDevicesManager.Log.Info("Effectue le self-test du {0}", DeviceAddress);
                         SelfTestResult result = SelfTest;
                         string message = string.Format("Le self-test du {0} indque l'erreur {1}", DeviceAddress, result);
                         if (result == SelfTestResult.OK)
                         {
-                            CDevicesManage.Log.Info("Le self-test du {0} n'indique pas d'erreur", DeviceAddress);
+                            CDevicesManager.Log.Info("Le self-test du {0} n'indique pas d'erreur", DeviceAddress);
                         }
                         else
                         {
-                            CDevicesManage.Log.Error("Le self-test du {0} indque l'erreur {1}", DeviceAddress, result);
+                            CDevicesManager.Log.Error("Le self-test du {0} indque l'erreur {1}", DeviceAddress, result);
                         }
                         break;
                     }
@@ -544,34 +544,34 @@ namespace DeviceLibrary
                         foreach (CCanal canal in canaux)
                         {
                             canal.coinId.GetCoinId();
-                            CDevicesManage.Log.Info("Le code pays du canal {0} est {1}, la valeur est {2}, la version est {3}", canal.Number, canal.coinId.CountryCode, canal.coinId.ValeurCent, canal.coinId.Issue);
+                            CDevicesManager.Log.Info("Le code pays du canal {0} est {1}, la valeur est {2}, la version est {3}", canal.Number, canal.coinId.CountryCode, canal.coinId.ValeurCent, canal.coinId.Issue);
                         }
                         break;
                     }
                     case Etat.STATE_GETINHIBITSTATUS:
                     {
-                        CDevicesManage.Log.Info("Lecture des inhibitions des canaux du {0}", DeviceAddress);
+                        CDevicesManager.Log.Info("Lecture des inhibitions des canaux du {0}", DeviceAddress);
                         GetInhibitMask(InhibitMask);
-                        CDevicesManage.Log.Info("Le mask d'inhibition du {0} est {1} et {2}", DeviceAddress, InhibitMask[0], InhibitMask[1]);
+                        CDevicesManager.Log.Info("Le mask d'inhibition du {0} est {1} et {2}", DeviceAddress, InhibitMask[0], InhibitMask[1]);
                         break;
                     }
                     case Etat.STATE_SETINHIBITSTATUS:
                     {
-                        CDevicesManage.Log.Info("Inhibition des canaux du {0}, DeviceAddress");
+                        CDevicesManager.Log.Info("Inhibition des canaux du {0}, DeviceAddress");
                         SetInhibitStatus(InhibitMask);
-                        CDevicesManage.Log.Info("Le masque des inhibitions du {0} est {1} et {2}", DeviceAddress, InhibitMask[0], InhibitMask[1]);
+                        CDevicesManager.Log.Info("Le masque des inhibitions du {0} est {1} et {2}", DeviceAddress, InhibitMask[0], InhibitMask[1]);
                         break;
                     }
                     case Etat.STATE_GETPOLLINGPRIORITY:
                     {
-                        CDevicesManage.Log.Info("Requête du délai de polling");
-                        CDevicesManage.Log.Info("Le délai maximum, de polling est de {0} ms pour le {1}", PollingPriority, DeviceAddress);
+                        CDevicesManager.Log.Info("Requête du délai de polling");
+                        CDevicesManager.Log.Info("Le délai maximum, de polling est de {0} ms pour le {1}", PollingPriority, DeviceAddress);
                         break;
                     }
                     case Etat.STATE_SETPOLLINGDELAY:
                     {
                         PollingDelay = (PollingPriority * 2 / 3);
-                        CDevicesManage.Log.Info("Le délai de polling pour le {0} est fixé à {1}", DeviceAddress, PollingDelay);
+                        CDevicesManager.Log.Info("Le délai de polling pour le {0} est fixé à {1}", DeviceAddress, PollingDelay);
                         break;
                     }
                     case Etat.STATE_GETCREDITBUFFER:
@@ -581,31 +581,31 @@ namespace DeviceLibrary
                     }
                     case Etat.STATE_DISABLEMASTER:
                     {
-                        CDevicesManage.Log.Info("desactive le {0}", DeviceAddress);
+                        CDevicesManager.Log.Info("desactive le {0}", DeviceAddress);
                         MasterDisable();
                         state = Etat.STATE_IDLE;
                         break;
                     }
                     case Etat.STATE_ENABLEMASTER:
                     {
-                        CDevicesManage.Log.Info("Active le {0}", DeviceAddress);
+                        CDevicesManager.Log.Info("Active le {0}", DeviceAddress);
                         MasterEnable();
                         break;
                     }
                     case Etat.STATE_GETMASTERINHIBT:
                     {
-                        CDevicesManage.Log.Info("Le {0} est {1}", DeviceAddress, MasterInhibitStatus);
+                        CDevicesManager.Log.Info("Le {0} est {1}", DeviceAddress, MasterInhibitStatus);
                         break;
                     }
                     case Etat.STATE_GETOVERRIDE:
                     {
 
-                        CDevicesManage.Log.Info("Le status ovveride du {0} est : {1} ", OverrideStatus);
+                        CDevicesManager.Log.Info("Le status ovveride du {0} est : {1} ", OverrideStatus);
                         break;
                     }
                     case Etat.STATE_SETOVERRIDE:
                     {
-                        CDevicesManage.Log.Info("Enregistre le status du {0} : {1}", OverrideMask);
+                        CDevicesManager.Log.Info("Enregistre le status du {0} : {1}", OverrideMask);
                         SetOverrideStatus(OverrideMask);
                         break;
                     }
@@ -613,22 +613,22 @@ namespace DeviceLibrary
                     {
                         //todo lire les pièces autorisees dans le fichier de paramètre et comparer les masks
                         //si les masks sont identiques passer à l'dentification des pièces.
-                        CDevicesManage.Log.Info("lecture des chemins de tris du {0}", DeviceAddress);
+                        CDevicesManager.Log.Info("lecture des chemins de tris du {0}", DeviceAddress);
                         foreach (CCanal canal in canaux)
                         {
-                            CDevicesManage.Log.Info("La sortie du trieur pour le canal {0} du {1} est {2}", canal.sorter.PathSorter);
+                            CDevicesManager.Log.Info("La sortie du trieur pour le canal {0} du {1} est {2}", canal.sorter.PathSorter);
                         }
                         break;
                     }
                     case Etat.STATE_SETSORTERPATH:
                     {
-                        CDevicesManage.Log.Info("Enregistrement du chemin de tri {0} pour le canal {1}", sorterPath, channelInProgress);
+                        CDevicesManager.Log.Info("Enregistrement du chemin de tri {0} pour le canal {1}", sorterPath, channelInProgress);
                         canaux[ChannelInProgress].sorter.SetSorterPath(sorterPath);
                         break;
                     }
                     case Etat.STATE_GETDEFAULTSORTERPATH:
                     {
-                        CDevicesManage.Log.Info("le chemin de  tri par default du {0} est : {1}", DeviceAddress, DefaultSorterPath);
+                        CDevicesManager.Log.Info("le chemin de  tri par default du {0} est : {1}", DeviceAddress, DefaultSorterPath);
                         break;
                     }
                     case Etat.STATE_SETDEFAULTSORTERPATH:
@@ -680,7 +680,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -695,15 +695,15 @@ namespace DeviceLibrary
                 byte[] bufferIn = { 0, 0, 0, 0 };
                 try
                 {
-                    CDevicesManage.Log.Info("Lecture de l'ensemble des variables du {0}", DeviceAddress);
+                    CDevicesManager.Log.Info("Lecture de l'ensemble des variables du {0}", DeviceAddress);
                     if(IsCmdccTalkSended(DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, bufferIn))
                     {
-                        CDevicesManage.Log.Info("variableSetToRead");
+                        CDevicesManager.Log.Info("variableSetToRead");
                     }
                 }
                 catch(Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 return bufferIn;
             }
@@ -714,7 +714,7 @@ namespace DeviceLibrary
         /// </summary>
         protected override void Task()
         {
-            CDevicesManage.Log.Debug("Tâche de lecture des évenements concernant du {0}", DeviceAddress);
+            CDevicesManager.Log.Debug("Tâche de lecture des évenements concernant du {0}", DeviceAddress);
             while(true)
             {
                 try
@@ -739,7 +739,7 @@ namespace DeviceLibrary
                 }
                 catch(Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), "Exception dans le thread du monnayeur : " + E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), "Exception dans le thread du monnayeur : " + E.Message, E.StackTrace);
                 }
                 finally
                 {
@@ -762,7 +762,7 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info("Instancation de la classe CCoinValidator.");
+                CDevicesManager.Log.Info("Instancation de la classe CCoinValidator.");
                 DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
                 if (!(IsPresent = SimplePoll))
                 {
@@ -789,7 +789,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 

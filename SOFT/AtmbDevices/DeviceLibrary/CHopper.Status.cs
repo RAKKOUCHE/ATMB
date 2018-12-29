@@ -77,7 +77,7 @@ namespace DeviceLibrary
                 get
                 {
                     GetHopperStatus();
-                    CDevicesManage.Log.Debug("Nombre d'évenemets {0}", eventCounter);
+                    CDevicesManager.Log.Debug("Nombre d'évenemets {0}", eventCounter);
                     return eventCounter;
                 }
                 set => eventCounter = value;
@@ -92,7 +92,7 @@ namespace DeviceLibrary
                 get
                 {
                     GetHopperStatus();
-                    CDevicesManage.Log.Debug("Nombre de pièces restant à distribuer {0}", coinsRemaining);
+                    CDevicesManager.Log.Debug("Nombre de pièces restant à distribuer {0}", coinsRemaining);
                     return coinsRemaining;
                 }
                 set => coinsRemaining = value;
@@ -107,7 +107,7 @@ namespace DeviceLibrary
                 get
                 {
                     GetHopperStatus();
-                    CDevicesManage.Log.Debug("Nombre de pièces payées {0}", coinsPaid);
+                    CDevicesManager.Log.Debug("Nombre de pièces payées {0}", coinsPaid);
                     return coinsPaid;
                 }
                 set => coinsPaid = value;
@@ -122,7 +122,7 @@ namespace DeviceLibrary
                 get
                 {
                     GetHopperStatus();
-                    CDevicesManage.Log.Debug("Nombre de pièces restant à payer {0}", coinsUnpaid);
+                    CDevicesManager.Log.Debug("Nombre de pièces restant à payer {0}", coinsUnpaid);
                     return coinsUnpaid;
                 }
                 set => coinsUnpaid = value;
@@ -140,7 +140,7 @@ namespace DeviceLibrary
             {
                 try
                 {
-                    CDevicesManage.Log.Info("Lecture des status du {0}", Owner.DeviceAddress);
+                    CDevicesManager.Log.Info("Lecture des status du {0}", Owner.DeviceAddress);
                     byte[] bufferIn = { 0, 0, 0, 0 };
                     if (Owner.IsCmdccTalkSended(Owner.DeviceAddress, Header.REQUESTHOPPERSTATUS, 0, null, bufferIn))
                     {
@@ -154,7 +154,7 @@ namespace DeviceLibrary
                 }
                 catch (Exception E)
                 {
-                    CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
             }
 

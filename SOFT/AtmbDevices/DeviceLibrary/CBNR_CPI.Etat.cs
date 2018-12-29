@@ -25,7 +25,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Ouverture de la communication entre le BNR et le PC.
             /// </summary>
-            STATE_OPEN,
+            STATE_OPEN_API,
             /// <summary>
             /// Initialisation hardware.
             /// </summary>

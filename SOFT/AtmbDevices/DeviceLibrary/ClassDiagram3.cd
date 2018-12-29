@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DeviceLibrary.CerrorBNR" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CBNR_CPI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CBNR_CPI" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AggBCAQgCAAAABEAAAAAAAIAQACAAEAEAGECgAAAIkA=</HashCode>
+      <FileName>CBNR_CPI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CCanal" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAIgAAAAIAAAFAAAAAAAAAAIAQAAAAAAAAAAAA=</HashCode>
+      <FileName>CCanal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CcashReader" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAUAAAAAAAAAEAAIAAAgAQAAAkACECJAAAAAAA=</HashCode>
+      <FileName>CcashReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CccTalk" Collapsed="true">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>INgAAAAggCAAAAQAEAEAAgAACgGAQHAAAAACCACQNEA=</HashCode>
+      <FileName>CccTalk.Header.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CCoinValidator" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQwEIAAEBJAAAAkAgAABBAAABEBAAAAmBGoSBgAFACA=</HashCode>
+      <FileName>CCoinValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CcoinsCounters" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAgAAAAAAAAAAgIAAAAgAABAAEQAAYAEAQCAAQ=</HashCode>
+      <FileName>Ccounters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CDevice" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAABAAEAAAABgAAAAAAAAAAAEAAAAAAEACAgAAIAA=</HashCode>
+      <FileName>CDevice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CalertEventArgs" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CDevicesManage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CDevicesManage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCABAgwAAiAEQAkBiQEAAhEAAAgAQAACAGwEAAAEAAA=</HashCode>
+      <FileName>CDevicesManage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DeviceLibrary.CHopper" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DJuABFEIgYAEHZsUQHKQvABiQJgQgCW+TMJnNoAGgiQ=</HashCode>
+      <FileName>CHopper.CEmptyCount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CMemoryStorage" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAACgEAAAAAAQAAAAABAAAAAAgAACACEAAgAAAgA=</HashCode>
+      <FileName>CMemoryStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CPelicano" Collapsed="true">
+    <Position X="2.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAgAAAIAACAAAAAgAAAAEQEAAAAEJAAACAAQA=</HashCode>
+      <FileName>CPelicano.CmdMotors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CHopperVariableSet" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAiAAAAAAAICAAAAAIQAAAAAAAAAAgIAAAAAQAA=</HashCode>
+      <FileName>CVariableSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.messagesText" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QwAogACKCAGEAxAAAAEJOgAoj6egQgAGBACSQCgAEIg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.Resource1" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.Properties.Resources" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.Properties.Settings" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAgAAAAAAIAAAAAABQCIAAAAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="DeviceLibrary.ERROR_BNR" Collapsed="true">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAACABgAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CBNR_CPI.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DeviceLibrary.Reason" Collapsed="true">
+    <Position X="11" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAABgAAEAAAABAQAIAAAAAAAAAAAACAAEAAAAAAIg=</HashCode>
+      <FileName>CDevicesManage.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DeviceLibrary.DefaultDevicesAddress" Collapsed="true">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAD5BgAAAEAACAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Devices.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -113,18 +113,18 @@ namespace DeviceLibrary
         /// </summary>
         public void GetVariableSet()
         {
-            CDevicesManage.Log.Info("Lecture des variables du hopper {0}", Owner.DeviceAddress - CHopper.AddressBaseHoper);
+            CDevicesManager.Log.Info("Lecture des variables du hopper {0}", Owner.DeviceAddress - CHopper.AddressBaseHoper);
             try
             {
 
                 if(!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, VariableSetToRead))
                 {
-                    CDevicesManage.Log.Error("Impossible de lire le -variables set- du hopper {0} ", Owner.DeviceAddress - CHopper.AddressBaseHoper);
+                    CDevicesManager.Log.Error("Impossible de lire le -variables set- du hopper {0} ", Owner.DeviceAddress - CHopper.AddressBaseHoper);
                 }
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -136,7 +136,7 @@ namespace DeviceLibrary
         private byte GetVariable(Variable variable)
         {
             GetVariableSet();
-            CDevicesManage.Log.Debug("Variable demandée {0}", variable);
+            CDevicesManager.Log.Debug("Variable demandée {0}", variable);
             return VariableSetToRead[(int)variable];
         }
 
@@ -151,16 +151,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManage.Log.Info("Enregistrement des variables du {0}", Owner.DeviceAddress);
+                CDevicesManager.Log.Info("Enregistrement des variables du {0}", Owner.DeviceAddress);
                 byte[] bufferParam = { (byte)(currentLimit * 17.1), motorStopDelay, (byte)(payoutTO * 3), (byte)singleCoinMode };
                 if(!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.MODIFYVARIABLESET, (byte)bufferParam.Length, bufferParam, null))
                 {
-                    CDevicesManage.Log.Info("Erreur durant l'écriture des variables du {0}", Owner.DeviceAddress);
+                    CDevicesManager.Log.Info("Erreur durant l'écriture des variables du {0}", Owner.DeviceAddress);
                 }
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -176,7 +176,7 @@ namespace DeviceLibrary
             }
             catch(Exception E)
             {
-                CDevicesManage.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
     }

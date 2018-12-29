@@ -95,7 +95,7 @@
     <Compile Include="CPelicano.CmdMotors.cs" />
     <Compile Include="CPelicano.cs" />
     <Compile Include="CPelicano.Header.cs" />
-    <Compile Include="CDevicesManage.cs" />
+    <Compile Include="CDevicesManager.cs" />
     <Compile Include="Hopper.Etat.cs" />
     <Compile Include="messagesText.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
