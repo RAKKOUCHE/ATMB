@@ -244,7 +244,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Tâche vérifiant les activitées du monnayeur
         /// </summary>
-        protected override void Task()
+        public override void Task()
         {
 
         }

@@ -5,6 +5,7 @@
 /// \author Rachid AKKOUCHE
 
 using System.Collections.Generic;
+using System.Threading;
 
 namespace DeviceLibrary
 {
@@ -15,6 +16,11 @@ namespace DeviceLibrary
     {
 
         /// <summary>
+        /// Event permenttant de savoir savoir si le BNR prêt.
+        /// </summary>
+        public AutoResetEvent evReady;
+
+        /// <summary>
         /// Liste des évenement.
         /// </summary>
         public static List<CEvent> eventsList;
@@ -22,7 +28,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Objet de verrouillage de l'accés à la liste des évenements.
         /// </summary>
-        public static object eventListLock;  
+        public static object eventListLock;
 
         /// <summary>
         /// Niveaux des périphériques.
@@ -72,7 +78,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Tâche du périphérique.
         /// </summary>
-        protected abstract void Task();
+        public abstract void Task();
 
         /// <summary>
         /// Initialisation des périphériques.
@@ -92,10 +98,11 @@ namespace DeviceLibrary
             {
                 eventsList = new List<CEvent>();
             }
-            if(eventListLock == null)
+            if (eventListLock == null)
             {
                 eventListLock = new object();
-            }            
+            }
+            evReady = new AutoResetEvent(false);
         }
     }
 }

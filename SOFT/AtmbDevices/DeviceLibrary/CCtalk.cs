@@ -75,7 +75,6 @@ namespace DeviceLibrary
             try
             {
                 CDevicesManager.Log.Info(messagesText.ccTalkInstance);
-
                 if (PortSerie == null)
                 {
                     CDevicesManager.Log.Info(messagesText.search_ccTalk);
@@ -231,7 +230,7 @@ namespace DeviceLibrary
                     }
                     if (answer != null)
                     {
-                        Buffer.BlockCopy(bufferIn, 4, (System.Array)answer, 0, bufferIn[1]);
+                        Buffer.BlockCopy(bufferIn, 4, (Array)answer, 0, bufferIn[1]);
                     }
                     result = true;
                 }
@@ -266,7 +265,7 @@ namespace DeviceLibrary
                 {
                     Result += Buffer[Index];
                 }
-                Result = (256 - (Result % 256));
+                Result = 256 - (Result % 256);
             }
             catch (Exception E)
             {
@@ -447,8 +446,8 @@ namespace DeviceLibrary
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
-                CDevicesManager.Log.Info("Le numéro de série du {0} est {1}", DeviceAddress, bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 + bufferIn[2]));
-                return bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 + bufferIn[2]);
+                CDevicesManager.Log.Info("Le numéro de série du {0} est {1}", DeviceAddress, bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 * bufferIn[2]));
+                return bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 * bufferIn[2]);
             }
         }
 
@@ -508,7 +507,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Reset software du périphérique.
         /// </summary>
-        public bool ResetDevice()
+        public bool IsDeviceReseted()
         {
             bool result = false;
             try
@@ -567,8 +566,8 @@ namespace DeviceLibrary
             counters = null;
             counters = new CcoinsCounters();
             counters.SaveCounters();
-            CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
-            CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
+            countersFile.Seek(0, SeekOrigin.Begin);
+            counters = (CcoinsCounters)counterSerializer.Deserialize(countersFile);
         }
 
         /// <summary>

@@ -4,7 +4,6 @@
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
-using NLog;
 using System;
 
 namespace DeviceLibrary
@@ -20,7 +19,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Instance de la classe proprietaire du buffer.
             /// </summary>
-            private CCoinValidator owner;
+            private readonly CCoinValidator owner;
 
             private byte eventCounter;
             /// <summary>

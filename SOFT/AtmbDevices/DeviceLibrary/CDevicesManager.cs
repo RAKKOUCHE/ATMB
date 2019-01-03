@@ -104,12 +104,12 @@ namespace DeviceLibrary
         /// <summary>
         /// Thread de la classe principale.
         /// </summary>
-        private Thread MsgTask;
+        private readonly Thread msgTask;
 
-        /// <summary>
-        /// Evenement de la classe principale.
-        /// </summary>
-        public CDevice.CEvent evenement;
+        ///// <summary>
+        ///// Evenement de la classe principale.
+        ///// </summary>
+        //public CDevice.CEvent evenement;
 
         /// <summary>
         /// Variable contenant le montant à payer.
@@ -136,7 +136,6 @@ namespace DeviceLibrary
         /// </summary>
         public CBNR_CPI bnX;
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -160,12 +159,12 @@ namespace DeviceLibrary
                 try
                 {
                     XmlNodeList canauxList = parametersFile.GetElementsByTagName("Canal");
-                    foreach (XmlNode channel in canauxList)
+                    foreach(XmlNode channel in canauxList)
                     {
                         byte posChannel = 0;
-                        foreach (XmlElement e in channel)
+                        foreach(XmlElement e in channel)
                         {
-                            switch (e.Name)
+                            switch(e.Name)
                             {
                                 case "Position":
                                 {
@@ -181,7 +180,7 @@ namespace DeviceLibrary
                         }
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -198,14 +197,14 @@ namespace DeviceLibrary
             try
             {
                 XmlNodeList canauxList = parametersFile.GetElementsByTagName("Canal");
-                foreach (XmlNode channel in canauxList)
+                foreach(XmlNode channel in canauxList)
                 {
                     byte posChannel = 0;
                     byte pathSorter = 0;
                     byte hopperToLoad = 0;
-                    foreach (XmlElement e in channel)
+                    foreach(XmlElement e in channel)
                     {
-                        switch (e.Name)
+                        switch(e.Name)
                         {
                             case "Position":
                             {
@@ -229,7 +228,7 @@ namespace DeviceLibrary
 
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -243,41 +242,42 @@ namespace DeviceLibrary
             try
             {
                 int rest = CDevice.denominationInserted.TotalAmount - ToPay;
-                if (rest > 0)
+                if(rest > 0)
                 {
-                    foreach (CHopper hopper in Hoppers)
+                    foreach(CHopper hopper in Hoppers)
                     {
-                        if (hopper.IsPresent &&
+                        if(hopper.IsPresent &&
                             (hopper.deviceLevel.softLevel != CDevice.CLevel.SoftLevel.VIDE) &&
                             (hopper.deviceLevel.hardLevel != CDevice.CLevel.HardLevel.VIDE) &&
                             (hopper.CoinValue > 0) &&
                             (hopper.CoinValue <= rest))
                         {
                             hopper.CoinsToDistribute = (byte)(rest / hopper.CoinValue);
-                            if ((rest -= (int)(hopper.CoinsToDistribute * hopper.CoinValue)) == 0)
+                            if((rest -= (int)(hopper.CoinsToDistribute * hopper.CoinValue)) == 0)
                             {
                                 break;
                             }
                         }
                     }
-                    foreach (CHopper hopper in Hoppers)
+                    foreach(CHopper hopper in Hoppers)
                     {
-                        if (hopper.IsPresent && (hopper.CoinsToDistribute > 0))
+                        if(hopper.IsPresent && (hopper.CoinsToDistribute > 0))
                         {
                             hopper.State = CHopper.Etat.STATE_DISPENSE;
                         }
                     }
-                    foreach (CHopper hopper in Hoppers)
+                    foreach(CHopper hopper in Hoppers)
                     {
-                        if (hopper.IsPresent)
+                        if(hopper.IsPresent)
                         {
-                            while (hopper.State != CHopper.Etat.STATE_IDLE) ;
+                            while(hopper.State != CHopper.Etat.STATE_IDLE)
+                                ;
                             ;
                         }
                     }
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -292,17 +292,17 @@ namespace DeviceLibrary
         {
             try
             {
-                if (canal < 1 || canal > 16)
+                if(canal < 1 || canal > 16)
                 {
                     throw new Exception("Le numéro de canal doit être compris entre 1 et 16");
                 }
-                if (sorter < 1 || sorter > 8)
+                if(sorter < 1 || sorter > 8)
                 {
                     throw new Exception("Le numéro de chemin doit être compris entre 1 et 8");
                 }
                 monnayeur.canaux[canal].sorter.SetSorterPath(sorter);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -311,18 +311,29 @@ namespace DeviceLibrary
         /// <summary>
         /// Tâche principale de la dll
         /// </summary>
-        private void ManagerTask()
+        private void Task()
         {
-            while (true)
+            while(true)
             {
-                while (CDevice.eventsList.Count > 0)
+                if(CDevice.eventsList.Count > 0)
                 {
-                    lock (CDevice.eventListLock)
+                    lock(CDevice.eventListLock)
                     {
-                        switch (CDevice.eventsList[0].reason)
+                        switch(CDevice.eventsList[0].reason)
                         {
                             case Reason.MONEYINTRODUCTED:
                             {
+                                OnMoneyReceived(CDevice.eventsList[0]);
+
+                                    if((ToPay - CDevice.denominationInserted.TotalAmount) < 1)
+                                    {
+                                        monnayeur.IsCVToBeDeactivated = true;
+                                        bnX.IsBNRToBeDeactivated = true;
+                                        ChangeBack();
+                                        EndTransaction();
+                                        CDevice.denominationInserted.TotalAmount = 0;
+                                }
+                                CDevice.denominationInserted.BackTotalAmount = CDevice.denominationInserted.TotalAmount;
                                 break;
                             }
                             case Reason.BNRERREUR:
@@ -335,83 +346,52 @@ namespace DeviceLibrary
                                 OnDllReady();
                                 break;
                             }
-
                             case Reason.COINVALIDATORERROR:
-                            break;
+                            {
+                                OnCVError(CDevice.eventsList[0]);
+                                break;
+                            }
                             case Reason.CASHCLOSED:
-                            break;
+                            {
+                                monnayeur.IsCVToBeDeactivated = true;
+                                bnX.IsBNRToBeDeactivated = true;
+                                CDevice.denominationInserted.TotalAmount = ToPay = 0;
+                                OnCashClose();
+                                break;
+                            }
                             case Reason.CASHOPENED:
-                            break;
+                            {
+                                OnCashOpen();
+                                break;
+                            }
                             case Reason.HOPPERERROR:
-                            break;
+                            {
+                                OnHopperError(CDevice.eventsList[0]);
+                                break;
+                            }
                             case Reason.HOPPERDISPENSED:
-                            break;
+                            {
+                                OnHopperDispensed(CDevice.eventsList[0]);
+                                break;
+                            }
                             case Reason.HOPPERHWLEVELCHANGED:
-                            break;
+                            {
+                                OnHopperHardLevelChanged(CDevice.eventsList[0]);
+                                break;
+                            }
                             case Reason.HOPPERSWLEVELCHANGED:
-                            break;
+                            {
+                                OnHopperSoftLevelChanged(CDevice.eventsList[0]);
+                                break;
+                            }
                             case Reason.HOPPEREMPTIED:
-                            break;
+                            {
+                                OnHopperEmptied(CDevice.eventsList[0]);
+                                break;
+                            }
                         }
                         CDevice.eventsList.RemoveAt(0);
                     }
-                }
-                foreach (CHopper hopper in Hoppers)
-                {
-                    if (hopper.IsPresent)
-                    {
-                        if (hopper.IsDispensed)
-                        {
-                            hopper.IsDispensed = false;
-                            if (!hopper.isEmptyingInProgress)
-                            {
-                                OnHopperDispensed(hopper);
-                            }
-                        }
-                        if (hopper.deviceLevel.isSoftLevelChanged)
-                        {
-                            hopper.deviceLevel.isSoftLevelChanged = false;
-                            OnHopperSoftLevelChanged(hopper);
-                        }
-                        if (hopper.deviceLevel.isHardLevelChanged)
-                        {
-                            hopper.deviceLevel.isHardLevelChanged = false;
-                            OnHopperHardLevelChanged(hopper);
-                        }
-                        if (hopper.isEmptied)
-                        {
-                            hopper.isEmptied = false;
-                            OnHopperEmptied(hopper);
-                        }
-                        if (hopper.IsHopperError)
-                        {
-                            hopper.IsHopperError = false;
-                            hopper.errorHopper.isHopperCritical = hopper.IsCritical;
-                            OnHopperError(hopper);
-                        }
-                    }
-                }
-                if (monnayeur.errorCV.errorText != CCoinValidator.CVErrorCodes.NULL)
-                {
-                    OnCVError();
-                    monnayeur.errorCV.errorText = CCoinValidator.CVErrorCodes.NULL;
-                }
-                if (CDevice.denominationInserted.BackTotalAmount != CDevice.denominationInserted.TotalAmount)
-                {
-                    OnMoneyReceived();
-
-                    if ((monnayeur.ProductCode != "BV") || !((CPelicano)monnayeur).IsCoinPresent)
-                    {
-                        if ((ToPay - CDevice.denominationInserted.TotalAmount) < 1)
-                        {
-                            monnayeur.IsCVToBeDeactivated = true;
-                            bnX.IsBNRToBeDeactivated = true;
-                            ChangeBack();
-                            EndTransaction();
-                            CDevice.denominationInserted.TotalAmount = 0;
-                        }
-                    }
-                    CDevice.denominationInserted.BackTotalAmount = CDevice.denominationInserted.TotalAmount;
                 }
                 Thread.Sleep(100);
             }
@@ -426,11 +406,11 @@ namespace DeviceLibrary
             {
                 XmlNodeList parametersHopperList = parametersFile.GetElementsByTagName("Hopper");
                 byte byIndex = 0;
-                foreach (XmlNode n in parametersHopperList)
+                foreach(XmlNode n in parametersHopperList)
                 {
-                    foreach (XmlElement e in n)
+                    foreach(XmlElement e in n)
                     {
-                        switch (e.Name)
+                        switch(e.Name)
                         {
                             case "ID":
                             {
@@ -455,9 +435,9 @@ namespace DeviceLibrary
                             }
                             case "Niveaux":
                             {
-                                foreach (XmlElement e2 in e.ChildNodes)
+                                foreach(XmlElement e2 in e.ChildNodes)
                                 {
-                                    switch (e2.Name)
+                                    switch(e2.Name)
                                     {
                                         case "Plein":
                                         {
@@ -495,7 +475,7 @@ namespace DeviceLibrary
                     }
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -504,19 +484,19 @@ namespace DeviceLibrary
         /// <summary>
         /// Evénement levé lorsque le hopper est vidé.
         /// </summary>
-        /// <param name="hopper"></param>
-        private void OnHopperEmptied(CHopper hopper)
+        /// <param name="evenement"></param>
+        private void OnHopperEmptied(CDevice.CEvent evenement)
         {
             try
             {
                 CalertEventArgs alertEventArgs = new CalertEventArgs
                 {
                     reason = Reason.HOPPEREMPTIED,
-                    donnee = hopper,
+                    donnee = evenement,
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -525,19 +505,19 @@ namespace DeviceLibrary
         /// <summary>
         /// Evénement levé lorsqu'un changement d'état d'une sonde de niveau d'un hopper est detecté.
         /// </summary>
-        /// <param name="hopper"></param>
-        private void OnHopperHardLevelChanged(CHopper hopper)
+        /// <param name="evenement"></param>
+        private void OnHopperHardLevelChanged(CDevice.CEvent evenement)
         {
             try
             {
                 CalertEventArgs alertEventArgs = new CalertEventArgs
                 {
                     reason = Reason.HOPPERHWLEVELCHANGED,
-                    donnee = hopper.deviceLevel
+                    donnee = evenement
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -546,19 +526,19 @@ namespace DeviceLibrary
         /// <summary>
         /// Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper 
         /// </summary>
-        /// <param name="hopper"></param>
-        private void OnHopperSoftLevelChanged(CHopper hopper)
+        /// <param name="evenement"></param>
+        private void OnHopperSoftLevelChanged(CDevice.CEvent evenement)
         {
             try
             {
                 CalertEventArgs alertEventArgs = new CalertEventArgs
                 {
                     reason = Reason.HOPPERSWLEVELCHANGED,
-                    donnee = hopper.deviceLevel,
+                    donnee = evenement,
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -567,19 +547,19 @@ namespace DeviceLibrary
         /// <summary>
         /// Evéenemnt levé lorsqu'une error est detectée sur un hopper.
         /// </summary>
-        /// <param name="hopper"></param>
-        private void OnHopperError(CHopper hopper)
+        /// <param name="evenement"></param>
+        private void OnHopperError(CDevice.CEvent evenement)
         {
             try
             {
                 CalertEventArgs alertEventArgs = new CalertEventArgs
                 {
                     reason = Reason.HOPPERERROR,
-                    donnee = hopper.errorHopper,
+                    donnee = evenement,
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -589,19 +569,19 @@ namespace DeviceLibrary
         /// <summary>
         /// Evénement levé lorsque la distribution est terminée.
         /// </summary>
-        /// <param name="hopper"></param>
-        private void OnHopperDispensed(CHopper hopper)
+        /// <param name="evenement"></param>
+        private void OnHopperDispensed(CDevice.CEvent evenement)
         {
             try
             {
                 CalertEventArgs alertEventArgs = new CalertEventArgs
                 {
                     reason = Reason.HOPPERDISPENSED,
-                    donnee = hopper.dispenseStatus.dispensedResult,
+                    donnee = evenement,
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -621,7 +601,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -641,7 +621,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -650,39 +630,42 @@ namespace DeviceLibrary
         /// <summary>
         /// Evémenment levé lors de l'introduction d'une pièce.
         /// </summary>
-        private void OnMoneyReceived()
+        private void OnMoneyReceived(CDevice.CEvent evenement)
         {
             try
             {
                 CalertEventArgs alertEventArgs = new CalertEventArgs
                 {
                     reason = Reason.MONEYINTRODUCTED,
-                    donnee = CDevice.denominationInserted,
+                    donnee = evenement,
                 };
                 Console.Beep();
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
         }
 
+
+
         /// <summary>
         /// Evénement levé lors de la détection d'une erreur sur le monnayeur.
         /// </summary>
-        private void OnCVError()
+        /// <param name="evenement"></param>
+        private void OnCVError(CDevice.CEvent evenement)
         {
             try
             {
                 CalertEventArgs alertEventArgs = new CalertEventArgs
                 {
                     reason = Reason.COINVALIDATORERROR,
-                    donnee = monnayeur.errorCV,
+                    donnee = evenement,
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -701,8 +684,9 @@ namespace DeviceLibrary
                     donnee = null,
                 };
                 CallAlert(new object(), alertEventArgs);
+                EndTransaction();
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -722,7 +706,7 @@ namespace DeviceLibrary
                 };
                 CallAlert(new object(), alertEventArgs);
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -733,20 +717,29 @@ namespace DeviceLibrary
         /// </summary>
         /// <param name="value">montant en centimes à payer</param>
         /// <remarks>Provoque l'ouverture des moyens de paiement.</remarks>
-        public void OpenTransaction(int value)
+        public void BeginTransaction(int value)
         {
             try
             {
-                if (monnayeur.IsCVToBeActivated = ((ToPay = value) > CDevice.denominationInserted.TotalAmount) && (monnayeur.ProductCode != "BV"))
+                if(monnayeur.IsCVToBeActivated = (ToPay = value) > CDevice.denominationInserted.TotalAmount)
                 {
-                    if (CBNR_CPI.isPresent)
+                    if(CBNR_CPI.isPresent)
                     {
                         bnX.IsBNRToBeActivated = true;
                     }
-                    OnCashOpen();
+
+                    lock(CDevice.eventListLock)
+                    {
+                        CDevice.eventsList.Add(new CDevice.CEvent
+                        {
+                            reason = Reason.CASHOPENED,
+                            deviceId = "",
+                            data = null
+                        });
+                    }
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -757,10 +750,16 @@ namespace DeviceLibrary
         /// </summary>
         public void EndTransaction()
         {
-            monnayeur.IsCVToBeDeactivated = true;
-            bnX.IsBNRToBeDeactivated = true;
-            CDevice.denominationInserted.TotalAmount = ToPay = 0;
-            OnCashClose();
+            lock(CDevice.eventListLock)
+            {
+                CDevice.CEvent evenement = new CDevice.CEvent
+                {
+                    reason = Reason.CASHCLOSED,
+                    deviceId = "",
+                    data = null
+                };
+                CDevice.eventsList.Add(evenement);
+            }
         }
 
         /// <summary>
@@ -777,7 +776,7 @@ namespace DeviceLibrary
         public void ResetCounters()
         {
             CccTalk.ResetCounters();
-            foreach (CHopper hopper in Hoppers)
+            foreach(CHopper hopper in Hoppers)
             {
                 hopper.State = CHopper.Etat.STATE_CHECKLEVEL;
             }
@@ -801,14 +800,13 @@ namespace DeviceLibrary
             {
                 Log = LogManager.GetCurrentClassLogger();
                 Log.Info("\r\n\r\n\r\n{0}\r\n", messagesText.callDll);
-                evenement = new CDevice.CEvent();
                 ParamFileName = "parametres.xml";
                 ParamFileName = Directory.GetCurrentDirectory() + "\\" + ParamFileName;
                 parametersFile.Load(ParamFileName);
 
                 CccTalk.counters = new CcoinsCounters();
                 CccTalk.counterSerializer = new BinaryFormatter();
-                if (!File.Exists(CccTalk.fileCounterName))
+                if(!File.Exists(CccTalk.fileCounterName))
                 {
                     CccTalk.countersFile = File.Create(CccTalk.fileCounterName);
                     CccTalk.counterSerializer.Serialize(CccTalk.countersFile, CccTalk.counters);
@@ -817,42 +815,46 @@ namespace DeviceLibrary
                 CccTalk.countersFile = File.Open(CccTalk.fileCounterName, FileMode.Open, FileAccess.ReadWrite);
                 CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
                 CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
+
                 bnX = new CBNR_CPI();
-
-                try
+                bnX.evReady.WaitOne(90000);
+                monnayeur = new CCoinValidator();
+                monnayeur.evReady.WaitOne(60000);
+                if(monnayeur.ProductCode == "BV")
                 {
-                    monnayeur = new CCoinValidator();
-                    if (!monnayeur.IsPresent)
-                    {
-                        throw new Exception("Pas de monnayeur detecté.");
-                    }
-                }
-                catch (Exception E)
-                {
-                    Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
-                }
-
-                if (monnayeur.ProductCode == "BV")
-                {
+                    monnayeur.CVTask.Abort();
+                    Thread.Sleep(100);
                     monnayeur = new CPelicano();
+                    monnayeur.evReady.WaitOne(60000);
                     ((CPelicano)monnayeur).SpeedMotor = Convert.ToByte(parametersFile.SelectSingleNode("/CashParameters/CoinValidator/SpeedMTR").InnerText);
                 }
                 SetSortersAndHoppersToLoad();
 
-                Hoppers = new List<CHopper>();
-                for (byte i = 1; i < 9; i++)
+                Hoppers = new List<CHopper>(8);
+                for(byte i = 1; i < 9; i++)
                 {
                     Hoppers.Add(new CHopper(i));
+                    Hoppers[i - 1].evReady.WaitOne(20000);
+                    Thread.Sleep(1);
                 }
                 ReadParamHopper();
                 Hoppers.Sort((x, y) => y.CoinValue.CompareTo(x.CoinValue));
 
-                evenement.reason = Reason.DLLLREADY;
-                CDevice.eventsList.Add(evenement);
-                MsgTask = new Thread(ManagerTask);
-                MsgTask.Start();
+                lock(CDevice.eventListLock)
+                {
+
+                    CDevice.CEvent evenement = new CDevice.CEvent
+                    {
+                        reason = Reason.DLLLREADY,
+                        deviceId = "",
+                        data = null
+                    };
+                    CDevice.eventsList.Insert(0, evenement);
+                }
+                msgTask = new Thread(Task);
+                msgTask.Start();
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
@@ -864,13 +866,13 @@ namespace DeviceLibrary
         /// </summary>
         protected virtual void Dispose(bool disposing)
         {
-            if (disposing)
+            if(disposing)
             {
                 try
                 {
                     CccTalk.countersFile.Close();
                 }
-                catch (Exception)
+                catch(Exception)
                 {
 
                 }
@@ -878,10 +880,10 @@ namespace DeviceLibrary
                 {
                     monnayeur.CVTask.Abort();
                 }
-                catch (Exception)
+                catch(Exception)
                 {
                 }
-                foreach (CHopper h in Hoppers)
+                foreach(CHopper h in Hoppers)
                 {
                     try
                     {

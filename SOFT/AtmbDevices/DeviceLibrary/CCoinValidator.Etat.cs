@@ -34,7 +34,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Etat pour obtenir le delai maximum entre 2 lectures du buffer des crédits et des codes erreurs.
             /// </summary>
-            STATE_GETPOLLINGPRIORITY,
+            STATE_GETPOLLINGDELAY,
             /// <summary>
             /// Etat pour fixer le délai de lectures entre 2 lectures du buffer des crédits et des codes erreurs.
             /// </summary>

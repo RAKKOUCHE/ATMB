@@ -61,7 +61,7 @@
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.BNREvent">
             <summary>
-            Contient les informations concernant un évenement.
+            Contient les informations concernant un évenement du BNR
             </summary>
         </member>
         <member name="P:DeviceLibrary.CBNR_CPI.ProductCode">
@@ -89,7 +89,7 @@
             Delain maximum pour effectuer une opération.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.state">
+        <member name="P:DeviceLibrary.CBNR_CPI.State">
             <summary>
             Etat de la machine d'état du BNR.
             </summary>
@@ -754,21 +754,6 @@
             Variable contenant le niveau du périphérique par rapport à ses sondes hardware.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.isSoftLevelChanged">
-            <summary>
-            Boolean indiquant qu'un changement de niveau soft est intervenu.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.isHopperCritical">
-            <summary>
-            Boolean indiquant si le hopper est nécessaire au fonctionnement de la borne.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.isHardLevelChanged">
-            <summary>
-            Boolean indiquant qu'un changement de niveau hard est intervenu.
-            </summary>
-        </member>
         <member name="M:DeviceLibrary.CDevice.CLevel.#ctor(DeviceLibrary.CDevice.CLevel.SoftLevel,DeviceLibrary.CDevice.CLevel.HardLevel)">
             <summary>
             Constructeur
@@ -776,6 +761,11 @@
             <param name="softlevel">Niveau soft, par défaut inconnu</param>
             <param name="hardLevel">Niveau hard, par défaut inconnu</param>
             <remarks>Le fait d'avoir les niveaux à l'état inconnu permet de provoqué un évenement permettant de déterminé le niveau actuel.</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.evReady">
+            <summary>
+            Event permenttant de savoir savoir si le BNR prêt.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CDevice.eventsList">
             <summary>
@@ -1209,14 +1199,49 @@
             Révision du data set
             </summary>
         </member>
+        <member name="T:DeviceLibrary.CHopper.CSoftLevelData">
+            <summary>
+            Class contenant les informations du message envoyé lors du changement d'état des niveaux soft.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.isHCritical">
+            <summary>
+            Indique si le hopper est critique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.coinsNumber">
+            <summary>
+            Indique le nombre de pièces dans le hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.level">
+            <summary>
+            Seuil atteint.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CHardLevelData">
+            <summary>
+            Class contenant les informations du message envoyé lors du changement d'état des niveaux soft.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHardLevelData.isHCritical">
+            <summary>
+            Indique si le hopper est critique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHardLevelData.coinsNumber">
+            <summary>
+            Indique le nombre de pièces dans le hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHardLevelData.level">
+            <summary>
+            Seuil atteint.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CHopper.errorHopper">
             <summary>
             Instance de la class CerrorHopper
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsHopperError">
-            <summary>
-            Indique la présence d'une erreur sur le hopper
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.hopperCoinID">
@@ -1229,9 +1254,9 @@
             Flag indiquant qu'un vidage est en cours.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.isEmptied">
+        <member name="P:DeviceLibrary.CHopper.IsInitialized">
             <summary>
-            Indique si le hopper a été vidé
+            Indique si le Hopper est initialisé.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.AddressBaseHoper">
@@ -1503,11 +1528,6 @@
             Autorise la distribution sur le hopper.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CHopper.DisableHopper">
-            <summary>
-            Desactive l'autorisation de distribution du hopper
-            </summary>
-        </member>
         <member name="M:DeviceLibrary.CHopper.PumpRNG">
             <summary>
             Envoie un nombre aléatoire qui sera utilisé pour le chiffrement.
@@ -1546,11 +1566,6 @@
             Demande le vidage du hopper;
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CHopper.CheckState">
-            <summary>
-            Polling de la machine d'état des hoppers.
-            </summary>
-        </member>
         <member name="M:DeviceLibrary.CHopper.ToString">
             <summary>
             Ìdentification du hopper.
@@ -1574,6 +1589,11 @@
             Recharge les compteurs du hopper
             </summary>
             <param name="CoinsNumber"></param>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.OnErrorHopper">
+            <summary>
+            Création d'un evénement.
+            </summary>
         </member>
         <member name="M:DeviceLibrary.CHopper.Task">
             <summary>
@@ -1739,7 +1759,17 @@
         <member name="F:DeviceLibrary.CHopper.Etat.STATE_DISPENSE">
             <summary>
             Traitement d'une demande de distribution
-            </summary>       
+            </summary>     
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_GETEQUIPEMENCATEGORY">
+            <summary>
+            Lit la catégorie du périphérique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_GETOPTOSTATE">
+            <summary>
+            Lit l'état des opto-coupleurs.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.Etat.STATE_DISPENSEINPROGRESS">
             <summary>
@@ -1907,6 +1937,11 @@
             </summary>
             <remarks>Header 229</remarks>
         </member>
+        <member name="F:DeviceLibrary.CCoinValidator.defaultSorterPath">
+            <summary>
+            Chemin de tri par défaut.
+            </summary>
+        </member>
         <member name="T:DeviceLibrary.CCoinValidator.CErroCV">
             <summary>
             Classe des erreurs du monnayeur.
@@ -2047,6 +2082,16 @@
             Chemin utilisé dans le trieur pour le canal
             </summary>
         </member>
+        <member name="P:DeviceLibrary.CCoinValidator.IsCVInitialized">
+            <summary>
+            Flag indiquant si le monnayeur est initialisé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.name">
+            <summary>
+            Nom de produit du monnayeur.
+            </summary>
+        </member>
         <member name="P:DeviceLibrary.CCoinValidator.DataBaseVersion">
             <summary>
             Renvoi la version de la data base.
@@ -2092,6 +2137,12 @@
             </summary>
             <returns>status</returns>
         </member>
+        <member name="P:DeviceLibrary.CCoinValidator.VariablesSet">
+            <summary>
+            Les donnees variables du monnaayeur.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:DeviceLibrary.CCoinValidator.CheckCreditBuffer">
             <summary>
             Cette fonction analyse le buffer des crédits et des codes erreurs
@@ -2104,14 +2155,8 @@
         </member>
         <member name="M:DeviceLibrary.CCoinValidator.CheckState">
             <summary>
-            Machine d'état du monnayeur.
+            Traitement des états du monnayers.
             </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCoinValidator.VariablesSet">
-            <summary>
-            Les donnees variables du monnaayeur.
-            </summary>
-            <returns></returns>
         </member>
         <member name="M:DeviceLibrary.CCoinValidator.Task">
             <summary>
@@ -2228,7 +2273,7 @@
             Etat pour un polling de vérification.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETPOLLINGPRIORITY">
+        <member name="F:DeviceLibrary.CCoinValidator.Etat.STATE_GETPOLLINGDELAY">
             <summary>
             Etat pour obtenir le delai maximum entre 2 lectures du buffer des crédits et des codes erreurs.
             </summary>
@@ -2428,7 +2473,7 @@
             Enumération des codes erreurs retournés par le monnayeur.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.NULL">
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.MONNAYEUR_OK">
             <summary>
             Pas d'erreur.
             </summary>
@@ -3181,7 +3226,7 @@
             Lecture de version ccTalk utilisée par le périphérique.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CccTalk.ResetDevice">
+        <member name="M:DeviceLibrary.CccTalk.IsDeviceReseted">
             <summary>
             Reset software du périphérique.
             </summary>
@@ -3679,6 +3724,16 @@
             Au monis une pièce présent dans le container.
             </summary>
         </member>
+        <member name="P:DeviceLibrary.CPelicano.IsPelicanoInitialized">
+            <summary>
+            Indique si le Pelicano est initialisé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CPelicano.nextState">
+            <summary>
+            Contient le prochaine etat.
+            </summary>
+        </member>
         <member name="P:DeviceLibrary.CPelicano.CoinInContainer">
             <summary>
             Contient l'indicateur de présence de pièce dans le container.
@@ -3749,11 +3804,6 @@
             Le délai entre 2 trous dans le disque * 4 ms.\n
             0 si la fonction ne retourne pas la valeur
             </returns>
-        </member>
-        <member name="M:DeviceLibrary.CPelicano.CheckState">
-            <summary>
-            Machine d'état du pelicano
-            </summary>
         </member>
         <member name="M:DeviceLibrary.CPelicano.Task">
             <summary>
@@ -3885,14 +3935,9 @@
             Instance de la classe XmlDocument permettant la lecture des fichiers XML.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManager.MsgTask">
+        <member name="F:DeviceLibrary.CDevicesManager.msgTask">
             <summary>
             Thread de la classe principale.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevicesManager.evenement">
-            <summary>
-            Evenement de la classe principale.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CDevicesManager.ToPay">
@@ -3949,7 +3994,7 @@
             <param name="canal">Canal du monnayeur</param>
             <param name="sorter">chemin du trieur</param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.ManagerTask">
+        <member name="M:DeviceLibrary.CDevicesManager.Task">
             <summary>
             Tâche principale de la dll
             </summary>
@@ -3959,35 +4004,35 @@
             Cette fonction lit les paramètres des hoppers.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnHopperEmptied(DeviceLibrary.CHopper)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperEmptied(DeviceLibrary.CDevice.CEvent)">
             <summary>
             Evénement levé lorsque le hopper est vidé.
             </summary>
-            <param name="hopper"></param>
+            <param name="evenement"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged(DeviceLibrary.CHopper)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged(DeviceLibrary.CDevice.CEvent)">
             <summary>
             Evénement levé lorsqu'un changement d'état d'une sonde de niveau d'un hopper est detecté.
             </summary>
-            <param name="hopper"></param>
+            <param name="evenement"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged(DeviceLibrary.CHopper)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged(DeviceLibrary.CDevice.CEvent)">
             <summary>
             Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper 
             </summary>
-            <param name="hopper"></param>
+            <param name="evenement"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnHopperError(DeviceLibrary.CHopper)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperError(DeviceLibrary.CDevice.CEvent)">
             <summary>
             Evéenemnt levé lorsqu'une error est detectée sur un hopper.
             </summary>
-            <param name="hopper"></param>
+            <param name="evenement"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnHopperDispensed(DeviceLibrary.CHopper)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperDispensed(DeviceLibrary.CDevice.CEvent)">
             <summary>
             Evénement levé lorsque la distribution est terminée.
             </summary>
-            <param name="hopper"></param>
+            <param name="evenement"></param>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.OnCashClose">
             <summary>
@@ -3999,15 +4044,16 @@
             Evénement levé lors de l'ouverture des moyens de paiement.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnMoneyReceived">
+        <member name="M:DeviceLibrary.CDevicesManager.OnMoneyReceived(DeviceLibrary.CDevice.CEvent)">
             <summary>
             Evémenment levé lors de l'introduction d'une pièce.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnCVError">
+        <member name="M:DeviceLibrary.CDevicesManager.OnCVError(DeviceLibrary.CDevice.CEvent)">
             <summary>
             Evénement levé lors de la détection d'une erreur sur le monnayeur.
             </summary>
+            <param name="evenement"></param>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.OnDllReady">
             <summary>
@@ -4019,7 +4065,7 @@
             
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OpenTransaction(System.Int32)">
+        <member name="M:DeviceLibrary.CDevicesManager.BeginTransaction(System.Int32)">
             <summary>
             Ouvre une transaction le montant à payer.
             </summary>

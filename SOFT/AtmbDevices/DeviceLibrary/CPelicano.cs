@@ -44,6 +44,22 @@ namespace DeviceLibrary
             COINPRESENT = 1,
         }
 
+        private bool isPelicanoInitialized;
+        /// <summary>
+        /// Indique si le Pelicano est initialisé.
+        /// </summary>
+        public bool IsPelicanoInitialized
+        {
+            get => isPelicanoInitialized;
+            set => isPelicanoInitialized = value;
+        }
+
+
+        /// <summary>
+        /// Contient le prochaine etat.
+        /// </summary>
+        private Etat nextState;
+
         private CoinPresent coinInContainer;
         /// <summary>
         /// Contient l'indicateur de présence de pièce dans le container.
@@ -65,7 +81,7 @@ namespace DeviceLibrary
                 byte result = 0XFF;
                 try
                 {
-                    if ((result = base.OptoStates) == 0XFF)
+                    if((result = base.OptoStates) == 0XFF)
                     {
                         CDevicesManager.Log.Error("Impossible de lire l'état des optos coupleur du {0}", DeviceAddress);
                     }
@@ -76,7 +92,7 @@ namespace DeviceLibrary
                         ExitSensor = ((result & 0x04) > 0) ? LowerSensor.BUSY : LowerSensor.FREE;
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -98,16 +114,16 @@ namespace DeviceLibrary
                 bool result = false;
                 try
                 {
-                    if (OptoStates != 0xFF)
+                    if(OptoStates != 0xFF)
                     {
-                        result = (coinInContainer == CoinPresent.COINPRESENT);
+                        result = coinInContainer == CoinPresent.COINPRESENT;
                     }
                     else
                     {
                         CDevicesManager.Log.Error("Impossible de lire l'état des optocoupleurs du pelicano");
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -131,11 +147,10 @@ namespace DeviceLibrary
                 OptionFlag result = OptionFlag.UNSUPPORTED;
                 try
                 {
-                    //                    byte byResult = GetByte(Header.REQUESTOPTIONFLAG);
                     byte byResult = GetByte(CCoinValidator.Header.REQUESTOPTIONFLAG);
                     result = (byResult & 16) > 0 ? OptionFlag.SUPPORTED : OptionFlag.UNSUPPORTED;
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -155,17 +170,17 @@ namespace DeviceLibrary
                 try
                 {
                     CDevicesManager.Log.Info(messagesText.getSN, DeviceAddress);
-                    if (!IsCmdccTalkSended(DeviceAddress, CccTalk.Header.REQUESTSN, 0, null, bufferIn))
+                    if(!IsCmdccTalkSended(DeviceAddress, CccTalk.Header.REQUESTSN, 0, null, bufferIn))
                     {
                         CDevicesManager.Log.Error(messagesText.erreurCmd, CccTalk.Header.REQUESTSN, DeviceAddress);
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
-                CDevicesManager.Log.Info("Le numéro de série du {0} est {1}", DeviceAddress, bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 + bufferIn[2] + (0x1000000 + bufferIn[3])));
-                return bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 + bufferIn[2] + (0x1000000 + bufferIn[3]));
+                CDevicesManager.Log.Info("Le numéro de série du {0} est {1}", DeviceAddress, bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 * bufferIn[2]) + (0x1000000 * bufferIn[3]));
+                return bufferIn[0] + (0x100 * bufferIn[1]) + 0x10000 * bufferIn[2] + (0x1000000 * bufferIn[3]);
             }
         }
 
@@ -182,7 +197,7 @@ namespace DeviceLibrary
                 byte[] bufferIn = { 0 };
                 byte[] bufferParam;
                 CDevicesManager.Log.Info(messagesText.cmdMotorPelicano, command, data);
-                if (command == CcmdMotors.SETSPEED)
+                if(command == CcmdMotors.SETSPEED)
                 {
                     bufferParam = new byte[] { (byte)command, data };
                 }
@@ -190,11 +205,11 @@ namespace DeviceLibrary
                 {
                     bufferParam = new byte[] { (byte)command };
                 }
-                if (!IsCmdccTalkSended(DeviceAddress, CccTalk.Header.OPERATEMOTOR, (command == CcmdMotors.SETSPEED) ? (byte)2 : (byte)1, bufferParam, bufferIn))
+                if(!IsCmdccTalkSended(DeviceAddress, CccTalk.Header.OPERATEMOTOR, (command == CcmdMotors.SETSPEED) ? (byte)2 : (byte)1, bufferParam, bufferIn))
                 {
                     CDevicesManager.Log.Error(messagesText.errMotorPelicano);
                 }
-                if ((command == CcmdMotors.GETSPEED) || (command == CcmdMotors.GETPOCKETIME))
+                if((command == CcmdMotors.GETSPEED) || (command == CcmdMotors.GETPOCKETIME))
                 {
                     return bufferIn[0];
                 }
@@ -203,7 +218,7 @@ namespace DeviceLibrary
                     return 0xFF;
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -218,7 +233,7 @@ namespace DeviceLibrary
             try
             {
                 CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoMode, level);
-                if (ActivateMotor(level) != 0xFF)
+                if(ActivateMotor(level) != 0xFF)
                 {
                     CDevicesManager.Log.Error("Impossible d'activer le moteur du pelicano");
                 }
@@ -227,7 +242,7 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoInProgress);
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -241,7 +256,7 @@ namespace DeviceLibrary
             try
             {
                 CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoMode, CcmdMotors.CPR);
-                if (ActivateMotor(CcmdMotors.CPR) != 0xFF)
+                if(ActivateMotor(CcmdMotors.CPR) != 0xFF)
                 {
                     CDevicesManager.Log.Error(messagesText.errMotorPelicano);
                 }
@@ -250,7 +265,7 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoInProgress);
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -274,7 +289,7 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoMode, CcmdMotors.GETSPEED);
                     result = ActivateMotor(CcmdMotors.GETSPEED);
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -285,7 +300,7 @@ namespace DeviceLibrary
                 try
                 {
                     CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoMode, CcmdMotors.SETSPEED);
-                    if (ActivateMotor(CcmdMotors.SETSPEED, value) != 0xFF)
+                    if(ActivateMotor(CcmdMotors.SETSPEED, value) != 0xFF)
                     {
                         CDevicesManager.Log.Error(messagesText.errMotorPelicano);
                     }
@@ -294,7 +309,7 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Info("La vitesse du moteur est fixée à {0}%", value);
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -318,7 +333,7 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoMode, CcmdMotors.GETPOCKETIME);
                     result = ActivateMotor(CcmdMotors.GETPOCKETIME);
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -327,148 +342,127 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Machine d'état du pelicano
-        /// </summary>
-        protected override void CheckState()
-        {
-            try
-            {
-                base.CheckState();
-                switch (State)
-                {
-                    case Etat.STATE_TRASHEMPTY:
-                    {
-                        CDevicesManager.Log.Info("Evacuation des pièces du container du Pelicano");
-                        TrashCycle();
-                        State = Etat.STATE_DISABLEMASTER;
-                        Thread.Sleep(5000);
-                        break;
-                    }
-                    case Etat.STATE_CHECKTRASHDOOR:
-                    {
-                        CDevicesManager.Log.Info("Vérification de la porte du container du Pelicano");
-                        if (OptoStates != 0xFF)
-                        {
-                            CDevicesManager.Log.Info("La porte du container du Pelicano est", TrashLid);
-                        }
-                        else
-                        {
-                            throw new Exception("Impossible de lire l'état des optocoupleurs.");
-                        }
-                        break;
-                    }
-                    case Etat.STATE_CHECKLOWERSENSOR:
-                    {
-                        CDevicesManager.Log.Info("Vérification de l'absence d'obstacle dans les sorties du Pelicano.");
-                        if (OptoStates != 0xFF)
-                        {
-                            CDevicesManager.Log.Info("Les sortie du Pelicano est {0}", ExitSensor);
-                        }
-                        else
-                        {
-                            throw new Exception("Impossible de lire l'état des optocoupleurs.");
-                        }
-                        break;
-                    }
-                    case Etat.STATE_GETSPEEDMOTOR:
-                    {
-                        CDevicesManager.Log.Info("La vitesse de rotation du disque du Pelicano est de {0}%", SpeedMotor);
-                        break;
-                    }
-                    case Etat.STATE_SETSPEEDMOTOR:
-                    {
-                        CDevicesManager.Log.Info("Fixe la vitesse de rotation du disque du Pelicano à {0}%", SpeedMotor);
-                        break;
-                    }
-                    case Etat.STATE_GETPOCKET:
-                    {
-                        CDevicesManager.Log.Info("Le temps de rotation entre 2 trous du disque du Pelicano est de {0}", PocketTime);
-                        break;
-                    }
-                    case Etat.STATE_GETOPTION:
-                    {
-                        CDevicesManager.Log.Info("La limite d'acceptation est {0}", AcceptLimitFeature);
-                        break;
-                    }
-                    default:
-                    {
-                        break;
-                    }
-                }
-            }
-            catch (Exception E)
-            {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-            }
-        }
-
-        /// <summary>
         /// Tâche de la machine d'état du Pelicano
         /// </summary>
-        protected override void Task()
+        public override void Task()
         {
-            State = Etat.STATE_IDLE;
-            while (true)
+            byte nombre = 0;
+            while(true)
             {
                 try
                 {
-                    if (IsCVToBeActivated)
+                    CheckState();
+                    mutexCCTalk.WaitOne();
+                    if(IsCVInitialized)
                     {
-                        State = Etat.STATE_ENABLEMASTER;
-                        IsCVToBeActivated = false;
+                        nextState = Etat.STATE_GETCREDITBUFFER;
                     }
-                    else
+                    switch(State)
                     {
-                        if (IsCVToBeDeactivated)
+                        case Etat.STATE_TRASHEMPTY:
                         {
-                            State = Etat.STATE_DISABLEMASTER;
-                            IsCVToBeDeactivated = false;
+                            CDevicesManager.Log.Info("Evacuation des pièces du container du Pelicano");
+                            TrashCycle();
+                            nextState = Etat.STATE_DISABLEMASTER;
+                            Thread.Sleep(5000);
+                            break;
                         }
-                        else
+                        case Etat.STATE_CHECKTRASHDOOR:
                         {
-                            if (BackEventCounter != creditBuffer.EventCounter)
+                            CDevicesManager.Log.Info("Vérification de la porte du container du Pelicano");
+                            if(OptoStates != 0xFF)
                             {
-                                State = Etat.STATE_CHECKCREDIBUFFER;
+                                CDevicesManager.Log.Info("La porte du container du Pelicano est", TrashLid);
                             }
                             else
                             {
-                                if (IsCoinPresent)
+                                throw new Exception("Impossible de lire l'état des optocoupleurs.");
+                            }
+                            break;
+                        }
+                        case Etat.STATE_CHECKLOWERSENSOR:
+                        {
+                            CDevicesManager.Log.Info("Vérification de l'absence d'obstacle dans les sorties du Pelicano.");
+                            if(OptoStates != 0xFF)
+                            {
+                                CDevicesManager.Log.Info("Les sortie du Pelicano est {0}", ExitSensor);
+                            }
+                            else
+                            {
+                                throw new Exception("Impossible de lire l'état des optocoupleurs.");
+                            }
+                            break;
+                        }
+                        case Etat.STATE_GETSPEEDMOTOR:
+                        {
+                            CDevicesManager.Log.Info("La vitesse de rotation du disque du Pelicano est de {0}%", SpeedMotor);
+                            break;
+                        }
+                        case Etat.STATE_SETSPEEDMOTOR:
+                        {
+                            CDevicesManager.Log.Info("Fixe la vitesse de rotation du disque du Pelicano à {0}%", SpeedMotor);
+                            break;
+                        }
+                        case Etat.STATE_GETPOCKET:
+                        {
+                            CDevicesManager.Log.Info("Le temps de rotation entre 2 trous du disque du Pelicano est de {0}", PocketTime);
+                            break;
+                        }
+                        case Etat.STATE_GETOPTION:
+                        {
+                            CDevicesManager.Log.Info("La limite d'acceptation est {0}", AcceptLimitFeature);
+                            break;
+                        }
+                        case Etat.STATE_DISABLEMASTER:
+                        {
+                            if(IsCoinPresent)
+                            {
+                                nextState = Etat.STATE_TRASHEMPTY;
+                            }
+                            break;
+                        }
+                        case Etat.STATE_IDLE:
+                        {
+                            if(IsCoinPresent)
+                            {
+                                if(CDevicesManager.ToPay < 1)
                                 {
-                                    if (CDevicesManager.ToPay < 1)
-                                    {
-                                        if(MasterInhibitStatus == InhibitStatus.ENABLED)
-                                        {
-                                            IsCVToBeDeactivated = true;
-                                        }
-                                        else
-                                        {
-                                            State = Etat.STATE_TRASHEMPTY;
-                                        }
-                                    }
-                                    else
-                                    {
-                                        if (MasterInhibitStatus == InhibitStatus.ENABLED)
-                                        {
-                                            State = Etat.STATE_GETCREDITBUFFER;
-                                        }
-                                        else
-                                        {
-                                            IsCVToBeActivated = true;
-                                        }
-                                    }
+                                    nextState = Etat.STATE_TRASHEMPTY;
                                 }
                                 else
                                 {
-                                    State = Etat.STATE_GETCREDITBUFFER;
+                                    if(MasterInhibitStatus == InhibitStatus.DISABLED)
+                                    {
+                                        nextState = Etat.STATE_ENABLEMASTER;
+                                        nombre++;
+                                    }
                                 }
                             }
+                            else
+                            {
+                                if(MasterInhibitStatus == InhibitStatus.ENABLED)
+                                {
+                                    nextState = Etat.STATE_DISABLEMASTER;
+                                }
+                            }
+                            if(BackEventCounter != creditBuffer.EventCounter)
+                            {
+                                nextState = Etat.STATE_CHECKCREDIBUFFER;
+                            }
+                            break;
+                        }
+                        default:
+                        {
+                            break;
                         }
                     }
-                    mutexCCTalk.WaitOne();
-                    CheckState();
+                    if(IsCVInitialized)
+                    {
+                        State = nextState;
+                    }
                     mutexCCTalk.ReleaseMutex();
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -486,19 +480,19 @@ namespace DeviceLibrary
         /// </summary>
         public CPelicano()
         {
-
+            IsPelicanoInitialized = false;
             CDevicesManager.Log.Info("Instanciation de la classe CPelicano.");
+
             coinInContainer = CoinPresent.NOCOIN;
             ExitSensor = LowerSensor.FREE;
-            TestSolenoid(0XFF);
-#if !DEBUG
             TrashCycle();
+            mutexCCTalk.WaitOne();
             Thread.Sleep(6000);
-#endif
-            TestSolenoid(0XFF);
+            mutexCCTalk.ReleaseMutex();
             CDevicesManager.Log.Info("La porte du container est {0}", TrashLid);
             CDevicesManager.Log.Info("Les optos de sortie sont {0}", ExitSensor);
             CDevicesManager.Log.Info("Etat des pièces dans le container {0}", CoinInContainer);
+            IsPelicanoInitialized = true;
         }
     }
 }

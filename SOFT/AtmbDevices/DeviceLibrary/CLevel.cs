@@ -84,19 +84,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Variable contenant le niveau du périphérique par rapport à ses sondes hardware.
             /// </summary>
-            public HardLevel hardLevel;
-            /// <summary>
-            /// Boolean indiquant qu'un changement de niveau soft est intervenu.
-            /// </summary>
-            public bool isSoftLevelChanged;
-            /// <summary>
-            /// Boolean indiquant si le hopper est nécessaire au fonctionnement de la borne.
-            /// </summary>
-            public bool isHopperCritical;
-            /// <summary>
-            /// Boolean indiquant qu'un changement de niveau hard est intervenu.
-            /// </summary>
-            public bool isHardLevelChanged;
+            public HardLevel hardLevel;            
             /// <summary>
             /// Constructeur
             /// </summary>
@@ -107,8 +95,6 @@ namespace DeviceLibrary
             {
                 softLevel = softlevel;
                 this.hardLevel = hardLevel;
-                isHardLevelChanged =
-                isSoftLevelChanged = false;
             }
         }
     }

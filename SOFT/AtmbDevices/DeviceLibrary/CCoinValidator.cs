@@ -15,6 +15,11 @@ namespace DeviceLibrary
     public partial class CCoinValidator : CcashReader
     {
         /// <summary>
+        /// Chemin de tri par défaut.
+        /// </summary>
+        public byte defaultSorterPath;
+
+        /// <summary>
         /// Classe des erreurs du monnayeur.
         /// </summary>
         public class CErroCV
@@ -195,6 +200,26 @@ namespace DeviceLibrary
         /// </summary>
         public byte sorterPath;
 
+        private bool isCVInitialized;
+        /// <summary>
+        /// Flag indiquant si le monnayeur est initialisé.
+        /// </summary>
+        public bool IsCVInitialized
+        {
+            get => isCVInitialized;
+            set => isCVInitialized = value;
+        }
+
+        ///// <summary>
+        ///// Contient les informations concernant un évenement du monnayeur.
+        ///// </summary>
+        //public CEvent cvEvent;
+
+        /// <summary>
+        /// Nom de produit du monnayeur.
+        /// </summary>
+        private string name;
+
         /********************************************************************************/
         /// <summary>
         /// Renvoi la version de la data base.
@@ -355,336 +380,6 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Cette fonction analyse le buffer des crédits et des codes erreurs
-        /// </summary>
-        protected void CheckCreditBuffer()
-        {
-            try
-            {
-                CDevicesManager.Log.Debug("Lecture du buffer des crédits et des codes erreurs {0}", DeviceAddress);
-                int eventNumber = (BackEventCounter < creditBuffer.EventCounter) ? creditBuffer.EventCounter - BackEventCounter : 255 + creditBuffer.EventCounter - BackEventCounter;
-                BackEventCounter = creditBuffer.EventCounter;
-                if(eventNumber > 5)
-                {
-                    throw new Exception("Trop d'évenements dans le buffer de credit ou code erreur");
-                }
-                for(int i = 0; i < eventNumber; i++)
-                {
-                    byte channelNumber = creditBuffer.Result[i, 0];
-                    if(channelNumber == 0)
-                    {
-                        errorCV.code = creditBuffer.Result[i, 1];
-                        errorCV.errorText = (CVErrorCodes)creditBuffer.Result[i, 1];
-                        CDevicesManager.Log.Error("L'erreur {0} a été rencontré sur le {1}", (CCoinValidator.CVErrorCodes)creditBuffer.Result[i, 1], DeviceAddress);
-                    }
-                    else
-                    {
-                        denominationInserted.ValeurCent = canaux[channelNumber - 1].coinId.ValeurCent;
-                        denominationInserted.CVChannel = channelNumber;
-                        denominationInserted.CVPath = creditBuffer.Result[i, 1];
-                        denominationInserted.TotalAmount += canaux[channelNumber - 1].coinId.ValeurCent;
-                        counters.totalAmountCashInCV += denominationInserted.ValeurCent;
-                        counters.amountCoinInAccepted[channelNumber - 1] += denominationInserted.ValeurCent;
-                        ++counters.coinsInAccepted[channelNumber - 1];
-                        counters.totalAmountInCabinet += denominationInserted.ValeurCent;
-                        if(canaux[channelNumber - 1].HopperToLoad == 0)
-                        {
-                            counters.totalAmountInCB = denominationInserted.ValeurCent;
-                        }
-                        else
-                        {
-                            counters.amountInHopper[canaux[channelNumber - 1].HopperToLoad - 1] += denominationInserted.ValeurCent;
-                            ++counters.coinsInHopper[canaux[channelNumber - 1].HopperToLoad - 1];
-                        }
-                        counters.SaveCounters();
-                        CDevicesManager.Log.Debug("Une pièce de {0:C2} a été reconnue", (decimal)canaux[channelNumber - 1].coinId.ValeurCent / 100);
-                    }
-                }
-            }
-            catch(Exception E)
-            {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Initialisation du monnayeur.
-        /// </summary>
-        public override void  Init()
-        {
-            DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
-            CDevicesManager.Log.Info("Initialisation du {0}", DeviceAddress);
-            BackEventCounter = 0;
-            MasterDisable();
-            creditBuffer = new CCVcreditBuffer(this);
-            CDevicesManager.Log.Info("Identification du {0} \r\n//////////////////", DeviceAddress);
-            CDevicesManager.Log.Info("Catégorie du périphérique : {0}", EquipementCategory);
-            CDevicesManager.Log.Info("Fabricant : {0}", Manufacturer);
-            CDevicesManager.Log.Info("Code du périphérique : {0}", ProductCode);
-            CDevicesManager.Log.Info("Code de fabrication : {0}", BuildCode);
-            CDevicesManager.Log.Info("Révision software : {0}", SWRev);
-            CDevicesManager.Log.Info("Version de la base de données : {0}", DataBaseVersion);
-            CDevicesManager.Log.Info("Test des bobines a {0}", TestSolenoid(0XFF) ? "réussi" : "echoué ");
-            CDevicesManager.Log.Info("Etat du {0} {1}", DeviceAddress, Status);
-            SetOverrideStatus(0XFF);
-            CDevicesManager.Log.Info("Chemin de sortie par défault : {0}", DefaultSorterPath);
-            CDevicesManager.Log.Info("Le délai de polling du périphérique est {0}", PollingDelay = PollingPriority * 2 / 3);
-            creditBuffer.GetBufferCredit();
-            backEventCounter = creditBuffer.EventCounter;
-            SetDefaultSorterpath(1);
-            SetInhibitStatus(CDevicesManager.EnableChannels);
-        }
-
-        /// <summary>
-        /// Machine d'état du monnayeur.
-        /// </summary>
-        protected virtual void CheckState()
-        {
-            try
-            {
-                CDevicesManager.Log.Info("Vérification de la machine d'état du {0}", DeviceAddress);
-                switch (State)
-                {
-                    case Etat.STATE_INIT:
-                    {
-                        CDevicesManager.Log.Debug("Initialisation monnayeur");
-                        Init();
-                        break;
-                    }
-                    case Etat.STATE_RESET:
-                    {
-                        byte loop = 1;
-                        do
-                        {
-                            CDevicesManager.Log.Debug("Reset du {0} Essai {1}", DeviceAddress, loop);
-                        } while (!ResetDevice() && (++loop < 4));
-                        Thread.Sleep(100);
-                        if (loop == 0)
-                        {
-                            CDevicesManager.Log.Error("Impossible d'effectuer le reset du Pelicano");
-                            //TODO envoyé le message d'erreur.
-                        }
-                        break;
-                    }
-                    case Etat.STATE_SIMPLEPOLL:
-                    {
-                        CDevicesManager.Log.Debug("Simple poll sur {0}", DeviceAddress);
-                        if (!SimplePoll)
-                        {
-                            CDevicesManager.Log.Info("Echec du simple poll sur le {0}", DeviceAddress);
-                            //TODO message d'erreur.
-                        }
-                        break;
-                    }
-                    case Etat.STATE_GETEQUIPEMENTCATEGORY:
-                    {
-                        CDevicesManager.Log.Debug("La catégorie de l'equipement est : {0} ", EquipementCategory);
-                        break;
-                    }
-                    case Etat.STATE_GETMANUFACTURERID:
-                    {
-                        CDevicesManager.Log.Debug("Le code fabricant du {0} est : {1}", DeviceAddress, Manufacturer);
-                        break;
-                    }
-                    case Etat.STATE_GETPRODUCTCODE:
-                    {
-                        CDevicesManager.Log.Debug("Le code du produit du {0} est : {1}", DeviceAddress, ProductCode);
-                        break;
-                    }
-                    case Etat.STATE_GETBUILDCODE:
-                    {
-                        CDevicesManager.Log.Debug("Le build code du {0} est : {1}", DeviceAddress, BuildCode);
-                        break;
-                    }
-                    case Etat.STATE_GETSOFTWAREREVISION:
-                    {
-                        CDevicesManager.Log.Debug("La révision du software du {0} est : {1}", DeviceAddress, SWRev);
-                        break;
-                    }
-                    case Etat.STATE_GETSERIALNUMBER:
-                    {
-                        CDevicesManager.Log.Info("Le numéro de série du {0} est : {1}", DeviceAddress, SerialNumber);
-                        break;
-                    }
-
-                    case Etat.STATE_GETDATABASEVERSION:
-                    {
-                        CDevicesManager.Log.Debug("La version de la base de donnée du {0} est : {1}", DeviceAddress, DataBaseVersion);
-                        break;
-                    }
-                    case Etat.STATE_TESTSOLENOID:
-                    {
-                        CDevicesManager.Log.Info("Test des bobines du {0}", DeviceAddress);
-                        TestSolenoid();
-                        break;
-                    }
-                    case Etat.STATE_GETSTATUS:
-                    {
-                        CDevicesManager.Log.Info("Lecture du status du {0}", DeviceAddress);
-                        CDevicesManager.Log.Info("Le status du {0} est {1}", DeviceAddress, Status);
-                        break;
-                    }
-                    case Etat.STATE_SELF_TEST:
-                    {
-                        CDevicesManager.Log.Info("Effectue le self-test du {0}", DeviceAddress);
-                        SelfTestResult result = SelfTest;
-                        string message = string.Format("Le self-test du {0} indque l'erreur {1}", DeviceAddress, result);
-                        if (result == SelfTestResult.OK)
-                        {
-                            CDevicesManager.Log.Info("Le self-test du {0} n'indique pas d'erreur", DeviceAddress);
-                        }
-                        else
-                        {
-                            CDevicesManager.Log.Error("Le self-test du {0} indque l'erreur {1}", DeviceAddress, result);
-                        }
-                        break;
-                    }
-                    case Etat.STATE_GETCOINID:
-                    {
-                        foreach (CCanal canal in canaux)
-                        {
-                            canal.coinId.GetCoinId();
-                            CDevicesManager.Log.Info("Le code pays du canal {0} est {1}, la valeur est {2}, la version est {3}", canal.Number, canal.coinId.CountryCode, canal.coinId.ValeurCent, canal.coinId.Issue);
-                        }
-                        break;
-                    }
-                    case Etat.STATE_GETINHIBITSTATUS:
-                    {
-                        CDevicesManager.Log.Info("Lecture des inhibitions des canaux du {0}", DeviceAddress);
-                        GetInhibitMask(InhibitMask);
-                        CDevicesManager.Log.Info("Le mask d'inhibition du {0} est {1} et {2}", DeviceAddress, InhibitMask[0], InhibitMask[1]);
-                        break;
-                    }
-                    case Etat.STATE_SETINHIBITSTATUS:
-                    {
-                        CDevicesManager.Log.Info("Inhibition des canaux du {0}, DeviceAddress");
-                        SetInhibitStatus(InhibitMask);
-                        CDevicesManager.Log.Info("Le masque des inhibitions du {0} est {1} et {2}", DeviceAddress, InhibitMask[0], InhibitMask[1]);
-                        break;
-                    }
-                    case Etat.STATE_GETPOLLINGPRIORITY:
-                    {
-                        CDevicesManager.Log.Info("Requête du délai de polling");
-                        CDevicesManager.Log.Info("Le délai maximum, de polling est de {0} ms pour le {1}", PollingPriority, DeviceAddress);
-                        break;
-                    }
-                    case Etat.STATE_SETPOLLINGDELAY:
-                    {
-                        PollingDelay = (PollingPriority * 2 / 3);
-                        CDevicesManager.Log.Info("Le délai de polling pour le {0} est fixé à {1}", DeviceAddress, PollingDelay);
-                        break;
-                    }
-                    case Etat.STATE_GETCREDITBUFFER:
-                    {
-                        creditBuffer.GetBufferCredit();
-                        break;
-                    }
-                    case Etat.STATE_DISABLEMASTER:
-                    {
-                        CDevicesManager.Log.Info("desactive le {0}", DeviceAddress);
-                        MasterDisable();
-                        state = Etat.STATE_IDLE;
-                        break;
-                    }
-                    case Etat.STATE_ENABLEMASTER:
-                    {
-                        CDevicesManager.Log.Info("Active le {0}", DeviceAddress);
-                        MasterEnable();
-                        break;
-                    }
-                    case Etat.STATE_GETMASTERINHIBT:
-                    {
-                        CDevicesManager.Log.Info("Le {0} est {1}", DeviceAddress, MasterInhibitStatus);
-                        break;
-                    }
-                    case Etat.STATE_GETOVERRIDE:
-                    {
-
-                        CDevicesManager.Log.Info("Le status ovveride du {0} est : {1} ", OverrideStatus);
-                        break;
-                    }
-                    case Etat.STATE_SETOVERRIDE:
-                    {
-                        CDevicesManager.Log.Info("Enregistre le status du {0} : {1}", OverrideMask);
-                        SetOverrideStatus(OverrideMask);
-                        break;
-                    }
-                    case Etat.STATE_GETSORTERPATH:
-                    {
-                        //todo lire les pièces autorisees dans le fichier de paramètre et comparer les masks
-                        //si les masks sont identiques passer à l'dentification des pièces.
-                        CDevicesManager.Log.Info("lecture des chemins de tris du {0}", DeviceAddress);
-                        foreach (CCanal canal in canaux)
-                        {
-                            CDevicesManager.Log.Info("La sortie du trieur pour le canal {0} du {1} est {2}", canal.sorter.PathSorter);
-                        }
-                        break;
-                    }
-                    case Etat.STATE_SETSORTERPATH:
-                    {
-                        CDevicesManager.Log.Info("Enregistrement du chemin de tri {0} pour le canal {1}", sorterPath, channelInProgress);
-                        canaux[ChannelInProgress].sorter.SetSorterPath(sorterPath);
-                        break;
-                    }
-                    case Etat.STATE_GETDEFAULTSORTERPATH:
-                    {
-                        CDevicesManager.Log.Info("le chemin de  tri par default du {0} est : {1}", DeviceAddress, DefaultSorterPath);
-                        break;
-                    }
-                    case Etat.STATE_SETDEFAULTSORTERPATH:
-                    {
-                        break;
-                    }
-                    case Etat.STATE_CHECKCREDIBUFFER:
-                    {
-                        CheckCreditBuffer();
-                        break;
-                    }
-                    case Etat.STATE_IDLE:
-                    {
-                        break;
-                    }
-
-                    case Etat.STATE_TRASHEMPTY:
-                        break;
-                    case Etat.STATE_SETSPEEDMOTOR:
-                        break;
-                    case Etat.STATE_GETSPEEDMOTOR:
-                        break;
-                    case Etat.STATE_GETPOCKET:
-                        break;
-                    case Etat.STATE_CHECKTRASHDOOR:
-                        break;
-                    case Etat.STATE_CHECKLOWERSENSOR:
-                        break;
-                    case Etat.STATE_GETOPTION:
-                        break;
-                    case Etat.STATE_ACCEPTLIMIT:
-                        break;
-                    case Etat.STATE_COMMSREVISION:
-                        break;
-                    case Etat.STATE_STOP:
-                    {
-
-                        break;
-                    }
-                    default:
-                    {
-                        break;
-                    }
-                }
-                if (ProductCode != "BV")
-                {
-                    State = Etat.STATE_GETCREDITBUFFER;
-                }
-            }
-            catch (Exception E)
-            {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-            }
-        }
-
-        /// <summary>
         /// Les donnees variables du monnaayeur.
         /// </summary>
         /// <returns></returns>
@@ -710,47 +405,387 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// Cette fonction analyse le buffer des crédits et des codes erreurs
+        /// </summary>
+        protected void CheckCreditBuffer()
+        {
+            try
+            {
+                CDevicesManager.Log.Debug("Lecture du buffer des crédits et des codes erreurs {0}", DeviceAddress);
+                int eventNumber = (BackEventCounter < creditBuffer.EventCounter) ? creditBuffer.EventCounter - BackEventCounter : 255 + creditBuffer.EventCounter - BackEventCounter;
+                BackEventCounter = creditBuffer.EventCounter;
+                if(eventNumber > 5)
+                {
+                    throw new Exception("Trop d'évenements dans le buffer de credit ou code erreur");
+                }
+                for(int i = 0; i < eventNumber; i++)
+                {
+                    if(creditBuffer.Result[i, 0] == 0)
+                    {
+                        errorCV.errorText = (CVErrorCodes)creditBuffer.Result[i, 1];
+                        lock(eventListLock)
+                        {
+                            eventsList.Add(new CEvent
+                            {
+                                reason = Reason.COINVALIDATORERROR,
+                                deviceId = base.ProductCode,
+                                data = errorCV
+                            });
+                        }
+                        CDevicesManager.Log.Error("L'erreur {0} a été rencontré sur le {1}", errorCV.errorText, DeviceAddress);
+                    }
+                    else
+                    {
+                        denominationInserted.ValeurCent = canaux[creditBuffer.Result[i, 0] - 1].coinId.ValeurCent;
+                        denominationInserted.CVChannel = creditBuffer.Result[i, 0];
+                        denominationInserted.CVPath = creditBuffer.Result[i, 1];
+                        denominationInserted.TotalAmount += canaux[creditBuffer.Result[i, 0] - 1].coinId.ValeurCent;
+
+                        lock(eventListLock)
+                        {
+
+                            CEvent cvEvent = new CEvent
+                            {
+                                reason = Reason.MONEYINTRODUCTED,
+                                deviceId = name,
+                                data = denominationInserted
+                            };
+                            eventsList.Add(cvEvent);
+                        }
+
+                        counters.totalAmountCashInCV += denominationInserted.ValeurCent;
+                        counters.amountCoinInAccepted[creditBuffer.Result[i, 0] - 1] += denominationInserted.ValeurCent;
+                        ++counters.coinsInAccepted[creditBuffer.Result[i, 0] - 1];
+                        counters.totalAmountInCabinet += denominationInserted.ValeurCent;
+                        if(canaux[creditBuffer.Result[i, 0] - 1].HopperToLoad == 0)
+                        {
+                            counters.totalAmountInCB = denominationInserted.ValeurCent;
+                        }
+                        else
+                        {
+                            counters.amountInHopper[canaux[creditBuffer.Result[i, 0] - 1].HopperToLoad - 1] += denominationInserted.ValeurCent;
+                            ++counters.coinsInHopper[canaux[creditBuffer.Result[i, 0] - 1].HopperToLoad - 1];
+                        }
+                        counters.SaveCounters();
+                        CDevicesManager.Log.Debug("Une pièce de {0:C2} a été reconnue", (decimal)canaux[creditBuffer.Result[i, 0] - 1].coinId.ValeurCent / 100);
+                    }
+                }
+            }
+            catch(Exception E)
+            {
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Initialisation du monnayeur.
+        /// </summary>
+        public override void Init()
+        {
+            CDevicesManager.Log.Debug("Initialisation monnayeur");
+            IsCVInitialized = false;
+            canaux = new CCanal[numChannel];
+            for(byte i = 0; i < numChannel; i++)
+            {
+                canaux[i] = new CCanal((byte)(i + 1), this);
+            }
+            errorCV = new CErroCV();
+            PollingDelay = 20;
+            BackEventCounter = 0;
+            creditBuffer = new CCVcreditBuffer(this);
+            CDevicesManager.Log.Info("Identification du {0} \r\n//////////////////", DeviceAddress);
+            OverrideMask = 0XFF;
+            defaultSorterPath = 1;
+            InhibitMask = CDevicesManager.EnableChannels;
+            creditBuffer.GetBufferCredit();
+            backEventCounter = creditBuffer.EventCounter;
+        }
+
+        /// <summary>
+        /// Traitement des états du monnayers.
+        /// </summary>
+        public void CheckState()
+        {
+            try
+            {
+                mutexCCTalk.WaitOne();
+                switch(State)
+                {
+                    case Etat.STATE_INIT:
+                    {
+                        Init();
+                        State = Etat.STATE_DISABLEMASTER;
+                        break;
+                    }
+                    case Etat.STATE_RESET:
+                    {
+                        if(IsDeviceReseted())
+                        {
+                            State = Etat.STATE_INIT;
+                        }
+                        else
+                        {
+                            Thread.Sleep(60000);
+                        }
+                        break;
+                    }
+                    case Etat.STATE_SIMPLEPOLL:
+                    {
+                        CDevicesManager.Log.Debug("Simple poll sur {0}", DeviceAddress);
+                        if(!SimplePoll)
+                        {
+                            CDevicesManager.Log.Info("Echec du simple poll sur le {0}", DeviceAddress);
+
+                        }
+                        State = Etat.STATE_GETCREDITBUFFER;
+                        break;
+                    }
+                    case Etat.STATE_GETEQUIPEMENTCATEGORY:
+                    {
+                        CDevicesManager.Log.Info("La catégorie de l'equipement est : {0} ", EquipementCategory);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETMANUFACTURERID;
+                        break;
+                    }
+                    case Etat.STATE_GETMANUFACTURERID:
+                    {
+                        CDevicesManager.Log.Debug("Le code fabricant du {0} est : {1}", DeviceAddress, Manufacturer);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETPRODUCTCODE;
+                        break;
+                    }
+                    case Etat.STATE_GETPRODUCTCODE:
+                    {
+                        CDevicesManager.Log.Debug("Le code du produit du {0} est : {1}", DeviceAddress, name = ProductCode);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETBUILDCODE;
+                        break;
+                    }
+                    case Etat.STATE_GETBUILDCODE:
+                    {
+                        CDevicesManager.Log.Debug("Le build code du {0} est : {1}", DeviceAddress, BuildCode);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETSOFTWAREREVISION;
+                        break;
+                    }
+                    case Etat.STATE_GETSOFTWAREREVISION:
+                    {
+                        CDevicesManager.Log.Debug("La révision du software du {0} est : {1}", DeviceAddress, SWRev);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETDATABASEVERSION;
+                        break;
+                    }
+                    case Etat.STATE_GETSERIALNUMBER:
+                    {
+                        CDevicesManager.Log.Info("Le numéro de série du {0} est : {1}", DeviceAddress, SerialNumber);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETEQUIPEMENTCATEGORY;
+                        break;
+                    }
+                    case Etat.STATE_GETDATABASEVERSION:
+                    {
+                        CDevicesManager.Log.Debug("La version de la base de donnée du {0} est : {1}", DeviceAddress, DataBaseVersion);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_TESTSOLENOID;
+                        break;
+                    }
+                    case Etat.STATE_TESTSOLENOID:
+                    {
+                        CDevicesManager.Log.Info("Test des bobines du {0}", DeviceAddress);
+                        TestSolenoid();
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETSTATUS;
+                        break;
+                    }
+                    case Etat.STATE_GETSTATUS:
+                    {
+                        CDevicesManager.Log.Info("Le status du {0} est {1}", DeviceAddress, Status);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETCOINID;
+                        break;
+                    }
+                    case Etat.STATE_SELF_TEST:
+                    {
+                        CDevicesManager.Log.Info("Effectue le self-test du {0}", DeviceAddress);
+                        SelfTestResult result = SelfTest;
+                        string message = string.Format("Le self-test du {0} indque l'erreur {1}", DeviceAddress, result);
+                        if(result == SelfTestResult.OK)
+                        {
+                            CDevicesManager.Log.Info("Le self-test du {0} n'indique pas d'erreur", DeviceAddress);
+                        }
+                        else
+                        {
+                            CDevicesManager.Log.Error("Le self-test du {0} indque l'erreur {1}", DeviceAddress, result);
+                        }
+                        State = Etat.STATE_GETCREDITBUFFER;
+                        break;
+                    }
+                    case Etat.STATE_GETCOINID:
+                    {
+                        foreach(CCanal canal in canaux)
+                        {
+                            canal.coinId.GetCoinId();
+                            CDevicesManager.Log.Info("Le code pays du canal {0} est {1}, la valeur est {2}, la version est {3}", canal.Number, canal.coinId.CountryCode, canal.coinId.ValeurCent, canal.coinId.Issue);
+                        }
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_SETINHIBITSTATUS;
+                        break;
+                    }
+                    case Etat.STATE_GETINHIBITSTATUS:
+                    {
+                        CDevicesManager.Log.Info("Lecture des inhibitions des canaux du {0}", DeviceAddress);
+                        GetInhibitMask(InhibitMask);
+                        CDevicesManager.Log.Info("Le mask d'inhibition du {0} est {1} et {2}", DeviceAddress, InhibitMask[0], InhibitMask[1]);
+                        State = Etat.STATE_GETCREDITBUFFER;
+                        break;
+                    }
+                    case Etat.STATE_SETINHIBITSTATUS:
+                    {
+                        CDevicesManager.Log.Info("Inhibition des canaux du {0}, DeviceAddress");
+                        SetInhibitStatus(InhibitMask);
+                        CDevicesManager.Log.Debug("Le masque des inhibitions du {0} est {1} et {2}", DeviceAddress, InhibitMask[0], InhibitMask[1]);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_SETSORTERPATH;
+                        break;
+                    }
+                    case Etat.STATE_GETPOLLINGDELAY:
+                    {
+                        PollingDelay = PollingPriority * 2 / 3;
+                        CDevicesManager.Log.Info("Le déali de polling pour {0} est de {1}", DeviceAddress, PollingDelay);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_SELF_TEST;
+                        break;
+                    }
+                    case Etat.STATE_GETCREDITBUFFER:
+                    {
+                        creditBuffer.GetBufferCredit();
+                        if(!IsCVInitialized)
+                        {
+                            backEventCounter = creditBuffer.EventCounter;
+                            IsCVInitialized = true;
+                            evReady.Set();
+                        }
+                        State = Etat.STATE_IDLE;
+                        break;
+                    }
+                    case Etat.STATE_DISABLEMASTER:
+                    {
+                        CDevicesManager.Log.Info("desactive le {0}", DeviceAddress);
+                        MasterDisable();
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETSERIALNUMBER;
+                        break;
+                    }
+                    case Etat.STATE_ENABLEMASTER:
+                    {
+                        CDevicesManager.Log.Info("Active le {0}", DeviceAddress);
+                        MasterEnable();
+                        State = Etat.STATE_GETCREDITBUFFER;
+                        break;
+                    }
+                    case Etat.STATE_GETMASTERINHIBT:
+                    {
+                        CDevicesManager.Log.Info("Le {0} est {1}", DeviceAddress, MasterInhibitStatus);
+                        State = Etat.STATE_GETCREDITBUFFER;
+                        break;
+                    }
+                    case Etat.STATE_GETOVERRIDE:
+                    {
+                        CDevicesManager.Log.Info("Le status ovveride du {0} est : {1} ", OverrideStatus);
+                        State = Etat.STATE_GETCREDITBUFFER;
+                        break;
+                    }
+                    case Etat.STATE_SETOVERRIDE:
+                    {
+                        CDevicesManager.Log.Info("Enregistre le status du {0} : {1}", OverrideMask);
+                        SetOverrideStatus(OverrideMask);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETDEFAULTSORTERPATH;
+                        break;
+                    }
+                    case Etat.STATE_GETSORTERPATH:
+                    {
+                        //todo lire les pièces autorisees dans le fichier de paramètre et comparer les masks
+                        //si les masks sont identiques passer à l'dentification des pièces.
+                        CDevicesManager.Log.Info("lecture des chemins de tris du {0}", DeviceAddress);
+                        foreach(CCanal canal in canaux)
+                        {
+                            CDevicesManager.Log.Info("La sortie du trieur pour le canal {0} du {1} est {2}", canal.sorter.PathSorter);
+                        }
+                        State = Etat.STATE_GETCREDITBUFFER;
+                        break;
+                    }
+                    case Etat.STATE_SETSORTERPATH:
+                    {
+                        CDevicesManager.Log.Info("Enregistrement du chemin de tri {0} pour le canal {1}", sorterPath, channelInProgress);
+                        canaux[ChannelInProgress].sorter.SetSorterPath(sorterPath);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_GETPOLLINGDELAY;
+                        break;
+                    }
+                    case Etat.STATE_GETDEFAULTSORTERPATH:
+                    {
+                        CDevicesManager.Log.Info("le chemin de  tri par default du {0} est : {1}", DeviceAddress, DefaultSorterPath);
+                        State = Etat.STATE_GETCREDITBUFFER;
+                        break;
+                    }
+                    case Etat.STATE_SETDEFAULTSORTERPATH:
+                    {
+                        CDevicesManager.Log.Info("Chemin de sortie par défault : {0}", DefaultSorterPath);
+                        State = IsCVInitialized ? Etat.STATE_GETCREDITBUFFER : Etat.STATE_SETINHIBITSTATUS;
+                        break;
+                    }
+                    case Etat.STATE_CHECKCREDIBUFFER:
+                    {
+                        CheckCreditBuffer();
+                        State = Etat.STATE_GETCREDITBUFFER;
+                        break;
+                    }
+                    case Etat.STATE_IDLE:
+                    {
+                        State = Etat.STATE_GETCREDITBUFFER;
+                        if(IsCVToBeActivated)
+                        {
+                            State = Etat.STATE_ENABLEMASTER;
+                            IsCVToBeActivated = false;
+                        }
+                        if(IsCVToBeDeactivated)
+                        {
+                            State = Etat.STATE_DISABLEMASTER;
+                            isCVToBeDeactivated = false;
+                        }
+                        if(backEventCounter != creditBuffer.EventCounter)
+                        {
+                            State = Etat.STATE_CHECKCREDIBUFFER;
+                        }
+                        break;
+                    }
+                    case Etat.STATE_STOP:
+                    {
+                        CVTask.Abort();
+                        break;
+                    }
+                    default:
+                    {
+                        //State = Etat.STATE_GETCREDITBUFFER;
+                        break;
+                    }
+                }
+                //if (ProductCode != "BV")
+                //{
+                //    State = Etat.STATE_GETCREDITBUFFER;
+                //}
+            }
+            catch(Exception E)
+            {
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), "Exception dans le thread du monnayeur : " + E.Message, E.StackTrace);
+            }
+            finally
+            {
+                try
+                {
+                    mutexCCTalk.ReleaseMutex();
+                }
+                catch(Exception)
+                {
+                }
+            }
+        }
+
+        /// <summary>
         /// Tâche de la machine d'état du monnayeur.
         /// </summary>
-        protected override void Task()
+        public override void Task()
         {
             CDevicesManager.Log.Debug("Tâche de lecture des évenements concernant du {0}", DeviceAddress);
             while(true)
             {
-                try
-                {
-                    mutexCCTalk.WaitOne();
-                    CheckState();
-                    if(IsCVToBeActivated)
-                    {
-                        State = Etat.STATE_ENABLEMASTER;
-                        IsCVToBeActivated = false;
-                    }
-                    if(IsCVToBeDeactivated)
-                    {
-                        State = Etat.STATE_DISABLEMASTER;
-                        isCVToBeDeactivated = false;
-                    }
-
-                    if(backEventCounter != creditBuffer.EventCounter)
-                    {
-                        State = Etat.STATE_CHECKCREDIBUFFER;
-                    }
-                }
-                catch(Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), "Exception dans le thread du monnayeur : " + E.Message, E.StackTrace);
-                }
-                finally
-                {
-                    try
-                    {
-                        mutexCCTalk.ReleaseMutex();
-                    }
-                    catch(Exception)
-                    {
-                    }
-                }
+                CheckState();
                 Thread.Sleep(PollingDelay);
             }
         }
@@ -764,35 +799,28 @@ namespace DeviceLibrary
             {
                 CDevicesManager.Log.Info("Instancation de la classe CCoinValidator.");
                 DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
-                if (!(IsPresent = SimplePoll))
+                if(!(IsPresent = SimplePoll))
                 {
                     Thread.Sleep(100);
-                    ResetDevice();
+                    IsDeviceReseted();
                     IsPresent = SimplePoll;
                 }
-                state = Etat.STATE_STOP;
-                if (IsPresent)
+                if(IsPresent)
                 {
-                    canaux = new CCanal[numChannel];
-                    for (byte i = 0; i < numChannel; i++)
-                    {
-                        canaux[i] = new CCanal((byte)(i + 1), this);
-                        canaux[i].coinId.GetCoinId();
-                    }
-                    errorCV = new CErroCV();
-                    ResetDevice();
-                    PollingDelay = PollingPriority * 2 / 3;
+                    State = Etat.STATE_INIT;
                     CVTask = new Thread(Task);
-                    state = Etat.STATE_INIT;
                     CVTask.Start();
                 }
+                else
+                {
+                    throw new Exception("Pas de monnayeur detecté.");
+                }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                evReady.Set();
             }
         }
-
-
     }
 }

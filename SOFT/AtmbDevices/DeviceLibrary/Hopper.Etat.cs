@@ -29,12 +29,20 @@ namespace DeviceLibrary
             STATE_RESET,
             /// <summary>
             /// Traitement d'une demande de distribution
-            /// </summary>       
+            /// </summary>     
             STATE_DISPENSE,
+            /// <summary>
+            /// Lit la catégorie du périphérique.
+            /// </summary>
+            STATE_GETEQUIPEMENCATEGORY,
+            /// <summary>
+            /// Lit l'état des opto-coupleurs.
+            /// </summary>
+            STATE_GETOPTOSTATE,
             /// <summary>
             /// Distribution en cours
             /// </summary>            
-            STATE_DISPENSEINPROGRESS,            
+            STATE_DISPENSEINPROGRESS,
             /// <summary>
             /// Traitement fin de distribution
             /// </summary>

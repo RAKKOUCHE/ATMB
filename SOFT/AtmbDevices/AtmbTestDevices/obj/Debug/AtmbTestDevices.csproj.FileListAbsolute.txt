@@ -70,3 +70,4 @@ D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.exe
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.pdb
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\DeviceLibrary.xml
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\BnrCtlDotNet40.dll
+D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.Form2.resources

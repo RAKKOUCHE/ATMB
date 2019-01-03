@@ -21,7 +21,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Pas d'erreur.
             /// </summary>
-            NULL = 0,
+            MONNAYEUR_OK = 0,
             /// <summary>
             /// Pièce non reconnue.
             /// </summary>
