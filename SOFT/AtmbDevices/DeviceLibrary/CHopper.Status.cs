@@ -28,7 +28,7 @@ namespace DeviceLibrary
                 /// <summary>
                 /// Numéro du hopper.
                 /// </summary>
-                public byte HopperNumber;
+                public string nameOfHopper;
                 /// <summary>
                 /// Nombre de pièce restant à payer.
                 /// </summary>
@@ -62,10 +62,6 @@ namespace DeviceLibrary
                 /// Constructeur
                 /// </summary>
                 /// <param name="hopperNumber"></param>
-                public CDispensedResult(byte hopperNumber)
-                {
-                    HopperNumber = hopperNumber;
-                }
             }
 
             private byte eventCounter;
@@ -165,7 +161,10 @@ namespace DeviceLibrary
             public CHopperStatus(CHopper owner)
             {
                 Owner = owner;
-                dispensedResult = new CDispensedResult(Owner.Number);
+                dispensedResult = new CDispensedResult
+                {
+                    nameOfHopper = Owner.name
+                };
             }
 
         }

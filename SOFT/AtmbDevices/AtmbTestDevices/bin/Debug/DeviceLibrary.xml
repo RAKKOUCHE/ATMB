@@ -628,7 +628,7 @@
             Raison de l'évenement.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevice.CEvent.deviceId">
+        <member name="F:DeviceLibrary.CDevice.CEvent.nameOfHopper">
             <summary>
             Nom du périphérique
             </summary>
@@ -833,6 +833,11 @@
             Class contenant les résultats du vidage du hopper.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CHopper.CEmptyCount.nameOfHopper">
+            <summary>
+            Nom du hopper.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CHopper.CEmptyCount.counter">
             <summary>
             Nombre de pièces comptées durant le vidage
@@ -863,9 +868,9 @@
             Liste des erreurs hopper
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.NULL">
+        <member name="F:DeviceLibrary.CHopper.HopperError.NON_IDENTIFIEE">
             <summary> 
-            Aucune erreur.
+            Aucune erreur ou erreur non identifiée.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.HopperError.MOTORREVERSED">
@@ -929,7 +934,7 @@
             Classe contenant les informations sur une erreur survenue dans le hopper
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperError.nameHopper">
+        <member name="F:DeviceLibrary.CHopper.CHopperError.nameOfHopper">
             <summary>
             Numéro du hopper
             </summary>
@@ -943,12 +948,6 @@
             <summary>
             Indique si le hopper est nécessaire pour le fonctionnement du système.
             </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.CHopperError.#ctor(System.String)">
-            <summary>
-            Constructeur de la class CHopperError.
-            </summary>
-            <param name="NameHopper">Identification du hopper.</param>
         </member>
         <member name="T:DeviceLibrary.CHopper.LevelMask">
             <summary>
@@ -1081,7 +1080,7 @@
             Classe des resultats d'une distribution.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.HopperNumber">
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.nameOfHopper">
             <summary>
             Numéro du hopper.
             </summary>
@@ -1121,12 +1120,6 @@
             <summary>
             Montant 
             </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.#ctor(System.Byte)">
-            <summary>
-            Constructeur
-            </summary>
-            <param name="hopperNumber"></param>
         </member>
         <member name="P:DeviceLibrary.CHopper.CHopperStatus.EventCounter">
             <summary>
@@ -1204,6 +1197,11 @@
             Class contenant les informations du message envoyé lors du changement d'état des niveaux soft.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.nameOfHopper">
+            <summary>
+            Nom du hopper
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CHopper.CSoftLevelData.isHCritical">
             <summary>
             Indique si le hopper est critique.
@@ -1222,6 +1220,11 @@
         <member name="T:DeviceLibrary.CHopper.CHardLevelData">
             <summary>
             Class contenant les informations du message envoyé lors du changement d'état des niveaux soft.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHardLevelData.nameOfHopper">
+            <summary>
+            Nom du hopper.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.CHardLevelData.isHCritical">
@@ -1247,6 +1250,11 @@
         <member name="F:DeviceLibrary.CHopper.hopperCoinID">
             <summary>
             Objet contenant l'identification des pièces contenus.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.name">
+            <summary>
+            Chaine d'identification du hopper.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.isEmptyingInProgress">
@@ -1556,6 +1564,13 @@
             Initialisation du hopper
             </summary>
         </member>
+        <member name="M:DeviceLibrary.CHopper.EventLevelHopper(DeviceLibrary.Reason,System.Object)">
+            <summary>
+            Ajoute un évenement de niveau à liste des évenements. 
+            </summary>
+            <param name="reason">Raison de l'évenement.</param>
+            <param name="data">Donnée concernant l'évenement.</param>
+        </member>
         <member name="M:DeviceLibrary.CHopper.CheckLevel">
             <summary>
             Véfication des niveaux du hopper.
@@ -1590,7 +1605,7 @@
             </summary>
             <param name="CoinsNumber"></param>
         </member>
-        <member name="M:DeviceLibrary.CHopper.OnErrorHopper">
+        <member name="M:DeviceLibrary.CHopper.AddErrorHopperEvent">
             <summary>
             Création d'un evénement.
             </summary>

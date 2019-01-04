@@ -151,10 +151,10 @@
     <!--Paramètres des distributeurs de pièces-->
     <Hoppers>
         <Hopper>
-            <ID>1</ID>
+            <ID>Hopper 10</ID>
             <Address>3</Address>
             <Devise>EUR</Devise>
-            <Valeur>5</Valeur>
+            <Valeur>10</Valeur>
             <Recharge>500</Recharge>
             <Critique>true</Critique>
             <Niveaux>
@@ -165,7 +165,7 @@
             </Niveaux>
         </Hopper>
         <Hopper>
-            <ID>2</ID>
+            <ID>Hopper 1 5</ID>
             <Address>4</Address>
             <Devise>EUR</Devise>
             <Valeur>5</Valeur>
@@ -179,7 +179,7 @@
             </Niveaux>
         </Hopper>
         <Hopper>
-            <ID>3</ID>
+            <ID>Hopper 20</ID>
             <Address>5</Address>
             <Devise>EUR</Devise>
             <Valeur>20</Valeur>
@@ -193,7 +193,7 @@
             </Niveaux>
         </Hopper>
         <Hopper>
-            <ID>4</ID>
+            <ID>Hopper 50</ID>
             <Address>6</Address>
             <Devise>EUR</Devise>
             <Valeur>50</Valeur>
@@ -207,7 +207,7 @@
             </Niveaux>
         </Hopper>
         <Hopper>
-            <ID>5</ID>
+            <ID>Hopper 100</ID>
             <Address>7</Address>
             <Devise>EUR</Devise>
             <Valeur>100</Valeur>
@@ -221,7 +221,7 @@
             </Niveaux>
         </Hopper>
         <Hopper>
-            <ID>6</ID>
+            <ID>Hopper 2 5</ID>
             <Address>8</Address>
             <Devise>EUR</Devise>
             <Valeur>5</Valeur>
@@ -235,7 +235,7 @@
             </Niveaux>
         </Hopper>
         <Hopper>
-            <ID>7</ID>
+            <ID>Hopper 1 200</ID>
             <Address>9</Address>
             <Devise>10</Devise>
             <Valeur>200</Valeur>
@@ -249,7 +249,7 @@
             </Niveaux>
         </Hopper>
         <Hopper>
-            <ID>8</ID>
+            <ID>Hopper 2 200</ID>
             <Address>10</Address>
             <Devise>EUR</Devise>
             <Valeur>200</Valeur>

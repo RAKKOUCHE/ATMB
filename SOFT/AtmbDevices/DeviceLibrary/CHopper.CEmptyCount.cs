@@ -14,6 +14,10 @@ namespace DeviceLibrary
         public class CEmptyCount
         {
             /// <summary>
+            /// Nom du hopper.
+            /// </summary>
+            public string nameOfHopper;
+            /// <summary>
             /// Nombre de pièces comptées durant le vidage
             /// </summary>
             public long counter;

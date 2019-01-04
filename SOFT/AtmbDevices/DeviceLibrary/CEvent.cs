@@ -21,7 +21,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Nom du périphérique
             /// </summary>
-            public string deviceId;
+            public string nameOfHopper;
             /// <summary>
             /// donnée concernant l'évenenement.
             /// </summary>

@@ -313,83 +313,90 @@ namespace DeviceLibrary
         /// </summary>
         private void Task()
         {
+            Reason reason;
             while(true)
             {
                 if(CDevice.eventsList.Count > 0)
                 {
                     lock(CDevice.eventListLock)
                     {
-                        switch(CDevice.eventsList[0].reason)
+                        reason = CDevice.eventsList[0].reason;
+                    }
+                    switch(reason)
+                    {
+                        case Reason.MONEYINTRODUCTED:
                         {
-                            case Reason.MONEYINTRODUCTED:
-                            {
-                                OnMoneyReceived(CDevice.eventsList[0]);
+                            OnMoneyReceived(CDevice.eventsList[0]);
 
-                                    if((ToPay - CDevice.denominationInserted.TotalAmount) < 1)
-                                    {
-                                        monnayeur.IsCVToBeDeactivated = true;
-                                        bnX.IsBNRToBeDeactivated = true;
-                                        ChangeBack();
-                                        EndTransaction();
-                                        CDevice.denominationInserted.TotalAmount = 0;
-                                }
-                                CDevice.denominationInserted.BackTotalAmount = CDevice.denominationInserted.TotalAmount;
-                                break;
-                            }
-                            case Reason.BNRERREUR:
-                            {
-                                OnBNRErreur(CDevice.eventsList[0]);
-                                break;
-                            }
-                            case Reason.DLLLREADY:
-                            {
-                                OnDllReady();
-                                break;
-                            }
-                            case Reason.COINVALIDATORERROR:
-                            {
-                                OnCVError(CDevice.eventsList[0]);
-                                break;
-                            }
-                            case Reason.CASHCLOSED:
+                            if((ToPay - CDevice.denominationInserted.TotalAmount) < 1)
                             {
                                 monnayeur.IsCVToBeDeactivated = true;
                                 bnX.IsBNRToBeDeactivated = true;
-                                CDevice.denominationInserted.TotalAmount = ToPay = 0;
-                                OnCashClose();
-                                break;
+                                ChangeBack();
+                                EndTransaction();
+                                CDevice.denominationInserted.TotalAmount = 0;
                             }
-                            case Reason.CASHOPENED:
-                            {
-                                OnCashOpen();
-                                break;
-                            }
-                            case Reason.HOPPERERROR:
-                            {
-                                OnHopperError(CDevice.eventsList[0]);
-                                break;
-                            }
-                            case Reason.HOPPERDISPENSED:
-                            {
-                                OnHopperDispensed(CDevice.eventsList[0]);
-                                break;
-                            }
-                            case Reason.HOPPERHWLEVELCHANGED:
-                            {
-                                OnHopperHardLevelChanged(CDevice.eventsList[0]);
-                                break;
-                            }
-                            case Reason.HOPPERSWLEVELCHANGED:
-                            {
-                                OnHopperSoftLevelChanged(CDevice.eventsList[0]);
-                                break;
-                            }
-                            case Reason.HOPPEREMPTIED:
-                            {
-                                OnHopperEmptied(CDevice.eventsList[0]);
-                                break;
-                            }
+                            CDevice.denominationInserted.BackTotalAmount = CDevice.denominationInserted.TotalAmount;
+                            break;
                         }
+                        case Reason.BNRERREUR:
+                        {
+                            OnBNRErreur(CDevice.eventsList[0]);
+                            break;
+                        }
+                        case Reason.DLLLREADY:
+                        {
+                            OnDllReady();
+                            break;
+                        }
+                        case Reason.COINVALIDATORERROR:
+                        {
+                            OnCVError(CDevice.eventsList[0]);
+                            break;
+                        }
+                        case Reason.CASHCLOSED:
+                        {
+                            monnayeur.IsCVToBeDeactivated = true;
+                            bnX.IsBNRToBeDeactivated = true;
+                            CDevice.denominationInserted.TotalAmount = ToPay = 0;
+                            OnCashClose();
+                            break;
+                        }
+                        case Reason.CASHOPENED:
+                        {
+                            OnCashOpen();
+                            break;
+                        }
+                        case Reason.HOPPERERROR:
+                        {
+                            OnHopperError(CDevice.eventsList[0]);
+                            break;
+                        }
+                        case Reason.HOPPERDISPENSED:
+                        {
+                            OnHopperDispensed(CDevice.eventsList[0]);
+                            break;
+                        }
+                        case Reason.HOPPERHWLEVELCHANGED:
+                        {
+                            OnHopperHardLevelChanged(CDevice.eventsList[0]);
+                            break;
+                        }
+                        case Reason.HOPPERSWLEVELCHANGED:
+                        {
+                            OnHopperSoftLevelChanged(CDevice.eventsList[0]);
+                            break;
+                        }
+                        case Reason.HOPPEREMPTIED:
+                        {
+                            OnHopperEmptied(CDevice.eventsList[0]);
+                            break;
+                        }
+                        default:
+                            break;
+                    }
+                    lock(CDevice.eventListLock)
+                    {
                         CDevice.eventsList.RemoveAt(0);
                     }
                 }
@@ -414,7 +421,7 @@ namespace DeviceLibrary
                         {
                             case "ID":
                             {
-                                byIndex = Convert.ToByte(Convert.ToInt32(e.InnerText) - 1);
+                                Hoppers[byIndex].name = e.InnerText;
                                 break;
                             }
                             case "Recharge":
@@ -473,6 +480,7 @@ namespace DeviceLibrary
                             }
                         }
                     }
+                    byIndex++;
                 }
             }
             catch(Exception E)
@@ -557,13 +565,12 @@ namespace DeviceLibrary
                     reason = Reason.HOPPERERROR,
                     donnee = evenement,
                 };
-                CallAlert(new object(), alertEventArgs);
+                CallAlert(new object(), alertEventArgs);                
             }
             catch(Exception E)
             {
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
-
         }
 
         /// <summary>
@@ -733,7 +740,7 @@ namespace DeviceLibrary
                         CDevice.eventsList.Add(new CDevice.CEvent
                         {
                             reason = Reason.CASHOPENED,
-                            deviceId = "",
+                            nameOfHopper = "",
                             data = null
                         });
                     }
@@ -755,7 +762,7 @@ namespace DeviceLibrary
                 CDevice.CEvent evenement = new CDevice.CEvent
                 {
                     reason = Reason.CASHCLOSED,
-                    deviceId = "",
+                    nameOfHopper = "",
                     data = null
                 };
                 CDevice.eventsList.Add(evenement);
@@ -838,15 +845,18 @@ namespace DeviceLibrary
                     Thread.Sleep(1);
                 }
                 ReadParamHopper();
+                foreach(CHopper hopper in Hoppers)
+                {
+                    hopper.State = CHopper.Etat.STATE_CHECKLEVEL;
+                }
                 Hoppers.Sort((x, y) => y.CoinValue.CompareTo(x.CoinValue));
 
                 lock(CDevice.eventListLock)
                 {
-
                     CDevice.CEvent evenement = new CDevice.CEvent
                     {
                         reason = Reason.DLLLREADY,
-                        deviceId = "",
+                        nameOfHopper = "",
                         data = null
                     };
                     CDevice.eventsList.Insert(0, evenement);

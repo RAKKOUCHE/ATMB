@@ -56,6 +56,10 @@ namespace DeviceLibrary
         public class CSoftLevelData
         {
             /// <summary>
+            /// Nom du hopper
+            /// </summary>
+            public string nameOfHopper;
+            /// <summary>
             /// Indique si le hopper est critique.
             /// </summary>
             public bool isHCritical;
@@ -74,6 +78,10 @@ namespace DeviceLibrary
         /// </summary>
         public class CHardLevelData
         {
+            /// <summary>
+            /// Nom du hopper.
+            /// </summary>
+            public string nameOfHopper;
             /// <summary>
             /// Indique si le hopper est critique.
             /// </summary>
@@ -99,6 +107,11 @@ namespace DeviceLibrary
         private CHopperCoinId hopperCoinID;
 
         /// <summary>
+        /// Chaine d'identification du hopper.
+        /// </summary>
+        public string name;
+
+        /// <summary>
         /// Flag indiquant qu'un vidage est en cours.
         /// </summary>
         public bool isEmptyingInProgress;
@@ -117,11 +130,6 @@ namespace DeviceLibrary
             get => isInitialized;
             set => isInitialized = value;
         }
-
-        ///// <summary>
-        ///// Donnée d'un évenement hopper.
-        ///// </summary>
-        //private CEvent hopperEvent;
 
         /// <summary>
         /// Adresse de base des hoppers.
@@ -315,7 +323,7 @@ namespace DeviceLibrary
         {
             get
             {
-                TestHopper();
+                errorHopper.Code = TestHopper();
                 return isOptoPermanentlyBlocked;
             }
         }
@@ -782,8 +790,8 @@ namespace DeviceLibrary
         /// Lecture des registres du hopper.
         /// </summary>
         private HopperError TestHopper()
-        {
-            HopperError result = HopperError.NULL;
+        {            
+            HopperError result = HopperError.NON_IDENTIFIEE;
             try
             {
                 CDevicesManager.Log.Info("Lecture des registres et des erreurs du {0}", DeviceAddress);
@@ -869,7 +877,7 @@ namespace DeviceLibrary
                 CoinsToDistribute = 0;
 
                 memoryStorage = new CMemoryStorage(this);
-                errorHopper = new CHopperError(ToString());
+                errorHopper = new CHopperError();
                 CDevicesManager.Log.Info("Categorie d'équipement du {0} {1}", ToString(), EquipementCategory);
                 CDevicesManager.Log.Info(OptoStates != 0 ? "Au moins un optocoupleur est occupé" : "Les optocoupleur sont libres");
                 CDevicesManager.Log.Info("Le courant maximum autorisé pour le hopper {0} est de {1}", DeviceAddress, variables.CurrentLimit);
@@ -913,14 +921,18 @@ namespace DeviceLibrary
             }
         }
 
-
+        /// <summary>
+        /// Ajoute un évenement de niveau à liste des évenements. 
+        /// </summary>
+        /// <param name="reason">Raison de l'évenement.</param>
+        /// <param name="data">Donnée concernant l'évenement.</param>
         private void EventLevelHopper(Reason reason, object data)
         {
             lock(eventListLock)
             {
                 eventsList.Add(new CEvent
                 {
-                    deviceId = ToString(),
+                    nameOfHopper = name,
                     reason = reason,
                     data = data
                 });
@@ -940,16 +952,19 @@ namespace DeviceLibrary
                     {
                         CHardLevelData eventData = new CHardLevelData
                         {
+                            nameOfHopper = name,
                             isHCritical = IsCritical,
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.hardLevel = CLevel.HardLevel.OK
                         };
                         EventLevelHopper(Reason.HOPPERHWLEVELCHANGED, eventData);
                     }
+
                     if((deviceLevel.hardLevel != CLevel.HardLevel.VIDE) && IsLowLevelReached)
                     {
                         CHardLevelData eventData = new CHardLevelData
                         {
+                            nameOfHopper = name,
                             isHCritical = IsCritical,
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.hardLevel = CLevel.HardLevel.VIDE
@@ -960,6 +975,7 @@ namespace DeviceLibrary
                     {
                         CHardLevelData eventData = new CHardLevelData
                         {
+                            nameOfHopper = name,
                             isHCritical = IsCritical,
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.hardLevel = CLevel.HardLevel.PLEIN
@@ -971,6 +987,7 @@ namespace DeviceLibrary
                     {
                         CSoftLevelData eventData = new CSoftLevelData
                         {
+                            nameOfHopper = name,
                             isHCritical = IsCritical,
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.softLevel = CLevel.SoftLevel.OK
@@ -981,6 +998,7 @@ namespace DeviceLibrary
                     {
                         CSoftLevelData eventData = new CSoftLevelData
                         {
+                            nameOfHopper = name,
                             isHCritical = IsCritical,
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.softLevel = CLevel.SoftLevel.VIDE
@@ -992,6 +1010,7 @@ namespace DeviceLibrary
                     {
                         CSoftLevelData eventData = new CSoftLevelData
                         {
+                            nameOfHopper = name,
                             isHCritical = IsCritical,
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.softLevel = CLevel.SoftLevel.BAS
@@ -1003,6 +1022,7 @@ namespace DeviceLibrary
                     {
                         CSoftLevelData eventData = new CSoftLevelData
                         {
+                            nameOfHopper = name,
                             isHCritical = IsCritical,
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.softLevel = CLevel.SoftLevel.HAUT
@@ -1013,6 +1033,7 @@ namespace DeviceLibrary
                     {
                         CSoftLevelData eventData = new CSoftLevelData
                         {
+                            nameOfHopper = name,
                             isHCritical = IsCritical,
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.softLevel = CLevel.SoftLevel.PLEIN
@@ -1035,6 +1056,7 @@ namespace DeviceLibrary
             try
             {
                 isEmptyingInProgress = true;
+                emptyCount.nameOfHopper = name;
                 emptyCount.delta = CoinsInHopper;
                 emptyCount.amountDelta = AmountInHopper;
                 emptyCount.counter = 0;
@@ -1044,7 +1066,9 @@ namespace DeviceLibrary
                     CoinsToDistribute = 255;
                     State = Etat.STATE_DISPENSE;
                     while(State != Etat.STATE_IDLE)
-                        ;
+                    {
+                        Thread.Sleep(10);
+                    };
                     emptyCount.counter += dispenseStatus.CoinsPaid;
                     emptyCount.amountCounter = emptyCount.counter * CoinValue;
                     emptyCount.delta -= dispenseStatus.CoinsPaid;
@@ -1057,13 +1081,11 @@ namespace DeviceLibrary
                 {
                     eventsList.Add(new CEvent()
                     {
-
                         reason = Reason.HOPPEREMPTIED,
-                        deviceId = ToString(),
+                        nameOfHopper = name,
                         data = emptyCount,
                     });
                 }
-                Thread.Sleep(200);
             }
             catch(Exception E)
             {
@@ -1077,9 +1099,8 @@ namespace DeviceLibrary
         /// <returns>Chaine de caractères identifiant le hopper.</returns>
         public override string ToString()
         {
-            return $"Hopper {Number}";
+            return name;
         }
-
 
         /// <summary>
         /// Provoque la distribution par le hopper en utilisant la machine d'état
@@ -1093,6 +1114,7 @@ namespace DeviceLibrary
                 State = Etat.STATE_DISPENSE;
                 while(State != Etat.STATE_IDLE)
                     ;
+                Thread.Sleep(1);
             }
         }
 
@@ -1139,15 +1161,15 @@ namespace DeviceLibrary
         /// <summary>
         /// Création d'un evénement.
         /// </summary>
-        private void OnErrorHopper()
+        private void AddErrorHopperEvent()
         {
+            errorHopper.nameOfHopper = name;
             lock(eventListLock)
             {
                 eventsList.Add(new CEvent()
                 {
-
                     reason = Reason.HOPPERERROR,
-                    deviceId = ToString(),
+                    nameOfHopper = ToString(),
                     data = errorHopper,
                 });
             }
@@ -1176,11 +1198,11 @@ namespace DeviceLibrary
                             delaypollLevel = polllDelayLevel * 1000;
                             deviceLevel.ID = ToString();
                             isDispensed = false;
-                            if(isOnError = (errorHopper.Code = TestHopper()) != HopperError.NULL)
+                            if(isOnError = (errorHopper.Code = TestHopper()) != HopperError.NON_IDENTIFIEE)
                             {
-                                OnErrorHopper();
+                                AddErrorHopperEvent();
                             };
-                            state = ((CoinsToDistribute > 0) || ((CoinsToDistribute = dispenseStatus.CoinsRemaining) > 0)) ? Etat.STATE_DISPENSE : Etat.STATE_CHECKLEVEL;
+                            state = ((CoinsToDistribute > 0) || ((CoinsToDistribute = dispenseStatus.CoinsRemaining) > 0)) ? Etat.STATE_DISPENSE : Etat.STATE_IDLE;
                             break;
                         }
                         case Etat.STATE_DISPENSE:
@@ -1188,9 +1210,9 @@ namespace DeviceLibrary
                             if(CoinsToDistribute > 0)
                             {
                                 IsDispensed = false;
-                                if(isOnError = (errorHopper.Code = TestHopper()) != HopperError.NULL)
+                                if(isOnError = (errorHopper.Code = TestHopper()) != HopperError.NON_IDENTIFIEE)
                                 {
-                                    OnErrorHopper();
+                                    AddErrorHopperEvent();
                                 }
                                 dispenseStatus.dispensedResult.CoinToDispense = CoinsToDistribute;
                                 dispenseStatus.dispensedResult.AmountToDispense = (int)(CoinsToDistribute * CoinValue);
@@ -1216,22 +1238,22 @@ namespace DeviceLibrary
                         }
                         case Etat.STATE_ENDDISPENSE:
                         {
-                            if(isOnError = (errorHopper.Code = TestHopper()) != HopperError.NULL)
+                            if(isOnError = (errorHopper.Code = TestHopper()) != HopperError.NON_IDENTIFIEE)
                             {
-                                OnErrorHopper();
-                            }
-                            if(CoinsToDistribute != dispenseStatus.CoinsPaid)
-                            {
-                                //TODO indiquant l'erreur
+                                AddErrorHopperEvent();
                             }
                             if(!isEmptyingInProgress)
                             {
+                                if(CoinsToDistribute != dispenseStatus.CoinsPaid)
+                                {
+                                    //TODO indiquant l'erreur
+                                }
                                 lock(eventListLock)
                                 {
                                     CEvent hopperEvent = new CEvent()
                                     {
                                         reason = Reason.HOPPERDISPENSED,
-                                        deviceId = ToString(),
+                                        nameOfHopper = ToString(),
                                         data = dispenseStatus.dispensedResult,
                                     };
                                     eventsList.Add(hopperEvent);
@@ -1258,13 +1280,13 @@ namespace DeviceLibrary
                         {
                             if(!IsInitialized)
                             {
-                                isInitialized = false;
+                                isInitialized = true;
                                 evReady.Set();
                             }
 
                             if(isOnError && IsDeviceReseted())
                             {
-                                if(!(isOnError = TestHopper() != HopperError.NULL))
+                                if(!(isOnError = TestHopper() != HopperError.NON_IDENTIFIEE))
                                 {
                                     CoinsToDistribute = 0;
                                     isEmptyingInProgress = false;
@@ -1309,9 +1331,9 @@ namespace DeviceLibrary
         {
             CDevicesManager.Log.Info("Instanciation  du hopper {0}", hopperNumber);
             IsInitialized = false;
-            //evReady.Set();
             DeviceAddress = (DefaultDevicesAddress)(hopperNumber + AddressBaseHoper);
             Number = hopperNumber;
+
             if(!(IsPresent = SimplePoll))
             {
                 Thread.Sleep(100);

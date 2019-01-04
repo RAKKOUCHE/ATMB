@@ -428,7 +428,7 @@ namespace DeviceLibrary
                             eventsList.Add(new CEvent
                             {
                                 reason = Reason.COINVALIDATORERROR,
-                                deviceId = base.ProductCode,
+                                nameOfHopper = base.ProductCode,
                                 data = errorCV
                             });
                         }
@@ -443,14 +443,12 @@ namespace DeviceLibrary
 
                         lock(eventListLock)
                         {
-
-                            CEvent cvEvent = new CEvent
+                            eventsList.Add(new CEvent
                             {
                                 reason = Reason.MONEYINTRODUCTED,
-                                deviceId = name,
+                                nameOfHopper = name,
                                 data = denominationInserted
-                            };
-                            eventsList.Add(cvEvent);
+                            });
                         }
 
                         counters.totalAmountCashInCV += denominationInserted.ValeurCent;

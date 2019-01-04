@@ -20,9 +20,9 @@ namespace DeviceLibrary
         public enum HopperError : byte
         {
             /// <summary> 
-            /// Aucune erreur.
+            /// Aucune erreur ou erreur non identifiée.
             /// </summary>
-            NULL = 0,
+            NON_IDENTIFIEE = 0,
             /// <summary> 
             /// Moteur inversé suite à une surconsomation. Probablement du à un bourrage.
             /// </summary>
@@ -78,7 +78,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Numéro du hopper
             /// </summary>
-            public string nameHopper;
+            public string nameOfHopper;
             /// <summary>
             /// Code d'erreur du hopper
             /// </summary>
@@ -86,16 +86,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Indique si le hopper est nécessaire pour le fonctionnement du système.
             /// </summary>
-            public bool isHopperCritical;
-
-            /// <summary>
-            /// Constructeur de la class CHopperError.
-            /// </summary>
-            /// <param name="NameHopper">Identification du hopper.</param>
-            public CHopperError(string NameHopper)
-            {
-                nameHopper = NameHopper;
-            }
+            public bool isHopperCritical;         
         }
     }
 }

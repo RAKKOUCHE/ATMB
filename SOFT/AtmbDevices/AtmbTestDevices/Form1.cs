@@ -14,7 +14,6 @@ namespace AtmbTestDevices
         public FormMain()
         {
             InitializeComponent();
-
         }
 
         public Form2 form2;
@@ -29,6 +28,9 @@ namespace AtmbTestDevices
         /// </summary>
         private int ToPayByClient;
 
+        /// <summary>
+        /// Montant à distribuer par le BNR
+        /// </summary>
         private int ToDispenseBNR;
 
         /// <summary>
@@ -148,12 +150,14 @@ namespace AtmbTestDevices
                 }
                 case Reason.HOPPERERROR:
                 {
+                    CHopper.HopperError errorCode = (CHopper.HopperError)((CHopper.CHopperError)((CDevice.CEvent)e.donnee).data).Code;
+                    CHopper.CHopperError data = (CHopper.CHopperError)((CDevice.CEvent)e.donnee).data;
                     a = () =>
                     {
-                        tbInfo.AppendText($"Erreur {((CHopper.CHopperError)e.donnee).Code} sur le {((CHopper.CHopperError)e.donnee).nameHopper}\r\n");
-                        if(((CHopper.CHopperError)e.donnee).isHopperCritical)
+                        tbInfo.AppendText($"Erreur {errorCode} sur le {data.nameOfHopper}\r\n\r\n");
+                        if(data.isHopperCritical)
                         {
-                            MessageBox.Show(string.Format("Erreur {0} sur le {1}.\r\nCe hopper est nécessaire au fonctionnement de la borne.", ((CHopper.CHopperError)e.donnee).Code, ((CHopper.CHopperError)e.donnee).nameHopper));
+                            MessageBox.Show(string.Format("Erreur {0} sur le {1}.\r\n"," Ce hopper est nécessaire au fonctionnement de la borne.", data.nameOfHopper));
                         }
                     };
                     break;
@@ -165,12 +169,14 @@ namespace AtmbTestDevices
                     {
                         foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
                         {
-                            if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == ((CDevice.CEvent)e.donnee).deviceId))
+                            bool isPresenttoto = (bool)ligne.Cells["Present"].Value;
+                            string toto = ligne.Cells["Identifiant"].Value.ToString();
+                            if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == data.nameOfHopper))
                             {
                                 if((data.level == CDevice.CLevel.HardLevel.VIDE) || (data.level == CDevice.CLevel.HardLevel.PLEIN))
                                 {
                                     ligne.Cells["LevelHW"].Style.BackColor = Color.Red;
-                                    MessageBox.Show(string.Format("{0} critique", ((CDevice.CEvent)e.donnee).deviceId));
+                                    MessageBox.Show(string.Format("{0} critique", data.nameOfHopper));
                                 }
                                 else
                                 {
@@ -190,11 +196,11 @@ namespace AtmbTestDevices
                     {
                         foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
                         {
-                            if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == ((CDevice.CEvent)e.donnee).deviceId))
+                            if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == data.nameOfHopper))
                             {
                                 if(data.level == CDevice.CLevel.SoftLevel.VIDE)
                                 {
-                                    MessageBox.Show(string.Format("{0} critique", ((CDevice.CEvent)e.donnee).deviceId));
+                                    MessageBox.Show(string.Format("{0} critique", data.nameOfHopper));
                                 }
                                 switch(data.level)
                                 {
@@ -225,10 +231,10 @@ namespace AtmbTestDevices
                 }
                 case Reason.HOPPERDISPENSED:
                 {
-                    CHopper.CHopperStatus.CDispensedResult data = (CHopper.CHopperStatus.CDispensedResult)e.donnee;
+                    CHopper.CHopperStatus.CDispensedResult data = (CHopper.CHopperStatus.CDispensedResult)((CDevice.CEvent)e.donnee).data;
                     a = () =>
                     {
-                        tbInfo.AppendText($"Distribution hopper {data.HopperNumber}\r\n");
+                        tbInfo.AppendText($"Distribution {data.nameOfHopper}\r\n");
                         tbInfo.AppendText($"Nombre de pièces à distribuer {data.CoinToDispense}\r\n");
                         tbInfo.AppendText($"Montant à distribuer {(decimal)(data.AmountToDispense / 100):c2}\r\n");
                         tbInfo.AppendText($"Nombre de pièces distribuées : {data.CoinsPaid}\r\n");
@@ -241,13 +247,14 @@ namespace AtmbTestDevices
                 }
                 case Reason.HOPPEREMPTIED:
                 {
+                    CHopper.CEmptyCount data = (CHopper.CEmptyCount)((CDevice.CEvent)e.donnee).data;
                     a = () =>
                     {
-                        tbInfo.AppendText($"Vidage hopper {((CHopper)e.donnee).Number}\r\n");
-                        tbInfo.AppendText($"Nombre de pièces {((CHopper)e.donnee).emptyCount.counter}\r\n");
-                        tbInfo.AppendText($"Montant {(decimal)((CHopper)e.donnee).emptyCount.amountCounter / 100:c2}\r\n");
-                        tbInfo.AppendText($"Différence en pièces {((CHopper)e.donnee).emptyCount.delta}\r\n");
-                        tbInfo.AppendText($"Différence montant {(decimal)((CHopper)e.donnee).emptyCount.amountDelta / 100:c2}\r\n\r\n");
+                        tbInfo.AppendText($"Vidage {data.nameOfHopper}\r\n");
+                        tbInfo.AppendText($"Nombre de pièces {data.counter}\r\n");
+                        tbInfo.AppendText($"Montant {(decimal)data.amountCounter / 100:c2}\r\n");
+                        tbInfo.AppendText($"Différence en pièces {data.delta}\r\n");
+                        tbInfo.AppendText($"Différence montant {(decimal)data.amountDelta / 100:c2}\r\n\r\n");
                         ButtonCounters_Click(sender, e);
                     };
                     break;
@@ -264,11 +271,11 @@ namespace AtmbTestDevices
                               {
                                   if(hopper.IsPresent)
                                   {
-                                      dataGridViewHopper.Rows.Add(string.Format("Hopper {0}", hopper.Number), (decimal)hopper.CoinValue / 100, hopper.IsPresent, 0, 0, "", "", false, hopper.DefaultFilling, false);
+                                      dataGridViewHopper.Rows.Add(string.Format("{0}", hopper.name), (decimal)hopper.CoinValue / 100, hopper.IsPresent, 0, 0, "", "", false, hopper.DefaultFilling, false);
                                   }
                                   else
                                   {
-                                      dataGridViewHopper.Rows.Add(string.Format("Hopper {0}", hopper.Number), string.Empty, hopper.IsPresent);
+                                      dataGridViewHopper.Rows.Add(string.Format("{0}", hopper.name), string.Empty, hopper.IsPresent);
                                   }
                                   dataGridViewHopper.Rows[byIndex].DefaultCellStyle.BackColor = hopper.IsPresent ? Color.LimeGreen : Color.Red;
                                   dataGridViewHopper["ToDispense", byIndex].Style.BackColor = Color.White;
@@ -289,7 +296,7 @@ namespace AtmbTestDevices
                     a = () =>
                       {
                           MessageBox.Show(((CerrorBNR)((CDevice.CEvent)e.donnee).data).nameModule.ToString() + "\r\n" +
-                          ((CerrorBNR)((CDevice.CEvent)e.donnee).data).error.ToString(), ((CDevice.CEvent)e.donnee).deviceId.ToString());
+                          ((CerrorBNR)((CDevice.CEvent)e.donnee).data).error.ToString(), ((CDevice.CEvent)e.donnee).nameOfHopper.ToString());
                       };
                     break;
                 }
@@ -390,7 +397,7 @@ namespace AtmbTestDevices
                 {
                     foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
                     {
-                        if(hopper.ToString() == ligne.Cells["Identifiant"].Value.ToString())
+                        if(hopper.name == ligne.Cells["Identifiant"].Value.ToString())
                         {
                             if(Convert.ToByte(ligne.Cells["ToDispense"].Value) > 0)
                             {
@@ -506,7 +513,6 @@ namespace AtmbTestDevices
             deviceManage = new CDevicesManager();
             deviceManage.CallAlert += new CDevicesManager.AlertEventHandler(MsgFromdll);
             isMontantPercuReset = false;
-
         }
     }
 }

@@ -403,8 +403,7 @@ namespace DeviceLibrary
         /// </summary>
         private static void HardwareError()
         {
-            BNREvent.reason = Reason.BNRERREUR;
-            BNREvent.deviceId = bnr.SystemConfiguration.BnrType.ToString();
+
             foreach (Module m in bnr.Modules)
             {
                 if (m.Status.OperationalStatus != OperationalStatus.Operational)
@@ -438,12 +437,16 @@ namespace DeviceLibrary
                     break;
                 }
             }
-            BNREvent.data = errorInfo;
-            isPresent = false;
-            lock (eventListLock)
+            lock(eventListLock)
             {
-                eventsList.Add(BNREvent);
+                eventsList.Add(new CEvent
+                {
+                    reason = Reason.BNRERREUR,
+                    nameOfHopper = bnr.SystemConfiguration.BnrType.ToString(),
+                    data = errorInfo
+                });
             }
+            isPresent = false;
         }
 
         /// <summary>
@@ -508,14 +511,16 @@ namespace DeviceLibrary
                             {                                
                                 isPresent = false;
                                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                                BNREvent.reason = Reason.BNRERREUR;
-                                BNREvent.deviceId = "BNR";
                                 errorInfo.error = ERROR_BNR.DLL_NOT_FREE;
                                 errorInfo.nameModule = string.Empty;
-                                BNREvent.data = errorInfo;
                                 lock(eventListLock)
                                 {
-                                    eventsList.Add(BNREvent);
+                                    eventsList.Add(new CEvent
+                                    {
+                                        reason = Reason.BNRERREUR,
+                                        nameOfHopper = "BNR",
+                                        data = errorInfo
+                                    });
                                 }
                                 evReady.Set();
                                 State = Etat.STATE_STOP;
