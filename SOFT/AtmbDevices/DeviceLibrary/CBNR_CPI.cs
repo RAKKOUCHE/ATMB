@@ -2,16 +2,16 @@
 /// \brief Fichier contenant la classe CBNR_CPI
 /// \date 28 11 2018
 /// \version 1.0.0
-/// \author Rachid AKKOUCHE 
+/// \author Rachid AKKOUCHE
 
 using Mei.Bnr;
 using Mei.Bnr.Module;
+
 using System;
 using System.Threading;
 
 namespace DeviceLibrary
 {
-
     /// <summary>
     /// Enumération des erreurs du BNR.
     /// </summary>
@@ -21,18 +21,22 @@ namespace DeviceLibrary
         /// Billet bloqué dans le BNR.
         /// </summary>
         BOURRAGE,
+
         /// <summary>
         /// Le bnr est ouvert ou déverrouillé.
         /// </summary>
         BNR_OPEN,
+
         /// <summary>
         /// Indique une erreurs sur le paramètrage d'un billet.
         /// </summary>
         TYPE_BILLET_ERREUR,
+
         /// <summary>
         /// Erreur de stockage des billets.
         /// </summary>
         STOCKAGE_ERREUR,
+
         /// <summary>
         /// Les dlls sont occupées.
         /// </summary>
@@ -48,6 +52,7 @@ namespace DeviceLibrary
         /// Nom du module.
         /// </summary>
         public string nameModule;
+
         /// <summary>
         /// Code de l'error.
         /// </summary>
@@ -65,27 +70,14 @@ namespace DeviceLibrary
         public static Bnr bnr;
 
         /// <summary>
-        /// Contient les informations concernant un évenement du BNR
-        /// </summary>
-        private static CEvent BNREvent;
-
-        /// <summary>
         /// Code produit du périphérique.
         /// </summary>
         public override string ProductCode
         {
             get
             {
-                string result = "";
-                try
-                {
 
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-                return result;
+                return bnr.SystemConfiguration.BnrType.ToString();
             }
         }
 
@@ -96,24 +88,17 @@ namespace DeviceLibrary
         {
             get
             {
-                string result = "";
-                try
-                {
-
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-                return result;
+                return "CPI";
             }
         }
 
 #pragma warning disable CS0169 // The field 'CBNR_CPI.cashOrder' is never used
+
         /// <summary>
         /// Instance de la classe contenant les informations sur le billet en traitenent.
         /// </summary>
         private static XfsCashOrder cashOrder;
+
 #pragma warning restore CS0169 // The field 'CBNR_CPI.cashOrder' is never used
 
         /// <summary>
@@ -127,10 +112,15 @@ namespace DeviceLibrary
         private const int BnrDefaultOperationTimeOutInMS = 10000;
 
         private static Etat state;
+
         /// <summary>
         /// Etat de la machine d'état du BNR.
         /// </summary>
-        private static Etat State { get => state; set => state = value; }
+        private static Etat State
+        {
+            get => state;
+            set => state = value;
+        }
 
         /// <summary>
         /// Thread utilisé pour le BNR
@@ -143,16 +133,12 @@ namespace DeviceLibrary
         private static AutoResetEvent ev;
 
         /// <summary>
-        /// Indique si un bnr est connecté.
-        /// </summary>
-        public static bool isPresent;
-
-        /// <summary>
         /// Instance de la class CerrorBNR.
         /// </summary>
         private static CerrorBNR errorInfo;
 
         private bool isBNRToBeDeactivated;
+
         /// <summary>
         /// Indique si le monnayeur doit être adtivé.
         /// </summary>
@@ -182,6 +168,19 @@ namespace DeviceLibrary
             denominationInserted.CVChannel = 0;
             denominationInserted.CVPath = 0;
             denominationInserted.TotalAmount += cashInOrder.Denomination.Amount;
+           
+            lock(eventListLock)
+            {
+                eventsList.Add(new CEvent
+                {
+                    reason = Reason.MONEYINTRODUCTED,
+                    nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
+                    data = denominationInserted,
+                });
+            }
+            CDevicesManager.Log.Debug("Un billet de {0:C2} a été reconnue", (decimal)cashInOrder.Denomination.Amount / 100);
+
+
         }
 
         /// <summary>
@@ -193,64 +192,92 @@ namespace DeviceLibrary
         /// <param name="Data"></param>
         private static void IntermediateOccured(int identificationId, OperationId operationId, IntermediateEvents result, object Data)
         {
-            switch (operationId)
+            switch(operationId)
             {
                 case OperationId.BnrAutomaticBillTransfer:
                     break;
+
                 case OperationId.BnrEject:
                     break;
+
                 case OperationId.BnrConfigureCashUnit:
                     break;
+
                 case OperationId.BnrPark:
                     break;
+
                 case OperationId.BnrModulePark:
                     break;
+
                 case OperationId.BnrSelfTest:
                     break;
+
                 case OperationId.BnrCalibrateWithCoupon:
                     break;
+
                 case OperationId.BnrDeleteDenomination:
                     break;
+
                 case OperationId.BnrAddDenomination:
                     break;
+
                 case OperationId.BnrModuleUpdateFirmware:
                     break;
+
                 case OperationId.BnrNoOperation:
                     break;
+
                 case OperationId.Retract:
                     break;
+
                 case OperationId.Reject:
                     break;
+
                 case OperationId.Present:
                     break;
+
                 case OperationId.Empty:
                     break;
+
                 case OperationId.CashInRollBack:
                     break;
+
                 case OperationId.CashInEnd:
                     break;
+
                 case OperationId.CashIn:
                     break;
+
                 case OperationId.CashInStart:
                     break;
+
                 case OperationId.UpdateDenomination:
                     break;
+
                 case OperationId.QueryDenomination:
                     break;
+
                 case OperationId.SetDateTime:
                     break;
+
                 case OperationId.GetDateTime:
                     break;
+
                 case OperationId.UpdateCashUnit:
                     break;
+
                 case OperationId.QueryCashUnit:
                     break;
+
                 case OperationId.Dispense:
                     break;
+
                 case OperationId.Denominate:
                     break;
+
                 case OperationId.Reset:
                     break;
+
                 default:
                     break;
             }
@@ -265,21 +292,25 @@ namespace DeviceLibrary
         /// <param name="Data"></param>
         private static void StatusOccured(StatusChanged status, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)
         {
-            switch (status)
+            switch(status)
             {
                 case StatusChanged.MaintenanceStatusChanged:
                     break;
+
                 case StatusChanged.CashAvailable:
                     break;
+
                 case StatusChanged.CashTaken:
                     break;
+
                 case StatusChanged.TransportChanged:
                     break;
+
                 case StatusChanged.DeviceStatusChanged:
                 {
-                    if (Data != null)
+                    if(Data != null)
                     {
-                        switch ((DeviceStatus)Data)
+                        switch((DeviceStatus)Data)
                         {
                             case DeviceStatus.OffLine:
                             {
@@ -306,10 +337,13 @@ namespace DeviceLibrary
                 }
                 case StatusChanged.CashUnitThreshold:
                     break;
+
                 case StatusChanged.CashUnitConfigurationChanged:
                     break;
+
                 case StatusChanged.CashUnitChanged:
                     break;
+
                 default:
                     break;
             }
@@ -325,66 +359,93 @@ namespace DeviceLibrary
         /// <param name="Data"></param>
         private static void Bnr_OperationCompletedEvent(int identificationId, OperationId operationId, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)
         {
-            switch (operationId)
+            switch(operationId)
             {
                 case OperationId.BnrAutomaticBillTransfer:
                     break;
+
                 case OperationId.BnrEject:
                     break;
+
                 case OperationId.BnrConfigureCashUnit:
                     break;
+
                 case OperationId.BnrPark:
                     break;
+
                 case OperationId.BnrModulePark:
                     break;
+
                 case OperationId.BnrSelfTest:
                     break;
+
                 case OperationId.BnrCalibrateWithCoupon:
                     break;
+
                 case OperationId.BnrDeleteDenomination:
                     break;
+
                 case OperationId.BnrAddDenomination:
                     break;
+
                 case OperationId.BnrModuleUpdateFirmware:
                     break;
+
                 case OperationId.BnrNoOperation:
                     break;
+
                 case OperationId.Retract:
                     break;
+
                 case OperationId.Reject:
                     break;
+
                 case OperationId.Present:
                     break;
+
                 case OperationId.Empty:
                     break;
+
                 case OperationId.CashInRollBack:
                     break;
+
                 case OperationId.CashInEnd:
                     break;
+
                 case OperationId.CashIn:
                     break;
+
                 case OperationId.CashInStart:
 
                     break;
+
                 case OperationId.UpdateDenomination:
                     break;
+
                 case OperationId.QueryDenomination:
                     break;
+
                 case OperationId.SetDateTime:
                     break;
+
                 case OperationId.GetDateTime:
                     break;
+
                 case OperationId.UpdateCashUnit:
                     break;
+
                 case OperationId.QueryCashUnit:
                     break;
+
                 case OperationId.Dispense:
                     break;
+
                 case OperationId.Denominate:
                     break;
+
                 case OperationId.Reset:
                 {
-                    if (result != BnrXfsErrorCode.Success)
+                    if(result != BnrXfsErrorCode.Success)
                     {
                         HardwareError();
                     }
@@ -403,31 +464,30 @@ namespace DeviceLibrary
         /// </summary>
         private static void HardwareError()
         {
-
-            foreach (Module m in bnr.Modules)
+            foreach(Module m in bnr.Modules)
             {
-                if (m.Status.OperationalStatus != OperationalStatus.Operational)
+                if(m.Status.OperationalStatus != OperationalStatus.Operational)
                 {
                     errorInfo.nameModule = m.ToString();
-                    if (bnr.SystemStatusOverview.SystemStatus.BillTransportStatus != Mei.Bnr.BillTransportStatus.Ok)
+                    if(bnr.SystemStatusOverview.SystemStatus.BillTransportStatus != Mei.Bnr.BillTransportStatus.Ok)
                     {
                         errorInfo.error = ERROR_BNR.BOURRAGE;
                     }
                     else
                     {
-                        if (bnr.SystemStatusOverview.SystemStatus.ErrorCode != SystemErrorCode.NoError)
+                        if(bnr.SystemStatusOverview.SystemStatus.ErrorCode != SystemErrorCode.NoError)
                         {
                             errorInfo.error = ERROR_BNR.BNR_OPEN;
                         }
                         else
                         {
-                            if (bnr.SystemStatusOverview.SystemStatus.CashTypeStatus != Mei.Bnr.CashTypeStatus.Ok)
+                            if(bnr.SystemStatusOverview.SystemStatus.CashTypeStatus != Mei.Bnr.CashTypeStatus.Ok)
                             {
                                 errorInfo.error = ERROR_BNR.TYPE_BILLET_ERREUR;
                             }
                             else
                             {
-                                if (bnr.SystemStatusOverview.SystemStatus.SystemBillStorageStatus != SystemBillStorageStatus.Ok)
+                                if(bnr.SystemStatusOverview.SystemStatus.SystemBillStorageStatus != SystemBillStorageStatus.Ok)
                                 {
                                     errorInfo.error = ERROR_BNR.STOCKAGE_ERREUR;
                                 }
@@ -442,11 +502,10 @@ namespace DeviceLibrary
                 eventsList.Add(new CEvent
                 {
                     reason = Reason.BNRERREUR,
-                    nameOfHopper = bnr.SystemConfiguration.BnrType.ToString(),
+                    nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
                     data = errorInfo
                 });
             }
-            isPresent = false;
         }
 
         /// <summary>
@@ -463,7 +522,7 @@ namespace DeviceLibrary
                 IsBNRToBeActivated = false;
                 errorInfo = new CerrorBNR();
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -474,11 +533,11 @@ namespace DeviceLibrary
         /// </summary>
         public override void Task()
         {
-            while (true)
+            while(true)
             {
                 try
                 {
-                    switch (State)
+                    switch(State)
                     {
                         case Etat.STATE_INIT:
                         {
@@ -493,7 +552,7 @@ namespace DeviceLibrary
                             {
                                 bnr.Open();
                                 bnr.Cancel();
-                                if (bnr.TransactionStatus.CurrentTransaction == TransactionType.Cashin)
+                                if(bnr.TransactionStatus.CurrentTransaction == TransactionType.Cashin)
                                 {
                                     ev.Reset();
                                     bnr.CashInEnd();
@@ -507,9 +566,9 @@ namespace DeviceLibrary
                                 }
                                 State = Etat.STATE_RESET;
                             }
-                            catch (Exception E)
-                            {                                
-                                isPresent = false;
+                            catch(Exception E)
+                            {
+                                IsPresent = false;
                                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                                 errorInfo.error = ERROR_BNR.DLL_NOT_FREE;
                                 errorInfo.nameModule = string.Empty;
@@ -518,7 +577,7 @@ namespace DeviceLibrary
                                     eventsList.Add(new CEvent
                                     {
                                         reason = Reason.BNRERREUR,
-                                        nameOfHopper = "BNR",
+                                        nameOfDevice = "BNR",
                                         data = errorInfo
                                     });
                                 }
@@ -531,19 +590,19 @@ namespace DeviceLibrary
                         {
                             try
                             {
-                                if (bnr.Status.DeviceStatus != DeviceStatus.OnLine)
+                                if(bnr.Status.DeviceStatus != DeviceStatus.OnLine)
                                 {
                                     ev.Reset();
                                     bnr.Reset();
-                                    if (!ev.WaitOne(BnrResetTimeOutInMS))
+                                    if(!ev.WaitOne(BnrResetTimeOutInMS))
                                     {
                                         throw new Exception("Le reset du BNR a échoué!");
                                     }
                                 }
-                                isPresent = true;
+                                IsPresent = true;
                                 State = Etat.STATE_SETDATETIME;
                             }
-                            catch (Exception E)
+                            catch(Exception E)
                             {
                                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                                 Thread.Sleep(BnrResetTimeOutInMS * 2);
@@ -560,7 +619,7 @@ namespace DeviceLibrary
                         }
                         case Etat.STATE_GETMODULE:
                         {
-                            foreach (Module m in bnr.Modules)
+                            foreach(Module m in bnr.Modules)
                             {
                                 CDevicesManager.Log.Info(m.ToString() + " : " + m.Status.OperationalStatus);
                             }
@@ -569,23 +628,22 @@ namespace DeviceLibrary
                         }
                         case Etat.STATE_GETSTATUS:
                         {
-
                             CDevicesManager.Log.Debug(bnr.Status.PositionStatusList[0].ShutterStatus.ToString());
                             CDevicesManager.Log.Debug(bnr.Status.PositionStatusList[1].ShutterStatus.ToString());
                             CDevicesManager.Log.Debug(bnr.Status.ToString);
                             State = Etat.STATE_IDLE;
-                            evReady.Set();                            
+                            evReady.Set();
                             break;
                         }
 
                         case Etat.STATE_IDLE:
                         {
-                            if (IsBNRToBeActivated)
+                            if(IsBNRToBeActivated)
                             {
                                 IsBNRToBeActivated = false;
                                 State = Etat.STATE_ENABLE;
                             }
-                            if (IsBNRToBeDeactivated)
+                            if(IsBNRToBeDeactivated)
                             {
                                 IsBNRToBeDeactivated = false;
                                 State = Etat.STATE_DISABLE;
@@ -606,21 +664,21 @@ namespace DeviceLibrary
                                 {
                                     bnr.CashInStart();
                                 }
-                                catch (Exception E)
+                                catch(Exception E)
                                 {
                                     CDevicesManager.Log.Error(E.Message);
                                 }
-                                if (!ev.WaitOne(BnrDefaultOperationTimeOutInMS))
+                                if(!ev.WaitOne(BnrDefaultOperationTimeOutInMS))
                                 {
                                     throw new Exception("L'opération CashinStart a échouée.");
                                 }
                                 CDevicesManager.Log.Debug("cASHIN");
-                                if (bnr.CashIn(20000000) <= 0)
+                                if(bnr.CashIn(20000000) <= 0)
                                 {
                                     throw new Exception("L'opération cashIn a échouée.");
                                 }
                             }
-                            catch (Exception E)
+                            catch(Exception E)
                             {
                                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                             }
@@ -637,12 +695,12 @@ namespace DeviceLibrary
                                 ev.Reset();
                                 bnr.CashInEnd();
                                 CDevicesManager.Log.Debug("Cashinend.");
-                                if (!ev.WaitOne(BnrDefaultOperationTimeOutInMS))
+                                if(!ev.WaitOne(BnrDefaultOperationTimeOutInMS))
                                 {
                                     throw new Exception();
                                 }
                             }
-                            catch (Exception E)
+                            catch(Exception E)
                             {
                                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                             }
@@ -656,7 +714,7 @@ namespace DeviceLibrary
                     }
                     Thread.Sleep(100);
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -670,19 +728,18 @@ namespace DeviceLibrary
         {
             try
             {
-                isPresent = false;
-                evReady = new AutoResetEvent(false);
+                IsPresent = false;
                 bnr = new Bnr();
                 State = Etat.STATE_INIT;
                 ev = new AutoResetEvent(true);
-                BNREvent = new CEvent();
                 bnrTask = new Thread(Task);
                 bnrTask.Start();
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
+            evReady.WaitOne(90000);
         }
     }
 }

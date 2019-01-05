@@ -17,18 +17,22 @@ namespace DeviceLibrary
             /// Nom du hopper.
             /// </summary>
             public string nameOfHopper;
+
             /// <summary>
             /// Nombre de pièces comptées durant le vidage
             /// </summary>
             public long counter;
+
             /// <summary>
             /// Montant distribué pendant le vidage.
             /// </summary>
             public long amountCounter;
+
             /// <summary>
             /// Différence entre le nombre de pièces dans les compteurs et le nombre de pièces distribuées pendant le vidage.
             /// </summary>
             public long delta;
+
             /// <summary>
             /// Différence entre le montant distribué et le montant dans les compteurs.
             /// </summary>
@@ -36,4 +40,3 @@ namespace DeviceLibrary
         }
     }
 }
-

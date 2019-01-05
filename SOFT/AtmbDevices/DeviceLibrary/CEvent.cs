@@ -4,7 +4,6 @@
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
-
 namespace DeviceLibrary
 {
     public abstract partial class CDevice
@@ -18,10 +17,12 @@ namespace DeviceLibrary
             /// Raison de l'évenement.
             /// </summary>
             public Reason reason;
+
             /// <summary>
             /// Nom du périphérique
             /// </summary>
-            public string nameOfHopper;
+            public string nameOfDevice;
+
             /// <summary>
             /// donnée concernant l'évenenement.
             /// </summary>

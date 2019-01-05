@@ -8,7 +8,6 @@ using System;
 
 namespace DeviceLibrary
 {
-
     public partial class CCoinValidator : CcashReader
     {
         /// <summary>
@@ -22,6 +21,7 @@ namespace DeviceLibrary
             private readonly CCoinValidator owner;
 
             private byte eventCounter;
+
             /// <summary>
             /// Compteur d'évenements crédits ou erreurs
             /// </summary>
@@ -32,6 +32,7 @@ namespace DeviceLibrary
             }
 
             private byte[,] result;
+
             /// <summary>
             /// Buffer contenant les informations sur les évenements.
             /// </summary>
@@ -61,7 +62,7 @@ namespace DeviceLibrary
                 {
                     CDevicesManager.Log.Info("Lecture du buffer de credit ou des code d'erreur {0}", owner.DeviceAddress);
                     byte[] bufferIn = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-                    if (owner.IsCmdccTalkSended(owner.DeviceAddress , Header.READBUFFERCREDIT, 0, null, bufferIn))
+                    if(owner.IsCmdccTalkSended(owner.DeviceAddress, Header.READBUFFERCREDIT, 0, null, bufferIn))
                     {
                         EventCounter = bufferIn[0];
                         Buffer.BlockCopy(bufferIn, 1, Result, 0, 10);
@@ -72,11 +73,11 @@ namespace DeviceLibrary
                         throw new Exception("Impossible de lire le buffer des crédits ou des codes erreurs.");
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
-            }        
+            }
         }
     }
 }

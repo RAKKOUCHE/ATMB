@@ -29,35 +29,43 @@ namespace DeviceLibrary
                 /// Numéro du hopper.
                 /// </summary>
                 public string nameOfHopper;
+
                 /// <summary>
                 /// Nombre de pièce restant à payer.
                 /// </summary>
                 ///<remarks>Passe à zéro à la fin de la distribtion quelque soit la raison.</remarks>
                 public byte CoinsRemaining;
+
                 /// <summary>
                 /// Nombre de pièces distribuées.
                 /// </summary>
                 public byte CoinsPaid;
+
                 /// <summary>
                 /// Nombre de pièces non distribuées
                 /// </summary>
                 public byte CoinsUnpaid;
+
                 /// <summary>
                 /// Montant distribué
                 /// </summary>
                 public int MontantPaid;
+
                 /// <summary>
                 /// Montant non distribué
-                /// </summary>               
+                /// </summary>
                 public int MontantUnpaid;
+
                 /// <summary>
                 /// Nombre de pièces devant être distribuées
                 /// </summary>
                 public byte CoinToDispense;
+
                 /// <summary>
-                /// Montant 
+                /// Montant
                 /// </summary>
                 public int AmountToDispense;
+
                 /// <summary>
                 /// Constructeur
                 /// </summary>
@@ -65,6 +73,7 @@ namespace DeviceLibrary
             }
 
             private byte eventCounter;
+
             /// <summary>
             /// Nombre de distribution effectuée.
             /// </summary>
@@ -80,6 +89,7 @@ namespace DeviceLibrary
             }
 
             private byte coinsRemaining;
+
             /// <summary>
             /// Nombre de pièces restant à distribuer dans l'opération en cours.
             /// </summary>
@@ -95,6 +105,7 @@ namespace DeviceLibrary
             }
 
             private byte coinsPaid;
+
             /// <summary>
             /// Nombre de pièces distribuées dans l'opération en cours.
             /// </summary>
@@ -110,6 +121,7 @@ namespace DeviceLibrary
             }
 
             private byte coinsUnpaid;
+
             /// <summary>
             /// Nombre de pièces distribuées dans l'opération en cours.
             /// </summary>
@@ -138,7 +150,7 @@ namespace DeviceLibrary
                 {
                     CDevicesManager.Log.Info("Lecture des status du {0}", Owner.DeviceAddress);
                     byte[] bufferIn = { 0, 0, 0, 0 };
-                    if (Owner.IsCmdccTalkSended(Owner.DeviceAddress, Header.REQUESTHOPPERSTATUS, 0, null, bufferIn))
+                    if(Owner.IsCmdccTalkSended(Owner.DeviceAddress, Header.REQUESTHOPPERSTATUS, 0, null, bufferIn))
                     {
                         EventCounter = bufferIn[0];
                         dispensedResult.CoinsRemaining = coinsRemaining = bufferIn[1];
@@ -148,7 +160,7 @@ namespace DeviceLibrary
                         dispensedResult.MontantUnpaid = (int)(coinsUnpaid * Owner.CoinValue);
                     }
                 }
-                catch (Exception E)
+                catch(Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -166,8 +178,6 @@ namespace DeviceLibrary
                     nameOfHopper = Owner.name
                 };
             }
-
         }
     }
 }
-

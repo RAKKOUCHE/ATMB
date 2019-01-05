@@ -1,8 +1,8 @@
-﻿using System;
+﻿using DeviceLibrary;
+
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using DeviceLibrary;
-using System.Threading;
 
 namespace AtmbTestDevices
 {
@@ -24,7 +24,7 @@ namespace AtmbTestDevices
         private CDevicesManager deviceManage;
 
         /// <summary>
-        /// Montant à payer 
+        /// Montant à payer
         /// </summary>
         private int ToPayByClient;
 
@@ -73,7 +73,7 @@ namespace AtmbTestDevices
         }
 
         /// <summary>
-        /// 
+        /// Vide le champ de saisie.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -94,9 +94,9 @@ namespace AtmbTestDevices
             {
                 case Reason.MONEYINTRODUCTED:
                 {
-                    CDevice.CInserted data = (CDevice.CInserted)((CDevice.CEvent)e.donnee).data;
                     a = () =>
                     {
+                        CDevice.CInserted data = (CDevice.CInserted)((CDevice.CEvent)e.donnee).data;
                         int remaining = ToPayByClient - data.TotalAmount;
                         tbInfo.AppendText($"Espèces introduites : Canal {data.CVChannel} trieur {data.CVPath} valeur  {(decimal)data.ValeurCent / 100:c2}\r\n\r\n");
                         tbReceived.Text = $"{(decimal)data.TotalAmount / 100:c2}";
@@ -112,7 +112,7 @@ namespace AtmbTestDevices
                         }
                         else
                         {
-                            tbRemaining.Text = $"{((decimal)remaining) / 100:c2}";
+                            tbRemaining.Text = $"{(decimal)remaining / 100:c2}";
                         }
                         ButtonCounters_Click(sender, e);
                     };
@@ -120,9 +120,9 @@ namespace AtmbTestDevices
                 }
                 case Reason.COINVALIDATORERROR:
                 {
-                    CCoinValidator.CErroCV data = (CCoinValidator.CErroCV)((CDevice.CEvent)e.donnee).data;
                     a = () =>
                     {
+                        CCoinValidator.CErroCV data = (CCoinValidator.CErroCV)((CDevice.CEvent)e.donnee).data;
                         tbInfo.AppendText($"Erreur coin validator - code : {data.code} raison : {data.errorText}\r\n\r\n");
                         ButtonCounters_Click(sender, e);
                     };
@@ -150,27 +150,24 @@ namespace AtmbTestDevices
                 }
                 case Reason.HOPPERERROR:
                 {
-                    CHopper.HopperError errorCode = (CHopper.HopperError)((CHopper.CHopperError)((CDevice.CEvent)e.donnee).data).Code;
-                    CHopper.CHopperError data = (CHopper.CHopperError)((CDevice.CEvent)e.donnee).data;
                     a = () =>
                     {
-                        tbInfo.AppendText($"Erreur {errorCode} sur le {data.nameOfHopper}\r\n\r\n");
+                        CHopper.CHopperError data = (CHopper.CHopperError)((CDevice.CEvent)e.donnee).data;
+                        tbInfo.AppendText($"Erreur {data.Code} sur le {data.nameOfHopper}\r\n\r\n");
                         if(data.isHopperCritical)
                         {
-                            MessageBox.Show(string.Format("Erreur {0} sur le {1}.\r\n"," Ce hopper est nécessaire au fonctionnement de la borne.", data.nameOfHopper));
+                            MessageBox.Show(string.Format("Erreur {0} sur le {1}.\r\n", " Ce hopper est nécessaire au fonctionnement de la borne.", data.nameOfHopper));
                         }
                     };
                     break;
                 }
                 case Reason.HOPPERHWLEVELCHANGED:
                 {
-                    CHopper.CHardLevelData data =  (CHopper.CHardLevelData)((CDevice.CEvent)e.donnee).data;
                     a = () =>
                     {
+                        CHopper.CHardLevelData data = (CHopper.CHardLevelData)((CDevice.CEvent)e.donnee).data;
                         foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
                         {
-                            bool isPresenttoto = (bool)ligne.Cells["Present"].Value;
-                            string toto = ligne.Cells["Identifiant"].Value.ToString();
                             if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == data.nameOfHopper))
                             {
                                 if((data.level == CDevice.CLevel.HardLevel.VIDE) || (data.level == CDevice.CLevel.HardLevel.PLEIN))
@@ -191,9 +188,9 @@ namespace AtmbTestDevices
                 }
                 case Reason.HOPPERSWLEVELCHANGED:
                 {
-                    CHopper.CSoftLevelData data = (CHopper.CSoftLevelData)((CDevice.CEvent)e.donnee).data;
                     a = () =>
                     {
+                        CHopper.CSoftLevelData data = (CHopper.CSoftLevelData)((CDevice.CEvent)e.donnee).data;
                         foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
                         {
                             if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == data.nameOfHopper))
@@ -231,25 +228,25 @@ namespace AtmbTestDevices
                 }
                 case Reason.HOPPERDISPENSED:
                 {
-                    CHopper.CHopperStatus.CDispensedResult data = (CHopper.CHopperStatus.CDispensedResult)((CDevice.CEvent)e.donnee).data;
                     a = () =>
                     {
+                        CHopper.CHopperStatus.CDispensedResult data = (CHopper.CHopperStatus.CDispensedResult)((CDevice.CEvent)e.donnee).data;
                         tbInfo.AppendText($"Distribution {data.nameOfHopper}\r\n");
                         tbInfo.AppendText($"Nombre de pièces à distribuer {data.CoinToDispense}\r\n");
-                        tbInfo.AppendText($"Montant à distribuer {(decimal)(data.AmountToDispense / 100):c2}\r\n");
+                        tbInfo.AppendText($"Montant à distribuer {(decimal)data.AmountToDispense / 100:c2}\r\n");
                         tbInfo.AppendText($"Nombre de pièces distribuées : {data.CoinsPaid}\r\n");
-                        tbInfo.AppendText($"Montant distribué : {(decimal)(data.MontantPaid / 100):c2}\r\n");
+                        tbInfo.AppendText($"Montant distribué : {(decimal)data.MontantPaid / 100:c2}\r\n");
                         tbInfo.AppendText($"Nombre de pièces non distribuées : {data.CoinsUnpaid}\r\n");
-                        tbInfo.AppendText($"Montant non distribué : {(decimal)(data.MontantUnpaid / 100):c2}\r\n\r\n");
+                        tbInfo.AppendText($"Montant non distribué : {(decimal)data.MontantUnpaid / 100:c2}\r\n\r\n");
                         ButtonCounters_Click(sender, e);
                     };
                     break;
                 }
                 case Reason.HOPPEREMPTIED:
                 {
-                    CHopper.CEmptyCount data = (CHopper.CEmptyCount)((CDevice.CEvent)e.donnee).data;
                     a = () =>
                     {
+                        CHopper.CEmptyCount data = (CHopper.CEmptyCount)((CDevice.CEvent)e.donnee).data;
                         tbInfo.AppendText($"Vidage {data.nameOfHopper}\r\n");
                         tbInfo.AppendText($"Nombre de pièces {data.counter}\r\n");
                         tbInfo.AppendText($"Montant {(decimal)data.amountCounter / 100:c2}\r\n");
@@ -296,7 +293,7 @@ namespace AtmbTestDevices
                     a = () =>
                       {
                           MessageBox.Show(((CerrorBNR)((CDevice.CEvent)e.donnee).data).nameModule.ToString() + "\r\n" +
-                          ((CerrorBNR)((CDevice.CEvent)e.donnee).data).error.ToString(), ((CDevice.CEvent)e.donnee).nameOfHopper.ToString());
+                          ((CerrorBNR)((CDevice.CEvent)e.donnee).data).error.ToString(), ((CDevice.CEvent)e.donnee).nameOfDevice.ToString());
                       };
                     break;
                 }
@@ -336,7 +333,7 @@ namespace AtmbTestDevices
             dataGridViewCompteurs.Rows.Add("Total rendu", $"{(decimal)CccTalk.counters.totalAmountCashOut / 100:c2}");
             dataGridViewCompteurs.Rows.Add("Total borne", $"{(decimal)CccTalk.counters.totalAmountInCabinet / 100:c2}");
             dataGridViewCompteurs.Rows.Add("Trop perçu", $"{(decimal)CccTalk.counters.amountOverPay / 100:c2}");
-            if(deviceManage.monnayeur != null)
+            if(deviceManage.monnayeur != null && deviceManage.monnayeur.canaux != null)
             {
                 foreach(CCanal canal in deviceManage.monnayeur.canaux)
                 {
@@ -380,7 +377,6 @@ namespace AtmbTestDevices
             }
             catch
             {
-
             }
         }
 
@@ -401,7 +397,7 @@ namespace AtmbTestDevices
                         {
                             if(Convert.ToByte(ligne.Cells["ToDispense"].Value) > 0)
                             {
-                                hopper.Distribute(Convert.ToByte(ligne.Cells["ToDispense"].Value));
+                                hopper.Dispense(Convert.ToByte(ligne.Cells["ToDispense"].Value));
                                 ligne.Cells["ToDispense"].Value = 0.ToString();
                             }
                             else
@@ -493,7 +489,6 @@ namespace AtmbTestDevices
         private void TextBoxBNRDispense_Enter(object sender, EventArgs e)
         {
             ((TextBox)sender).Text = "";
-
         }
 
         private void TextBoxBNRDspense_Leave(object sender, EventArgs e)

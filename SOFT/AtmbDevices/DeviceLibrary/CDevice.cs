@@ -4,6 +4,7 @@
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
+using System;
 using System.Collections.Generic;
 using System.Threading;
 
@@ -11,14 +12,13 @@ namespace DeviceLibrary
 {
     /// <summary>
     /// Classe abstraite parent de tous les périphériques
-    /// </summary>
-    public abstract partial class CDevice
+    /// </summary>   
+     public abstract partial class CDevice
     {
-
         /// <summary>
         /// Event permenttant de savoir savoir si le BNR prêt.
         /// </summary>
-        public AutoResetEvent evReady;
+        protected AutoResetEvent evReady;
 
         /// <summary>
         /// Liste des évenement.
@@ -36,7 +36,7 @@ namespace DeviceLibrary
         public CLevel deviceLevel;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CInserted denominationInserted;
 
@@ -66,6 +66,7 @@ namespace DeviceLibrary
         }
 
         private bool isPresent;
+
         /// <summary>
         /// Flag indiquant si le hopper est detecté.
         /// </summary>
@@ -90,15 +91,15 @@ namespace DeviceLibrary
         /// </summary>
         public CDevice()
         {
-            if (denominationInserted == null)
+            if(denominationInserted == null)
             {
                 denominationInserted = new CInserted();
             }
-            if (eventsList == null)
+            if(eventsList == null)
             {
                 eventsList = new List<CEvent>();
             }
-            if (eventListLock == null)
+            if(eventListLock == null)
             {
                 eventListLock = new object();
             }

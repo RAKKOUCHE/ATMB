@@ -17,27 +17,33 @@ namespace DeviceLibrary
             /// Ouve la trappe de rejet, fait tourner le moteur et referme la trappe de rejet.
             /// </summary>
             TRASH1 = 1,
+
             /// <summary>
             /// non utilisé.
             /// </summary>
             TRASH2 = 2,
+
             /// <summary>
             /// Non utilisé.
             /// </summary>
             TRASH3 = 3,
+
             /// <summary>
             /// Non documentée
             /// </summary>
             CPR = 4,
+
             /// <summary>
             /// Definie la vitesse de rotation du disque
             /// </summary>
             /// <remarks>100 = 3 pièces, 133 = 4 pièces, ect...</remarks>
             SETSPEED = 10,
+
             /// <summary>
             /// Lit la vitesse de rotation du disque.
             /// </summary>
             GETSPEED = 11,
+
             /// <summary>
             /// Lit le délai entre 2 trous du disque par pas de 4ms.
             /// </summary>

@@ -40,10 +40,12 @@ namespace DeviceLibrary
             /// Région sur 2 caractères
             /// </summary>
             public string CountryCode;
+
             /// <summary>
             /// Valeur en centimes.
             /// </summary>
             public long ValeurCent;
+
             /// <summary>
             /// Révision du data set
             /// </summary>
@@ -59,14 +61,17 @@ namespace DeviceLibrary
             /// Nom du hopper
             /// </summary>
             public string nameOfHopper;
+
             /// <summary>
             /// Indique si le hopper est critique.
             /// </summary>
             public bool isHCritical;
+
             /// <summary>
             /// Indique le nombre de pièces dans le hopper.
             /// </summary>
             public long coinsNumber;
+
             /// <summary>
             /// Seuil atteint.
             /// </summary>
@@ -82,14 +87,17 @@ namespace DeviceLibrary
             /// Nom du hopper.
             /// </summary>
             public string nameOfHopper;
+
             /// <summary>
             /// Indique si le hopper est critique.
             /// </summary>
             public bool isHCritical;
+
             /// <summary>
             /// Indique le nombre de pièces dans le hopper.
             /// </summary>
             public long coinsNumber;
+
             /// <summary>
             /// Seuil atteint.
             /// </summary>
@@ -122,6 +130,7 @@ namespace DeviceLibrary
         //public bool isEmptied;
 
         private bool isInitialized;
+
         /// <summary>
         /// Indique si le Hopper est initialisé.
         /// </summary>
@@ -136,7 +145,7 @@ namespace DeviceLibrary
         /// </summary>
         /// <remarks>
         /// Les numéros des hoppers commencent à 1 et la première adresse est 3
-        /// donc l'adresse d'un hopper s'obtient par : 
+        /// donc l'adresse d'un hopper s'obtient par :
         /// Numéro du Hopper + (première adresse(3) - 1) : (Adresse de base : 2)
         /// </remarks>
         public const byte AddressBaseHoper = 2;
@@ -157,6 +166,7 @@ namespace DeviceLibrary
         private bool isOnError;
 
         private uint coinValue;
+
         /// <summary>
         /// Valeur de la pièce distribuée par le hopper.
         /// </summary>
@@ -231,6 +241,7 @@ namespace DeviceLibrary
         public CMemoryStorage memoryStorage;
 
         private Etat state;
+
         /// <summary>
         /// Etat de la machine d'état des hoppers
         /// </summary>
@@ -251,6 +262,7 @@ namespace DeviceLibrary
         public CEmptyCount emptyCount;
 
         private bool isMaxCurrentExceeded;
+
         /// <summary>
         /// Bolean indiquant qu'un dépassement du courant maximun a été atteint.
         /// </summary>
@@ -264,6 +276,7 @@ namespace DeviceLibrary
         }
 
         private bool isTOOccured;
+
         /// <summary>
         /// Bolean indiquant qu'un dépassement du temps alloué pour l'éjection d'une pièce est survenu.
         /// </summary>
@@ -277,6 +290,7 @@ namespace DeviceLibrary
         }
 
         private bool isMotorReversed;
+
         /// <summary>
         /// Bolean indiquant que suite à une surconsomation la rotation du moteur a été inversée pour corriger un bourrage.
         /// </summary>
@@ -290,6 +304,7 @@ namespace DeviceLibrary
         }
 
         private bool isOptoPathBlocked;
+
         /// <summary>
         /// Bolean indiquant que la sortie est bloquée.
         /// </summary>
@@ -303,6 +318,7 @@ namespace DeviceLibrary
         }
 
         private bool isShortCircuit;
+
         /// <summary>
         /// Bolean indiquant que la sortie est en court-circuit.
         /// </summary>
@@ -316,6 +332,7 @@ namespace DeviceLibrary
         }
 
         private bool isOptoPermanentlyBlocked;
+
         /// <summary>
         /// Bolean indiquant qu'un optocloupleur est bloqué en permanence.
         /// </summary>
@@ -329,6 +346,7 @@ namespace DeviceLibrary
         }
 
         private bool isPowerUpDetected;
+
         /// <summary>
         /// Bolean indiquant que le hopper est alimenté et un reset n'est pas encore effectué
         /// </summary>
@@ -342,6 +360,7 @@ namespace DeviceLibrary
         }
 
         private bool isPayoutDisabled;
+
         /// <summary>
         /// Bolean indiquant que le hopper n'est pas activé
         /// </summary>
@@ -355,6 +374,7 @@ namespace DeviceLibrary
         }
 
         private bool isOptoShorCircuit;
+
         /// <summary>
         /// Bolean indiquant qu'un optocoupleur est en court-circuit
         /// </summary>
@@ -368,6 +388,7 @@ namespace DeviceLibrary
         }
 
         private bool isSingleCoinMode;
+
         /// <summary>
         /// Bolean indiquant que le hopper est en mode pièce par pièce.
         /// </summary>
@@ -381,6 +402,7 @@ namespace DeviceLibrary
         }
 
         private bool isCheckSumAError;
+
         /// <summary>
         /// Bolean indiquant qu'une erreur de checksum dans le bloc de données A est survenue.
         /// </summary>
@@ -394,6 +416,7 @@ namespace DeviceLibrary
         }
 
         private bool isCheckSumBError;
+
         /// <summary>
         /// Bolean indiquant qu'une erreur de checksum dans le bloc de données B est survenue.
         /// </summary>
@@ -407,6 +430,7 @@ namespace DeviceLibrary
         }
 
         private bool isCheckSumCError;
+
         /// <summary>
         /// Bolean indiquant qu'une erreur de checksum dans le bloc de données B est survenue.
         /// </summary>
@@ -420,6 +444,7 @@ namespace DeviceLibrary
         }
 
         private bool isCheckSumDError;
+
         /// <summary>
         /// Bolean indiquant qu'une erreur de checksum dans le bloc de données D est survenue.
         /// </summary>
@@ -433,6 +458,7 @@ namespace DeviceLibrary
         }
 
         private bool isPowerFailMemoryWrite;
+
         /// <summary>
         /// Bolean indiquant qu'une chute de tension a eu lieu pendant une écriture mémoire.
         /// </summary>
@@ -446,6 +472,7 @@ namespace DeviceLibrary
         }
 
         private bool isPINEnabled;
+
         /// <summary>
         /// Bolean indiquant qu'un code pin est utilisé par le hopper
         /// </summary>
@@ -459,6 +486,7 @@ namespace DeviceLibrary
         }
 
         private byte coinsToDistribute;
+
         /// <summary>
         /// Nombre de pièce à distribuer
         /// </summary>
@@ -469,6 +497,7 @@ namespace DeviceLibrary
         }
 
         private uint levelFullSoft;
+
         /// <summary>
         /// Nombre maximum de pièces autorisées
         /// </summary>
@@ -479,6 +508,7 @@ namespace DeviceLibrary
         }
 
         private uint levelHISoft;
+
         /// <summary>
         /// Nombre de pièce pour le niveau d'alerte haut
         /// </summary>
@@ -489,6 +519,7 @@ namespace DeviceLibrary
         }
 
         private uint levelLOSoft;
+
         /// <summary>
         /// Nombre de pièce pour le niveau d'alerte bas
         /// </summary>
@@ -499,6 +530,7 @@ namespace DeviceLibrary
         }
 
         private uint levelEmptySoft;
+
         /// <summary>
         /// Nombre minimum de pièces autorisées
         /// </summary>
@@ -509,8 +541,9 @@ namespace DeviceLibrary
         }
 
         private uint defaultFilling;
+
         /// <summary>
-        /// Nombre de pièces par défaut pour un remplissage. 
+        /// Nombre de pièces par défaut pour un remplissage.
         /// </summary>
         public uint DefaultFilling
         {
@@ -524,6 +557,7 @@ namespace DeviceLibrary
         public Thread HTask;
 
         private bool isDispensed;
+
         /// <summary>
         /// Boolean indiquant la fin d'une distribution
         /// </summary>
@@ -534,6 +568,7 @@ namespace DeviceLibrary
         }
 
         private bool isCritical;
+
         /// <summary>
         /// Boolean indiquant si le hopper est indispensable au fonctionnement de la borne.
         /// </summary>
@@ -548,16 +583,12 @@ namespace DeviceLibrary
         /// </summary>
         private static int delaypollLevel;
 
-        /// <summary>
-        /// Protection de l'opération de lecture des niveaux.
-        /// </summary>
-        private static Mutex mutexLevel = new Mutex();
-
         /*--------------------------------------------------------------*/
+
         /// <summary>
         /// Renvoi les informations sur les niveaux des hoppers
         /// </summary>
-        /// <returns>Le masque des niveaux du hopper</returns>     
+        /// <returns>Le masque des niveaux du hopper</returns>
         private byte LevelStatus
         {
             get
@@ -790,7 +821,7 @@ namespace DeviceLibrary
         /// Lecture des registres du hopper.
         /// </summary>
         private HopperError TestHopper()
-        {            
+        {
             HopperError result = HopperError.NON_IDENTIFIEE;
             try
             {
@@ -922,7 +953,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Ajoute un évenement de niveau à liste des évenements. 
+        /// Ajoute un évenement de niveau à liste des évenements.
         /// </summary>
         /// <param name="reason">Raison de l'évenement.</param>
         /// <param name="data">Donnée concernant l'évenement.</param>
@@ -932,7 +963,7 @@ namespace DeviceLibrary
             {
                 eventsList.Add(new CEvent
                 {
-                    nameOfHopper = name,
+                    nameOfDevice = name,
                     reason = reason,
                     data = data
                 });
@@ -1082,7 +1113,7 @@ namespace DeviceLibrary
                     eventsList.Add(new CEvent()
                     {
                         reason = Reason.HOPPEREMPTIED,
-                        nameOfHopper = name,
+                        nameOfDevice = name,
                         data = emptyCount,
                     });
                 }
@@ -1105,16 +1136,15 @@ namespace DeviceLibrary
         /// <summary>
         /// Provoque la distribution par le hopper en utilisant la machine d'état
         /// </summary>
-        /// <param name="numberToDispense">Nombre de token à distribuer</param>
-        public void Distribute(byte numberToDispense)
+        /// <param name="coinsToDispense">Nombre de token à distribuer</param>
+        public void Dispense(byte coinsToDispense)
         {
             if(!((deviceLevel.hardLevel == CLevel.HardLevel.VIDE) || (deviceLevel.softLevel == CLevel.SoftLevel.VIDE)))
             {
-                CoinsToDistribute = numberToDispense;
+                CoinsToDistribute = coinsToDispense;
                 State = Etat.STATE_DISPENSE;
                 while(State != Etat.STATE_IDLE)
                     ;
-                Thread.Sleep(1);
             }
         }
 
@@ -1133,7 +1163,6 @@ namespace DeviceLibrary
             }
             else
             {
-
                 CoinsInHopper -= CoinsNumber;
                 AmountInHopper = CoinsInHopper * CoinValue;
             }
@@ -1169,10 +1198,11 @@ namespace DeviceLibrary
                 eventsList.Add(new CEvent()
                 {
                     reason = Reason.HOPPERERROR,
-                    nameOfHopper = ToString(),
+                    nameOfDevice = ToString(),
                     data = errorHopper,
                 });
             }
+            errorHopper = new CHopperError();
         }
 
         /// <summary>
@@ -1253,7 +1283,7 @@ namespace DeviceLibrary
                                     CEvent hopperEvent = new CEvent()
                                     {
                                         reason = Reason.HOPPERDISPENSED,
-                                        nameOfHopper = ToString(),
+                                        nameOfDevice = ToString(),
                                         data = dispenseStatus.dispensedResult,
                                     };
                                     eventsList.Add(hopperEvent);
@@ -1274,8 +1304,10 @@ namespace DeviceLibrary
 
                         case Etat.STATE_GETEQUIPEMENCATEGORY:
                             break;
+
                         case Etat.STATE_GETOPTOSTATE:
                             break;
+
                         case Etat.STATE_IDLE:
                         {
                             if(!IsInitialized)
@@ -1329,28 +1361,38 @@ namespace DeviceLibrary
         /// <param name="hopperNumber">Numéro du hopper</param>
         public CHopper(byte hopperNumber)
         {
-            CDevicesManager.Log.Info("Instanciation  du hopper {0}", hopperNumber);
-            IsInitialized = false;
-            DeviceAddress = (DefaultDevicesAddress)(hopperNumber + AddressBaseHoper);
-            Number = hopperNumber;
+            try
+            {
 
-            if(!(IsPresent = SimplePoll))
-            {
-                Thread.Sleep(100);
-                IsDeviceReseted();
-                IsPresent = SimplePoll;
+                CDevicesManager.Log.Info("Instanciation  du hopper {0}", hopperNumber);
+                IsInitialized = false;
+                DeviceAddress = (DefaultDevicesAddress)(hopperNumber + AddressBaseHoper);
+                Number = hopperNumber;
+
+                if(!(IsPresent = SimplePoll))
+                {
+                    Thread.Sleep(100);
+                    IsDeviceReseted();
+                    IsPresent = SimplePoll;
+                }
+                if(IsPresent)
+                {
+                    state = Etat.STATE_INIT;
+                    HTask = new Thread(Task);
+                    HTask.Start();
+                }
+                else
+                {
+                    throw new Exception($"Hopper numéro {Number} non trouvé");
+                }
             }
-            if(IsPresent)
+            catch(Exception E)
             {
-                state = Etat.STATE_INIT;
-                HTask = new Thread(Task);
-                HTask.Start();
-            }
-            else
-            {
+
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 evReady.Set();
             }
+            evReady.WaitOne(30000);
         }
     }
 }
-

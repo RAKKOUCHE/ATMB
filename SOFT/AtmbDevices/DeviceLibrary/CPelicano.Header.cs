@@ -6,13 +6,13 @@
 
 namespace DeviceLibrary
 {
-    public partial class CPelicano: CCoinValidator
+    public partial class CPelicano : CCoinValidator
     {
         /// \addtogroup Headers
         /// @{
         /// <summary>
         /// Groupe des commandes ccTalk.
-        /// </summary>        
+        /// </summary>
         /// <summary>
         /// Enumération des commandes spécifiques au Pelicano
         /// </summary>
@@ -22,10 +22,12 @@ namespace DeviceLibrary
             /// Lecture des optocoupleurs à la sortie des pièces.
             /// </summary>
             READOPTOSTATES = 236,
+
             /// <summary>
             /// Lecture des caractèristiques d'acceptation.
             /// </summary>
             REQUESTOPTIONFLAG = 213,
+
             /// <summary>
             /// Fixe ou lit les limites d'acceptation.
             /// </summary>

@@ -8,7 +8,7 @@ namespace DeviceLibrary
 {
     /// <summary>
     /// Class d'un canal d'un périphérique de paiement
-    /// </summary>    
+    /// </summary>
     /// \details Cette classe contient et gère les paramètres d'un canal*/
     public partial class CCanal
     {
@@ -31,8 +31,9 @@ namespace DeviceLibrary
         /// Instance des chemins utilisés pour trier la pièce reconnue dans le canal.
         /// </summary>
         public CSorter sorter;
-        
+
         private byte hopperToLoad;
+
         /// <summary>
         /// Hopper vers lequel sera dirigé la pièce reconnue
         /// </summary>

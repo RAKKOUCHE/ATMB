@@ -1,4 +1,5 @@
 ﻿using NLog;
+
 /// \file CDevicesManager.cs
 /// \brief Fichier principal de la dll.
 /// \date 28 11 2018
@@ -14,7 +15,6 @@ using System.Xml;
 
 namespace DeviceLibrary
 {
-
     /// <summary>
     /// Enumération des causes des événements
     /// </summary>
@@ -24,42 +24,52 @@ namespace DeviceLibrary
         /// Une pièce a été reconnue par le monnayeur.
         /// </summary>
         MONEYINTRODUCTED,
+
         /// <summary>
         /// Une erreur a été dectée sur le monnayeur.
         /// </summary>
         COINVALIDATORERROR,
+
         /// <summary>
         /// Les moyens de paiement ont été fermés.
         /// </summary>
         CASHCLOSED,
+
         /// <summary>
         /// Les moyens de paiement ont été ouverts.
         /// </summary>
         CASHOPENED,
+
         /// <summary>
         /// Une erreur a été detectée sur un hopper.
         /// </summary>
         HOPPERERROR,
+
         /// <summary>
         /// Le hopper a terminé la distribution.
         /// </summary>
         HOPPERDISPENSED,
+
         /// <summary>
         /// Une des sondes hardwares d'un hopper a changé d'état.
         /// </summary>
         HOPPERHWLEVELCHANGED,
+
         /// <summary>
         /// Un seuil de niveau a été atteint
         /// </summary>
         HOPPERSWLEVELCHANGED,
+
         /// <summary>
         /// Le hopper est vidé.
         /// </summary>
         HOPPEREMPTIED,
+
         /// <summary>
         /// Une erreur sur le BNR est survenue.
         /// </summary>
         BNRERREUR,
+
         /// <summary>
         /// La dll est prête.
         /// </summary>
@@ -75,6 +85,7 @@ namespace DeviceLibrary
         /// Cause de l'événement.
         /// </summary>
         public Reason reason;
+
         /// <summary>
         /// Objet contenant les infomations concernant l'événement.
         /// </summary>
@@ -130,14 +141,13 @@ namespace DeviceLibrary
         /// </summary>
         public List<CHopper> Hoppers;
 
-
         /// <summary>
         /// Instance du BNR
         /// </summary>
         public CBNR_CPI bnX;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -187,6 +197,7 @@ namespace DeviceLibrary
                 return result;
             }
         }
+
         /*-------------------------------------------------------*/
 
         /// <summary>
@@ -225,7 +236,6 @@ namespace DeviceLibrary
                     }
                     monnayeur.canaux[posChannel - 1].sorter.PathSorter = pathSorter;
                     monnayeur.canaux[posChannel - 1].HopperToLoad = hopperToLoad;
-
                 }
             }
             catch(Exception E)
@@ -532,7 +542,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper 
+        /// Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper
         /// </summary>
         /// <param name="evenement"></param>
         private void OnHopperSoftLevelChanged(CDevice.CEvent evenement)
@@ -565,7 +575,7 @@ namespace DeviceLibrary
                     reason = Reason.HOPPERERROR,
                     donnee = evenement,
                 };
-                CallAlert(new object(), alertEventArgs);                
+                CallAlert(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
@@ -655,8 +665,6 @@ namespace DeviceLibrary
             }
         }
 
-
-
         /// <summary>
         /// Evénement levé lors de la détection d'une erreur sur le monnayeur.
         /// </summary>
@@ -700,7 +708,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         private void OnBNRErreur(CDevice.CEvent evenement)
         {
@@ -728,22 +736,26 @@ namespace DeviceLibrary
         {
             try
             {
-                if(monnayeur.IsCVToBeActivated = (ToPay = value) > CDevice.denominationInserted.TotalAmount)
+                if((ToPay = value) > CDevice.denominationInserted.TotalAmount)
                 {
-                    if(CBNR_CPI.isPresent)
-                    {
-                        bnX.IsBNRToBeActivated = true;
-                    }
-
+                    monnayeur.IsCVToBeActivated = monnayeur.IsPresent;
+                    bnX.IsBNRToBeActivated = bnX.IsPresent;
                     lock(CDevice.eventListLock)
                     {
                         CDevice.eventsList.Add(new CDevice.CEvent
                         {
                             reason = Reason.CASHOPENED,
-                            nameOfHopper = "",
+                            nameOfDevice = "",
                             data = null
                         });
                     }
+                }
+                else
+                {
+                    ToPay = CDevice.denominationInserted.TotalAmount = CDevice.denominationInserted.BackTotalAmount =  0;
+                    monnayeur.IsCVToBeDeactivated = monnayeur.IsPresent;
+                    bnX.IsBNRToBeDeactivated = monnayeur.IsPresent;
+                    EndTransaction();
                 }
             }
             catch(Exception E)
@@ -762,7 +774,7 @@ namespace DeviceLibrary
                 CDevice.CEvent evenement = new CDevice.CEvent
                 {
                     reason = Reason.CASHCLOSED,
-                    nameOfHopper = "",
+                    nameOfDevice = "",
                     data = null
                 };
                 CDevice.eventsList.Add(evenement);
@@ -824,15 +836,12 @@ namespace DeviceLibrary
                 CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
 
                 bnX = new CBNR_CPI();
-                bnX.evReady.WaitOne(90000);
                 monnayeur = new CCoinValidator();
-                monnayeur.evReady.WaitOne(60000);
                 if(monnayeur.ProductCode == "BV")
                 {
                     monnayeur.CVTask.Abort();
                     Thread.Sleep(100);
                     monnayeur = new CPelicano();
-                    monnayeur.evReady.WaitOne(60000);
                     ((CPelicano)monnayeur).SpeedMotor = Convert.ToByte(parametersFile.SelectSingleNode("/CashParameters/CoinValidator/SpeedMTR").InnerText);
                 }
                 SetSortersAndHoppersToLoad();
@@ -841,8 +850,6 @@ namespace DeviceLibrary
                 for(byte i = 1; i < 9; i++)
                 {
                     Hoppers.Add(new CHopper(i));
-                    Hoppers[i - 1].evReady.WaitOne(20000);
-                    Thread.Sleep(1);
                 }
                 ReadParamHopper();
                 foreach(CHopper hopper in Hoppers)
@@ -856,7 +863,7 @@ namespace DeviceLibrary
                     CDevice.CEvent evenement = new CDevice.CEvent
                     {
                         reason = Reason.DLLLREADY,
-                        nameOfHopper = "",
+                        nameOfDevice = "",
                         data = null
                     };
                     CDevice.eventsList.Insert(0, evenement);
@@ -869,7 +876,6 @@ namespace DeviceLibrary
                 Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
             }
         }
-
 
         /// <summary>
         /// Fonction libérant les ressources
@@ -884,7 +890,6 @@ namespace DeviceLibrary
                 }
                 catch(Exception)
                 {
-
                 }
                 try
                 {
@@ -901,7 +906,6 @@ namespace DeviceLibrary
                     }
                     catch
                     {
-
                     }
                 }
             }
@@ -912,13 +916,14 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
         /// <summary>
         /// Destructeur
         /// </summary>

@@ -33,11 +33,11 @@
         <!--Paramètres des canaux-->
         <Canaux>-->
             <Canal>
-                <Position>1</Position> 
-                <Enable>true</Enable> 
-                <PathSorter>1</PathSorter> 
-                <HopperToLoad>0</HopperToLoad> 
-                <Valeur>1</Valeur> 
+                <Position>1</Position>
+                <Enable>true</Enable>
+                <PathSorter>1</PathSorter>
+                <HopperToLoad>0</HopperToLoad>
+                <Valeur>1</Valeur>
             </Canal>
             <Canal>
                 <Position>2</Position>

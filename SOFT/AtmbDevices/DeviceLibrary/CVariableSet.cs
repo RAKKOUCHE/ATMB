@@ -22,6 +22,7 @@ namespace DeviceLibrary
             /// Plusieurs pièces peuvent être distribuées en 1 opération.
             /// </summary>
             MULTICOINSMODE = 0,
+
             /// <summary>
             /// Une seule pièce peut être distribuée par opération.
             /// </summary>
@@ -37,26 +38,32 @@ namespace DeviceLibrary
             /// Limit de courant avant d'inverser la rotation du moteur
             /// </summary>
             CURRENTLIMIT = 0,
+
             /// <summary>
             /// Délai pour arrêter le moteur après distribution.
             /// </summary>
             MOTORSTOPDELAY = 1,
+
             /// <summary>
             /// Temps sans distribution pour arrêter le moteur si une pièce doit être distribuée.
             /// </summary>
             PAYOUTTIMEOUT = 2,
+
             /// <summary>
             /// Maximum de consomation de courant accepté.
             /// </summary>
             MAXCURRENT = 3,
+
             /// <summary>
             /// Mode pièce par pièce.
             /// </summary>
             SINGLECOINMODE = 3,
+
             /// <summary>
             /// Tension actuelle d'alimentation.
             /// </summary>
             SUPPLYVOLTAGE = 4,
+
             /// <summary>
             /// Adresse physique du hopper
             /// </summary>
@@ -69,6 +76,7 @@ namespace DeviceLibrary
         private CHopper Owner;
 
         private byte[] variableSetToRead;
+
         /// <summary>
         /// Buffer du résultat de la commande de lecture des variables du hopper.
         /// </summary>
@@ -116,7 +124,6 @@ namespace DeviceLibrary
             CDevicesManager.Log.Info("Lecture des variables du hopper {0}", Owner.DeviceAddress - CHopper.AddressBaseHoper);
             try
             {
-
                 if(!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, VariableSetToRead))
                 {
                     CDevicesManager.Log.Error("Impossible de lire le -variables set- du hopper {0} ", Owner.DeviceAddress - CHopper.AddressBaseHoper);
@@ -129,7 +136,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Lecture d'une variable 
+        /// Lecture d'une variable
         /// </summary>
         /// <param name="variable">variable demandée</param>
         /// <returns>Valeur de la variable demandée</returns>

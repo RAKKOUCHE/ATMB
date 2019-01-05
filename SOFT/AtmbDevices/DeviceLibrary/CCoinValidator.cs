@@ -2,7 +2,7 @@
 /// \brief Fichier contenant la classe CCoinValidator
 /// \date 28 11 2018
 /// \version 1.0.0
-/// \author Rachid AKKOUCHE 
+/// \author Rachid AKKOUCHE
 
 using System;
 using System.Threading;
@@ -28,6 +28,7 @@ namespace DeviceLibrary
             ///
             /// </summary>
             public byte code;
+
             /// <summary>
             ///
             /// </summary>
@@ -48,10 +49,12 @@ namespace DeviceLibrary
             /// Monnayeur à l'état normal
             /// </summary>
             OK = 0,
+
             /// <summary>
             /// Le mechanisme de rendu de pièce est activé.
             /// </summary>
             COINRETURNACTIVATED = 1,
+
             /// <summary>
             /// Le système anti-fishing est activé.
             /// </summary>
@@ -67,6 +70,7 @@ namespace DeviceLibrary
             /// Trappe de sortie du Pelicano fermée.
             /// </summary>
             CLOSED = 0,
+
             /// <summary>
             /// Trappe de sortie du Pelcano ouverte.
             /// </summary>
@@ -82,6 +86,7 @@ namespace DeviceLibrary
             /// Senseurs de sortie sont libres.
             /// </summary>
             FREE = 0,
+
             /// <summary>
             /// Un senseur de sortie est occupée.
             /// </summary>
@@ -99,6 +104,7 @@ namespace DeviceLibrary
         //public CCoindID[] coinIDs;
 
         private byte backEventCounter;
+
         /// <summary>
         /// Sauvegarde du compteur d'événement.
         /// </summary>
@@ -109,6 +115,7 @@ namespace DeviceLibrary
         }
 
         private bool isCVToBeDeactivated;
+
         /// <summary>
         /// Indique si le monnayeur doit être adtivé.
         /// </summary>
@@ -119,6 +126,7 @@ namespace DeviceLibrary
         }
 
         private bool isCVToBeActivated;
+
         /// <summary>
         /// Indique si le monnayeur doit être adtivé.
         /// </summary>
@@ -130,8 +138,9 @@ namespace DeviceLibrary
 
         //TODO A déplacer vers PELICANO
         private TrashDoor trashLid;
+
         /// <summary>
-        /// Contient l'indicateur d'ouverture du containner. 
+        /// Contient l'indicateur d'ouverture du containner.
         /// </summary>
         protected TrashDoor TrashLid
         {
@@ -140,6 +149,7 @@ namespace DeviceLibrary
         }
 
         private LowerSensor exitSensor;
+
         /// <summary>
         /// Indique si les optiques de sortie sont libre.
         /// </summary>
@@ -148,9 +158,11 @@ namespace DeviceLibrary
             get => exitSensor;
             set => exitSensor = value;
         }
+
         //todo jusqu'ici
 
         private byte channelInProgress;
+
         /// <summary>
         /// Numéro du canal en cours d'utilisation.
         /// </summary>
@@ -166,6 +178,7 @@ namespace DeviceLibrary
         public CCVcreditBuffer creditBuffer;
 
         private byte overrideMask;
+
         /// <summary>
         /// Masque des chemins optionnels
         /// </summary>
@@ -176,6 +189,7 @@ namespace DeviceLibrary
         }
 
         private Etat state;
+
         /// <summary>
         /// Etat de la machie d'état.
         /// </summary>
@@ -201,6 +215,7 @@ namespace DeviceLibrary
         public byte sorterPath;
 
         private bool isCVInitialized;
+
         /// <summary>
         /// Flag indiquant si le monnayeur est initialisé.
         /// </summary>
@@ -221,6 +236,7 @@ namespace DeviceLibrary
         private string name;
 
         /********************************************************************************/
+
         /// <summary>
         /// Renvoi la version de la data base.
         /// </summary>
@@ -311,27 +327,6 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
                 return result;
-            }
-        }
-
-        /// <summary>
-        /// Modifie le chemin de sortie par défaut.
-        /// </summary>
-        /// <remarks>Header 189</remarks>
-        private void SetDefaultSorterpath(byte defaultPath)
-        {
-            try
-            {
-                CDevicesManager.Log.Info("Enregisrement du chemin de sortie par défaut {0} ({1})", DeviceAddress, defaultPath);
-                byte[] bufferParam = { defaultPath };
-                if(!IsCmdccTalkSended(DeviceAddress, Header.MODIFYDEFAULTSORTERPATH, (byte)bufferParam.Length, bufferParam, null))
-                {
-                    CDevicesManager.Log.Error("Impossible de modifier le chemin par défaut {0}", DeviceAddress);
-                }
-            }
-            catch(Exception E)
-            {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -428,7 +423,7 @@ namespace DeviceLibrary
                             eventsList.Add(new CEvent
                             {
                                 reason = Reason.COINVALIDATORERROR,
-                                nameOfHopper = base.ProductCode,
+                                nameOfDevice = base.ProductCode,
                                 data = errorCV
                             });
                         }
@@ -446,7 +441,7 @@ namespace DeviceLibrary
                             eventsList.Add(new CEvent
                             {
                                 reason = Reason.MONEYINTRODUCTED,
-                                nameOfHopper = name,
+                                nameOfDevice = ProductCode,
                                 data = denominationInserted
                             });
                         }
@@ -533,7 +528,6 @@ namespace DeviceLibrary
                         if(!SimplePoll)
                         {
                             CDevicesManager.Log.Info("Echec du simple poll sur le {0}", DeviceAddress);
-
                         }
                         State = Etat.STATE_GETCREDITBUFFER;
                         break;
@@ -795,6 +789,7 @@ namespace DeviceLibrary
         {
             try
             {
+                
                 CDevicesManager.Log.Info("Instancation de la classe CCoinValidator.");
                 DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
                 if(!(IsPresent = SimplePoll))
@@ -819,6 +814,7 @@ namespace DeviceLibrary
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 evReady.Set();
             }
+            evReady.WaitOne(60000);
         }
     }
 }

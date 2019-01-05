@@ -59,11 +59,6 @@
             Instance du bnr.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.BNREvent">
-            <summary>
-            Contient les informations concernant un évenement du BNR
-            </summary>
-        </member>
         <member name="P:DeviceLibrary.CBNR_CPI.ProductCode">
             <summary>
             Code produit du périphérique.
@@ -102,11 +97,6 @@
         <member name="F:DeviceLibrary.CBNR_CPI.ev">
             <summary>
             Evénement permettant de gérer les function asynchrone.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.isPresent">
-            <summary>
-            Indique si un bnr est connecté.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.errorInfo">
@@ -242,7 +232,7 @@
         <member name="T:DeviceLibrary.CCanal">
             <summary>
             Class d'un canal d'un périphérique de paiement
-            </summary>    
+            </summary>
             \details Cette classe contient et gère les paramètres d'un canal*/
         </member>
         <member name="F:DeviceLibrary.CCanal.CVOwner">
@@ -297,7 +287,7 @@
             @{
             <summary>
             Groupe des commandes ccTalk.
-            </summary>        
+            </summary>
             <summary>
             Command ccTalk demandant l'identification de la pièce du canal.
             </summary>
@@ -397,7 +387,7 @@
             @{
             <summary>
             Groupe des commandes ccTalk.
-            </summary>        
+            </summary>
             <summary>
             Enumeration des concernant concernant les moyens de paiement
             </summary>
@@ -433,7 +423,7 @@
         </member>
         <member name="F:DeviceLibrary.CcashReader.Header.REQUESTMASTERINHIBITSTATUS">
              <summary>
-            Cette commande demande le masque d'inhibition géneral du périphérique            
+            Cette commande demande le masque d'inhibition géneral du périphérique
              </summary>
              <remarks>voir <see cref="F:DeviceLibrary.CcashReader.Header.MODIFYMASTERINHIBITSTATUS"/></remarks>
         </member>
@@ -490,7 +480,7 @@
         <member name="M:DeviceLibrary.CcashReader.MasterEnable">
             <summary>
             Activation globale du moyen de paiement
-            </summary>       
+            </summary>
         </member>
         <member name="M:DeviceLibrary.CcashReader.MasterDisable">
             <summary>
@@ -609,14 +599,14 @@
             </summary>
         </member>
         <member name="M:DeviceLibrary.CcoinsCounters.SaveCounters">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="T:DeviceLibrary.CDevice">
             <summary>
             Classe abstraite parent de tous les périphériques
-            </summary>
+            </summary>   
         </member>
         <member name="T:DeviceLibrary.CDevice.CEvent">
             <summary>
@@ -628,7 +618,7 @@
             Raison de l'évenement.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevice.CEvent.nameOfHopper">
+        <member name="F:DeviceLibrary.CDevice.CEvent.nameOfDevice">
             <summary>
             Nom du périphérique
             </summary>
@@ -656,7 +646,7 @@
         </member>
         <member name="F:DeviceLibrary.CDevice.CInserted.CVPath">
             <summary>
-            Chemin de tri utilisé 
+            Chemin de tri utilisé
             </summary>
         </member>
         <member name="F:DeviceLibrary.CDevice.CInserted.TotalAmount">
@@ -783,9 +773,9 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CDevice.denominationInserted">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="P:DeviceLibrary.CDevice.SerialNumber">
             <summary>
@@ -860,7 +850,7 @@
         </member>
         <member name="T:DeviceLibrary.CHopper.HopperError">
             \addtogroup Erreurs
-            @{        
+            @{
             <summary>
             Groupe des codes erreur renvoyés par les périphériques
             </summary>
@@ -869,18 +859,18 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.HopperError.NON_IDENTIFIEE">
-            <summary> 
+            <summary>
             Aucune erreur ou erreur non identifiée.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.HopperError.MOTORREVERSED">
-            <summary> 
+            <summary>
             Moteur inversé suite à une surconsomation. Probablement du à un bourrage.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.HopperError.MAXCURRENTEXCEEDED">
-            <summary> 
-            Consomation de courant hors limite du périphérique. 
+            <summary>
+            Consomation de courant hors limite du périphérique.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.HopperError.OPTOBLOCKEDPERMANENTLY">
@@ -889,9 +879,9 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.HopperError.OPTOSHORTCIRCUIT">
-            <summary> 
+            <summary>
             Optocoupleur en court-circuit.
-            </summary>            
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.HopperError.CHECKSUMA">
             <summary>
@@ -951,7 +941,7 @@
         </member>
         <member name="T:DeviceLibrary.CHopper.LevelMask">
             <summary>
-            Masque des niveau             
+            Masque des niveau
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.LevelMask.LOLEVELREACHED">
@@ -1109,7 +1099,7 @@
         <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.MontantUnpaid">
             <summary>
             Montant non distribué
-            </summary>               
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinToDispense">
             <summary>
@@ -1118,7 +1108,7 @@
         </member>
         <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.AmountToDispense">
             <summary>
-            Montant 
+            Montant
             </summary>
         </member>
         <member name="P:DeviceLibrary.CHopper.CHopperStatus.EventCounter">
@@ -1273,7 +1263,7 @@
             </summary>
             <remarks>
             Les numéros des hoppers commencent à 1 et la première adresse est 3
-            donc l'adresse d'un hopper s'obtient par : 
+            donc l'adresse d'un hopper s'obtient par :
             Numéro du Hopper + (première adresse(3) - 1) : (Adresse de base : 2)
             </remarks>
         </member>
@@ -1459,7 +1449,7 @@
         </member>
         <member name="P:DeviceLibrary.CHopper.DefaultFilling">
             <summary>
-            Nombre de pièces par défaut pour un remplissage. 
+            Nombre de pièces par défaut pour un remplissage.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.HTask">
@@ -1482,16 +1472,11 @@
             Délai pour l'interrogation des niveaux lorsque le hopper est au repos.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.mutexLevel">
-            <summary>
-            Protection de l'opération de lecture des niveaux.
-            </summary>
-        </member>
         <member name="P:DeviceLibrary.CHopper.LevelStatus">
             <summary>
             Renvoi les informations sur les niveaux des hoppers
             </summary>
-            <returns>Le masque des niveaux du hopper</returns>     
+            <returns>Le masque des niveaux du hopper</returns>
         </member>
         <member name="P:DeviceLibrary.CHopper.IsHighLevelImplemented">
             <summary>
@@ -1566,7 +1551,7 @@
         </member>
         <member name="M:DeviceLibrary.CHopper.EventLevelHopper(DeviceLibrary.Reason,System.Object)">
             <summary>
-            Ajoute un évenement de niveau à liste des évenements. 
+            Ajoute un évenement de niveau à liste des évenements.
             </summary>
             <param name="reason">Raison de l'évenement.</param>
             <param name="data">Donnée concernant l'évenement.</param>
@@ -1587,11 +1572,11 @@
             </summary>
             <returns>Chaine de caractères identifiant le hopper.</returns>
         </member>
-        <member name="M:DeviceLibrary.CHopper.Distribute(System.Byte)">
+        <member name="M:DeviceLibrary.CHopper.Dispense(System.Byte)">
             <summary>
             Provoque la distribution par le hopper en utilisant la machine d'état
             </summary>
-            <param name="numberToDispense">Nombre de token à distribuer</param>
+            <param name="coinsToDispense">Nombre de token à distribuer</param>
         </member>
         <member name="M:DeviceLibrary.CHopper.SubCounters(System.Int64)">
             <summary>
@@ -1626,7 +1611,7 @@
             @{
             <summary>
             Groupe des commandes ccTalk.
-            </summary>        
+            </summary>
             <summary>
             Enumération des commandes spécifiques aux hoppers
             </summary>
@@ -1774,7 +1759,7 @@
         <member name="F:DeviceLibrary.CHopper.Etat.STATE_DISPENSE">
             <summary>
             Traitement d'une demande de distribution
-            </summary>     
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.Etat.STATE_GETEQUIPEMENCATEGORY">
             <summary>
@@ -1789,7 +1774,7 @@
         <member name="F:DeviceLibrary.CHopper.Etat.STATE_DISPENSEINPROGRESS">
             <summary>
             Distribution en cours
-            </summary>            
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CHopper.Etat.STATE_ENDDISPENSE">
             <summary>
@@ -2054,7 +2039,7 @@
         </member>
         <member name="P:DeviceLibrary.CCoinValidator.TrashLid">
             <summary>
-            Contient l'indicateur d'ouverture du containner. 
+            Contient l'indicateur d'ouverture du containner.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CCoinValidator.ExitSensor">
@@ -2133,12 +2118,6 @@
             <returns>L'octet de l'override</returns>
             <remarks>Header 221</remarks>
         </member>
-        <member name="M:DeviceLibrary.CCoinValidator.SetDefaultSorterpath(System.Byte)">
-            <summary>
-            Modifie le chemin de sortie par défaut.
-            </summary>
-            <remarks>Header 189</remarks>
-        </member>
         <member name="P:DeviceLibrary.CCoinValidator.DefaultSorterPath">
             <summary>
             Renvoi le chemin de tri par défaut.
@@ -2188,7 +2167,7 @@
             @{
             <summary>
             Groupe des commandes ccTalk.
-            </summary>        
+            </summary>
             <summary>
             Liste des headers spécifiques au monnayeur
             </summary>
@@ -2480,10 +2459,10 @@
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.CVErrorCodes">
              \addtogroup Erreurs
-             @{        
+             @{
              <summary>
              Groupe des codes erreur renvoyés par les périphériques
-             </summary>        
+             </summary>
             <summary>
             Enumération des codes erreurs retournés par le monnayeur.
             </summary>
@@ -2500,7 +2479,7 @@
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.INHIBITEDCOIN">
             <summary>
-            Pièces refusée 
+            Pièces refusée
             </summary>
         </member>
         <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.MULTIPLEWINDOWS">
@@ -2948,7 +2927,7 @@
             @{
             <summary>
             Groupe des commandes ccTalk.
-            </summary>        
+            </summary>
             <summary>
             Enumération des commandes communnes à tous les périphériques ccTalk.
             </summary>
@@ -3134,13 +3113,13 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CccTalk.mutexCCTalk">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="F:DeviceLibrary.CccTalk.counters">
             <summary>
-            Compteurs 
+            Compteurs
             </summary>
         </member>
         <member name="F:DeviceLibrary.CccTalk.countersFile">
@@ -3149,9 +3128,9 @@
             </summary>
         </member>
         <member name="F:DeviceLibrary.CccTalk.counterSerializer">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="M:DeviceLibrary.CccTalk.#ctor">
             <summary>
@@ -3269,7 +3248,7 @@
         </member>
         <member name="T:DeviceLibrary.CccTalk.SelfTestResult">
             \addtogroup Erreurs
-            @{        
+            @{
             <summary>
             Groupe des codes erreur renvoyés par les périphériques
             </summary>
@@ -3644,7 +3623,7 @@
         </member>
         <member name="M:DeviceLibrary.CHopperVariableSet.GetVariable(DeviceLibrary.CHopperVariableSet.Variable)">
             <summary>
-            Lecture d'une variable 
+            Lecture d'une variable
             </summary>
             <param name="variable">variable demandée</param>
             <returns>Valeur de la variable demandée</returns>
@@ -3835,7 +3814,7 @@
             @{
             <summary>
             Groupe des commandes ccTalk.
-            </summary>        
+            </summary>
             <summary>
             Enumération des commandes spécifiques au Pelicano
             </summary>
@@ -3976,11 +3955,11 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CDevicesManager.AlertEventHandler">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
+             </summary>
+             <param name="sender"></param>
+             <param name="e"></param>
         </member>
         <member name="E:DeviceLibrary.CDevicesManager.CallAlert">
             <summary>
@@ -4033,7 +4012,7 @@
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged(DeviceLibrary.CDevice.CEvent)">
             <summary>
-            Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper 
+            Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper
             </summary>
             <param name="evenement"></param>
         </member>
@@ -4076,9 +4055,9 @@
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.OnBNRErreur(DeviceLibrary.CDevice.CEvent)">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.BeginTransaction(System.Int32)">
             <summary>
@@ -4119,9 +4098,9 @@
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.Dispose">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.Finalize">
             <summary>

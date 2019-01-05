@@ -126,7 +126,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tbToPay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1251, 16</value>
+    <value>1302, 18</value>
   </data>
   <data name="tbToPay.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -157,7 +157,7 @@
     <value>Top, Right</value>
   </data>
   <data name="labelAmountToPay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1160, 15</value>
+    <value>1188, 16</value>
   </data>
   <data name="labelAmountToPay.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -187,7 +187,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="buttonExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1245, 878</value>
+    <value>1296, 878</value>
   </data>
   <data name="buttonExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -235,7 +235,7 @@
     <value>0, 907</value>
   </data>
   <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1357, 24</value>
+    <value>1408, 24</value>
   </data>
   <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -259,7 +259,7 @@
     <value>Top, Right</value>
   </data>
   <data name="labelAmountReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1160, 44</value>
+    <value>1188, 45</value>
   </data>
   <data name="labelAmountReceived.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -289,7 +289,7 @@
     <value>Top, Right</value>
   </data>
   <data name="tbReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1251, 45</value>
+    <value>1302, 47</value>
   </data>
   <data name="tbReceived.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -319,7 +319,7 @@
     <value>Top, Right</value>
   </data>
   <data name="labelAmountRemaining.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1160, 73</value>
+    <value>1188, 74</value>
   </data>
   <data name="labelAmountRemaining.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -349,7 +349,7 @@
     <value>Top, Right</value>
   </data>
   <data name="tbRemaining.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1251, 74</value>
+    <value>1302, 76</value>
   </data>
   <data name="tbRemaining.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -379,7 +379,7 @@
     <value>Top, Right</value>
   </data>
   <data name="tbDenomination.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1251, 103</value>
+    <value>1302, 105</value>
   </data>
   <data name="tbDenomination.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -412,7 +412,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelDenomination.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1160, 102</value>
+    <value>1188, 103</value>
   </data>
   <data name="labelDenomination.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -460,7 +460,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="buttonHoppers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1160, 218</value>
+    <value>1188, 219</value>
   </data>
   <data name="buttonHoppers.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -490,7 +490,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCounters.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1160, 160</value>
+    <value>1188, 161</value>
   </data>
   <data name="buttonCounters.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -520,7 +520,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonRAZCompteurs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1160, 189</value>
+    <value>1188, 190</value>
   </data>
   <data name="buttonRAZCompteurs.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -568,7 +568,7 @@
     <value>Vertical</value>
   </data>
   <data name="dataGridViewCompteurs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 416</value>
+    <value>330, 416</value>
   </data>
   <data name="dataGridViewCompteurs.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -739,7 +739,7 @@
     <value>12, 12</value>
   </data>
   <data name="groupBoxPieces.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1132, 440</value>
+    <value>1160, 440</value>
   </data>
   <data name="groupBoxPieces.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -811,7 +811,7 @@
     <value>Vertical</value>
   </data>
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 416</value>
+    <value>330, 416</value>
   </data>
   <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -955,7 +955,7 @@
     <value>12, 458</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1132, 443</value>
+    <value>1160, 443</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -982,7 +982,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonFinTrans.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1160, 131</value>
+    <value>1188, 132</value>
   </data>
   <data name="buttonFinTrans.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -1012,7 +1012,7 @@
     <value>NoControl</value>
   </data>
   <data name="BtnDispenseBNR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1160, 247</value>
+    <value>1188, 248</value>
   </data>
   <data name="BtnDispenseBNR.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -1039,10 +1039,10 @@
     <value>Top, Right</value>
   </data>
   <data name="textBoxBnrDispense.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1275, 248</value>
+    <value>1302, 248</value>
   </data>
   <data name="textBoxBnrDispense.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
+    <value>100, 20</value>
   </data>
   <data name="textBoxBnrDispense.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -1134,7 +1134,7 @@
     <value>Zoom</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1357, 931</value>
+    <value>1408, 931</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1208,6 +1208,66 @@
   <data name="&gt;&gt;Montant.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;Identifiant.Name" xml:space="preserve">
+    <value>Identifiant</value>
+  </data>
+  <data name="&gt;&gt;Identifiant.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Valeur.Name" xml:space="preserve">
+    <value>Valeur</value>
+  </data>
+  <data name="&gt;&gt;Valeur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Present.Name" xml:space="preserve">
+    <value>Present</value>
+  </data>
+  <data name="&gt;&gt;Present.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToDispense.Name" xml:space="preserve">
+    <value>ToDispense</value>
+  </data>
+  <data name="&gt;&gt;ToDispense.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dispensed.Name" xml:space="preserve">
+    <value>Dispensed</value>
+  </data>
+  <data name="&gt;&gt;Dispensed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LevelSW.Name" xml:space="preserve">
+    <value>LevelSW</value>
+  </data>
+  <data name="&gt;&gt;LevelSW.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LevelHW.Name" xml:space="preserve">
+    <value>LevelHW</value>
+  </data>
+  <data name="&gt;&gt;LevelHW.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToEmpty.Name" xml:space="preserve">
+    <value>ToEmpty</value>
+  </data>
+  <data name="&gt;&gt;ToEmpty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Reload.Name" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="&gt;&gt;Reload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToLoad.Name" xml:space="preserve">
+    <value>ToLoad</value>
+  </data>
+  <data name="&gt;&gt;ToLoad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn1</value>
   </data>
@@ -1278,66 +1338,6 @@
     <value>dataGridViewCheckBoxColumn3</value>
   </data>
   <data name="&gt;&gt;dataGridViewCheckBoxColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Identifiant.Name" xml:space="preserve">
-    <value>Identifiant</value>
-  </data>
-  <data name="&gt;&gt;Identifiant.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Valeur.Name" xml:space="preserve">
-    <value>Valeur</value>
-  </data>
-  <data name="&gt;&gt;Valeur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Present.Name" xml:space="preserve">
-    <value>Present</value>
-  </data>
-  <data name="&gt;&gt;Present.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToDispense.Name" xml:space="preserve">
-    <value>ToDispense</value>
-  </data>
-  <data name="&gt;&gt;ToDispense.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Dispensed.Name" xml:space="preserve">
-    <value>Dispensed</value>
-  </data>
-  <data name="&gt;&gt;Dispensed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LevelSW.Name" xml:space="preserve">
-    <value>LevelSW</value>
-  </data>
-  <data name="&gt;&gt;LevelSW.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LevelHW.Name" xml:space="preserve">
-    <value>LevelHW</value>
-  </data>
-  <data name="&gt;&gt;LevelHW.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToEmpty.Name" xml:space="preserve">
-    <value>ToEmpty</value>
-  </data>
-  <data name="&gt;&gt;ToEmpty.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Reload.Name" xml:space="preserve">
-    <value>Reload</value>
-  </data>
-  <data name="&gt;&gt;Reload.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToLoad.Name" xml:space="preserve">
-    <value>ToLoad</value>
-  </data>
-  <data name="&gt;&gt;ToLoad.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

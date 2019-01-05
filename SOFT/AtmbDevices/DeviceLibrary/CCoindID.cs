@@ -19,11 +19,12 @@ namespace DeviceLibrary
             /// @{
             /// <summary>
             /// Groupe des commandes ccTalk.
-            /// </summary>        
+            /// </summary>
             /// <summary>
             /// Command ccTalk demandant l'identification de la pièce du canal.
             /// </summary>
             private const byte REQUESTCOINID = 184;
+
             /** @}*/
 
             /// <summary>
@@ -32,6 +33,7 @@ namespace DeviceLibrary
             private CCanal CanalOwner;
 
             private string countryCode;
+
             /// <summary>
             /// Code d'identification du pays émetteur.
             /// </summary>
@@ -42,6 +44,7 @@ namespace DeviceLibrary
             }
 
             private byte valeurCent;
+
             /// <summary>
             /// Valeur de la pièces.
             /// </summary>
@@ -52,6 +55,7 @@ namespace DeviceLibrary
             }
 
             private char issue;
+
             /// <summary>
             /// Version des données d'identification.
             /// </summary>

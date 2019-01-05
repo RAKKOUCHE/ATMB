@@ -27,6 +27,7 @@ namespace DeviceLibrary
             /// Périphérique désactivé
             /// </summary>
             DISABLED = 0,
+
             /// <summary>
             /// Périphérique activé
             /// </summary>
@@ -34,6 +35,7 @@ namespace DeviceLibrary
         }
 
         private byte[] inhibitMask;
+
         /// <summary>
         /// Masque d'ihnibition (2 octets pour 16 canaux)
         /// </summary>
@@ -44,6 +46,7 @@ namespace DeviceLibrary
         }
 
         private int pollingDelay;
+
         /// <summary>
         /// Délai entre 2 interrogation du coin validator.
         /// </summary>
@@ -108,12 +111,11 @@ namespace DeviceLibrary
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
-
         }
 
         /// <summary>
         /// Activation globale du moyen de paiement
-        /// </summary>       
+        /// </summary>
         public void MasterEnable()
         {
             try
@@ -246,7 +248,6 @@ namespace DeviceLibrary
         /// </summary>
         public override void Task()
         {
-
         }
     }
 }

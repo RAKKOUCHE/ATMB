@@ -22,44 +22,54 @@ namespace DeviceLibrary
             /// Initialisation du BNR.
             /// </summary>
             STATE_INIT,
+
             /// <summary>
             /// Ouverture de la communication entre le BNR et le PC.
             /// </summary>
             STATE_OPEN_API,
+
             /// <summary>
             /// Initialisation hardware.
             /// </summary>
             STATE_RESET,
+
             /// <summary>
             /// Enregistrement de la date.
             /// </summary>
             /// <remarks>Nécessaire pour les versions antéreures du BNR</remarks>
             STATE_SETDATETIME,
+
             /// <summary>
             /// Lecture de la liste des modules.
             /// </summary>
             STATE_GETMODULE,
+
             /// <summary>
             /// Lecture de l'état du BNR.
             /// </summary>
             STATE_GETSTATUS,
+
             /// <summary>
             /// Etat pour désactiver le périphérique.
             /// </summary>
             STATE_DISABLE,
+
             /// <summary>
             /// Etat pour activer le périphérique.
             /// </summary>
             STATE_ENABLE,
+
             /// <summary>
             /// BNR en attente.
             /// </summary>
             STATE_IDLE,
+
             /// <summary>
             /// Arrêt du BNR.
             /// </summary>
             STATE_STOP,
         }
+
         /// @}
     }
 }

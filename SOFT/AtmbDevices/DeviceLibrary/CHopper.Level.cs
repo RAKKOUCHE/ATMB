@@ -4,13 +4,12 @@
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
-
 namespace DeviceLibrary
 {
     public partial class CHopper : CccTalk
     {
         /// <summary>
-        /// Masque des niveau             
+        /// Masque des niveau
         /// </summary>
         private enum LevelMask : byte
         {
@@ -36,4 +35,3 @@ namespace DeviceLibrary
         }
     }
 }
-

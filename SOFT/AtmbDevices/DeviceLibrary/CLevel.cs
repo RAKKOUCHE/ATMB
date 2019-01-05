@@ -16,7 +16,6 @@ namespace DeviceLibrary
             /// \addtogroup Niveaux Niveaux hoppers
             /// <summary>Groupe des niveaux physiques et logiciels.</summary>
             /// @{
-
             /// <summary>
             /// Enumération des niveaux soft
             /// </summary>
@@ -26,22 +25,27 @@ namespace DeviceLibrary
                 /// Le nombre de pièces dans périphérique est au dessous ou égal au niveau vide indiqué dans le fichier paramètres.
                 /// </summary>
                 VIDE,
+
                 /// <summary>
                 /// Le nombre de pièces dans périphérique est au dessous ou égal au niveau d'alerte bas indiqué dans le fichier paramètres.
                 /// </summary>
                 BAS,
+
                 /// <summary>
                 /// Le nombre de pièces dans périphérique est compris entre le niveau d'alerte bas et le niveau d'alerte au indiqués dans le fichier paramètres.
                 /// </summary>
                 OK,
+
                 /// <summary>
                 /// Le nombre de pièces dans périphérique est au dessus ou égal au niveau d'alerte haut indiqué dans le fichier paramètres.
                 /// </summary>
                 HAUT,
+
                 /// <summary>
                 /// Le nombre de pièces dans périphérique est au dessus ou égal au niveau plein indiqué dans le fichier paramètres.
                 /// </summary>
                 PLEIN,
+
                 /// <summary>
                 /// Le nombre de pièces dans périphérique ou le fichier paramètre n'ont pas été encore lus.
                 /// </summary>
@@ -58,33 +62,40 @@ namespace DeviceLibrary
                 /// Le périphérique est vide.
                 /// </summary>
                 VIDE,
+
                 /// <summary>
                 /// Aucune sonde n'est activée.
                 /// </summary>
                 OK,
+
                 /// <summary>
                 /// Le périphérique est plein
                 /// </summary>
                 PLEIN,
+
                 /// <summary>
                 /// Les sondes n'ont pas été encore interrogées.
                 /// </summary>
                 INCONNU,
             }
+
             /// @}
-            
+
             /// <summary>
             /// Nom du périphérique
             /// </summary>
             public string ID;
+
             /// <summary>
             /// Variable contenant le niveau du périphérique par rapport aux paramètres et au compteurs.
             /// </summary>
             public SoftLevel softLevel;
+
             /// <summary>
             /// Variable contenant le niveau du périphérique par rapport à ses sondes hardware.
             /// </summary>
-            public HardLevel hardLevel;            
+            public HardLevel hardLevel;
+
             /// <summary>
             /// Constructeur
             /// </summary>

@@ -3,7 +3,7 @@
 /// \date 28 11 2018
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
-/// 
+///
 
 namespace DeviceLibrary
 {
@@ -23,44 +23,53 @@ namespace DeviceLibrary
             /// Initialisation du hopper
             /// </summary>
             STATE_INIT,
+
             /// <summary>
             /// Reset du hopper
             /// </summary>
             STATE_RESET,
+
             /// <summary>
             /// Traitement d'une demande de distribution
-            /// </summary>     
+            /// </summary>
             STATE_DISPENSE,
+
             /// <summary>
             /// Lit la catégorie du périphérique.
             /// </summary>
             STATE_GETEQUIPEMENCATEGORY,
+
             /// <summary>
             /// Lit l'état des opto-coupleurs.
             /// </summary>
             STATE_GETOPTOSTATE,
+
             /// <summary>
             /// Distribution en cours
-            /// </summary>            
+            /// </summary>
             STATE_DISPENSEINPROGRESS,
+
             /// <summary>
             /// Traitement fin de distribution
             /// </summary>
             STATE_ENDDISPENSE,
+
             /// <summary>
             /// Vérification des niveaux du  hopper,
             /// </summary>
             STATE_CHECKLEVEL,
+
             /// <summary>
             /// Inactif
             /// </summary>
             STATE_IDLE,
+
             /// <summary>
             /// interrompt la tâche.
             /// </summary>
             STATE_STOP,
         }
+
         /// @}
     }
 }
-

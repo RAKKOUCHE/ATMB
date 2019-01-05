@@ -22,14 +22,17 @@ namespace DeviceLibrary
             /// Volatiles effacées par un reset.
             /// </summary>
             VOLATILLOSTONRESET = 0,
+
             /// <summary>
             /// Volatiles effacées lors de la coupure de l'alimentation
             /// </summary>
             VOLATILLOSTONPOWERDOWN = 1,
+
             /// <summary>
             /// Permanent usage limité
             /// </summary>
             PERMANENTLIMITED = 2,
+
             /// <summary>
             /// Permanent sans limite
             /// </summary>
@@ -81,7 +84,7 @@ namespace DeviceLibrary
             {
                 byte[] bufferIn = { 0, 0, 0, 0, 0 };
                 CDevicesManager.Log.Info("Lecture des informations sur les capacités de lecture et écriture des données du {0} : ", Owner.DeviceAddress);
-                if (Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTDATASTORAGEAVAILABILITY, 0, null, bufferIn))
+                if(Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTDATASTORAGEAVAILABILITY, 0, null, bufferIn))
                 {
                     memoryType = (MemoryKeepType)bufferIn[0];
                     readBlocks = bufferIn[1];
@@ -90,7 +93,7 @@ namespace DeviceLibrary
                     writeBytesPerBlock = bufferIn[4];
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -167,18 +170,18 @@ namespace DeviceLibrary
             try
             {
                 CDevicesManager.Log.Info("Lecture du bloc de données {0} du périphérique à l'adresse {1}", Owner.DeviceAddress);
-                if (BlockNumber >= ReadBlocks)
+                if(BlockNumber >= ReadBlocks)
                 {
                     throw new Exception(string.Format("Le bloc {0} n'est pas accessible", BlockNumber));
                 }
                 byte[] bufferParam = { BlockNumber };
                 CDevicesManager.Log.Info("Lecture du bloc de données {0} du périphérique à l'adresse {1}", Owner.DeviceAddress);
-                if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.READDATABLOCK, (byte)bufferParam.Length, bufferParam, data))
+                if(!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.READDATABLOCK, (byte)bufferParam.Length, bufferParam, data))
                 {
                     throw new Exception(string.Format("Impossible de lire les données dans le bloc {0} du périphérique {1}", BlockNumber, Owner.DeviceAddress));
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
@@ -194,7 +197,7 @@ namespace DeviceLibrary
             try
             {
                 CDevicesManager.Log.Info("Ecriture du bloc de données {0} du périphérique à l'adresse {1}", Owner.DeviceAddress);
-                if (BlockNumber >= ReadBlocks)
+                if(BlockNumber >= ReadBlocks)
                 {
                     throw new Exception(string.Format("Le bloc {0} n'est pas accessible", BlockNumber));
                 }
@@ -202,12 +205,12 @@ namespace DeviceLibrary
                 byte[] bufferParam = new byte[lenParam + 1];
                 bufferParam[0] = BlockNumber;
                 Buffer.BlockCopy((byte[])data, 0, bufferParam, 1, writeBytesPerBlock);
-                if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.WRITEDATABLOCK, lenParam, bufferParam, null))
+                if(!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.WRITEDATABLOCK, lenParam, bufferParam, null))
                 {
                     throw new Exception(string.Format("Impossible d'écrire le bloc {0} dans le périphérique {1}", BlockNumber, Owner.DeviceAddress));
                 }
             }
-            catch (Exception E)
+            catch(Exception E)
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }

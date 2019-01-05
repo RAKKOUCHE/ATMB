@@ -23,6 +23,7 @@ namespace DeviceLibrary
             /// Limitation de l'acceptation non implémentée
             /// </summary>
             UNSUPPORTED = 0,
+
             /// <summary>
             /// Limitation de l'acceptation implémentée
             /// </summary>
@@ -38,6 +39,7 @@ namespace DeviceLibrary
             /// Pas de pièce dans le container.
             /// </summary>
             NOCOIN = 0,
+
             /// <summary>
             /// Au monis une pièce présent dans le container.
             /// </summary>
@@ -45,6 +47,7 @@ namespace DeviceLibrary
         }
 
         private bool isPelicanoInitialized;
+
         /// <summary>
         /// Indique si le Pelicano est initialisé.
         /// </summary>
@@ -54,13 +57,13 @@ namespace DeviceLibrary
             set => isPelicanoInitialized = value;
         }
 
-
         /// <summary>
         /// Contient le prochaine etat.
         /// </summary>
         private Etat nextState;
 
         private CoinPresent coinInContainer;
+
         /// <summary>
         /// Contient l'indicateur de présence de pièce dans le container.
         /// </summary>
@@ -270,7 +273,6 @@ namespace DeviceLibrary
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
-
 
         /// <summary>
         /// Renvoie la vitesse du moteur.
