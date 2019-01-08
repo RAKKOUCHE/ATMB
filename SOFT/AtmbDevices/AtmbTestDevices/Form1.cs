@@ -11,6 +11,10 @@ namespace AtmbTestDevices
     /// </summary>
     public partial class FormMain : Form
     {
+        /// <summary>
+        /// Initialise la fenetre principale.
+        /// </summary>
+        /// <returns></returns>
         public FormMain()
         {
             InitializeComponent();
@@ -34,6 +38,11 @@ namespace AtmbTestDevices
         private int ToDispenseBNR;
 
         /// <summary>
+        /// Nombre de billets dans le loader.
+        /// </summary>
+        private uint toLoadInLoader;
+
+        /// <summary>
         /// Indique si le montant perçu doit être remis à zéro.
         /// </summary>
         private bool isMontantPercuReset;
@@ -55,6 +64,7 @@ namespace AtmbTestDevices
                 {
                     tbReceived.Text = $"{ 0.00:c2}";
                 }
+                groupBoxPieces.Focus();
             }
             else
             {
@@ -87,7 +97,7 @@ namespace AtmbTestDevices
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MsgFromdll(object sender, CalertEventArgs e)
+        private void MsgFromdll(object sender, FireEventArg e)
         {
             Action a;
             switch(e.reason)
@@ -156,7 +166,8 @@ namespace AtmbTestDevices
                         tbInfo.AppendText($"Erreur {data.Code} sur le {data.nameOfHopper}\r\n\r\n");
                         if(data.isHopperCritical)
                         {
-                            MessageBox.Show(string.Format("Erreur {0} sur le {1}.\r\n", " Ce hopper est nécessaire au fonctionnement de la borne.", data.nameOfHopper));
+                            MessageBox.Show(string.Format("Erreur {0} sur le {1}.\r\n", " Ce hopper est nécessaire au fonctionnement de la borne.",
+                                data.nameOfHopper), "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     };
                     break;
@@ -173,7 +184,7 @@ namespace AtmbTestDevices
                                 if((data.level == CDevice.CLevel.HardLevel.VIDE) || (data.level == CDevice.CLevel.HardLevel.PLEIN))
                                 {
                                     ligne.Cells["LevelHW"].Style.BackColor = Color.Red;
-                                    MessageBox.Show(string.Format("{0} critique", data.nameOfHopper));
+                                    MessageBox.Show(string.Format("{0} critique", data.nameOfHopper), "Niveau", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 }
                                 else
                                 {
@@ -197,7 +208,7 @@ namespace AtmbTestDevices
                             {
                                 if(data.level == CDevice.CLevel.SoftLevel.VIDE)
                                 {
-                                    MessageBox.Show(string.Format("{0} critique", data.nameOfHopper));
+                                    MessageBox.Show(string.Format("{0} critique", data.nameOfHopper), "Level", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 }
                                 switch(data.level)
                                 {
@@ -292,9 +303,44 @@ namespace AtmbTestDevices
                 {
                     a = () =>
                       {
-                          MessageBox.Show(((CerrorBNR)((CDevice.CEvent)e.donnee).data).nameModule.ToString() + "\r\n" +
-                          ((CerrorBNR)((CDevice.CEvent)e.donnee).data).error.ToString(), ((CDevice.CEvent)e.donnee).nameOfDevice.ToString());
+                          CBNR_CPI.Cerror data = (CBNR_CPI.Cerror)((CDevice.CEvent)e.donnee).data;
+                          if(data.error == CBNR_CPI.ERRORTYPE.BILLREFUSED)
+                          {
+                              tbInfo.AppendText("Billet refusé\r\n\r\n");
+                          }
+                          else
+                          {
+                              MessageBox.Show(data.nameModule.ToString() + "\r\n" +
+                              data.error.ToString(), ((CDevice.CEvent)e.donnee).nameOfDevice.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                          }
                       };
+                    break;
+                }
+                case Reason.BNRMODULEMANQUANT:
+                {
+                    a = () =>
+                     {
+                         CDevice.CEvent donnee = (CDevice.CEvent)e.donnee;
+                         MessageBox.Show(donnee.data.ToString() + " retiré", donnee.nameOfDevice, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     };
+                    break;
+                }
+                case Reason.BNRMODULEREINSERE:
+                {
+                    a = () =>
+                    {
+                        CDevice.CEvent donnee = (CDevice.CEvent)e.donnee;
+                        MessageBox.Show(donnee.data.ToString() + " reinserée", donnee.nameOfDevice, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    };
+                    break;
+                }
+                case Reason.BNRRAZMETER:
+                {
+                    a = () =>
+                     {
+                         CDevice.CEvent donnee = (CDevice.CEvent)e.donnee;
+                         MessageBox.Show(string.Format(" Les compteurs {0} ont été remis à zéro.", donnee.data.ToString()), donnee.nameOfDevice, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     };
                     break;
                 }
                 default:
@@ -481,33 +527,127 @@ namespace AtmbTestDevices
             deviceManage.EndTransaction();
         }
 
-        private void BtnBNRDispense(object sender, EventArgs e)
+        /// <summary>
+        /// Envoie une demande de distribution u BNR
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <returns></returns>
+        private void BtnBNRDispense_Click(object sender, EventArgs e)
         {
             deviceManage.BNRDispense(ToDispenseBNR);
         }
 
+        /// <summary>
+        /// Vide le champ de saisie du montant à distribuer par le BNR
+        /// lorsque le champ recoit le focus.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <returns></returns>
         private void TextBoxBNRDispense_Enter(object sender, EventArgs e)
         {
             ((TextBox)sender).Text = "";
         }
 
+        /// <summary>
+        /// Vérifie et reformat la saisie lorsque le champ de saisie pert le focus.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <returns></returns>
         private void TextBoxBNRDspense_Leave(object sender, EventArgs e)
         {
             if(decimal.TryParse(textBoxBnrDispense.Text, out decimal value))
             {
                 ToDispenseBNR = (int)(value * 100);
                 textBoxBnrDispense.Text = $"{value:c2}";
+                BtnDispenseBNR.Focus();
             }
         }
 
+        /// <summary>
+        /// AFfiche une fenetre de patience lors de l'affichage de la fenêtre
+        /// principale. Active la fonction delegate recevant les messages de la
+        /// dll.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <returns></returns>
         private void FormMain_Shown(object sender, EventArgs e)
         {
             form2 = new Form2();
             form2.Show();
             form2.Refresh();
             deviceManage = new CDevicesManager();
-            deviceManage.CallAlert += new CDevicesManager.AlertEventHandler(MsgFromdll);
+            deviceManage.FireEvent += new CDevicesManager.FireEventHandler(MsgFromdll);
             isMontantPercuReset = false;
+        }
+
+        /// <summary>
+        /// Vide le champ du nombre de billets à enregistrer dans les compteurs
+        /// du loader.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TextBoxLoaderNumberBillet_Enter(object sender, EventArgs e)
+        {
+            textBoxLoaderNumberBilet.Text = "";
+        }
+
+        /// <summary>
+        /// Vérifie et format le nombre de billets à enregistrer dans le compteur
+        /// du loader.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TextBoxLoaderNumberBillet_Leave(object sender, EventArgs e)
+        {
+            if(!uint.TryParse(textBoxLoaderNumberBilet.Text, out toLoadInLoader))
+            {
+                MessageBox.Show("Cette saisie n'est pas correcte ", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxLoaderNumberBilet.Text = "0";
+                buttonLSetMeterLoader.Focus();
+            }
+        }
+
+        /// <summary>
+        /// Demande à la dll d'enregister le nombre de billets dans le compteur
+        /// du loader.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <returns></returns>
+        private void ButtonLSetMeterLoader_Click(object sender, EventArgs e)
+        {
+            deviceManage.SetLoaderNumber(toLoadInLoader);
+        }
+
+        /// <summary>
+        /// Fonction demandant la modification du chemin de sortie. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonTrieur_Click(object sender, EventArgs e)
+        {
+            deviceManage.SetSorterPath((byte)numericUpDownCanal.Value,
+                (byte)numericUpDownPath.Value);
+        }
+
+        /// <summary>
+        /// Encaisse les billets présents dans le bezel.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonRetract_Click(object sender, EventArgs e)
+        {
+            deviceManage.BNRBillRetract();
+        }
+
+
+        private void BbuttonRollBack_Click(object sender, EventArgs e)
+        {
+            deviceManage.BNRBillRollBack();
         }
     }
 }

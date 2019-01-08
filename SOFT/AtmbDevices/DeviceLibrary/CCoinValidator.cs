@@ -435,7 +435,6 @@ namespace DeviceLibrary
                         denominationInserted.CVChannel = creditBuffer.Result[i, 0];
                         denominationInserted.CVPath = creditBuffer.Result[i, 1];
                         denominationInserted.TotalAmount += canaux[creditBuffer.Result[i, 0] - 1].coinId.ValeurCent;
-
                         lock(eventListLock)
                         {
                             eventsList.Add(new CEvent
@@ -445,7 +444,6 @@ namespace DeviceLibrary
                                 data = denominationInserted
                             });
                         }
-
                         counters.totalAmountCashInCV += denominationInserted.ValeurCent;
                         counters.amountCoinInAccepted[creditBuffer.Result[i, 0] - 1] += denominationInserted.ValeurCent;
                         ++counters.coinsInAccepted[creditBuffer.Result[i, 0] - 1];

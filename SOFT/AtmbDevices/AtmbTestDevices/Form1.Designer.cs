@@ -106,9 +106,18 @@
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.buttonFinTrans = new System.Windows.Forms.Button();
+            this.butttonEndofTransacton = new System.Windows.Forms.Button();
             this.BtnDispenseBNR = new System.Windows.Forms.Button();
             this.textBoxBnrDispense = new System.Windows.Forms.TextBox();
+            this.textBoxLoaderNumberBilet = new System.Windows.Forms.TextBox();
+            this.buttonLSetMeterLoader = new System.Windows.Forms.Button();
+            this.buttonTrieur = new System.Windows.Forms.Button();
+            this.labelCanal = new System.Windows.Forms.Label();
+            this.labelPath = new System.Windows.Forms.Label();
+            this.numericUpDownCanal = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownPath = new System.Windows.Forms.NumericUpDown();
+            this.buttonRetract = new System.Windows.Forms.Button();
+            this.buttonRollBack = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.contextMenuStripClear.SuspendLayout();
             this.groupBoxPieces.SuspendLayout();
@@ -117,6 +126,8 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCanal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPath)).BeginInit();
             this.SuspendLayout();
             // 
             // tbToPay
@@ -636,19 +647,19 @@
             this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
             this.dataGridViewCheckBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // buttonFinTrans
+            // butttonEndofTransacton
             // 
-            resources.ApplyResources(this.buttonFinTrans, "buttonFinTrans");
-            this.buttonFinTrans.Name = "buttonFinTrans";
-            this.buttonFinTrans.UseVisualStyleBackColor = true;
-            this.buttonFinTrans.Click += new System.EventHandler(this.ButtonFinTrans_Click);
+            resources.ApplyResources(this.butttonEndofTransacton, "butttonEndofTransacton");
+            this.butttonEndofTransacton.Name = "butttonEndofTransacton";
+            this.butttonEndofTransacton.UseVisualStyleBackColor = true;
+            this.butttonEndofTransacton.Click += new System.EventHandler(this.ButtonFinTrans_Click);
             // 
             // BtnDispenseBNR
             // 
             resources.ApplyResources(this.BtnDispenseBNR, "BtnDispenseBNR");
             this.BtnDispenseBNR.Name = "BtnDispenseBNR";
             this.BtnDispenseBNR.UseVisualStyleBackColor = true;
-            this.BtnDispenseBNR.Click += new System.EventHandler(this.BtnBNRDispense);
+            this.BtnDispenseBNR.Click += new System.EventHandler(this.BtnBNRDispense_Click);
             // 
             // textBoxBnrDispense
             // 
@@ -658,15 +669,110 @@
             this.textBoxBnrDispense.Enter += new System.EventHandler(this.TextBoxBNRDispense_Enter);
             this.textBoxBnrDispense.Leave += new System.EventHandler(this.TextBoxBNRDspense_Leave);
             // 
+            // textBoxLoaderNumberBilet
+            // 
+            this.textBoxLoaderNumberBilet.AllowDrop = true;
+            resources.ApplyResources(this.textBoxLoaderNumberBilet, "textBoxLoaderNumberBilet");
+            this.textBoxLoaderNumberBilet.Name = "textBoxLoaderNumberBilet";
+            this.textBoxLoaderNumberBilet.Enter += new System.EventHandler(this.TextBoxLoaderNumberBillet_Enter);
+            this.textBoxLoaderNumberBilet.Leave += new System.EventHandler(this.TextBoxLoaderNumberBillet_Leave);
+            // 
+            // buttonLSetMeterLoader
+            // 
+            resources.ApplyResources(this.buttonLSetMeterLoader, "buttonLSetMeterLoader");
+            this.buttonLSetMeterLoader.Name = "buttonLSetMeterLoader";
+            this.buttonLSetMeterLoader.UseVisualStyleBackColor = true;
+            this.buttonLSetMeterLoader.Click += new System.EventHandler(this.ButtonLSetMeterLoader_Click);
+            // 
+            // buttonTrieur
+            // 
+            resources.ApplyResources(this.buttonTrieur, "buttonTrieur");
+            this.buttonTrieur.Name = "buttonTrieur";
+            this.buttonTrieur.UseVisualStyleBackColor = true;
+            this.buttonTrieur.Click += new System.EventHandler(this.ButtonTrieur_Click);
+            // 
+            // labelCanal
+            // 
+            resources.ApplyResources(this.labelCanal, "labelCanal");
+            this.labelCanal.Name = "labelCanal";
+            // 
+            // labelPath
+            // 
+            resources.ApplyResources(this.labelPath, "labelPath");
+            this.labelPath.Name = "labelPath";
+            // 
+            // numericUpDownCanal
+            // 
+            resources.ApplyResources(this.numericUpDownCanal, "numericUpDownCanal");
+            this.numericUpDownCanal.Maximum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.numericUpDownCanal.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownCanal.Name = "numericUpDownCanal";
+            this.numericUpDownCanal.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownPath
+            // 
+            resources.ApplyResources(this.numericUpDownPath, "numericUpDownPath");
+            this.numericUpDownPath.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.numericUpDownPath.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownPath.Name = "numericUpDownPath";
+            this.numericUpDownPath.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // buttonRetract
+            // 
+            resources.ApplyResources(this.buttonRetract, "buttonRetract");
+            this.buttonRetract.Name = "buttonRetract";
+            this.buttonRetract.UseVisualStyleBackColor = true;
+            this.buttonRetract.Click += new System.EventHandler(this.ButtonRetract_Click);
+            // 
+            // buttonRollBack
+            // 
+            resources.ApplyResources(this.buttonRollBack, "buttonRollBack");
+            this.buttonRollBack.Name = "buttonRollBack";
+            this.buttonRollBack.UseVisualStyleBackColor = true;
+            this.buttonRollBack.Click += new System.EventHandler(this.BbuttonRollBack_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Controls.Add(this.buttonRollBack);
+            this.Controls.Add(this.buttonRetract);
+            this.Controls.Add(this.numericUpDownPath);
+            this.Controls.Add(this.numericUpDownCanal);
+            this.Controls.Add(this.labelPath);
+            this.Controls.Add(this.labelCanal);
+            this.Controls.Add(this.buttonTrieur);
+            this.Controls.Add(this.textBoxLoaderNumberBilet);
+            this.Controls.Add(this.buttonLSetMeterLoader);
             this.Controls.Add(this.textBoxBnrDispense);
             this.Controls.Add(this.BtnDispenseBNR);
-            this.Controls.Add(this.buttonFinTrans);
+            this.Controls.Add(this.butttonEndofTransacton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxPieces);
             this.Controls.Add(this.buttonRAZCompteurs);
@@ -698,6 +804,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCanal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPath)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,7 +842,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button buttonFinTrans;
+        private System.Windows.Forms.Button butttonEndofTransacton;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
@@ -758,6 +866,15 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn ToEmpty;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reload;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ToLoad;
+        private System.Windows.Forms.TextBox textBoxLoaderNumberBilet;
+        private System.Windows.Forms.Button buttonLSetMeterLoader;
+        private System.Windows.Forms.Button buttonTrieur;
+        private System.Windows.Forms.Label labelCanal;
+        private System.Windows.Forms.Label labelPath;
+        private System.Windows.Forms.NumericUpDown numericUpDownCanal;
+        private System.Windows.Forms.NumericUpDown numericUpDownPath;
+        private System.Windows.Forms.Button buttonRetract;
+        private System.Windows.Forms.Button buttonRollBack;
     }
 }
 

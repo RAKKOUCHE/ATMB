@@ -1,11 +1,11 @@
-﻿using NLog;
-
+﻿
 /// \file CDevicesManager.cs
 /// \brief Fichier principal de la dll.
 /// \date 28 11 2018
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -71,6 +71,21 @@ namespace DeviceLibrary
         BNRERREUR,
 
         /// <summary>
+        /// Un module a été reitré.
+        /// </summary>
+        BNRMODULEMANQUANT,
+
+        /// <summary>
+        /// Un module a été réinséré.
+        /// </summary>
+        BNRMODULEREINSERE,
+
+        /// <summary>
+        /// Les compteurs de la caisse du BNR on été remis à zéro.
+        /// </summary>
+        BNRRAZMETER,
+
+        /// <summary>
         /// La dll est prête.
         /// </summary>
         DLLLREADY,
@@ -79,7 +94,7 @@ namespace DeviceLibrary
     /// <summary>
     /// Class d'évenement
     /// </summary>
-    public class CalertEventArgs : EventArgs
+    public class FireEventArg : EventArgs
     {
         /// <summary>
         /// Cause de l'événement.
@@ -117,11 +132,6 @@ namespace DeviceLibrary
         /// </summary>
         private readonly Thread msgTask;
 
-        ///// <summary>
-        ///// Evenement de la classe principale.
-        ///// </summary>
-        //public CDevice.CEvent evenement;
-
         /// <summary>
         /// Variable contenant le montant à payer.
         /// </summary>
@@ -144,19 +154,19 @@ namespace DeviceLibrary
         /// <summary>
         /// Instance du BNR
         /// </summary>
-        public CBNR_CPI bnX;
+        private CBNR_CPI bnX;
 
         /// <summary>
-        ///
+        /// Prototype de la fonctio delegate recevant les messages de la dll.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public delegate void AlertEventHandler(object sender, CalertEventArgs e);
+        public delegate void FireEventHandler(object sender, FireEventArg e);
 
         /// <summary>
         /// Evenement levant un appel à la fonction déléguée.
         /// </summary>
-        public event AlertEventHandler CallAlert;
+        public event FireEventHandler FireEvent;
 
         /// <summary>
         /// Masque des canaux activés.
@@ -240,7 +250,7 @@ namespace DeviceLibrary
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -254,6 +264,28 @@ namespace DeviceLibrary
                 int rest = CDevice.denominationInserted.TotalAmount - ToPay;
                 if(rest > 0)
                 {
+                    int toDispense = SearchDivider;
+                    if(CBNR_CPI.bnr != null && bnX.IsPresent)
+                    {
+                        if(rest > SearchDivider)
+                        {
+                            int divider = SearchDivider;
+                            if(CBNR_CPI.isDispensable)
+                            {
+                                toDispense = toDispense / divider * divider;
+                                CBNR_CPI.ev.Reset();
+                                CBNR_CPI.bnr.Denominate(toDispense, "AAA");
+                                CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                            }
+                            if(CBNR_CPI.isDispensable)
+                            {
+                                CBNR_CPI.ev.Reset();
+                                CBNR_CPI.bnr.Dispense(toDispense, "AAA");
+                                CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                            }
+                        }
+                    }
+                    rest -= toDispense;
                     foreach(CHopper hopper in Hoppers)
                     {
                         if(hopper.IsPresent &&
@@ -289,7 +321,7 @@ namespace DeviceLibrary
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -314,7 +346,7 @@ namespace DeviceLibrary
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -326,91 +358,123 @@ namespace DeviceLibrary
             Reason reason;
             while(true)
             {
-                if(CDevice.eventsList.Count > 0)
+                try
                 {
-                    lock(CDevice.eventListLock)
+                    if(CDevice.eventsList.Count > 0)
                     {
-                        reason = CDevice.eventsList[0].reason;
-                    }
-                    switch(reason)
-                    {
-                        case Reason.MONEYINTRODUCTED:
+                        lock(CDevice.eventListLock)
                         {
-                            OnMoneyReceived(CDevice.eventsList[0]);
-
-                            if((ToPay - CDevice.denominationInserted.TotalAmount) < 1)
+                            reason = CDevice.eventsList[0].reason;
+                        }
+                        switch(reason)
+                        {
+                            case Reason.MONEYINTRODUCTED:
                             {
-                                monnayeur.IsCVToBeDeactivated = true;
-                                bnX.IsBNRToBeDeactivated = true;
-                                ChangeBack();
-                                EndTransaction();
-                                CDevice.denominationInserted.TotalAmount = 0;
+                                OnMoneyReceived(CDevice.eventsList[0]);
+
+                                if((ToPay - CDevice.denominationInserted.TotalAmount) < 1)
+                                {
+                                    if(monnayeur != null)
+                                    {
+
+                                        monnayeur.IsCVToBeDeactivated = true;
+                                    }
+                                    if(bnX != null)
+                                    {
+                                        bnX.IsBNRToBeDeactivated = true;
+                                    }
+                                    ChangeBack();
+                                    EndTransaction();
+                                    CDevice.denominationInserted.TotalAmount = 0;
+                                }
+                                CDevice.denominationInserted.BackTotalAmount = CDevice.denominationInserted.TotalAmount;
+                                break;
                             }
-                            CDevice.denominationInserted.BackTotalAmount = CDevice.denominationInserted.TotalAmount;
-                            break;
+                            case Reason.BNRERREUR:
+                            {
+                                OnBNRErreur(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case Reason.DLLLREADY:
+                            {
+                                OnDllReady();
+                                break;
+                            }
+                            case Reason.COINVALIDATORERROR:
+                            {
+                                OnCVError(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case Reason.CASHCLOSED:
+                            {
+                                if(monnayeur != null)
+                                {
+                                    monnayeur.IsCVToBeDeactivated = true;
+                                }
+                                bnX.IsBNRToBeDeactivated = true;
+                                CDevice.denominationInserted.TotalAmount = ToPay = 0;
+                                OnCashClose();
+                                break;
+                            }
+                            case Reason.CASHOPENED:
+                            {
+                                OnCashOpen();
+                                break;
+                            }
+                            case Reason.HOPPERERROR:
+                            {
+                                OnHopperError(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case Reason.HOPPERDISPENSED:
+                            {
+                                OnHopperDispensed(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case Reason.HOPPERHWLEVELCHANGED:
+                            {
+                                OnHopperHardLevelChanged(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case Reason.HOPPERSWLEVELCHANGED:
+                            {
+                                OnHopperSoftLevelChanged(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case Reason.HOPPEREMPTIED:
+                            {
+                                OnHopperEmptied(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case Reason.BNRMODULEMANQUANT:
+                            {
+                                OnBRNModuleRemoved(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case Reason.BNRMODULEREINSERE:
+                            {
+                                OnbnrModuleReinsere(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case Reason.BNRRAZMETER:
+                            {
+                                OnBNRResetModule(CDevice.eventsList[0]);
+                                break;
+                            }
+                            default:
+                                break;
                         }
-                        case Reason.BNRERREUR:
+                        lock(CDevice.eventListLock)
                         {
-                            OnBNRErreur(CDevice.eventsList[0]);
-                            break;
+                            CDevice.eventsList.RemoveAt(0);
                         }
-                        case Reason.DLLLREADY:
-                        {
-                            OnDllReady();
-                            break;
-                        }
-                        case Reason.COINVALIDATORERROR:
-                        {
-                            OnCVError(CDevice.eventsList[0]);
-                            break;
-                        }
-                        case Reason.CASHCLOSED:
-                        {
-                            monnayeur.IsCVToBeDeactivated = true;
-                            bnX.IsBNRToBeDeactivated = true;
-                            CDevice.denominationInserted.TotalAmount = ToPay = 0;
-                            OnCashClose();
-                            break;
-                        }
-                        case Reason.CASHOPENED:
-                        {
-                            OnCashOpen();
-                            break;
-                        }
-                        case Reason.HOPPERERROR:
-                        {
-                            OnHopperError(CDevice.eventsList[0]);
-                            break;
-                        }
-                        case Reason.HOPPERDISPENSED:
-                        {
-                            OnHopperDispensed(CDevice.eventsList[0]);
-                            break;
-                        }
-                        case Reason.HOPPERHWLEVELCHANGED:
-                        {
-                            OnHopperHardLevelChanged(CDevice.eventsList[0]);
-                            break;
-                        }
-                        case Reason.HOPPERSWLEVELCHANGED:
-                        {
-                            OnHopperSoftLevelChanged(CDevice.eventsList[0]);
-                            break;
-                        }
-                        case Reason.HOPPEREMPTIED:
-                        {
-                            OnHopperEmptied(CDevice.eventsList[0]);
-                            break;
-                        }
-                        default:
-                            break;
                     }
-                    lock(CDevice.eventListLock)
-                    {
-                        CDevice.eventsList.RemoveAt(0);
-                    }
+                    Thread.Sleep(100);
                 }
-                Thread.Sleep(100);
+                catch(Exception E)
+                {
+                    Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
             }
         }
 
@@ -495,7 +559,7 @@ namespace DeviceLibrary
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -507,16 +571,37 @@ namespace DeviceLibrary
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.HOPPEREMPTIED,
                     donnee = evenement,
                 };
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evenement levé si un module est retiré du BNR.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnBRNModuleRemoved(CDevice.CEvent evenement)
+        {
+            try
+            {
+                FireEventArg alertEventArgs = new FireEventArg
+                {
+                    reason = Reason.BNRMODULEMANQUANT,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), alertEventArgs);
+            }
+            catch(Exception E)
+            {
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -528,16 +613,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.HOPPERHWLEVELCHANGED,
                     donnee = evenement
                 };
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -549,16 +634,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.HOPPERSWLEVELCHANGED,
                     donnee = evenement,
                 };
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -570,16 +655,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.HOPPERERROR,
                     donnee = evenement,
                 };
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -591,16 +676,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.HOPPERDISPENSED,
                     donnee = evenement,
                 };
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -611,16 +696,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.CASHCLOSED,
                     donnee = null,
                 };
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -631,16 +716,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.CASHOPENED,
                     donnee = null,
                 };
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -651,17 +736,17 @@ namespace DeviceLibrary
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.MONEYINTRODUCTED,
                     donnee = evenement,
                 };
                 Console.Beep();
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -673,16 +758,16 @@ namespace DeviceLibrary
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.COINVALIDATORERROR,
                     donnee = evenement,
                 };
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -693,37 +778,79 @@ namespace DeviceLibrary
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.DLLLREADY,
                     donnee = null,
                 };
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
                 EndTransaction();
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
         /// <summary>
-        ///
+        /// Evénement levé quand une erreur s'est produte sur le BNR.
         /// </summary>
         private void OnBNRErreur(CDevice.CEvent evenement)
         {
             try
             {
-                CalertEventArgs alertEventArgs = new CalertEventArgs
+                FireEventArg alertEventArgs = new FireEventArg
                 {
                     reason = Reason.BNRERREUR,
                     donnee = evenement,
                 };
-                CallAlert(new object(), alertEventArgs);
+                FireEvent(new object(), alertEventArgs);
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evenment levé quand un module est réinséré.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnbnrModuleReinsere(CDevice.CEvent evenement)
+        {
+            try
+            {
+                FireEventArg alertEventArgs = new FireEventArg
+                {
+                    reason = Reason.BNRMODULEREINSERE,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), alertEventArgs);
+            }
+            catch(Exception E)
+            {
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Indique que le module est remis à zéro.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnBNRResetModule(CDevice.CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = Reason.BNRRAZMETER,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch(Exception E)
+            {
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -738,8 +865,14 @@ namespace DeviceLibrary
             {
                 if((ToPay = value) > CDevice.denominationInserted.TotalAmount)
                 {
-                    monnayeur.IsCVToBeActivated = monnayeur.IsPresent;
-                    bnX.IsBNRToBeActivated = bnX.IsPresent;
+                    if(monnayeur != null)
+                    {
+                        monnayeur.IsCVToBeActivated = monnayeur.IsPresent;
+                    }
+                    if(bnX != null)
+                    {
+                        bnX.IsBNRToBeActivated = bnX.IsPresent;
+                    }
                     lock(CDevice.eventListLock)
                     {
                         CDevice.eventsList.Add(new CDevice.CEvent
@@ -752,7 +885,7 @@ namespace DeviceLibrary
                 }
                 else
                 {
-                    ToPay = CDevice.denominationInserted.TotalAmount = CDevice.denominationInserted.BackTotalAmount =  0;
+                    ToPay = CDevice.denominationInserted.TotalAmount = CDevice.denominationInserted.BackTotalAmount = 0;
                     monnayeur.IsCVToBeDeactivated = monnayeur.IsPresent;
                     bnX.IsBNRToBeDeactivated = monnayeur.IsPresent;
                     EndTransaction();
@@ -760,7 +893,7 @@ namespace DeviceLibrary
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -769,6 +902,16 @@ namespace DeviceLibrary
         /// </summary>
         public void EndTransaction()
         {
+            if(bnX.IsPresent)
+            {
+                CBNR_CPI.ev.Reset();
+                CBNR_CPI.bnr.Cancel();
+                CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+
+                CBNR_CPI.ev.Reset();
+                CBNR_CPI.bnr.CashInEnd();
+                CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+            }
             lock(CDevice.eventListLock)
             {
                 CDevice.CEvent evenement = new CDevice.CEvent
@@ -786,7 +929,12 @@ namespace DeviceLibrary
         /// </summary>
         public string GetSerialPort()
         {
-            return CccTalk.PortSerie.PortName;
+            if(CccTalk.PortSerie != null)
+            {
+
+                return CccTalk.PortSerie.PortName;
+            }
+            return string.Empty;
         }
 
         /// <summary>
@@ -802,12 +950,120 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// Fixe le compteur de billets contenus dans le loader.
+        /// </summary>
+        /// <param name="numberOfBill"></param>
+        public void SetLoaderNumber(uint numberOfBill)
+        {
+            CBNR_CPI.bnr.SetLoaderCuContent("LO1", numberOfBill);
+        }
+
+        /// <summary>
+        /// Recherche la plus petite denomination disponible.
+        /// </summary>
+        /// <returns></returns>
+        private int SearchDivider
+        {
+            get
+            {
+                byte loop = 0;
+                CBNR_CPI.isDispensable = false;
+                int result = 250;
+                do
+                {
+                    result *= 2;
+                    CBNR_CPI.ev.Reset();
+                    CBNR_CPI.bnr.Denominate(result, "AAA");
+                    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                } while((++loop < 3) && !CBNR_CPI.isDispensable);
+                return result;
+            }
+        }
+
+        /// <summary>
         /// Envoi une demande de distribution au BNR
         /// </summary>
-        /// <param name="Amount"></param>
-        public void BNRDispense(decimal Amount)
+        /// <param name="Amount">Montant à distribuer.</param>
+        public void BNRDispense(int Amount)
         {
-            CBNR_CPI.bnr.Dispense((int)Amount, "EUR");
+            try
+            {
+                if((CBNR_CPI.bnr != null) && bnX.IsPresent)
+                {
+                    int divider = SearchDivider;
+                    if(CBNR_CPI.isDispensable)
+                    {
+                        Amount = Amount / divider * divider;
+                        CBNR_CPI.ev.Reset();
+                        CBNR_CPI.bnr.Denominate(Amount, "AAA");
+                        CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                    }
+                }
+                if(CBNR_CPI.isDispensable)
+                {
+                    CBNR_CPI.bnr.Dispense(Amount, "AAA", Mei.Bnr.ChangeAlgorithm.OptimumChange);
+                }
+            }
+            catch(Exception E)
+            {
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Reupère les billets présents dans le bezel.
+        /// </summary>
+        public void BNRBillRetract()
+        {
+            try
+            {
+                if(CBNR_CPI.bnr != null && bnX.IsPresent && CBNR_CPI.isCashPresent)
+                {
+                    CBNR_CPI.ev.Reset();
+                    CBNR_CPI.bnr.CancelWaitingCashTaken();
+                    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                    CBNR_CPI.ev.Reset();
+                    CBNR_CPI.bnr.Retract();
+                    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                    CBNR_CPI.ev.Reset();
+                    CBNR_CPI.bnr.Reject();
+                    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                }
+            }
+            catch(Exception E)
+            {
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Retourne les billets e escrow.
+        /// </summary>
+        public void BNRBillRollBack()
+        {
+            try
+            {
+            
+                if(CBNR_CPI.bnr != null && bnX.IsPresent && CBNR_CPI.bnr.TransactionStatus.CurrentOperation == 6122)
+                {
+                    CBNR_CPI.ev.Reset();
+                    CBNR_CPI.bnr.Cancel();
+                    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                    CBNR_CPI.ev.Reset();
+                    CBNR_CPI.bnr.CashInRollback();
+                    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                    while(!CBNR_CPI.isCashTaken)
+                        ;
+                    CBNR_CPI.ev.Reset();
+                    CBNR_CPI.bnr.CashInEnd();
+                    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                    BeginTransaction(ToPay);
+                }
+            }
+            catch(Exception E)
+            {
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
         }
 
         /// <summary>
@@ -836,6 +1092,7 @@ namespace DeviceLibrary
                 CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
 
                 bnX = new CBNR_CPI();
+#if !DEBUG
                 monnayeur = new CCoinValidator();
                 if(monnayeur.ProductCode == "BV")
                 {
@@ -857,7 +1114,7 @@ namespace DeviceLibrary
                     hopper.State = CHopper.Etat.STATE_CHECKLEVEL;
                 }
                 Hoppers.Sort((x, y) => y.CoinValue.CompareTo(x.CoinValue));
-
+#endif
                 lock(CDevice.eventListLock)
                 {
                     CDevice.CEvent evenement = new CDevice.CEvent
@@ -873,7 +1130,7 @@ namespace DeviceLibrary
             }
             catch(Exception E)
             {
-                Log.Error("Erreur {0}, {1}, {2}", E.GetType(), E.Message, E.StackTrace);
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 
@@ -898,15 +1155,21 @@ namespace DeviceLibrary
                 catch(Exception)
                 {
                 }
-                foreach(CHopper h in Hoppers)
+                try
                 {
-                    try
+                    foreach(CHopper h in Hoppers)
                     {
-                        h.HTask.Abort();
+                        try
+                        {
+                            h.HTask.Abort();
+                        }
+                        catch
+                        {
+                        }
                     }
-                    catch
-                    {
-                    }
+                }
+                catch
+                {
                 }
             }
 

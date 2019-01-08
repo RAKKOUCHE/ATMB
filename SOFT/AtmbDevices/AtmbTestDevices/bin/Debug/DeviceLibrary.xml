@@ -4,51 +4,6 @@
         <name>DeviceLibrary</name>
     </assembly>
     <members>
-        <member name="T:DeviceLibrary.ERROR_BNR">
-            <summary>
-            Enumération des erreurs du BNR.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.ERROR_BNR.BOURRAGE">
-            <summary>
-            Billet bloqué dans le BNR.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.ERROR_BNR.BNR_OPEN">
-            <summary>
-            Le bnr est ouvert ou déverrouillé.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.ERROR_BNR.TYPE_BILLET_ERREUR">
-            <summary>
-            Indique une erreurs sur le paramètrage d'un billet.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.ERROR_BNR.STOCKAGE_ERREUR">
-            <summary>
-            Erreur de stockage des billets.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.ERROR_BNR.DLL_NOT_FREE">
-            <summary>
-            Les dlls sont occupées.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CerrorBNR">
-            <summary>
-            Class des erreurs du BNR.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CerrorBNR.nameModule">
-            <summary>
-            Nom du module.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CerrorBNR.error">
-            <summary>
-            Code de l'error.
-            </summary>
-        </member>
         <member name="T:DeviceLibrary.CBNR_CPI">
             <summary>
             Class du bnr
@@ -57,6 +12,110 @@
         <member name="F:DeviceLibrary.CBNR_CPI.bnr">
             <summary>
             Instance du bnr.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CBNR_CPI.ERRORTYPE">
+            <summary>
+            Enumération des erreurs du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BOURRAGE">
+            <summary>
+            Billet bloqué dans le BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNR_OUVERT">
+            <summary>
+            Le bnr est ouvert ou déverrouillé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.TYPE_BILLET_ERREUR">
+            <summary>
+            Indique une erreurs sur le paramètrage d'un billet.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.STOCKAGE_ERREUR">
+            <summary>
+            Erreur de stockage des billets.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNRMODULEMANQUANT">
+            <summary>
+            Un module a été retiré.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNRMODULERINSERE">
+            <summary>
+            Un module a été réinseré.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BILLREFUSED">
+            <summary>
+            Indique qu'un billet a été refusé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.DLL_NOT_FREE">
+            <summary>
+            Les dlls sont occupées.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CBNR_CPI.Cerror">
+            <summary>
+            Class des erreurs du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Cerror.nameModule">
+            <summary>
+            Nom du module.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Cerror.error">
+            <summary>
+            Code de l'error.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CBNR_CPI.CModulePosition">
+            <summary>
+            Class indiquant la présence ou non d'un module.
+            </summary>
+            <remarks>Cette classe est utlisée pour les retraits et les insertions des modles.</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.CModulePosition.name">
+            <summary>
+            Nom du module.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.CModulePosition.isPresent">
+            <summary>
+            Flag indiquant 
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.CModulePosition.isReinserted">
+            <summary>
+            Indique si un module a été reinséré.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.CModulePosition.ToString">
+            <summary>
+            Renvoi le nom du module.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.CModulePosition.#ctor(System.String,System.Boolean)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="name">Indique le nom du module contenu dans l'instance de la classe.</param>
+            <param name="isPresent">Initialise la présence du module.</param>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.listModulePosition">
+            <summary>
+            Liste contenant l'état des modules.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.isDispensable">
+            <summary>
+            Indique si la demande de denomination est possible.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CBNR_CPI.ProductCode">
@@ -101,12 +160,22 @@
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.errorInfo">
             <summary>
-            Instance de la class CerrorBNR.
+            Instance de la class Cerror.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CBNR_CPI.IsBNRToBeDeactivated">
             <summary>
             Indique si le monnayeur doit être adtivé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.isCashPresent">
+            <summary>
+            Flag indiquant si les billets sont présentés à l'usager.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.isCashTaken">
+            <summary>
+            Flag indiquant si les billets ont été repris.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CBNR_CPI.IsBNRToBeActivated">
@@ -148,7 +217,7 @@
             <param name="extendedResult"></param>
             <param name="Data"></param>
         </member>
-        <member name="M:DeviceLibrary.CBNR_CPI.HardwareError">
+        <member name="M:DeviceLibrary.CBNR_CPI.HardwareError(Mei.Bnr.DeviceStatus)">
             <summary>
             Recherche de l'erreur et du module en erreur
             </summary>
@@ -3889,22 +3958,37 @@
             Une erreur sur le BNR est survenue.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.Reason.BNRMODULEMANQUANT">
+            <summary>
+            Un module a été reitré.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.Reason.BNRMODULEREINSERE">
+            <summary>
+            Un module a été réinséré.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.Reason.BNRRAZMETER">
+            <summary>
+            Les compteurs de la caisse du BNR on été remis à zéro.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.Reason.DLLLREADY">
             <summary>
             La dll est prête.
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CalertEventArgs">
+        <member name="T:DeviceLibrary.FireEventArg">
             <summary>
             Class d'évenement
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CalertEventArgs.reason">
+        <member name="F:DeviceLibrary.FireEventArg.reason">
             <summary>
             Cause de l'événement.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CalertEventArgs.donnee">
+        <member name="F:DeviceLibrary.FireEventArg.donnee">
             <summary>
             Objet contenant les infomations concernant l'événement.
             </summary>
@@ -3954,14 +4038,14 @@
             Instance du BNR
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CDevicesManager.AlertEventHandler">
-             <summary>
-            
-             </summary>
-             <param name="sender"></param>
-             <param name="e"></param>
+        <member name="T:DeviceLibrary.CDevicesManager.FireEventHandler">
+            <summary>
+            Prototype de la fonctio delegate recevant les messages de la dll.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
         </member>
-        <member name="E:DeviceLibrary.CDevicesManager.CallAlert">
+        <member name="E:DeviceLibrary.CDevicesManager.FireEvent">
             <summary>
             Evenement levant un appel à la fonction déléguée.
             </summary>
@@ -4001,6 +4085,12 @@
         <member name="M:DeviceLibrary.CDevicesManager.OnHopperEmptied(DeviceLibrary.CDevice.CEvent)">
             <summary>
             Evénement levé lorsque le hopper est vidé.
+            </summary>
+            <param name="evenement"></param>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.OnBRNModuleRemoved(DeviceLibrary.CDevice.CEvent)">
+            <summary>
+            Evenement levé si un module est retiré du BNR.
             </summary>
             <param name="evenement"></param>
         </member>
@@ -4055,9 +4145,21 @@
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.OnBNRErreur(DeviceLibrary.CDevice.CEvent)">
-             <summary>
-            
-             </summary>
+            <summary>
+            Evénement levé quand une erreur s'est produte sur le BNR.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.OnbnrModuleReinsere(DeviceLibrary.CDevice.CEvent)">
+            <summary>
+            Evenment levé quand un module est réinséré.
+            </summary>
+            <param name="evenement"></param>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.OnBNRResetModule(DeviceLibrary.CDevice.CEvent)">
+            <summary>
+            Indique que le module est remis à zéro.
+            </summary>
+            <param name="evenement"></param>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.BeginTransaction(System.Int32)">
             <summary>
@@ -4081,11 +4183,33 @@
             Remise à zéro des compteurs.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.BNRDispense(System.Decimal)">
+        <member name="M:DeviceLibrary.CDevicesManager.SetLoaderNumber(System.UInt32)">
+            <summary>
+            Fixe le compteur de billets contenus dans le loader.
+            </summary>
+            <param name="numberOfBill"></param>
+        </member>
+        <member name="P:DeviceLibrary.CDevicesManager.SearchDivider">
+            <summary>
+            Recherche la plus petite denomination disponible.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.BNRDispense(System.Int32)">
             <summary>
             Envoi une demande de distribution au BNR
             </summary>
-            <param name="Amount"></param>
+            <param name="Amount">Montant à distribuer.</param>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.BNRBillRetract">
+            <summary>
+            Reupère les billets présents dans le bezel.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.BNRBillRollBack">
+            <summary>
+            Retourne les billets e escrow.
+            </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.#ctor">
             <summary>
