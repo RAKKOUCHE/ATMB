@@ -10,7 +10,7 @@
        <Types>
         <Type Name="CDevice" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2019-01-08 23:17:00Z" FixCategory="DependsOnFix">
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2019-01-09 09:49:43Z" FixCategory="DependsOnFix">
            <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implémenter IDisposable sur 'CDevice' car il crée des membres des types IDisposable suivants : 'AutoResetEvent'. Si 'CDevice' existait précédemment, le fait d'ajouter de nouveaux membres qui implémentent IDisposable pour ce type est considéré comme une modification avec rupture pour les utilisateurs existants.</Issue>
           </Message>
          </Messages>

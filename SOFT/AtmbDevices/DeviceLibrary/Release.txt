@@ -65,4 +65,16 @@
  * - Modfication de l'initialisation du BNR.
  * - Gestion des évenements dans une liste. 
  *
+ * Rev. 09.01.11   2019 01 09<br>
+ * -------------------------------------
+ * ### Modifications
+ * - Test des capacités de rendu du BNR.
+ * - Rollback des billets en escrow
+ * - Retrait des billets présentés.
+ * - Remise à zéro automatique des compteurs de la caisse et du loader après une
+ *	réinsertion.
+ * - Mise en place de la mise à jour des compteurs du loader en recharge.
+ *
+ *------------------------------------------------------------------------------
+ * 
  */

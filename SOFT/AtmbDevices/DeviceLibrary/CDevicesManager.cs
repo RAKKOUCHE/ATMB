@@ -1092,7 +1092,7 @@ namespace DeviceLibrary
                 CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
 
                 bnX = new CBNR_CPI();
-#if !DEBUG
+
                 monnayeur = new CCoinValidator();
                 if(monnayeur.ProductCode == "BV")
                 {
@@ -1114,7 +1114,7 @@ namespace DeviceLibrary
                     hopper.State = CHopper.Etat.STATE_CHECKLEVEL;
                 }
                 Hoppers.Sort((x, y) => y.CoinValue.CompareTo(x.CoinValue));
-#endif
+
                 lock(CDevice.eventListLock)
                 {
                     CDevice.CEvent evenement = new CDevice.CEvent
