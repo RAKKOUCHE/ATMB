@@ -6,6 +6,9 @@
 
 namespace DeviceLibrary
 {
+    /// <summary>
+    /// Class gérant le monnayeur.
+    /// </summary>
     public partial class CCoinValidator : CcashReader
     {
         /// \addtogroup Headers

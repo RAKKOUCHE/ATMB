@@ -124,7 +124,7 @@ namespace DeviceLibrary
             {
                 this.name = name;
                 this.isPresent = isPresent;
-                this.isReinserted = false;
+                isReinserted = false;
             }
         }
 
@@ -165,7 +165,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Instance de la classe contenant les informations sur le billet en traitenent.
         /// </summary>
-        private static XfsCashOrder cashOrder;
+        private static readonly XfsCashOrder cashOrder;
 
 #pragma warning restore CS0169 // The field 'CBNR_CPI.cashOrder' is never used
 
@@ -320,7 +320,7 @@ namespace DeviceLibrary
                         {
                             eventsList.Add(new CEvent
                             {
-                                reason = Reason.MONEYINTRODUCTED,
+                                reason = CEvent.Reason.MONEYINTRODUCTED,
                                 nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
                                 data = denominationInserted,
                             });
@@ -335,7 +335,7 @@ namespace DeviceLibrary
                             errorInfo.error = ERRORTYPE.BILLREFUSED;
                             eventsList.Add(new CEvent
                             {
-                                reason = Reason.BNRERREUR,
+                                reason = CEvent.Reason.BNRERREUR,
                                 nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
                                 data = errorInfo,
                             });
@@ -443,7 +443,7 @@ namespace DeviceLibrary
                     {
                         foreach(CModulePosition modulePosition in listModulePosition)
                         {
-                            if((modulePosition.name == ((Mei.Bnr.CashUnit.CashUnit)Data).PhysicalCashUnits[0].Name))
+                            if(modulePosition.name == ((Mei.Bnr.CashUnit.CashUnit)Data).PhysicalCashUnits[0].Name)
                             {
                                 CEvent eventStatus = new CEvent()
                                 {
@@ -451,15 +451,15 @@ namespace DeviceLibrary
                                     data = modulePosition.name,
 
                                 };
-                                if(!(modulePosition.isPresent = (((Mei.Bnr.CashUnit.CashUnit)Data).PhysicalCashUnits[0].Status != Mei.Bnr.CashUnit.CashUnitStatus.Missing)))
+                                if(!(modulePosition.isPresent = ((Mei.Bnr.CashUnit.CashUnit)Data).PhysicalCashUnits[0].Status != Mei.Bnr.CashUnit.CashUnitStatus.Missing))
                                 {
                                     modulePosition.isReinserted = false;
-                                    eventStatus.reason = Reason.BNRMODULEMANQUANT;
+                                    eventStatus.reason = CEvent.Reason.BNRMODULEMANQUANT;
                                 }
                                 else
                                 {
                                     modulePosition.isReinserted = true;
-                                    eventStatus.reason = Reason.BNRMODULEREINSERE;
+                                    eventStatus.reason = CEvent.Reason.BNRMODULEREINSERE;
                                 }
                                 lock(eventListLock)
                                 {
@@ -540,7 +540,7 @@ namespace DeviceLibrary
 
                 case OperationId.CashInRollBack:
                 {
-                    CDevicesManager.ToPay -= ((Mei.Bnr.XfsCashOrder)Data).Denomination.Amount;
+                    CDevicesManager.ToPay -= ((XfsCashOrder)Data).Denomination.Amount;
                     break;
                 }
                 case OperationId.CashInEnd:
@@ -597,7 +597,7 @@ namespace DeviceLibrary
 
                                     CEvent eventStatus = new CEvent()
                                     {
-                                        reason = Reason.BNRRAZMETER,
+                                        reason = CEvent.Reason.BNRRAZMETER,
                                         nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
                                         data = modulePosition.name,
                                     };
@@ -692,7 +692,7 @@ namespace DeviceLibrary
             {
                 eventsList.Add(new CEvent
                 {
-                    reason = Reason.BNRERREUR,
+                    reason = CEvent.Reason.BNRERREUR,
                     nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
                     data = errorInfo
                 });
@@ -773,7 +773,7 @@ namespace DeviceLibrary
                                 {
                                     eventsList.Add(new CEvent
                                     {
-                                        reason = Reason.BNRERREUR,
+                                        reason = CEvent.Reason.BNRERREUR,
                                         nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
                                         data = errorInfo
                                     });

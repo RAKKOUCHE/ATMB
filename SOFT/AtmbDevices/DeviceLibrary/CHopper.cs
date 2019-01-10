@@ -583,6 +583,12 @@ namespace DeviceLibrary
         /// </summary>
         private static int delaypollLevel;
 
+
+        /// <summary>
+        /// Niveaux des périphériques.
+        /// </summary>
+        public CLevel deviceLevel;
+
         /*--------------------------------------------------------------*/
 
         /// <summary>
@@ -957,7 +963,7 @@ namespace DeviceLibrary
         /// </summary>
         /// <param name="reason">Raison de l'évenement.</param>
         /// <param name="data">Donnée concernant l'évenement.</param>
-        private void EventLevelHopper(Reason reason, object data)
+        private void EventLevelHopper(CEvent.Reason reason, object data)
         {
             lock(eventListLock)
             {
@@ -988,7 +994,7 @@ namespace DeviceLibrary
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.hardLevel = CLevel.HardLevel.OK
                         };
-                        EventLevelHopper(Reason.HOPPERHWLEVELCHANGED, eventData);
+                        EventLevelHopper(CEvent.Reason.HOPPERHWLEVELCHANGED, eventData);
                     }
 
                     if((deviceLevel.hardLevel != CLevel.HardLevel.VIDE) && IsLowLevelReached)
@@ -1000,7 +1006,7 @@ namespace DeviceLibrary
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.hardLevel = CLevel.HardLevel.VIDE
                         };
-                        EventLevelHopper(Reason.HOPPERHWLEVELCHANGED, eventData);
+                        EventLevelHopper(CEvent.Reason.HOPPERHWLEVELCHANGED, eventData);
                     }
                     if((deviceLevel.hardLevel != CLevel.HardLevel.PLEIN) && IsHighLevelReached)
                     {
@@ -1011,7 +1017,7 @@ namespace DeviceLibrary
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.hardLevel = CLevel.HardLevel.PLEIN
                         };
-                        EventLevelHopper(Reason.HOPPERHWLEVELCHANGED, eventData);
+                        EventLevelHopper(CEvent.Reason.HOPPERHWLEVELCHANGED, eventData);
                     }
                     if((deviceLevel.softLevel != CLevel.SoftLevel.OK) && (CoinsInHopper >= LevelLOSoft) &&
                         (CoinsInHopper < LevelHISoft))
@@ -1023,7 +1029,7 @@ namespace DeviceLibrary
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.softLevel = CLevel.SoftLevel.OK
                         };
-                        EventLevelHopper(Reason.HOPPERSWLEVELCHANGED, eventData);
+                        EventLevelHopper(CEvent.Reason.HOPPERSWLEVELCHANGED, eventData);
                     }
                     if((deviceLevel.softLevel != CLevel.SoftLevel.VIDE) && (CoinsInHopper < LevelEmptySoft))
                     {
@@ -1034,7 +1040,7 @@ namespace DeviceLibrary
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.softLevel = CLevel.SoftLevel.VIDE
                         };
-                        EventLevelHopper(Reason.HOPPERSWLEVELCHANGED, eventData);
+                        EventLevelHopper(CEvent.Reason.HOPPERSWLEVELCHANGED, eventData);
                     }
                     if((deviceLevel.softLevel != CLevel.SoftLevel.BAS) && (CoinsInHopper >= LevelEmptySoft) &&
                             (CoinsInHopper < LevelLOSoft))
@@ -1046,7 +1052,7 @@ namespace DeviceLibrary
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.softLevel = CLevel.SoftLevel.BAS
                         };
-                        EventLevelHopper(Reason.HOPPERSWLEVELCHANGED, eventData);
+                        EventLevelHopper(CEvent.Reason.HOPPERSWLEVELCHANGED, eventData);
                     }
                     if((deviceLevel.softLevel != CLevel.SoftLevel.HAUT) && (CoinsInHopper > LevelHISoft) &&
                         (CoinsInHopper < LevelFullSoft))
@@ -1058,7 +1064,7 @@ namespace DeviceLibrary
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.softLevel = CLevel.SoftLevel.HAUT
                         };
-                        EventLevelHopper(Reason.HOPPERSWLEVELCHANGED, eventData);
+                        EventLevelHopper(CEvent.Reason.HOPPERSWLEVELCHANGED, eventData);
                     }
                     if((deviceLevel.softLevel != CLevel.SoftLevel.PLEIN) && (LevelFullSoft < CoinsInHopper))
                     {
@@ -1069,7 +1075,7 @@ namespace DeviceLibrary
                             coinsNumber = CoinsInHopper,
                             level = deviceLevel.softLevel = CLevel.SoftLevel.PLEIN
                         };
-                        EventLevelHopper(Reason.HOPPERSWLEVELCHANGED, eventData);
+                        EventLevelHopper(CEvent.Reason.HOPPERSWLEVELCHANGED, eventData);
                     }
                 }
             }
@@ -1112,7 +1118,7 @@ namespace DeviceLibrary
                 {
                     eventsList.Add(new CEvent()
                     {
-                        reason = Reason.HOPPEREMPTIED,
+                        reason = CEvent.Reason.HOPPEREMPTIED,
                         nameOfDevice = name,
                         data = emptyCount,
                     });
@@ -1197,7 +1203,7 @@ namespace DeviceLibrary
             {
                 eventsList.Add(new CEvent()
                 {
-                    reason = Reason.HOPPERERROR,
+                    reason = CEvent.Reason.HOPPERERROR,
                     nameOfDevice = ToString(),
                     data = errorHopper,
                 });
@@ -1282,7 +1288,7 @@ namespace DeviceLibrary
                                 {
                                     CEvent hopperEvent = new CEvent()
                                     {
-                                        reason = Reason.HOPPERDISPENSED,
+                                        reason = CEvent.Reason.HOPPERDISPENSED,
                                         nameOfDevice = ToString(),
                                         data = dispenseStatus.dispensedResult,
                                     };

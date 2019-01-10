@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="DeviceLibrary.CalertEventArgs">
-    <Position X="18.75" Y="5" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DeviceLibrary.CBNR_CPI" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CDevicesManage.cs</FileName>
+      <HashCode>AggBCAQgDAAAgAEAAAAAAAIAQAAAAFAEAGEChAAAIkA=</HashCode>
+      <FileName>CBNR_CPI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="System.Exception">
-    <Position X="10.75" Y="2.5" Width="4.25" />
-    <TypeIdentifier />
-    <Lollipop Orientation="Right" Position="0.668" />
+  <Class Name="DeviceLibrary.CcashReader" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAUAAAAAAAAAEAAIAAAgAQAAAkACECJAAAAAAA=</HashCode>
+      <FileName>CcashReader.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Class Name="DeviceLibrary.CccTalk">
-    <Position X="0.5" Y="6.75" Width="2.75" />
+    <Position X="3.75" Y="4.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -25,159 +27,92 @@
       </Enum>
       <Enum Name="DeviceLibrary.CccTalk.SelfTestResult" Collapsed="true">
         <TypeIdentifier>
-          <NewMemberFileName>SelfTestResult.cs</NewMemberFileName>
+          <NewMemberFileName>CccTalk.SelfTestResult.cs</NewMemberFileName>
         </TypeIdentifier>
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>INgAAAAggCAAAAQAEAEAAgAACgGAQHAAAAACCACQNEA=</HashCode>
+      <HashCode>INgABAAgACAAAAQAEAEAAgAACgGAQHAAAAACCACQNEA=</HashCode>
       <FileName>CccTalk.Header.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DeviceLibrary.CCoinValidator">
-    <Position X="6.75" Y="1.75" Width="2.25" />
-    <NestedTypes>
-      <Class Name="DeviceLibrary.CCoinValidator.CErroCV" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CCoinValidator.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Enum Name="DeviceLibrary.CCoinValidator.CVStatus" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CCoinValidator.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="DeviceLibrary.CCoinValidator.TrashDoor" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CCoinValidator.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="DeviceLibrary.CCoinValidator.LowerSensor" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CCoinValidator.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="DeviceLibrary.CCoinValidator.Etat" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CCoinValidator.Etat.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="DeviceLibrary.CCoinValidator.Header" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CCoinValidator.Header.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Class Name="DeviceLibrary.CCoinValidator.CCVcreditBuffer" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CCoinValidator.CcreditBuffer.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Enum Name="DeviceLibrary.CCoinValidator.CVErrorCodes" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CVErrorCodes.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
-    <InheritanceLine Type="DeviceLibrary.CcashReader" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="2" Y="22.375" />
-        <Point X="2" Y="22.749" />
-        <Point X="3.625" Y="22.749" />
-        <Point X="3.625" Y="1.375" />
-        <Point X="7.782" Y="1.375" />
-        <Point X="7.782" Y="1.75" />
-      </Path>
-    </InheritanceLine>
+  <Class Name="DeviceLibrary.CCoinValidator" Collapsed="true">
+    <Position X="2.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQwEIAAEBJAAAAkAgAABBAAABEBAAAAmBGoSBgAFACA=</HashCode>
-      <FileName>CCoinValidator.cs</FileName>
+      <HashCode>AQwEIAAEBJAAQAkAgAABBAAABABEQAAmBGoSBgAFACA=</HashCode>
+      <FileName>CCoinValidator.CCanal.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="System.Object" Collapsed="true">
-    <Position X="1" Y="0.5" Width="1.5" />
-    <TypeIdentifier />
-  </Class>
-  <Class Name="System.EventArgs" Collapsed="true">
-    <Position X="18.75" Y="2.75" Width="1.5" />
-    <TypeIdentifier />
-  </Class>
-  <Class Name="DeviceLibrary.CPelicano">
-    <Position X="6.5" Y="11" Width="2.5" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
-    <NestedTypes>
-      <Enum Name="DeviceLibrary.CPelicano.CcmdMotors">
-        <TypeIdentifier>
-          <NewMemberFileName>CPelicano.CcmdMotors.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="DeviceLibrary.CPelicano.OptionFlag" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CPelicano.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="DeviceLibrary.CPelicano.CoinPresent" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CPelicano.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="DeviceLibrary.CPelicano.Header" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CPelicano.Header.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
+  <Class Name="DeviceLibrary.CDevice" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAgAAAIAACAAAAAgAAAAEQEAAAAEJAAACAAQA=</HashCode>
-      <FileName>CPelicano.CmdMotors.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DeviceLibrary.CDevice">
-    <Position X="0.75" Y="1.75" Width="2.5" />
-    <NestedTypes>
-      <Class Name="DeviceLibrary.CDevice.CEvent" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CEvent.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="DeviceLibrary.CDevice.CInserted" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CInserted.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="DeviceLibrary.CDevice.CLevel" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CLevel.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAgAABAIEAAAABgAAAAAAAAAAAEAAAAAAEACAgAAIAA=</HashCode>
+      <HashCode>AAgAABAAEAAAABAAAAAAAAAAQAEAAAAAAEACAgAAIAA=</HashCode>
       <FileName>CDevice.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DeviceLibrary.CcashReader">
-    <Position X="0.75" Y="16.5" Width="2.5" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
-    <NestedTypes>
-      <Enum Name="DeviceLibrary.CcashReader.InhibitStatus" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CcashReader.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="DeviceLibrary.CcashReader.Header" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CcashReader.Header.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
+  <Class Name="DeviceLibrary.CDevicesManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAUAAAAAAAAAEAAIAAAgAQAAAkACECJAAAAAAA=</HashCode>
-      <FileName>CcashReader.cs</FileName>
+      <HashCode>gGABggwBQiBAUAkBgQEAAFEAAAgBQQCCAGwEEAAUAAA=</HashCode>
+      <FileName>CDevicesManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DeviceLibrary.CHopper" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DJuEBBEIgYAEHZsUQHKQvABiQJgUgAW+TMBnNpAGAiQ=</HashCode>
+      <FileName>CHopper.CEmptyCount.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="DeviceLibrary.CMemoryStorage" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAACgEAAAAAAQAAAAABAAAAAAgAACACEAAgAAAgA=</HashCode>
+      <FileName>CMemoryStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.CPelicano" Collapsed="true">
+    <Position X="2.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAgAAAIACCBAAAAgQAAAEQEAAAAEBAAACAAQA=</HashCode>
+      <FileName>CPelicano.CmdMotors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.messagesText" Collapsed="true">
+    <Position X="9.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QwAogACKCAGEAxAAAAEJOgAoj6egQgAGBACSQCgAEIg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.Resource1" Collapsed="true">
+    <Position X="11" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.Properties.Resources" Collapsed="true">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceLibrary.Properties.Settings">
+    <Position X="11.75" Y="5.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAgAAAAAAIAAAAAABQCIAAAAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="DeviceLibrary.DefaultDevicesAddress" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAD5BgAAAEAACAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Devices.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

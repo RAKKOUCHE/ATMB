@@ -78,6 +78,7 @@
             this.dataGridViewCompteurs = new System.Windows.Forms.DataGridView();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Montant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAZ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewHopper = new System.Windows.Forms.DataGridView();
             this.Identifiant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valeur = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -283,7 +284,8 @@
             this.dataGridViewCompteurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCompteurs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nom,
-            this.Montant});
+            this.Montant,
+            this.RAZ});
             resources.ApplyResources(this.dataGridViewCompteurs, "dataGridViewCompteurs");
             this.dataGridViewCompteurs.Name = "dataGridViewCompteurs";
             this.dataGridViewCompteurs.ReadOnly = true;
@@ -291,6 +293,7 @@
             // Nom
             // 
             this.Nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Nom.Frozen = true;
             resources.ApplyResources(this.Nom, "Nom");
             this.Nom.Name = "Nom";
             this.Nom.ReadOnly = true;
@@ -304,6 +307,12 @@
             resources.ApplyResources(this.Montant, "Montant");
             this.Montant.Name = "Montant";
             this.Montant.ReadOnly = true;
+            // 
+            // RAZ
+            // 
+            resources.ApplyResources(this.RAZ, "RAZ");
+            this.RAZ.Name = "RAZ";
+            this.RAZ.ReadOnly = true;
             // 
             // dataGridViewHopper
             // 
@@ -339,6 +348,8 @@
             this.dataGridViewHopper.Name = "dataGridViewHopper";
             this.dataGridViewHopper.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridViewHopper.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewHopper.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewHopper_CellClick);
+            this.dataGridViewHopper.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewHopper_CellValueChanged);
             // 
             // Identifiant
             // 
@@ -761,6 +772,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Controls.Add(this.groupBoxPieces);
             this.Controls.Add(this.buttonRollBack);
             this.Controls.Add(this.buttonRetract);
             this.Controls.Add(this.numericUpDownPath);
@@ -774,7 +786,6 @@
             this.Controls.Add(this.BtnDispenseBNR);
             this.Controls.Add(this.butttonEndofTransacton);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBoxPieces);
             this.Controls.Add(this.buttonRAZCompteurs);
             this.Controls.Add(this.buttonCounters);
             this.Controls.Add(this.buttonHoppers);
@@ -833,8 +844,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.GroupBox groupBoxPieces;
         private System.Windows.Forms.DataGridView dataGridViewCompteurs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Montant;
         private System.Windows.Forms.DataGridView dataGridViewHopper;
         private System.Windows.Forms.TextBox tbInfo;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -875,6 +884,9 @@
         private System.Windows.Forms.NumericUpDown numericUpDownPath;
         private System.Windows.Forms.Button buttonRetract;
         private System.Windows.Forms.Button buttonRollBack;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Montant;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn RAZ;
     }
 }
 

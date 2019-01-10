@@ -14,6 +14,7 @@ namespace DeviceLibrary
     /// </summary>
     public partial class CCoinValidator : CcashReader
     {
+
         /// <summary>
         /// Chemin de tri par défaut.
         /// </summary>
@@ -422,7 +423,7 @@ namespace DeviceLibrary
                         {
                             eventsList.Add(new CEvent
                             {
-                                reason = Reason.COINVALIDATORERROR,
+                                reason = CEvent.Reason.COINVALIDATORERROR,
                                 nameOfDevice = base.ProductCode,
                                 data = errorCV
                             });
@@ -439,7 +440,7 @@ namespace DeviceLibrary
                         {
                             eventsList.Add(new CEvent
                             {
-                                reason = Reason.MONEYINTRODUCTED,
+                                reason = CEvent.Reason.MONEYINTRODUCTED,
                                 nameOfDevice = ProductCode,
                                 data = denominationInserted
                             });
@@ -787,7 +788,7 @@ namespace DeviceLibrary
         {
             try
             {
-                
+
                 CDevicesManager.Log.Info("Instancation de la classe CCoinValidator.");
                 DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
                 if(!(IsPresent = SimplePoll))

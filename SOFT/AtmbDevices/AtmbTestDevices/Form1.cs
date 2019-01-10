@@ -97,16 +97,16 @@ namespace AtmbTestDevices
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MsgFromdll(object sender, FireEventArg e)
+        private void MsgFromdll(object sender, CEvent.FireEventArg e)
         {
             Action a;
             switch(e.reason)
             {
-                case Reason.MONEYINTRODUCTED:
+                case CEvent.Reason.MONEYINTRODUCTED:
                 {
                     a = () =>
                     {
-                        CDevice.CInserted data = (CDevice.CInserted)((CDevice.CEvent)e.donnee).data;
+                        CDevice.CInserted data = (CDevice.CInserted)((CEvent)e.donnee).data;
                         int remaining = ToPayByClient - data.TotalAmount;
                         tbInfo.AppendText($"Espèces introduites : Canal {data.CVChannel} trieur {data.CVPath} valeur  {(decimal)data.ValeurCent / 100:c2}\r\n\r\n");
                         tbReceived.Text = $"{(decimal)data.TotalAmount / 100:c2}";
@@ -128,17 +128,17 @@ namespace AtmbTestDevices
                     };
                     break;
                 }
-                case Reason.COINVALIDATORERROR:
+                case CEvent.Reason.COINVALIDATORERROR:
                 {
                     a = () =>
                     {
-                        CCoinValidator.CErroCV data = (CCoinValidator.CErroCV)((CDevice.CEvent)e.donnee).data;
+                        CCoinValidator.CErroCV data = (CCoinValidator.CErroCV)((CEvent)e.donnee).data;
                         tbInfo.AppendText($"Erreur coin validator - code : {data.code} raison : {data.errorText}\r\n\r\n");
                         ButtonCounters_Click(sender, e);
                     };
                     break;
                 }
-                case Reason.CASHCLOSED:
+                case CEvent.Reason.CASHCLOSED:
                 {
                     a = () =>
                     {
@@ -148,7 +148,7 @@ namespace AtmbTestDevices
                     };
                     break;
                 }
-                case Reason.CASHOPENED:
+                case CEvent.Reason.CASHOPENED:
                 {
                     a = () =>
                     {
@@ -158,11 +158,11 @@ namespace AtmbTestDevices
                     };
                     break;
                 }
-                case Reason.HOPPERERROR:
+                case CEvent.Reason.HOPPERERROR:
                 {
                     a = () =>
                     {
-                        CHopper.CHopperError data = (CHopper.CHopperError)((CDevice.CEvent)e.donnee).data;
+                        CHopper.CHopperError data = (CHopper.CHopperError)((CEvent)e.donnee).data;
                         tbInfo.AppendText($"Erreur {data.Code} sur le {data.nameOfHopper}\r\n\r\n");
                         if(data.isHopperCritical)
                         {
@@ -172,16 +172,16 @@ namespace AtmbTestDevices
                     };
                     break;
                 }
-                case Reason.HOPPERHWLEVELCHANGED:
+                case CEvent.Reason.HOPPERHWLEVELCHANGED:
                 {
                     a = () =>
                     {
-                        CHopper.CHardLevelData data = (CHopper.CHardLevelData)((CDevice.CEvent)e.donnee).data;
+                        CHopper.CHardLevelData data = (CHopper.CHardLevelData)((CEvent)e.donnee).data;
                         foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
                         {
                             if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == data.nameOfHopper))
                             {
-                                if((data.level == CDevice.CLevel.HardLevel.VIDE) || (data.level == CDevice.CLevel.HardLevel.PLEIN))
+                                if((data.level == CHopper.CLevel.HardLevel.VIDE) || (data.level == CHopper.CLevel.HardLevel.PLEIN))
                                 {
                                     ligne.Cells["LevelHW"].Style.BackColor = Color.Red;
                                     MessageBox.Show(string.Format("{0} critique", data.nameOfHopper), "Niveau", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -197,29 +197,29 @@ namespace AtmbTestDevices
                     };
                     break;
                 }
-                case Reason.HOPPERSWLEVELCHANGED:
+                case CEvent.Reason.HOPPERSWLEVELCHANGED:
                 {
                     a = () =>
                     {
-                        CHopper.CSoftLevelData data = (CHopper.CSoftLevelData)((CDevice.CEvent)e.donnee).data;
+                        CHopper.CSoftLevelData data = (CHopper.CSoftLevelData)((CEvent)e.donnee).data;
                         foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
                         {
                             if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == data.nameOfHopper))
                             {
-                                if(data.level == CDevice.CLevel.SoftLevel.VIDE)
+                                if(data.level == CHopper.CLevel.SoftLevel.VIDE)
                                 {
                                     MessageBox.Show(string.Format("{0} critique", data.nameOfHopper), "Level", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 }
                                 switch(data.level)
                                 {
-                                    case CDevice.CLevel.SoftLevel.PLEIN:
-                                    case CDevice.CLevel.SoftLevel.VIDE:
+                                    case CHopper.CLevel.SoftLevel.PLEIN:
+                                    case CHopper.CLevel.SoftLevel.VIDE:
                                     {
                                         ligne.Cells["LevelSW"].Style.BackColor = Color.Red;
                                         break;
                                     }
-                                    case CDevice.CLevel.SoftLevel.HAUT:
-                                    case CDevice.CLevel.SoftLevel.BAS:
+                                    case CHopper.CLevel.SoftLevel.HAUT:
+                                    case CHopper.CLevel.SoftLevel.BAS:
                                     {
                                         ligne.Cells["LevelSW"].Style.BackColor = Color.Orange;
                                         break;
@@ -237,11 +237,11 @@ namespace AtmbTestDevices
                     };
                     break;
                 }
-                case Reason.HOPPERDISPENSED:
+                case CEvent.Reason.HOPPERDISPENSED:
                 {
                     a = () =>
                     {
-                        CHopper.CHopperStatus.CDispensedResult data = (CHopper.CHopperStatus.CDispensedResult)((CDevice.CEvent)e.donnee).data;
+                        CHopper.CHopperStatus.CDispensedResult data = (CHopper.CHopperStatus.CDispensedResult)((CEvent)e.donnee).data;
                         tbInfo.AppendText($"Distribution {data.nameOfHopper}\r\n");
                         tbInfo.AppendText($"Nombre de pièces à distribuer {data.CoinToDispense}\r\n");
                         tbInfo.AppendText($"Montant à distribuer {(decimal)data.AmountToDispense / 100:c2}\r\n");
@@ -253,11 +253,11 @@ namespace AtmbTestDevices
                     };
                     break;
                 }
-                case Reason.HOPPEREMPTIED:
+                case CEvent.Reason.HOPPEREMPTIED:
                 {
                     a = () =>
                     {
-                        CHopper.CEmptyCount data = (CHopper.CEmptyCount)((CDevice.CEvent)e.donnee).data;
+                        CHopper.CEmptyCount data = (CHopper.CEmptyCount)((CEvent)e.donnee).data;
                         tbInfo.AppendText($"Vidage {data.nameOfHopper}\r\n");
                         tbInfo.AppendText($"Nombre de pièces {data.counter}\r\n");
                         tbInfo.AppendText($"Montant {(decimal)data.amountCounter / 100:c2}\r\n");
@@ -267,7 +267,7 @@ namespace AtmbTestDevices
                     };
                     break;
                 }
-                case Reason.DLLLREADY:
+                case CEvent.Reason.DLLLREADY:
                 {
                     a = () =>
                       {
@@ -299,11 +299,11 @@ namespace AtmbTestDevices
                       };
                     break;
                 }
-                case Reason.BNRERREUR:
+                case CEvent.Reason.BNRERREUR:
                 {
                     a = () =>
                       {
-                          CBNR_CPI.Cerror data = (CBNR_CPI.Cerror)((CDevice.CEvent)e.donnee).data;
+                          CBNR_CPI.Cerror data = (CBNR_CPI.Cerror)((CEvent)e.donnee).data;
                           if(data.error == CBNR_CPI.ERRORTYPE.BILLREFUSED)
                           {
                               tbInfo.AppendText("Billet refusé\r\n\r\n");
@@ -311,34 +311,34 @@ namespace AtmbTestDevices
                           else
                           {
                               MessageBox.Show(data.nameModule.ToString() + "\r\n" +
-                              data.error.ToString(), ((CDevice.CEvent)e.donnee).nameOfDevice.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                              data.error.ToString(), ((CEvent)e.donnee).nameOfDevice.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
                           }
                       };
                     break;
                 }
-                case Reason.BNRMODULEMANQUANT:
+                case CEvent.Reason.BNRMODULEMANQUANT:
                 {
                     a = () =>
                      {
-                         CDevice.CEvent donnee = (CDevice.CEvent)e.donnee;
+                         CEvent donnee = (CEvent)e.donnee;
                          MessageBox.Show(donnee.data.ToString() + " retiré", donnee.nameOfDevice, MessageBoxButtons.OK, MessageBoxIcon.Information);
                      };
                     break;
                 }
-                case Reason.BNRMODULEREINSERE:
+                case CEvent.Reason.BNRMODULEREINSERE:
                 {
                     a = () =>
                     {
-                        CDevice.CEvent donnee = (CDevice.CEvent)e.donnee;
+                        CEvent donnee = (CEvent)e.donnee;
                         MessageBox.Show(donnee.data.ToString() + " reinserée", donnee.nameOfDevice, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     };
                     break;
                 }
-                case Reason.BNRRAZMETER:
+                case CEvent.Reason.BNRRAZMETER:
                 {
                     a = () =>
                      {
-                         CDevice.CEvent donnee = (CDevice.CEvent)e.donnee;
+                         CEvent donnee = (CEvent)e.donnee;
                          MessageBox.Show(string.Format(" Les compteurs {0} ont été remis à zéro.", donnee.data.ToString()), donnee.nameOfDevice, MessageBoxButtons.OK, MessageBoxIcon.Information);
                      };
                     break;
@@ -381,7 +381,7 @@ namespace AtmbTestDevices
             dataGridViewCompteurs.Rows.Add("Trop perçu", $"{(decimal)CccTalk.counters.amountOverPay / 100:c2}");
             if(deviceManage.monnayeur != null && deviceManage.monnayeur.canaux != null)
             {
-                foreach(CCanal canal in deviceManage.monnayeur.canaux)
+                foreach(CCoinValidator.CCanal canal in deviceManage.monnayeur.canaux)
                 {
                     dataGridViewCompteurs.Rows.Add($"CV nombre canal {canal.Number}", canal.CoinIn);
                     dataGridViewCompteurs.Rows.Add($"CV montant canal {canal.Number}", $"{(decimal)canal.MontantIn / 100:c2}");
@@ -423,6 +423,7 @@ namespace AtmbTestDevices
             }
             catch
             {
+                MessageBox.Show("Erreur");
             }
         }
 
@@ -644,7 +645,11 @@ namespace AtmbTestDevices
             deviceManage.BNRBillRetract();
         }
 
-
+        /// <summary>
+        /// Retourne les billets lus.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BbuttonRollBack_Click(object sender, EventArgs e)
         {
             deviceManage.BNRBillRollBack();

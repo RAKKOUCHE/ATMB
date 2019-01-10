@@ -64,7 +64,7 @@ namespace DeviceLibrary
         /// </summary>
         private byte writeBytesPerBlock;
 
-        private CccTalk Owner;
+        private readonly CccTalk Owner;
 
         /// <summary>
         /// Constructeur

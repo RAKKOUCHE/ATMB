@@ -65,38 +65,36 @@
   <ItemGroup>
     <Compile Include="CBNR_CPI.cs" />
     <Compile Include="CBNR_CPI.Etat.cs" />
-    <Compile Include="CCanal.cs" />
     <Compile Include="CcashReader.Header.cs" />
     <Compile Include="CcashReader.cs" />
-    <Compile Include="CCoindID.cs" />
-    <Compile Include="Ccounters.cs" />
+    <Compile Include="CccTalk.CcoinsCounters.cs" />
+    <Compile Include="CCoinValidator.CCanal.cs" />
     <Compile Include="CEvent.cs" />
     <Compile Include="CHopper.CEmptyCount.cs" />
+    <Compile Include="CHopper.VariableSet.cs" />
+    <Compile Include="CHopper.CLevel.cs" />
     <Compile Include="CHopper.Error.cs" />
     <Compile Include="CHopper.Level.cs" />
     <Compile Include="CHopper.Registre.cs" />
     <Compile Include="CInserted.cs" />
-    <Compile Include="CLevel.cs" />
     <Compile Include="CMemoryStorage.cs" />
-    <Compile Include="CreditBuffer.cs" />
-    <Compile Include="CSorter.cs" />
+    <Compile Include="CCoinValidator.CreditBuffer.cs" />
     <Compile Include="Devices.cs" />
     <Compile Include="CccTalk.Header.cs" />
     <Compile Include="CCoinValidator.cs" />
     <Compile Include="CCoinValidator.Header.cs" />
     <Compile Include="CCoinValidator.Etat.cs" />
     <Compile Include="CCtalk.cs" />
-    <Compile Include="CVErrorCodes.cs" />
+    <Compile Include="CCoinValidator.CVErrorCodes.cs" />
     <Compile Include="CDevice.cs" />
     <Compile Include="CHopper.Status.cs" />
-    <Compile Include="CVariableSet.cs" />
     <Compile Include="CHopper.cs" />
     <Compile Include="CHopper.Header.cs" />
     <Compile Include="CPelicano.CmdMotors.cs" />
     <Compile Include="CPelicano.cs" />
     <Compile Include="CPelicano.Header.cs" />
     <Compile Include="CDevicesManager.cs" />
-    <Compile Include="Hopper.Etat.cs" />
+    <Compile Include="CHopper.Etat.cs" />
     <Compile Include="messagesText.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -110,7 +108,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Resource1.Designer.cs" />
-    <Compile Include="SelfTestResult.cs" />
+    <Compile Include="CccTalk.SelfTestResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="EnteteDoc.txt" />
@@ -120,15 +118,20 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Release.txt" />
+    <AdditionalFiles Include="..\DependencyValidation1\DependencyValidation1.layerdiagram">
+      <Link>DependencyValidation1.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <AdditionalFiles Include="..\DependencyValidation1\DependencyValidation2.layerdiagram">
+      <Link>DependencyValidation2.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
     <None Include="app.config" />
-    <None Include="ClassDiagram1.cd" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="ClassDiagram2.cd" />
-    <None Include="ClassDiagram3.cd" />
-    <None Include="ClassDiagram4.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>

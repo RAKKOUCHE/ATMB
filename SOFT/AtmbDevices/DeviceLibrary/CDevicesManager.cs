@@ -16,98 +16,6 @@ using System.Xml;
 namespace DeviceLibrary
 {
     /// <summary>
-    /// Enumération des causes des événements
-    /// </summary>
-    public enum Reason
-    {
-        /// <summary>
-        /// Une pièce a été reconnue par le monnayeur.
-        /// </summary>
-        MONEYINTRODUCTED,
-
-        /// <summary>
-        /// Une erreur a été dectée sur le monnayeur.
-        /// </summary>
-        COINVALIDATORERROR,
-
-        /// <summary>
-        /// Les moyens de paiement ont été fermés.
-        /// </summary>
-        CASHCLOSED,
-
-        /// <summary>
-        /// Les moyens de paiement ont été ouverts.
-        /// </summary>
-        CASHOPENED,
-
-        /// <summary>
-        /// Une erreur a été detectée sur un hopper.
-        /// </summary>
-        HOPPERERROR,
-
-        /// <summary>
-        /// Le hopper a terminé la distribution.
-        /// </summary>
-        HOPPERDISPENSED,
-
-        /// <summary>
-        /// Une des sondes hardwares d'un hopper a changé d'état.
-        /// </summary>
-        HOPPERHWLEVELCHANGED,
-
-        /// <summary>
-        /// Un seuil de niveau a été atteint
-        /// </summary>
-        HOPPERSWLEVELCHANGED,
-
-        /// <summary>
-        /// Le hopper est vidé.
-        /// </summary>
-        HOPPEREMPTIED,
-
-        /// <summary>
-        /// Une erreur sur le BNR est survenue.
-        /// </summary>
-        BNRERREUR,
-
-        /// <summary>
-        /// Un module a été reitré.
-        /// </summary>
-        BNRMODULEMANQUANT,
-
-        /// <summary>
-        /// Un module a été réinséré.
-        /// </summary>
-        BNRMODULEREINSERE,
-
-        /// <summary>
-        /// Les compteurs de la caisse du BNR on été remis à zéro.
-        /// </summary>
-        BNRRAZMETER,
-
-        /// <summary>
-        /// La dll est prête.
-        /// </summary>
-        DLLLREADY,
-    }
-
-    /// <summary>
-    /// Class d'évenement
-    /// </summary>
-    public class FireEventArg : EventArgs
-    {
-        /// <summary>
-        /// Cause de l'événement.
-        /// </summary>
-        public Reason reason;
-
-        /// <summary>
-        /// Objet contenant les infomations concernant l'événement.
-        /// </summary>
-        public object donnee;
-    }
-
-    /// <summary>
     /// Class principale
     /// </summary>
     public class CDevicesManager : IDisposable
@@ -125,7 +33,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Instance de la classe XmlDocument permettant la lecture des fichiers XML.
         /// </summary>
-        private static XmlDocument parametersFile = new XmlDocument();
+        private static readonly XmlDocument parametersFile = new XmlDocument();
 
         /// <summary>
         /// Thread de la classe principale.
@@ -154,14 +62,14 @@ namespace DeviceLibrary
         /// <summary>
         /// Instance du BNR
         /// </summary>
-        private CBNR_CPI bnX;
+        private readonly CBNR_CPI bnX;
 
         /// <summary>
         /// Prototype de la fonctio delegate recevant les messages de la dll.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public delegate void FireEventHandler(object sender, FireEventArg e);
+        public delegate void FireEventHandler(object sender, CEvent.FireEventArg e);
 
         /// <summary>
         /// Evenement levant un appel à la fonction déléguée.
@@ -274,13 +182,13 @@ namespace DeviceLibrary
                             {
                                 toDispense = toDispense / divider * divider;
                                 CBNR_CPI.ev.Reset();
-                                CBNR_CPI.bnr.Denominate(toDispense, "AAA");
+                                CBNR_CPI.bnr.Denominate(toDispense, "EUR");
                                 CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
                             }
                             if(CBNR_CPI.isDispensable)
                             {
                                 CBNR_CPI.ev.Reset();
-                                CBNR_CPI.bnr.Dispense(toDispense, "AAA");
+                                CBNR_CPI.bnr.Dispense(toDispense, "EUR");
                                 CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
                             }
                         }
@@ -289,8 +197,8 @@ namespace DeviceLibrary
                     foreach(CHopper hopper in Hoppers)
                     {
                         if(hopper.IsPresent &&
-                            (hopper.deviceLevel.softLevel != CDevice.CLevel.SoftLevel.VIDE) &&
-                            (hopper.deviceLevel.hardLevel != CDevice.CLevel.HardLevel.VIDE) &&
+                            (hopper.deviceLevel.softLevel != CHopper.CLevel.SoftLevel.VIDE) &&
+                            (hopper.deviceLevel.hardLevel != CHopper.CLevel.HardLevel.VIDE) &&
                             (hopper.CoinValue > 0) &&
                             (hopper.CoinValue <= rest))
                         {
@@ -355,7 +263,7 @@ namespace DeviceLibrary
         /// </summary>
         private void Task()
         {
-            Reason reason;
+            CEvent.Reason reason;
             while(true)
             {
                 try
@@ -368,7 +276,7 @@ namespace DeviceLibrary
                         }
                         switch(reason)
                         {
-                            case Reason.MONEYINTRODUCTED:
+                            case CEvent.Reason.MONEYINTRODUCTED:
                             {
                                 OnMoneyReceived(CDevice.eventsList[0]);
 
@@ -390,22 +298,22 @@ namespace DeviceLibrary
                                 CDevice.denominationInserted.BackTotalAmount = CDevice.denominationInserted.TotalAmount;
                                 break;
                             }
-                            case Reason.BNRERREUR:
+                            case CEvent.Reason.BNRERREUR:
                             {
                                 OnBNRErreur(CDevice.eventsList[0]);
                                 break;
                             }
-                            case Reason.DLLLREADY:
+                            case CEvent.Reason.DLLLREADY:
                             {
                                 OnDllReady();
                                 break;
                             }
-                            case Reason.COINVALIDATORERROR:
+                            case CEvent.Reason.COINVALIDATORERROR:
                             {
                                 OnCVError(CDevice.eventsList[0]);
                                 break;
                             }
-                            case Reason.CASHCLOSED:
+                            case CEvent.Reason.CASHCLOSED:
                             {
                                 if(monnayeur != null)
                                 {
@@ -416,47 +324,47 @@ namespace DeviceLibrary
                                 OnCashClose();
                                 break;
                             }
-                            case Reason.CASHOPENED:
+                            case CEvent.Reason.CASHOPENED:
                             {
                                 OnCashOpen();
                                 break;
                             }
-                            case Reason.HOPPERERROR:
+                            case CEvent.Reason.HOPPERERROR:
                             {
                                 OnHopperError(CDevice.eventsList[0]);
                                 break;
                             }
-                            case Reason.HOPPERDISPENSED:
+                            case CEvent.Reason.HOPPERDISPENSED:
                             {
                                 OnHopperDispensed(CDevice.eventsList[0]);
                                 break;
                             }
-                            case Reason.HOPPERHWLEVELCHANGED:
+                            case CEvent.Reason.HOPPERHWLEVELCHANGED:
                             {
                                 OnHopperHardLevelChanged(CDevice.eventsList[0]);
                                 break;
                             }
-                            case Reason.HOPPERSWLEVELCHANGED:
+                            case CEvent.Reason.HOPPERSWLEVELCHANGED:
                             {
                                 OnHopperSoftLevelChanged(CDevice.eventsList[0]);
                                 break;
                             }
-                            case Reason.HOPPEREMPTIED:
+                            case CEvent.Reason.HOPPEREMPTIED:
                             {
                                 OnHopperEmptied(CDevice.eventsList[0]);
                                 break;
                             }
-                            case Reason.BNRMODULEMANQUANT:
+                            case CEvent.Reason.BNRMODULEMANQUANT:
                             {
                                 OnBRNModuleRemoved(CDevice.eventsList[0]);
                                 break;
                             }
-                            case Reason.BNRMODULEREINSERE:
+                            case CEvent.Reason.BNRMODULEREINSERE:
                             {
                                 OnbnrModuleReinsere(CDevice.eventsList[0]);
                                 break;
                             }
-                            case Reason.BNRRAZMETER:
+                            case CEvent.Reason.BNRRAZMETER:
                             {
                                 OnBNRResetModule(CDevice.eventsList[0]);
                                 break;
@@ -567,16 +475,16 @@ namespace DeviceLibrary
         /// Evénement levé lorsque le hopper est vidé.
         /// </summary>
         /// <param name="evenement"></param>
-        private void OnHopperEmptied(CDevice.CEvent evenement)
+        private void OnHopperEmptied(CEvent evenement)
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.HOPPEREMPTIED,
+                    reason = CEvent.Reason.HOPPEREMPTIED,
                     donnee = evenement,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -588,16 +496,16 @@ namespace DeviceLibrary
         /// Evenement levé si un module est retiré du BNR.
         /// </summary>
         /// <param name="evenement"></param>
-        private void OnBRNModuleRemoved(CDevice.CEvent evenement)
+        private void OnBRNModuleRemoved(CEvent evenement)
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.BNRMODULEMANQUANT,
+                    reason = CEvent.Reason.BNRMODULEMANQUANT,
                     donnee = evenement,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -609,16 +517,16 @@ namespace DeviceLibrary
         /// Evénement levé lorsqu'un changement d'état d'une sonde de niveau d'un hopper est detecté.
         /// </summary>
         /// <param name="evenement"></param>
-        private void OnHopperHardLevelChanged(CDevice.CEvent evenement)
+        private void OnHopperHardLevelChanged(CEvent evenement)
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.HOPPERHWLEVELCHANGED,
+                    reason = CEvent.Reason.HOPPERHWLEVELCHANGED,
                     donnee = evenement
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -630,16 +538,16 @@ namespace DeviceLibrary
         /// Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper
         /// </summary>
         /// <param name="evenement"></param>
-        private void OnHopperSoftLevelChanged(CDevice.CEvent evenement)
+        private void OnHopperSoftLevelChanged(CEvent evenement)
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.HOPPERSWLEVELCHANGED,
+                    reason = CEvent.Reason.HOPPERSWLEVELCHANGED,
                     donnee = evenement,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -651,16 +559,16 @@ namespace DeviceLibrary
         /// Evéenemnt levé lorsqu'une error est detectée sur un hopper.
         /// </summary>
         /// <param name="evenement"></param>
-        private void OnHopperError(CDevice.CEvent evenement)
+        private void OnHopperError(CEvent evenement)
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.HOPPERERROR,
+                    reason = CEvent.Reason.HOPPERERROR,
                     donnee = evenement,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -672,16 +580,16 @@ namespace DeviceLibrary
         /// Evénement levé lorsque la distribution est terminée.
         /// </summary>
         /// <param name="evenement"></param>
-        private void OnHopperDispensed(CDevice.CEvent evenement)
+        private void OnHopperDispensed(CEvent evenement)
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.HOPPERDISPENSED,
+                    reason = CEvent.Reason.HOPPERDISPENSED,
                     donnee = evenement,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -696,12 +604,12 @@ namespace DeviceLibrary
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.CASHCLOSED,
+                    reason = CEvent.Reason.CASHCLOSED,
                     donnee = null,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -716,12 +624,12 @@ namespace DeviceLibrary
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.CASHOPENED,
+                    reason = CEvent.Reason.CASHOPENED,
                     donnee = null,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -732,17 +640,17 @@ namespace DeviceLibrary
         /// <summary>
         /// Evémenment levé lors de l'introduction d'une pièce.
         /// </summary>
-        private void OnMoneyReceived(CDevice.CEvent evenement)
+        private void OnMoneyReceived(CEvent evenement)
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.MONEYINTRODUCTED,
+                    reason = CEvent.Reason.MONEYINTRODUCTED,
                     donnee = evenement,
                 };
                 Console.Beep();
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -754,16 +662,16 @@ namespace DeviceLibrary
         /// Evénement levé lors de la détection d'une erreur sur le monnayeur.
         /// </summary>
         /// <param name="evenement"></param>
-        private void OnCVError(CDevice.CEvent evenement)
+        private void OnCVError(CEvent evenement)
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.COINVALIDATORERROR,
+                    reason = CEvent.Reason.COINVALIDATORERROR,
                     donnee = evenement,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -778,12 +686,12 @@ namespace DeviceLibrary
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.DLLLREADY,
+                    reason = CEvent.Reason.DLLLREADY,
                     donnee = null,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
                 EndTransaction();
             }
             catch(Exception E)
@@ -795,16 +703,16 @@ namespace DeviceLibrary
         /// <summary>
         /// Evénement levé quand une erreur s'est produte sur le BNR.
         /// </summary>
-        private void OnBNRErreur(CDevice.CEvent evenement)
+        private void OnBNRErreur(CEvent evenement)
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.BNRERREUR,
+                    reason = CEvent.Reason.BNRERREUR,
                     donnee = evenement,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -816,16 +724,16 @@ namespace DeviceLibrary
         /// Evenment levé quand un module est réinséré.
         /// </summary>
         /// <param name="evenement"></param>
-        private void OnbnrModuleReinsere(CDevice.CEvent evenement)
+        private void OnbnrModuleReinsere(CEvent evenement)
         {
             try
             {
-                FireEventArg alertEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.BNRMODULEREINSERE,
+                    reason = CEvent.Reason.BNRMODULEREINSERE,
                     donnee = evenement,
                 };
-                FireEvent(new object(), alertEventArgs);
+                FireEvent(new object(), fireEventArgs);
             }
             catch(Exception E)
             {
@@ -837,13 +745,13 @@ namespace DeviceLibrary
         /// Indique que le module est remis à zéro.
         /// </summary>
         /// <param name="evenement"></param>
-        private void OnBNRResetModule(CDevice.CEvent evenement)
+        private void OnBNRResetModule(CEvent evenement)
         {
             try
             {
-                FireEventArg fireEventArgs = new FireEventArg
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
-                    reason = Reason.BNRRAZMETER,
+                    reason = CEvent.Reason.BNRRAZMETER,
                     donnee = evenement,
                 };
                 FireEvent(new object(), fireEventArgs);
@@ -875,9 +783,9 @@ namespace DeviceLibrary
                     }
                     lock(CDevice.eventListLock)
                     {
-                        CDevice.eventsList.Add(new CDevice.CEvent
+                        CDevice.eventsList.Add(new CEvent
                         {
-                            reason = Reason.CASHOPENED,
+                            reason = CEvent.Reason.CASHOPENED,
                             nameOfDevice = "",
                             data = null
                         });
@@ -914,9 +822,9 @@ namespace DeviceLibrary
             }
             lock(CDevice.eventListLock)
             {
-                CDevice.CEvent evenement = new CDevice.CEvent
+                CEvent evenement = new CEvent
                 {
-                    reason = Reason.CASHCLOSED,
+                    reason = CEvent.Reason.CASHCLOSED,
                     nameOfDevice = "",
                     data = null
                 };
@@ -973,7 +881,7 @@ namespace DeviceLibrary
                 {
                     result *= 2;
                     CBNR_CPI.ev.Reset();
-                    CBNR_CPI.bnr.Denominate(result, "AAA");
+                    CBNR_CPI.bnr.Denominate(result, "EUR");
                     CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
                 } while((++loop < 3) && !CBNR_CPI.isDispensable);
                 return result;
@@ -995,13 +903,13 @@ namespace DeviceLibrary
                     {
                         Amount = Amount / divider * divider;
                         CBNR_CPI.ev.Reset();
-                        CBNR_CPI.bnr.Denominate(Amount, "AAA");
+                        CBNR_CPI.bnr.Denominate(Amount, "EUR");
                         CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
                     }
                 }
                 if(CBNR_CPI.isDispensable)
                 {
-                    CBNR_CPI.bnr.Dispense(Amount, "AAA", Mei.Bnr.ChangeAlgorithm.OptimumChange);
+                    CBNR_CPI.bnr.Dispense(Amount, "EUR", Mei.Bnr.ChangeAlgorithm.OptimumChange);
                 }
             }
             catch(Exception E)
@@ -1043,7 +951,7 @@ namespace DeviceLibrary
         {
             try
             {
-            
+
                 if(CBNR_CPI.bnr != null && bnX.IsPresent && CBNR_CPI.bnr.TransactionStatus.CurrentOperation == 6122)
                 {
                     CBNR_CPI.ev.Reset();
@@ -1117,9 +1025,9 @@ namespace DeviceLibrary
 
                 lock(CDevice.eventListLock)
                 {
-                    CDevice.CEvent evenement = new CDevice.CEvent
+                    CEvent evenement = new CEvent
                     {
-                        reason = Reason.DLLLREADY,
+                        reason = CEvent.Reason.DLLLREADY,
                         nameOfDevice = "",
                         data = null
                     };

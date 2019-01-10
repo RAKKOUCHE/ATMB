@@ -298,154 +298,6 @@
             Arrêt du BNR.
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CCanal">
-            <summary>
-            Class d'un canal d'un périphérique de paiement
-            </summary>
-            \details Cette classe contient et gère les paramètres d'un canal*/
-        </member>
-        <member name="F:DeviceLibrary.CCanal.CVOwner">
-            <summary>
-            Instance propriètaire du canal
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCanal.Number">
-            <summary>
-            Numéro du canal
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCanal.coinId">
-            <summary>
-            Identification de la pièce reconnue dans le canal
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCanal.sorter">
-            <summary>
-            Instance des chemins utilisés pour trier la pièce reconnue dans le canal.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCanal.HopperToLoad">
-            <summary>
-            Hopper vers lequel sera dirigé la pièce reconnue
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCanal.CoinIn">
-            <summary>
-            Nombre de pièces reconnues par le canal.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCanal.MontantIn">
-            <summary>
-            Montant introduit dans le canal
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CCanal.#ctor(System.Byte,DeviceLibrary.CCoinValidator)">
-            <summary>
-            Constructeur
-            </summary>
-            <param name="number">Numéro du canal</param>
-            <param name="owner">Nécessaire pour effectuer les commandes</param>
-        </member>
-        <member name="T:DeviceLibrary.CCanal.CCoindID">
-            <summary>
-            Class gérant l'identification des pièces
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCanal.CCoindID.REQUESTCOINID">
-            \addtogroup Headers
-            @{
-            <summary>
-            Groupe des commandes ccTalk.
-            </summary>
-            <summary>
-            Command ccTalk demandant l'identification de la pièce du canal.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCanal.CCoindID.CanalOwner">
-            @}
-            <summary>
-            Instance du canal de la pièce.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCanal.CCoindID.CountryCode">
-            <summary>
-            Code d'identification du pays émetteur.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCanal.CCoindID.ValeurCent">
-            <summary>
-            Valeur de la pièces.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCanal.CCoindID.Issue">
-            <summary>
-            Version des données d'identification.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CCanal.CCoindID.GetCoinId">
-            <summary>
-            Lit l'identification de la pièce acceptée dans le canal passé en paramètre.
-            </summary>
-            <remarks>voir <see cref = "F:DeviceLibrary.CCanal.CCoindID.REQUESTCOINID"/> </remarks>
-        </member>
-        <member name="M:DeviceLibrary.CCanal.CCoindID.#ctor(DeviceLibrary.CCanal)">
-            <summary>
-            Constructeur
-            </summary>
-            <param name="owner">Le canal correspondant</param>
-        </member>
-        <member name="T:DeviceLibrary.CCanal.CSorter">
-            <summary>
-            Class gérant les informations concernant un chemin de triage d'un canal
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CCanal.CSorter.Header">
-            <summary>
-            Header ccTalk utilisé pour le triage
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCanal.CSorter.Header.REQUESTSORTERPATH">
-            <summary>
-            Demande du chemin utilisé pour trier une pièce reconnue
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCanal.CSorter.Header.MODIFYSORTERPATH">
-            <summary>
-            Enregistre chemin utilisé pour trier une pièce reconnue
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCanal.CSorter.CanalOwner">
-            <summary>
-            Canal propriétaire de la class
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCanal.CSorter.PathSorter">
-            <summary>
-            Chemin utilisé dans le trieur (de 1 à 8)
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCanal.CSorter.OverPath">
-            <summary>
-            Chemin de substitusion.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCanal.CSorter.SorterPath">
-            <summary>
-            Lit les informations concernant le tri des pièces en sortie du monnayeur.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CCanal.CSorter.SetSorterPath(System.Byte)">
-            <summary>
-            Definie le chemin utilisé par le trieur pour ce canal.
-            </summary>
-            <param name="pathSorter">Chemin dans le trieur</param>
-        </member>
-        <member name="M:DeviceLibrary.CCanal.CSorter.#ctor(DeviceLibrary.CCanal)">
-            <summary>
-            Constructeur
-            </summary>
-            <param name="owner">Canal correspondant</param>
-        </member>
         <member name="T:DeviceLibrary.CcashReader">
             <summary>
             Class abstraite utilisé par les moyens de paiement.
@@ -672,1308 +524,173 @@
             
              </summary>
         </member>
-        <member name="T:DeviceLibrary.CDevice">
+        <member name="T:DeviceLibrary.CCoinValidator">
             <summary>
-            Classe abstraite parent de tous les périphériques
-            </summary>   
-        </member>
-        <member name="T:DeviceLibrary.CDevice.CEvent">
-            <summary>
-            Class contenant les informations sur u évenement.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CEvent.reason">
-            <summary>
-            Raison de l'évenement.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CEvent.nameOfDevice">
-            <summary>
-            Nom du périphérique
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CEvent.data">
-             <summary>
-             donnée concernant l'évenenement.
-             </summary>
-            <remarks>Dépend du périphérique et de l'évenement.</remarks>
-        </member>
-        <member name="T:DeviceLibrary.CDevice.CInserted">
-            <summary>
-             Classe des pièces insérées
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.ValeurCent">
-            <summary>
-            Montant nominal en centimes de la pièce insérée
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.CVChannel">
-            <summary>
-            Canal correpsondant à la pièce insérée
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.CVPath">
-            <summary>
-            Chemin de tri utilisé
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.TotalAmount">
-            <summary>
-            Montant inséré depuis le début de la transaction.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.BackTotalAmount">
-            <summary>
-            Sauvegarde du montant total inséré depuis le début de la transaction.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CDevice.CLevel">
-            <summary>
-            Classe des niveaux des hopeprs.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CDevice.CLevel.SoftLevel">
-            \addtogroup Niveaux Niveaux hoppers
-            <summary>Groupe des niveaux physiques et logiciels.</summary>
-            @{
-            <summary>
-            Enumération des niveaux soft
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.VIDE">
-            <summary>
-            Le nombre de pièces dans périphérique est au dessous ou égal au niveau vide indiqué dans le fichier paramètres.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.BAS">
-            <summary>
-            Le nombre de pièces dans périphérique est au dessous ou égal au niveau d'alerte bas indiqué dans le fichier paramètres.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.OK">
-            <summary>
-            Le nombre de pièces dans périphérique est compris entre le niveau d'alerte bas et le niveau d'alerte au indiqués dans le fichier paramètres.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.HAUT">
-            <summary>
-            Le nombre de pièces dans périphérique est au dessus ou égal au niveau d'alerte haut indiqué dans le fichier paramètres.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.PLEIN">
-            <summary>
-            Le nombre de pièces dans périphérique est au dessus ou égal au niveau plein indiqué dans le fichier paramètres.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.SoftLevel.INCONNU">
-            <summary>
-            Le nombre de pièces dans périphérique ou le fichier paramètre n'ont pas été encore lus.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CDevice.CLevel.HardLevel">
-            <summary>
-            Enumération des niveaux Hard
-            </summary>
-            <remarks>Determinés par la lecture des sondes de niveau du périphérique</remarks>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.VIDE">
-            <summary>
-            Le périphérique est vide.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.OK">
-            <summary>
-            Aucune sonde n'est activée.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.PLEIN">
-            <summary>
-            Le périphérique est plein
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.HardLevel.INCONNU">
-            <summary>
-            Les sondes n'ont pas été encore interrogées.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.ID">
-            @}
-            <summary>
-            Nom du périphérique
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.softLevel">
-            <summary>
-            Variable contenant le niveau du périphérique par rapport aux paramètres et au compteurs.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.CLevel.hardLevel">
-            <summary>
-            Variable contenant le niveau du périphérique par rapport à ses sondes hardware.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.CLevel.#ctor(DeviceLibrary.CDevice.CLevel.SoftLevel,DeviceLibrary.CDevice.CLevel.HardLevel)">
-            <summary>
-            Constructeur
-            </summary>
-            <param name="softlevel">Niveau soft, par défaut inconnu</param>
-            <param name="hardLevel">Niveau hard, par défaut inconnu</param>
-            <remarks>Le fait d'avoir les niveaux à l'état inconnu permet de provoqué un évenement permettant de déterminé le niveau actuel.</remarks>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.evReady">
-            <summary>
-            Event permenttant de savoir savoir si le BNR prêt.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.eventsList">
-            <summary>
-            Liste des évenement.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.eventListLock">
-            <summary>
-            Objet de verrouillage de l'accés à la liste des évenements.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.deviceLevel">
-            <summary>
-            Niveaux des périphériques.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.denominationInserted">
-             <summary>
-            
-             </summary>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.SerialNumber">
-            <summary>
-            Numéro de série du périphérique
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.Manufacturer">
-            <summary>
-            Identifiant du  fabricant
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.ProductCode">
-            <summary>
-            Fonction demandant le code produit
-            </summary>
-            <returns>Une chaîne de caractères contenant le code produit</returns>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.IsPresent">
-            <summary>
-            Flag indiquant si le hopper est detecté.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.Task">
-            <summary>
-            Tâche du périphérique.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.Init">
-            <summary>
-            Initialisation des périphériques.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.#ctor">
-            <summary>
-            Constructeur
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper">
-            <summary>
-            Classe des hoppers
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.CEmptyCount">
-            <summary>
-            Class contenant les résultats du vidage du hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CEmptyCount.nameOfHopper">
-            <summary>
-            Nom du hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CEmptyCount.counter">
-            <summary>
-            Nombre de pièces comptées durant le vidage
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CEmptyCount.amountCounter">
-            <summary>
-            Montant distribué pendant le vidage.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CEmptyCount.delta">
-            <summary>
-            Différence entre le nombre de pièces dans les compteurs et le nombre de pièces distribuées pendant le vidage.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CEmptyCount.amountDelta">
-            <summary>
-            Différence entre le montant distribué et le montant dans les compteurs.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.HopperError">
-            \addtogroup Erreurs
-            @{
-            <summary>
-            Groupe des codes erreur renvoyés par les périphériques
-            </summary>
-            <summary>
-            Liste des erreurs hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.NON_IDENTIFIEE">
-            <summary>
-            Aucune erreur ou erreur non identifiée.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.MOTORREVERSED">
-            <summary>
-            Moteur inversé suite à une surconsomation. Probablement du à un bourrage.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.MAXCURRENTEXCEEDED">
-            <summary>
-            Consomation de courant hors limite du périphérique.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.OPTOBLOCKEDPERMANENTLY">
-            <summary>
-            Optocoupleur obstrué en permanence.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.OPTOSHORTCIRCUIT">
-            <summary>
-            Optocoupleur en court-circuit.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.CHECKSUMA">
-            <summary>
-            Erreur de checksum dans le bloc de donné A.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.CHECKSUMB">
-            <summary>
-            Erreur de checksum dans le bloc de donné B.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.CHECKSUMC">
-            <summary>
-            Erreur de checksum dans le bloc de donné C.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.CHECKSUMD">
-            <summary>
-            Erreur de checksum dans le bloc de donné D.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.OPTOPATHBLOCKED">
-            <summary>
-            Optocoupleur obstrué.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.OPTOSHORTCIRCUITIDLE">
-            <summary>
-            Optocoupleur en court-circuit
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HopperError.POWERFAIL">
-            <summary>
-            Chute de tension pendant l'écriture dans la mémoire.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.CHopperError">
-            @}
-            <summary>
-            Classe contenant les informations sur une erreur survenue dans le hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperError.nameOfHopper">
-            <summary>
-            Numéro du hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperError.Code">
-            <summary>
-            Code d'erreur du hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperError.isHopperCritical">
-            <summary>
-            Indique si le hopper est nécessaire pour le fonctionnement du système.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.LevelMask">
-            <summary>
-            Masque des niveau
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.LevelMask.LOLEVELREACHED">
-            <summary>
-            Mask indiquant si le niveau base est atteint.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.LevelMask.HILEVEREACHED">
-            <summary>
-            Mask indiquant si le niveau haut est atteint.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.LevelMask.LOLEVELIMPLEMENTED">
-            <summary>
-            Mask indiquant si le niveau bas est implémenté.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.LevelMask.HILEVELIMPLEMENTED">
-            <summary>
-            Mask indiquant si le niveau haut est implémenté.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.RegistrePos">
-            <summary>
-            Liste des réponses contenu dans le registre
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.NULL">
-             <summary>
-             Pas d'erreur.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.SINGLEPAYOUT">
-            <summary>
-            Le pièce par pièce est activé.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.MOTORREVERSED">
-            <summary>
-            La rotation du moteur a été inversée lors de la dernière distribution pour corriger un bourrage
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.DISABLED">
-            <summary>
-            Le hopper n'est pas activé.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.PINNUMBER">
-            <summary>
-            Le hopper est protéger par un code PIN
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.MAXCURRENTEXCEEDED">
-            <summary>
-            La consommation de courant a dépassée celle autorisée.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.OPTOSHORTCIRCUIT">
-            <summary>
-            Un opto est est activé en permanence
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.TOOCCURED">
-            <summary>
-            Le temps alloué pour l'éjection d'une pièce a été depassé.
-            </summary>
-            <remarks>Utilisé pour detecté le hopper vide lors du vidage.</remarks>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.CHECKSUMA">
-            <summary>
-            Le checksum du bloc A de la mémoire non-volatile est erroné.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.OPTOPATHBLOCKED">
-            <summary>
-            L'opto coupleur de sortie est bloqué
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.CHECKSUMB">
-            <summary>
-            Le checksum du bloc A de la mémoire non-volatile est erroné.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.OPTOSHORTCIRCUITIDLE">
-            <summary>
-            L'optocoupleur est en court-circuit au repos
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.CHECKSUMC">
-            <summary>
-            Le checksum du bloc A de la mémoire non-volatile est erroné.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.OPTOBLOCKEDPERMANENTLY">
-            <summary>
-            Un optocoupleur est bloqué en permanence
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.CHECKSUMD">
-            <summary>
-            Le checksum du bloc A de la mémoire non-volatile est erroné.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.POWERUP">
-            <summary>
-            Le hopper a été alimenté et le reset n'a pas encore été effectué.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.RegistrePos.POWERFAIL">
-            <summary>
-            L'alimentation a été coupée pendant une distribution
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.CHopperStatus">
-            <summary>
-            Classe des status des hoppers
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.Owner">
-            <summary>
-            Propriétaire de la class
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult">
-            <summary>
-            Classe des resultats d'une distribution.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.nameOfHopper">
-            <summary>
-            Numéro du hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinsRemaining">
-             <summary>
-             Nombre de pièce restant à payer.
-             </summary>
-            <remarks>Passe à zéro à la fin de la distribtion quelque soit la raison.</remarks>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinsPaid">
-            <summary>
-            Nombre de pièces distribuées.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinsUnpaid">
-            <summary>
-            Nombre de pièces non distribuées
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.MontantPaid">
-            <summary>
-            Montant distribué
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.MontantUnpaid">
-            <summary>
-            Montant non distribué
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinToDispense">
-            <summary>
-            Nombre de pièces devant être distribuées
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.AmountToDispense">
-            <summary>
-            Montant
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.CHopperStatus.EventCounter">
-            <summary>
-            Nombre de distribution effectuée.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.CHopperStatus.CoinsRemaining">
-            <summary>
-            Nombre de pièces restant à distribuer dans l'opération en cours.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.CHopperStatus.CoinsPaid">
-            <summary>
-            Nombre de pièces distribuées dans l'opération en cours.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.CHopperStatus.CoinsUnpaid">
-            <summary>
-            Nombre de pièces distribuées dans l'opération en cours.
+            Class gérant le monnayeur.
             </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperStatus.dispensedResult">
-            <summary>
-            Instance de la classe CDispenseResult.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.CHopperStatus.GetHopperStatus">
-            <summary>
-            Lecture des status du hopper
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.CHopperStatus.#ctor(DeviceLibrary.CHopper)">
-            <summary>
-            Contructeur;
-            </summary>
-            <param name="owner"></param>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.maxHopper">
-            <summary>
-            Nombre maximum de hoppers
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.pollDelayHopper">
-            <summary>
-            Delai en ms entre chaque pollinng du hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.polllDelayLevel">
-            <summary>
-            Delai en secondes entre 2 vérication de niveau
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.CHopperCoinId">
-            <summary>
-            Identification de la dénomination de la pièce gerée par le hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperCoinId.CountryCode">
-            <summary>
-            Région sur 2 caractères
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperCoinId.ValeurCent">
-            <summary>
-            Valeur en centimes.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHopperCoinId.Issue">
-            <summary>
-            Révision du data set
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.CSoftLevelData">
-            <summary>
-            Class contenant les informations du message envoyé lors du changement d'état des niveaux soft.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.nameOfHopper">
-            <summary>
-            Nom du hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.isHCritical">
-            <summary>
-            Indique si le hopper est critique.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.coinsNumber">
-            <summary>
-            Indique le nombre de pièces dans le hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.level">
-            <summary>
-            Seuil atteint.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.CHardLevelData">
-            <summary>
-            Class contenant les informations du message envoyé lors du changement d'état des niveaux soft.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHardLevelData.nameOfHopper">
-            <summary>
-            Nom du hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHardLevelData.isHCritical">
-            <summary>
-            Indique si le hopper est critique.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHardLevelData.coinsNumber">
-            <summary>
-            Indique le nombre de pièces dans le hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.CHardLevelData.level">
-            <summary>
-            Seuil atteint.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.errorHopper">
-            <summary>
-            Instance de la class CerrorHopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.hopperCoinID">
-            <summary>
-            Objet contenant l'identification des pièces contenus.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.name">
-            <summary>
-            Chaine d'identification du hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.isEmptyingInProgress">
-            <summary>
-            Flag indiquant qu'un vidage est en cours.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsInitialized">
-            <summary>
-            Indique si le Hopper est initialisé.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.AddressBaseHoper">
-            <summary>
-            Adresse de base des hoppers.
-            </summary>
-            <remarks>
-            Les numéros des hoppers commencent à 1 et la première adresse est 3
-            donc l'adresse d'un hopper s'obtient par :
-            Numéro du Hopper + (première adresse(3) - 1) : (Adresse de base : 2)
-            </remarks>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.variables">
-            <summary>
-            Objet contenant l'ensemble des variables du hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.dispenseStatus">
-            <summary>
-            Objet contenant le status de la distribution en cours.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.isOnError">
-            <summary>
-            Boolean indiquant que le hopper est operationel.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.CoinValue">
-            <summary>
-            Valeur de la pièce distribuée par le hopper.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.CoinsInHopper">
-            <summary>
-            Compteur du nombre de pièce dans le hopper
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.AmountInHopper">
-            <summary>
-            Montant contenu dans le hopper.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.CoinsOut">
-            <summary>
-            Compteur de pièces distribuées
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.AmountOut">
-            <summary>
-            Montant distribués
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.CoinsLoadedInHopper">
-            <summary>
-            Nombre de pièces chargées dans le hopper
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.AmountLoadedInHopper">
-            <summary>
-            Montant chargé dans le hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Number">
-            <summary>
-            Numéro d'ordre du hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.memoryStorage">
-            <summary>
-            Informations sur le maintien des donneés en mémoires
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.State">
-            <summary>
-            Etat de la machine d'état des hoppers
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.cipherKey">
-            <summary>
-            Clé de chiffrement pour la distribution
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.emptyCount">
-            <summary>
-            Compteur de vidage;
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsMaxCurrentExceeded">
-            <summary>
-            Bolean indiquant qu'un dépassement du courant maximun a été atteint.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsTOOccured">
-            <summary>
-            Bolean indiquant qu'un dépassement du temps alloué pour l'éjection d'une pièce est survenu.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsMotorReversed">
-            <summary>
-            Bolean indiquant que suite à une surconsomation la rotation du moteur a été inversée pour corriger un bourrage.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsOptoPathBlocked">
-            <summary>
-            Bolean indiquant que la sortie est bloquée.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsShortCircuit">
-            <summary>
-            Bolean indiquant que la sortie est en court-circuit.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsOptoPermanentlyBlocked">
-            <summary>
-            Bolean indiquant qu'un optocloupleur est bloqué en permanence.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsPowerUpDetected">
-            <summary>
-            Bolean indiquant que le hopper est alimenté et un reset n'est pas encore effectué
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsPayoutDisabled">
-            <summary>
-            Bolean indiquant que le hopper n'est pas activé
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsOptoShorCircuit">
-            <summary>
-            Bolean indiquant qu'un optocoupleur est en court-circuit
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsSingleCoinMode">
-            <summary>
-            Bolean indiquant que le hopper est en mode pièce par pièce.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsCheckSumAError">
-            <summary>
-            Bolean indiquant qu'une erreur de checksum dans le bloc de données A est survenue.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsCheckSumBError">
-            <summary>
-            Bolean indiquant qu'une erreur de checksum dans le bloc de données B est survenue.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsCheckSumCError">
-            <summary>
-            Bolean indiquant qu'une erreur de checksum dans le bloc de données B est survenue.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsCheckSumDError">
-            <summary>
-            Bolean indiquant qu'une erreur de checksum dans le bloc de données D est survenue.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsPowerFailMemoryWrite">
-            <summary>
-            Bolean indiquant qu'une chute de tension a eu lieu pendant une écriture mémoire.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsPINEnabled">
-            <summary>
-            Bolean indiquant qu'un code pin est utilisé par le hopper
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.CoinsToDistribute">
-            <summary>
-            Nombre de pièce à distribuer
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.LevelFullSoft">
-            <summary>
-            Nombre maximum de pièces autorisées
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.LevelHISoft">
-            <summary>
-            Nombre de pièce pour le niveau d'alerte haut
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.LevelLOSoft">
-            <summary>
-            Nombre de pièce pour le niveau d'alerte bas
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.LevelEmptySoft">
-            <summary>
-            Nombre minimum de pièces autorisées
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.DefaultFilling">
-            <summary>
-            Nombre de pièces par défaut pour un remplissage.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.HTask">
-            <summary>
-            Thread de la machine d'état du hopper.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsDispensed">
-            <summary>
-            Boolean indiquant la fin d'une distribution
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsCritical">
-            <summary>
-            Boolean indiquant si le hopper est indispensable au fonctionnement de la borne.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.delaypollLevel">
-            <summary>
-            Délai pour l'interrogation des niveaux lorsque le hopper est au repos.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.LevelStatus">
-            <summary>
-            Renvoi les informations sur les niveaux des hoppers
-            </summary>
-            <returns>Le masque des niveaux du hopper</returns>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsHighLevelImplemented">
-            <summary>
-            Boolean indiquant si la détection du niveau haut est implémentée.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsLowLevelImplemented">
-            <summary>
-            Indique si la détection du niveau haut est implémentée.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsHighLevelReached">
-            <summary>
-            Boolean indiquant si le niveau hardware haut est atteint
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.IsLowLevelReached">
-            <summary>
-            Boolean indiquant si le niveau hardware bas est atteint
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.EmergecyStop">
-            <summary>
-            Nombre de byte restant à payer lorsque l'arrêt d'urgence du hopper est activé.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopper.CoinId">
-            <summary>
-            Lecture des informations concernant la pièce gérée par le hopper
-            </summary>
-            <remarks>N'est pas pris en compte par la dll</remarks>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.GetResetableCounter">
-            <summary>
-            Lit les informations du compteur interne du hopper
-            </summary>
-            <returns>Nombre de pièces distribuées par le hopper</returns>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.EnableHopper">
-            <summary>
-            Autorise la distribution sur le hopper.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.PumpRNG">
-            <summary>
-            Envoie un nombre aléatoire qui sera utilisé pour le chiffrement.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.GetCipherKey">
-            <summary>
-            Récupère la clé qui sera utilisé pour le chiffrement de la distribution.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.DispenseCoins(System.Byte)">
-            <summary>
-            Commande demandant la distribution des pièces.
-            </summary>
-            <param name="number">Nombre de pièces à distribuer</param>
-            <returns>true si la commande a été envoyée et comprise</returns>
-            <remarks>En cas d'échec vérifier la procédure de validation précédent la commande.</remarks>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.TestHopper">
-            <summary>
-            Lecture des registres du hopper.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.Init">
-            <summary>
-            Initialisation du hopper
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.EventLevelHopper(DeviceLibrary.Reason,System.Object)">
-            <summary>
-            Ajoute un évenement de niveau à liste des évenements.
-            </summary>
-            <param name="reason">Raison de l'évenement.</param>
-            <param name="data">Donnée concernant l'évenement.</param>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.CheckLevel">
-            <summary>
-            Véfication des niveaux du hopper.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.Empty">
-            <summary>
-            Demande le vidage du hopper;
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.ToString">
             <summary>
-            Ìdentification du hopper.
+            Class gérant le monnayeur.
             </summary>
-            <returns>Chaine de caractères identifiant le hopper.</returns>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.Dispense(System.Byte)">
             <summary>
-            Provoque la distribution par le hopper en utilisant la machine d'état
+            Class gérant le monnayeur.
             </summary>
-            <param name="coinsToDispense">Nombre de token à distribuer</param>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.SubCounters(System.Int64)">
             <summary>
-            Mise à jour des compteurs après une distribution.
+            Class gérant le monnayeur.
             </summary>
-            <param name="CoinsNumber"></param>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.LoadHopper(System.Int64)">
             <summary>
-            Recharge les compteurs du hopper
+            Class gérant le monnayeur.
             </summary>
-            <param name="CoinsNumber"></param>
-        </member>
-        <member name="M:DeviceLibrary.CHopper.AddErrorHopperEvent">
             <summary>
-            Création d'un evénement.
+            Class gérant le monnayeur.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CHopper.Task">
+        <member name="T:DeviceLibrary.CCoinValidator.CCanal">
             <summary>
-            Tâche de la machine d'état du hopper.
+            Class d'un canal d'un périphérique de paiement
             </summary>
+            \details Cette classe contient et gère les paramètres d'un canal*/
         </member>
-        <member name="M:DeviceLibrary.CHopper.#ctor(System.Byte)">
+        <member name="T:DeviceLibrary.CCoinValidator.CCanal.CCoindID">
             <summary>
-            Constructeur
+            Class gérant l'identification des pièces
             </summary>
-            <param name="hopperNumber">Numéro du hopper</param>
         </member>
-        <member name="T:DeviceLibrary.CHopper.Header">
+        <member name="F:DeviceLibrary.CCoinValidator.CCanal.CCoindID.REQUESTCOINID">
             \addtogroup Headers
             @{
             <summary>
             Groupe des commandes ccTalk.
             </summary>
             <summary>
-            Enumération des commandes spécifiques aux hoppers
+            Command ccTalk demandant l'identification de la pièce du canal.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHIGHLOWSTATUS">
+        <member name="F:DeviceLibrary.CCoinValidator.CCanal.CCoindID.CanalOwner">
+            @}
             <summary>
-            Cette commande demande l'état des sondes de niveau du hopper
+            Instance du canal de la pièce.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.Header.MODIFYPAYOUTABSOLUTECOUNT">
+        <member name="P:DeviceLibrary.CCoinValidator.CCanal.CCoindID.CountryCode">
             <summary>
-            Cette commande modifie le compteur interne du hopper.
+            Code d'identification du pays émetteur.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTPAYOUTABSOLUTECOUNT">
+        <member name="P:DeviceLibrary.CCoinValidator.CCanal.CCoindID.ValeurCent">
             <summary>
-            Cette commande demande le compteur interne du hopper.
+            Valeur de la pièces.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.Header.MODIFYPAYOUTCAPACITY">
+        <member name="P:DeviceLibrary.CCoinValidator.CCanal.CCoindID.Issue">
             <summary>
-            Cette commande modifie la capacité maximum du hopper.
+            Version des données d'identification.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTPAYOUTCAPACITY">
+        <member name="M:DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId">
             <summary>
-            Cette commande demande la capacité maximum du hopper.
+            Lit l'identification de la pièce acceptée dans le canal passé en paramètre.
             </summary>
+            <remarks>voir <see cref = "F:DeviceLibrary.CCoinValidator.CCanal.CCoindID.REQUESTCOINID"/> </remarks>
         </member>
-        <member name="F:DeviceLibrary.CHopper.Header.MODIFYPAYOUTFLOAT">
-            <summary>
-            Cette commande modifie le niveau des pièces devant rester dans le hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTPAYOUTFLOAT">
-            <summary>
-            Cette commande demande le niveau des pièces devant rester dans le hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.EMERGENCYSTOP">
-            <summary>
-            Cette commande arrête immédiatement la distribution et renvoie le nombre de pièce restant à payer.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHOPPERCOIN">
-            <summary>
-            Cette commande demande le nom des pièces que le hopper gère.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHOPPERDISPENSECOUNT">
-            <summary>
-            Cette commande demande le nombre de pièces distribuées par le hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.DISPENSEHOPPERCOINS">
-            <summary>
-            Cette commande lance la distribution des pièces.
-            </summary>
-            <remarks>La distribution ne peut s'effectuer que par la séquence décrite dans la documentation du hopper.</remarks>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHOPPERSTATUS">
-            <summary>
-            Cette commande demande les informations sur les pièces distribuées dans l'opération en cours ou venant de se terminer.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.MODIFYVARIABLESET">
-            <summary>
-            Cette commande enregistre les données variables dans le hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.ENABLEHOPPER">
-            <summary>
-            Active le hopper.
-            </summary>
-            <remarks>Le hopper ne peut être activé que par le code 165</remarks>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.TESTHOPPER">
-            <summary>
-            Cette commande demande les informations sur l'état du hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.PUMPRNG">
-            <summary>
-            Cette commande prépare en interne le chiffrage du hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTCIPHERKEY">
-            <summary>
-            Cette commande demande la clé de chiffrage.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.DISPENSEHOPPERVALUE">
-            <summary>
-            Cette commande demande une distribution par valeur.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHOPPERPOLLINGVALUE">
-            <summary>
-            Cette commande demande les informations sur les montants distribués dans l'opération en cours ou venant de se terminer.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.EMERGENCYSTOPVALUE">
-            <summary>
-            Cette commande arrête immédiatement la distribution et renvoie le montant restant à payer.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHOPPERCOINVALUE">
-            <summary>
-            Cette commande demande le nom de la pièce et la valeur.
-            </summary>
-            <remarks>Commande fonctionnant sur les hoppers multiple.</remarks>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTINDEXEDDHOPPERDISPENSECOUNT">
-            <summary>
-            Cette commande demande le nombre de pièce d'un type distribué
-            </summary>
-            <remarks>Cette commande est reservée aux hopperx multiple</remarks>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Header.REQUESTENCRYPTEDHOPPERSTATUS">
-            <summary>
-            Cette commande demande l'état du chiffrage du hopper
-            </summary>
-            <remarks>Non documenté pour des raisons de sécurité.</remarks>
-        </member>
-        <member name="T:DeviceLibrary.CHopper.Etat">
-            \addtogroup Etats
-            @{
-            <summary>
-            Groupe des états des machines d'états des périphériques.
-            </summary>
-            <summary>
-            Etat de la machine d'état des hoppers
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.STATE_INIT">
-            <summary>
-            Initialisation du hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.STATE_RESET">
-            <summary>
-            Reset du hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.STATE_DISPENSE">
-            <summary>
-            Traitement d'une demande de distribution
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.STATE_GETEQUIPEMENCATEGORY">
-            <summary>
-            Lit la catégorie du périphérique.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.STATE_GETOPTOSTATE">
-            <summary>
-            Lit l'état des opto-coupleurs.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.STATE_DISPENSEINPROGRESS">
-            <summary>
-            Distribution en cours
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.STATE_ENDDISPENSE">
-            <summary>
-            Traitement fin de distribution
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.STATE_CHECKLEVEL">
-            <summary>
-            Vérification des niveaux du  hopper,
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.STATE_IDLE">
-            <summary>
-            Inactif
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopper.Etat.STATE_STOP">
-            <summary>
-            interrompt la tâche.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CMemoryStorage">
-            <summary>
-            Classe des paramètres de stockage des variables en mémoire.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CMemoryStorage.MemoryKeepType">
-            <summary>
-            Mode de gestion du maintien des informations en mémoire
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CMemoryStorage.MemoryKeepType.VOLATILLOSTONRESET">
-            <summary>
-            Volatiles effacées par un reset.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CMemoryStorage.MemoryKeepType.VOLATILLOSTONPOWERDOWN">
-            <summary>
-            Volatiles effacées lors de la coupure de l'alimentation
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CMemoryStorage.MemoryKeepType.PERMANENTLIMITED">
-            <summary>
-            Permanent usage limité
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CMemoryStorage.MemoryKeepType.PERMANENTUNLIMITED">
-            <summary>
-            Permanent sans limite
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CMemoryStorage.memoryType">
-            <summary>
-            Contient le type de maintien de la mémoire
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CMemoryStorage.readBlocks">
-            <summary>
-            Nombre de blocs de données valable en lecture.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CMemoryStorage.readBytesPerBlock">
-            <summary>
-            Nombre d'octet contenu dans un bloc de lecture.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CMemoryStorage.writeBlocks">
-            <summary>
-            Nombre de blocs de données valable en écriture.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CMemoryStorage.writeBytesPerBlock">
-            <summary>
-            Nombre d'octets contenus dans un bloc d'écriture.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CMemoryStorage.#ctor(DeviceLibrary.CccTalk)">
+        <member name="M:DeviceLibrary.CCoinValidator.CCanal.CCoindID.#ctor(DeviceLibrary.CCoinValidator.CCanal)">
             <summary>
             Constructeur
             </summary>
+            <param name="owner">Le canal correspondant</param>
         </member>
-        <member name="M:DeviceLibrary.CMemoryStorage.GetDataStorageAvailability">
+        <member name="T:DeviceLibrary.CCoinValidator.CCanal.CSorter">
             <summary>
-            Lit les informations sur la gestion de la mémoire de sauvegarde
+            Class gérant les informations concernant un chemin de triage d'un canal
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CMemoryStorage.MemoryType">
+        <member name="T:DeviceLibrary.CCoinValidator.CCanal.CSorter.Header">
             <summary>
-            Type de maintien de la mémoire
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:DeviceLibrary.CMemoryStorage.ReadBlocks">
-            <summary>
-            Nombre de blocs en lecture
+            Header ccTalk utilisé pour le triage
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CMemoryStorage.ReadBytesPerBlock">
+        <member name="F:DeviceLibrary.CCoinValidator.CCanal.CSorter.Header.REQUESTSORTERPATH">
             <summary>
-            Nombre d'octets par bloc en lecture
+            Demande du chemin utilisé pour trier une pièce reconnue
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CMemoryStorage.WriteBlocks">
+        <member name="F:DeviceLibrary.CCoinValidator.CCanal.CSorter.Header.MODIFYSORTERPATH">
             <summary>
-            Nombre de blocs en lectures.
+            Enregistre chemin utilisé pour trier une pièce reconnue
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CMemoryStorage.WriteBytesPerBlock">
+        <member name="F:DeviceLibrary.CCoinValidator.CCanal.CSorter.CanalOwner">
             <summary>
-            Nombre d'octets par bloc en lectures
+            Canal propriétaire de la class
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CMemoryStorage.GetDataBlock(System.Byte,System.Object@)">
+        <member name="P:DeviceLibrary.CCoinValidator.CCanal.CSorter.PathSorter">
             <summary>
-            Lecture d'un bloc de données.
+            Chemin utilisé dans le trieur (de 1 à 8)
             </summary>
-            <param name="BlockNumber"></param>
-            <param name="data"></param>
         </member>
-        <member name="M:DeviceLibrary.CMemoryStorage.SetDataBlock(System.Byte,System.Object)">
+        <member name="F:DeviceLibrary.CCoinValidator.CCanal.CSorter.OverPath">
             <summary>
-            Enregistrement d'un bloc de données.
+            Chemin de substitusion.
             </summary>
-            <param name="BlockNumber"></param>
-            <param name="data"></param>
         </member>
-        <member name="T:DeviceLibrary.CCoinValidator">
+        <member name="P:DeviceLibrary.CCoinValidator.CCanal.CSorter.SorterPath">
             <summary>
-            Class gérant le monnayeur.
+            Lit les informations concernant le tri des pièces en sortie du monnayeur.
             </summary>
+        </member>
+        <member name="M:DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath(System.Byte)">
+            <summary>
+            Definie le chemin utilisé par le trieur pour ce canal.
+            </summary>
+            <param name="pathSorter">Chemin dans le trieur</param>
+        </member>
+        <member name="M:DeviceLibrary.CCoinValidator.CCanal.CSorter.#ctor(DeviceLibrary.CCoinValidator.CCanal)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="owner">Canal correspondant</param>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CCanal.CVOwner">
+            <summary>
+            Instance propriètaire du canal
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CCanal.Number">
+            <summary>
+            Numéro du canal
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CCanal.coinId">
+            <summary>
+            Identification de la pièce reconnue dans le canal
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CCanal.sorter">
+            <summary>
+            Instance des chemins utilisés pour trier la pièce reconnue dans le canal.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.CCanal.HopperToLoad">
+            <summary>
+            Hopper vers lequel sera dirigé la pièce reconnue
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.CCanal.CoinIn">
+            <summary>
+            Nombre de pièces reconnues par le canal.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.CCanal.MontantIn">
+            <summary>
+            Montant introduit dans le canal
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CCoinValidator.CCanal.#ctor(System.Byte,DeviceLibrary.CCoinValidator)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="number">Numéro du canal</param>
+            <param name="owner">Nécessaire pour effectuer les commandes</param>
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.CCVcreditBuffer">
             <summary>
@@ -2916,6 +1633,1523 @@
             Alarme inconnue.
             </summary>
         </member>
+        <member name="T:DeviceLibrary.CEvent">
+            <summary>
+            Class contenant les informations sur u évenement.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CEvent.Reason">
+            <summary>
+            Enumération des causes des événements
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.MONEYINTRODUCTED">
+            <summary>
+            Une pièce a été reconnue par le monnayeur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.COINVALIDATORERROR">
+            <summary>
+            Une erreur a été dectée sur le monnayeur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.CASHCLOSED">
+            <summary>
+            Les moyens de paiement ont été fermés.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.CASHOPENED">
+            <summary>
+            Les moyens de paiement ont été ouverts.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.HOPPERERROR">
+            <summary>
+            Une erreur a été detectée sur un hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.HOPPERDISPENSED">
+            <summary>
+            Le hopper a terminé la distribution.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.HOPPERHWLEVELCHANGED">
+            <summary>
+            Une des sondes hardwares d'un hopper a changé d'état.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.HOPPERSWLEVELCHANGED">
+            <summary>
+            Un seuil de niveau a été atteint
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.HOPPEREMPTIED">
+            <summary>
+            Le hopper est vidé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.BNRERREUR">
+            <summary>
+            Une erreur sur le BNR est survenue.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.BNRMODULEMANQUANT">
+            <summary>
+            Un module a été reitré.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.BNRMODULEREINSERE">
+            <summary>
+            Un module a été réinséré.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.BNRRAZMETER">
+            <summary>
+            Les compteurs de la caisse du BNR on été remis à zéro.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.DLLLREADY">
+            <summary>
+            La dll est prête.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CEvent.FireEventArg">
+            <summary>
+            Class d'évenement
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.FireEventArg.reason">
+            <summary>
+            Cause de l'événement.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.FireEventArg.donnee">
+            <summary>
+            Objet contenant les infomations concernant l'événement.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.reason">
+            <summary>
+            Raison de l'évenement.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.nameOfDevice">
+            <summary>
+            Nom du périphérique
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.data">
+             <summary>
+             donnée concernant l'évenenement.
+             </summary>
+            <remarks>Dépend du périphérique et de l'évenement.</remarks>
+        </member>
+        <member name="T:DeviceLibrary.CHopper">
+            <summary>
+            Classe des hoppers
+            </summary>
+            <summary>
+            Classe des hoppers
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CEmptyCount">
+            <summary>
+            Class contenant les résultats du vidage du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CEmptyCount.nameOfHopper">
+            <summary>
+            Nom du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CEmptyCount.counter">
+            <summary>
+            Nombre de pièces comptées durant le vidage
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CEmptyCount.amountCounter">
+            <summary>
+            Montant distribué pendant le vidage.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CEmptyCount.delta">
+            <summary>
+            Différence entre le nombre de pièces dans les compteurs et le nombre de pièces distribuées pendant le vidage.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CEmptyCount.amountDelta">
+            <summary>
+            Différence entre le montant distribué et le montant dans les compteurs.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CHopperVariableSet">
+            <summary>
+            Classe des variables du hopper
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CHopperVariableSet.CoinMode">
+            <summary>
+            Enumération des modes de distribution.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperVariableSet.CoinMode.MULTICOINSMODE">
+            <summary>
+            Plusieurs pièces peuvent être distribuées en 1 opération.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperVariableSet.CoinMode.SINGLECOINMODE">
+            <summary>
+            Une seule pièce peut être distribuée par opération.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CHopperVariableSet.Variable">
+            <summary>
+            Enumération des index des variables
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperVariableSet.Variable.CURRENTLIMIT">
+            <summary>
+            Limit de courant avant d'inverser la rotation du moteur
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperVariableSet.Variable.MOTORSTOPDELAY">
+            <summary>
+            Délai pour arrêter le moteur après distribution.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperVariableSet.Variable.PAYOUTTIMEOUT">
+            <summary>
+            Temps sans distribution pour arrêter le moteur si une pièce doit être distribuée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperVariableSet.Variable.MAXCURRENT">
+            <summary>
+            Maximum de consomation de courant accepté.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperVariableSet.Variable.SINGLECOINMODE">
+            <summary>
+            Mode pièce par pièce.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperVariableSet.Variable.SUPPLYVOLTAGE">
+            <summary>
+            Tension actuelle d'alimentation.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperVariableSet.Variable.CONNECTORADDRESS">
+            <summary>
+            Adresse physique du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperVariableSet.Owner">
+            <summary>
+            Hopper propriétaire de l'instance.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperVariableSet.VariableSetToRead">
+            <summary>
+            Buffer du résultat de la commande de lecture des variables du hopper.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperVariableSet.CurrentLimit">
+            <summary>
+            Lecture et conversion de la limite de courant
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperVariableSet.MotorStopDelay">
+            <summary>
+            Lecture du delai pour arrêter le moteur.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperVariableSet.PayoutDelayTO">
+            <summary>
+            Lecture du delay pour la distribution d'un pièce.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperVariableSet.Maxcurrent">
+            <summary>
+            Lecture et conversion du courant maximum
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperVariableSet.Tension">
+            <summary>
+            Lecture et conversion de la tension maximum.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperVariableSet.ConnectorAddress">
+            <summary>
+            Lecture de l'adresse physique du hopper
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet">
+            <summary>
+            Lecture des variables.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.CHopperVariableSet.GetVariable(DeviceLibrary.CHopper.CHopperVariableSet.Variable)">
+            <summary>
+            Lecture d'une variable
+            </summary>
+            <param name="variable">variable demandée</param>
+            <returns>Valeur de la variable demandée</returns>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.CHopperVariableSet.SetVariable(System.Double,System.Byte,System.Byte,DeviceLibrary.CHopper.CHopperVariableSet.CoinMode)">
+            <summary>
+            Enregistrement des variables
+            </summary>
+            <param name="currentLimit">Limit de courant avant l'inversion de la rotaiton</param>
+            <param name="motorStopDelay">Delai pour arrêter le moteur après la distribution.</param>
+            <param name="payoutTO">Le délai maximum pour la distribution d'une pièce.</param>
+            <param name="singleCoinMode">Single coin ou non.</param>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.CHopperVariableSet.#ctor(DeviceLibrary.CHopper)">
+            <summary>
+            Consructeur
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CLevel">
+            <summary>
+            Classe des niveaux des hopeprs.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CLevel.SoftLevel">
+            \addtogroup Niveaux Niveaux hoppers
+            <summary>Groupe des niveaux physiques et logiciels.</summary>
+            @{
+            <summary>
+            Enumération des niveaux soft
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.SoftLevel.VIDE">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessous ou égal au niveau vide indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.SoftLevel.BAS">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessous ou égal au niveau d'alerte bas indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.SoftLevel.OK">
+            <summary>
+            Le nombre de pièces dans périphérique est compris entre le niveau d'alerte bas et le niveau d'alerte au indiqués dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.SoftLevel.HAUT">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessus ou égal au niveau d'alerte haut indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.SoftLevel.PLEIN">
+            <summary>
+            Le nombre de pièces dans périphérique est au dessus ou égal au niveau plein indiqué dans le fichier paramètres.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.SoftLevel.INCONNU">
+            <summary>
+            Le nombre de pièces dans périphérique ou le fichier paramètre n'ont pas été encore lus.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CLevel.HardLevel">
+            <summary>
+            Enumération des niveaux Hard
+            </summary>
+            <remarks>Determinés par la lecture des sondes de niveau du périphérique</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.HardLevel.VIDE">
+            <summary>
+            Le périphérique est vide.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.HardLevel.OK">
+            <summary>
+            Aucune sonde n'est activée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.HardLevel.PLEIN">
+            <summary>
+            Le périphérique est plein
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.HardLevel.INCONNU">
+            <summary>
+            Les sondes n'ont pas été encore interrogées.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.ID">
+            @}
+            <summary>
+            Nom du périphérique
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.softLevel">
+            <summary>
+            Variable contenant le niveau du périphérique par rapport aux paramètres et au compteurs.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CLevel.hardLevel">
+            <summary>
+            Variable contenant le niveau du périphérique par rapport à ses sondes hardware.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.CLevel.#ctor(DeviceLibrary.CHopper.CLevel.SoftLevel,DeviceLibrary.CHopper.CLevel.HardLevel)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="softlevel">Niveau soft, par défaut inconnu</param>
+            <param name="hardLevel">Niveau hard, par défaut inconnu</param>
+            <remarks>Le fait d'avoir les niveaux à l'état inconnu permet de provoqué un évenement permettant de déterminé le niveau actuel.</remarks>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.HopperError">
+            \addtogroup Erreurs
+            @{
+            <summary>
+            Groupe des codes erreur renvoyés par les périphériques
+            </summary>
+            <summary>
+            Liste des erreurs hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.NON_IDENTIFIEE">
+            <summary>
+            Aucune erreur ou erreur non identifiée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.MOTORREVERSED">
+            <summary>
+            Moteur inversé suite à une surconsomation. Probablement du à un bourrage.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.MAXCURRENTEXCEEDED">
+            <summary>
+            Consomation de courant hors limite du périphérique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.OPTOBLOCKEDPERMANENTLY">
+            <summary>
+            Optocoupleur obstrué en permanence.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.OPTOSHORTCIRCUIT">
+            <summary>
+            Optocoupleur en court-circuit.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.CHECKSUMA">
+            <summary>
+            Erreur de checksum dans le bloc de donné A.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.CHECKSUMB">
+            <summary>
+            Erreur de checksum dans le bloc de donné B.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.CHECKSUMC">
+            <summary>
+            Erreur de checksum dans le bloc de donné C.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.CHECKSUMD">
+            <summary>
+            Erreur de checksum dans le bloc de donné D.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.OPTOPATHBLOCKED">
+            <summary>
+            Optocoupleur obstrué.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.OPTOSHORTCIRCUITIDLE">
+            <summary>
+            Optocoupleur en court-circuit
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HopperError.POWERFAIL">
+            <summary>
+            Chute de tension pendant l'écriture dans la mémoire.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CHopperError">
+            @}
+            <summary>
+            Classe contenant les informations sur une erreur survenue dans le hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperError.nameOfHopper">
+            <summary>
+            Numéro du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperError.Code">
+            <summary>
+            Code d'erreur du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperError.isHopperCritical">
+            <summary>
+            Indique si le hopper est nécessaire pour le fonctionnement du système.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.LevelMask">
+            <summary>
+            Masque des niveau
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.LevelMask.LOLEVELREACHED">
+            <summary>
+            Mask indiquant si le niveau base est atteint.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.LevelMask.HILEVEREACHED">
+            <summary>
+            Mask indiquant si le niveau haut est atteint.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.LevelMask.LOLEVELIMPLEMENTED">
+            <summary>
+            Mask indiquant si le niveau bas est implémenté.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.LevelMask.HILEVELIMPLEMENTED">
+            <summary>
+            Mask indiquant si le niveau haut est implémenté.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.RegistrePos">
+            <summary>
+            Liste des réponses contenu dans le registre
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.NULL">
+             <summary>
+             Pas d'erreur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.SINGLEPAYOUT">
+            <summary>
+            Le pièce par pièce est activé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.MOTORREVERSED">
+            <summary>
+            La rotation du moteur a été inversée lors de la dernière distribution pour corriger un bourrage
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.DISABLED">
+            <summary>
+            Le hopper n'est pas activé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.PINNUMBER">
+            <summary>
+            Le hopper est protéger par un code PIN
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.MAXCURRENTEXCEEDED">
+            <summary>
+            La consommation de courant a dépassée celle autorisée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.OPTOSHORTCIRCUIT">
+            <summary>
+            Un opto est est activé en permanence
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.TOOCCURED">
+            <summary>
+            Le temps alloué pour l'éjection d'une pièce a été depassé.
+            </summary>
+            <remarks>Utilisé pour detecté le hopper vide lors du vidage.</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.CHECKSUMA">
+            <summary>
+            Le checksum du bloc A de la mémoire non-volatile est erroné.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.OPTOPATHBLOCKED">
+            <summary>
+            L'opto coupleur de sortie est bloqué
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.CHECKSUMB">
+            <summary>
+            Le checksum du bloc A de la mémoire non-volatile est erroné.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.OPTOSHORTCIRCUITIDLE">
+            <summary>
+            L'optocoupleur est en court-circuit au repos
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.CHECKSUMC">
+            <summary>
+            Le checksum du bloc A de la mémoire non-volatile est erroné.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.OPTOBLOCKEDPERMANENTLY">
+            <summary>
+            Un optocoupleur est bloqué en permanence
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.CHECKSUMD">
+            <summary>
+            Le checksum du bloc A de la mémoire non-volatile est erroné.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.POWERUP">
+            <summary>
+            Le hopper a été alimenté et le reset n'a pas encore été effectué.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.RegistrePos.POWERFAIL">
+            <summary>
+            L'alimentation a été coupée pendant une distribution
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CHopperStatus">
+            <summary>
+            Classe des status des hoppers
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.Owner">
+            <summary>
+            Propriétaire de la class
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult">
+            <summary>
+            Classe des resultats d'une distribution.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.nameOfHopper">
+            <summary>
+            Numéro du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinsRemaining">
+             <summary>
+             Nombre de pièce restant à payer.
+             </summary>
+            <remarks>Passe à zéro à la fin de la distribtion quelque soit la raison.</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinsPaid">
+            <summary>
+            Nombre de pièces distribuées.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinsUnpaid">
+            <summary>
+            Nombre de pièces non distribuées
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.MontantPaid">
+            <summary>
+            Montant distribué
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.MontantUnpaid">
+            <summary>
+            Montant non distribué
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinToDispense">
+            <summary>
+            Nombre de pièces devant être distribuées
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.AmountToDispense">
+            <summary>
+            Montant
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperStatus.EventCounter">
+            <summary>
+            Nombre de distribution effectuée.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperStatus.CoinsRemaining">
+            <summary>
+            Nombre de pièces restant à distribuer dans l'opération en cours.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperStatus.CoinsPaid">
+            <summary>
+            Nombre de pièces distribuées dans l'opération en cours.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CHopperStatus.CoinsUnpaid">
+            <summary>
+            Nombre de pièces distribuées dans l'opération en cours.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperStatus.dispensedResult">
+            <summary>
+            Instance de la classe CDispenseResult.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.CHopperStatus.GetHopperStatus">
+            <summary>
+            Lecture des status du hopper
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.CHopperStatus.#ctor(DeviceLibrary.CHopper)">
+            <summary>
+            Contructeur;
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.maxHopper">
+            <summary>
+            Nombre maximum de hoppers
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.pollDelayHopper">
+            <summary>
+            Delai en ms entre chaque pollinng du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.polllDelayLevel">
+            <summary>
+            Delai en secondes entre 2 vérication de niveau
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CHopperCoinId">
+            <summary>
+            Identification de la dénomination de la pièce gerée par le hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperCoinId.CountryCode">
+            <summary>
+            Région sur 2 caractères
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperCoinId.ValeurCent">
+            <summary>
+            Valeur en centimes.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHopperCoinId.Issue">
+            <summary>
+            Révision du data set
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CSoftLevelData">
+            <summary>
+            Class contenant les informations du message envoyé lors du changement d'état des niveaux soft.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.nameOfHopper">
+            <summary>
+            Nom du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.isHCritical">
+            <summary>
+            Indique si le hopper est critique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.coinsNumber">
+            <summary>
+            Indique le nombre de pièces dans le hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CSoftLevelData.level">
+            <summary>
+            Seuil atteint.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.CHardLevelData">
+            <summary>
+            Class contenant les informations du message envoyé lors du changement d'état des niveaux soft.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHardLevelData.nameOfHopper">
+            <summary>
+            Nom du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHardLevelData.isHCritical">
+            <summary>
+            Indique si le hopper est critique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHardLevelData.coinsNumber">
+            <summary>
+            Indique le nombre de pièces dans le hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.CHardLevelData.level">
+            <summary>
+            Seuil atteint.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.errorHopper">
+            <summary>
+            Instance de la class CerrorHopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.hopperCoinID">
+            <summary>
+            Objet contenant l'identification des pièces contenus.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.name">
+            <summary>
+            Chaine d'identification du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.isEmptyingInProgress">
+            <summary>
+            Flag indiquant qu'un vidage est en cours.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsInitialized">
+            <summary>
+            Indique si le Hopper est initialisé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.AddressBaseHoper">
+            <summary>
+            Adresse de base des hoppers.
+            </summary>
+            <remarks>
+            Les numéros des hoppers commencent à 1 et la première adresse est 3
+            donc l'adresse d'un hopper s'obtient par :
+            Numéro du Hopper + (première adresse(3) - 1) : (Adresse de base : 2)
+            </remarks>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.variables">
+            <summary>
+            Objet contenant l'ensemble des variables du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.dispenseStatus">
+            <summary>
+            Objet contenant le status de la distribution en cours.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.isOnError">
+            <summary>
+            Boolean indiquant que le hopper est operationel.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CoinValue">
+            <summary>
+            Valeur de la pièce distribuée par le hopper.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CoinsInHopper">
+            <summary>
+            Compteur du nombre de pièce dans le hopper
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.AmountInHopper">
+            <summary>
+            Montant contenu dans le hopper.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CoinsOut">
+            <summary>
+            Compteur de pièces distribuées
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.AmountOut">
+            <summary>
+            Montant distribués
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CoinsLoadedInHopper">
+            <summary>
+            Nombre de pièces chargées dans le hopper
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.AmountLoadedInHopper">
+            <summary>
+            Montant chargé dans le hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Number">
+            <summary>
+            Numéro d'ordre du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.memoryStorage">
+            <summary>
+            Informations sur le maintien des donneés en mémoires
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.State">
+            <summary>
+            Etat de la machine d'état des hoppers
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.cipherKey">
+            <summary>
+            Clé de chiffrement pour la distribution
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.emptyCount">
+            <summary>
+            Compteur de vidage;
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsMaxCurrentExceeded">
+            <summary>
+            Bolean indiquant qu'un dépassement du courant maximun a été atteint.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsTOOccured">
+            <summary>
+            Bolean indiquant qu'un dépassement du temps alloué pour l'éjection d'une pièce est survenu.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsMotorReversed">
+            <summary>
+            Bolean indiquant que suite à une surconsomation la rotation du moteur a été inversée pour corriger un bourrage.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsOptoPathBlocked">
+            <summary>
+            Bolean indiquant que la sortie est bloquée.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsShortCircuit">
+            <summary>
+            Bolean indiquant que la sortie est en court-circuit.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsOptoPermanentlyBlocked">
+            <summary>
+            Bolean indiquant qu'un optocloupleur est bloqué en permanence.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsPowerUpDetected">
+            <summary>
+            Bolean indiquant que le hopper est alimenté et un reset n'est pas encore effectué
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsPayoutDisabled">
+            <summary>
+            Bolean indiquant que le hopper n'est pas activé
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsOptoShorCircuit">
+            <summary>
+            Bolean indiquant qu'un optocoupleur est en court-circuit
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsSingleCoinMode">
+            <summary>
+            Bolean indiquant que le hopper est en mode pièce par pièce.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsCheckSumAError">
+            <summary>
+            Bolean indiquant qu'une erreur de checksum dans le bloc de données A est survenue.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsCheckSumBError">
+            <summary>
+            Bolean indiquant qu'une erreur de checksum dans le bloc de données B est survenue.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsCheckSumCError">
+            <summary>
+            Bolean indiquant qu'une erreur de checksum dans le bloc de données B est survenue.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsCheckSumDError">
+            <summary>
+            Bolean indiquant qu'une erreur de checksum dans le bloc de données D est survenue.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsPowerFailMemoryWrite">
+            <summary>
+            Bolean indiquant qu'une chute de tension a eu lieu pendant une écriture mémoire.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsPINEnabled">
+            <summary>
+            Bolean indiquant qu'un code pin est utilisé par le hopper
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CoinsToDistribute">
+            <summary>
+            Nombre de pièce à distribuer
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.LevelFullSoft">
+            <summary>
+            Nombre maximum de pièces autorisées
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.LevelHISoft">
+            <summary>
+            Nombre de pièce pour le niveau d'alerte haut
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.LevelLOSoft">
+            <summary>
+            Nombre de pièce pour le niveau d'alerte bas
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.LevelEmptySoft">
+            <summary>
+            Nombre minimum de pièces autorisées
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.DefaultFilling">
+            <summary>
+            Nombre de pièces par défaut pour un remplissage.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.HTask">
+            <summary>
+            Thread de la machine d'état du hopper.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsDispensed">
+            <summary>
+            Boolean indiquant la fin d'une distribution
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsCritical">
+            <summary>
+            Boolean indiquant si le hopper est indispensable au fonctionnement de la borne.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.delaypollLevel">
+            <summary>
+            Délai pour l'interrogation des niveaux lorsque le hopper est au repos.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.deviceLevel">
+            <summary>
+            Niveaux des périphériques.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.LevelStatus">
+            <summary>
+            Renvoi les informations sur les niveaux des hoppers
+            </summary>
+            <returns>Le masque des niveaux du hopper</returns>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsHighLevelImplemented">
+            <summary>
+            Boolean indiquant si la détection du niveau haut est implémentée.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsLowLevelImplemented">
+            <summary>
+            Indique si la détection du niveau haut est implémentée.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsHighLevelReached">
+            <summary>
+            Boolean indiquant si le niveau hardware haut est atteint
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.IsLowLevelReached">
+            <summary>
+            Boolean indiquant si le niveau hardware bas est atteint
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.EmergecyStop">
+            <summary>
+            Nombre de byte restant à payer lorsque l'arrêt d'urgence du hopper est activé.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CHopper.CoinId">
+            <summary>
+            Lecture des informations concernant la pièce gérée par le hopper
+            </summary>
+            <remarks>N'est pas pris en compte par la dll</remarks>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.GetResetableCounter">
+            <summary>
+            Lit les informations du compteur interne du hopper
+            </summary>
+            <returns>Nombre de pièces distribuées par le hopper</returns>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.EnableHopper">
+            <summary>
+            Autorise la distribution sur le hopper.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.PumpRNG">
+            <summary>
+            Envoie un nombre aléatoire qui sera utilisé pour le chiffrement.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.GetCipherKey">
+            <summary>
+            Récupère la clé qui sera utilisé pour le chiffrement de la distribution.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.DispenseCoins(System.Byte)">
+            <summary>
+            Commande demandant la distribution des pièces.
+            </summary>
+            <param name="number">Nombre de pièces à distribuer</param>
+            <returns>true si la commande a été envoyée et comprise</returns>
+            <remarks>En cas d'échec vérifier la procédure de validation précédent la commande.</remarks>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.TestHopper">
+            <summary>
+            Lecture des registres du hopper.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.Init">
+            <summary>
+            Initialisation du hopper
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.EventLevelHopper(DeviceLibrary.CEvent.Reason,System.Object)">
+            <summary>
+            Ajoute un évenement de niveau à liste des évenements.
+            </summary>
+            <param name="reason">Raison de l'évenement.</param>
+            <param name="data">Donnée concernant l'évenement.</param>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.CheckLevel">
+            <summary>
+            Véfication des niveaux du hopper.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.Empty">
+            <summary>
+            Demande le vidage du hopper;
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.ToString">
+            <summary>
+            Ìdentification du hopper.
+            </summary>
+            <returns>Chaine de caractères identifiant le hopper.</returns>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.Dispense(System.Byte)">
+            <summary>
+            Provoque la distribution par le hopper en utilisant la machine d'état
+            </summary>
+            <param name="coinsToDispense">Nombre de token à distribuer</param>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.SubCounters(System.Int64)">
+            <summary>
+            Mise à jour des compteurs après une distribution.
+            </summary>
+            <param name="CoinsNumber"></param>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.LoadHopper(System.Int64)">
+            <summary>
+            Recharge les compteurs du hopper
+            </summary>
+            <param name="CoinsNumber"></param>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.AddErrorHopperEvent">
+            <summary>
+            Création d'un evénement.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.Task">
+            <summary>
+            Tâche de la machine d'état du hopper.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.#ctor(System.Byte)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="hopperNumber">Numéro du hopper</param>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.Header">
+            \addtogroup Headers
+            @{
+            <summary>
+            Groupe des commandes ccTalk.
+            </summary>
+            <summary>
+            Enumération des commandes spécifiques aux hoppers
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHIGHLOWSTATUS">
+            <summary>
+            Cette commande demande l'état des sondes de niveau du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.MODIFYPAYOUTABSOLUTECOUNT">
+            <summary>
+            Cette commande modifie le compteur interne du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTPAYOUTABSOLUTECOUNT">
+            <summary>
+            Cette commande demande le compteur interne du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.MODIFYPAYOUTCAPACITY">
+            <summary>
+            Cette commande modifie la capacité maximum du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTPAYOUTCAPACITY">
+            <summary>
+            Cette commande demande la capacité maximum du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.MODIFYPAYOUTFLOAT">
+            <summary>
+            Cette commande modifie le niveau des pièces devant rester dans le hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTPAYOUTFLOAT">
+            <summary>
+            Cette commande demande le niveau des pièces devant rester dans le hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.EMERGENCYSTOP">
+            <summary>
+            Cette commande arrête immédiatement la distribution et renvoie le nombre de pièce restant à payer.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHOPPERCOIN">
+            <summary>
+            Cette commande demande le nom des pièces que le hopper gère.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHOPPERDISPENSECOUNT">
+            <summary>
+            Cette commande demande le nombre de pièces distribuées par le hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.DISPENSEHOPPERCOINS">
+            <summary>
+            Cette commande lance la distribution des pièces.
+            </summary>
+            <remarks>La distribution ne peut s'effectuer que par la séquence décrite dans la documentation du hopper.</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHOPPERSTATUS">
+            <summary>
+            Cette commande demande les informations sur les pièces distribuées dans l'opération en cours ou venant de se terminer.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.MODIFYVARIABLESET">
+            <summary>
+            Cette commande enregistre les données variables dans le hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.ENABLEHOPPER">
+            <summary>
+            Active le hopper.
+            </summary>
+            <remarks>Le hopper ne peut être activé que par le code 165</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.TESTHOPPER">
+            <summary>
+            Cette commande demande les informations sur l'état du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.PUMPRNG">
+            <summary>
+            Cette commande prépare en interne le chiffrage du hopper.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTCIPHERKEY">
+            <summary>
+            Cette commande demande la clé de chiffrage.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.DISPENSEHOPPERVALUE">
+            <summary>
+            Cette commande demande une distribution par valeur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHOPPERPOLLINGVALUE">
+            <summary>
+            Cette commande demande les informations sur les montants distribués dans l'opération en cours ou venant de se terminer.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.EMERGENCYSTOPVALUE">
+            <summary>
+            Cette commande arrête immédiatement la distribution et renvoie le montant restant à payer.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTHOPPERCOINVALUE">
+            <summary>
+            Cette commande demande le nom de la pièce et la valeur.
+            </summary>
+            <remarks>Commande fonctionnant sur les hoppers multiple.</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTINDEXEDDHOPPERDISPENSECOUNT">
+            <summary>
+            Cette commande demande le nombre de pièce d'un type distribué
+            </summary>
+            <remarks>Cette commande est reservée aux hopperx multiple</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Header.REQUESTENCRYPTEDHOPPERSTATUS">
+            <summary>
+            Cette commande demande l'état du chiffrage du hopper
+            </summary>
+            <remarks>Non documenté pour des raisons de sécurité.</remarks>
+        </member>
+        <member name="T:DeviceLibrary.CHopper.Etat">
+            \addtogroup Etats
+            @{
+            <summary>
+            Groupe des états des machines d'états des périphériques.
+            </summary>
+            <summary>
+            Etat de la machine d'état des hoppers
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_INIT">
+            <summary>
+            Initialisation du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_RESET">
+            <summary>
+            Reset du hopper
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_DISPENSE">
+            <summary>
+            Traitement d'une demande de distribution
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_GETEQUIPEMENCATEGORY">
+            <summary>
+            Lit la catégorie du périphérique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_GETOPTOSTATE">
+            <summary>
+            Lit l'état des opto-coupleurs.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_DISPENSEINPROGRESS">
+            <summary>
+            Distribution en cours
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_ENDDISPENSE">
+            <summary>
+            Traitement fin de distribution
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_CHECKLEVEL">
+            <summary>
+            Vérification des niveaux du  hopper,
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_IDLE">
+            <summary>
+            Inactif
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CHopper.Etat.STATE_STOP">
+            <summary>
+            interrompt la tâche.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CDevice">
+            <summary>
+            Classe abstraite parent de tous les périphériques
+            </summary>   
+        </member>
+        <member name="T:DeviceLibrary.CDevice.CInserted">
+            <summary>
+             Classe des pièces insérées
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.ValeurCent">
+            <summary>
+            Montant nominal en centimes de la pièce insérée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.CVChannel">
+            <summary>
+            Canal correpsondant à la pièce insérée
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.CVPath">
+            <summary>
+            Chemin de tri utilisé
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.TotalAmount">
+            <summary>
+            Montant inséré depuis le début de la transaction.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.CInserted.BackTotalAmount">
+            <summary>
+            Sauvegarde du montant total inséré depuis le début de la transaction.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.evReady">
+            <summary>
+            Event permenttant de savoir savoir si le BNR prêt.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.eventsList">
+            <summary>
+            Liste des évenement.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.eventListLock">
+            <summary>
+            Objet de verrouillage de l'accés à la liste des évenements.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.denominationInserted">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.SerialNumber">
+            <summary>
+            Numéro de série du périphérique
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.Manufacturer">
+            <summary>
+            Identifiant du  fabricant
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.ProductCode">
+            <summary>
+            Fonction demandant le code produit
+            </summary>
+            <returns>Une chaîne de caractères contenant le code produit</returns>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.IsPresent">
+            <summary>
+            Flag indiquant si le hopper est detecté.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.Task">
+            <summary>
+            Tâche du périphérique.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.Init">
+            <summary>
+            Initialisation des périphériques.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.#ctor">
+            <summary>
+            Constructeur
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CMemoryStorage">
+            <summary>
+            Classe des paramètres de stockage des variables en mémoire.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CMemoryStorage.MemoryKeepType">
+            <summary>
+            Mode de gestion du maintien des informations en mémoire
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CMemoryStorage.MemoryKeepType.VOLATILLOSTONRESET">
+            <summary>
+            Volatiles effacées par un reset.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CMemoryStorage.MemoryKeepType.VOLATILLOSTONPOWERDOWN">
+            <summary>
+            Volatiles effacées lors de la coupure de l'alimentation
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CMemoryStorage.MemoryKeepType.PERMANENTLIMITED">
+            <summary>
+            Permanent usage limité
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CMemoryStorage.MemoryKeepType.PERMANENTUNLIMITED">
+            <summary>
+            Permanent sans limite
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CMemoryStorage.memoryType">
+            <summary>
+            Contient le type de maintien de la mémoire
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CMemoryStorage.readBlocks">
+            <summary>
+            Nombre de blocs de données valable en lecture.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CMemoryStorage.readBytesPerBlock">
+            <summary>
+            Nombre d'octet contenu dans un bloc de lecture.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CMemoryStorage.writeBlocks">
+            <summary>
+            Nombre de blocs de données valable en écriture.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CMemoryStorage.writeBytesPerBlock">
+            <summary>
+            Nombre d'octets contenus dans un bloc d'écriture.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CMemoryStorage.#ctor(DeviceLibrary.CccTalk)">
+            <summary>
+            Constructeur
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CMemoryStorage.GetDataStorageAvailability">
+            <summary>
+            Lit les informations sur la gestion de la mémoire de sauvegarde
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CMemoryStorage.MemoryType">
+            <summary>
+            Type de maintien de la mémoire
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DeviceLibrary.CMemoryStorage.ReadBlocks">
+            <summary>
+            Nombre de blocs en lecture
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CMemoryStorage.ReadBytesPerBlock">
+            <summary>
+            Nombre d'octets par bloc en lecture
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CMemoryStorage.WriteBlocks">
+            <summary>
+            Nombre de blocs en lectures.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CMemoryStorage.WriteBytesPerBlock">
+            <summary>
+            Nombre d'octets par bloc en lectures
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CMemoryStorage.GetDataBlock(System.Byte,System.Object@)">
+            <summary>
+            Lecture d'un bloc de données.
+            </summary>
+            <param name="BlockNumber"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:DeviceLibrary.CMemoryStorage.SetDataBlock(System.Byte,System.Object)">
+            <summary>
+            Enregistrement d'un bloc de données.
+            </summary>
+            <param name="BlockNumber"></param>
+            <param name="data"></param>
+        </member>
         <member name="T:DeviceLibrary.DefaultDevicesAddress">
             <summary>
             Enumération des périphériques et leurs adresses.
@@ -2987,6 +3221,9 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CccTalk">
+            <summary>
+            Class ccTalk
+            </summary>
             <summary>
             Class ccTalk
             </summary>
@@ -3585,135 +3822,15 @@
             Erreur inconnue.
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CHopperVariableSet">
-            <summary>
-            Classe des variables du hopper
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopperVariableSet.CoinMode">
-            <summary>
-            Enumération des modes de distribution.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopperVariableSet.CoinMode.MULTICOINSMODE">
-            <summary>
-            Plusieurs pièces peuvent être distribuées en 1 opération.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopperVariableSet.CoinMode.SINGLECOINMODE">
-            <summary>
-            Une seule pièce peut être distribuée par opération.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CHopperVariableSet.Variable">
-            <summary>
-            Enumération des index des variables
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopperVariableSet.Variable.CURRENTLIMIT">
-            <summary>
-            Limit de courant avant d'inverser la rotation du moteur
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopperVariableSet.Variable.MOTORSTOPDELAY">
-            <summary>
-            Délai pour arrêter le moteur après distribution.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopperVariableSet.Variable.PAYOUTTIMEOUT">
-            <summary>
-            Temps sans distribution pour arrêter le moteur si une pièce doit être distribuée.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopperVariableSet.Variable.MAXCURRENT">
-            <summary>
-            Maximum de consomation de courant accepté.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopperVariableSet.Variable.SINGLECOINMODE">
-            <summary>
-            Mode pièce par pièce.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopperVariableSet.Variable.SUPPLYVOLTAGE">
-            <summary>
-            Tension actuelle d'alimentation.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopperVariableSet.Variable.CONNECTORADDRESS">
-            <summary>
-            Adresse physique du hopper
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CHopperVariableSet.Owner">
-            <summary>
-            Hopper propriétaire de l'instance.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopperVariableSet.VariableSetToRead">
-            <summary>
-            Buffer du résultat de la commande de lecture des variables du hopper.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopperVariableSet.CurrentLimit">
-            <summary>
-            Lecture et conversion de la limite de courant
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopperVariableSet.MotorStopDelay">
-            <summary>
-            Lecture du delai pour arrêter le moteur.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopperVariableSet.PayoutDelayTO">
-            <summary>
-            Lecture du delay pour la distribution d'un pièce.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopperVariableSet.Maxcurrent">
-            <summary>
-            Lecture et conversion du courant maximum
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopperVariableSet.Tension">
-            <summary>
-            Lecture et conversion de la tension maximum.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CHopperVariableSet.ConnectorAddress">
-            <summary>
-            Lecture de l'adresse physique du hopper
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopperVariableSet.GetVariableSet">
-            <summary>
-            Lecture des variables.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CHopperVariableSet.GetVariable(DeviceLibrary.CHopperVariableSet.Variable)">
-            <summary>
-            Lecture d'une variable
-            </summary>
-            <param name="variable">variable demandée</param>
-            <returns>Valeur de la variable demandée</returns>
-        </member>
-        <member name="M:DeviceLibrary.CHopperVariableSet.SetVariable(System.Double,System.Byte,System.Byte,DeviceLibrary.CHopperVariableSet.CoinMode)">
-            <summary>
-            Enregistrement des variables
-            </summary>
-            <param name="currentLimit">Limit de courant avant l'inversion de la rotaiton</param>
-            <param name="motorStopDelay">Delai pour arrêter le moteur après la distribution.</param>
-            <param name="payoutTO">Le délai maximum pour la distribution d'une pièce.</param>
-            <param name="singleCoinMode">Single coin ou non.</param>
-        </member>
-        <member name="M:DeviceLibrary.CHopperVariableSet.#ctor(DeviceLibrary.CHopper)">
-            <summary>
-            Consructeur
-            </summary>
-        </member>
         <member name="T:DeviceLibrary.CPelicano">
             <summary>
-            Class du Pelicano
+            Classe du Pelicano.
+            </summary>
+            <summary>
+            Classe du Pelicano.
+            </summary>
+            <summary>
+            Classe du Pelicano.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CPelicano.CcmdMotors">
@@ -3903,96 +4020,6 @@
             Fixe ou lit les limites d'acceptation.
             </summary>
         </member>
-        <member name="T:DeviceLibrary.Reason">
-            <summary>
-            Enumération des causes des événements
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.MONEYINTRODUCTED">
-            <summary>
-            Une pièce a été reconnue par le monnayeur.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.COINVALIDATORERROR">
-            <summary>
-            Une erreur a été dectée sur le monnayeur.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.CASHCLOSED">
-            <summary>
-            Les moyens de paiement ont été fermés.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.CASHOPENED">
-            <summary>
-            Les moyens de paiement ont été ouverts.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.HOPPERERROR">
-            <summary>
-            Une erreur a été detectée sur un hopper.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.HOPPERDISPENSED">
-            <summary>
-            Le hopper a terminé la distribution.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.HOPPERHWLEVELCHANGED">
-            <summary>
-            Une des sondes hardwares d'un hopper a changé d'état.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.HOPPERSWLEVELCHANGED">
-            <summary>
-            Un seuil de niveau a été atteint
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.HOPPEREMPTIED">
-            <summary>
-            Le hopper est vidé.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.BNRERREUR">
-            <summary>
-            Une erreur sur le BNR est survenue.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.BNRMODULEMANQUANT">
-            <summary>
-            Un module a été reitré.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.BNRMODULEREINSERE">
-            <summary>
-            Un module a été réinséré.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.BNRRAZMETER">
-            <summary>
-            Les compteurs de la caisse du BNR on été remis à zéro.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.Reason.DLLLREADY">
-            <summary>
-            La dll est prête.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.FireEventArg">
-            <summary>
-            Class d'évenement
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.FireEventArg.reason">
-            <summary>
-            Cause de l'événement.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.FireEventArg.donnee">
-            <summary>
-            Objet contenant les infomations concernant l'événement.
-            </summary>
-        </member>
         <member name="T:DeviceLibrary.CDevicesManager">
             <summary>
             Class principale
@@ -4082,37 +4109,37 @@
             Cette fonction lit les paramètres des hoppers.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnHopperEmptied(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperEmptied(DeviceLibrary.CEvent)">
             <summary>
             Evénement levé lorsque le hopper est vidé.
             </summary>
             <param name="evenement"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnBRNModuleRemoved(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnBRNModuleRemoved(DeviceLibrary.CEvent)">
             <summary>
             Evenement levé si un module est retiré du BNR.
             </summary>
             <param name="evenement"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged(DeviceLibrary.CEvent)">
             <summary>
             Evénement levé lorsqu'un changement d'état d'une sonde de niveau d'un hopper est detecté.
             </summary>
             <param name="evenement"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged(DeviceLibrary.CEvent)">
             <summary>
             Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper
             </summary>
             <param name="evenement"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnHopperError(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperError(DeviceLibrary.CEvent)">
             <summary>
             Evéenemnt levé lorsqu'une error est detectée sur un hopper.
             </summary>
             <param name="evenement"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnHopperDispensed(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnHopperDispensed(DeviceLibrary.CEvent)">
             <summary>
             Evénement levé lorsque la distribution est terminée.
             </summary>
@@ -4128,12 +4155,12 @@
             Evénement levé lors de l'ouverture des moyens de paiement.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnMoneyReceived(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnMoneyReceived(DeviceLibrary.CEvent)">
             <summary>
             Evémenment levé lors de l'introduction d'une pièce.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnCVError(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnCVError(DeviceLibrary.CEvent)">
             <summary>
             Evénement levé lors de la détection d'une erreur sur le monnayeur.
             </summary>
@@ -4144,18 +4171,18 @@
             Evénement levé lorsque la dll est prête.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnBNRErreur(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnBNRErreur(DeviceLibrary.CEvent)">
             <summary>
             Evénement levé quand une erreur s'est produte sur le BNR.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnbnrModuleReinsere(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnbnrModuleReinsere(DeviceLibrary.CEvent)">
             <summary>
             Evenment levé quand un module est réinséré.
             </summary>
             <param name="evenement"></param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.OnBNRResetModule(DeviceLibrary.CDevice.CEvent)">
+        <member name="M:DeviceLibrary.CDevicesManager.OnBNRResetModule(DeviceLibrary.CEvent)">
             <summary>
             Indique que le module est remis à zéro.
             </summary>

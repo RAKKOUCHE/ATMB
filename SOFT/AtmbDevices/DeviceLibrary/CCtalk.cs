@@ -17,6 +17,7 @@ namespace DeviceLibrary
     /// </summary>
     public abstract partial class CccTalk : CDevice
     {
+
         /// <summary>
         /// Nom du fichier contenant les compteurs.
         /// </summary>

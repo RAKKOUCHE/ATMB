@@ -75,6 +75,12 @@
  *	réinsertion.
  * - Mise en place de la mise à jour des compteurs du loader en recharge.
  *
+ * Rev. 09.01.12   2019 01 10<br>
+ * -------------------------------------
+ * ### Modifications
+ * - Modification du schéma des classes.
+ * - Rétablissement des billets EUR.
+ * 
  *------------------------------------------------------------------------------
  * 
  */

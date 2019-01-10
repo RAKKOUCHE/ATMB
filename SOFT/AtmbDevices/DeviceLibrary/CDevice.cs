@@ -31,11 +31,6 @@ namespace DeviceLibrary
         public static object eventListLock;
 
         /// <summary>
-        /// Niveaux des périphériques.
-        /// </summary>
-        public CLevel deviceLevel;
-
-        /// <summary>
         ///
         /// </summary>
         public static CInserted denominationInserted;

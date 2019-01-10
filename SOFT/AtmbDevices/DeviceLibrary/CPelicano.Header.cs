@@ -6,6 +6,9 @@
 
 namespace DeviceLibrary
 {
+    /// <summary>
+    /// Classe du Pelicano.
+    /// </summary>
     public partial class CPelicano : CCoinValidator
     {
         /// \addtogroup Headers
