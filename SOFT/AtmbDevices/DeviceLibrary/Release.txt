@@ -80,6 +80,16 @@
  * ### Modifications
  * - Modification du schéma des classes.
  * - Rétablissement des billets EUR.
+ *
+ * Rev. 09.01.13   2019 01 10<br>
+ * -------------------------------------
+ *###Bugs
+ * - Affichage "Erreur dans la saisie du nombre de pièces à charger dans le hopper dans l'application de test.
+ * - Pas de distribution de pièces par les hoppers pour le rendu.
+ * - Exception XFS lors de la clôture de la transaction.
+ * 
+ * ### Modifications
+ * - Correction des bugs.
  * 
  *------------------------------------------------------------------------------
  * 

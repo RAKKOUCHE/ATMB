@@ -410,20 +410,23 @@ namespace AtmbTestDevices
         {
             try
             {
-                if((e.ColumnIndex == 7) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
+                if((e.ColumnIndex == 7) || (e.ColumnIndex == 9))
                 {
-                    dataGridViewHopper["ToLoad", e.RowIndex].Value = false;
-                    dataGridViewHopper["ToDispense", e.RowIndex].Value = 0;
+                    if((e.ColumnIndex == 7) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
+                    {
+                        dataGridViewHopper["ToLoad", e.RowIndex].Value = false;
+                        dataGridViewHopper["ToDispense", e.RowIndex].Value = 0;
+                    }
+                    if((e.ColumnIndex == 9) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
+                    {
+                        dataGridViewHopper["ToEmpty", e.RowIndex].Value = false;
+                    }
+                    dataGridViewHopper.CurrentCell.Value = !(bool)dataGridViewHopper.CurrentCell.Value;
                 }
-                if((e.ColumnIndex == 9) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
-                {
-                    dataGridViewHopper["ToEmpty", e.RowIndex].Value = false;
-                }
-                dataGridViewHopper.CurrentCell.Value = !(bool)dataGridViewHopper.CurrentCell.Value;
             }
-            catch
+            catch(Exception E)
             {
-                MessageBox.Show("Erreur");
+                MessageBox.Show(String.Format("{0} {1} {2}", E.GetType(), E.Message, E.StackTrace));
             }
         }
 

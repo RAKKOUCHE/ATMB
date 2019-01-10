@@ -182,18 +182,17 @@ namespace DeviceLibrary
                             {
                                 toDispense = toDispense / divider * divider;
                                 CBNR_CPI.ev.Reset();
-                                CBNR_CPI.bnr.Denominate(toDispense, "EUR");
+                                CBNR_CPI.bnr.Denominate(toDispense, "AAA");
                                 CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
                             }
                             if(CBNR_CPI.isDispensable)
                             {
                                 CBNR_CPI.ev.Reset();
-                                CBNR_CPI.bnr.Dispense(toDispense, "EUR");
+                                CBNR_CPI.bnr.Dispense(toDispense, "AAA");
                                 CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
                             }
                         }
                     }
-                    rest -= toDispense;
                     foreach(CHopper hopper in Hoppers)
                     {
                         if(hopper.IsPresent &&
@@ -282,14 +281,18 @@ namespace DeviceLibrary
 
                                 if((ToPay - CDevice.denominationInserted.TotalAmount) < 1)
                                 {
+                                    if(bnX != null)
+                                    {
+                                        bnX.IsBNRToBeDeactivated = true;
+                                        while(bnX.IsBNRToBeDeactivated)
+                                            ;
+                                    }
                                     if(monnayeur != null)
                                     {
 
                                         monnayeur.IsCVToBeDeactivated = true;
-                                    }
-                                    if(bnX != null)
-                                    {
-                                        bnX.IsBNRToBeDeactivated = true;
+                                        while(monnayeur.IsCVToBeDeactivated)
+                                            ;
                                     }
                                     ChangeBack();
                                     EndTransaction();
@@ -810,16 +813,16 @@ namespace DeviceLibrary
         /// </summary>
         public void EndTransaction()
         {
-            if(bnX.IsPresent)
-            {
-                CBNR_CPI.ev.Reset();
-                CBNR_CPI.bnr.Cancel();
-                CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+            //if(bnX.IsPresent)
+            //{
+            //    CBNR_CPI.ev.Reset();
+            //    CBNR_CPI.bnr.Cancel();
+            //    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
 
-                CBNR_CPI.ev.Reset();
-                CBNR_CPI.bnr.CashInEnd();
-                CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
-            }
+            //    CBNR_CPI.ev.Reset();
+            //    CBNR_CPI.bnr.CashInEnd();
+            //    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+            //}
             lock(CDevice.eventListLock)
             {
                 CEvent evenement = new CEvent
@@ -881,7 +884,7 @@ namespace DeviceLibrary
                 {
                     result *= 2;
                     CBNR_CPI.ev.Reset();
-                    CBNR_CPI.bnr.Denominate(result, "EUR");
+                    CBNR_CPI.bnr.Denominate(result, "AAA");
                     CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
                 } while((++loop < 3) && !CBNR_CPI.isDispensable);
                 return result;
@@ -903,13 +906,13 @@ namespace DeviceLibrary
                     {
                         Amount = Amount / divider * divider;
                         CBNR_CPI.ev.Reset();
-                        CBNR_CPI.bnr.Denominate(Amount, "EUR");
+                        CBNR_CPI.bnr.Denominate(Amount, "AAA");
                         CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
                     }
                 }
                 if(CBNR_CPI.isDispensable)
                 {
-                    CBNR_CPI.bnr.Dispense(Amount, "EUR", Mei.Bnr.ChangeAlgorithm.OptimumChange);
+                    CBNR_CPI.bnr.Dispense(Amount, "AAA", Mei.Bnr.ChangeAlgorithm.OptimumChange);
                 }
             }
             catch(Exception E)
