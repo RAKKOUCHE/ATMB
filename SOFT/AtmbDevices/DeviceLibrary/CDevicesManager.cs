@@ -58,7 +58,7 @@ namespace DeviceLibrary
         /// Liste des hoppers
         /// </summary>
         public List<CHopper> Hoppers;
-
+        
         /// <summary>
         /// Instance du BNR
         /// </summary>
@@ -167,11 +167,13 @@ namespace DeviceLibrary
         /// </summary>
         private void ChangeBack()
         {
+            CDevicesManager.Log.Debug("Change back");
             try
             {
                 int rest = CDevice.denominationInserted.TotalAmount - ToPay;
                 if(rest > 0)
                 {
+                    Log.Debug("Change back : A rendre {0:C2}", (decimal)rest / 100);
                     int toDispense = SearchDivider;
                     if(CBNR_CPI.bnr != null && bnX.IsPresent)
                     {
@@ -1054,18 +1056,34 @@ namespace DeviceLibrary
             {
                 try
                 {
-                    CccTalk.countersFile.Close();
+                    msgTask.Abort();
                 }
-                catch(Exception)
+                catch
+                {
+                }
+
+                try
+                {
+                    bnX.bnrTask.Abort();
+                }
+                catch
                 {
                 }
                 try
                 {
-                    monnayeur.CVTask.Abort();
+                    CccTalk.countersFile.Close();
                 }
-                catch(Exception)
+                catch
                 {
                 }
+
+                try
+                {
+                    monnayeur.CVTask.Abort();
+                }
+                catch
+                {
+                }        
                 try
                 {
                     foreach(CHopper h in Hoppers)

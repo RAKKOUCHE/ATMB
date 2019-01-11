@@ -192,7 +192,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Thread utilisé pour le BNR
         /// </summary>
-        private readonly Thread bnrTask;
+        public readonly Thread bnrTask;
 
         /// <summary>
         /// Evénement permettant de gérer les function asynchrone.
@@ -240,7 +240,7 @@ namespace DeviceLibrary
         /// <param name="cashInOrder"></param>
         private static void CashOccured(XfsCashOrder cashInOrder)
         {
-            Thread.Sleep(1);
+            CDevicesManager.Log.Debug("Cash occured {0}", cashInOrder.Denomination.Amount);
         }
 
         /// <summary>
@@ -252,6 +252,8 @@ namespace DeviceLibrary
         /// <param name="Data"></param>
         private static void IntermediateOccured(int identificationId, OperationId operationId, IntermediateEvents result, object Data)
         {
+            CDevicesManager.Log.Debug("Intermediate - IdentificationId : {0} OperationId : {1} IntermediateEvents : {2} Data : {3}",
+                identificationId, operationId.ToString(), result.ToString(), Data.ToString());
             switch(operationId)
             {
                 case OperationId.BnrAutomaticBillTransfer:
@@ -300,10 +302,7 @@ namespace DeviceLibrary
                     break;
 
                 case OperationId.CashInRollBack:
-                {
-                    Thread.Sleep(1);
                     break;
-                }
                 case OperationId.CashInEnd:
                     break;
 
@@ -353,9 +352,11 @@ namespace DeviceLibrary
                     break;
 
                 case OperationId.SetDateTime:
+                    CDevicesManager.Log.Debug("Intermédiaire setDateTime");
                     break;
 
                 case OperationId.GetDateTime:
+                    CDevicesManager.Log.Debug("Intermédiaire getDateTime");
                     break;
 
                 case OperationId.UpdateCashUnit:
@@ -388,6 +389,8 @@ namespace DeviceLibrary
         /// <param name="Data"></param>
         private static void StatusOccured(StatusChanged status, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)
         {
+            CDevicesManager.Log.Debug("StatusOccured - status : {0} BnrXfsErrorCode : {1} BnrXfsErrorCode : {2} Data : {3}", status.ToString(),
+                result.ToString(), extendedResult.ToString(), Data.ToString());
             switch(status)
             {
                 case StatusChanged.MaintenanceStatusChanged:
@@ -491,6 +494,9 @@ namespace DeviceLibrary
         /// <param name="Data"></param>
         private static void Bnr_OperationCompletedEvent(int identificationId, OperationId operationId, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)
         {
+            CDevicesManager.Log.Debug("complete - IdentificationId : {0} OperationId : {1} BnrXfsErrorCode : {2} BnrXfsErrorCode : {3} Data : {4}",
+    identificationId, operationId.ToString(), result.ToString(), extendedResult.ToString(), Data != null ? Data.ToString() : null);
+
             switch(operationId)
             {
                 case OperationId.BnrAutomaticBillTransfer:
@@ -885,12 +891,16 @@ namespace DeviceLibrary
                             {
                                 CDevicesManager.Log.Debug("cancel.");
                                 bnr.Cancel();
-                                ev.Reset();
-                                bnr.CashInEnd();
-                                CDevicesManager.Log.Debug("Cashinend.");
-                                if(!ev.WaitOne(BnrDefaultOperationTimeOutInMS))
+                                if(bnr.TransactionStatus.CurrentTransaction == TransactionType.Cashin)
                                 {
-                                    throw new Exception();
+                                    ev.Reset();
+                                    bnr.CashInEnd();
+                                    CDevicesManager.Log.Debug("Cashinend.");
+
+                                    if(!ev.WaitOne(BnrDefaultOperationTimeOutInMS))
+                                    {
+                                        throw new Exception();
+                                    }
                                 }
                             }
                             catch(Exception E)

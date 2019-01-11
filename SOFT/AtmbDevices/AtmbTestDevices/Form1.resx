@@ -157,7 +157,7 @@
     <value>Top, Right</value>
   </data>
   <data name="labelAmountToPay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1287, 18</value>
+    <value>1287, 20</value>
   </data>
   <data name="labelAmountToPay.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -213,24 +213,6 @@
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>119, 17</value>
   </metadata>
-  <data name="stripLabelCom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14, 19</value>
-  </data>
-  <data name="stripLabelCom.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="stripLabelCom.ToolTipText" xml:space="preserve">
-    <value>Port série utilisé par le bus ccTalk</value>
-  </data>
-  <data name="stripLabelCashReaderStatus.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
-  </data>
-  <data name="stripLabelCashReaderStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14, 19</value>
-  </data>
-  <data name="stripLabelCashReaderStatus.Text" xml:space="preserve">
-    <value> </value>
-  </data>
   <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 907</value>
   </data>
@@ -252,6 +234,24 @@
   <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="stripLabelCom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 19</value>
+  </data>
+  <data name="stripLabelCom.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="stripLabelCom.ToolTipText" xml:space="preserve">
+    <value>Port série utilisé par le bus ccTalk</value>
+  </data>
+  <data name="stripLabelCashReaderStatus.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="stripLabelCashReaderStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 19</value>
+  </data>
+  <data name="stripLabelCashReaderStatus.Text" xml:space="preserve">
+    <value> </value>
+  </data>
   <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
   </data>
@@ -259,7 +259,7 @@
     <value>Top, Right</value>
   </data>
   <data name="labelAmountReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1287, 47</value>
+    <value>1287, 49</value>
   </data>
   <data name="labelAmountReceived.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -322,7 +322,7 @@
     <value>Top, Right</value>
   </data>
   <data name="labelAmountRemaining.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1287, 76</value>
+    <value>1287, 78</value>
   </data>
   <data name="labelAmountRemaining.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -421,7 +421,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelDenomination.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1287, 105</value>
+    <value>1287, 107</value>
   </data>
   <data name="labelDenomination.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -450,12 +450,6 @@
   <metadata name="contextMenuStripClear.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>228, 17</value>
   </metadata>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 22</value>
-  </data>
-  <data name="toolStripMenuItem1.Text" xml:space="preserve">
-    <value>&amp;Clear</value>
-  </data>
   <data name="contextMenuStripClear.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 26</value>
   </data>
@@ -464,6 +458,12 @@
   </data>
   <data name="&gt;&gt;contextMenuStripClear.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 22</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>&amp;Clear</value>
   </data>
   <data name="buttonHoppers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -551,6 +551,66 @@
   </data>
   <data name="&gt;&gt;buttonRAZCompteurs.ZOrder" xml:space="preserve">
     <value>15</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCompteurs.Name" xml:space="preserve">
+    <value>dataGridViewCompteurs</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCompteurs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCompteurs.Parent" xml:space="preserve">
+    <value>groupBoxPieces</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewCompteurs.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewHopper.Name" xml:space="preserve">
+    <value>dataGridViewHopper</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewHopper.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewHopper.Parent" xml:space="preserve">
+    <value>groupBoxPieces</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewHopper.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbInfo.Name" xml:space="preserve">
+    <value>tbInfo</value>
+  </data>
+  <data name="&gt;&gt;tbInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbInfo.Parent" xml:space="preserve">
+    <value>groupBoxPieces</value>
+  </data>
+  <data name="&gt;&gt;tbInfo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxPieces.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="groupBoxPieces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1257, 889</value>
+  </data>
+  <data name="groupBoxPieces.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="groupBoxPieces.Text" xml:space="preserve">
+    <value>Pièces</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPieces.Name" xml:space="preserve">
+    <value>groupBoxPieces</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPieces.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPieces.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPieces.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="Nom.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -750,29 +810,68 @@
   <data name="&gt;&gt;tbInfo.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="groupBoxPieces.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
   </data>
-  <data name="groupBoxPieces.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1257, 889</value>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="groupBoxPieces.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
-  <data name="groupBoxPieces.Text" xml:space="preserve">
-    <value>Pièces</value>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;groupBoxPieces.Name" xml:space="preserve">
-    <value>groupBoxPieces</value>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
   </data>
-  <data name="&gt;&gt;groupBoxPieces.Type" xml:space="preserve">
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Name" xml:space="preserve">
+    <value>dataGridView2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 458</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1257, 443</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Billets</value>
+  </data>
+  <data name="groupBox1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBoxPieces.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBoxPieces.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 19</value>
@@ -966,33 +1065,6 @@
   <data name="&gt;&gt;dataGridView2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 458</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1257, 443</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Billets</value>
-  </data>
-  <data name="groupBox1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
   <data name="butttonEndofTransacton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -1057,7 +1129,7 @@
     <value>Top, Right</value>
   </data>
   <data name="textBoxBnrDispense.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1412, 477</value>
+    <value>1407, 477</value>
   </data>
   <data name="textBoxBnrDispense.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 20</value>
@@ -1087,7 +1159,7 @@
     <value>Top, Right</value>
   </data>
   <data name="textBoxLoaderNumberBilet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1410, 516</value>
+    <value>1407, 516</value>
   </data>
   <data name="textBoxLoaderNumberBilet.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 20</value>

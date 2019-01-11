@@ -1245,6 +1245,7 @@ namespace DeviceLibrary
                         {
                             if(CoinsToDistribute > 0)
                             {
+                                CDevicesManager.Log.Debug(string.Format("Le hopper {0 } doit distribuer {1} pièces", ToString(), coinsToDistribute));
                                 IsDispensed = false;
                                 if(isOnError = (errorHopper.Code = TestHopper()) != HopperError.NON_IDENTIFIEE)
                                 {
@@ -1334,7 +1335,7 @@ namespace DeviceLibrary
 
                             if(--delaypollLevel <= 0)
                             {
-                                delaypollLevel = polllDelayLevel * 1000;
+                                delaypollLevel = polllDelayLevel * 100;
                                 State = Etat.STATE_CHECKLEVEL;
                             }
                             break;
@@ -1369,8 +1370,7 @@ namespace DeviceLibrary
         {
             try
             {
-
-                CDevicesManager.Log.Info("Instanciation  du hopper {0}", hopperNumber);
+                CDevicesManager.Log.Debug("Instanciation  du hopper {0}", hopperNumber);
                 IsInitialized = false;
                 DeviceAddress = (DefaultDevicesAddress)(hopperNumber + AddressBaseHoper);
                 Number = hopperNumber;
@@ -1383,6 +1383,7 @@ namespace DeviceLibrary
                 }
                 if(IsPresent)
                 {
+                    CDevicesManager.Log.Info("Hopper {0} présent", hopperNumber);
                     state = Etat.STATE_INIT;
                     HTask = new Thread(Task);
                     HTask.Start();

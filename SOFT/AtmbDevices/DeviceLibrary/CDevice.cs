@@ -13,7 +13,7 @@ namespace DeviceLibrary
     /// <summary>
     /// Classe abstraite parent de tous les périphériques
     /// </summary>   
-     public abstract partial class CDevice
+    public abstract partial class CDevice
     {
         /// <summary>
         /// Event permenttant de savoir savoir si le BNR prêt.

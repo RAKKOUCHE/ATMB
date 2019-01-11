@@ -76,7 +76,7 @@ namespace DeviceLibrary
         {
             try
             {
-                CDevicesManager.Log.Info(messagesText.ccTalkInstance);
+                CDevicesManager.Log.Debug(messagesText.ccTalkInstance);
                 if(PortSerie == null)
                 {
                     CDevicesManager.Log.Info(messagesText.search_ccTalk);
