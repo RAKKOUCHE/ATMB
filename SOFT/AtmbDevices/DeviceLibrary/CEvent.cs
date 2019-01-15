@@ -1,5 +1,5 @@
-﻿
-using System;
+﻿using System;
+
 /// \file CDevice.cs
 /// \brief Fichier contenant la classe CDevice.
 /// \date 28 11 2018

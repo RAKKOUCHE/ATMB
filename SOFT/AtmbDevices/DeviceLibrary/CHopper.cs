@@ -24,7 +24,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Delai en ms entre chaque pollinng du hopper
         /// </summary>
-        private const int pollDelayHopper = 150;
+        private const int pollDelayHopper = 100;
 
         /// <summary>
         /// Delai en secondes entre 2 vérication de niveau
@@ -582,7 +582,6 @@ namespace DeviceLibrary
         /// Délai pour l'interrogation des niveaux lorsque le hopper est au repos.
         /// </summary>
         private static int delaypollLevel;
-
 
         /// <summary>
         /// Niveaux des périphériques.
@@ -1335,7 +1334,7 @@ namespace DeviceLibrary
 
                             if(--delaypollLevel <= 0)
                             {
-                                delaypollLevel = polllDelayLevel * 100;
+                                delaypollLevel = polllDelayLevel * 200;
                                 State = Etat.STATE_CHECKLEVEL;
                             }
                             break;
@@ -1395,7 +1394,6 @@ namespace DeviceLibrary
             }
             catch(Exception E)
             {
-
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 evReady.Set();
             }

@@ -628,7 +628,7 @@ namespace AtmbTestDevices
         }
 
         /// <summary>
-        /// Fonction demandant la modification du chemin de sortie. 
+        /// Fonction demandant la modification du chemin de sortie.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

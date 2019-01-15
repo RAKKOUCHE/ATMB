@@ -87,7 +87,7 @@
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.CModulePosition.isPresent">
             <summary>
-            Flag indiquant 
+            Flag indiquant
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.CModulePosition.isReinserted">
@@ -183,6 +183,12 @@
             Indique si le monnayeur doit être adtivé.
             </summary>
         </member>
+        <member name="P:DeviceLibrary.CBNR_CPI.SearchDivider">
+            <summary>
+            Recherche la plus petite denomination disponible.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:DeviceLibrary.CBNR_CPI.CashOccured(Mei.Bnr.XfsCashOrder)">
             <summary>
             Levée pour une opération sur un billet.
@@ -229,7 +235,7 @@
         </member>
         <member name="M:DeviceLibrary.CBNR_CPI.Task">
             <summary>
-            Machime d'état du bnr.
+            Machine d'état du BNR.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CBNR_CPI.#ctor">
@@ -2957,7 +2963,7 @@
         <member name="T:DeviceLibrary.CDevice">
             <summary>
             Classe abstraite parent de tous les périphériques
-            </summary>   
+            </summary>
         </member>
         <member name="T:DeviceLibrary.CDevice.CInserted">
             <summary>
@@ -4215,12 +4221,6 @@
             Fixe le compteur de billets contenus dans le loader.
             </summary>
             <param name="numberOfBill"></param>
-        </member>
-        <member name="P:DeviceLibrary.CDevicesManager.SearchDivider">
-            <summary>
-            Recherche la plus petite denomination disponible.
-            </summary>
-            <returns></returns>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.BNRDispense(System.Int32)">
             <summary>

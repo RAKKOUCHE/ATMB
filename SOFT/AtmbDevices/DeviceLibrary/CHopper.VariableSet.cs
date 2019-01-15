@@ -10,7 +10,6 @@ using System;
 
 namespace DeviceLibrary
 {
-
     public partial class CHopper
     {
         /// <summary>

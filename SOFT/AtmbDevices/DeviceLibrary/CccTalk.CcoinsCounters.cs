@@ -115,5 +115,6 @@ namespace DeviceLibrary
             CccTalk.counterSerializer.Serialize(CccTalk.countersFile, this);
         }
     }
+
     //   }
 }

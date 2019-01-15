@@ -1,11 +1,11 @@
-﻿
-/// \file CDevicesManager.cs
+﻿/// \file CDevicesManager.cs
 /// \brief Fichier principal de la dll.
 /// \date 28 11 2018
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
 using NLog;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -58,7 +58,7 @@ namespace DeviceLibrary
         /// Liste des hoppers
         /// </summary>
         public List<CHopper> Hoppers;
-        
+
         /// <summary>
         /// Instance du BNR
         /// </summary>
@@ -167,36 +167,56 @@ namespace DeviceLibrary
         /// </summary>
         private void ChangeBack()
         {
-            CDevicesManager.Log.Debug("Change back");
+            Log.Debug("Change back");
             try
             {
+                //Calcul du montant à rendre.
                 int rest = CDevice.denominationInserted.TotalAmount - ToPay;
+                //Si il y a un rendu à effectuer.
+                CBNR_CPI.isDispensable = false;
                 if(rest > 0)
                 {
                     Log.Debug("Change back : A rendre {0:C2}", (decimal)rest / 100);
-                    int toDispense = SearchDivider;
                     if(CBNR_CPI.bnr != null && bnX.IsPresent)
                     {
-                        if(rest > SearchDivider)
+                        //Recherche u plus petit billet disponible.
+                        try
                         {
-                            int divider = SearchDivider;
-                            if(CBNR_CPI.isDispensable)
+                            while(CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE)
+                                ;
+                            int divider = bnX.SearchDivider;
+                            //Si le reste est supérieur au plus petit billet disponible, on provoquera une distribution de billet
+                            if(rest > divider)
                             {
-                                toDispense = toDispense / divider * divider;
+                                //Le montant à distribuer sera le reste modulo la valeur du plus petit billet
+                                int toDispense = rest / divider * divider;
+                                //par defaut, le bnr ne peut pas distribuer
                                 CBNR_CPI.ev.Reset();
-                                CBNR_CPI.bnr.Denominate(toDispense, "AAA");
-                                CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
-                            }
-                            if(CBNR_CPI.isDispensable)
-                            {
-                                CBNR_CPI.ev.Reset();
-                                CBNR_CPI.bnr.Dispense(toDispense, "AAA");
-                                CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                                //Verifie si il peut distribuer, si oui la variable isDispensable sera positionnée à true.
+                                CBNR_CPI.bnr.Denominate(toDispense, "EUR");
+                                //Si le montant est disponible on provoque une distribution.
+                                if(CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS) && CBNR_CPI.isDispensable)
+                                {
+                                    CBNR_CPI.ev.Reset();
+                                    CBNR_CPI.bnr.Dispense(toDispense, "EUR", Mei.Bnr.ChangeAlgorithm.OptimumChange);
+                                    rest -= toDispense;
+                                }
+                                else
+                                {
+                                    CBNR_CPI.isDispensable = false;
+                                }
                             }
                         }
+                        catch(Exception E)
+                        {
+                            Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                        }
                     }
+                    //Pour chaque hopper
                     foreach(CHopper hopper in Hoppers)
                     {
+                        //Verifie si le hopper est capable de distribuer.
+                        //Comme les hoppers sont classés par ordre croissant de valeur, donc on distribue le minimum de pièces.
                         if(hopper.IsPresent &&
                             (hopper.deviceLevel.softLevel != CHopper.CLevel.SoftLevel.VIDE) &&
                             (hopper.deviceLevel.hardLevel != CHopper.CLevel.HardLevel.VIDE) &&
@@ -204,7 +224,7 @@ namespace DeviceLibrary
                             (hopper.CoinValue <= rest))
                         {
                             hopper.CoinsToDistribute = (byte)(rest / hopper.CoinValue);
-                            if((rest -= (int)(hopper.CoinsToDistribute * hopper.CoinValue)) == 0)
+                            if((rest -= (int)(hopper.CoinsToDistribute * hopper.CoinValue)) <= 0)
                             {
                                 break;
                             }
@@ -214,6 +234,7 @@ namespace DeviceLibrary
                     {
                         if(hopper.IsPresent && (hopper.CoinsToDistribute > 0))
                         {
+                            Log.Debug("Distribution de {0} pièces par le {1}", hopper.CoinsToDistribute, hopper.ToString());
                             hopper.State = CHopper.Etat.STATE_DISPENSE;
                         }
                     }
@@ -224,6 +245,21 @@ namespace DeviceLibrary
                             while(hopper.State != CHopper.Etat.STATE_IDLE)
                                 ;
                             ;
+                        }
+                    }
+                    //S'assure de la liberation de l'évenment et de la présentation des billets si nécessaire.
+                    if(CBNR_CPI.isDispensable)
+                    {
+                        try
+                        {
+
+                            CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                            CBNR_CPI.ev.Reset();
+                            CBNR_CPI.bnr.Present();
+                            CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                        }
+                        catch
+                        {
                         }
                     }
                 }
@@ -267,6 +303,9 @@ namespace DeviceLibrary
             CEvent.Reason reason;
             while(true)
             {
+                //CDevice.denominationInserted.TotalAmount = 1000;
+                //ToPay = 900;
+                //ChangeBack();
                 try
                 {
                     if(CDevice.eventsList.Count > 0)
@@ -288,10 +327,11 @@ namespace DeviceLibrary
                                         bnX.IsBNRToBeDeactivated = true;
                                         while(bnX.IsBNRToBeDeactivated)
                                             ;
+                                        while(CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE)
+                                            ;
                                     }
                                     if(monnayeur != null)
                                     {
-
                                         monnayeur.IsCVToBeDeactivated = true;
                                         while(monnayeur.IsCVToBeDeactivated)
                                             ;
@@ -815,16 +855,6 @@ namespace DeviceLibrary
         /// </summary>
         public void EndTransaction()
         {
-            //if(bnX.IsPresent)
-            //{
-            //    CBNR_CPI.ev.Reset();
-            //    CBNR_CPI.bnr.Cancel();
-            //    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
-
-            //    CBNR_CPI.ev.Reset();
-            //    CBNR_CPI.bnr.CashInEnd();
-            //    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
-            //}
             lock(CDevice.eventListLock)
             {
                 CEvent evenement = new CEvent
@@ -844,7 +874,6 @@ namespace DeviceLibrary
         {
             if(CccTalk.PortSerie != null)
             {
-
                 return CccTalk.PortSerie.PortName;
             }
             return string.Empty;
@@ -872,28 +901,6 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Recherche la plus petite denomination disponible.
-        /// </summary>
-        /// <returns></returns>
-        private int SearchDivider
-        {
-            get
-            {
-                byte loop = 0;
-                CBNR_CPI.isDispensable = false;
-                int result = 250;
-                do
-                {
-                    result *= 2;
-                    CBNR_CPI.ev.Reset();
-                    CBNR_CPI.bnr.Denominate(result, "AAA");
-                    CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
-                } while((++loop < 3) && !CBNR_CPI.isDispensable);
-                return result;
-            }
-        }
-
-        /// <summary>
         /// Envoi une demande de distribution au BNR
         /// </summary>
         /// <param name="Amount">Montant à distribuer.</param>
@@ -903,18 +910,19 @@ namespace DeviceLibrary
             {
                 if((CBNR_CPI.bnr != null) && bnX.IsPresent)
                 {
-                    int divider = SearchDivider;
-                    if(CBNR_CPI.isDispensable)
+                    int divider = bnX.SearchDivider;
+                    CBNR_CPI.isDispensable = false;
+                    Amount = Amount / divider * divider;
+                    while(CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE)
+                        ;
+                    CBNR_CPI.ev.Reset();
+                    CBNR_CPI.bnr.Denominate(Amount, "EUR");
+                    if(CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS) &&
+                        CBNR_CPI.isDispensable)
                     {
-                        Amount = Amount / divider * divider;
-                        CBNR_CPI.ev.Reset();
-                        CBNR_CPI.bnr.Denominate(Amount, "AAA");
-                        CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                        CBNR_CPI.bnr.Cancel();
+                        CBNR_CPI.bnr.Dispense(Amount, "EUR", Mei.Bnr.ChangeAlgorithm.OptimumChange);
                     }
-                }
-                if(CBNR_CPI.isDispensable)
-                {
-                    CBNR_CPI.bnr.Dispense(Amount, "AAA", Mei.Bnr.ChangeAlgorithm.OptimumChange);
                 }
             }
             catch(Exception E)
@@ -956,7 +964,6 @@ namespace DeviceLibrary
         {
             try
             {
-
                 if(CBNR_CPI.bnr != null && bnX.IsPresent && CBNR_CPI.bnr.TransactionStatus.CurrentOperation == 6122)
                 {
                     CBNR_CPI.ev.Reset();
@@ -1083,7 +1090,7 @@ namespace DeviceLibrary
                 }
                 catch
                 {
-                }        
+                }
                 try
                 {
                     foreach(CHopper h in Hoppers)

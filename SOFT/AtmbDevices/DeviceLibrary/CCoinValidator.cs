@@ -14,7 +14,6 @@ namespace DeviceLibrary
     /// </summary>
     public partial class CCoinValidator : CcashReader
     {
-
         /// <summary>
         /// Chemin de tri par défaut.
         /// </summary>
@@ -788,7 +787,6 @@ namespace DeviceLibrary
         {
             try
             {
-
                 CDevicesManager.Log.Info("Instancation de la classe CCoinValidator.");
                 DeviceAddress = DefaultDevicesAddress.CoinAcceptor;
                 if(!(IsPresent = SimplePoll))

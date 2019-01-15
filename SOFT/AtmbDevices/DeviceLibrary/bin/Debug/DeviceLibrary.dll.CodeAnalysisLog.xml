@@ -9,11 +9,29 @@
       <Namespace Name="DeviceLibrary">
        <Types>
         <Type Name="CDevice" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Messages>
-          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2019-01-10 22:12:26Z" FixCategory="DependsOnFix">
-           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implémenter IDisposable sur 'CDevice' car il crée des membres des types IDisposable suivants : 'AutoResetEvent'. Si 'CDevice' existait précédemment, le fait d'ajouter de nouveaux membres qui implémentent IDisposable pour ce type est considéré comme une modification avec rupture pour les utilisateurs existants.</Issue>
-          </Message>
-         </Messages>
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="evReady" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-01-15 11:27:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary" File="CDevice.cs" Line="105">'CDevice' contient le champ 'CDevice.evReady' qui est de type IDisposable : 'AutoResetEvent'. Changez la méthode Dispose de 'CDevice' pour appeler Dispose ou Close dans ce champ.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CDevicesManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="bnX" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-01-15 11:27:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary" File="CDevicesManager.cs" Line="1061">'CDevicesManager' contient le champ 'CDevicesManager.bnX' qui est de type IDisposable : 'CBNR_CPI'. Changez la méthode Dispose de 'CDevicesManager' pour appeler Dispose ou Close dans ce champ.</Issue>
+            </Message>
+            <Message Id="monnayeur" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-01-15 11:27:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary" File="CDevicesManager.cs" Line="1061">'CDevicesManager' contient le champ 'CDevicesManager.monnayeur' qui est de type IDisposable : 'CCoinValidator'. Changez la méthode Dispose de 'CDevicesManager' pour appeler Dispose ou Close dans ce champ.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
         </Type>
        </Types>
       </Namespace>
@@ -23,15 +41,15 @@
   </Target>
  </Targets>
  <Rules>
-  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
-   <Name>Les types qui possèdent des champs supprimables doivent être supprimables</Name>
-   <Description>Les types qui déclarent des membres supprimables doivent également implémenter IDisposable. Si le type ne possède aucune ressource non managée, n'implémentez pas de finaliseur sur celui-ci.</Description>
-   <Resolution Name="DependsOnFix">Implémenter IDisposable sur {0} car il crée des membres des types IDisposable suivants : {1}. Si {0} existait précédemment, le fait d'ajouter de nouveaux membres qui implémentent IDisposable pour ce type est considéré comme une modification avec rupture pour les utilisateurs existants.</Resolution>
+  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+   <Name>Les champs pouvant être supprimés doivent l'être</Name>
+   <Description>Si un type qui implémente IDisposable contient des champs qui, eux-aussi, implémentent IDisposable, l'implémentation Dispose() du type d'encapsulation doit appeler Dispose() dans chaque champ supprimable.</Description>
+   <Resolution Name="Default">{0} contient le champ {1} qui est de type IDisposable : {2}. Changez la méthode Dispose de {0} pour appeler Dispose ou Close dans ce champ.</Resolution>
    <Owner />
-   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Url>http://msdn.microsoft.com/library/ms182328.aspx</Url>
    <Email>[none]</Email>
-   <MessageLevel Certainty="95">CriticalError</MessageLevel>
-   <File Name="designrules.dll" Version="16.0.0.0" />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
   </Rule>
  </Rules>
  <Localized>

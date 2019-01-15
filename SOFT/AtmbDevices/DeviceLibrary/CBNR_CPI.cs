@@ -8,8 +8,8 @@ using Mei.Bnr;
 using Mei.Bnr.Module;
 
 using System;
-using System.Threading;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace DeviceLibrary
 {
@@ -97,7 +97,7 @@ namespace DeviceLibrary
             public string name;
 
             /// <summary>
-            /// Flag indiquant 
+            /// Flag indiquant
             /// </summary>
             public bool isPresent;
 
@@ -180,10 +180,11 @@ namespace DeviceLibrary
         public const int BnrDefaultOperationTimeOutInMS = 10000;
 
         private static Etat state;
+
         /// <summary>
         /// Etat de la machine d'état du BNR.
         /// </summary>
-        private static Etat State
+        public static Etat State
         {
             get => state;
             set => state = value;
@@ -205,6 +206,7 @@ namespace DeviceLibrary
         private static Cerror errorInfo;
 
         private bool isBNRToBeDeactivated;
+
         /// <summary>
         /// Indique si le monnayeur doit être adtivé.
         /// </summary>
@@ -225,6 +227,7 @@ namespace DeviceLibrary
         public static bool isCashTaken;
 
         private bool isBNRToBeActivated;
+
         /// <summary>
         /// Indique si le monnayeur doit être adtivé.
         /// </summary>
@@ -233,6 +236,41 @@ namespace DeviceLibrary
             get => isBNRToBeActivated;
             set => isBNRToBeActivated = value;
         }
+
+        /// <summary>
+        /// Recherche la plus petite denomination disponible.
+        /// </summary>
+        /// <returns></returns>
+        public int SearchDivider
+        {
+            get
+            {
+                int result = int.MaxValue;
+                try
+                {
+                    isDispensable = false;
+                    while(bnr.TransactionStatus.CurrentTransaction != TransactionType.None)
+                    {
+                        Thread.Sleep(200);
+                    }
+                    foreach(Mei.Bnr.CashUnit.LogicalCashUnit logicalCashUnit in bnr.CashUnit.LogicalCashUnits)
+                    {
+                        if((logicalCashUnit.Count > 0) &&
+                            ((logicalCashUnit.CuKind == Mei.Bnr.CashUnit.CashUnitKind.Dispense) || (logicalCashUnit.CuKind == Mei.Bnr.CashUnit.CashUnitKind.Recycle)) &&
+                            (logicalCashUnit.Status == Mei.Bnr.CashUnit.CashUnitStatus.Ok) && (logicalCashUnit.CashType.Value < result))
+                        {
+                            result = logicalCashUnit.CashType.Value;
+                        }
+                    }
+                }
+                catch(Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType().ToString(), E.Message, E.StackTrace.ToString());
+                }
+                return result;
+            }
+        }
+
 
         /// <summary>
         /// Levée pour une opération sur un billet.
@@ -303,6 +341,7 @@ namespace DeviceLibrary
 
                 case OperationId.CashInRollBack:
                     break;
+
                 case OperationId.CashInEnd:
                     break;
 
@@ -440,6 +479,7 @@ namespace DeviceLibrary
                 }
                 case StatusChanged.CashUnitThreshold:
                     break;
+
                 case StatusChanged.CashUnitConfigurationChanged:
                 {
                     try
@@ -452,7 +492,6 @@ namespace DeviceLibrary
                                 {
                                     nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
                                     data = modulePosition.name,
-
                                 };
                                 if(!(modulePosition.isPresent = ((Mei.Bnr.CashUnit.CashUnit)Data).PhysicalCashUnits[0].Status != Mei.Bnr.CashUnit.CashUnitStatus.Missing))
                                 {
@@ -479,6 +518,7 @@ namespace DeviceLibrary
                 }
                 case StatusChanged.CashUnitChanged:
                     break;
+
                 default:
                     break;
             }
@@ -688,11 +728,12 @@ namespace DeviceLibrary
                 }
                 case DeviceStatus.OffLine:
                     break;
+
                 case DeviceStatus.OnLine:
                     break;
+
                 default:
                     break;
-
             }
             lock(eventListLock)
             {
@@ -726,7 +767,7 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Machime d'état du bnr.
+        /// Machine d'état du BNR.
         /// </summary>
         public override void Task()
         {
@@ -780,11 +821,10 @@ namespace DeviceLibrary
                                     eventsList.Add(new CEvent
                                     {
                                         reason = CEvent.Reason.BNRERREUR,
-                                        nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
+                                        nameOfDevice = "BNR",
                                         data = errorInfo
                                     });
                                 }
-                                evReady.Set();
                                 State = Etat.STATE_STOP;
                             }
                             break;
@@ -851,6 +891,8 @@ namespace DeviceLibrary
                         }
                         case Etat.STATE_STOP:
                         {
+                            ev.Set();
+                            evReady.Set();
                             bnrTask.Abort();
                             break;
                         }
@@ -896,7 +938,6 @@ namespace DeviceLibrary
                                     ev.Reset();
                                     bnr.CashInEnd();
                                     CDevicesManager.Log.Debug("Cashinend.");
-
                                     if(!ev.WaitOne(BnrDefaultOperationTimeOutInMS))
                                     {
                                         throw new Exception();

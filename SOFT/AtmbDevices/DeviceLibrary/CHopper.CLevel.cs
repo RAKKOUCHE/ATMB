@@ -6,7 +6,6 @@
 /// Création de sous fichiers contenant les classes.
 /// \author Rachid AKKOUCHE
 
-
 namespace DeviceLibrary
 {
     public partial class CHopper

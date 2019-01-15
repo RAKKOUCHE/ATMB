@@ -97,6 +97,16 @@
  * ### Modifications
  * - Modification de la fermeture de l'application pour corriger un bug sur la clôture des threads.
  * 
+ * Rev. 09.01.15   2019 01 14<br>
+ * -------------------------------------
+ * ###Bugs
+ * - Si le BNR n'est pas présent la dll est bloquée pour 90 secondes.
+ * - Distribution peut-être très tardive ou absente.
+ * 
+ * ### Modifications
+ * - Correction du bug sur la dll bloquée. 
+ * - Modification de la recherche du plus petit billet utilisable pour corriger le bug de distributuion.
+ * 
  *------------------------------------------------------------------------------
  * 
  */

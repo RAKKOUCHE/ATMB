@@ -17,7 +17,6 @@ namespace DeviceLibrary
     /// </summary>
     public abstract partial class CccTalk : CDevice
     {
-
         /// <summary>
         /// Nom du fichier contenant les compteurs.
         /// </summary>
@@ -247,7 +246,7 @@ namespace DeviceLibrary
                     }
                 }
                 CDevicesManager.Log.Debug(strLog);
-                CDevicesManager.Log.Info("Commande {0} executée sur le {1}", Commande, Peripherique);
+                CDevicesManager.Log.Debug("Commande {0} executée sur le {1}", Commande, Peripherique);
             }
             return result;
         }

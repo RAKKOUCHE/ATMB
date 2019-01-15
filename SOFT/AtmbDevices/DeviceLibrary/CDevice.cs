@@ -12,8 +12,8 @@ namespace DeviceLibrary
 {
     /// <summary>
     /// Classe abstraite parent de tous les périphériques
-    /// </summary>   
-    public abstract partial class CDevice
+    /// </summary>
+    public abstract partial class CDevice : IDisposable
     {
         /// <summary>
         /// Event permenttant de savoir savoir si le BNR prêt.
@@ -99,6 +99,21 @@ namespace DeviceLibrary
                 eventListLock = new object();
             }
             evReady = new AutoResetEvent(false);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if(disposing)
+            {
+                // dispose managed resources
+            }
+            // free native resources
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }
