@@ -144,10 +144,10 @@ namespace AtmbTestDevices
                     {
                         stripLabelCashReaderStatus.BackColor = Color.Red;
                         stripLabelCashReaderStatus.Text = "Encaissement fermé";
-                        if(e.donnee != null)
+                        if (e.donnee != null)
                         {
                             tbInfo.AppendText("Liste des introductions\r\nDétail:\r\n");
-                            foreach(int valueIntroduced in ((CDevicesManager.CCashReceived)e.donnee).listValueIntroduced)
+                            foreach (int valueIntroduced in ((CDevicesManager.CCashReceived)e.donnee).listValueIntroduced)
                             {
                                 tbInfo.AppendText($"{(decimal)valueIntroduced / 100:c2}\r\n");
                             }
@@ -409,6 +409,8 @@ namespace AtmbTestDevices
                 {
                     dataGridViewCompteurs.Rows.Add($"CV nombre canal {canal.Number}", canal.CoinIn);
                     dataGridViewCompteurs.Rows.Add($"CV montant canal {canal.Number}", $"{(decimal)canal.MontantIn / 100:c2}");
+                    dataGridViewCompteurs.Rows.Add(string.Format("Pièce du canal {0} en caisse", canal.Number), string.Format("{0}", canal.CoinInInCB));
+                    dataGridViewCompteurs.Rows.Add(string.Format("Montant du canal {0} en caisse", canal.Number), string.Format("{0:C2}", (decimal)canal.AmountCoinInCB / 100));
                 }
             }
             if (deviceManage.Hoppers != null)

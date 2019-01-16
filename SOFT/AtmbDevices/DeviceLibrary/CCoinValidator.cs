@@ -440,6 +440,8 @@ namespace DeviceLibrary
                         counters.totalAmountInCabinet += denominationInserted.ValeurCent;
                         if (canaux[creditBuffer.Result[i, 0] - 1].HopperToLoad == 0)
                         {
+                            ++counters.coinInCashBox[creditBuffer.Result[i, 0] - 1];
+                            counters.amountCoinInCashBox[creditBuffer.Result[i, 0] - 1] += denominationInserted.ValeurCent;
                             counters.totalAmountInCB = denominationInserted.ValeurCent;
                         }
                         else

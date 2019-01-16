@@ -847,6 +847,20 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// Remise à zéro des compteurs de la caisse
+        /// </summary>
+        public void CashBoxRemoved()
+        {
+            CccTalk.counters.totalAmountInCabinet -= CccTalk.counters.totalAmountInCB;
+            CccTalk.counters.totalAmountInCB = 0;
+            foreach(CCoinValidator.CCanal canal in monnayeur.canaux)
+            {
+                canal.AmountCoinInCB = 0;
+                canal.CoinInInCB = 0;
+            }
+        }
+
+        /// <summary>
         /// Tâche principale de la dll
         /// </summary>
         private void Task()

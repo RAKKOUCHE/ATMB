@@ -58,6 +58,16 @@ namespace DeviceLibrary
         public long[] amountCoinInAccepted;
 
         /// <summary>
+        /// Nombre de pièces de ce type dans la caisse.
+        /// </summary>
+        public long[] coinInCashBox;
+
+        /// <summary>
+        /// Montant pour la pièce dans la caisse.
+        /// </summary>
+        public long[] amountCoinInCashBox;
+
+        /// <summary>
         /// Nombre de pièces rendues pour chaque hopper.
         /// </summary>
         public long[] coinsOut;
@@ -104,6 +114,8 @@ namespace DeviceLibrary
             amountInHopper = new long[CHopper.maxHopper];
             coinsLoadedInHopper = new long[CHopper.maxHopper];
             amountLoadedInHopper = new long[CHopper.maxHopper];
+            coinInCashBox = new long[CCoinValidator.numChannel];
+            amountCoinInCashBox = new long[CCoinValidator.numChannel];
         }
 
         /// <summary>

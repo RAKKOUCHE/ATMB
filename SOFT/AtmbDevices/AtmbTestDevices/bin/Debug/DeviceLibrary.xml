@@ -591,6 +591,16 @@
             Montant accepté pour chaque canal.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CcoinsCounters.coinInCashBox">
+            <summary>
+            Nombre de pièces de ce type dans la caisse.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CcoinsCounters.amountCoinInCashBox">
+            <summary>
+            Montant pour la pièce dans la caisse.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CcoinsCounters.coinsOut">
             <summary>
             Nombre de pièces rendues pour chaque hopper.
@@ -790,6 +800,16 @@
         <member name="P:DeviceLibrary.CCoinValidator.CCanal.MontantIn">
             <summary>
             Montant introduit dans le canal
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.CCanal.CoinInInCB">
+            <summary>
+            Nombre de pièces de ce canal dans la caisse
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.CCanal.AmountCoinInCB">
+            <summary>
+            Montant des pièces de ce canal en caisse.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CCoinValidator.CCanal.#ctor(System.Byte,DeviceLibrary.CCoinValidator)">
@@ -4373,6 +4393,11 @@
         <member name="M:DeviceLibrary.CDevicesManager.BNRBillRollBack">
             <summary>
             Retourne les billets e escrow.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.CashBoxRemoved">
+            <summary>
+            Remise à zéro des compteurs de la caisse
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.Task">

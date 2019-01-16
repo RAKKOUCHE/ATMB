@@ -123,7 +123,8 @@
  * ### Modifications
  * - Retract et rollback dans la machine d'état du BNR.
  * - Fonction cancel
- * - Evvenement pour le retour de la liste des introductions.
+ * - Evenement pour le retour de la liste des introductions.
+ * - Reset de la caisse à monnaie en cas de retrait.
  *
  *------------------------------------------------------------------------------
  */

@@ -270,6 +270,24 @@ namespace DeviceLibrary
             }
 
             /// <summary>
+            /// Nombre de pièces de ce canal dans la caisse
+            /// </summary>
+            public long CoinInInCB
+            {
+                get => counters.coinInCashBox[Number - 1];
+                set => counters.coinInCashBox[Number - 1] = value;
+            } 
+
+            /// <summary>
+            /// Montant des pièces de ce canal en caisse.
+            /// </summary>
+            public long AmountCoinInCB
+            {
+                get => counters.amountCoinInCashBox[Number - 1];
+                set => counters.amountCoinInCashBox[Number - 1] = value;
+            }
+
+            /// <summary>
             /// Constructeur
             /// </summary>
             /// <param name="number">Numéro du canal</param>

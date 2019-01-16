@@ -67,3 +67,4 @@ D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Release\AtmbTestDevices.csp
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Release\AtmbTestDevices.exe
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Release\AtmbTestDevices.pdb
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Release\BnrCtlDotNet40.dll
+D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Release\AtmbTestDevices.Form2.resources
