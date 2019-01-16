@@ -113,6 +113,10 @@
  * - Optimisation des opérations de check de la distribution et de la distribution.
  * - Evenement sur la distributio des billets.
  *
+ * Rev. 09.01.16B   2019 01 15<br>
+ * -------------------------------------
+ * ### Modifications
+ * "EUR" to "EUR"
  *------------------------------------------------------------------------------
  * 
  */

@@ -1016,7 +1016,7 @@ namespace DeviceLibrary
 
                         case Etat.STATE_DISPENSE:
                         {
-                            bnr.Dispense(AmountToDispense, "AAA");
+                            bnr.Dispense(AmountToDispense, "EUR");
                             State = Etat.STATE_IDLE;
                             break;
                         }
@@ -1028,7 +1028,7 @@ namespace DeviceLibrary
                             Divider = SearchDivider;
                             ev.Reset();
                             //Verifie si il peut distribuer, si oui la variable isDispensable sera positionnée à true.
-                            bnr.Denominate(AmountToDispense, "AAA");
+                            bnr.Denominate(AmountToDispense, "EUR");
                             if (!ev.WaitOne(BnrDefaultOperationTimeOutInMS) || !isDispensable)
                             {
                                 errorInfo.nameModule = string.Empty;
