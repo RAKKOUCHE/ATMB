@@ -1,57 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\preview\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="16.0">
- <Targets>
-  <Target Name="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\DeviceLibrary.dll">
-   <Modules>
-    <Module Name="devicelibrary.dll">
-     <Namespaces>
-      <Namespace Name="DeviceLibrary">
-       <Types>
-        <Type Name="CDevice" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
-           <Messages>
-            <Message Id="evReady" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-01-15 11:27:24Z" FixCategory="NonBreaking">
-             <Issue Certainty="75" Level="Warning" Path="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary" File="CDevice.cs" Line="105">'CDevice' contient le champ 'CDevice.evReady' qui est de type IDisposable : 'AutoResetEvent'. Changez la méthode Dispose de 'CDevice' pour appeler Dispose ou Close dans ce champ.</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
-        <Type Name="CDevicesManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
-           <Messages>
-            <Message Id="bnX" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-01-15 11:27:24Z" FixCategory="NonBreaking">
-             <Issue Certainty="75" Level="Warning" Path="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary" File="CDevicesManager.cs" Line="1061">'CDevicesManager' contient le champ 'CDevicesManager.bnX' qui est de type IDisposable : 'CBNR_CPI'. Changez la méthode Dispose de 'CDevicesManager' pour appeler Dispose ou Close dans ce champ.</Issue>
-            </Message>
-            <Message Id="monnayeur" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-01-15 11:27:24Z" FixCategory="NonBreaking">
-             <Issue Certainty="75" Level="Warning" Path="D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary" File="CDevicesManager.cs" Line="1061">'CDevicesManager' contient le champ 'CDevicesManager.monnayeur' qui est de type IDisposable : 'CCoinValidator'. Changez la méthode Dispose de 'CDevicesManager' pour appeler Dispose ou Close dans ce champ.</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
-       </Types>
-      </Namespace>
-     </Namespaces>
-    </Module>
-   </Modules>
-  </Target>
- </Targets>
- <Rules>
-  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
-   <Name>Les champs pouvant être supprimés doivent l'être</Name>
-   <Description>Si un type qui implémente IDisposable contient des champs qui, eux-aussi, implémentent IDisposable, l'implémentation Dispose() du type d'encapsulation doit appeler Dispose() dans chaque champ supprimable.</Description>
-   <Resolution Name="Default">{0} contient le champ {1} qui est de type IDisposable : {2}. Changez la méthode Dispose de {0} pour appeler Dispose ou Close dans ce champ.</Resolution>
-   <Owner />
-   <Url>http://msdn.microsoft.com/library/ms182328.aspx</Url>
-   <Email>[none]</Email>
-   <MessageLevel Certainty="75">Warning</MessageLevel>
-   <File Name="usagerules.dll" Version="16.0.0.0" />
-  </Rule>
- </Rules>
  <Localized>
   <String Key="Category">Catégorie</String>
   <String Key="Certainty">Certitude</String>

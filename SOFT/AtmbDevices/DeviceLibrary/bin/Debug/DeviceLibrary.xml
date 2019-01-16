@@ -14,64 +14,24 @@
             Instance du bnr.
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CBNR_CPI.ERRORTYPE">
+        <member name="T:DeviceLibrary.CBNR_CPI.CitemsDispensed">
             <summary>
-            Enumération des erreurs du BNR.
+            
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BOURRAGE">
+        <member name="T:DeviceLibrary.CBNR_CPI.CResultDispense">
             <summary>
-            Billet bloqué dans le BNR.
+            Class contenant le resultat d'une opération de distribution.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNR_OUVERT">
+        <member name="F:DeviceLibrary.CBNR_CPI.CResultDispense.listValue">
             <summary>
-            Le bnr est ouvert ou déverrouillé.
+            List contenant les montants par devise distribuée.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.TYPE_BILLET_ERREUR">
+        <member name="M:DeviceLibrary.CBNR_CPI.CResultDispense.#ctor">
             <summary>
-            Indique une erreurs sur le paramètrage d'un billet.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.STOCKAGE_ERREUR">
-            <summary>
-            Erreur de stockage des billets.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNRMODULEMANQUANT">
-            <summary>
-            Un module a été retiré.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNRMODULERINSERE">
-            <summary>
-            Un module a été réinseré.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BILLREFUSED">
-            <summary>
-            Indique qu'un billet a été refusé.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.DLL_NOT_FREE">
-            <summary>
-            Les dlls sont occupées.
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CBNR_CPI.Cerror">
-            <summary>
-            Class des erreurs du BNR.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.Cerror.nameModule">
-            <summary>
-            Nom du module.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.Cerror.error">
-            <summary>
-            Code de l'error.
+            
             </summary>
         </member>
         <member name="T:DeviceLibrary.CBNR_CPI.CModulePosition">
@@ -113,6 +73,11 @@
             Liste contenant l'état des modules.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.listLU">
+            <summary>
+            Liste contenant la liste des unités logiques.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CBNR_CPI.isDispensable">
             <summary>
             Indique si la demande de denomination est possible.
@@ -128,11 +93,6 @@
             Retourne l'identifiant du fabricant.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.cashOrder">
-            <summary>
-            Instance de la classe contenant les informations sur le billet en traitenent.
-            </summary>
-        </member>
         <member name="F:DeviceLibrary.CBNR_CPI.BnrResetTimeOutInMS">
             <summary>
             Délai maximum accordé pour effectur un reset
@@ -146,6 +106,11 @@
         <member name="P:DeviceLibrary.CBNR_CPI.State">
             <summary>
             Etat de la machine d'état du BNR.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CBNR_CPI.AmountToDispense">
+            <summary>
+            Montant à distribuer ou dont on veur vérifier la disponibilité.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.bnrTask">
@@ -182,6 +147,22 @@
             <summary>
             Indique si le monnayeur doit être adtivé.
             </summary>
+        </member>
+        <member name="P:DeviceLibrary.CBNR_CPI.Divider">
+            <summary>
+            Montant du billet de plus faible valeur;
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.logicalCashUnits">
+            <summary>
+            Tableau contenant la liste des unités logiques.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.CheckAndDispense(System.Int32)">
+             <summary>
+            Vérifie la possibilité de distribuer le montant indiqué en paramètre et le distribue le cas échéant.
+             </summary>
+             <param name="amount">Montant à distribuer.</param>
         </member>
         <member name="P:DeviceLibrary.CBNR_CPI.SearchDivider">
             <summary>
@@ -243,6 +224,76 @@
             Constructeur
             </summary>
         </member>
+        <member name="T:DeviceLibrary.CBNR_CPI.ERRORTYPE">
+            <summary>
+            Enumération des erreurs du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BOURRAGE">
+            <summary>
+            Billet bloqué dans le BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNR_OUVERT">
+            <summary>
+            Le bnr est ouvert ou déverrouillé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.TYPE_BILLET_ERREUR">
+            <summary>
+            Indique une erreurs sur le paramètrage d'un billet.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.STOCKAGE_ERREUR">
+            <summary>
+            Erreur de stockage des billets.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNRMODULEMANQUANT">
+            <summary>
+            Un module a été retiré.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNRMODULERINSERE">
+            <summary>
+            Un module a été réinseré.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BILLREFUSED">
+            <summary>
+            Indique qu'un billet a été refusé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.NOTDISTRIBUABLE">
+            <summary>
+            Indique que le montant n'est pas distribuable.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.NOTDISPENSED">
+            <summary>
+            Indique que le montant n'est pas distribué.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.DLL_NOT_FREE">
+            <summary>
+            Les dlls sont occupées.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CBNR_CPI.Cerror">
+            <summary>
+            Class des erreurs du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Cerror.nameModule">
+            <summary>
+            Nom du module.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Cerror.error">
+            <summary>
+            Code de l'error.
+            </summary>
+        </member>
         <member name="T:DeviceLibrary.CBNR_CPI.Etat">
             \addtogroup Etats
             @{
@@ -292,6 +343,21 @@
         <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_ENABLE">
             <summary>
             Etat pour activer le périphérique.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_DISPENSE">
+            <summary>
+            Etat pour distribuer un montant.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_DENOMINATE">
+            <summary>
+            Test la disponibilité du montant.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_GETLUS">
+            <summary>
+            création de la liste des unités logiques.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_IDLE">
@@ -1714,6 +1780,11 @@
             Les compteurs de la caisse du BNR on été remis à zéro.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.BNRDISPENSE">
+            <summary>
+            Le BNR a distribué des billets.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CEvent.Reason.DLLLREADY">
             <summary>
             La dll est prête.
@@ -3051,6 +3122,17 @@
             Constructeur
             </summary>
         </member>
+        <member name="M:DeviceLibrary.CDevice.Dispose(System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="disposing"></param>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
         <member name="T:DeviceLibrary.CMemoryStorage">
             <summary>
             Classe des paramètres de stockage des variables en mémoire.
@@ -4226,7 +4308,7 @@
             <summary>
             Envoi une demande de distribution au BNR
             </summary>
-            <param name="Amount">Montant à distribuer.</param>
+            <param name="amount">Montant à distribuer.</param>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.BNRBillRetract">
             <summary>

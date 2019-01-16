@@ -60,6 +60,21 @@ namespace DeviceLibrary
             STATE_ENABLE,
 
             /// <summary>
+            /// Etat pour distribuer un montant.
+            /// </summary>
+            STATE_DISPENSE,
+
+            /// <summary>
+            /// Test la disponibilité du montant.
+            /// </summary>
+            STATE_DENOMINATE,
+
+            /// <summary>
+            /// création de la liste des unités logiques.
+            /// </summary>
+            STATE_GETLUS,
+
+            /// <summary>
             /// BNR en attente.
             /// </summary>
             STATE_IDLE,

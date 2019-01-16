@@ -83,6 +83,11 @@ namespace DeviceLibrary
             BNRRAZMETER,
 
             /// <summary>
+            /// Le BNR a distribué des billets.
+            /// </summary>
+            BNRDISPENSE,
+
+            /// <summary>
             /// La dll est prête.
             /// </summary>
             DLLLREADY,

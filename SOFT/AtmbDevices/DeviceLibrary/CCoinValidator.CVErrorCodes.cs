@@ -1,4 +1,4 @@
-﻿/// \file CVErrorCodes.cs
+﻿/// \file CCoinValidator.CVErrorCodes.cs
 /// \brief Fichier contenant la classe CVErrorCodes.
 /// \date 28 11 2018
 /// \version 1.0.0

@@ -106,7 +106,13 @@
  * ### Modifications
  * - Correction du bug sur la dll bloquée. 
  * - Modification de la recherche du plus petit billet utilisable pour corriger le bug de distributuion.
- * 
+ *
+ * Rev. 09.01.16   2019 01 15<br>
+ * -------------------------------------
+ * ### Modifications
+ * - Optimisation des opérations de check de la distribution et de la distribution.
+ * - Evenement sur la distributio des billets.
+ *
  *------------------------------------------------------------------------------
  * 
  */

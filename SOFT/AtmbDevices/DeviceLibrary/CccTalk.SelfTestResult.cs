@@ -1,4 +1,4 @@
-﻿/// \file SelfTestResult.cs
+﻿/// \file CccTalk.SelfTestResult.cs
 /// \brief Fichier contenant l'énumération des résultats des tests internes des périphériques.
 /// \date 28 11 2018
 /// \version 1.0.0

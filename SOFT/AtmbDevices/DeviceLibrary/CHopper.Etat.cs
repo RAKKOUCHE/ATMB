@@ -1,4 +1,4 @@
-﻿/// \file Hopper.Etat.cs
+﻿/// \file CHopper.Etat.cs
 /// \brief Fichier contenant l'énumération des états de la machine d'état des hoppers.
 /// \date 28 11 2018
 /// \version 1.0.0

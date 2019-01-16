@@ -173,44 +173,29 @@ namespace DeviceLibrary
                 //Calcul du montant à rendre.
                 int rest = CDevice.denominationInserted.TotalAmount - ToPay;
                 //Si il y a un rendu à effectuer.
-                CBNR_CPI.isDispensable = false;
                 if(rest > 0)
                 {
                     Log.Debug("Change back : A rendre {0:C2}", (decimal)rest / 100);
-                    if(CBNR_CPI.bnr != null && bnX.IsPresent)
                     {
-                        //Recherche u plus petit billet disponible.
-                        try
-                        {
-                            while(CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE)
-                                ;
-                            int divider = bnX.SearchDivider;
-                            //Si le reste est supérieur au plus petit billet disponible, on provoquera une distribution de billet
-                            if(rest > divider)
+                        if(CBNR_CPI.bnr != null && bnX.IsPresent)
+                            //Recherche u plus petit billet disponible.
+                            try
                             {
-                                //Le montant à distribuer sera le reste modulo la valeur du plus petit billet
-                                int toDispense = rest / divider * divider;
-                                //par defaut, le bnr ne peut pas distribuer
-                                CBNR_CPI.ev.Reset();
-                                //Verifie si il peut distribuer, si oui la variable isDispensable sera positionnée à true.
-                                CBNR_CPI.bnr.Denominate(toDispense, "EUR");
-                                //Si le montant est disponible on provoque une distribution.
-                                if(CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS) && CBNR_CPI.isDispensable)
+                                while(CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE)
+                                    ;
+                                int divider = bnX.SearchDivider;
+                                //Si le reste est supérieur au plus petit billet disponible, on provoquera une distribution de billet
+                                if(rest > divider)
                                 {
-                                    CBNR_CPI.ev.Reset();
-                                    CBNR_CPI.bnr.Dispense(toDispense, "EUR", Mei.Bnr.ChangeAlgorithm.OptimumChange);
-                                    rest -= toDispense;
-                                }
-                                else
-                                {
-                                    CBNR_CPI.isDispensable = false;
+                                    //Le montant à distribuer sera le reste modulo la valeur du plus petit billet
+                                    bnX.CheckAndDispense( bnX.AmountToDispense = rest / divider * divider);
+                                    rest -= bnX.AmountToDispense;
                                 }
                             }
-                        }
-                        catch(Exception E)
-                        {
-                            Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                        }
+                            catch(Exception E)
+                            {
+                                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                            }
                     }
                     //Pour chaque hopper
                     foreach(CHopper hopper in Hoppers)
@@ -252,7 +237,6 @@ namespace DeviceLibrary
                     {
                         try
                         {
-
                             CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
                             CBNR_CPI.ev.Reset();
                             CBNR_CPI.bnr.Present();
@@ -412,6 +396,11 @@ namespace DeviceLibrary
                             case CEvent.Reason.BNRRAZMETER:
                             {
                                 OnBNRResetModule(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case CEvent.Reason.BNRDISPENSE:
+                            {
+                                OnBNRDispensed(CDevice.eventsList[0]);
                                 break;
                             }
                             default:
@@ -807,6 +796,24 @@ namespace DeviceLibrary
             }
         }
 
+        private void OnBNRDispensed(CEvent evenment)
+        {
+            try
+            {
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
+                {
+                    reason = CEvent.Reason.BNRDISPENSE,
+                    donnee = evenment,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception E)
+            {
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+
         /// <summary>
         /// Ouvre une transaction le montant à payer.
         /// </summary>
@@ -903,32 +910,10 @@ namespace DeviceLibrary
         /// <summary>
         /// Envoi une demande de distribution au BNR
         /// </summary>
-        /// <param name="Amount">Montant à distribuer.</param>
-        public void BNRDispense(int Amount)
+        /// <param name="amount">Montant à distribuer.</param>
+        public void BNRDispense(int amount)
         {
-            try
-            {
-                if((CBNR_CPI.bnr != null) && bnX.IsPresent)
-                {
-                    int divider = bnX.SearchDivider;
-                    CBNR_CPI.isDispensable = false;
-                    Amount = Amount / divider * divider;
-                    while(CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE)
-                        ;
-                    CBNR_CPI.ev.Reset();
-                    CBNR_CPI.bnr.Denominate(Amount, "EUR");
-                    if(CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS) &&
-                        CBNR_CPI.isDispensable)
-                    {
-                        CBNR_CPI.bnr.Cancel();
-                        CBNR_CPI.bnr.Dispense(Amount, "EUR", Mei.Bnr.ChangeAlgorithm.OptimumChange);
-                    }
-                }
-            }
-            catch(Exception E)
-            {
-                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-            }
+            bnX.CheckAndDispense(amount);
         }
 
         /// <summary>
@@ -1108,7 +1093,8 @@ namespace DeviceLibrary
                 {
                 }
             }
-
+            bnX.Dispose();
+            monnayeur.Dispose();
             Log.Trace("Stop");
             Log.Trace("\r\n---------------------\r\n");
             LogManager.Shutdown();

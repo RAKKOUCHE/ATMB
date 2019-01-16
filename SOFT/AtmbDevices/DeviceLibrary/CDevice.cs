@@ -101,15 +101,22 @@ namespace DeviceLibrary
             evReady = new AutoResetEvent(false);
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="disposing"></param>
         protected virtual void Dispose(bool disposing)
         {
             if(disposing)
             {
-                // dispose managed resources
+                evReady.Dispose();
             }
             // free native resources
         }
 
+        /// <summary>
+        ///
+        /// </summary>
         public void Dispose()
         {
             Dispose(true);

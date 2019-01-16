@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CBNR_CPI.cs" />
+    <Compile Include="CBNR_CPI.ERRORTYPE.cs" />
     <Compile Include="CBNR_CPI.Etat.cs" />
     <Compile Include="CcashReader.Header.cs" />
     <Compile Include="CcashReader.cs" />
@@ -131,7 +132,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="ClassDiagram1.cd" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>

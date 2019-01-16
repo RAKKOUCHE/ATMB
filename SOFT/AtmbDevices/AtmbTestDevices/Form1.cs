@@ -54,13 +54,13 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void TBAmountToPay_Leave(object sender, EventArgs e)
         {
-            if(decimal.TryParse(tbToPay.Text, out decimal value))
+            if (decimal.TryParse(tbToPay.Text, out decimal value))
             {
                 ToPayByClient = (int)(value * 100);
                 tbToPay.Text = $"{value:c2}";
                 tbDenomination.Text = $"{0:c2}";
                 deviceManage.BeginTransaction(ToPayByClient);
-                if(isMontantPercuReset)
+                if (isMontantPercuReset)
                 {
                     tbReceived.Text = $"{ 0.00:c2}";
                 }
@@ -100,7 +100,7 @@ namespace AtmbTestDevices
         private void MsgFromdll(object sender, CEvent.FireEventArg e)
         {
             Action a;
-            switch(e.reason)
+            switch (e.reason)
             {
                 case CEvent.Reason.MONEYINTRODUCTED:
                 {
@@ -111,10 +111,10 @@ namespace AtmbTestDevices
                         tbInfo.AppendText($"Espèces introduites : Canal {data.CVChannel} trieur {data.CVPath} valeur  {(decimal)data.ValeurCent / 100:c2}\r\n\r\n");
                         tbReceived.Text = $"{(decimal)data.TotalAmount / 100:c2}";
                         tbDenomination.Text = $"{(decimal)data.ValeurCent / 100:c2}";
-                        if(remaining < 1)
+                        if (remaining < 1)
                         {
                             tbRemaining.Text = $"{ 0.00:c2}";
-                            if(data.TotalAmount > 0)
+                            if (data.TotalAmount > 0)
                             {
                                 tbToPay.Text = $"{ 0.00:c2}";
                                 isMontantPercuReset = true;
@@ -164,7 +164,7 @@ namespace AtmbTestDevices
                     {
                         CHopper.CHopperError data = (CHopper.CHopperError)((CEvent)e.donnee).data;
                         tbInfo.AppendText($"Erreur {data.Code} sur le {data.nameOfHopper}\r\n\r\n");
-                        if(data.isHopperCritical)
+                        if (data.isHopperCritical)
                         {
                             MessageBox.Show(string.Format("Erreur {0} sur le {1}.\r\n", " Ce hopper est nécessaire au fonctionnement de la borne.",
                                 data.nameOfHopper), "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -177,11 +177,11 @@ namespace AtmbTestDevices
                     a = () =>
                     {
                         CHopper.CHardLevelData data = (CHopper.CHardLevelData)((CEvent)e.donnee).data;
-                        foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
+                        foreach (DataGridViewRow ligne in dataGridViewHopper.Rows)
                         {
-                            if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == data.nameOfHopper))
+                            if ((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == data.nameOfHopper))
                             {
-                                if((data.level == CHopper.CLevel.HardLevel.VIDE) || (data.level == CHopper.CLevel.HardLevel.PLEIN))
+                                if ((data.level == CHopper.CLevel.HardLevel.VIDE) || (data.level == CHopper.CLevel.HardLevel.PLEIN))
                                 {
                                     ligne.Cells["LevelHW"].Style.BackColor = Color.Red;
                                     MessageBox.Show(string.Format("{0} critique", data.nameOfHopper), "Niveau", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -202,15 +202,15 @@ namespace AtmbTestDevices
                     a = () =>
                     {
                         CHopper.CSoftLevelData data = (CHopper.CSoftLevelData)((CEvent)e.donnee).data;
-                        foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
+                        foreach (DataGridViewRow ligne in dataGridViewHopper.Rows)
                         {
-                            if((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == data.nameOfHopper))
+                            if ((bool)ligne.Cells["Present"].Value && (ligne.Cells["Identifiant"].Value.ToString() == data.nameOfHopper))
                             {
-                                if(data.level == CHopper.CLevel.SoftLevel.VIDE)
+                                if (data.level == CHopper.CLevel.SoftLevel.VIDE)
                                 {
                                     MessageBox.Show(string.Format("{0} critique", data.nameOfHopper), "Level", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 }
-                                switch(data.level)
+                                switch (data.level)
                                 {
                                     case CHopper.CLevel.SoftLevel.PLEIN:
                                     case CHopper.CLevel.SoftLevel.VIDE:
@@ -273,11 +273,11 @@ namespace AtmbTestDevices
                       {
                           byte byIndex = 0;
                           form2.Dispose();
-                          if(deviceManage.Hoppers != null)
+                          if (deviceManage.Hoppers != null)
                           {
-                              foreach(CHopper hopper in deviceManage.Hoppers)
+                              foreach (CHopper hopper in deviceManage.Hoppers)
                               {
-                                  if(hopper.IsPresent)
+                                  if (hopper.IsPresent)
                                   {
                                       dataGridViewHopper.Rows.Add(string.Format("{0}", hopper.name), (decimal)hopper.CoinValue / 100, hopper.IsPresent, 0, 0, "", "", false, hopper.DefaultFilling, false);
                                   }
@@ -304,7 +304,7 @@ namespace AtmbTestDevices
                     a = () =>
                       {
                           CBNR_CPI.Cerror data = (CBNR_CPI.Cerror)((CEvent)e.donnee).data;
-                          if(data.error == CBNR_CPI.ERRORTYPE.BILLREFUSED)
+                          if (data.error == CBNR_CPI.ERRORTYPE.BILLREFUSED)
                           {
                               tbInfo.AppendText("Billet refusé\r\n\r\n");
                           }
@@ -340,6 +340,21 @@ namespace AtmbTestDevices
                      {
                          CEvent donnee = (CEvent)e.donnee;
                          MessageBox.Show(string.Format(" Les compteurs {0} ont été remis à zéro.", donnee.data.ToString()), donnee.nameOfDevice, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     };
+                    break;
+                }
+                case CEvent.Reason.BNRDISPENSE:
+                {
+                    a = () =>
+                     {
+                         CBNR_CPI.CResultDispense resultDispense = (CBNR_CPI.CResultDispense)((CEvent)e.donnee).data;
+                         tbInfo.AppendText("Billets distribués\r\n\r\n");
+                         tbInfo.AppendText($"Montant : {(decimal)resultDispense.Montant / 100:c2}\r\n");
+                         foreach (CBNR_CPI.CitemsDispensed itemDispensed in resultDispense.listValue)
+                         {
+                             tbInfo.AppendText($"{(decimal)itemDispensed.amount / 100:c2} par {itemDispensed.numberBills} billets de {(decimal)itemDispensed.BillValue / 100:C2}\r\n");
+                         }
+                         tbInfo.AppendText("\r\n");       
                      };
                     break;
                 }
@@ -379,17 +394,17 @@ namespace AtmbTestDevices
             dataGridViewCompteurs.Rows.Add("Total rendu", $"{(decimal)CccTalk.counters.totalAmountCashOut / 100:c2}");
             dataGridViewCompteurs.Rows.Add("Total borne", $"{(decimal)CccTalk.counters.totalAmountInCabinet / 100:c2}");
             dataGridViewCompteurs.Rows.Add("Trop perçu", $"{(decimal)CccTalk.counters.amountOverPay / 100:c2}");
-            if(deviceManage.monnayeur != null && deviceManage.monnayeur.canaux != null)
+            if (deviceManage.monnayeur != null && deviceManage.monnayeur.canaux != null)
             {
-                foreach(CCoinValidator.CCanal canal in deviceManage.monnayeur.canaux)
+                foreach (CCoinValidator.CCanal canal in deviceManage.monnayeur.canaux)
                 {
                     dataGridViewCompteurs.Rows.Add($"CV nombre canal {canal.Number}", canal.CoinIn);
                     dataGridViewCompteurs.Rows.Add($"CV montant canal {canal.Number}", $"{(decimal)canal.MontantIn / 100:c2}");
                 }
             }
-            if(deviceManage.Hoppers != null)
+            if (deviceManage.Hoppers != null)
             {
-                foreach(CHopper hopper in deviceManage.Hoppers)
+                foreach (CHopper hopper in deviceManage.Hoppers)
                 {
                     dataGridViewCompteurs.Rows.Add($"{hopper.ToString()} niveau", hopper.CoinsInHopper);
                     dataGridViewCompteurs.Rows.Add($"{hopper.ToString()} montant in", $"{(decimal)hopper.AmountInHopper / 100:c2}");
@@ -410,21 +425,21 @@ namespace AtmbTestDevices
         {
             try
             {
-                if((e.ColumnIndex == 7) || (e.ColumnIndex == 9))
+                if ((e.ColumnIndex == 7) || (e.ColumnIndex == 9))
                 {
-                    if((e.ColumnIndex == 7) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
+                    if ((e.ColumnIndex == 7) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
                     {
                         dataGridViewHopper["ToLoad", e.RowIndex].Value = false;
                         dataGridViewHopper["ToDispense", e.RowIndex].Value = 0;
                     }
-                    if((e.ColumnIndex == 9) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
+                    if ((e.ColumnIndex == 9) && !(bool)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value)
                     {
                         dataGridViewHopper["ToEmpty", e.RowIndex].Value = false;
                     }
                     dataGridViewHopper.CurrentCell.Value = !(bool)dataGridViewHopper.CurrentCell.Value;
                 }
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 MessageBox.Show(String.Format("{0} {1} {2}", E.GetType(), E.Message, E.StackTrace));
             }
@@ -437,29 +452,29 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void ButtonHoppers_Click(object sender, EventArgs e)
         {
-            foreach(CHopper hopper in deviceManage.Hoppers)
+            foreach (CHopper hopper in deviceManage.Hoppers)
             {
-                if(hopper.IsPresent)
+                if (hopper.IsPresent)
                 {
-                    foreach(DataGridViewRow ligne in dataGridViewHopper.Rows)
+                    foreach (DataGridViewRow ligne in dataGridViewHopper.Rows)
                     {
-                        if(hopper.name == ligne.Cells["Identifiant"].Value.ToString())
+                        if (hopper.name == ligne.Cells["Identifiant"].Value.ToString())
                         {
-                            if(Convert.ToByte(ligne.Cells["ToDispense"].Value) > 0)
+                            if (Convert.ToByte(ligne.Cells["ToDispense"].Value) > 0)
                             {
                                 hopper.Dispense(Convert.ToByte(ligne.Cells["ToDispense"].Value));
                                 ligne.Cells["ToDispense"].Value = 0.ToString();
                             }
                             else
                             {
-                                if((bool)ligne.Cells["ToEmpty"].Value)
+                                if ((bool)ligne.Cells["ToEmpty"].Value)
                                 {
                                     ligne.Cells["ToEmpty"].Value = false;
                                     hopper.Empty();
                                 }
                                 else
                                 {
-                                    if((bool)ligne.Cells["ToLoad"].Value)
+                                    if ((bool)ligne.Cells["ToLoad"].Value)
                                     {
                                         ligne.Cells["ToLoad"].Value = false;
                                         hopper.LoadHopper(Convert.ToInt64(ligne.Cells["Reload"].Value));
@@ -482,11 +497,11 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void DataGridViewHopper_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex > -1)
+            if (e.RowIndex > -1)
             {
-                if(e.ColumnIndex == 3)
+                if (e.ColumnIndex == 3)
                 {
-                    if(byte.TryParse((string)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value, out byte number))
+                    if (byte.TryParse((string)dataGridViewHopper[e.ColumnIndex, e.RowIndex].Value, out byte number))
                     {
                         dataGridViewHopper["ToLoad", e.RowIndex].Value = false;
                         dataGridViewHopper["ToEmpty", e.RowIndex].Value = false;
@@ -562,7 +577,7 @@ namespace AtmbTestDevices
         /// <returns></returns>
         private void TextBoxBNRDspense_Leave(object sender, EventArgs e)
         {
-            if(decimal.TryParse(textBoxBnrDispense.Text, out decimal value))
+            if (decimal.TryParse(textBoxBnrDispense.Text, out decimal value))
             {
                 ToDispenseBNR = (int)(value * 100);
                 textBoxBnrDispense.Text = $"{value:c2}";
@@ -607,7 +622,7 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void TextBoxLoaderNumberBillet_Leave(object sender, EventArgs e)
         {
-            if(!uint.TryParse(textBoxLoaderNumberBilet.Text, out toLoadInLoader))
+            if (!uint.TryParse(textBoxLoaderNumberBilet.Text, out toLoadInLoader))
             {
                 MessageBox.Show("Cette saisie n'est pas correcte ", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxLoaderNumberBilet.Text = "0";
