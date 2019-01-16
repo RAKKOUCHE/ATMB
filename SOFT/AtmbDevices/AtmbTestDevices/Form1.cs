@@ -144,6 +144,15 @@ namespace AtmbTestDevices
                     {
                         stripLabelCashReaderStatus.BackColor = Color.Red;
                         stripLabelCashReaderStatus.Text = "Encaissement fermé";
+                        if(e.donnee != null)
+                        {
+                            tbInfo.AppendText("Liste des introductions\r\nDétail:\r\n");
+                            foreach(int valueIntroduced in ((CDevicesManager.CCashReceived)e.donnee).listValueIntroduced)
+                            {
+                                tbInfo.AppendText($"{(decimal)valueIntroduced / 100:c2}\r\n");
+                            }
+                            tbInfo.AppendText($"\r\nMontant total introduit {(decimal)((CDevicesManager.CCashReceived)e.donnee).amountIntroduced / 100:C2}\r\n\r\n");
+                        }
                         ButtonCounters_Click(sender, e);
                     };
                     break;
@@ -354,7 +363,7 @@ namespace AtmbTestDevices
                          {
                              tbInfo.AppendText($"{(decimal)itemDispensed.amount / 100:c2} par {itemDispensed.numberBills} billets de {(decimal)itemDispensed.BillValue / 100:C2}\r\n");
                          }
-                         tbInfo.AppendText("\r\n");       
+                         tbInfo.AppendText("\r\n");
                      };
                     break;
                 }
@@ -441,7 +450,7 @@ namespace AtmbTestDevices
             }
             catch (Exception E)
             {
-                MessageBox.Show(String.Format("{0} {1} {2}", E.GetType(), E.Message, E.StackTrace));
+                MessageBox.Show(string.Format("{0} {1} {2}", E.GetType(), E.Message, E.StackTrace));
             }
         }
 
@@ -671,6 +680,11 @@ namespace AtmbTestDevices
         private void BbuttonRollBack_Click(object sender, EventArgs e)
         {
             deviceManage.BNRBillRollBack();
+        }
+
+        private void ButtonCancel_Click(object sender, EventArgs e)
+        {
+            deviceManage.CancelTransaction();
         }
     }
 }

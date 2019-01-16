@@ -128,12 +128,12 @@ namespace DeviceLibrary
                 CDevicesManager.Log.Info("Lecture des variables du hopper {0}", Owner.DeviceAddress - CHopper.AddressBaseHoper);
                 try
                 {
-                    if(!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, VariableSetToRead))
+                    if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, VariableSetToRead))
                     {
                         CDevicesManager.Log.Error("Impossible de lire le -variables set- du hopper {0} ", Owner.DeviceAddress - CHopper.AddressBaseHoper);
                     }
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -164,12 +164,12 @@ namespace DeviceLibrary
                 {
                     CDevicesManager.Log.Info("Enregistrement des variables du {0}", Owner.DeviceAddress);
                     byte[] bufferParam = { (byte)(currentLimit * 17.1), motorStopDelay, (byte)(payoutTO * 3), (byte)singleCoinMode };
-                    if(!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.MODIFYVARIABLESET, (byte)bufferParam.Length, bufferParam, null))
+                    if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.MODIFYVARIABLESET, (byte)bufferParam.Length, bufferParam, null))
                     {
                         CDevicesManager.Log.Info("Erreur durant l'écriture des variables du {0}", Owner.DeviceAddress);
                     }
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
@@ -185,7 +185,7 @@ namespace DeviceLibrary
                     Owner = owner;
                     VariableSetToRead = new byte[] { 0, 0, 0, 0, 0, 0 };
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }

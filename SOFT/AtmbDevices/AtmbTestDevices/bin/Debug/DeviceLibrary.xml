@@ -15,8 +15,23 @@
             </summary>
         </member>
         <member name="T:DeviceLibrary.CBNR_CPI.CitemsDispensed">
-            <summary>
+             <summary>
             
+             </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.CitemsDispensed.numberBills">
+            <summary>
+            Nombres de billets de la dénominations distribués
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.CitemsDispensed.BillValue">
+            <summary>
+            Valeur de la dénomination.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.CitemsDispensed.amount">
+            <summary>
+            Montant des billets de cette denominations distribués.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CBNR_CPI.CResultDispense">
@@ -29,10 +44,15 @@
             List contenant les montants par devise distribuée.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CBNR_CPI.CResultDispense.#ctor">
+        <member name="F:DeviceLibrary.CBNR_CPI.CResultDispense.Montant">
             <summary>
-            
+            Montant total distribué.
             </summary>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.CResultDispense.#ctor">
+             <summary>
+            
+             </summary>
         </member>
         <member name="T:DeviceLibrary.CBNR_CPI.CModulePosition">
             <summary>
@@ -73,7 +93,7 @@
             Liste contenant l'état des modules.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.listLU">
+        <member name="F:DeviceLibrary.CBNR_CPI.listLCU">
             <summary>
             Liste contenant la liste des unités logiques.
             </summary>
@@ -153,11 +173,6 @@
             Montant du billet de plus faible valeur;
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.logicalCashUnits">
-            <summary>
-            Tableau contenant la liste des unités logiques.
-            </summary>
-        </member>
         <member name="M:DeviceLibrary.CBNR_CPI.CheckAndDispense(System.Int32)">
              <summary>
             Vérifie la possibilité de distribuer le montant indiqué en paramètre et le distribue le cas échéant.
@@ -212,6 +227,16 @@
         <member name="M:DeviceLibrary.CBNR_CPI.Init">
             <summary>
             Initialisation de la classe du BNR.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.RollBack">
+            <summary>
+            Retourne les billets en escrow.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.Retract">
+            <summary>
+            Renvoi en caisse les billets présentés non pris.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CBNR_CPI.Task">
@@ -355,9 +380,19 @@
             Test la disponibilité du montant.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_GETLUS">
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_GETLCUS">
             <summary>
-            création de la liste des unités logiques.
+            Création de la liste des unités logiques.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_ROLLBACK">
+            <summary>
+            Les billets sont rendus.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_RETRACT">
+            <summary>
+            Reprend les billets
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_IDLE">
@@ -945,11 +980,6 @@
             Flag indiquant si le monnayeur est initialisé.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CCoinValidator.name">
-            <summary>
-            Nom de produit du monnayeur.
-            </summary>
-        </member>
         <member name="P:DeviceLibrary.CCoinValidator.DataBaseVersion">
             <summary>
             Renvoi la version de la data base.
@@ -960,7 +990,7 @@
             <summary>
             Active les activateurs du monnayeur
             </summary>
-            <param name="mask">Masque correspondant aux bobines</param>
+            <param name="mask">Masque correspondant aux bobines a activé.</param>
             <returns></returns>
         </member>
         <member name="M:DeviceLibrary.CCoinValidator.SetOverrideStatus(System.Byte)">
@@ -4113,6 +4143,31 @@
             Class principale
             </summary>
         </member>
+        <member name="T:DeviceLibrary.CDevicesManager.CCashReceived">
+            <summary>
+            Class concernant les montants introduits.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevicesManager.CCashReceived.listValueIntroduced">
+            <summary>
+            Liste contenant chaque denomination introduite.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevicesManager.CCashReceived.amountIntroduced">
+            <summary>
+            Montant total introduit dnas la transaction.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.CCashReceived.#ctor">
+            <summary>
+            Contructeur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevicesManager.cashReceived">
+            <summary>
+            Instance de la classe CCashReceived.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CDevicesManager.Log">
             <summary>
             Instance le la class Logger utilisée pour les logs.
@@ -4165,7 +4220,7 @@
             Evenement levant un appel à la fonction déléguée.
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CDevicesManager.EnableChannels">
+        <member name="P:DeviceLibrary.CDevicesManager.EnableChannelsCV">
             <summary>
             Masque des canaux activés.
             </summary>
@@ -4186,11 +4241,6 @@
             </summary>
             <param name="canal">Canal du monnayeur</param>
             <param name="sorter">chemin du trieur</param>
-        </member>
-        <member name="M:DeviceLibrary.CDevicesManager.Task">
-            <summary>
-            Tâche principale de la dll
-            </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.ReadParamHopper">
             <summary>
@@ -4288,6 +4338,11 @@
             Cloture la transaction en cours
             </summary>
         </member>
+        <member name="M:DeviceLibrary.CDevicesManager.CancelTransaction">
+            <summary>
+            Abandonne la transaction et retourne le montant introduit
+            </summary>
+        </member>
         <member name="M:DeviceLibrary.CDevicesManager.GetSerialPort">
             <summary>
             Renvoi le nom du port série utilisé par le bus ccTalk
@@ -4318,6 +4373,11 @@
         <member name="M:DeviceLibrary.CDevicesManager.BNRBillRollBack">
             <summary>
             Retourne les billets e escrow.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.Task">
+            <summary>
+            Tâche principale de la dll
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.#ctor">

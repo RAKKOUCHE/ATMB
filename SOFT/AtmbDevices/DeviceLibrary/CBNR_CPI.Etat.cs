@@ -70,9 +70,19 @@ namespace DeviceLibrary
             STATE_DENOMINATE,
 
             /// <summary>
-            /// création de la liste des unités logiques.
+            /// Création de la liste des unités logiques.
             /// </summary>
-            STATE_GETLUS,
+            STATE_GETLCUS,
+
+            /// <summary>
+            /// Les billets sont rendus.
+            /// </summary>
+            STATE_ROLLBACK,
+
+            /// <summary>
+            /// Reprend les billets
+            /// </summary>
+            STATE_RETRACT,
 
             /// <summary>
             /// BNR en attente.

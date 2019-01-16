@@ -119,6 +119,7 @@
             this.numericUpDownPath = new System.Windows.Forms.NumericUpDown();
             this.buttonRetract = new System.Windows.Forms.Button();
             this.buttonRollBack = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.contextMenuStripClear.SuspendLayout();
             this.groupBoxPieces.SuspendLayout();
@@ -766,12 +767,20 @@
             this.buttonRollBack.UseVisualStyleBackColor = true;
             this.buttonRollBack.Click += new System.EventHandler(this.BbuttonRollBack_Click);
             // 
+            // buttonCancel
+            // 
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.groupBoxPieces);
             this.Controls.Add(this.buttonRollBack);
             this.Controls.Add(this.buttonRetract);
@@ -887,6 +896,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Montant;
         private System.Windows.Forms.DataGridViewCheckBoxColumn RAZ;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
 

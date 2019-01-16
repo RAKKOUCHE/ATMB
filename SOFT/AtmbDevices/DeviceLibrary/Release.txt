@@ -116,7 +116,14 @@
  * Rev. 09.01.16B   2019 01 15<br>
  * -------------------------------------
  * ### Modifications
- * "EUR" to "EUR"
- *------------------------------------------------------------------------------
+ * "AAA" to "EUR"
  * 
+ * Rev. 09.01.17   2019 01 16<br>
+ * -------------------------------------
+ * ### Modifications
+ * - Retract et rollback dans la machine d'état du BNR.
+ * - Fonction cancel
+ * - Evvenement pour le retour de la liste des introductions.
+ *
+ *------------------------------------------------------------------------------
  */

@@ -85,10 +85,10 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Info("Lecture de l'identification de la pièce acceptée dans le canal {0} du {1}", CanalOwner.Number, CanalOwner.CVOwner.DeviceAddress);
                         byte[] bufferIn = { 46, 46, 46, 46, 46, 46 };
                         byte[] bufferParam = { CanalOwner.Number };
-                        if(CanalOwner.CVOwner.IsCmdccTalkSended(CanalOwner.CVOwner.DeviceAddress, REQUESTCOINID, (byte)bufferParam.Length, bufferParam, bufferIn))
+                        if (CanalOwner.CVOwner.IsCmdccTalkSended(CanalOwner.CVOwner.DeviceAddress, REQUESTCOINID, (byte)bufferParam.Length, bufferParam, bufferIn))
                         {
                             CountryCode = ((char)bufferIn[0]).ToString() + ((char)bufferIn[1]).ToString();
-                            if(CountryCode == "..")
+                            if (CountryCode == "..")
                             {
                                 valeurCent = 0;
                                 Issue = '-';
@@ -101,7 +101,7 @@ namespace DeviceLibrary
                             }
                         }
                     }
-                    catch(Exception E)
+                    catch (Exception E)
                     {
                         CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                     }
@@ -173,14 +173,14 @@ namespace DeviceLibrary
                             CDevicesManager.Log.Info("Lecture des informations sur le tri des pièces en sortie du canal {0} du {1}", CanalOwner.Number, CanalOwner.CVOwner.DeviceAddress);
                             byte[] bufferIn = { 0, 0, 0, 0 };
                             byte[] bufferParam = { CanalOwner.Number };
-                            if(!CanalOwner.CVOwner.IsCmdccTalkSended(CanalOwner.CVOwner.DeviceAddress, Header.REQUESTSORTERPATH, (byte)bufferParam.Length, bufferParam, bufferIn))
+                            if (!CanalOwner.CVOwner.IsCmdccTalkSended(CanalOwner.CVOwner.DeviceAddress, Header.REQUESTSORTERPATH, (byte)bufferParam.Length, bufferParam, bufferIn))
                             {
                                 throw new Exception(string.Format("Impossible de lire les  informations sur le tri des pièces en sortie du canal {0} du {1}", CanalOwner.Number, CanalOwner.CVOwner.DeviceAddress));
                             }
                             result = bufferIn[0];
                             Buffer.BlockCopy(bufferIn, 0, OverPath, 0, 3);
                         }
-                        catch(Exception E)
+                        catch (Exception E)
                         {
                             CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                         }
@@ -198,12 +198,12 @@ namespace DeviceLibrary
                     {
                         CDevicesManager.Log.Info("Modifie le chemin de sortie du trieur pour le canal {0} chemin {1}", CanalOwner.Number, pathSorter);
                         byte[] bufferParam = { CanalOwner.Number, pathSorter, OverPath[0], OverPath[1], OverPath[2] };
-                        if(!CanalOwner.CVOwner.IsCmdccTalkSended(CanalOwner.CVOwner.DeviceAddress, Header.MODIFYSORTERPATH, (byte)bufferParam.Length, bufferParam, null))
+                        if (!CanalOwner.CVOwner.IsCmdccTalkSended(CanalOwner.CVOwner.DeviceAddress, Header.MODIFYSORTERPATH, (byte)bufferParam.Length, bufferParam, null))
                         {
                             throw new Exception(string.Format(messagesText.erreurCmd, Header.MODIFYSORTERPATH, CanalOwner.CVOwner.DeviceAddress));
                         }
                     }
-                    catch(Exception E)
+                    catch (Exception E)
                     {
                         CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                     }

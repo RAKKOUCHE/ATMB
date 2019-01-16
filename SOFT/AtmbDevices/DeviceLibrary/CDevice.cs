@@ -86,15 +86,15 @@ namespace DeviceLibrary
         /// </summary>
         public CDevice()
         {
-            if(denominationInserted == null)
+            if (denominationInserted == null)
             {
                 denominationInserted = new CInserted();
             }
-            if(eventsList == null)
+            if (eventsList == null)
             {
                 eventsList = new List<CEvent>();
             }
-            if(eventListLock == null)
+            if (eventListLock == null)
             {
                 eventListLock = new object();
             }
@@ -107,7 +107,7 @@ namespace DeviceLibrary
         /// <param name="disposing"></param>
         protected virtual void Dispose(bool disposing)
         {
-            if(disposing)
+            if (disposing)
             {
                 evReady.Dispose();
             }

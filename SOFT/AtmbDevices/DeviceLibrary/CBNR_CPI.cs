@@ -1,4 +1,4 @@
-﻿/// \file CBNR_CPI.cs
+﻿/// \file cs
 /// \brief Fichier contenant la classe CBNR_CPI
 /// \date 28 11 2018
 /// \version 1.0.0
@@ -24,12 +24,21 @@ namespace DeviceLibrary
         public static Bnr bnr;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public class CitemsDispensed
         {
+            /// <summary>
+            /// Nombres de billets de la dénominations distribués
+            /// </summary>
             public int numberBills;
+            /// <summary>
+            /// Valeur de la dénomination.
+            /// </summary>
             public int BillValue;
+            /// <summary>
+            /// Montant des billets de cette denominations distribués.
+            /// </summary>
             public int amount;
         }
 
@@ -43,10 +52,13 @@ namespace DeviceLibrary
             /// </summary>
             public List<CitemsDispensed> listValue;
 
-            public int  Montant;
+            /// <summary>
+            /// Montant total distribué.
+            /// </summary>
+            public int Montant;
 
             /// <summary>
-            /// 
+            ///
             /// </summary>
             public CResultDispense()
             {
@@ -105,7 +117,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Liste contenant la liste des unités logiques.
         /// </summary>
-        private static Mei.Bnr.CashUnit.LogicalCashUnit[] listLU;
+        private static Mei.Bnr.CashUnit.LogicalCashUnit[] listLCU;
 
         /// <summary>
         /// Indique si la demande de denomination est possible.
@@ -223,11 +235,6 @@ namespace DeviceLibrary
             get => divider;
             set => divider = value;
         }
-
-        /// <summary>
-        /// Tableau contenant la liste des unités logiques.
-        /// </summary>
-        private Mei.Bnr.CashUnit.LogicalCashUnit[] logicalCashUnits;
 
         /// <summary>
         ///Vérifie la possibilité de distribuer le montant indiqué en paramètre et le distribue le cas échéant.
@@ -364,8 +371,9 @@ namespace DeviceLibrary
                     break;
 
                 case OperationId.CashInRollBack:
+                {
                     break;
-
+                }
                 case OperationId.CashInEnd:
                     break;
 
@@ -463,12 +471,14 @@ namespace DeviceLibrary
                     isCashPresent = true;
                     isCashTaken = false;
                     CResultDispense resultDispense = new CResultDispense();
-                    
+
                     foreach (XfsDenominationItem denomination in ((XfsCashOrder)Data).Denomination.Items)
                     {
-                        CitemsDispensed itemsDispensed = new CitemsDispensed();
-                        itemsDispensed.numberBills =  denomination.Count;
-                        itemsDispensed.BillValue = listLU[denomination.Unit - 1].CashType.Value;
+                        CitemsDispensed itemsDispensed = new CitemsDispensed
+                        {
+                            numberBills = denomination.Count,
+                            BillValue = listLCU[denomination.Unit - 1].CashType.Value
+                        };
                         itemsDispensed.amount = itemsDispensed.BillValue * itemsDispensed.numberBills;
                         resultDispense.listValue.Add(itemsDispensed);
                     }
@@ -581,7 +591,7 @@ namespace DeviceLibrary
         private static void Bnr_OperationCompletedEvent(int identificationId, OperationId operationId, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)
         {
             CDevicesManager.Log.Debug("complete - IdentificationId : {0} OperationId : {1} BnrXfsErrorCode : {2} BnrXfsErrorCode : {3} Data : {4}",
-    identificationId, operationId.ToString(), result.ToString(), extendedResult.ToString(), Data != null ? Data.ToString() : null);
+    identificationId, operationId.ToString(), result.ToString(), extendedResult.ToString(), Data?.ToString());
 
             switch (operationId)
             {
@@ -626,8 +636,6 @@ namespace DeviceLibrary
 
                 case OperationId.Present:
                 {
-
-                    Thread.Sleep(1);
                     break;
                 }
                 case OperationId.Empty:
@@ -635,11 +643,7 @@ namespace DeviceLibrary
 
                 case OperationId.CashInRollBack:
                 {
-                    CDevicesManager.ToPay -= ((XfsCashOrder)Data).Denomination.Amount;
-                    if (CDevicesManager.ToPay < 0)
-                    {
-                        CDevicesManager.ToPay = 0;
-                    }
+                    denominationInserted.TotalAmount -= ((XfsCashOrder)Data).Denomination.Amount;
                     break;
                 }
                 case OperationId.CashInEnd:
@@ -821,6 +825,60 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// Retourne les billets en escrow.
+        /// </summary>
+        private void RollBack()
+        {
+            try
+            {
+                if (bnr.TransactionStatus.CurrentOperation == 6122)
+                {
+                    ev.Reset();
+                    bnr.Cancel();
+                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
+                    ev.Reset();
+                    bnr.CashInRollback();
+                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
+                    while (!isCashTaken)
+                        ;
+                    ev.Reset();
+                    bnr.CashInEnd();
+                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
+                }
+            }
+            catch (Exception E)
+            {
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Renvoi en caisse les billets présentés non pris.
+        /// </summary>
+        private void Retract()
+        {
+            try
+            {
+                if (isCashPresent)
+                {
+                    ev.Reset();
+                    bnr.CancelWaitingCashTaken();
+                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
+                    ev.Reset();
+                    bnr.Retract();
+                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
+                    ev.Reset();
+                    bnr.Reject();
+                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
+                }
+            }
+            catch (Exception E)
+            {
+                CDevicesManager. Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
         /// Machine d'état du BNR.
         /// </summary>
         public override void Task()
@@ -917,13 +975,13 @@ namespace DeviceLibrary
                             {
                                 CDevicesManager.Log.Info(m.ToString() + " : " + m.Status.OperationalStatus);
                             }
-                            State = Etat.STATE_GETLUS;
+                            State = Etat.STATE_GETLCUS;
                             break;
                         }
-                        case Etat.STATE_GETLUS:
+                        case Etat.STATE_GETLCUS:
                         {
-                            listLU = new Mei.Bnr.CashUnit.LogicalCashUnit[bnr.CashUnit.LogicalCashUnits.Count];
-                            bnr.CashUnit.LogicalCashUnits.CopyTo(listLU);
+                            listLCU = new Mei.Bnr.CashUnit.LogicalCashUnit[bnr.CashUnit.LogicalCashUnits.Count];
+                            bnr.CashUnit.LogicalCashUnits.CopyTo(listLCU);
                             State = Etat.STATE_GETSTATUS;
                             break;
                         }
@@ -1016,7 +1074,7 @@ namespace DeviceLibrary
 
                         case Etat.STATE_DISPENSE:
                         {
-                            bnr.Dispense(AmountToDispense, "EUR");
+                            bnr.Dispense(AmountToDispense, "AAA");
                             State = Etat.STATE_IDLE;
                             break;
                         }
@@ -1028,7 +1086,7 @@ namespace DeviceLibrary
                             Divider = SearchDivider;
                             ev.Reset();
                             //Verifie si il peut distribuer, si oui la variable isDispensable sera positionnée à true.
-                            bnr.Denominate(AmountToDispense, "EUR");
+                            bnr.Denominate(AmountToDispense, "AAA");
                             if (!ev.WaitOne(BnrDefaultOperationTimeOutInMS) || !isDispensable)
                             {
                                 errorInfo.nameModule = string.Empty;
@@ -1049,6 +1107,19 @@ namespace DeviceLibrary
                             break;
                         }
 
+                        case Etat.STATE_ROLLBACK:
+                        {
+                            RollBack();
+                            State = Etat.STATE_IDLE;
+                            break;
+                        }
+
+                        case Etat.STATE_RETRACT:
+                        {
+                            Retract();
+                            State = Etat.STATE_IDLE;
+                            break;
+                        }
                         default:
                         {
                             break;
@@ -1058,7 +1129,7 @@ namespace DeviceLibrary
                 }
                 catch (Exception E)
                 {
-                    if (CBNR_CPI.isDispensable)
+                    if (isDispensable)
                     {
                         ev.WaitOne(BnrDefaultOperationTimeOutInMS);
                         if (!isCashPresent)

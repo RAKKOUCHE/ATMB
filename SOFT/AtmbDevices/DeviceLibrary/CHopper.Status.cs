@@ -150,7 +150,7 @@ namespace DeviceLibrary
                 {
                     CDevicesManager.Log.Info("Lecture des status du {0}", Owner.DeviceAddress);
                     byte[] bufferIn = { 0, 0, 0, 0 };
-                    if(Owner.IsCmdccTalkSended(Owner.DeviceAddress, Header.REQUESTHOPPERSTATUS, 0, null, bufferIn))
+                    if (Owner.IsCmdccTalkSended(Owner.DeviceAddress, Header.REQUESTHOPPERSTATUS, 0, null, bufferIn))
                     {
                         EventCounter = bufferIn[0];
                         dispensedResult.CoinsRemaining = coinsRemaining = bufferIn[1];
@@ -160,7 +160,7 @@ namespace DeviceLibrary
                         dispensedResult.MontantUnpaid = (int)(coinsUnpaid * Owner.CoinValue);
                     }
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                 }
