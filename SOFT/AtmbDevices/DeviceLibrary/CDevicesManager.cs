@@ -907,6 +907,7 @@ namespace DeviceLibrary
                 Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
+
         /// <summary>
         /// Tâche principale de la dll
         /// </summary>

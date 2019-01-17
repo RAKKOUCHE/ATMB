@@ -126,5 +126,14 @@
  * - Evenement pour le retour de la liste des introductions.
  * - Reset de la caisse à monnaie en cas de retrait.
  *
+ * Rev. 09.01.18   2019 01 18<br>
+ * -------------------------------------
+ * ### Bugs
+ * - Erreur sur le compteur total des pièces en caisse.
+ *
+ * ### Modifications
+ * - Correction du bug
+ * - Evenement avec le retour du détail des pièces lors du retrait de la caisse.
+ *
  *------------------------------------------------------------------------------
  */

@@ -17,7 +17,6 @@ namespace DeviceLibrary
     [Serializable()]
     public class CcoinsCounters
     {
-
         /// <summary>
         /// Class contenant les informations sur les pièces dans la caisse.
         /// </summary>
@@ -28,7 +27,6 @@ namespace DeviceLibrary
             /// </summary>
             public class CCoin
             {
-
                 /// <summary>
                 /// Nombre de pièces dans la caisse par canal du monnayeur
                 /// </summary>
@@ -57,6 +55,7 @@ namespace DeviceLibrary
             /// Tableau des informations sur les pièces.
             /// </summary>
             public CCoin[] coin;
+
             /// <summary>
             /// Total des pieces dans la caisse
             /// </summary>

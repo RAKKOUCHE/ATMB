@@ -252,6 +252,7 @@ namespace DeviceLibrary
         }
 
 #pragma warning disable IDE0051 // Remove unused private members
+
         /// <summary>
         /// Active le moteur en mode CPR.
         /// </summary>

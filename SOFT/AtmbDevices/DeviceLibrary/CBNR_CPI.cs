@@ -1,4 +1,4 @@
-﻿/// \file cs
+﻿/// \file CBNR_CPI.cs
 /// \brief Fichier contenant la classe CBNR_CPI
 /// \date 28 11 2018
 /// \version 1.0.0
@@ -32,10 +32,12 @@ namespace DeviceLibrary
             /// Nombres de billets de la dénominations distribués
             /// </summary>
             public int numberBills;
+
             /// <summary>
             /// Valeur de la dénomination.
             /// </summary>
             public int BillValue;
+
             /// <summary>
             /// Montant des billets de cette denominations distribués.
             /// </summary>

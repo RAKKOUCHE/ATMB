@@ -460,7 +460,6 @@ namespace DeviceLibrary
             }
         }
 
-
         /// <summary>
         /// Initialisation du monnayeur.
         /// </summary>
