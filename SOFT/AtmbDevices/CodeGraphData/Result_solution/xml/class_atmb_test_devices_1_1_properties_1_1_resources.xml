@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_atmb_test_devices_1_1_properties_1_1_resources" kind="class" prot="package">
+    <compoundname>AtmbTestDevices::Properties::Resources</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_properties_1_1_resources_1ad41c9eca5827b2da9452cd26dbd71f95" prot="private" static="yes" mutable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager AtmbTestDevices.Properties.Resources.resourceMan</definition>
+        <argsstring></argsstring>
+        <name>resourceMan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" line="27" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_properties_1_1_resources_1ad7565682e6ce0071c95b5c7dc7f6bbc0" prot="private" static="yes" mutable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo AtmbTestDevices.Properties.Resources.resourceCulture</definition>
+        <argsstring></argsstring>
+        <name>resourceCulture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" line="29" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_atmb_test_devices_1_1_properties_1_1_resources_1acc8428f61b2e93f032244df6f458c64b" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager AtmbTestDevices.Properties.Resources.ResourceManager</definition>
+        <argsstring></argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+<para>Retourne l&apos;instance ResourceManager mise en cache utilisée par cette classe. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" line="39" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_atmb_test_devices_1_1_properties_1_1_resources_1af344e87551bf63e2962e70fdb6cdf691" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo AtmbTestDevices.Properties.Resources.Culture</definition>
+        <argsstring></argsstring>
+        <name>Culture</name>
+        <briefdescription>
+<para>Remplace la propriété CurrentUICulture du thread actuel pour toutes les recherches de ressources à l&apos;aide de cette classe de ressource fortement typée. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" line="54" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_properties_1_1_resources_1a6ad02e19b6a3999edcb82dabbd82e07b" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AtmbTestDevices.Properties.Resources.Resources</definition>
+        <argsstring>()</argsstring>
+        <name>Resources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" line="32" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" bodystart="32" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="274">
+        <label>AtmbTestDevices.Properties.Resources</label>
+        <link refid="class_atmb_test_devices_1_1_properties_1_1_resources"/>
+        <childnode refid="274" relation="usage">
+          <edgelabel>resourceMan</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" line="25" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties/Resources.Designer.cs" bodystart="25" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_atmb_test_devices_1_1_properties_1_1_resources_1af344e87551bf63e2962e70fdb6cdf691" prot="package" virt="non-virtual"><scope>AtmbTestDevices::Properties::Resources</scope><name>Culture</name></member>
+      <member refid="class_atmb_test_devices_1_1_properties_1_1_resources_1ad7565682e6ce0071c95b5c7dc7f6bbc0" prot="private" virt="non-virtual"><scope>AtmbTestDevices::Properties::Resources</scope><name>resourceCulture</name></member>
+      <member refid="class_atmb_test_devices_1_1_properties_1_1_resources_1ad41c9eca5827b2da9452cd26dbd71f95" prot="private" virt="non-virtual"><scope>AtmbTestDevices::Properties::Resources</scope><name>resourceMan</name></member>
+      <member refid="class_atmb_test_devices_1_1_properties_1_1_resources_1acc8428f61b2e93f032244df6f458c64b" prot="package" virt="non-virtual"><scope>AtmbTestDevices::Properties::Resources</scope><name>ResourceManager</name></member>
+      <member refid="class_atmb_test_devices_1_1_properties_1_1_resources_1a6ad02e19b6a3999edcb82dabbd82e07b" prot="package" virt="non-virtual"><scope>AtmbTestDevices::Properties::Resources</scope><name>Resources</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

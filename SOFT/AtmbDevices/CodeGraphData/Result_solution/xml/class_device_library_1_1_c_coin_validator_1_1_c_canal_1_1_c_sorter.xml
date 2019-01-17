@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CCoinValidator::CCanal::CSorter</compoundname>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1ab87aacccef226ff01940206f47b5383d" prot="private" static="no">
+        <name>Header</name>
+        <enumvalue id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1ab87aacccef226ff01940206f47b5383da8310c2b9a749f51805f8d47ddc05e515" prot="public">
+          <name>REQUESTSORTERPATH</name>
+          <initializer>= 209</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>summary&gt; Demande du chemin utilisé pour trier une pièce reconnue /summary&gt; summary&gt; Enregistre chemin utilisé pour trier une pièce reconnue /summary&gt; </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1ab87aacccef226ff01940206f47b5383dad756e6025d036867d08303eb2f842430" prot="public">
+          <name>MODIFYSORTERPATH</name>
+          <initializer>= 210</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Header ccTalk utilisé pour le triage </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="132" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="131" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a813192aa4c83e9f6da2fe07d8574fb67" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_device_library_1_1_c_coin_validator_1_1_c_canal" kindref="compound">CCanal</ref></type>
+        <definition>readonly CCanal DeviceLibrary.CCoinValidator.CCanal.CSorter.CanalOwner</definition>
+        <argsstring></argsstring>
+        <name>CanalOwner</name>
+        <briefdescription>
+<para>Canal propriétaire de la class </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="147" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="147" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a5e51b3691ca398b85a836fb169813685" compoundref="_c_coin_validator_8_c_canal_8cs" startline="216" endline="220">DeviceLibrary.CCoinValidator.CCanal.CSorter.CSorter</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" compoundref="_c_coin_validator_8_c_canal_8cs" startline="195" endline="210">DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a7e949f5c8d4c595e2441ea0c4a3ea6eb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CCoinValidator.CCanal.CSorter.PathSorter</definition>
+        <argsstring></argsstring>
+        <name>PathSorter</name>
+        <briefdescription>
+<para>Chemin utilisé dans le trieur (de 1 à 8) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="152" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a5bea1add34cd25f82f1d41085372cf24" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CCoinValidator.CCanal.CSorter.SorterPath</definition>
+        <argsstring></argsstring>
+        <name>SorterPath</name>
+        <briefdescription>
+<para>Lit les informations concernant le tri des pièces en sortie du monnayeur. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="166" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af13cd8846d559d2adf6e8a3864eb4dea" prot="public" static="no" mutable="no">
+        <type>byte[]</type>
+        <definition>byte [] DeviceLibrary.CCoinValidator.CCanal.CSorter.OverPath</definition>
+        <argsstring></argsstring>
+        <name>OverPath</name>
+        <briefdescription>
+<para>Chemin de substitusion. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="161" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="161" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a5e51b3691ca398b85a836fb169813685" compoundref="_c_coin_validator_8_c_canal_8cs" startline="216" endline="220">DeviceLibrary.CCoinValidator.CCanal.CSorter.CSorter</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" compoundref="_c_coin_validator_8_c_canal_8cs" startline="195" endline="210">DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</definition>
+        <argsstring>(byte pathSorter)</argsstring>
+        <name>SetSorterPath</name>
+        <param>
+          <type>byte</type>
+          <declname>pathSorter</declname>
+        </param>
+        <briefdescription>
+<para>Definie le chemin utilisé par le trieur pour ce canal. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pathSorter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chemin dans le trieur</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="195" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="195" bodyend="210"/>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a813192aa4c83e9f6da2fe07d8574fb67" compoundref="_c_coin_validator_8_c_canal_8cs" startline="147">DeviceLibrary.CCoinValidator.CCanal.CSorter.CanalOwner</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a16e378356891c42f61c6dd095248a449" compoundref="_c_coin_validator_8_c_canal_8cs" startline="226">DeviceLibrary.CCoinValidator.CCanal.CVOwner</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1messages_text_1a9b8554d38ab9c2799d5405e2f894cf82" compoundref="messages_text_8_designer_8cs" startline="201">DeviceLibrary.messagesText.erreurCmd</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af13cd8846d559d2adf6e8a3864eb4dea" compoundref="_c_coin_validator_8_c_canal_8cs" startline="161">DeviceLibrary.CCoinValidator.CCanal.CSorter.OverPath</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a5e51b3691ca398b85a836fb169813685" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.CCoinValidator.CCanal.CSorter.CSorter</definition>
+        <argsstring>(CCanal owner)</argsstring>
+        <name>CSorter</name>
+        <param>
+          <type><ref refid="class_device_library_1_1_c_coin_validator_1_1_c_canal" kindref="compound">CCanal</ref></type>
+          <declname>owner</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Canal correspondant</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="216" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="216" bodyend="220"/>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a813192aa4c83e9f6da2fe07d8574fb67" compoundref="_c_coin_validator_8_c_canal_8cs" startline="147">DeviceLibrary.CCoinValidator.CCanal.CSorter.CanalOwner</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af13cd8846d559d2adf6e8a3864eb4dea" compoundref="_c_coin_validator_8_c_canal_8cs" startline="161">DeviceLibrary.CCoinValidator.CCanal.CSorter.OverPath</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class gérant les informations concernant un chemin de triage d&apos;un canal </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="249">
+        <label>DeviceLibrary.CCoinValidator.CCanal.CCoindID</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d"/>
+        <childnode refid="239" relation="usage">
+          <edgelabel>CanalOwner</edgelabel>
+        </childnode>
+      </node>
+      <node id="245">
+        <label>DeviceLibrary.CDevice.CInserted</label>
+        <link refid="class_device_library_1_1_c_device_1_1_c_inserted"/>
+      </node>
+      <node id="243">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="244" relation="public-inheritance">
+        </childnode>
+        <childnode refid="245" relation="usage">
+          <edgelabel>denominationInserted</edgelabel>
+        </childnode>
+      </node>
+      <node id="244">
+        <label>IDisposable</label>
+      </node>
+      <node id="241">
+        <label>CcashReader</label>
+        <link refid="class_device_library_1_1_ccash_reader"/>
+        <childnode refid="242" relation="public-inheritance">
+        </childnode>
+        <childnode refid="242" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>CccTalk</label>
+        <link refid="class_device_library_1_1_ccc_talk"/>
+        <childnode refid="243" relation="public-inheritance">
+        </childnode>
+        <childnode refid="243" relation="public-inheritance">
+        </childnode>
+        <childnode refid="243" relation="public-inheritance">
+        </childnode>
+        <childnode refid="246" relation="usage">
+          <edgelabel>counters</edgelabel>
+        </childnode>
+      </node>
+      <node id="246">
+        <label>DeviceLibrary.CcoinsCounters</label>
+        <link refid="class_device_library_1_1_ccoins_counters"/>
+      </node>
+      <node id="238">
+        <label>DeviceLibrary.CCoinValidator.CCanal.CSorter</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter"/>
+        <childnode refid="239" relation="usage">
+          <edgelabel>CanalOwner</edgelabel>
+        </childnode>
+      </node>
+      <node id="240">
+        <label>DeviceLibrary.CCoinValidator</label>
+        <link refid="class_device_library_1_1_c_coin_validator"/>
+        <childnode refid="241" relation="public-inheritance">
+        </childnode>
+        <childnode refid="241" relation="public-inheritance">
+        </childnode>
+        <childnode refid="241" relation="public-inheritance">
+        </childnode>
+        <childnode refid="241" relation="public-inheritance">
+        </childnode>
+        <childnode refid="241" relation="public-inheritance">
+        </childnode>
+        <childnode refid="239" relation="usage">
+          <edgelabel>canaux</edgelabel>
+        </childnode>
+        <childnode refid="247" relation="usage">
+          <edgelabel>errorCV</edgelabel>
+        </childnode>
+        <childnode refid="248" relation="usage">
+          <edgelabel>creditBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="247">
+        <label>DeviceLibrary.CCoinValidator.CErroCV</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v"/>
+      </node>
+      <node id="248">
+        <label>DeviceLibrary.CCoinValidator.CCVcreditBuffer</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer"/>
+        <childnode refid="240" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="239">
+        <label>DeviceLibrary.CCoinValidator.CCanal</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal"/>
+        <childnode refid="240" relation="usage">
+          <edgelabel>CVOwner</edgelabel>
+        </childnode>
+        <childnode refid="238" relation="usage">
+          <edgelabel>sorter</edgelabel>
+        </childnode>
+        <childnode refid="249" relation="usage">
+          <edgelabel>coinId</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="127" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="126" bodyend="221"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a813192aa4c83e9f6da2fe07d8574fb67" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CSorter</scope><name>CanalOwner</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a5e51b3691ca398b85a836fb169813685" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CSorter</scope><name>CSorter</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1ab87aacccef226ff01940206f47b5383d" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CSorter</scope><name>Header</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af13cd8846d559d2adf6e8a3864eb4dea" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CSorter</scope><name>OverPath</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a7e949f5c8d4c595e2441ea0c4a3ea6eb" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CSorter</scope><name>PathSorter</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CSorter</scope><name>SetSorterPath</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a5bea1add34cd25f82f1d41085372cf24" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CSorter</scope><name>SorterPath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

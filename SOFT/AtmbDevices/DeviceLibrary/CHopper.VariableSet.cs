@@ -18,6 +18,29 @@ namespace DeviceLibrary
         public class CHopperVariableSet
         {
             /// <summary>
+            /// Hopper propriétaire de l'instance.
+            /// </summary>
+            private readonly CHopper Owner;
+
+            private byte[] variableSetToRead;
+
+            /// <summary>
+            /// Consructeur
+            /// </summary>
+            public CHopperVariableSet(CHopper owner)
+            {
+                try
+                {
+                    Owner = owner;
+                    VariableSetToRead = new byte[] { 0, 0, 0, 0, 0, 0 };
+                }
+                catch (Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
+            }
+
+            /// <summary>
             /// Enumération des modes de distribution.
             /// </summary>
             public enum CoinMode : byte
@@ -75,25 +98,19 @@ namespace DeviceLibrary
             }
 
             /// <summary>
-            /// Hopper propriétaire de l'instance.
+            /// Lecture de l'adresse physique du hopper
             /// </summary>
-            private readonly CHopper Owner;
-
-            private byte[] variableSetToRead;
-
-            /// <summary>
-            /// Buffer du résultat de la commande de lecture des variables du hopper.
-            /// </summary>
-            public byte[] VariableSetToRead
-            {
-                get => variableSetToRead;
-                set => variableSetToRead = value;
-            }
+            public byte ConnectorAddress => GetVariable(Variable.CONNECTORADDRESS);
 
             /// <summary>
             /// Lecture et conversion de la limite de courant
             /// </summary>
             public double CurrentLimit => Math.Round(GetVariable(Variable.CURRENTLIMIT) / 17.1, 2);
+
+            /// <summary>
+            /// Lecture et conversion du courant maximum
+            /// </summary>
+            public double Maxcurrent => GetVariable(Variable.MAXCURRENT) / 17.1;
 
             /// <summary>
             /// Lecture du delai pour arrêter le moteur.
@@ -106,19 +123,30 @@ namespace DeviceLibrary
             public byte PayoutDelayTO => (byte)(GetVariable(Variable.PAYOUTTIMEOUT) / 3);
 
             /// <summary>
-            /// Lecture et conversion du courant maximum
-            /// </summary>
-            public double Maxcurrent => GetVariable(Variable.MAXCURRENT) / 17.1;
-
-            /// <summary>
             /// Lecture et conversion de la tension maximum.
             /// </summary>
             public double Tension => Math.Round((0.2 + GetVariable(Variable.SUPPLYVOLTAGE) * 0.127), 2);
 
             /// <summary>
-            /// Lecture de l'adresse physique du hopper
+            /// Buffer du résultat de la commande de lecture des variables du hopper.
             /// </summary>
-            public byte ConnectorAddress => GetVariable(Variable.CONNECTORADDRESS);
+            public byte[] VariableSetToRead
+            {
+                get => variableSetToRead;
+                set => variableSetToRead = value;
+            }
+
+            /// <summary>
+            /// Lecture d'une variable
+            /// </summary>
+            /// <param name="variable">variable demandée</param>
+            /// <returns>Valeur de la variable demandée</returns>
+            private byte GetVariable(Variable variable)
+            {
+                GetVariableSet();
+                CDevicesManager.Log.Debug("Variable demandée {0}", variable);
+                return VariableSetToRead[(int)variable];
+            }
 
             /// <summary>
             /// Lecture des variables.
@@ -140,18 +168,6 @@ namespace DeviceLibrary
             }
 
             /// <summary>
-            /// Lecture d'une variable
-            /// </summary>
-            /// <param name="variable">variable demandée</param>
-            /// <returns>Valeur de la variable demandée</returns>
-            private byte GetVariable(Variable variable)
-            {
-                GetVariableSet();
-                CDevicesManager.Log.Debug("Variable demandée {0}", variable);
-                return VariableSetToRead[(int)variable];
-            }
-
-            /// <summary>
             /// Enregistrement des variables
             /// </summary>
             /// <param name="currentLimit">Limit de courant avant l'inversion de la rotaiton</param>
@@ -168,22 +184,6 @@ namespace DeviceLibrary
                     {
                         CDevicesManager.Log.Info("Erreur durant l'écriture des variables du {0}", Owner.DeviceAddress);
                     }
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-            }
-
-            /// <summary>
-            /// Consructeur
-            /// </summary>
-            public CHopperVariableSet(CHopper owner)
-            {
-                try
-                {
-                    Owner = owner;
-                    VariableSetToRead = new byte[] { 0, 0, 0, 0, 0, 0 };
                 }
                 catch (Exception E)
                 {

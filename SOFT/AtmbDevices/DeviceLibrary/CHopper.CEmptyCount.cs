@@ -14,9 +14,14 @@ namespace DeviceLibrary
         public class CEmptyCount
         {
             /// <summary>
-            /// Nom du hopper.
+            /// Montant distribué pendant le vidage.
             /// </summary>
-            public string nameOfHopper;
+            public long amountCounter;
+
+            /// <summary>
+            /// Différence entre le montant distribué et le montant dans les compteurs.
+            /// </summary>
+            public long amountDelta;
 
             /// <summary>
             /// Nombre de pièces comptées durant le vidage
@@ -24,19 +29,14 @@ namespace DeviceLibrary
             public long counter;
 
             /// <summary>
-            /// Montant distribué pendant le vidage.
-            /// </summary>
-            public long amountCounter;
-
-            /// <summary>
             /// Différence entre le nombre de pièces dans les compteurs et le nombre de pièces distribuées pendant le vidage.
             /// </summary>
             public long delta;
 
             /// <summary>
-            /// Différence entre le montant distribué et le montant dans les compteurs.
+            /// Nom du hopper.
             /// </summary>
-            public long amountDelta;
+            public string nameOfHopper;
         }
     }
 }

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_hopper_8_level_8cs" kind="file">
+    <compoundname>CHopper.Level.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_c_hopper" prot="public">DeviceLibrary::CHopper</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+<para>Fichier contenant l&apos;énumération des niveaux hard. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>28 11 2018 </para></simplesect>
+<simplesect kind="version"><para>1.0.0 </para></simplesect>
+<simplesect kind="author"><para>Rachid AKKOUCHE </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal">CHopper<sp/>:<sp/>CccTalk</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="class_device_library_1_1_c_hopper_1a7892c052dbffb877fc65bbff569d5247" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_hopper_1a7892c052dbffb877fc65bbff569d5247" kindref="member">LevelMask</ref><sp/>:<sp/>byte</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_hopper_1a7892c052dbffb877fc65bbff569d5247a341837efc37e637d445c92306e3491a9" kindref="member">LOLEVELREACHED</ref><sp/>=<sp/>0x01,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_hopper_1a7892c052dbffb877fc65bbff569d5247a8722070d39c557fae8c3eae06ad557f3" kindref="member">HILEVEREACHED</ref><sp/>=<sp/>0x02,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_hopper_1a7892c052dbffb877fc65bbff569d5247a012c43c20f7b466e1e68e45ff86eeba3" kindref="member">LOLEVELIMPLEMENTED</ref><sp/>=<sp/>0x10,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_hopper_1a7892c052dbffb877fc65bbff569d5247a0fb3f62c68cdca890c8a5c51225659c7" kindref="member">HILEVELIMPLEMENTED</ref><sp/>=<sp/>0x20,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Level.cs"/>
+  </compounddef>
+</doxygen>

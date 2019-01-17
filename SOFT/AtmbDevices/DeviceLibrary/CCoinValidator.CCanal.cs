@@ -19,6 +19,86 @@ namespace DeviceLibrary
         /// \details Cette classe contient et gère les paramètres d'un canal*/
         public partial class CCanal
         {
+            private byte hopperToLoad;
+
+            /// <summary>
+            /// Instance propriètaire du canal
+            /// </summary>
+            protected CCoinValidator CVOwner;
+
+            /// <summary>
+            /// Identification de la pièce reconnue dans le canal
+            /// </summary>
+            public CCoindID coinId;
+
+            /// <summary>
+            /// Numéro du canal
+            /// </summary>
+            public byte Number;
+
+            /// <summary>
+            /// Instance des chemins utilisés pour trier la pièce reconnue dans le canal.
+            /// </summary>
+            public CSorter sorter;
+
+            /// <summary>
+            /// Constructeur
+            /// </summary>
+            /// <param name="number">Numéro du canal</param>
+            /// <param name="owner">Nécessaire pour effectuer les commandes</param>
+            public CCanal(byte number, CCoinValidator owner)
+            {
+                Number = number;
+                CVOwner = owner;
+                coinId = new CCoindID(this);
+                sorter = new CSorter(this);
+            }
+
+            /// <summary>
+            /// Montant des pièces de ce canal en caisse.
+            /// </summary>
+            public long AmountCoinInCB
+            {
+                get => counters.amountCoinInCashBox[Number - 1];
+                set => counters.amountCoinInCashBox[Number - 1] = value;
+            }
+
+            /// <summary>
+            /// Nombre de pièces reconnues par le canal.
+            /// </summary>
+            public long CoinIn
+            {
+                get => counters.coinsInAccepted[Number - 1];
+                set => counters.coinsInAccepted[Number - 1] = value;
+            }
+
+            /// <summary>
+            /// Nombre de pièces de ce canal dans la caisse
+            /// </summary>
+            public long CoinInInCB
+            {
+                get => counters.coinInCashBox[Number - 1];
+                set => counters.coinInCashBox[Number - 1] = value;
+            }
+
+            /// <summary>
+            /// Hopper vers lequel sera dirigé la pièce reconnue
+            /// </summary>
+            public byte HopperToLoad
+            {
+                get => hopperToLoad;
+                set => hopperToLoad = value;
+            }
+
+            /// <summary>
+            /// Montant introduit dans le canal
+            /// </summary>
+            public long MontantIn
+            {
+                get => counters.amountCoinInAccepted[Number - 1];
+                set => counters.amountCoinInAccepted[Number - 1] = value;
+            }
+
             /// <summary>
             /// Class gérant l'identification des pièces
             /// </summary>
@@ -43,6 +123,22 @@ namespace DeviceLibrary
 
                 private string countryCode;
 
+                private char issue;
+
+                private byte valeurCent;
+
+                /// <summary>
+                /// Constructeur
+                /// </summary>
+                /// <param name="owner">Le canal correspondant</param>
+                public CCoindID(CCanal owner)
+                {
+                    CanalOwner = owner;
+                    CountryCode = "..";
+                    ValeurCent = 0;
+                    Issue = '.';
+                }
+
                 /// <summary>
                 /// Code d'identification du pays émetteur.
                 /// </summary>
@@ -52,7 +148,14 @@ namespace DeviceLibrary
                     set => countryCode = value;
                 }
 
-                private byte valeurCent;
+                /// <summary>
+                /// Version des données d'identification.
+                /// </summary>
+                public char Issue
+                {
+                    get => issue;
+                    set => issue = value;
+                }
 
                 /// <summary>
                 /// Valeur de la pièces.
@@ -61,17 +164,6 @@ namespace DeviceLibrary
                 {
                     get => valeurCent;
                     set => valeurCent = value;
-                }
-
-                private char issue;
-
-                /// <summary>
-                /// Version des données d'identification.
-                /// </summary>
-                public char Issue
-                {
-                    get => issue;
-                    set => issue = value;
                 }
 
                 /// <summary>
@@ -106,18 +198,6 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                     }
                 }
-
-                /// <summary>
-                /// Constructeur
-                /// </summary>
-                /// <param name="owner">Le canal correspondant</param>
-                public CCoindID(CCanal owner)
-                {
-                    CanalOwner = owner;
-                    CountryCode = "..";
-                    ValeurCent = 0;
-                    Issue = '.';
-                }
             }
 
             /// <summary>
@@ -125,6 +205,26 @@ namespace DeviceLibrary
             /// </summary>
             public class CSorter
             {
+                /// <summary>
+                /// Canal propriétaire de la class
+                /// </summary>
+                private readonly CCanal CanalOwner;
+
+                /// <summary>
+                /// Chemin de substitusion.
+                /// </summary>
+                public byte[] OverPath;
+
+                /// <summary>
+                /// Constructeur
+                /// </summary>
+                /// <param name="owner">Canal correspondant</param>
+                public CSorter(CCanal owner)
+                {
+                    CanalOwner = owner;
+                    OverPath = new byte[] { 1, 1, 1 };
+                }
+
                 /// <summary>
                 /// Header ccTalk utilisé pour le triage
                 /// </summary>
@@ -140,25 +240,6 @@ namespace DeviceLibrary
                     ///</summary>
                     MODIFYSORTERPATH = 210,
                 }
-
-                /// <summary>
-                /// Canal propriétaire de la class
-                /// </summary>
-                private readonly CCanal CanalOwner;
-
-                /// <summary>
-                /// Chemin utilisé dans le trieur (de 1 à 8)
-                /// </summary>
-                public byte PathSorter
-                {
-                    get => SorterPath;
-                    set => SetSorterPath(value);
-                }
-
-                /// <summary>
-                /// Chemin de substitusion.
-                /// </summary>
-                public byte[] OverPath;
 
                 /// <summary>
                 /// Lit les informations concernant le tri des pièces en sortie du monnayeur.
@@ -189,6 +270,15 @@ namespace DeviceLibrary
                 }
 
                 /// <summary>
+                /// Chemin utilisé dans le trieur (de 1 à 8)
+                /// </summary>
+                public byte PathSorter
+                {
+                    get => SorterPath;
+                    set => SetSorterPath(value);
+                }
+
+                /// <summary>
                 /// Definie le chemin utilisé par le trieur pour ce canal.
                 /// </summary>
                 /// <param name="pathSorter">Chemin dans le trieur</param>
@@ -208,96 +298,6 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
                     }
                 }
-
-                /// <summary>
-                /// Constructeur
-                /// </summary>
-                /// <param name="owner">Canal correspondant</param>
-                public CSorter(CCanal owner)
-                {
-                    CanalOwner = owner;
-                    OverPath = new byte[] { 1, 1, 1 };
-                }
-            }
-
-            /// <summary>
-            /// Instance propriètaire du canal
-            /// </summary>
-            protected CCoinValidator CVOwner;
-
-            /// <summary>
-            /// Numéro du canal
-            /// </summary>
-            public byte Number;
-
-            /// <summary>
-            /// Identification de la pièce reconnue dans le canal
-            /// </summary>
-            public CCoindID coinId;
-
-            /// <summary>
-            /// Instance des chemins utilisés pour trier la pièce reconnue dans le canal.
-            /// </summary>
-            public CSorter sorter;
-
-            private byte hopperToLoad;
-
-            /// <summary>
-            /// Hopper vers lequel sera dirigé la pièce reconnue
-            /// </summary>
-            public byte HopperToLoad
-            {
-                get => hopperToLoad;
-                set => hopperToLoad = value;
-            }
-
-            /// <summary>
-            /// Nombre de pièces reconnues par le canal.
-            /// </summary>
-            public long CoinIn
-            {
-                get => counters.coinsInAccepted[Number - 1];
-                set => counters.coinsInAccepted[Number - 1] = value;
-            }
-
-            /// <summary>
-            /// Montant introduit dans le canal
-            /// </summary>
-            public long MontantIn
-            {
-                get => counters.amountCoinInAccepted[Number - 1];
-                set => counters.amountCoinInAccepted[Number - 1] = value;
-            }
-
-            /// <summary>
-            /// Nombre de pièces de ce canal dans la caisse
-            /// </summary>
-            public long CoinInInCB
-            {
-                get => counters.coinInCashBox[Number - 1];
-                set => counters.coinInCashBox[Number - 1] = value;
-            }
-
-            /// <summary>
-            /// Montant des pièces de ce canal en caisse.
-            /// </summary>
-            public long AmountCoinInCB
-            {
-                get => counters.amountCoinInCashBox[Number - 1];
-                set => counters.amountCoinInCashBox[Number - 1] = value;
-            }
-
-            /// <summary>
-            /// Constructeur
-            /// </summary>
-            /// <param name="number">Numéro du canal</param>
-            /// <param name="owner">Nécessaire pour effectuer les commandes</param>
-            public CCanal(byte number, CCoinValidator owner)
-            {
-                Number = number;
-                CVOwner = owner;
-                coinId = new CCoindID(this);
-                sorter = new CSorter(this);
             }
         }
     }

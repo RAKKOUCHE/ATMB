@@ -1,0 +1,1119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_b_n_r___c_p_i" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CBNR_CPI</compoundname>
+    <basecompoundref refid="class_device_library_1_1_c_device" prot="public" virt="non-virtual">DeviceLibrary.CDevice</basecompoundref>
+    <basecompoundref refid="class_device_library_1_1_c_device" prot="public" virt="non-virtual">DeviceLibrary.CDevice</basecompoundref>
+    <basecompoundref refid="class_device_library_1_1_c_device" prot="public" virt="non-virtual">DeviceLibrary.CDevice</basecompoundref>
+    <basecompoundref refid="class_device_library_1_1_c_device" prot="public" virt="non-virtual">DeviceLibrary.CDevice</basecompoundref>
+    <innerclass refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror" prot="public">DeviceLibrary::CBNR_CPI::Cerror</innerclass>
+    <innerclass refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed" prot="public">DeviceLibrary::CBNR_CPI::CitemsDispensed</innerclass>
+    <innerclass refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position" prot="private">DeviceLibrary::CBNR_CPI::CModulePosition</innerclass>
+    <innerclass refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense" prot="public">DeviceLibrary::CBNR_CPI::CResultDispense</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6" prot="public" static="no">
+        <name>ERRORTYPE</name>
+        <enumvalue id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a74267bafd04517c1609ee13ee212fedd" prot="public">
+          <name>BOURRAGE</name>
+          <briefdescription>
+<para>Billet bloqué dans le BNR. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a803d54558e4199ba24c8be70e1f52311" prot="public">
+          <name>BNR_OUVERT</name>
+          <briefdescription>
+<para>Le bnr est ouvert ou déverrouillé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a1e19d31872ac2b29666b368a8991126e" prot="public">
+          <name>TYPE_BILLET_ERREUR</name>
+          <briefdescription>
+<para>Indique une erreurs sur le paramètrage d&apos;un billet. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6ac35c5714821eb5c6280e90a382b14dd8" prot="public">
+          <name>STOCKAGE_ERREUR</name>
+          <briefdescription>
+<para>Erreur de stockage des billets. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a923f08f7add65912e3ca5f0c5485a421" prot="public">
+          <name>BNRMODULEMANQUANT</name>
+          <briefdescription>
+<para>Un module a été retiré. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a7207152f8928bac043d8b31f036860ba" prot="public">
+          <name>BNRMODULERINSERE</name>
+          <briefdescription>
+<para>Un module a été réinseré. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a5226ca9add71653091a92356a0d595c6" prot="public">
+          <name>BILLREFUSED</name>
+          <briefdescription>
+<para>Indique qu&apos;un billet a été refusé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a89fc88b4ea328df0265d54402b192763" prot="public">
+          <name>NOTDISTRIBUABLE</name>
+          <briefdescription>
+<para>Indique que le montant n&apos;est pas distribuable. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6abaca053458cae8e2055325f552416a70" prot="public">
+          <name>NOTDISPENSED</name>
+          <briefdescription>
+<para>Indique que le montant n&apos;est pas distribué. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a37bf2e5807933cef82be4158f5e90e91" prot="public">
+          <name>DLL_NOT_FREE</name>
+          <briefdescription>
+<para>Les dlls sont occupées. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumération des erreurs du BNR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.ERRORTYPE.cs" line="15" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.ERRORTYPE.cs" bodystart="14" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___etats_1ga0ba00823ea47953aa70abd2626137de2" prot="public" static="no">
+        <name>Etat</name>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2abb47b9b1d888741b1d94f3f060281299" prot="public">
+          <name>STATE_INIT</name>
+          <briefdescription>
+<para>Initialisation du BNR. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa31e7f2a1fe3aaab2484740d51878a3d" prot="public">
+          <name>STATE_OPEN_API</name>
+          <briefdescription>
+<para>Ouverture de la communication entre le BNR et le PC. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2aac8722b851146a23c4e0a59d1bd4b99d" prot="public">
+          <name>STATE_RESET</name>
+          <briefdescription>
+<para>Initialisation hardware. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2adfe9cb852c1d673d49f08b8ab56f8042" prot="public">
+          <name>STATE_SETDATETIME</name>
+          <briefdescription>
+<para>Enregistrement de la date. </para>          </briefdescription>
+          <detaileddescription>
+<para>Nécessaire pour les versions antéreures du BNR</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a98a681af6d6caeb049e0a306a46849fb" prot="public">
+          <name>STATE_GETMODULE</name>
+          <briefdescription>
+<para>Lecture de la liste des modules. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a5fe7aa1c693d66ec83b4b57414702906" prot="public">
+          <name>STATE_GETSTATUS</name>
+          <briefdescription>
+<para>Lecture de l&apos;état du BNR. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a305313efbf5f85ddfa770a6418ce1d3d" prot="public">
+          <name>STATE_DISABLE</name>
+          <briefdescription>
+<para>Etat pour désactiver le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2adf784599ba944861cdd7d1010080f9b9" prot="public">
+          <name>STATE_ENABLE</name>
+          <briefdescription>
+<para>Etat pour activer le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a429322f04df2897f3895ce1875fa421d" prot="public">
+          <name>STATE_DISPENSE</name>
+          <briefdescription>
+<para>Etat pour distribuer un montant. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a518a96054e2f013840d5b3a76b5f231a" prot="public">
+          <name>STATE_DENOMINATE</name>
+          <briefdescription>
+<para>Test la disponibilité du montant. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a591bddc3af4fb48b4fb92a1b498a892e" prot="public">
+          <name>STATE_GETLCUS</name>
+          <briefdescription>
+<para>Création de la liste des unités logiques. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a400ddd2b05277bc7d75580c437a1fe2e" prot="public">
+          <name>STATE_ROLLBACK</name>
+          <briefdescription>
+<para>Les billets sont rendus. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a238625dce187682a7f0893e0df431779" prot="public">
+          <name>STATE_RETRACT</name>
+          <briefdescription>
+<para>Reprend les billets </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a667adf1721ecf31975b473ea51005d04" prot="public">
+          <name>STATE_IDLE</name>
+          <briefdescription>
+<para>BNR en attente. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa1cbf7ab92312cb40dc586242a8bc03e" prot="public">
+          <name>STATE_STOP</name>
+          <briefdescription>
+<para>Arrêt du BNR. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.Etat.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.Etat.cs" bodystart="19" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1ad647e3af47d102142dad0875cb157a1b" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int DeviceLibrary.CBNR_CPI.BnrResetTimeOutInMS</definition>
+        <argsstring></argsstring>
+        <name>BnrResetTimeOutInMS</name>
+        <initializer>= 60000</initializer>
+        <briefdescription>
+<para>Délai maximum accordé pour effectur un reset </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="26" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1a7e1d3882525016aa1f76e25c4be579ff" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CBNR_CPI.amountToDispense</definition>
+        <argsstring></argsstring>
+        <name>amountToDispense</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="84" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1aa3703e473b03e84ba9e16ca8f5d8286d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CBNR_CPI.divider</definition>
+        <argsstring></argsstring>
+        <name>divider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="86" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1af2afdc0eeff983b1c5dc559087d16828" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CBNR_CPI.isBNRToBeActivated</definition>
+        <argsstring></argsstring>
+        <name>isBNRToBeActivated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="88" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1a533562b0067874521f375d091caab7f0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CBNR_CPI.isBNRToBeDeactivated</definition>
+        <argsstring></argsstring>
+        <name>isBNRToBeDeactivated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="90" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1a34352151f1084be74e89f794645c57e9" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror" kindref="compound">Cerror</ref></type>
+        <definition>Cerror DeviceLibrary.CBNR_CPI.errorInfo</definition>
+        <argsstring></argsstring>
+        <name>errorInfo</name>
+        <briefdescription>
+<para>Instance de la class <ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror" kindref="compound">Cerror</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="31" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1ae87f89fac1d9bd0a973deebec343fed2" compoundref="_c_b_n_r___c_p_i_8cs" startline="391" endline="449">DeviceLibrary.CBNR_CPI.HardwareError</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" compoundref="_c_b_n_r___c_p_i_8cs" startline="809" endline="824">DeviceLibrary.CBNR_CPI.Init</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a1880d22aaebed7609c1ccdb7586e20cb" compoundref="_c_b_n_r___c_p_i_8cs" startline="458" endline="590">DeviceLibrary.CBNR_CPI.IntermediateOccured</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1a2430aea41fc4ec38fc8c5582c1931c11" prot="private" static="yes" mutable="no">
+        <type>Mei.Bnr.CashUnit.LogicalCashUnit[]</type>
+        <definition>Mei.Bnr.CashUnit.LogicalCashUnit [] DeviceLibrary.CBNR_CPI.listLCU</definition>
+        <argsstring></argsstring>
+        <name>listLCU</name>
+        <briefdescription>
+<para>Liste contenant la liste des unités logiques. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="36" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1a2da64fcf168fa7a4ca34279baad49a3b" prot="private" static="yes" mutable="no">
+        <type>List&lt; <ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position" kindref="compound">CModulePosition</ref> &gt;</type>
+        <definition>List&lt;CModulePosition&gt; DeviceLibrary.CBNR_CPI.listModulePosition</definition>
+        <argsstring></argsstring>
+        <name>listModulePosition</name>
+        <briefdescription>
+<para>Liste contenant l&apos;état des modules. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="41" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" compoundref="_c_b_n_r___c_p_i_8cs" startline="227" endline="378">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" compoundref="_c_b_n_r___c_p_i_8cs" startline="166" endline="183">DeviceLibrary.CBNR_CPI.CBNR_CPI</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1a6bc4beea85d3106df5e4aa24be69acf1" prot="private" static="yes" mutable="no">
+        <type><ref refid="group___etats_1ga0ba00823ea47953aa70abd2626137de2" kindref="member">Etat</ref></type>
+        <definition>Etat DeviceLibrary.CBNR_CPI.state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="82" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1abf507423a1030786740a972b0de9ee29" prot="package" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int DeviceLibrary.CBNR_CPI.BnrDefaultOperationTimeOutInMS</definition>
+        <argsstring></argsstring>
+        <name>BnrDefaultOperationTimeOutInMS</name>
+        <initializer>= 10000</initializer>
+        <briefdescription>
+<para>Delain maximum pour effectuer une opération. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="46" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="46" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a87f99167dfc7b15e42f28e302a29e06d" compoundref="_c_b_n_r___c_p_i_8cs" startline="724" endline="745">DeviceLibrary.CBNR_CPI.Retract</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1abe2d64822c6158adae8bd2bfcc1f6207" compoundref="_c_b_n_r___c_p_i_8cs" startline="750" endline="773">DeviceLibrary.CBNR_CPI.RollBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" prot="public" static="yes" mutable="no">
+        <type>Bnr</type>
+        <definition>Bnr DeviceLibrary.CBNR_CPI.bnr</definition>
+        <argsstring></argsstring>
+        <name>bnr</name>
+        <briefdescription>
+<para>Instance du bnr. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="51" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af18337108d515626ddb56bf1789a3d2e" compoundref="_c_devices_manager_8cs" startline="945" endline="952">DeviceLibrary.CDevicesManager.BNRBillRetract</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" compoundref="_c_devices_manager_8cs" startline="957" endline="965">DeviceLibrary.CDevicesManager.BNRBillRollBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" compoundref="_c_devices_manager_8cs" startline="979" endline="989">DeviceLibrary.CDevicesManager.CancelTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" compoundref="_c_b_n_r___c_p_i_8cs" startline="166" endline="183">DeviceLibrary.CBNR_CPI.CBNR_CPI</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4ade41b0290eee442ca90765ec2523b7" compoundref="_c_b_n_r___c_p_i_8cs" startline="779" endline="804">DeviceLibrary.CBNR_CPI.CheckAndDispense</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1ae87f89fac1d9bd0a973deebec343fed2" compoundref="_c_b_n_r___c_p_i_8cs" startline="391" endline="449">DeviceLibrary.CBNR_CPI.HardwareError</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1abe2d64822c6158adae8bd2bfcc1f6207" compoundref="_c_b_n_r___c_p_i_8cs" startline="750" endline="773">DeviceLibrary.CBNR_CPI.RollBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1abb143e397152929e3a4c4e676dbd32b4" prot="public" static="yes" mutable="no">
+        <type>AutoResetEvent</type>
+        <definition>AutoResetEvent DeviceLibrary.CBNR_CPI.ev</definition>
+        <argsstring></argsstring>
+        <name>ev</name>
+        <briefdescription>
+<para>Evénement permettant de gérer les function asynchrone. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="56" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" compoundref="_c_b_n_r___c_p_i_8cs" startline="166" endline="183">DeviceLibrary.CBNR_CPI.CBNR_CPI</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1a9edc8d02f93ea1c72aa825d223c2e27d" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CBNR_CPI.isCashPresent</definition>
+        <argsstring></argsstring>
+        <name>isCashPresent</name>
+        <briefdescription>
+<para>Flag indiquant si les billets sont présentés à l&apos;usager. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="61" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a87f99167dfc7b15e42f28e302a29e06d" compoundref="_c_b_n_r___c_p_i_8cs" startline="724" endline="745">DeviceLibrary.CBNR_CPI.Retract</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1a4736e081da4dbf79840d0d1fd6429a90" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CBNR_CPI.isCashTaken</definition>
+        <argsstring></argsstring>
+        <name>isCashTaken</name>
+        <briefdescription>
+<para>Flag indiquant si les billets ont été repris. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="66" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="66" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1abe2d64822c6158adae8bd2bfcc1f6207" compoundref="_c_b_n_r___c_p_i_8cs" startline="750" endline="773">DeviceLibrary.CBNR_CPI.RollBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1aeb362dd8b6d987e24b2f5a8b26b3e110" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CBNR_CPI.isDispensable</definition>
+        <argsstring></argsstring>
+        <name>isDispensable</name>
+        <briefdescription>
+<para>Indique si la demande de denomination est possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="71" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" compoundref="_c_b_n_r___c_p_i_8cs" startline="227" endline="378">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4ade41b0290eee442ca90765ec2523b7" compoundref="_c_b_n_r___c_p_i_8cs" startline="779" endline="804">DeviceLibrary.CBNR_CPI.CheckAndDispense</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1a29b15f5a62dba8efc02a27d4f7056541" prot="public" static="no" mutable="no">
+        <type>readonly Thread</type>
+        <definition>readonly Thread DeviceLibrary.CBNR_CPI.bnrTask</definition>
+        <argsstring></argsstring>
+        <name>bnrTask</name>
+        <briefdescription>
+<para>Thread utilisé pour le BNR </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="76" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="76" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" compoundref="_c_b_n_r___c_p_i_8cs" startline="166" endline="183">DeviceLibrary.CBNR_CPI.CBNR_CPI</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="group___etats_1ga0ba00823ea47953aa70abd2626137de2" kindref="member">Etat</ref></type>
+        <definition>Etat DeviceLibrary.CBNR_CPI.State</definition>
+        <argsstring></argsstring>
+        <name>State</name>
+        <briefdescription>
+<para>Etat de la machine d&apos;état gérant le BNR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="95" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="96" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af18337108d515626ddb56bf1789a3d2e" compoundref="_c_devices_manager_8cs" startline="945" endline="952">DeviceLibrary.CDevicesManager.BNRBillRetract</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" compoundref="_c_devices_manager_8cs" startline="957" endline="965">DeviceLibrary.CDevicesManager.BNRBillRollBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" compoundref="_c_devices_manager_8cs" startline="979" endline="989">DeviceLibrary.CDevicesManager.CancelTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" compoundref="_c_b_n_r___c_p_i_8cs" startline="166" endline="183">DeviceLibrary.CBNR_CPI.CBNR_CPI</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4ade41b0290eee442ca90765ec2523b7" compoundref="_c_b_n_r___c_p_i_8cs" startline="779" endline="804">DeviceLibrary.CBNR_CPI.CheckAndDispense</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_b_n_r___c_p_i_1adc772d10be3ccec6618a845eee1bafc3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int DeviceLibrary.CBNR_CPI.AmountToDispense</definition>
+        <argsstring></argsstring>
+        <name>AmountToDispense</name>
+        <briefdescription>
+<para>Montant à distribuer ou dont on veur vérifier la disponibilité. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="104" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="105" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4ade41b0290eee442ca90765ec2523b7" compoundref="_c_b_n_r___c_p_i_8cs" startline="779" endline="804">DeviceLibrary.CBNR_CPI.CheckAndDispense</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_b_n_r___c_p_i_1ae8e145eb7e30ae3ca2a7d6058655c6aa" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int DeviceLibrary.CBNR_CPI.Divider</definition>
+        <argsstring></argsstring>
+        <name>Divider</name>
+        <briefdescription>
+<para>Montant du billet de plus faible valeur; </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="113" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="114" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_b_n_r___c_p_i_1a5a7adb449d1abe12f2f20088647f5212" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CBNR_CPI.IsBNRToBeActivated</definition>
+        <argsstring></argsstring>
+        <name>IsBNRToBeActivated</name>
+        <briefdescription>
+<para>Indique si le monnayeur doit être adtivé. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="122" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="123" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" compoundref="_c_b_n_r___c_p_i_8cs" startline="809" endline="824">DeviceLibrary.CBNR_CPI.Init</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_b_n_r___c_p_i_1ac86209e3f2612e5bfa0654576a66b9fa" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CBNR_CPI.IsBNRToBeDeactivated</definition>
+        <argsstring></argsstring>
+        <name>IsBNRToBeDeactivated</name>
+        <briefdescription>
+<para>Indique si le monnayeur doit être adtivé. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="131" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="132" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_b_n_r___c_p_i_1a3595c697c0ae8ca1a26319887ea75320" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override string</type>
+        <definition>override string DeviceLibrary.CBNR_CPI.Manufacturer</definition>
+        <argsstring></argsstring>
+        <name>Manufacturer</name>
+        <briefdescription>
+<para>Retourne l&apos;identifiant du fabricant. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="140" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_b_n_r___c_p_i_1a592e60a2019f8472baf3d5f8509bace5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override string</type>
+        <definition>override string DeviceLibrary.CBNR_CPI.ProductCode</definition>
+        <argsstring></argsstring>
+        <name>ProductCode</name>
+        <briefdescription>
+<para>Code produit du périphérique. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="151" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_b_n_r___c_p_i_1a501f8ddf6f74b7aa224910a0cda369ec" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CBNR_CPI.SearchDivider</definition>
+        <argsstring></argsstring>
+        <name>SearchDivider</name>
+        <briefdescription>
+<para>Recherche la plus petite denomination disponible. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="189" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="190" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.CBNR_CPI.CBNR_CPI</definition>
+        <argsstring>()</argsstring>
+        <name>CBNR_CPI</name>
+        <briefdescription>
+<para>Constructeur </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="166" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="166" bodyend="183"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="51">DeviceLibrary.CBNR_CPI.bnr</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a29b15f5a62dba8efc02a27d4f7056541" compoundref="_c_b_n_r___c_p_i_8cs" startline="76">DeviceLibrary.CBNR_CPI.bnrTask</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1abb143e397152929e3a4c4e676dbd32b4" compoundref="_c_b_n_r___c_p_i_8cs" startline="56">DeviceLibrary.CBNR_CPI.ev</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="69">DeviceLibrary.CDevice.IsPresent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2da64fcf168fa7a4ca34279baad49a3b" compoundref="_c_b_n_r___c_p_i_8cs" startline="41">DeviceLibrary.CBNR_CPI.listModulePosition</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="96">DeviceLibrary.CBNR_CPI.State</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1a4ade41b0290eee442ca90765ec2523b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CBNR_CPI.CheckAndDispense</definition>
+        <argsstring>(int amount)</argsstring>
+        <name>CheckAndDispense</name>
+        <param>
+          <type>int</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Vérifie la possibilité de distribuer le montant indiqué en paramètre et le distribue le cas échéant. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Montant à distribuer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="779" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="779" bodyend="804"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1adc772d10be3ccec6618a845eee1bafc3" compoundref="_c_b_n_r___c_p_i_8cs" startline="105">DeviceLibrary.CBNR_CPI.AmountToDispense</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="51">DeviceLibrary.CBNR_CPI.bnr</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1aeb362dd8b6d987e24b2f5a8b26b3e110" compoundref="_c_b_n_r___c_p_i_8cs" startline="71">DeviceLibrary.CBNR_CPI.isDispensable</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="69">DeviceLibrary.CDevice.IsPresent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="96">DeviceLibrary.CBNR_CPI.State</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void DeviceLibrary.CBNR_CPI.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="class_device_library_1_1_c_device_1ad0028a2572404e6a3f21fa1a56f6b136">Init</reimplements>
+        <briefdescription>
+<para>Initialisation de la classe du BNR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="809" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="809" bodyend="824"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" compoundref="_c_b_n_r___c_p_i_8cs" startline="227" endline="378">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a8b16fa3971351e495d8728e5c1920144" compoundref="_c_b_n_r___c_p_i_8cs" startline="384" endline="386">DeviceLibrary.CBNR_CPI.CashOccured</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a34352151f1084be74e89f794645c57e9" compoundref="_c_b_n_r___c_p_i_8cs" startline="31">DeviceLibrary.CBNR_CPI.errorInfo</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a1880d22aaebed7609c1ccdb7586e20cb" compoundref="_c_b_n_r___c_p_i_8cs" startline="458" endline="590">DeviceLibrary.CBNR_CPI.IntermediateOccured</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a5a7adb449d1abe12f2f20088647f5212" compoundref="_c_b_n_r___c_p_i_8cs" startline="123">DeviceLibrary.CBNR_CPI.IsBNRToBeActivated</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</references>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void DeviceLibrary.CBNR_CPI.Task</definition>
+        <argsstring>()</argsstring>
+        <name>Task</name>
+        <reimplements refid="class_device_library_1_1_c_device_1afe0c01625fcd84aeedf4092db374f1bf">Task</reimplements>
+        <briefdescription>
+<para>Machine d&apos;état du BNR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="829" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="829" bodyend="1099"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1adc772d10be3ccec6618a845eee1bafc3" compoundref="_c_b_n_r___c_p_i_8cs" startline="105">DeviceLibrary.CBNR_CPI.AmountToDispense</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="51">DeviceLibrary.CBNR_CPI.bnr</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1abf507423a1030786740a972b0de9ee29" compoundref="_c_b_n_r___c_p_i_8cs" startline="46">DeviceLibrary.CBNR_CPI.BnrDefaultOperationTimeOutInMS</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1ad647e3af47d102142dad0875cb157a1b" compoundref="_c_b_n_r___c_p_i_8cs" startline="26">DeviceLibrary.CBNR_CPI.BnrResetTimeOutInMS</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1ae8e145eb7e30ae3ca2a7d6058655c6aa" compoundref="_c_b_n_r___c_p_i_8cs" startline="114">DeviceLibrary.CBNR_CPI.Divider</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a34352151f1084be74e89f794645c57e9" compoundref="_c_b_n_r___c_p_i_8cs" startline="31">DeviceLibrary.CBNR_CPI.errorInfo</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1abb143e397152929e3a4c4e676dbd32b4" compoundref="_c_b_n_r___c_p_i_8cs" startline="56">DeviceLibrary.CBNR_CPI.ev</references>
+        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="31">DeviceLibrary.CDevice.eventListLock</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" compoundref="_c_b_n_r___c_p_i_8cs" startline="809" endline="824">DeviceLibrary.CBNR_CPI.Init</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a5a7adb449d1abe12f2f20088647f5212" compoundref="_c_b_n_r___c_p_i_8cs" startline="123">DeviceLibrary.CBNR_CPI.IsBNRToBeActivated</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1ac86209e3f2612e5bfa0654576a66b9fa" compoundref="_c_b_n_r___c_p_i_8cs" startline="132">DeviceLibrary.CBNR_CPI.IsBNRToBeDeactivated</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a9edc8d02f93ea1c72aa825d223c2e27d" compoundref="_c_b_n_r___c_p_i_8cs" startline="61">DeviceLibrary.CBNR_CPI.isCashPresent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1aeb362dd8b6d987e24b2f5a8b26b3e110" compoundref="_c_b_n_r___c_p_i_8cs" startline="71">DeviceLibrary.CBNR_CPI.isDispensable</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="69">DeviceLibrary.CDevice.IsPresent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2430aea41fc4ec38fc8c5582c1931c11" compoundref="_c_b_n_r___c_p_i_8cs" startline="36">DeviceLibrary.CBNR_CPI.listLCU</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a87f99167dfc7b15e42f28e302a29e06d" compoundref="_c_b_n_r___c_p_i_8cs" startline="724" endline="745">DeviceLibrary.CBNR_CPI.Retract</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1abe2d64822c6158adae8bd2bfcc1f6207" compoundref="_c_b_n_r___c_p_i_8cs" startline="750" endline="773">DeviceLibrary.CBNR_CPI.RollBack</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a501f8ddf6f74b7aa224910a0cda369ec" compoundref="_c_b_n_r___c_p_i_8cs" startline="190">DeviceLibrary.CBNR_CPI.SearchDivider</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="96">DeviceLibrary.CBNR_CPI.State</references>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" compoundref="_c_b_n_r___c_p_i_8cs" startline="166" endline="183">DeviceLibrary.CBNR_CPI.CBNR_CPI</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</definition>
+        <argsstring>(int identificationId, OperationId operationId, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)</argsstring>
+        <name>Bnr_OperationCompletedEvent</name>
+        <param>
+          <type>int</type>
+          <declname>identificationId</declname>
+        </param>
+        <param>
+          <type>OperationId</type>
+          <declname>operationId</declname>
+        </param>
+        <param>
+          <type>BnrXfsErrorCode</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>BnrXfsErrorCode</type>
+          <declname>extendedResult</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+<para>Levée à la fin d; une opération. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>identificationId</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operationId</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extendedResult</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="227" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="227" bodyend="378"/>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="31">DeviceLibrary.CDevice.eventListLock</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1ae87f89fac1d9bd0a973deebec343fed2" compoundref="_c_b_n_r___c_p_i_8cs" startline="391" endline="449">DeviceLibrary.CBNR_CPI.HardwareError</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1aeb362dd8b6d987e24b2f5a8b26b3e110" compoundref="_c_b_n_r___c_p_i_8cs" startline="71">DeviceLibrary.CBNR_CPI.isDispensable</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a68d9e4020041857065ee7126a3806bac" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="28">DeviceLibrary.CBNR_CPI.CModulePosition.isReinserted</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2da64fcf168fa7a4ca34279baad49a3b" compoundref="_c_b_n_r___c_p_i_8cs" startline="41">DeviceLibrary.CBNR_CPI.listModulePosition</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a7dd4660e4a31d0eefdf7cc34cf968326" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="33">DeviceLibrary.CBNR_CPI.CModulePosition.name</references>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" compoundref="_c_b_n_r___c_p_i_8cs" startline="809" endline="824">DeviceLibrary.CBNR_CPI.Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1a8b16fa3971351e495d8728e5c1920144" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DeviceLibrary.CBNR_CPI.CashOccured</definition>
+        <argsstring>(XfsCashOrder cashInOrder)</argsstring>
+        <name>CashOccured</name>
+        <param>
+          <type>XfsCashOrder</type>
+          <declname>cashInOrder</declname>
+        </param>
+        <briefdescription>
+<para>Levée pour une opération sur un billet. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cashInOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="384" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="384" bodyend="386"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" compoundref="_c_b_n_r___c_p_i_8cs" startline="809" endline="824">DeviceLibrary.CBNR_CPI.Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1ae87f89fac1d9bd0a973deebec343fed2" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DeviceLibrary.CBNR_CPI.HardwareError</definition>
+        <argsstring>(DeviceStatus deviceStatus)</argsstring>
+        <name>HardwareError</name>
+        <param>
+          <type>DeviceStatus</type>
+          <declname>deviceStatus</declname>
+        </param>
+        <briefdescription>
+<para>Recherche de l&apos;erreur et du module en erreur </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="391" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="391" bodyend="449"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="51">DeviceLibrary.CBNR_CPI.bnr</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a34352151f1084be74e89f794645c57e9" compoundref="_c_b_n_r___c_p_i_8cs" startline="31">DeviceLibrary.CBNR_CPI.errorInfo</references>
+        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="31">DeviceLibrary.CDevice.eventListLock</references>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" compoundref="_c_b_n_r___c_p_i_8cs" startline="227" endline="378">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1a1880d22aaebed7609c1ccdb7586e20cb" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DeviceLibrary.CBNR_CPI.IntermediateOccured</definition>
+        <argsstring>(int identificationId, OperationId operationId, IntermediateEvents result, object Data)</argsstring>
+        <name>IntermediateOccured</name>
+        <param>
+          <type>int</type>
+          <declname>identificationId</declname>
+        </param>
+        <param>
+          <type>OperationId</type>
+          <declname>operationId</declname>
+        </param>
+        <param>
+          <type>IntermediateEvents</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+<para>Levée pour un évenment intermédiaure durant une opération . </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>identificationId</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operationId</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="458" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="458" bodyend="590"/>
+        <references refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" compoundref="_c_device_8cs" startline="36">DeviceLibrary.CDevice.denominationInserted</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a34352151f1084be74e89f794645c57e9" compoundref="_c_b_n_r___c_p_i_8cs" startline="31">DeviceLibrary.CBNR_CPI.errorInfo</references>
+        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="31">DeviceLibrary.CDevice.eventListLock</references>
+        <references refid="class_device_library_1_1_c_device_1_1_c_inserted_1ab9c8961b8a31a68caeb666da2763b167" compoundref="_c_inserted_8cs" startline="19">DeviceLibrary.CDevice.CInserted.ValeurCent</references>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" compoundref="_c_b_n_r___c_p_i_8cs" startline="809" endline="824">DeviceLibrary.CBNR_CPI.Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DeviceLibrary.CBNR_CPI.StatusOccured</definition>
+        <argsstring>(StatusChanged status, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)</argsstring>
+        <name>StatusOccured</name>
+        <param>
+          <type>StatusChanged</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>BnrXfsErrorCode</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>BnrXfsErrorCode</type>
+          <declname>extendedResult</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>Data</declname>
+        </param>
+        <briefdescription>
+<para>Levée lors d&apos;un changement d&apos;état à eu lieu. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extendedResult</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="599" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="599" bodyend="719"/>
+        <references refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" compoundref="_c_device_8cs" startline="36">DeviceLibrary.CDevice.denominationInserted</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="31">DeviceLibrary.CDevice.eventListLock</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1ae87f89fac1d9bd0a973deebec343fed2" compoundref="_c_b_n_r___c_p_i_8cs" startline="391" endline="449">DeviceLibrary.CBNR_CPI.HardwareError</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a9edc8d02f93ea1c72aa825d223c2e27d" compoundref="_c_b_n_r___c_p_i_8cs" startline="61">DeviceLibrary.CBNR_CPI.isCashPresent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4736e081da4dbf79840d0d1fd6429a90" compoundref="_c_b_n_r___c_p_i_8cs" startline="66">DeviceLibrary.CBNR_CPI.isCashTaken</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae73bcf354e9ccbfcd3b3440fb0ada120" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="23">DeviceLibrary.CBNR_CPI.CModulePosition.isPresent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2430aea41fc4ec38fc8c5582c1931c11" compoundref="_c_b_n_r___c_p_i_8cs" startline="36">DeviceLibrary.CBNR_CPI.listLCU</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2da64fcf168fa7a4ca34279baad49a3b" compoundref="_c_b_n_r___c_p_i_8cs" startline="41">DeviceLibrary.CBNR_CPI.listModulePosition</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a7dd4660e4a31d0eefdf7cc34cf968326" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="33">DeviceLibrary.CBNR_CPI.CModulePosition.name</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="96">DeviceLibrary.CBNR_CPI.State</references>
+        <references refid="class_device_library_1_1_c_device_1_1_c_inserted_1ab9c8961b8a31a68caeb666da2763b167" compoundref="_c_inserted_8cs" startline="19">DeviceLibrary.CDevice.CInserted.ValeurCent</references>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" compoundref="_c_b_n_r___c_p_i_8cs" startline="809" endline="824">DeviceLibrary.CBNR_CPI.Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1a87f99167dfc7b15e42f28e302a29e06d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CBNR_CPI.Retract</definition>
+        <argsstring>()</argsstring>
+        <name>Retract</name>
+        <briefdescription>
+<para>Renvoi en caisse les billets présentés non pris. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="724" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="724" bodyend="745"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1abf507423a1030786740a972b0de9ee29" compoundref="_c_b_n_r___c_p_i_8cs" startline="46">DeviceLibrary.CBNR_CPI.BnrDefaultOperationTimeOutInMS</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a9edc8d02f93ea1c72aa825d223c2e27d" compoundref="_c_b_n_r___c_p_i_8cs" startline="61">DeviceLibrary.CBNR_CPI.isCashPresent</references>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1abe2d64822c6158adae8bd2bfcc1f6207" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CBNR_CPI.RollBack</definition>
+        <argsstring>()</argsstring>
+        <name>RollBack</name>
+        <briefdescription>
+<para>Retourne les billets en escrow. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" line="750" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.cs" bodystart="750" bodyend="773"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="51">DeviceLibrary.CBNR_CPI.bnr</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1abf507423a1030786740a972b0de9ee29" compoundref="_c_b_n_r___c_p_i_8cs" startline="46">DeviceLibrary.CBNR_CPI.BnrDefaultOperationTimeOutInMS</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4736e081da4dbf79840d0d1fd6429a90" compoundref="_c_b_n_r___c_p_i_8cs" startline="66">DeviceLibrary.CBNR_CPI.isCashTaken</references>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class du bnr </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>DeviceLibrary.CBNR_CPI</label>
+        <link refid="class_device_library_1_1_c_b_n_r___c_p_i"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IDisposable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>DeviceLibrary.CBNR_CPI.Cerror</label>
+        <link refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror"/>
+      </node>
+      <node id="6">
+        <label>DeviceLibrary.CDevice.CInserted</label>
+        <link refid="class_device_library_1_1_c_device_1_1_c_inserted"/>
+      </node>
+      <node id="3">
+        <label>DeviceLibrary.CBNR_CPI</label>
+        <link refid="class_device_library_1_1_c_b_n_r___c_p_i"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>bnr</edgelabel>
+          <edgelabel>listLCU</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>errorInfo</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>denominationInserted</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>IDisposable</label>
+      </node>
+      <node id="7">
+        <label>Bnr</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CitemsDispensed.cs" line="13" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CitemsDispensed.cs" bodystart="12" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a7e1d3882525016aa1f76e25c4be579ff" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>amountToDispense</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1adc772d10be3ccec6618a845eee1bafc3" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>AmountToDispense</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>bnr</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>Bnr_OperationCompletedEvent</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1abf507423a1030786740a972b0de9ee29" prot="package" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>BnrDefaultOperationTimeOutInMS</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ad647e3af47d102142dad0875cb157a1b" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>BnrResetTimeOutInMS</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a29b15f5a62dba8efc02a27d4f7056541" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>bnrTask</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a8b16fa3971351e495d8728e5c1920144" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>CashOccured</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>CBNR_CPI</name></member>
+      <member refid="class_device_library_1_1_c_device_1a1ea11e47275e8d7baaa1f60a64c41d83" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>CDevice</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4ade41b0290eee442ca90765ec2523b7" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>CheckAndDispense</name></member>
+      <member refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>denominationInserted</name></member>
+      <member refid="class_device_library_1_1_c_device_1acc529f16bc467bfa601e41dc205825f4" prot="protected" virt="virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>Dispose</name></member>
+      <member refid="class_device_library_1_1_c_device_1abb1407e4a9ad3eca3ed3e8e92ead69fe" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>Dispose</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa3703e473b03e84ba9e16ca8f5d8286d" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>divider</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ae8e145eb7e30ae3ca2a7d6058655c6aa" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>Divider</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a34352151f1084be74e89f794645c57e9" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>errorInfo</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>ERRORTYPE</name></member>
+      <member refid="group___etats_1ga0ba00823ea47953aa70abd2626137de2" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>Etat</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1abb143e397152929e3a4c4e676dbd32b4" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>ev</name></member>
+      <member refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>eventListLock</name></member>
+      <member refid="class_device_library_1_1_c_device_1a93829459e8bc284d9f8bd56edf59e152" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>eventsList</name></member>
+      <member refid="class_device_library_1_1_c_device_1a788260097f3f2693b2b0ac5d0ef9383a" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>evReady</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ae87f89fac1d9bd0a973deebec343fed2" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>HardwareError</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" prot="public" virt="virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>Init</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a1880d22aaebed7609c1ccdb7586e20cb" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>IntermediateOccured</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1af2afdc0eeff983b1c5dc559087d16828" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>isBNRToBeActivated</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a5a7adb449d1abe12f2f20088647f5212" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>IsBNRToBeActivated</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a533562b0067874521f375d091caab7f0" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>isBNRToBeDeactivated</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ac86209e3f2612e5bfa0654576a66b9fa" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>IsBNRToBeDeactivated</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a9edc8d02f93ea1c72aa825d223c2e27d" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>isCashPresent</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4736e081da4dbf79840d0d1fd6429a90" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>isCashTaken</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aeb362dd8b6d987e24b2f5a8b26b3e110" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>isDispensable</name></member>
+      <member refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>IsPresent</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2430aea41fc4ec38fc8c5582c1931c11" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>listLCU</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2da64fcf168fa7a4ca34279baad49a3b" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>listModulePosition</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a3595c697c0ae8ca1a26319887ea75320" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>Manufacturer</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a592e60a2019f8472baf3d5f8509bace5" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>ProductCode</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a87f99167dfc7b15e42f28e302a29e06d" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>Retract</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1abe2d64822c6158adae8bd2bfcc1f6207" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>RollBack</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a501f8ddf6f74b7aa224910a0cda369ec" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>SearchDivider</name></member>
+      <member refid="class_device_library_1_1_c_device_1a5d542b0634e0024751d1e6df6975e0b8" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>SerialNumber</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a6bc4beea85d3106df5e4aa24be69acf1" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>state</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>State</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" prot="private" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>StatusOccured</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" prot="public" virt="virtual"><scope>DeviceLibrary::CBNR_CPI</scope><name>Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

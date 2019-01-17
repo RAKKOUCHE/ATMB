@@ -1,0 +1,1538 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_ccc_talk" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CccTalk</compoundname>
+    <basecompoundref refid="class_device_library_1_1_c_device" prot="public" virt="non-virtual">DeviceLibrary.CDevice</basecompoundref>
+    <basecompoundref refid="class_device_library_1_1_c_device" prot="public" virt="non-virtual">DeviceLibrary.CDevice</basecompoundref>
+    <basecompoundref refid="class_device_library_1_1_c_device" prot="public" virt="non-virtual">DeviceLibrary.CDevice</basecompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_ccash_reader" prot="public" virt="non-virtual">DeviceLibrary.CcashReader</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_ccash_reader" prot="public" virt="non-virtual">DeviceLibrary.CcashReader</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_hopper" prot="public" virt="non-virtual">DeviceLibrary.CHopper</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_hopper" prot="public" virt="non-virtual">DeviceLibrary.CHopper</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_hopper" prot="public" virt="non-virtual">DeviceLibrary.CHopper</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_hopper" prot="public" virt="non-virtual">DeviceLibrary.CHopper</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_hopper" prot="public" virt="non-virtual">DeviceLibrary.CHopper</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_hopper" prot="public" virt="non-virtual">DeviceLibrary.CHopper</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_hopper" prot="public" virt="non-virtual">DeviceLibrary.CHopper</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_hopper" prot="public" virt="non-virtual">DeviceLibrary.CHopper</derivedcompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="group___headers_1ga22f8eb6526627d4203e53ce7dbd3052a" prot="public" static="no">
+        <name>Header</name>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf6daafc242a3bea0cfdf8deaac4cbdfe" prot="public">
+          <name>FACTORYSETUP</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+<para>Commande d&apos;ajustement ou de test interne. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa28989b1e5d1316cb7695aa363f531a97" prot="public">
+          <name>SIMPLEPOLL</name>
+          <initializer>= 254</initializer>
+          <briefdescription>
+<para>Commande vérifiant la communication entre le host et le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa909355816ff6e7e959619e23789f2227" prot="public">
+          <name>ADDRESSPOLL</name>
+          <initializer>= 253</initializer>
+          <briefdescription>
+<para>Commande broadcast permettant de déterminer l&apos;adresse utilisée par chaque périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa44aba6ad436073d338560f89aa8f6154" prot="public">
+          <name>ADDRESSCLASH</name>
+          <initializer>= 252</initializer>
+          <briefdescription>
+<para>Commande permettant de vérifier si plusieurs périphériques partagent la même adresse. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa2dcd6749aa763943ba4b2f6b62962505" prot="public">
+          <name>ADDRESSCHANGE</name>
+          <initializer>= 251</initializer>
+          <briefdescription>
+<para>Commande effectuant le chamgement d&apos;adresse. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa4ddfc0abc8dafde9a696ba71824c1f72" prot="public">
+          <name>ADDRESSRANDOM</name>
+          <initializer>= 250</initializer>
+          <briefdescription>
+<para>Détermine un adresse alátoire pour le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa0b86a65dca9c484a7bde9fca38803f0b" prot="public">
+          <name>REQUESTVARIABLESET</name>
+          <initializer>= 247</initializer>
+          <briefdescription>
+<para>Cette commande demande les variables du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aab513d3b7fc4b96e054937fb6fbbb0729" prot="public">
+          <name>REQUESTMANUFACTURERID</name>
+          <initializer>= 246</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;identification du fabricant du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aae7716221fdaec83804880e8765cf7d10" prot="public">
+          <name>REQUESTEQUIPEMENTCATEGORYID</name>
+          <initializer>= 245</initializer>
+          <briefdescription>
+<para>Cette commande demande la catégorie à laquelle appartient le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaaf384971e229ef28c276b9779bd81388" prot="public">
+          <name>REQUESTPRODUCTCODE</name>
+          <initializer>= 244</initializer>
+          <briefdescription>
+<para>Cette commande demande le code du produit du péripherique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa3227e2092fc0766e61a1a732de61062d" prot="public">
+          <name>REQUESTSN</name>
+          <initializer>= 242</initializer>
+          <briefdescription>
+<para>Cette commande demande le numéro de série du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa7e17eee28297a1c7131d78d335dc3dc7" prot="public">
+          <name>REQUESTSWREV</name>
+          <initializer>= 241</initializer>
+          <briefdescription>
+<para>Cette commande demande la révision du software du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa9163ec519df517704db337f07ea927d6" prot="public">
+          <name>OPERATEMOTOR</name>
+          <initializer>= 239</initializer>
+          <briefdescription>
+<para>Cette commande active les moteurs du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf7401a2b001f90c26bb2be51b83799b3" prot="public">
+          <name>READOPTOSTATES</name>
+          <initializer>= 236</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;etat des optocoupleurs du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa4236a0843d4f19fe52b9c493eb437802" prot="public">
+          <name>ENTERNEWPINNUMBER</name>
+          <initializer>= 219</initializer>
+          <briefdescription>
+<para>Cette commande change le code pin du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf8106609f05a253f413197be056fba71" prot="public">
+          <name>ENTERPINNUMBER</name>
+          <initializer>= 218</initializer>
+          <briefdescription>
+<para>Cette commande transmet le code PIN au périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aad598c36cca844abd31f22322ef8670c7" prot="public">
+          <name>REQUESTDATASTORAGEAVAILABILITY</name>
+          <initializer>= 216</initializer>
+          <briefdescription>
+<para>Cette commande demande les informations sur le stockage des données dans le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf4d3266005046022ff52ffa5c3f3f0c3" prot="public">
+          <name>READDATABLOCK</name>
+          <initializer>= 215</initializer>
+          <briefdescription>
+<para>Cette commande lit un bloc de donnée dans le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf42de9fb76d8e85f35c258b77e2ff02a" prot="public">
+          <name>WRITEDATABLOCK</name>
+          <initializer>= 214</initializer>
+          <briefdescription>
+<para>Cette commande lit un bloc de donnée dans le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa3ea83e192f7d50bb0bd2b51a5f4883e1" prot="public">
+          <name>REQUESTBUILDCODE</name>
+          <initializer>= 192</initializer>
+          <briefdescription>
+<para>Cette commande demande le code de production au périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaaa233eaf5d8e09ef8ca6c3c120ee0388" prot="public">
+          <name>REQUESTBASEYEAR</name>
+          <initializer>= 170</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;année de référence au périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aadd771b5014d8dfb2d691b886c0d0154c" prot="public">
+          <name>REQUESTADDRESSMODE</name>
+          <initializer>= 169</initializer>
+          <briefdescription>
+<para>Cette commande demande le mode utilisé pour l&apos;adresse du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aae924a1d3fed578124d2542b501b9d5be" prot="public">
+          <name>MODIFYVARIABLESET</name>
+          <initializer>= 165</initializer>
+          <briefdescription>
+<para>Cette commande enregistre les variables dans le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa7179596553bfb00fe3a54fb1c4f46d2e" prot="public">
+          <name>SWITCHENCRYPTIONCODE</name>
+          <initializer>= 137</initializer>
+          <briefdescription>
+<para>Cette commande change le code de chiffrage du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa175f64a90ae2bf6edd145a17609268a1" prot="public">
+          <name>STOREENCRYPTIONCODE</name>
+          <initializer>= 136</initializer>
+          <briefdescription>
+<para>Cette commande enregistre le code de chiffrage du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa802706a9238e2928077f97736854bad4" prot="public">
+          <name>BUSY</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>Réponse renvoyé par le périphérique s&apos;il ne peut traiter la commande parce-qu&apos;il est occupé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa3860aef5aa76641c6959d1a5de94b216" prot="public">
+          <name>NAK</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Réponse renvoyé par le périphérique s&apos;il ne comprend pas la commande. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa233ae98d8a18c499eb4b798360aa02ef" prot="public">
+          <name>REQUESTCOMMSREVISION</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Cette commande demande le niveau ccTalk du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aafb4cfb0ac631109fa01bdbd70ba8e166" prot="public">
+          <name>CLEARCOMMSSTATUSVARIABLES</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>R.A.Z. des incidents de communications. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaacaa18d8173ad7149b61185d29c4f3bb" prot="public">
+          <name>REQUESTCOMMSSTATUSVARIABLES</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Cette commande demande les informations sur les incidents de communication du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aab87acc3ce509b6e2b20a564607eb06d8" prot="public">
+          <name>RESETDEVICE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Cette commande effectue un reset sur le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.Header.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.Header.cs" bodystart="19" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___erreurs_1ga179570d2d8f6f95d52ccafb98d20c790" prot="public" static="no">
+        <name>SelfTestResult</name>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ae0aa021e21dddbd6d8cecec71e9cf564" prot="public">
+          <name>OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>OK </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a82728633b7a7c49ed136d5c3aa605861" prot="public">
+          <name>ERRORCHECKSUM</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Erreur de checksum </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790aa4c8c213e52281611bbc2d726f23959a" prot="public">
+          <name>ERRORCOILMEASUREMENT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Erreur sur une bobine de mesure. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a4ef2b74a0cc5d6393ce608c54b1861f0" prot="public">
+          <name>ERRORCREDITSENSOR</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Erreur sur le senseur de crédit. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a45609713be805992c730f031ff8f54ca" prot="public">
+          <name>ERRORPIEZOSENSOR</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Erreur sur le sensor piezzo. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790abe71e29807fc8e2627732f98b625dd63" prot="public">
+          <name>ERRORREFLECTIVESENSOR</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Erreur sur le réflecteur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a06c7dd879850f00fcce4a46b4f0f4baf" prot="public">
+          <name>ERRORDIAMETERSENSOR</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>Erreur sur les senseurs de diamètre. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790afd502fbfb573105b14080349c146d0da" prot="public">
+          <name>ERRORONWAKEUPSENSOR</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>Erreur sur le sensor d&apos;éveil </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790afc13d39d093e34a09c0a0314e20048ee" prot="public">
+          <name>ERROREXITSENSOR</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>Erreur sur le senseur de sortie </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a0c4861a28780ce88a698758dde79d029" prot="public">
+          <name>NVRAMCHECKSUM</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para>Erreur sur le checkcum de la mémoire flash. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790adbe12f65a0cd3985f952f395ee8ff65d" prot="public">
+          <name>ERRORKEYPAD</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para>Erreur sur le clavier. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a543b5fd5ff186ca8f13b355ac0edc446" prot="public">
+          <name>ERRORBUTTON</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para>Code sur un bouton de contact. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a921d7ae7f037c6fc8b9dc65cd11562eb" prot="public">
+          <name>ERRORDISPLAY</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para>Erreur sur l&apos;afficheur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a07bcbb954c85682dc9897bbce2f4465c" prot="public">
+          <name>COINAUDITERROR</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para>Erreur sur l&apos;audit des pièces. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ad7821dc039e60525debddf85ce046024" prot="public">
+          <name>ERRORONREJECTSENSOR</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para>Erreur sur le senseur de rejet. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ac83370dde56d0f3b5313682a04ad7670" prot="public">
+          <name>ERRORONCOINRETURNMECH</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para>Erreur sur le système de rejet. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790af032d38e084b27c8bc8fc272c9b1d9ad" prot="public">
+          <name>ERRORCOSMECH</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para>Erreur sur le système anti-fishing </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ae1ae427e9a19c79560a4298b49ad7aad" prot="public">
+          <name>ERRORRIM</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+<para>Erreur sur le senseur RIM </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ac4c0edc9040440850d32e07b63e99e71" prot="public">
+          <name>ERRORTHERMISTOR</name>
+          <initializer>= 22</initializer>
+          <briefdescription>
+<para>Erreur sur le thermistor. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ae48b541e05c3de25f7c19f32e905421e" prot="public">
+          <name>ERRORMOTOR</name>
+          <initializer>= 23</initializer>
+          <briefdescription>
+<para>Erreur moteur </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a2b062c09a10f709598a9a3b22349fb13" prot="public">
+          <name>ERRORPAYOUTSENSOR</name>
+          <initializer>= 26</initializer>
+          <briefdescription>
+<para>Erreur sur le senseur de sortie du hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790aeecc3076ef1f092d654d0572732d8fae" prot="public">
+          <name>ERRORLEVELSENSOR</name>
+          <initializer>= 27</initializer>
+          <briefdescription>
+<para>Erreur sur un senseur de niveau. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a188f9098e533155473b37511e1608b41" prot="public">
+          <name>ERRORDATABLOCKCHECSUM</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+<para>Erreur sur le checksum d&apos;un blco de données. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a98fbededc5219d4233faf4f4dfecb8b8" prot="public">
+          <name>ERRORINTERNALCOM</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+<para>Port série interne en défaut </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a5b756a3101dde017415ebfb924123352" prot="public">
+          <name>ERRORPOWERSUPPLY</name>
+          <initializer>= 33</initializer>
+          <briefdescription>
+<para>Alimentation en dehors des valeurs limits. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ac7f53b99909b3d23ed52c89a2c4251a1" prot="public">
+          <name>ERRORTEMP</name>
+          <initializer>= 34</initializer>
+          <briefdescription>
+<para>La température externe est en dehors des valeurs limites définie dans le spécification du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a6ad548781f29d837560c33c17f76bcbf" prot="public">
+          <name>ERRORDCE</name>
+          <initializer>= 35</initializer>
+          <briefdescription>
+<para>Erreur dans le systeme 2 entrées. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790afd6e0d70f810e3936dca24e2c9e88366" prot="public">
+          <name>ERRORBVSENSOR</name>
+          <initializer>= 36</initializer>
+          <briefdescription>
+<para>Erreur senseur dans le lecteur de billets. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ae2320146778712445e1bda765a3827e4" prot="public">
+          <name>ERRORBVTRANSPORT</name>
+          <initializer>= 37</initializer>
+          <briefdescription>
+<para>Erreur dans le déplacement du billet dans le lecteur de billets. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a80572a1d9e446f50c294b206b8724b87" prot="public">
+          <name>ERRORSTACKER</name>
+          <initializer>= 38</initializer>
+          <briefdescription>
+<para>Defaut dans l&apos;empileur </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a2cd8c522b6febe25beae6dd244557faa" prot="public">
+          <name>BILLJAMMED</name>
+          <initializer>= 39</initializer>
+          <briefdescription>
+<para>Bourrage billet </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790aae684db02df998c0503f38b901302cb3" prot="public">
+          <name>ERRORTESTRAM</name>
+          <initializer>= 40</initializer>
+          <briefdescription>
+<para>Erreur dans la RAM. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a8cc746f58e0de79fe992db40e266fc89" prot="public">
+          <name>ERRORSTRINGSENSOR</name>
+          <initializer>= 41</initializer>
+          <briefdescription>
+<para>Erreur dans le système anti-fishing du lecteur de billet. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a233e99ec360a60f14d17ad4e088398ee" prot="public">
+          <name>ERRORACCEPTGATEOPEN</name>
+          <initializer>= 42</initializer>
+          <briefdescription>
+<para>Erreur la porte d&apos;acceptation est ouverte. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790aef82674b077701d481db50067a39dadf" prot="public">
+          <name>ERRORACCEPTGATECLOSE</name>
+          <initializer>= 43</initializer>
+          <briefdescription>
+<para>Erreur la porte d&apos;acceptation est fermée. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a3f14cb8d189627ff94c09e37485d5e4d" prot="public">
+          <name>STACKERMISSING</name>
+          <initializer>= 44</initializer>
+          <briefdescription>
+<para>L&apos;empileur est absent. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a3753cc88724c8753903f0c00fb2a70ec" prot="public">
+          <name>STACKERFULL</name>
+          <initializer>= 45</initializer>
+          <briefdescription>
+<para>L&apos;empileur est plein. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a64b9b8a79fbd8e516d73d947f23789f5" prot="public">
+          <name>ERRORERASEFLASHMEM</name>
+          <initializer>= 46</initializer>
+          <briefdescription>
+<para>Echec de l&apos;effacement de la mémoire flash. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a47a8bac7b81fb8860aa60a0c27abfa9e" prot="public">
+          <name>ERRORWRITEFLASHMEM</name>
+          <initializer>= 47</initializer>
+          <briefdescription>
+<para>Echec de l&apos;écriture de la mémoire flash. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a6971f8ba4fd456e6028307790060416e" prot="public">
+          <name>ERRORSLAVEDEVICE</name>
+          <initializer>= 48</initializer>
+          <briefdescription>
+<para>Defaut de communication avec le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a5f416c3c0f2315e101772fb4afa19159" prot="public">
+          <name>ERROROPTOSENSOR</name>
+          <initializer>= 49</initializer>
+          <briefdescription>
+<para>Erreur sur un optocoupleur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790abc304fceb86fed05a9c1480ae161e105" prot="public">
+          <name>ERRORBATTERY</name>
+          <initializer>= 50</initializer>
+          <briefdescription>
+<para>Erreur batterie </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a2e7bbba7a345ba75be6d7afa5099e4b2" prot="public">
+          <name>ERRORDOOROPEN</name>
+          <initializer>= 51</initializer>
+          <briefdescription>
+<para>La porte est restée ouverte </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790aaccb25b7024f8a8457070b5f219cc8cb" prot="public">
+          <name>ERRORMICROSWITCH</name>
+          <initializer>= 52</initializer>
+          <briefdescription>
+<para>Erreur sur un microswitch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a452e48f2270532eeb8a7d1a08b2bffa9" prot="public">
+          <name>ERRORRTC</name>
+          <initializer>= 53</initializer>
+          <briefdescription>
+<para>Erreur sur l&apos;horloge en temps réel. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a17067ea1451de42b4bf3752122768b55" prot="public">
+          <name>ERRORFW</name>
+          <initializer>= 54</initializer>
+          <briefdescription>
+<para>Erreur Firmware. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a742a02b5a464f1e436fe1ce890b537a8" prot="public">
+          <name>ERRORINIT</name>
+          <initializer>= 55</initializer>
+          <briefdescription>
+<para>Erreur d&apos;initialisation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a83c9f2a51be490451be24a146c1d808b" prot="public">
+          <name>ERRORCURRENTSUPPLY</name>
+          <initializer>= 56</initializer>
+          <briefdescription>
+<para>Le périphérique est utilisé en dehors des limites de courant deéfinie par le fabricant. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ad7e9c71913cffcaabd565eaee9cf52b8" prot="public">
+          <name>FORCEBOOTLOADERMODE</name>
+          <initializer>= 57</initializer>
+          <briefdescription>
+<para>Mode bootloader forcé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a5fd22f0fcfa09dee2ad29a0653ed7963" prot="public">
+          <name>COINJAM</name>
+          <initializer>= 253</initializer>
+          <briefdescription>
+<para>Bourrage pièces. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790acaf20830f50dde044b5d55b78bd4ccfe" prot="public">
+          <name>DISKBLOCKED</name>
+          <initializer>= 254</initializer>
+          <briefdescription>
+<para>Débloqué. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a17871c6d9d47f1e52c2681e98a1a9143" prot="public">
+          <name>ERRORUNKNOW</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+<para>Erreur inconnue. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.SelfTestResult.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.SelfTestResult.cs" bodystart="22" bodyend="283"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_ccc_talk_1ad5c6d1287d0c049bdbf4fda8cb19c1ef" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string DeviceLibrary.CccTalk.fileCounterName</definition>
+        <argsstring></argsstring>
+        <name>fileCounterName</name>
+        <initializer>= &quot;Counters.mtr&quot;</initializer>
+        <briefdescription>
+<para>Nom du fichier contenant les compteurs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_ccc_talk_1a43ca834802480b1171030f7ad063c559" prot="protected" static="yes" mutable="no">
+        <type>object</type>
+        <definition>object DeviceLibrary.CccTalk.verrou</definition>
+        <argsstring></argsstring>
+        <name>verrou</name>
+        <initializer>= new object()</initializer>
+        <briefdescription>
+<para>Verrou du thread </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="28" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_ccc_talk_1ac86c8d06c56d9ece1591d3de08fd5529" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5ee" kindref="member">DefaultDevicesAddress</ref></type>
+        <definition>DefaultDevicesAddress DeviceLibrary.CccTalk.deviceAddress</definition>
+        <argsstring></argsstring>
+        <name>deviceAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="30" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_ccc_talk_1ace0437474b7114a98a0f250f82136f50" prot="private" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte DeviceLibrary.CccTalk.sizeOfBufferOut</definition>
+        <argsstring></argsstring>
+        <name>sizeOfBufferOut</name>
+        <initializer>= 32</initializer>
+        <briefdescription>
+<para>Taille des buffers </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="44" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5ee" kindref="member">DefaultDevicesAddress</ref></type>
+        <definition>DefaultDevicesAddress DeviceLibrary.CccTalk.DeviceAddress</definition>
+        <argsstring></argsstring>
+        <name>DeviceAddress</name>
+        <briefdescription>
+<para>Adresse du périphérique. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="35" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1aeddf0e0eb3b4b86bdcde077601c05879" compoundref="_c_pelicano_8cs" startline="196" endline="229">DeviceLibrary.CPelicano.ActivateMotor</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1addb8e79d5a3377a2aadef60fc1b19a53" compoundref="_c_coin_validator_8cs" startline="778" endline="807">DeviceLibrary.CCoinValidator.CCoinValidator</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="395" endline="461">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a25c0ba824eb783ecdec6c6f53f90f243" compoundref="_c_hopper_8cs" startline="1368" endline="1401">DeviceLibrary.CHopper.CHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1adc0fd478490e3ef5e255f7bc2f64f506" compoundref="_c_hopper_8cs" startline="805" endline="823">DeviceLibrary.CHopper.DispenseCoins</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a1c8de197528a0f954006105da4fd261f" compoundref="_c_hopper_8cs" startline="741" endline="756">DeviceLibrary.CHopper.EnableHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="399" endline="427">DeviceLibrary.CccTalk.GetASCII</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="62" endline="83">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="376" endline="392">DeviceLibrary.CccTalk.GetByte</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a1faca12f58535beec695d78479d29884" compoundref="_c_hopper_8cs" startline="783" endline="797">DeviceLibrary.CHopper.GetCipherKey</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" compoundref="_c_memory_storage_8cs" startline="168" endline="188">DeviceLibrary.CMemoryStorage.GetDataBlock</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1adee6f8f04f44591bd69e469ae255ac28" compoundref="_c_hopper_8_status_8cs" startline="147" endline="167">DeviceLibrary.CHopper.CHopperStatus.GetHopperStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" compoundref="_ccash_reader_8cs" startline="190" endline="204">DeviceLibrary.CcashReader.GetInhibitMask</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="126" endline="140">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a8dac668c2fb07489dc8ac5ecc06c2d94" compoundref="_c_coin_validator_8cs" startline="466" endline="485">DeviceLibrary.CCoinValidator.Init</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1acda4cf9b030e54786ba9b366fdf3f6e2" compoundref="_c_hopper_8cs" startline="902" endline="958">DeviceLibrary.CHopper.Init</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" compoundref="_c_ctalk_8cs" startline="510" endline="533">DeviceLibrary.CccTalk.IsDeviceReseted</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" compoundref="_ccash_reader_8cs" startline="209" endline="220">DeviceLibrary.CcashReader.MasterDisable</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" compoundref="_ccash_reader_8cs" startline="225" endline="236">DeviceLibrary.CcashReader.MasterEnable</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1ad4e3e04686c9cabd002597ebd8fa3712" compoundref="_c_hopper_8cs" startline="761" endline="778">DeviceLibrary.CHopper.PumpRNG</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" compoundref="_c_memory_storage_8cs" startline="195" endline="217">DeviceLibrary.CMemoryStorage.SetDataBlock</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="243" endline="257">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="169" endline="184">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a941fe54c9299c2f3d78f865a3c7dc720" compoundref="_c_coin_validator_8cs" startline="282" endline="297">DeviceLibrary.CCoinValidator.SetOverrideStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" compoundref="_c_coin_validator_8_c_canal_8cs" startline="195" endline="210">DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" compoundref="_c_hopper_8_variable_set_8cs" startline="161" endline="176">DeviceLibrary.CHopper.CHopperVariableSet.SetVariable</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ad9b8f287ccf87c7e71b93518e493aa8a" compoundref="_c_coin_validator_8cs" startline="765" endline="773">DeviceLibrary.CCoinValidator.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a26e1f1fb8a30b65d591b53eb6d049acf" compoundref="_c_hopper_8cs" startline="1216" endline="1362">DeviceLibrary.CHopper.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a2a1d5d6383c6ab9e5952f6cac14d65df" compoundref="_c_hopper_8cs" startline="828" endline="897">DeviceLibrary.CHopper.TestHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="258" endline="276">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccc_talk_1a73a84f7534b5b9ff129897b86d483f48" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override string</type>
+        <definition>override string DeviceLibrary.CccTalk.Manufacturer</definition>
+        <argsstring></argsstring>
+        <name>Manufacturer</name>
+        <briefdescription>
+<para>Retourne l&apos;identifiant du fabricant. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="283" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="284" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccc_talk_1ae73c18703dae000c9f725a44fae17f1a" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CccTalk.BuildCode</definition>
+        <argsstring></argsstring>
+        <name>BuildCode</name>
+        <briefdescription>
+<para>Code de production du périphérique. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="305" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="306" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccc_talk_1abd92229809b4474129b15e638fd56da7" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override string</type>
+        <definition>override string DeviceLibrary.CccTalk.ProductCode</definition>
+        <argsstring></argsstring>
+        <name>ProductCode</name>
+        <briefdescription>
+<para>Code produit du périphérique. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="328" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="329" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="395" endline="461">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccc_talk_1a3cb80b7a82cc363e0dcefd1f31ced8a2" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CccTalk.EquipementCategory</definition>
+        <argsstring></argsstring>
+        <name>EquipementCategory</name>
+        <briefdescription>
+<para>Code produit du périphérique. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="350" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="351" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1acda4cf9b030e54786ba9b366fdf3f6e2" compoundref="_c_hopper_8cs" startline="902" endline="958">DeviceLibrary.CHopper.Init</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccc_talk_1a6b615dcccbe32e3c9166b0fdb0a74236" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override int</type>
+        <definition>override int DeviceLibrary.CccTalk.SerialNumber</definition>
+        <argsstring></argsstring>
+        <name>SerialNumber</name>
+        <briefdescription>
+<para>Retourne le numéro de série du pelicano </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="432" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="433" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1acda4cf9b030e54786ba9b366fdf3f6e2" compoundref="_c_hopper_8cs" startline="902" endline="958">DeviceLibrary.CHopper.Init</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccc_talk_1a687a695bef6d7f25f8fe7148948d04bc" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CccTalk.SWRev</definition>
+        <argsstring></argsstring>
+        <name>SWRev</name>
+        <briefdescription>
+<para>Retourne la révision software </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="457" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="458" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccc_talk_1af78c9d598eaebc02a257d52353ab257c" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CccTalk.CommsRevision</definition>
+        <argsstring></argsstring>
+        <name>CommsRevision</name>
+        <briefdescription>
+<para>Lecture de version ccTalk utilisée par le périphérique. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="479" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccc_talk_1a576e09f74dc509dcd7919eceae9cc7de" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CccTalk.SimplePoll</definition>
+        <argsstring></argsstring>
+        <name>SimplePoll</name>
+        <briefdescription>
+<para>Simple poll du périphérique. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="539" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="540" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1addb8e79d5a3377a2aadef60fc1b19a53" compoundref="_c_coin_validator_8cs" startline="778" endline="807">DeviceLibrary.CCoinValidator.CCoinValidator</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a25c0ba824eb783ecdec6c6f53f90f243" compoundref="_c_hopper_8cs" startline="1368" endline="1401">DeviceLibrary.CHopper.CHopper</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccc_talk_1a4ea55bd396398405345e50cb699c0ead" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>byte</type>
+        <definition>virtual byte DeviceLibrary.CccTalk.OptoStates</definition>
+        <argsstring></argsstring>
+        <name>OptoStates</name>
+        <briefdescription>
+<para>Lecture de l&apos;etat des otpocoupleurs du périphériques. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="576" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="577" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_hopper_1acda4cf9b030e54786ba9b366fdf3f6e2" compoundref="_c_hopper_8cs" startline="902" endline="958">DeviceLibrary.CHopper.Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" prot="public" static="yes" mutable="no">
+        <type>SerialPort</type>
+        <definition>SerialPort DeviceLibrary.CccTalk.PortSerie</definition>
+        <argsstring></argsstring>
+        <name>PortSerie</name>
+        <briefdescription>
+<para>Port série utilisée par le bus ccTalk </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="49" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="74" endline="102">DeviceLibrary.CccTalk.CccTalk</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a3cbd9f50c3f86d90f10f2f3a66a3717c" compoundref="_c_devices_manager_8cs" startline="1061" endline="1068">DeviceLibrary.CDevicesManager.GetSerialPort</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ae3dae0077a9b7fe533abd3d9591e0733" compoundref="_c_ctalk_8cs" startline="109" endline="136">DeviceLibrary.CccTalk.IsCcTalkPort</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_ccc_talk_1aabbbe46d911d826c39712d8aecd10786" prot="public" static="yes" mutable="no">
+        <type>Mutex</type>
+        <definition>Mutex DeviceLibrary.CccTalk.mutexCCTalk</definition>
+        <argsstring></argsstring>
+        <name>mutexCCTalk</name>
+        <initializer>= new Mutex()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="54" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_ccc_talk_1a3810c0aa448865e19afff87a946fee5d" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_device_library_1_1_ccoins_counters" kindref="compound">CcoinsCounters</ref></type>
+        <definition>CcoinsCounters DeviceLibrary.CccTalk.counters</definition>
+        <argsstring></argsstring>
+        <name>counters</name>
+        <briefdescription>
+<para>Compteurs </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="59" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1ae47327ae35305769239ffd9922081d57" compoundref="_c_hopper_8cs" startline="1090" endline="1130">DeviceLibrary.CHopper.Empty</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a9e6bea86795ec29fde4e6071256eff76" compoundref="_c_ctalk_8cs" startline="564" endline="571">DeviceLibrary.CccTalk.ResetCounters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" prot="public" static="yes" mutable="no">
+        <type>Stream</type>
+        <definition>Stream DeviceLibrary.CccTalk.countersFile</definition>
+        <argsstring></argsstring>
+        <name>countersFile</name>
+        <briefdescription>
+<para>Fichier des compteurs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="64" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="64" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1ae47327ae35305769239ffd9922081d57" compoundref="_c_hopper_8cs" startline="1090" endline="1130">DeviceLibrary.CHopper.Empty</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a9e6bea86795ec29fde4e6071256eff76" compoundref="_c_ctalk_8cs" startline="564" endline="571">DeviceLibrary.CccTalk.ResetCounters</referencedby>
+        <referencedby refid="class_device_library_1_1_ccoins_counters_1a0325b954f24433b990840bae5a484e6d" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="178" endline="182">DeviceLibrary.CcoinsCounters.SaveCounters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_ccc_talk_1aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f" prot="public" static="yes" mutable="no">
+        <type>BinaryFormatter</type>
+        <definition>BinaryFormatter DeviceLibrary.CccTalk.counterSerializer</definition>
+        <argsstring></argsstring>
+        <name>counterSerializer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="69" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="69" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a9e6bea86795ec29fde4e6071256eff76" compoundref="_c_ctalk_8cs" startline="564" endline="571">DeviceLibrary.CccTalk.ResetCounters</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.CccTalk.CccTalk</definition>
+        <argsstring>()</argsstring>
+        <name>CccTalk</name>
+        <briefdescription>
+<para>Construteur de la class </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="74" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="74" bodyend="102"/>
+        <references refid="class_device_library_1_1messages_text_1aae08998942f40ad4e17d68f70572f27b" compoundref="messages_text_8_designer_8cs" startline="84">DeviceLibrary.messagesText.busOKfinded</references>
+        <references refid="class_device_library_1_1messages_text_1adc962171c994c63312d316f13b046d2c" compoundref="messages_text_8_designer_8cs" startline="102">DeviceLibrary.messagesText.ccTalkInstance</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ae3dae0077a9b7fe533abd3d9591e0733" compoundref="_c_ctalk_8cs" startline="109" endline="136">DeviceLibrary.CccTalk.IsCcTalkPort</references>
+        <references refid="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" compoundref="_c_ctalk_8cs" startline="49">DeviceLibrary.CccTalk.PortSerie</references>
+        <references refid="class_device_library_1_1messages_text_1a3bce2e18d1b8dbc3d29446f4c1fc7cc7" compoundref="messages_text_8_designer_8cs" startline="453">DeviceLibrary.messagesText.search_ccTalk</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CccTalk.IsCmdccTalkSended</definition>
+        <argsstring>(DefaultDevicesAddress Peripherique, object Commande, byte LenParam, byte[] Parameter, object answer)</argsstring>
+        <name>IsCmdccTalkSended</name>
+        <param>
+          <type><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5ee" kindref="member">DefaultDevicesAddress</ref></type>
+          <declname>Peripherique</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>Commande</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>LenParam</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>Parameter</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>answer</declname>
+        </param>
+        <briefdescription>
+<para>Envoie une commande et recoit la réponse </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Peripherique</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Adresse du périphérique</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Commande</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Header de la commande envoyée</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LenParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Longeur des paramètres</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer des paramètres</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>answer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objet contenant les paramètres de retour le cas échéant</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="167" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="167" bodyend="252"/>
+        <references refid="class_device_library_1_1_ccc_talk_1a97a1b7f01d0949a63f66d07ee5baa022" compoundref="_c_ctalk_8cs" startline="260" endline="278">DeviceLibrary.CccTalk.CheckSum</references>
+        <references refid="class_device_library_1_1messages_text_1a616c0d5ff9f3a4f77f95b8402e3d17b5" compoundref="messages_text_8_designer_8cs" startline="174">DeviceLibrary.messagesText.echo</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1messages_text_1af19cd4177e26f024d4d1a709f51c63b9" compoundref="messages_text_8_designer_8cs" startline="408">DeviceLibrary.messagesText.noccTalkDevice</references>
+        <references refid="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" compoundref="_c_ctalk_8cs" startline="49">DeviceLibrary.CccTalk.PortSerie</references>
+        <references refid="class_device_library_1_1messages_text_1a639a4669a24e5f9579bdd3815268d806" compoundref="messages_text_8_designer_8cs" startline="435">DeviceLibrary.messagesText.readAnswerDevice</references>
+        <references refid="class_device_library_1_1messages_text_1aac828c24757eef357df7ede8980d5f5d" compoundref="messages_text_8_designer_8cs" startline="444">DeviceLibrary.messagesText.readEcho</references>
+        <references refid="class_device_library_1_1messages_text_1a6cdf49693beb3766d1b9a2ca4c582a43" compoundref="messages_text_8_designer_8cs" startline="471">DeviceLibrary.messagesText.sendCmd</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ace0437474b7114a98a0f250f82136f50" compoundref="_c_ctalk_8cs" startline="44">DeviceLibrary.CccTalk.sizeOfBufferOut</references>
+        <references refid="class_device_library_1_1messages_text_1a419304b9107134f10dc4b155581aa087" compoundref="messages_text_8_designer_8cs" startline="534">DeviceLibrary.messagesText.txtAnswer</references>
+        <references refid="class_device_library_1_1messages_text_1aec4481f3887107f375c6a9d5644a3d2e" compoundref="messages_text_8_designer_8cs" startline="543">DeviceLibrary.messagesText.txtMessageSended</references>
+        <references refid="class_device_library_1_1_ccc_talk_1a43ca834802480b1171030f7ad063c559" compoundref="_c_ctalk_8cs" startline="28">DeviceLibrary.CccTalk.verrou</references>
+        <references refid="class_device_library_1_1_ccc_talk_1a58a0185454ad0e063699aae15c5df79e" compoundref="_c_ctalk_8cs" startline="143" endline="156">DeviceLibrary.CccTalk.ZeroMemory</references>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1aeddf0e0eb3b4b86bdcde077601c05879" compoundref="_c_pelicano_8cs" startline="196" endline="229">DeviceLibrary.CPelicano.ActivateMotor</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1adc0fd478490e3ef5e255f7bc2f64f506" compoundref="_c_hopper_8cs" startline="805" endline="823">DeviceLibrary.CHopper.DispenseCoins</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a1c8de197528a0f954006105da4fd261f" compoundref="_c_hopper_8cs" startline="741" endline="756">DeviceLibrary.CHopper.EnableHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="399" endline="427">DeviceLibrary.CccTalk.GetASCII</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="62" endline="83">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="376" endline="392">DeviceLibrary.CccTalk.GetByte</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a1faca12f58535beec695d78479d29884" compoundref="_c_hopper_8cs" startline="783" endline="797">DeviceLibrary.CHopper.GetCipherKey</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" compoundref="_c_memory_storage_8cs" startline="168" endline="188">DeviceLibrary.CMemoryStorage.GetDataBlock</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1adee6f8f04f44591bd69e469ae255ac28" compoundref="_c_hopper_8_status_8cs" startline="147" endline="167">DeviceLibrary.CHopper.CHopperStatus.GetHopperStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" compoundref="_ccash_reader_8cs" startline="190" endline="204">DeviceLibrary.CcashReader.GetInhibitMask</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="126" endline="140">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" compoundref="_c_ctalk_8cs" startline="510" endline="533">DeviceLibrary.CccTalk.IsDeviceReseted</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1ad4e3e04686c9cabd002597ebd8fa3712" compoundref="_c_hopper_8cs" startline="761" endline="778">DeviceLibrary.CHopper.PumpRNG</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" compoundref="_c_memory_storage_8cs" startline="195" endline="217">DeviceLibrary.CMemoryStorage.SetDataBlock</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="243" endline="257">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="169" endline="184">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a941fe54c9299c2f3d78f865a3c7dc720" compoundref="_c_coin_validator_8cs" startline="282" endline="297">DeviceLibrary.CCoinValidator.SetOverrideStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" compoundref="_c_coin_validator_8_c_canal_8cs" startline="195" endline="210">DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" compoundref="_c_hopper_8_variable_set_8cs" startline="161" endline="176">DeviceLibrary.CHopper.CHopperVariableSet.SetVariable</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a2a1d5d6383c6ab9e5952f6cac14d65df" compoundref="_c_hopper_8cs" startline="828" endline="897">DeviceLibrary.CHopper.TestHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="258" endline="276">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CccTalk.IsDeviceReseted</definition>
+        <argsstring>()</argsstring>
+        <name>IsDeviceReseted</name>
+        <briefdescription>
+<para>Reset software du périphérique. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="510" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="510" bodyend="533"/>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1messages_text_1a9b8554d38ab9c2799d5405e2f894cf82" compoundref="messages_text_8_designer_8cs" startline="201">DeviceLibrary.messagesText.erreurCmd</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1addb8e79d5a3377a2aadef60fc1b19a53" compoundref="_c_coin_validator_8cs" startline="778" endline="807">DeviceLibrary.CCoinValidator.CCoinValidator</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a25c0ba824eb783ecdec6c6f53f90f243" compoundref="_c_hopper_8cs" startline="1368" endline="1401">DeviceLibrary.CHopper.CHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a26e1f1fb8a30b65d591b53eb6d049acf" compoundref="_c_hopper_8cs" startline="1216" endline="1362">DeviceLibrary.CHopper.Task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_ccc_talk_1a671d74ee89768f479f386a9a016e747a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void DeviceLibrary.CccTalk.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="class_device_library_1_1_c_device_1ad0028a2572404e6a3f21fa1a56f6b136">Init</reimplements>
+        <reimplementedby refid="class_device_library_1_1_c_hopper_1acda4cf9b030e54786ba9b366fdf3f6e2">Init</reimplementedby>
+        <briefdescription>
+<para>Initialisation des périphériques ccTalk </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="597" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="597" bodyend="599"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_device_library_1_1_ccc_talk_1ae3dae0077a9b7fe533abd3d9591e0733" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CccTalk.IsCcTalkPort</definition>
+        <argsstring>(string NameOfPort)</argsstring>
+        <name>IsCcTalkPort</name>
+        <param>
+          <type>string</type>
+          <declname>NameOfPort</declname>
+        </param>
+        <briefdescription>
+<para>Vérifie si un bus ccTalk est branché sur un port série. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>NameOfPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nom du port série</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true si un bus ccTalk est detecté sur ce port série</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="109" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="109" bodyend="136"/>
+        <references refid="class_device_library_1_1messages_text_1a54b35fb372930fed5dc13a77e060396c" compoundref="messages_text_8_designer_8cs" startline="219">DeviceLibrary.messagesText.erreurPort</references>
+        <references refid="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" compoundref="_c_ctalk_8cs" startline="49">DeviceLibrary.CccTalk.PortSerie</references>
+        <references refid="class_device_library_1_1messages_text_1aa2c6c9e22c64621ad6e50951e6233abd" compoundref="messages_text_8_designer_8cs" startline="552">DeviceLibrary.messagesText.verifSerialPort</references>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="74" endline="102">DeviceLibrary.CccTalk.CccTalk</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_ccc_talk_1a58a0185454ad0e063699aae15c5df79e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CccTalk.ZeroMemory</definition>
+        <argsstring>(byte[] Buffer, byte Len)</argsstring>
+        <name>ZeroMemory</name>
+        <param>
+          <type>byte[]</type>
+          <declname>Buffer</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>Len</declname>
+        </param>
+        <briefdescription>
+<para>Vide le buffer passé en paramètre </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer devant être vidé</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Longueur du buffer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="143" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="143" bodyend="156"/>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_ccc_talk_1a97a1b7f01d0949a63f66d07ee5baa022" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CccTalk.CheckSum</definition>
+        <argsstring>(byte[] Buffer, byte Len)</argsstring>
+        <name>CheckSum</name>
+        <param>
+          <type>byte[]</type>
+          <declname>Buffer</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>Len</declname>
+        </param>
+        <briefdescription>
+<para>Retourne le checksum du buffer </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer sur lequel le calcul s&apos;effectue</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Longeur du buffer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="260" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="260" bodyend="278"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string DeviceLibrary.CccTalk.GetASCII</definition>
+        <argsstring>(Header header)</argsstring>
+        <name>GetASCII</name>
+        <param>
+          <type><ref refid="group___headers_1ga22f8eb6526627d4203e53ce7dbd3052a" kindref="member">Header</ref></type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+<para>Lit une chaîne ascii dans le périphérique. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Header de la requête</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>La chaine de caractères demandée</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="399" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="399" bodyend="427"/>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1messages_text_1a9b8554d38ab9c2799d5405e2f894cf82" compoundref="messages_text_8_designer_8cs" startline="201">DeviceLibrary.messagesText.erreurCmd</references>
+        <references refid="class_device_library_1_1messages_text_1a41967611d2c8b9d237599dd156a13dd8" compoundref="messages_text_8_designer_8cs" startline="363">DeviceLibrary.messagesText.getText</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CccTalk.GetByte</definition>
+        <argsstring>(object header)</argsstring>
+        <name>GetByte</name>
+        <param>
+          <type>object</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+<para>Lit un octet dans le périphérique </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Header de la requête</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>La valeur de l&apos;octet retourné est 255</para><para><simplesect kind="return"><para>la valeur de l&apos;octet demandé</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="376" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="376" bodyend="392"/>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1messages_text_1a9b8554d38ab9c2799d5405e2f894cf82" compoundref="messages_text_8_designer_8cs" startline="201">DeviceLibrary.messagesText.erreurCmd</references>
+        <references refid="class_device_library_1_1messages_text_1a76120e98024c293607801a782c164899" compoundref="messages_text_8_designer_8cs" startline="273">DeviceLibrary.messagesText.getByte</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_device_library_1_1_ccc_talk_1a9e6bea86795ec29fde4e6071256eff76" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DeviceLibrary.CccTalk.ResetCounters</definition>
+        <argsstring>()</argsstring>
+        <name>ResetCounters</name>
+        <briefdescription>
+<para>Remise à zéro des compteurs </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" line="564" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCtalk.cs" bodystart="564" bodyend="571"/>
+        <references refid="class_device_library_1_1_ccc_talk_1a3810c0aa448865e19afff87a946fee5d" compoundref="_c_ctalk_8cs" startline="59">DeviceLibrary.CccTalk.counters</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f" compoundref="_c_ctalk_8cs" startline="69">DeviceLibrary.CccTalk.counterSerializer</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" compoundref="_c_ctalk_8cs" startline="64">DeviceLibrary.CccTalk.countersFile</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class ccTalk </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="39">
+        <label>DeviceLibrary.CcashReader</label>
+        <link refid="class_device_library_1_1_ccash_reader"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>DeviceLibrary.CPelicano</label>
+        <link refid="class_device_library_1_1_c_pelicano"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>DeviceLibrary.CccTalk</label>
+        <link refid="class_device_library_1_1_ccc_talk"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>IDisposable</label>
+      </node>
+      <node id="40">
+        <label>DeviceLibrary.CCoinValidator</label>
+        <link refid="class_device_library_1_1_c_coin_validator"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>DeviceLibrary.CHopper</label>
+        <link refid="class_device_library_1_1_c_hopper"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="46">
+        <label>DeviceLibrary.CDevice.CInserted</label>
+        <link refid="class_device_library_1_1_c_device_1_1_c_inserted"/>
+      </node>
+      <node id="43">
+        <label>DeviceLibrary.CccTalk</label>
+        <link refid="class_device_library_1_1_ccc_talk"/>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>counters</edgelabel>
+        </childnode>
+      </node>
+      <node id="44">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>denominationInserted</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>IDisposable</label>
+      </node>
+      <node id="47">
+        <label>DeviceLibrary.CcoinsCounters</label>
+        <link refid="class_device_library_1_1_ccoins_counters"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.Header.cs" line="10" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.Header.cs" bodystart="9" bodyend="178"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_ccc_talk_1ae73c18703dae000c9f725a44fae17f1a" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>BuildCode</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>CccTalk</name></member>
+      <member refid="class_device_library_1_1_c_device_1a1ea11e47275e8d7baaa1f60a64c41d83" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>CDevice</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a97a1b7f01d0949a63f66d07ee5baa022" prot="private" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>CheckSum</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1af78c9d598eaebc02a257d52353ab257c" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>CommsRevision</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a3810c0aa448865e19afff87a946fee5d" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>counters</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>counterSerializer</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>countersFile</name></member>
+      <member refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>denominationInserted</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ac86c8d06c56d9ece1591d3de08fd5529" prot="private" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>deviceAddress</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>DeviceAddress</name></member>
+      <member refid="class_device_library_1_1_c_device_1acc529f16bc467bfa601e41dc205825f4" prot="protected" virt="virtual"><scope>DeviceLibrary::CccTalk</scope><name>Dispose</name></member>
+      <member refid="class_device_library_1_1_c_device_1abb1407e4a9ad3eca3ed3e8e92ead69fe" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>Dispose</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a3cb80b7a82cc363e0dcefd1f31ced8a2" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>EquipementCategory</name></member>
+      <member refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>eventListLock</name></member>
+      <member refid="class_device_library_1_1_c_device_1a93829459e8bc284d9f8bd56edf59e152" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>eventsList</name></member>
+      <member refid="class_device_library_1_1_c_device_1a788260097f3f2693b2b0ac5d0ef9383a" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>evReady</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ad5c6d1287d0c049bdbf4fda8cb19c1ef" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>fileCounterName</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" prot="private" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>GetASCII</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>GetByte</name></member>
+      <member refid="group___headers_1ga22f8eb6526627d4203e53ce7dbd3052a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>Header</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a671d74ee89768f479f386a9a016e747a" prot="public" virt="virtual"><scope>DeviceLibrary::CccTalk</scope><name>Init</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ae3dae0077a9b7fe533abd3d9591e0733" prot="private" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>IsCcTalkPort</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>IsCmdccTalkSended</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>IsDeviceReseted</name></member>
+      <member refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>IsPresent</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a73a84f7534b5b9ff129897b86d483f48" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>Manufacturer</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1aabbbe46d911d826c39712d8aecd10786" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>mutexCCTalk</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a4ea55bd396398405345e50cb699c0ead" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>OptoStates</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>PortSerie</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1abd92229809b4474129b15e638fd56da7" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>ProductCode</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a9e6bea86795ec29fde4e6071256eff76" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>ResetCounters</name></member>
+      <member refid="group___erreurs_1ga179570d2d8f6f95d52ccafb98d20c790" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>SelfTestResult</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a6b615dcccbe32e3c9166b0fdb0a74236" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>SerialNumber</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a576e09f74dc509dcd7919eceae9cc7de" prot="public" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>SimplePoll</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ace0437474b7114a98a0f250f82136f50" prot="private" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>sizeOfBufferOut</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a687a695bef6d7f25f8fe7148948d04bc" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>SWRev</name></member>
+      <member refid="class_device_library_1_1_c_device_1afe0c01625fcd84aeedf4092db374f1bf" prot="public" virt="pure-virtual"><scope>DeviceLibrary::CccTalk</scope><name>Task</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a43ca834802480b1171030f7ad063c559" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>verrou</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a58a0185454ad0e063699aae15c5df79e" prot="private" virt="non-virtual"><scope>DeviceLibrary::CccTalk</scope><name>ZeroMemory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

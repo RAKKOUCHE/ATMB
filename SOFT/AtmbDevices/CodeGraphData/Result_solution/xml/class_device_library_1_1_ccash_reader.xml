@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_ccash_reader" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CcashReader</compoundname>
+    <basecompoundref refid="class_device_library_1_1_ccc_talk" prot="public" virt="non-virtual">DeviceLibrary.CccTalk</basecompoundref>
+    <basecompoundref refid="class_device_library_1_1_ccc_talk" prot="public" virt="non-virtual">DeviceLibrary.CccTalk</basecompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_coin_validator" prot="public" virt="non-virtual">DeviceLibrary.CCoinValidator</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_coin_validator" prot="public" virt="non-virtual">DeviceLibrary.CCoinValidator</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_coin_validator" prot="public" virt="non-virtual">DeviceLibrary.CCoinValidator</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_coin_validator" prot="public" virt="non-virtual">DeviceLibrary.CCoinValidator</derivedcompoundref>
+    <derivedcompoundref refid="class_device_library_1_1_c_coin_validator" prot="public" virt="non-virtual">DeviceLibrary.CCoinValidator</derivedcompoundref>
+      <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="class_device_library_1_1_ccash_reader_1a789dcffa38ad9d646e32c448632ceaff" prot="protected" static="no">
+        <name>InhibitStatus</name>
+        <enumvalue id="class_device_library_1_1_ccash_reader_1a789dcffa38ad9d646e32c448632ceaffa055c1a591abb0e8cd86dc969727bcc0b" prot="public">
+          <name>DISABLED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Périphérique désactivé </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_ccash_reader_1a789dcffa38ad9d646e32c448632ceaffac8cf6eea8f096ed51160b484d97c5bbd" prot="public">
+          <name>ENABLED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Périphérique activé </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumération des ihnibitions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="22" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="21" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___headers_1gaf4bdeeddb7c89dd2b54f86978f5e9866" prot="protected" static="no">
+        <name>Header</name>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866ae528792c78a8f0df73cb539242c9db57" prot="public">
+          <name>REQUESTPOLLINGPRIORITY</name>
+          <initializer>= 249</initializer>
+          <briefdescription>
+<para>Délai recommandé pour vérifier le buffer de crédits et de code d&apos;erreur </para>          </briefdescription>
+          <detaileddescription>
+<para>Au dela de ce délai le périphérique devrait être désactivé</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866ae268218a830fbe959f8a433163e8187a" prot="public">
+          <name>PERFORMSELFTEST</name>
+          <initializer>= 232</initializer>
+          <briefdescription>
+<para>Cette commande effectue un test interne. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866a57fa2152134db32c8ccf2c03fd965489" prot="public">
+          <name>MODIFYINHIBITSTATUS</name>
+          <initializer>= 231</initializer>
+          <briefdescription>
+<para>Cette commande envoie un masque d&apos;inhibition. Chaque bit correspondant à un canal </para>          </briefdescription>
+          <detaileddescription>
+<para>0 = desactivé, 1 = activé</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866a86d5eb66e4f787072c88909f8de0ee99" prot="public">
+          <name>REQUESTINHIBITSTATUS</name>
+          <initializer>= 230</initializer>
+          <briefdescription>
+<para>Demande le masque d&apos;inhibition </para>          </briefdescription>
+          <detaileddescription>
+<para>voir <ref refid="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866a57fa2152134db32c8ccf2c03fd965489" kindref="member">MODIFYINHIBITSTATUS</ref> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866aa932deef49f85794660b6e9b0fd2f426" prot="public">
+          <name>MODIFYMASTERINHIBITSTATUS</name>
+          <initializer>= 228</initializer>
+          <briefdescription>
+<para>Cette commande envoie un masque d&apos;inhibition géneral au périphérique. </para>          </briefdescription>
+          <detaileddescription>
+<para>Seul le bit de poid faible est pris en considération</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866a9feb77035916af7a4a90c7e62047cee0" prot="public">
+          <name>REQUESTMASTERINHIBITSTATUS</name>
+          <initializer>= 227</initializer>
+          <briefdescription>
+<para>Cette commande demande le masque d&apos;inhibition géneral du périphérique </para>          </briefdescription>
+          <detaileddescription>
+<para>voir <ref refid="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866aa932deef49f85794660b6e9b0fd2f426" kindref="member">MODIFYMASTERINHIBITSTATUS</ref></para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.Header.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.Header.cs" bodystart="19" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_ccash_reader_1aad999e0bfdf242bd6ef804776097ab5c" prot="private" static="yes" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] DeviceLibrary.CcashReader.priorityUnit</definition>
+        <argsstring></argsstring>
+        <name>priorityUnit</name>
+        <initializer>= { 0, 1, 10, 1000, 60000 }</initializer>
+        <briefdescription>
+<para>Tableau de conversion des unités dans la réponse au polling priority. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="41" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_ccash_reader_1abc43fa1d691915d39d3d843d3bf64ff9" prot="private" static="no" mutable="no">
+        <type>byte[]</type>
+        <definition>byte [] DeviceLibrary.CcashReader.inhibitMask</definition>
+        <argsstring></argsstring>
+        <name>inhibitMask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="47" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_ccash_reader_1a0c089e70bf0c8496d46937b95a13ce8b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CcashReader.pollingDelay</definition>
+        <argsstring></argsstring>
+        <name>pollingDelay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="48" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_device_library_1_1_ccash_reader_1a566a8b5bf9b1f377c5439f06a6d58178" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>byte[]</type>
+        <definition>byte [] DeviceLibrary.CcashReader.InhibitMask</definition>
+        <argsstring></argsstring>
+        <name>InhibitMask</name>
+        <briefdescription>
+<para>Masque d&apos;ihnibition (2 octets pour 16 canaux) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="53" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a8dac668c2fb07489dc8ac5ecc06c2d94" compoundref="_c_coin_validator_8cs" startline="466" endline="485">DeviceLibrary.CCoinValidator.Init</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccash_reader_1ad6efa8899adedbb445d7f7cb4af0c159" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_device_library_1_1_ccash_reader_1a789dcffa38ad9d646e32c448632ceaff" kindref="member">InhibitStatus</ref></type>
+        <definition>InhibitStatus DeviceLibrary.CcashReader.MasterInhibitStatus</definition>
+        <argsstring></argsstring>
+        <name>MasterInhibitStatus</name>
+        <briefdescription>
+<para>Renvoi l&apos;activation du monnayeur </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ENABLED si le monnayeur est activé DISABLED si le monnayeur est désactivé </para></simplesect>
+</para><para>Header 227</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="67" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccash_reader_1a5378d4373a02c46261c7f611af60a89c" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int DeviceLibrary.CcashReader.PollingDelay</definition>
+        <argsstring></argsstring>
+        <name>PollingDelay</name>
+        <briefdescription>
+<para>Délai entre 2 interrogation du coin validator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="94" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="95" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a8dac668c2fb07489dc8ac5ecc06c2d94" compoundref="_c_coin_validator_8cs" startline="466" endline="485">DeviceLibrary.CCoinValidator.Init</referencedby>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ad9b8f287ccf87c7e71b93518e493aa8a" compoundref="_c_coin_validator_8cs" startline="765" endline="773">DeviceLibrary.CCoinValidator.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccash_reader_1a1768cb2711e0f8d8fd45d9d28aeb1cf6" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CcashReader.PollingPriority</definition>
+        <argsstring></argsstring>
+        <name>PollingPriority</name>
+        <briefdescription>
+<para>Renvoi le délai maximum du polling du périphérique. </para>        </briefdescription>
+        <detaileddescription>
+<para>Header 249</para><para><simplesect kind="return"><para>Délai du polling ou 0 en cas d&apos;échec de traitement</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="109" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="110" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_ccash_reader_1a40798e7b17783bffe4d59b67ef57a430" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="group___erreurs_1ga179570d2d8f6f95d52ccafb98d20c790" kindref="member">SelfTestResult</ref></type>
+        <definition>SelfTestResult DeviceLibrary.CcashReader.SelfTest</definition>
+        <argsstring></argsstring>
+        <name>SelfTest</name>
+        <briefdescription>
+<para>Effectue un test interne et renvoie le résultat. </para>        </briefdescription>
+        <detaileddescription>
+<para>Header 232</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="135" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="136" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CcashReader.SetMasterInhibit</definition>
+        <argsstring>(InhibitStatus status)</argsstring>
+        <name>SetMasterInhibit</name>
+        <param>
+          <type><ref refid="class_device_library_1_1_ccash_reader_1a789dcffa38ad9d646e32c448632ceaff" kindref="member">InhibitStatus</ref></type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Active ou desactive le moyen de paiment </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>= 1 pour activer , 0 pour désactiver</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Header 228 <linebreak/>
+Les 7 bits de poids fort ne sont pas considérés. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="169" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="169" bodyend="184"/>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1messages_text_1ad9c4ce7df2d9a97fb037a6b2fe1a01fe" compoundref="messages_text_8_designer_8cs" startline="246">DeviceLibrary.messagesText.errMasterInhibitStatus</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <references refid="class_device_library_1_1messages_text_1a36eee29e70368828dc0fb2ff7ec98ac0" compoundref="messages_text_8_designer_8cs" startline="480">DeviceLibrary.messagesText.sendMasterInhibitStatus</references>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" compoundref="_ccash_reader_8cs" startline="209" endline="220">DeviceLibrary.CcashReader.MasterDisable</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" compoundref="_ccash_reader_8cs" startline="225" endline="236">DeviceLibrary.CcashReader.MasterEnable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CcashReader.GetInhibitMask</definition>
+        <argsstring>(byte[] mask)</argsstring>
+        <name>GetInhibitMask</name>
+        <param>
+          <type>byte[]</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Retourne le mask d&apos;inhibition des canaux </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer contenant les masks d&apos;inhibitions</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="190" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="190" bodyend="204"/>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1messages_text_1ae354123829e86b8cf6e13deaa2cda560" compoundref="messages_text_8_designer_8cs" startline="300">DeviceLibrary.messagesText.getInhibitStatus</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CcashReader.MasterDisable</definition>
+        <argsstring>()</argsstring>
+        <name>MasterDisable</name>
+        <briefdescription>
+<para>Desactive globalement le moyen de paiement </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="209" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="209" bodyend="220"/>
+        <references refid="class_device_library_1_1messages_text_1ab25fcc8955786b9eb2cc6a0eeb512a0e" compoundref="messages_text_8_designer_8cs" startline="156">DeviceLibrary.messagesText.deactivationCV</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="169" endline="184">DeviceLibrary.CcashReader.SetMasterInhibit</references>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CcashReader.MasterEnable</definition>
+        <argsstring>()</argsstring>
+        <name>MasterEnable</name>
+        <briefdescription>
+<para>Activation globale du moyen de paiement </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="225" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="225" bodyend="236"/>
+        <references refid="class_device_library_1_1messages_text_1a1b8c8f4de98cd13953372dac6cf288da" compoundref="messages_text_8_designer_8cs" startline="66">DeviceLibrary.messagesText.activationCV</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="169" endline="184">DeviceLibrary.CcashReader.SetMasterInhibit</references>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CcashReader.SetInhibitStatus</definition>
+        <argsstring>(byte[] mask)</argsstring>
+        <name>SetInhibitStatus</name>
+        <param>
+          <type>byte[]</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Active ou desactive les canaux du monnayeur </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>masque d&apos;inhibiton</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Header 231</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="243" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="243" bodyend="257"/>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1messages_text_1a56487b103b700f2efc304a3ab0a75d1a" compoundref="messages_text_8_designer_8cs" startline="237">DeviceLibrary.messagesText.errInhibitStatus</references>
+        <references refid="class_device_library_1_1messages_text_1a4beee20720447145e0de98bb1cf44e66" compoundref="messages_text_8_designer_8cs" startline="381">DeviceLibrary.messagesText.inhibitStatus</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_ccash_reader_1a75203eaeadfdee235e6046e240da1f21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void DeviceLibrary.CcashReader.Task</definition>
+        <argsstring>()</argsstring>
+        <name>Task</name>
+        <reimplements refid="class_device_library_1_1_c_device_1afe0c01625fcd84aeedf4092db374f1bf">Task</reimplements>
+        <reimplementedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7">Task</reimplementedby>
+        <reimplementedby refid="class_device_library_1_1_c_coin_validator_1ad9b8f287ccf87c7e71b93518e493aa8a">Task</reimplementedby>
+        <briefdescription>
+<para>Tâche vérifiant les activitées du monnayeur </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="262" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="262" bodyend="264"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class abstraite utilisé par les moyens de paiement. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="22">
+        <label>DeviceLibrary.CcashReader</label>
+        <link refid="class_device_library_1_1_ccash_reader"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>DeviceLibrary.CPelicano</label>
+        <link refid="class_device_library_1_1_c_pelicano"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>IDisposable</label>
+      </node>
+      <node id="23">
+        <label>CccTalk</label>
+        <link refid="class_device_library_1_1_ccc_talk"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>DeviceLibrary.CCoinValidator</label>
+        <link refid="class_device_library_1_1_c_coin_validator"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="28">
+        <label>DeviceLibrary.CcashReader</label>
+        <link refid="class_device_library_1_1_ccash_reader"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>DeviceLibrary.CDevice.CInserted</label>
+        <link refid="class_device_library_1_1_c_device_1_1_c_inserted"/>
+      </node>
+      <node id="30">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>denominationInserted</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>IDisposable</label>
+      </node>
+      <node id="29">
+        <label>CccTalk</label>
+        <link refid="class_device_library_1_1_ccc_talk"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>counters</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>DeviceLibrary.CcoinsCounters</label>
+        <link refid="class_device_library_1_1_ccoins_counters"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" line="15" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.cs" bodystart="14" bodyend="267"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_ccc_talk_1ae73c18703dae000c9f725a44fae17f1a" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>BuildCode</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>CccTalk</name></member>
+      <member refid="class_device_library_1_1_c_device_1a1ea11e47275e8d7baaa1f60a64c41d83" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>CDevice</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1af78c9d598eaebc02a257d52353ab257c" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>CommsRevision</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a3810c0aa448865e19afff87a946fee5d" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>counters</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>counterSerializer</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>countersFile</name></member>
+      <member refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>denominationInserted</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>DeviceAddress</name></member>
+      <member refid="class_device_library_1_1_c_device_1acc529f16bc467bfa601e41dc205825f4" prot="protected" virt="virtual"><scope>DeviceLibrary::CcashReader</scope><name>Dispose</name></member>
+      <member refid="class_device_library_1_1_c_device_1abb1407e4a9ad3eca3ed3e8e92ead69fe" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>Dispose</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a3cb80b7a82cc363e0dcefd1f31ced8a2" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>EquipementCategory</name></member>
+      <member refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>eventListLock</name></member>
+      <member refid="class_device_library_1_1_c_device_1a93829459e8bc284d9f8bd56edf59e152" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>eventsList</name></member>
+      <member refid="class_device_library_1_1_c_device_1a788260097f3f2693b2b0ac5d0ef9383a" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>evReady</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ad5c6d1287d0c049bdbf4fda8cb19c1ef" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>fileCounterName</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>GetByte</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>GetInhibitMask</name></member>
+      <member refid="group___headers_1gaf4bdeeddb7c89dd2b54f86978f5e9866" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>Header</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1abc43fa1d691915d39d3d843d3bf64ff9" prot="private" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>inhibitMask</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a566a8b5bf9b1f377c5439f06a6d58178" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>InhibitMask</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a789dcffa38ad9d646e32c448632ceaff" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>InhibitStatus</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a671d74ee89768f479f386a9a016e747a" prot="public" virt="virtual"><scope>DeviceLibrary::CcashReader</scope><name>Init</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>IsCmdccTalkSended</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>IsDeviceReseted</name></member>
+      <member refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>IsPresent</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a73a84f7534b5b9ff129897b86d483f48" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>Manufacturer</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>MasterDisable</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>MasterEnable</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1ad6efa8899adedbb445d7f7cb4af0c159" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>MasterInhibitStatus</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1aabbbe46d911d826c39712d8aecd10786" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>mutexCCTalk</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a4ea55bd396398405345e50cb699c0ead" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>OptoStates</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a5378d4373a02c46261c7f611af60a89c" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>PollingDelay</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a0c089e70bf0c8496d46937b95a13ce8b" prot="private" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>pollingDelay</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a1768cb2711e0f8d8fd45d9d28aeb1cf6" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>PollingPriority</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>PortSerie</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1aad999e0bfdf242bd6ef804776097ab5c" prot="private" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>priorityUnit</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1abd92229809b4474129b15e638fd56da7" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>ProductCode</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a9e6bea86795ec29fde4e6071256eff76" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>ResetCounters</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a40798e7b17783bffe4d59b67ef57a430" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>SelfTest</name></member>
+      <member refid="group___erreurs_1ga179570d2d8f6f95d52ccafb98d20c790" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>SelfTestResult</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a6b615dcccbe32e3c9166b0fdb0a74236" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>SerialNumber</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>SetInhibitStatus</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" prot="private" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>SetMasterInhibit</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a576e09f74dc509dcd7919eceae9cc7de" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>SimplePoll</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a687a695bef6d7f25f8fe7148948d04bc" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>SWRev</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a75203eaeadfdee235e6046e240da1f21" prot="public" virt="virtual"><scope>DeviceLibrary::CcashReader</scope><name>Task</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a43ca834802480b1171030f7ad063c559" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CcashReader</scope><name>verrou</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

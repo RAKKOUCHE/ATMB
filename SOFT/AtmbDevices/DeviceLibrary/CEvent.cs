@@ -13,6 +13,22 @@ namespace DeviceLibrary
     public class CEvent
     {
         /// <summary>
+        /// donnée concernant l'évenenement.
+        /// </summary>
+        ///<remarks>Dépend du périphérique et de l'évenement.</remarks>
+        public object data;
+
+        /// <summary>
+        /// Nom du périphérique
+        /// </summary>
+        public string nameOfDevice;
+
+        /// <summary>
+        /// Raison de l'évenement.
+        /// </summary>
+        public Reason reason;
+
+        /// <summary>
         /// Enumération des causes des événements
         /// </summary>
         public enum Reason
@@ -104,30 +120,14 @@ namespace DeviceLibrary
         public class FireEventArg : EventArgs
         {
             /// <summary>
-            /// Cause de l'événement.
-            /// </summary>
-            public Reason reason;
-
-            /// <summary>
             /// Objet contenant les infomations concernant l'événement.
             /// </summary>
             public object donnee;
+
+            /// <summary>
+            /// Cause de l'événement.
+            /// </summary>
+            public Reason reason;
         }
-
-        /// <summary>
-        /// Raison de l'évenement.
-        /// </summary>
-        public Reason reason;
-
-        /// <summary>
-        /// Nom du périphérique
-        /// </summary>
-        public string nameOfDevice;
-
-        /// <summary>
-        /// donnée concernant l'évenenement.
-        /// </summary>
-        ///<remarks>Dépend du périphérique et de l'évenement.</remarks>
-        public object data;
     }
 }

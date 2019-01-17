@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_event" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CEvent</compoundname>
+    <innerclass refid="class_device_library_1_1_c_event_1_1_fire_event_arg" prot="public">DeviceLibrary::CEvent::FireEventArg</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" prot="public" static="no">
+        <name>Reason</name>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a2d8903297c687d6ee3f010d98c1624a3" prot="public">
+          <name>MONEYINTRODUCTED</name>
+          <briefdescription>
+<para>Une pièce a été reconnue par le monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a227f7186426f2e265a08a62825b92623" prot="public">
+          <name>COINVALIDATORERROR</name>
+          <briefdescription>
+<para>Une erreur a été dectée sur le monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a1e6108a5eb452674d7f51aedbd45a29f" prot="public">
+          <name>CASHCLOSED</name>
+          <briefdescription>
+<para>Les moyens de paiement ont été fermés. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38adfa418a7f626fcbd28a514d80ca04317" prot="public">
+          <name>CASHOPENED</name>
+          <briefdescription>
+<para>Les moyens de paiement ont été ouverts. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a01e41b57f4a2a1f8a8fcae7f10bdfcdf" prot="public">
+          <name>HOPPERERROR</name>
+          <briefdescription>
+<para>Une erreur a été detectée sur un hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a3f3d91fc4089282534619aac3104f86e" prot="public">
+          <name>HOPPERDISPENSED</name>
+          <briefdescription>
+<para>Le hopper a terminé la distribution. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38ab4c0de530a8fd3dcb909097545348413" prot="public">
+          <name>HOPPERHWLEVELCHANGED</name>
+          <briefdescription>
+<para>Une des sondes hardwares d&apos;un hopper a changé d&apos;état. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38aa1cad118fd6cf8b1861931f36e4a6671" prot="public">
+          <name>HOPPERSWLEVELCHANGED</name>
+          <briefdescription>
+<para>Un seuil de niveau a été atteint </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a31ce8fea7e7cedf03c7e099848c4af0e" prot="public">
+          <name>HOPPEREMPTIED</name>
+          <briefdescription>
+<para>Le hopper est vidé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a9dcc1c5b5cf3e0ea458e2cba804a3f47" prot="public">
+          <name>BNRERREUR</name>
+          <briefdescription>
+<para>Une erreur sur le BNR est survenue. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a923f08f7add65912e3ca5f0c5485a421" prot="public">
+          <name>BNRMODULEMANQUANT</name>
+          <briefdescription>
+<para>Un module a été reitré. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a5d0a68601bfeb09556fec3789dc8a376" prot="public">
+          <name>BNRMODULEREINSERE</name>
+          <briefdescription>
+<para>Un module a été réinséré. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a3607195dbfd35a89a066f20d2452d093" prot="public">
+          <name>BNRRAZMETER</name>
+          <briefdescription>
+<para>Les compteurs de la caisse du BNR on été remis à zéro. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38af50fa11a2d7d6a9f548b30556d1d9930" prot="public">
+          <name>BNRDISPENSE</name>
+          <briefdescription>
+<para>Le BNR a distribué des billets. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a2333bc4483264edfaa52d998946b2d7a" prot="public">
+          <name>CASHBOXREMOVED</name>
+          <briefdescription>
+<para>La caisse à monnaie a été retirée. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a02329a248129261e531c515aabab49eb" prot="public">
+          <name>DLLLREADY</name>
+          <briefdescription>
+<para>La dll est prête. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumération des causes des événements </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="19" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="18" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_event_1a22d3312ef4a62257d6d6da4641812352" prot="public" static="no" mutable="no">
+        <type><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" kindref="member">Reason</ref></type>
+        <definition>Reason DeviceLibrary.CEvent.reason</definition>
+        <argsstring></argsstring>
+        <name>reason</name>
+        <briefdescription>
+<para>Raison de l&apos;évenement. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="120" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_event_1af86d6bd8d5fad398a9f3db82bb526d06" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CEvent.nameOfDevice</definition>
+        <argsstring></argsstring>
+        <name>nameOfDevice</name>
+        <briefdescription>
+<para>Nom du périphérique </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="125" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="125" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_event_1a0c03eb076bccc1854d9128f712bcf39a" prot="public" static="no" mutable="no">
+        <type>object</type>
+        <definition>object DeviceLibrary.CEvent.data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>donnée concernant l&apos;évenenement. </para>        </briefdescription>
+        <detaileddescription>
+<para>remarks&gt;Dépend du périphérique et de l&apos;évenement.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="131" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="131" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class contenant les informations sur u évenement. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="14" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="13" bodyend="132"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_event_1a0c03eb076bccc1854d9128f712bcf39a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent</scope><name>data</name></member>
+      <member refid="class_device_library_1_1_c_event_1af86d6bd8d5fad398a9f3db82bb526d06" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent</scope><name>nameOfDevice</name></member>
+      <member refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent</scope><name>Reason</name></member>
+      <member refid="class_device_library_1_1_c_event_1a22d3312ef4a62257d6d6da4641812352" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent</scope><name>reason</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

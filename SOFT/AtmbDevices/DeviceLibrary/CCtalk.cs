@@ -18,45 +18,31 @@ namespace DeviceLibrary
     public abstract partial class CccTalk : CDevice
     {
         /// <summary>
-        /// Nom du fichier contenant les compteurs.
+        /// Taille des buffers
         /// </summary>
-        public const string fileCounterName = "Counters.mtr";
+        private const byte sizeOfBufferOut = 32;
+
+        private DefaultDevicesAddress deviceAddress;
 
         /// <summary>
         /// Verrou du thread
         /// </summary>
         protected static object verrou = new object();
 
-        private DefaultDevicesAddress deviceAddress;
-
         /// <summary>
-        /// Adresse du périphérique.
+        /// Nom du fichier contenant les compteurs.
         /// </summary>
-        public DefaultDevicesAddress DeviceAddress
-        {
-            get => deviceAddress;
-            set => deviceAddress = value;
-        }
-
-        /// <summary>
-        /// Taille des buffers
-        /// </summary>
-        private const byte sizeOfBufferOut = 32;
-
-        /// <summary>
-        /// Port série utilisée par le bus ccTalk
-        /// </summary>
-        public static SerialPort PortSerie;
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static Mutex mutexCCTalk = new Mutex();
+        public const string fileCounterName = "Counters.mtr";
 
         /// <summary>
         /// Compteurs
         /// </summary>
         public static CcoinsCounters counters;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static BinaryFormatter counterSerializer;
 
         /// <summary>
         /// Fichier des compteurs.
@@ -66,7 +52,12 @@ namespace DeviceLibrary
         /// <summary>
         ///
         /// </summary>
-        public static BinaryFormatter counterSerializer;
+        public static Mutex mutexCCTalk = new Mutex();
+
+        /// <summary>
+        /// Port série utilisée par le bus ccTalk
+        /// </summary>
+        public static SerialPort PortSerie;
 
         /// <summary>
         /// Construteur de la class
@@ -99,6 +90,291 @@ namespace DeviceLibrary
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
+        }
+
+        /// <summary>
+        /// Code de production du périphérique.
+        /// </summary>
+        protected string BuildCode
+        {
+            get
+            {
+                string buildCode = string.Empty;
+                try
+                {
+                    CDevicesManager.Log.Info(messagesText.getBuildCode, DeviceAddress);
+                    buildCode = GetASCII(Header.REQUESTBUILDCODE);
+                    CDevicesManager.Log.Info(messagesText.buildCode, DeviceAddress, buildCode);
+                }
+                catch (Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
+
+                return buildCode;
+            }
+        }
+
+        /// <summary>
+        /// Lecture de version ccTalk utilisée par le périphérique.
+        /// </summary>
+        protected string CommsRevision
+        {
+            get
+            {
+                byte[] bufferIn = { 0x30, 0x30, 0x30 };
+                string result = "";
+                try
+                {
+                    if (IsCmdccTalkSended(DeviceAddress, Header.REQUESTCOMMSREVISION, 0, null, bufferIn))
+                    {
+                        result = (char)(bufferIn[0] + 0x30) + "." +
+                        (char)(bufferIn[1] + 0x30) + "." +
+                        (char)(bufferIn[2] + 0x30);
+                        CDevicesManager.Log.Info("La version ccTalk du {0} est {1}", DeviceAddress, result);
+                    }
+                    else
+                    {
+                        CDevicesManager.Log.Error("Impossible de lire les informations de la version ccTalk dans le {0}", DeviceAddress);
+                    }
+                }
+                catch (Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// Code produit du périphérique.
+        /// </summary>
+        protected string EquipementCategory
+        {
+            get
+            {
+                string equipementCategory = string.Empty;
+                try
+                {
+                    CDevicesManager.Log.Info(messagesText.getEquipementID, DeviceAddress);
+                    equipementCategory = GetASCII(Header.REQUESTEQUIPEMENTCATEGORYID);
+                    CDevicesManager.Log.Info(messagesText.equipementID, DeviceAddress, equipementCategory);
+                }
+                catch (Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
+
+                return equipementCategory;
+            }
+        }
+
+        /// <summary>
+        /// Retourne la révision software
+        /// </summary>
+        protected string SWRev
+        {
+            get
+            {
+                try
+                {
+                    CDevicesManager.Log.Info(messagesText.getSWRev, DeviceAddress);
+                    string swRev = GetASCII(Header.REQUESTSWREV);
+                    CDevicesManager.Log.Info(messagesText.swRev, DeviceAddress, swRev);
+                    return swRev;
+                }
+                catch (Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
+                return "";
+            }
+        }
+
+        /// <summary>
+        /// Adresse du périphérique.
+        /// </summary>
+        public DefaultDevicesAddress DeviceAddress
+        {
+            get => deviceAddress;
+            set => deviceAddress = value;
+        }
+
+        /// <summary>
+        /// Retourne l'identifiant du fabricant.
+        /// </summary>
+        public override string Manufacturer
+        {
+            get
+            {
+                string manufacturer = string.Empty;
+                try
+                {
+                    CDevicesManager.Log.Info(messagesText.getManufacturer, DeviceAddress);
+                    manufacturer = GetASCII(Header.REQUESTMANUFACTURERID);
+                    CDevicesManager.Log.Info(messagesText.manufacturer, DeviceAddress, manufacturer);
+                }
+                catch (Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
+                return manufacturer;
+            }
+        }
+
+        /// <summary>
+        /// Lecture de l'etat des otpocoupleurs du périphériques.
+        /// </summary>
+        public virtual byte OptoStates
+        {
+            get
+            {
+                byte result = 0XFF;
+                try
+                {
+                    CDevicesManager.Log.Info("Lecture de l'état des optos du {0}", DeviceAddress);
+                    result = GetByte(Header.READOPTOSTATES);
+                }
+                catch (Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// Code produit du périphérique.
+        /// </summary>
+        public override string ProductCode
+        {
+            get
+            {
+                string productCode = string.Empty;
+                try
+                {
+                    CDevicesManager.Log.Info(messagesText.getProductCode, DeviceAddress);
+                    productCode = GetASCII(Header.REQUESTPRODUCTCODE);
+                    CDevicesManager.Log.Info(messagesText.productCode, DeviceAddress, productCode);
+                }
+                catch (Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
+                return productCode;
+            }
+        }
+
+        /// <summary>
+        /// Retourne le numéro de série du pelicano
+        /// </summary>
+        public override int SerialNumber
+        {
+            get
+            {
+                byte[] bufferIn = { 0, 0, 0 };
+                try
+                {
+                    CDevicesManager.Log.Info(messagesText.getSN, DeviceAddress);
+                    if (!IsCmdccTalkSended(DeviceAddress, Header.REQUESTSN, 0, null, bufferIn))
+                    {
+                        CDevicesManager.Log.Error(messagesText.erreurCmd, Header.REQUESTSN, DeviceAddress);
+                    }
+                }
+                catch (Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
+                CDevicesManager.Log.Info("Le numéro de série du {0} est {1}", DeviceAddress, bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 * bufferIn[2]));
+                return bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 * bufferIn[2]);
+            }
+        }
+
+        /// <summary>
+        /// Simple poll du périphérique.
+        /// </summary>
+        /// <returns></returns>
+        public bool SimplePoll
+        {
+            get
+            {
+                try
+                {
+                    CDevicesManager.Log.Info("Simple poll du {0}", DeviceAddress);
+                    if (IsCmdccTalkSended(DeviceAddress, Header.SIMPLEPOLL, 0, null, null))
+                    {
+                        CDevicesManager.Log.Info("Simple poll du {0} effectué.", DeviceAddress);
+                        return true;
+                    }
+                    CDevicesManager.Log.Error(messagesText.erreurCmd, Header.SIMPLEPOLL, DeviceAddress);
+                }
+                catch (Exception E)
+                {
+                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                }
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Retourne le checksum du buffer
+        /// </summary>
+        /// <param name="Buffer">Buffer sur lequel le calcul s'effectue</param>
+        /// <param name="Len">Longeur du buffer</param>
+        /// <returns></returns>
+        private byte CheckSum(byte[] Buffer, byte Len)
+        {
+            uint Result = 0;
+            try
+            {
+                for (byte Index = 0; Index < Len + 4; Index++)
+                {
+                    Result += Buffer[Index];
+                }
+                Result = 256 - (Result % 256);
+            }
+            catch (Exception E)
+            {
+                {
+                    CDevicesManager.Log.Error("{0} {1}", E.GetType(), E.Message);
+                }
+            }
+            return (byte)Result;
+        }
+
+        /// <summary>
+        /// Lit une chaîne ascii dans le périphérique.
+        /// </summary>
+        /// <param name="header">Header de la requête</param>
+        /// <returns>La chaine de caractères demandée</returns>
+        private string GetASCII(Header header)
+        {
+            byte[] bufferIn = new byte[32];
+            string result = string.Empty;
+            try
+            {
+                CDevicesManager.Log.Debug(messagesText.getText, DeviceAddress);
+                if (IsCmdccTalkSended(DeviceAddress, header, 0, null, bufferIn))
+                {
+                    foreach (byte item in bufferIn)
+                    {
+                        if (item > 0)
+                        {
+                            result += (char)item;
+                        }
+                    }
+                    //return System.Text.Encoding.Default.GetString(bufferIn);
+                }
+                else
+                {
+                    CDevicesManager.Log.Error(messagesText.erreurCmd, header, DeviceAddress);
+                }
+            }
+            catch (Exception E)
+            {
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+            return result;
         }
 
         /// <summary>
@@ -153,6 +429,49 @@ namespace DeviceLibrary
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
+        }
+
+        /// <summary>
+        /// Lit un octet dans le périphérique
+        /// </summary>
+        /// <param name="header">Header de la requête</param>
+        /// <remarks>La valeur de l'octet retourné est 255</remarks>
+        /// <returns>la valeur de l'octet demandé</returns>
+        protected byte GetByte(object header)
+        {
+            byte[] result = { 0 };
+            try
+            {
+                CDevicesManager.Log.Debug(messagesText.getByte, DeviceAddress);
+                if (!IsCmdccTalkSended(DeviceAddress, header, 0, null, result))
+                {
+                    CDevicesManager.Log.Error(messagesText.erreurCmd, header, DeviceAddress);
+                }
+            }
+            catch (Exception E)
+            {
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+            return result[0];
+        }
+
+        /// <summary>
+        /// Remise à zéro des compteurs
+        /// </summary>
+        public static void ResetCounters()
+        {
+            counters = null;
+            counters = new CcoinsCounters();
+            counters.SaveCounters();
+            countersFile.Seek(0, SeekOrigin.Begin);
+            counters = (CcoinsCounters)counterSerializer.Deserialize(countersFile);
+        }
+
+        /// <summary>
+        /// Initialisation des périphériques ccTalk
+        /// </summary>
+        public override void Init()
+        {
         }
 
         /// <summary>
@@ -252,259 +571,6 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Retourne le checksum du buffer
-        /// </summary>
-        /// <param name="Buffer">Buffer sur lequel le calcul s'effectue</param>
-        /// <param name="Len">Longeur du buffer</param>
-        /// <returns></returns>
-        private byte CheckSum(byte[] Buffer, byte Len)
-        {
-            uint Result = 0;
-            try
-            {
-                for (byte Index = 0; Index < Len + 4; Index++)
-                {
-                    Result += Buffer[Index];
-                }
-                Result = 256 - (Result % 256);
-            }
-            catch (Exception E)
-            {
-                {
-                    CDevicesManager.Log.Error("{0} {1}", E.GetType(), E.Message);
-                }
-            }
-            return (byte)Result;
-        }
-
-        /// <summary>
-        /// Retourne l'identifiant du fabricant.
-        /// </summary>
-        public override string Manufacturer
-        {
-            get
-            {
-                string manufacturer = string.Empty;
-                try
-                {
-                    CDevicesManager.Log.Info(messagesText.getManufacturer, DeviceAddress);
-                    manufacturer = GetASCII(Header.REQUESTMANUFACTURERID);
-                    CDevicesManager.Log.Info(messagesText.manufacturer, DeviceAddress, manufacturer);
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-                return manufacturer;
-            }
-        }
-
-        /// <summary>
-        /// Code de production du périphérique.
-        /// </summary>
-        protected string BuildCode
-        {
-            get
-            {
-                string buildCode = string.Empty;
-                try
-                {
-                    CDevicesManager.Log.Info(messagesText.getBuildCode, DeviceAddress);
-                    buildCode = GetASCII(Header.REQUESTBUILDCODE);
-                    CDevicesManager.Log.Info(messagesText.buildCode, DeviceAddress, buildCode);
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-
-                return buildCode;
-            }
-        }
-
-        /// <summary>
-        /// Code produit du périphérique.
-        /// </summary>
-        public override string ProductCode
-        {
-            get
-            {
-                string productCode = string.Empty;
-                try
-                {
-                    CDevicesManager.Log.Info(messagesText.getProductCode, DeviceAddress);
-                    productCode = GetASCII(Header.REQUESTPRODUCTCODE);
-                    CDevicesManager.Log.Info(messagesText.productCode, DeviceAddress, productCode);
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-                return productCode;
-            }
-        }
-
-        /// <summary>
-        /// Code produit du périphérique.
-        /// </summary>
-        protected string EquipementCategory
-        {
-            get
-            {
-                string equipementCategory = string.Empty;
-                try
-                {
-                    CDevicesManager.Log.Info(messagesText.getEquipementID, DeviceAddress);
-                    equipementCategory = GetASCII(Header.REQUESTEQUIPEMENTCATEGORYID);
-                    CDevicesManager.Log.Info(messagesText.equipementID, DeviceAddress, equipementCategory);
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-
-                return equipementCategory;
-            }
-        }
-
-        /// <summary>
-        /// Lit un octet dans le périphérique
-        /// </summary>
-        /// <param name="header">Header de la requête</param>
-        /// <remarks>La valeur de l'octet retourné est 255</remarks>
-        /// <returns>la valeur de l'octet demandé</returns>
-        protected byte GetByte(object header)
-        {
-            byte[] result = { 0 };
-            try
-            {
-                CDevicesManager.Log.Debug(messagesText.getByte, DeviceAddress);
-                if (!IsCmdccTalkSended(DeviceAddress, header, 0, null, result))
-                {
-                    CDevicesManager.Log.Error(messagesText.erreurCmd, header, DeviceAddress);
-                }
-            }
-            catch (Exception E)
-            {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-            }
-            return result[0];
-        }
-
-        /// <summary>
-        /// Lit une chaîne ascii dans le périphérique.
-        /// </summary>
-        /// <param name="header">Header de la requête</param>
-        /// <returns>La chaine de caractères demandée</returns>
-        private string GetASCII(Header header)
-        {
-            byte[] bufferIn = new byte[32];
-            string result = string.Empty;
-            try
-            {
-                CDevicesManager.Log.Debug(messagesText.getText, DeviceAddress);
-                if (IsCmdccTalkSended(DeviceAddress, header, 0, null, bufferIn))
-                {
-                    foreach (byte item in bufferIn)
-                    {
-                        if (item > 0)
-                        {
-                            result += (char)item;
-                        }
-                    }
-                    //return System.Text.Encoding.Default.GetString(bufferIn);
-                }
-                else
-                {
-                    CDevicesManager.Log.Error(messagesText.erreurCmd, header, DeviceAddress);
-                }
-            }
-            catch (Exception E)
-            {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// Retourne le numéro de série du pelicano
-        /// </summary>
-        public override int SerialNumber
-        {
-            get
-            {
-                byte[] bufferIn = { 0, 0, 0 };
-                try
-                {
-                    CDevicesManager.Log.Info(messagesText.getSN, DeviceAddress);
-                    if (!IsCmdccTalkSended(DeviceAddress, Header.REQUESTSN, 0, null, bufferIn))
-                    {
-                        CDevicesManager.Log.Error(messagesText.erreurCmd, Header.REQUESTSN, DeviceAddress);
-                    }
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-                CDevicesManager.Log.Info("Le numéro de série du {0} est {1}", DeviceAddress, bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 * bufferIn[2]));
-                return bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 * bufferIn[2]);
-            }
-        }
-
-        /// <summary>
-        /// Retourne la révision software
-        /// </summary>
-        protected string SWRev
-        {
-            get
-            {
-                try
-                {
-                    CDevicesManager.Log.Info(messagesText.getSWRev, DeviceAddress);
-                    string swRev = GetASCII(Header.REQUESTSWREV);
-                    CDevicesManager.Log.Info(messagesText.swRev, DeviceAddress, swRev);
-                    return swRev;
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-                return "";
-            }
-        }
-
-        /// <summary>
-        /// Lecture de version ccTalk utilisée par le périphérique.
-        /// </summary>
-        protected string CommsRevision
-        {
-            get
-            {
-                byte[] bufferIn = { 0x30, 0x30, 0x30 };
-                string result = "";
-                try
-                {
-                    if (IsCmdccTalkSended(DeviceAddress, Header.REQUESTCOMMSREVISION, 0, null, bufferIn))
-                    {
-                        result = (char)(bufferIn[0] + 0x30) + "." +
-                        (char)(bufferIn[1] + 0x30) + "." +
-                        (char)(bufferIn[2] + 0x30);
-                        CDevicesManager.Log.Info("La version ccTalk du {0} est {1}", DeviceAddress, result);
-                    }
-                    else
-                    {
-                        CDevicesManager.Log.Error("Impossible de lire les informations de la version ccTalk dans le {0}", DeviceAddress);
-                    }
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-                return result;
-            }
-        }
-
-        /// <summary>
         /// Reset software du périphérique.
         /// </summary>
         public bool IsDeviceReseted()
@@ -530,72 +596,6 @@ namespace DeviceLibrary
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
             return result;
-        }
-
-        /// <summary>
-        /// Simple poll du périphérique.
-        /// </summary>
-        /// <returns></returns>
-        public bool SimplePoll
-        {
-            get
-            {
-                try
-                {
-                    CDevicesManager.Log.Info("Simple poll du {0}", DeviceAddress);
-                    if (IsCmdccTalkSended(DeviceAddress, Header.SIMPLEPOLL, 0, null, null))
-                    {
-                        CDevicesManager.Log.Info("Simple poll du {0} effectué.", DeviceAddress);
-                        return true;
-                    }
-                    CDevicesManager.Log.Error(messagesText.erreurCmd, Header.SIMPLEPOLL, DeviceAddress);
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Remise à zéro des compteurs
-        /// </summary>
-        public static void ResetCounters()
-        {
-            counters = null;
-            counters = new CcoinsCounters();
-            counters.SaveCounters();
-            countersFile.Seek(0, SeekOrigin.Begin);
-            counters = (CcoinsCounters)counterSerializer.Deserialize(countersFile);
-        }
-
-        /// <summary>
-        /// Lecture de l'etat des otpocoupleurs du périphériques.
-        /// </summary>
-        public virtual byte OptoStates
-        {
-            get
-            {
-                byte result = 0XFF;
-                try
-                {
-                    CDevicesManager.Log.Info("Lecture de l'état des optos du {0}", DeviceAddress);
-                    result = GetByte(Header.READOPTOSTATES);
-                }
-                catch (Exception E)
-                {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                }
-                return result;
-            }
-        }
-
-        /// <summary>
-        /// Initialisation des périphériques ccTalk
-        /// </summary>
-        public override void Init()
-        {
         }
     }
 }

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_d42331be03d2f1c164217c316e0babf1" kind="dir">
+    <compoundname>D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices</compoundname>
+    <innerdir refid="dir_9403e57cb9592d0726e358e632bc5026">D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Properties</innerdir>
+    <innerfile refid="_form1_8cs">Form1.cs</innerfile>
+    <innerfile refid="_form1_8_designer_8cs">Form1.Designer.cs</innerfile>
+    <innerfile refid="_form2_8cs">Form2.cs</innerfile>
+    <innerfile refid="_form2_8_designer_8cs">Form2.Designer.cs</innerfile>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/"/>
+  </compounddef>
+</doxygen>

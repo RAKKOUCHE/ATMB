@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_coin_validator_8_etat_8cs" kind="file">
+    <compoundname>CCoinValidator.Etat.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_c_coin_validator" prot="public">DeviceLibrary::CCoinValidator</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+<para>Fichier contenant l&apos;énumération des états de la machine d&apos;état du monnayeurs. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>28 11 2018 </para></simplesect>
+<simplesect kind="version"><para>1.0.0 </para></simplesect>
+<simplesect kind="author"><para>Rachid AKKOUCHE </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal">CCoinValidator<sp/>:<sp/>CcashReader</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="group___etats_1ga33c79ff59c961c2e1bbf95838e5d6871" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___etats_1ga33c79ff59c961c2e1bbf95838e5d6871" kindref="member">Etat</ref><sp/>:<sp/>byte</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871abb47b9b1d888741b1d94f3f060281299" kindref="member">STATE_INIT</ref>,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aac8722b851146a23c4e0a59d1bd4b99d" kindref="member">STATE_RESET</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a0e7f32f0542fad5503628ce6a034fbd0" kindref="member">STATE_SIMPLEPOLL</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871adf379b50230aa8921db41fc267a6a01a" kindref="member">STATE_GETPOLLINGDELAY</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871ae5a739c65ca46caf6d8d388f3ae3f215" kindref="member">STATE_SETPOLLINGDELAY</ref>,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a5fe7aa1c693d66ec83b4b57414702906" kindref="member">STATE_GETSTATUS</ref>,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a1ef6b5f52c14078101e5e3667d47737b" kindref="member">STATE_GETMANUFACTURERID</ref>,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a8a6438b30205094505f9334a05dfb181" kindref="member">STATE_GETEQUIPEMENTCATEGORY</ref>,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a265206139b5c776e496bbe0560ccfc99" kindref="member">STATE_GETPRODUCTCODE</ref>,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a4a67b9a79581b431503084482a07723f" kindref="member">STATE_GETBUILDCODE</ref>,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aa8ecbe1a24b3fa5a9b22c7c3d5af26f2" kindref="member">STATE_GETDATABASEVERSION</ref>,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a247eb9a3665774bf7214dd78c11416e7" kindref="member">STATE_GETSERIALNUMBER</ref>,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a76b19450787b4b3caffafa35d8216920" kindref="member">STATE_GETSOFTWAREREVISION</ref>,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a705114ed45d23f5474f073c83ed34198" kindref="member">STATE_TESTSOLENOID</ref>,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871af24075f047ffa05c28715458f60f6c2e" kindref="member">STATE_TRASHEMPTY</ref>,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a842db363f372d4400c74da269105c6f1" kindref="member">STATE_SETSPEEDMOTOR</ref>,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aab26c5005c0ee5838edc28975e09a61a" kindref="member">STATE_GETSPEEDMOTOR</ref>,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a4714312431af83bc3474f314b18fae80" kindref="member">STATE_GETPOCKET</ref>,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a869a56a581e853e5d15226930e13ff5d" kindref="member">STATE_CHECKTRASHDOOR</ref>,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a3a9f94ad405119ae73f2c6410d1cd9f2" kindref="member">STATE_CHECKLOWERSENSOR</ref>,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871afb0753c5cac9583b20e52e08e97b44d6" kindref="member">STATE_SELF_TEST</ref>,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a73daf91486dd909820faca0e91882beb" kindref="member">STATE_SETINHIBITSTATUS</ref>,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a50fe44dca28a30766a5649bf8b9afe9e" kindref="member">STATE_GETINHIBITSTATUS</ref>,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871affadcf3cb0d39b38a8f3ca88f7388901" kindref="member">STATE_GETCREDITBUFFER</ref>,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a9c1c69e1319855b5d761830ce685c96a" kindref="member">STATE_SETMASTERINHIBIT</ref>,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871afc72fc11a904ff5f61cec6c9c34f2115" kindref="member">STATE_DISABLEMASTER</ref>,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a12de40f0f8ff40b07c2ebc106d6626dc" kindref="member">STATE_ENABLEMASTER</ref>,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a16a0d4edbb28a34848d155e347f50d07" kindref="member">STATE_GETMASTERINHIBT</ref>,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871abd893617ba11bba9f46a4e7dde1e14ba" kindref="member">STATE_SETOVERRIDE</ref>,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a549141cb843ccc9e63a5a27d689e4f8a" kindref="member">STATE_GETOVERRIDE</ref>,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a119e95d1b7ccb2fe9684fab70ff434a4" kindref="member">STATE_GETOPTION</ref>,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aebb524d9d2939864e4b98146fa2eda6f" kindref="member">STATE_SETSORTERPATH</ref>,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aa9682c56a455bd2f1a9f57e32e7639fc" kindref="member">STATE_GETSORTERPATH</ref>,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aa3c6eabffd1821f7c63dc12015ca8fb1" kindref="member">STATE_SETDEFAULTSORTERPATH</ref>,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a59085e963dfd65a5fbe264fccc6c6d2e" kindref="member">STATE_GETDEFAULTSORTERPATH</ref>,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a3b1dbe60c4b27db6a2570d8267c81a93" kindref="member">STATE_GETCOINID</ref>,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871ae7d6e6ee885540e3f876a92a7e57b96c" kindref="member">STATE_ACCEPTLIMIT</ref>,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871af4dadaba24e538c246b8c3dd3833ab7e" kindref="member">STATE_COMMSREVISION</ref>,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a3f4ffd4998d3212972d11f59c018692c" kindref="member">STATE_CHECKCREDIBUFFER</ref>,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a667adf1721ecf31975b473ea51005d04" kindref="member">STATE_IDLE</ref>,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aa1cbf7ab92312cb40dc586242a8bc03e" kindref="member">STATE_STOP</ref>,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.Etat.cs"/>
+  </compounddef>
+</doxygen>

@@ -13,31 +13,7 @@ namespace DeviceLibrary
     /// </summary>
     public class CMemoryStorage
     {
-        /// <summary>
-        /// Mode de gestion du maintien des informations en mémoire
-        /// </summary>
-        public enum MemoryKeepType : byte
-        {
-            /// <summary>
-            /// Volatiles effacées par un reset.
-            /// </summary>
-            VOLATILLOSTONRESET = 0,
-
-            /// <summary>
-            /// Volatiles effacées lors de la coupure de l'alimentation
-            /// </summary>
-            VOLATILLOSTONPOWERDOWN = 1,
-
-            /// <summary>
-            /// Permanent usage limité
-            /// </summary>
-            PERMANENTLIMITED = 2,
-
-            /// <summary>
-            /// Permanent sans limite
-            /// </summary>
-            PERMANENTUNLIMITED = 3,
-        }
+        private readonly CccTalk Owner;
 
         /// <summary>
         /// Contient le type de maintien de la mémoire
@@ -64,8 +40,6 @@ namespace DeviceLibrary
         /// </summary>
         private byte writeBytesPerBlock;
 
-        private readonly CccTalk Owner;
-
         /// <summary>
         /// Constructeur
         /// </summary>
@@ -76,27 +50,29 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Lit les informations sur la gestion de la mémoire de sauvegarde
+        /// Mode de gestion du maintien des informations en mémoire
         /// </summary>
-        public void GetDataStorageAvailability()
+        public enum MemoryKeepType : byte
         {
-            try
-            {
-                byte[] bufferIn = { 0, 0, 0, 0, 0 };
-                CDevicesManager.Log.Info("Lecture des informations sur les capacités de lecture et écriture des données du {0} : ", Owner.DeviceAddress);
-                if (Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTDATASTORAGEAVAILABILITY, 0, null, bufferIn))
-                {
-                    memoryType = (MemoryKeepType)bufferIn[0];
-                    readBlocks = bufferIn[1];
-                    readBytesPerBlock = bufferIn[2];
-                    writeBlocks = bufferIn[3];
-                    writeBytesPerBlock = bufferIn[4];
-                }
-            }
-            catch (Exception E)
-            {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-            }
+            /// <summary>
+            /// Volatiles effacées par un reset.
+            /// </summary>
+            VOLATILLOSTONRESET = 0,
+
+            /// <summary>
+            /// Volatiles effacées lors de la coupure de l'alimentation
+            /// </summary>
+            VOLATILLOSTONPOWERDOWN = 1,
+
+            /// <summary>
+            /// Permanent usage limité
+            /// </summary>
+            PERMANENTLIMITED = 2,
+
+            /// <summary>
+            /// Permanent sans limite
+            /// </summary>
+            PERMANENTUNLIMITED = 3,
         }
 
         /// <summary>
@@ -179,6 +155,30 @@ namespace DeviceLibrary
                 if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.READDATABLOCK, (byte)bufferParam.Length, bufferParam, data))
                 {
                     throw new Exception(string.Format("Impossible de lire les données dans le bloc {0} du périphérique {1}", BlockNumber, Owner.DeviceAddress));
+                }
+            }
+            catch (Exception E)
+            {
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Lit les informations sur la gestion de la mémoire de sauvegarde
+        /// </summary>
+        public void GetDataStorageAvailability()
+        {
+            try
+            {
+                byte[] bufferIn = { 0, 0, 0, 0, 0 };
+                CDevicesManager.Log.Info("Lecture des informations sur les capacités de lecture et écriture des données du {0} : ", Owner.DeviceAddress);
+                if (Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTDATASTORAGEAVAILABILITY, 0, null, bufferIn))
+                {
+                    memoryType = (MemoryKeepType)bufferIn[0];
+                    readBlocks = bufferIn[1];
+                    readBytesPerBlock = bufferIn[2];
+                    writeBlocks = bufferIn[3];
+                    writeBytesPerBlock = bufferIn[4];
                 }
             }
             catch (Exception E)

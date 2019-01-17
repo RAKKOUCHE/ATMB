@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_event_1_1_fire_event_arg" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CEvent::FireEventArg</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_event_1_1_fire_event_arg_1aa9a7b4b1c547cb94b03c76203ca37583" prot="public" static="no" mutable="no">
+        <type><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" kindref="member">Reason</ref></type>
+        <definition>Reason DeviceLibrary.CEvent.FireEventArg.reason</definition>
+        <argsstring></argsstring>
+        <name>reason</name>
+        <briefdescription>
+<para>Cause de l&apos;événement. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="109" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_event_1_1_fire_event_arg_1a2f1215379bf37c87f8d3389157fbafb0" prot="public" static="no" mutable="no">
+        <type>object</type>
+        <definition>object DeviceLibrary.CEvent.FireEventArg.donnee</definition>
+        <argsstring></argsstring>
+        <name>donnee</name>
+        <briefdescription>
+<para>Objet contenant les infomations concernant l&apos;événement. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="114" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class d&apos;évenement </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="250">
+        <label>DeviceLibrary.CEvent.FireEventArg</label>
+        <link refid="class_device_library_1_1_c_event_1_1_fire_event_arg"/>
+        <childnode refid="251" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>EventArgs</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="252">
+        <label>DeviceLibrary.CEvent.FireEventArg</label>
+        <link refid="class_device_library_1_1_c_event_1_1_fire_event_arg"/>
+        <childnode refid="253" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="253">
+        <label>EventArgs</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="105" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="104" bodyend="115"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_event_1_1_fire_event_arg_1a2f1215379bf37c87f8d3389157fbafb0" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent::FireEventArg</scope><name>donnee</name></member>
+      <member refid="class_device_library_1_1_c_event_1_1_fire_event_arg_1aa9a7b4b1c547cb94b03c76203ca37583" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent::FireEventArg</scope><name>reason</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

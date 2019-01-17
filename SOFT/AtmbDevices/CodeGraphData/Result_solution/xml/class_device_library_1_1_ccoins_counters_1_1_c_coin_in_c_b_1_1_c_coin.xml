@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CcoinsCounters::CCoinInCB::CCoin</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1a3ce86034daa293761b30eefa65cf75c2" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.coinInCB</definition>
+        <argsstring></argsstring>
+        <name>coinInCB</name>
+        <briefdescription>
+<para>Nombre de pièces dans la caisse par canal du monnayeur </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" line="33" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1adebbdc868f0b4f42fce3177e36253e01" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="48" endline="51">DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.CCoin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1a21394b319dde0c27c3fec7c10d8404f4" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.coinValue</definition>
+        <argsstring></argsstring>
+        <name>coinValue</name>
+        <briefdescription>
+<para>Valeur de la pièces </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" line="38" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1adebbdc868f0b4f42fce3177e36253e01" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="48" endline="51">DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.CCoin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1afff8b6517ffc794761f10de193767e3c" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.amountCoinInCB</definition>
+        <argsstring></argsstring>
+        <name>amountCoinInCB</name>
+        <briefdescription>
+<para>Montant des pièces dans la caisse par canal du monnayeur. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" line="43" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1adebbdc868f0b4f42fce3177e36253e01" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="48" endline="51">DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.CCoin</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1adebbdc868f0b4f42fce3177e36253e01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.CCoin</definition>
+        <argsstring>()</argsstring>
+        <name>CCoin</name>
+        <briefdescription>
+<para>Constructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" line="48" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" bodystart="48" bodyend="51"/>
+        <references refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1afff8b6517ffc794761f10de193767e3c" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="43">DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.amountCoinInCB</references>
+        <references refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1a3ce86034daa293761b30eefa65cf75c2" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="33">DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.coinInCB</references>
+        <references refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1a21394b319dde0c27c3fec7c10d8404f4" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="38">DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.coinValue</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class contenant les informationss sur les pièces. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" line="29" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" bodystart="28" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1afff8b6517ffc794761f10de193767e3c" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcoinsCounters::CCoinInCB::CCoin</scope><name>amountCoinInCB</name></member>
+      <member refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1adebbdc868f0b4f42fce3177e36253e01" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcoinsCounters::CCoinInCB::CCoin</scope><name>CCoin</name></member>
+      <member refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1a3ce86034daa293761b30eefa65cf75c2" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcoinsCounters::CCoinInCB::CCoin</scope><name>coinInCB</name></member>
+      <member refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1a21394b319dde0c27c3fec7c10d8404f4" prot="public" virt="non-virtual"><scope>DeviceLibrary::CcoinsCounters::CCoinInCB::CCoin</scope><name>coinValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

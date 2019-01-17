@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_hopper_1_1_c_soft_level_data" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CHopper::CSoftLevelData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1a482dad4e6ff3cc0bb5668403777b485c" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CHopper.CSoftLevelData.nameOfHopper</definition>
+        <argsstring></argsstring>
+        <name>nameOfHopper</name>
+        <briefdescription>
+<para>Nom du hopper </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="63" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1adf260286c8daee8632a2a22f8dfcd4a5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CHopper.CSoftLevelData.isHCritical</definition>
+        <argsstring></argsstring>
+        <name>isHCritical</name>
+        <briefdescription>
+<para>Indique si le hopper est critique. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="68" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1ab87611ef77ba688da1d00e03b135d8d1" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long DeviceLibrary.CHopper.CSoftLevelData.coinsNumber</definition>
+        <argsstring></argsstring>
+        <name>coinsNumber</name>
+        <briefdescription>
+<para>Indique le nombre de pièces dans le hopper. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="73" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1ab04df342ae4e7632fe63517e0ed8c87f" prot="public" static="no" mutable="no">
+        <type><ref refid="group___niveaux_1ga236fd4e7d945cd014d736b3ca9487dd3" kindref="member">CLevel.SoftLevel</ref></type>
+        <definition>CLevel.SoftLevel DeviceLibrary.CHopper.CSoftLevelData.level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <briefdescription>
+<para>Seuil atteint. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="78" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class contenant les informations du message envoyé lors du changement d&apos;état des niveaux soft. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="235">
+        <label>DeviceLibrary.CHopper.CSoftLevelData</label>
+        <link refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data"/>
+        <childnode refid="236" relation="usage">
+          <edgelabel>level</edgelabel>
+        </childnode>
+      </node>
+      <node id="236">
+        <label>DeviceLibrary.CHopper.CLevel</label>
+        <link refid="class_device_library_1_1_c_hopper_1_1_c_level"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="59" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="58" bodyend="79"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1ab87611ef77ba688da1d00e03b135d8d1" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CSoftLevelData</scope><name>coinsNumber</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1adf260286c8daee8632a2a22f8dfcd4a5" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CSoftLevelData</scope><name>isHCritical</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1ab04df342ae4e7632fe63517e0ed8c87f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CSoftLevelData</scope><name>level</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1a482dad4e6ff3cc0bb5668403777b485c" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CSoftLevelData</scope><name>nameOfHopper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,979 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1messages_text" kind="class" prot="public">
+    <compoundname>DeviceLibrary::messagesText</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1messages_text_1a99415a4cb30ae294b1ad2b89f4f03a2c" prot="private" static="yes" mutable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager DeviceLibrary.messagesText.resourceMan</definition>
+        <argsstring></argsstring>
+        <name>resourceMan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="27" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1messages_text_1a67ab60e4967f1994dff349daef89a099" prot="private" static="yes" mutable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo DeviceLibrary.messagesText.resourceCulture</definition>
+        <argsstring></argsstring>
+        <name>resourceCulture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="29" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a031636cf4621ff551aa62648e5c08b4b" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager DeviceLibrary.messagesText.ResourceManager</definition>
+        <argsstring></argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+<para>Retourne l&apos;instance ResourceManager mise en cache utilisée par cette classe. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="39" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1abcb12fd4a215b678e9b5abda167ce8f6" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo DeviceLibrary.messagesText.Culture</definition>
+        <argsstring></argsstring>
+        <name>Culture</name>
+        <briefdescription>
+<para>Remplace la propriété CurrentUICulture du thread actuel pour toutes les recherches de ressources à l&apos;aide de cette classe de ressource fortement typée. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="54" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a1b8c8f4de98cd13953372dac6cf288da" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.activationCV</definition>
+        <argsstring></argsstring>
+        <name>activationCV</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Activation du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="66" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="66" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" compoundref="_ccash_reader_8cs" startline="225" endline="236">DeviceLibrary.CcashReader.MasterEnable</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a755549427f23616566b9993e8ea52a22" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.buildCode</definition>
+        <argsstring></argsstring>
+        <name>buildCode</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Le build code du {0} est "{1}". </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="75" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1aae08998942f40ad4e17d68f70572f27b" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.busOKfinded</definition>
+        <argsstring></argsstring>
+        <name>busOKfinded</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Bus ccTalk trouvé sur le port COM{0}.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="84" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="84" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="74" endline="102">DeviceLibrary.CccTalk.CccTalk</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a5aba326853a8c8f79f70053306ee819c" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.callDll</definition>
+        <argsstring></argsstring>
+        <name>callDll</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Appel de la dll. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="93" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="93" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1adc962171c994c63312d316f13b046d2c" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.ccTalkInstance</definition>
+        <argsstring></argsstring>
+        <name>ccTalkInstance</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Instanciation ccTalk.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="102" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="102" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="74" endline="102">DeviceLibrary.CccTalk.CccTalk</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ac961f592dd67ea083a505482617c823b" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.cmdMotorPelicano</definition>
+        <argsstring></argsstring>
+        <name>cmdMotorPelicano</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Commande {0} moteur du pelicano . </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="111" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="111" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1aeddf0e0eb3b4b86bdcde077601c05879" compoundref="_c_pelicano_8cs" startline="196" endline="229">DeviceLibrary.CPelicano.ActivateMotor</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1aa5a99445dd360fad1b310b74d9be7bf6" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.cmdMotorPelicanoInProgress</definition>
+        <argsstring></argsstring>
+        <name>cmdMotorPelicanoInProgress</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Le moteur du pelicano est activé.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="120" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="120" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ac49c45b7dd286e8e7f4bc3999c833740" compoundref="_c_pelicano_8cs" startline="259" endline="278">DeviceLibrary.CPelicano.CPRStart</referencedby>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ac026ccd1409c2242f5200a8eb79fce82" compoundref="_c_pelicano_8cs" startline="234" endline="252">DeviceLibrary.CPelicano.TrashCycle</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a5ae581131aa224503a54e4a29aa82916" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.cmdMotorPelicanoMode</definition>
+        <argsstring></argsstring>
+        <name>cmdMotorPelicanoMode</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Activation du moteur du pelicano commande {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="129" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="129" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ac49c45b7dd286e8e7f4bc3999c833740" compoundref="_c_pelicano_8cs" startline="259" endline="278">DeviceLibrary.CPelicano.CPRStart</referencedby>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ac026ccd1409c2242f5200a8eb79fce82" compoundref="_c_pelicano_8cs" startline="234" endline="252">DeviceLibrary.CPelicano.TrashCycle</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a11e70bc1bf9a2de56400fbab90cb153f" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.cmdSelfTest</definition>
+        <argsstring></argsstring>
+        <name>cmdSelfTest</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Effectue un self test du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="138" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ada1347a59a5832cbebb4ed1fe62a76d4" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.dataBaseVersion</definition>
+        <argsstring></argsstring>
+        <name>dataBaseVersion</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à La version de la data base du {0} est "{1}". </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="147" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ab25fcc8955786b9eb2cc6a0eeb512a0e" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.deactivationCV</definition>
+        <argsstring></argsstring>
+        <name>deactivationCV</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Desactivation du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="156" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="156" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" compoundref="_ccash_reader_8cs" startline="209" endline="220">DeviceLibrary.CcashReader.MasterDisable</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ab9931d675639d2f20b12a5b9d7247d76" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.delayPolling</definition>
+        <argsstring></argsstring>
+        <name>delayPolling</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Delai maximum entre 2 commande pour le {0} est de {1} ms. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="165" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a616c0d5ff9f3a4f77f95b8402e3d17b5" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.echo</definition>
+        <argsstring></argsstring>
+        <name>echo</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Echo : . </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="174" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="174" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a2f05f0441e8bb2a403b65e2ed0839e2d" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.equipementID</definition>
+        <argsstring></argsstring>
+        <name>equipementID</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à L'identitification de l'equipement est "{0}". </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="183" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.erreur</definition>
+        <argsstring></argsstring>
+        <name>erreur</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à ERREUR {0} {1} {2}.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="192" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="192" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1aeddf0e0eb3b4b86bdcde077601c05879" compoundref="_c_pelicano_8cs" startline="196" endline="229">DeviceLibrary.CPelicano.ActivateMotor</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="903" endline="940">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" compoundref="_c_b_n_r___c_p_i_8cs" startline="227" endline="378">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1acb9b7f647f7ca372051492560ea7fc85" compoundref="_c_devices_manager_8cs" startline="994" endline="1030">DeviceLibrary.CDevicesManager.CashBoxRemoved</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" compoundref="_c_b_n_r___c_p_i_8cs" startline="166" endline="183">DeviceLibrary.CBNR_CPI.CBNR_CPI</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="74" endline="102">DeviceLibrary.CccTalk.CccTalk</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1addb8e79d5a3377a2aadef60fc1b19a53" compoundref="_c_coin_validator_8cs" startline="778" endline="807">DeviceLibrary.CCoinValidator.CCoinValidator</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4ade41b0290eee442ca90765ec2523b7" compoundref="_c_b_n_r___c_p_i_8cs" startline="779" endline="804">DeviceLibrary.CBNR_CPI.CheckAndDispense</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="395" endline="461">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a70d416bc45d53fc08588ece6aa2d2c0e" compoundref="_c_hopper_8cs" startline="981" endline="1085">DeviceLibrary.CHopper.CheckLevel</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a25c0ba824eb783ecdec6c6f53f90f243" compoundref="_c_hopper_8cs" startline="1368" endline="1401">DeviceLibrary.CHopper.CHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" compoundref="_c_hopper_8_variable_set_8cs" startline="181" endline="192">DeviceLibrary.CHopper.CHopperVariableSet.CHopperVariableSet</referencedby>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ac49c45b7dd286e8e7f4bc3999c833740" compoundref="_c_pelicano_8cs" startline="259" endline="278">DeviceLibrary.CPelicano.CPRStart</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1adc0fd478490e3ef5e255f7bc2f64f506" compoundref="_c_hopper_8cs" startline="805" endline="823">DeviceLibrary.CHopper.DispenseCoins</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1ae47327ae35305769239ffd9922081d57" compoundref="_c_hopper_8cs" startline="1090" endline="1130">DeviceLibrary.CHopper.Empty</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a1c8de197528a0f954006105da4fd261f" compoundref="_c_hopper_8cs" startline="741" endline="756">DeviceLibrary.CHopper.EnableHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="399" endline="427">DeviceLibrary.CccTalk.GetASCII</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="62" endline="83">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="376" endline="392">DeviceLibrary.CccTalk.GetByte</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a1faca12f58535beec695d78479d29884" compoundref="_c_hopper_8cs" startline="783" endline="797">DeviceLibrary.CHopper.GetCipherKey</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" compoundref="_c_memory_storage_8cs" startline="168" endline="188">DeviceLibrary.CMemoryStorage.GetDataBlock</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1adee6f8f04f44591bd69e469ae255ac28" compoundref="_c_hopper_8_status_8cs" startline="147" endline="167">DeviceLibrary.CHopper.CHopperStatus.GetHopperStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" compoundref="_ccash_reader_8cs" startline="190" endline="204">DeviceLibrary.CcashReader.GetInhibitMask</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a6c3cbf56cd236d0867a96e5345f6b881" compoundref="_c_hopper_8cs" startline="724" endline="736">DeviceLibrary.CHopper.GetResetableCounter</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="126" endline="140">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" compoundref="_c_b_n_r___c_p_i_8cs" startline="809" endline="824">DeviceLibrary.CBNR_CPI.Init</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1acda4cf9b030e54786ba9b366fdf3f6e2" compoundref="_c_hopper_8cs" startline="902" endline="958">DeviceLibrary.CHopper.Init</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" compoundref="_c_ctalk_8cs" startline="510" endline="533">DeviceLibrary.CccTalk.IsDeviceReseted</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" compoundref="_ccash_reader_8cs" startline="209" endline="220">DeviceLibrary.CcashReader.MasterDisable</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" compoundref="_ccash_reader_8cs" startline="225" endline="236">DeviceLibrary.CcashReader.MasterEnable</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1abcfed3749aff233df6c41849c8192850" compoundref="_c_devices_manager_8cs" startline="228" endline="243">DeviceLibrary.CDevicesManager.OnBNRDispensed</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a761cfb095d56e00ec6f89f6374591cef" compoundref="_c_devices_manager_8cs" startline="248" endline="263">DeviceLibrary.CDevicesManager.OnBNRErreur</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6a8eeadddea0c11a5b9f1ac3b56be09e" compoundref="_c_devices_manager_8cs" startline="269" endline="284">DeviceLibrary.CDevicesManager.OnbnrModuleReinsere</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad598d4a8eaf78fa130df9a8edbf7515f" compoundref="_c_devices_manager_8cs" startline="290" endline="305">DeviceLibrary.CDevicesManager.OnBNRResetModule</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad6899efe8ae1e945a5c4ea6791267a57" compoundref="_c_devices_manager_8cs" startline="311" endline="326">DeviceLibrary.CDevicesManager.OnBRNModuleRemoved</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a4b48353ed25192d2a4ee8c7fe93ed6ea" compoundref="_c_devices_manager_8cs" startline="328" endline="343">DeviceLibrary.CDevicesManager.OnCashBoxRemoved</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a778ba9ee3fd8972814be5673fdfb60db" compoundref="_c_devices_manager_8cs" startline="348" endline="363">DeviceLibrary.CDevicesManager.OnCashClose</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a80a442b9fa68ed9791adbc7b13c8cd98" compoundref="_c_devices_manager_8cs" startline="368" endline="383">DeviceLibrary.CDevicesManager.OnCashOpen</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a0a113fdda969a3d94e09b5f1ac8fbf54" compoundref="_c_devices_manager_8cs" startline="389" endline="404">DeviceLibrary.CDevicesManager.OnCVError</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a65f85225203f76bb9bd5db0e6f53e282" compoundref="_c_devices_manager_8cs" startline="409" endline="425">DeviceLibrary.CDevicesManager.OnDllReady</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa9bec486871cefa0e177121ec0c8cd13" compoundref="_c_devices_manager_8cs" startline="431" endline="446">DeviceLibrary.CDevicesManager.OnHopperDispensed</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a07945482a7a21471f60672c01b8a19a7" compoundref="_c_devices_manager_8cs" startline="452" endline="467">DeviceLibrary.CDevicesManager.OnHopperEmptied</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8c6efc3c0f6e6664990edf0c92f6f237" compoundref="_c_devices_manager_8cs" startline="473" endline="488">DeviceLibrary.CDevicesManager.OnHopperError</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa18aded58c64b857ef55e6d393d481ff" compoundref="_c_devices_manager_8cs" startline="494" endline="509">DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa1cc70b8bdfacf1f80e54fa230fd5477" compoundref="_c_devices_manager_8cs" startline="515" endline="530">DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad66242c0d494fbb018d3da25334bfcb7" compoundref="_c_devices_manager_8cs" startline="535" endline="551">DeviceLibrary.CDevicesManager.OnMoneyReceived</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1ad4e3e04686c9cabd002597ebd8fa3712" compoundref="_c_hopper_8cs" startline="761" endline="778">DeviceLibrary.CHopper.PumpRNG</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ade39ebe65c6d9b8ba4a7935c89a0f32f" compoundref="_c_devices_manager_8cs" startline="556" endline="636">DeviceLibrary.CDevicesManager.ReadParamHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a87f99167dfc7b15e42f28e302a29e06d" compoundref="_c_b_n_r___c_p_i_8cs" startline="724" endline="745">DeviceLibrary.CBNR_CPI.Retract</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1abe2d64822c6158adae8bd2bfcc1f6207" compoundref="_c_b_n_r___c_p_i_8cs" startline="750" endline="773">DeviceLibrary.CBNR_CPI.RollBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" compoundref="_c_memory_storage_8cs" startline="195" endline="217">DeviceLibrary.CMemoryStorage.SetDataBlock</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="243" endline="257">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="169" endline="184">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a941fe54c9299c2f3d78f865a3c7dc720" compoundref="_c_coin_validator_8cs" startline="282" endline="297">DeviceLibrary.CCoinValidator.SetOverrideStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" compoundref="_c_coin_validator_8_c_canal_8cs" startline="195" endline="210">DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af8b27e93e6a4fbce10494e95723c91ec" compoundref="_c_devices_manager_8cs" startline="1096" endline="1114">DeviceLibrary.CDevicesManager.SetSorterPath</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a83b922baef8338338cff42eadbc534b3" compoundref="_c_devices_manager_8cs" startline="641" endline="680">DeviceLibrary.CDevicesManager.SetSortersAndHoppersToLoad</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" compoundref="_c_hopper_8_variable_set_8cs" startline="161" endline="176">DeviceLibrary.CHopper.CHopperVariableSet.SetVariable</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a26e1f1fb8a30b65d591b53eb6d049acf" compoundref="_c_hopper_8cs" startline="1216" endline="1362">DeviceLibrary.CHopper.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a2a1d5d6383c6ab9e5952f6cac14d65df" compoundref="_c_hopper_8cs" startline="828" endline="897">DeviceLibrary.CHopper.TestHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="258" endline="276">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ac026ccd1409c2242f5200a8eb79fce82" compoundref="_c_pelicano_8cs" startline="234" endline="252">DeviceLibrary.CPelicano.TrashCycle</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a58a0185454ad0e063699aae15c5df79e" compoundref="_c_ctalk_8cs" startline="143" endline="156">DeviceLibrary.CccTalk.ZeroMemory</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a9b8554d38ab9c2799d5405e2f894cf82" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.erreurCmd</definition>
+        <argsstring></argsstring>
+        <name>erreurCmd</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Impossible d'effectuer la commande {0} sur le {1}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="201" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="201" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="399" endline="427">DeviceLibrary.CccTalk.GetASCII</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="376" endline="392">DeviceLibrary.CccTalk.GetByte</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" compoundref="_c_ctalk_8cs" startline="510" endline="533">DeviceLibrary.CccTalk.IsDeviceReseted</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" compoundref="_c_coin_validator_8_c_canal_8cs" startline="195" endline="210">DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="258" endline="276">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a9bd55afe4b9caa13b0d861fc4c3ff24f" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.erreurPollingPriority</definition>
+        <argsstring></argsstring>
+        <name>erreurPollingPriority</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Impossible de lire la délai du polling {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="210" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a54b35fb372930fed5dc13a77e060396c" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.erreurPort</definition>
+        <argsstring></argsstring>
+        <name>erreurPort</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Erreur de conversion du numero de port {0}.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="219" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="219" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ae3dae0077a9b7fe533abd3d9591e0733" compoundref="_c_ctalk_8cs" startline="109" endline="136">DeviceLibrary.CccTalk.IsCcTalkPort</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1aa59ba4427bc96cde7bd3f125a279f09c" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.errGetInhibitStatus</definition>
+        <argsstring></argsstring>
+        <name>errGetInhibitStatus</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Impossible de lire le masque d'inhibition des canaux du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="228" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a56487b103b700f2efc304a3ab0a75d1a" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.errInhibitStatus</definition>
+        <argsstring></argsstring>
+        <name>errInhibitStatus</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Impossible de modifier l'habitation des canaux du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="237" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="237" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="243" endline="257">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ad9c4ce7df2d9a97fb037a6b2fe1a01fe" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.errMasterInhibitStatus</definition>
+        <argsstring></argsstring>
+        <name>errMasterInhibitStatus</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Impossible d'enregistrer le master inhibit status du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="246" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="246" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="169" endline="184">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a457477e9ee134856647bf051d74293ea" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.errMotorPelicano</definition>
+        <argsstring></argsstring>
+        <name>errMotorPelicano</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Impossible d'executer la commande sur le moteur du pelicano. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="255" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="255" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1aeddf0e0eb3b4b86bdcde077601c05879" compoundref="_c_pelicano_8cs" startline="196" endline="229">DeviceLibrary.CPelicano.ActivateMotor</referencedby>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ac49c45b7dd286e8e7f4bc3999c833740" compoundref="_c_pelicano_8cs" startline="259" endline="278">DeviceLibrary.CPelicano.CPRStart</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a2ff352411ad8af876fe7fb650e091aa5" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getBuildCode</definition>
+        <argsstring></argsstring>
+        <name>getBuildCode</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Demande du code de fabrication du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="264" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a76120e98024c293607801a782c164899" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getByte</definition>
+        <argsstring></argsstring>
+        <name>getByte</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Lecture de l'octet dans le {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="273" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="273" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="376" endline="392">DeviceLibrary.CccTalk.GetByte</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ab9e7a38bdab6ee7cce1c2f701e1e5fa1" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getDataBaseVersion</definition>
+        <argsstring></argsstring>
+        <name>getDataBaseVersion</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Demande de la version de la data base du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="282" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1afd4b16d2d28ef8fc8e9152e92ee3875f" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getEquipementID</definition>
+        <argsstring></argsstring>
+        <name>getEquipementID</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Le périphérique est un {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="291" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ae354123829e86b8cf6e13deaa2cda560" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getInhibitStatus</definition>
+        <argsstring></argsstring>
+        <name>getInhibitStatus</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Lecture du masque d'inhibitiion des canaux du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="300" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="300" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" compoundref="_ccash_reader_8cs" startline="190" endline="204">DeviceLibrary.CcashReader.GetInhibitMask</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a98d96d1497375fafe0595cd8b05cfd35" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getManufacturer</definition>
+        <argsstring></argsstring>
+        <name>getManufacturer</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Demande de l'identifiant du fabricant du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="309" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ab90f77c2226516821994a2f6c1618ba9" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getMasterInhibt</definition>
+        <argsstring></argsstring>
+        <name>getMasterInhibt</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Lecture de l'inhibition du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="318" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ad09a1b8efb45bbb4d1f9724decdb84d9" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getPolling</definition>
+        <argsstring></argsstring>
+        <name>getPolling</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Demande du délai de polling pour le {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="327" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="327" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a38c36d19079298c6c9dbd63befe471bc" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getProductCode</definition>
+        <argsstring></argsstring>
+        <name>getProductCode</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Demande du code produit du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="336" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1adf25abdc6ae9b774a1acf5ca9c3e774c" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getSN</definition>
+        <argsstring></argsstring>
+        <name>getSN</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Demande du numéro de série du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="345" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a57d987d8f74d2176c72e5f6e29b42fc2" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getSWRev</definition>
+        <argsstring></argsstring>
+        <name>getSWRev</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Demande de la vérivision software du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="354" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a41967611d2c8b9d237599dd156a13dd8" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.getText</definition>
+        <argsstring></argsstring>
+        <name>getText</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Lecture de la chaine ASCII dans le {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="363" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="363" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="399" endline="427">DeviceLibrary.CccTalk.GetASCII</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a4e9189c04771bbd6e96ba7f9d5d515fc" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.hello</definition>
+        <argsstring></argsstring>
+        <name>hello</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à HELLO. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="372" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a4beee20720447145e0de98bb1cf44e66" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.inhibitStatus</definition>
+        <argsstring></argsstring>
+        <name>inhibitStatus</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Modifie l'habilitation des canaux du {0} {1} {2}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="381" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="381" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="243" endline="257">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ac37e35f9f795175e6dca7d0b49b33637" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.inhibitStatusResult</definition>
+        <argsstring></argsstring>
+        <name>inhibitStatusResult</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à le {0} est {1}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="390" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a2f62050bea514c3f25710deb511535dc" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.manufacturer</definition>
+        <argsstring></argsstring>
+        <name>manufacturer</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à L'identifiant du fabricant du {0} est "{1}". </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="399" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1af19cd4177e26f024d4d1a709f51c63b9" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.noccTalkDevice</definition>
+        <argsstring></argsstring>
+        <name>noccTalkDevice</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à {0} Lecture impossible, pas de bus ccTalk ou pas de periphérique ccTalk reconnu ou periphérique HS sur le port {1}.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="408" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="408" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1ac150c27572b319dde35b8ac2b76e5801" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.polling</definition>
+        <argsstring></argsstring>
+        <name>polling</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Lecture du délai de polling. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="417" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1af981c9675348c68009065abaf1a00b28" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.productCode</definition>
+        <argsstring></argsstring>
+        <name>productCode</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Le code produit du {0} est "{1}". </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="426" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a639a4669a24e5f9579bdd3815268d806" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.readAnswerDevice</definition>
+        <argsstring></argsstring>
+        <name>readAnswerDevice</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Lecture de la réponse du périphérique.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="435" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="435" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1aac828c24757eef357df7ede8980d5f5d" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.readEcho</definition>
+        <argsstring></argsstring>
+        <name>readEcho</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Lecture de l'écho.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="444" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="444" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a3bce2e18d1b8dbc3d29446f4c1fc7cc7" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.search_ccTalk</definition>
+        <argsstring></argsstring>
+        <name>search_ccTalk</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Recherche du port série ccTalk.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="453" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="453" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="74" endline="102">DeviceLibrary.CccTalk.CccTalk</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a848d1437acc274997c7e914263ed490a" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.selfTest</definition>
+        <argsstring></argsstring>
+        <name>selfTest</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Le résultat du self test du {0} est {1}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="462" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="462" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a6cdf49693beb3766d1b9a2ca4c582a43" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.sendCmd</definition>
+        <argsstring></argsstring>
+        <name>sendCmd</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Envoi de la commande "{0}" au {1}.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="471" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="471" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a36eee29e70368828dc0fb2ff7ec98ac0" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.sendMasterInhibitStatus</definition>
+        <argsstring></argsstring>
+        <name>sendMasterInhibitStatus</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Envoie la commande master inhibit {0} au {1}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="480" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="480" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="169" endline="184">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a3e4012cb4d076ab167356a3e9319aa36" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.serialNumber</definition>
+        <argsstring></argsstring>
+        <name>serialNumber</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Le numéro de série du {0} est {1}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="489" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a8290edf9a6414b63b8276cb192fd2975" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.starLine</definition>
+        <argsstring></argsstring>
+        <name>starLine</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à *************************************************. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="498" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1aba7fce2b30af5a62fecfce3f6920ac80" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.swRev</definition>
+        <argsstring></argsstring>
+        <name>swRev</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à La revision software du {0} est {1}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="507" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a93f4723ab6c2e8f342ace9d99b302555" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.testMotor</definition>
+        <argsstring></argsstring>
+        <name>testMotor</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Test moteur {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="516" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="516" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a19dcdd2a0c76cdbc8f4c7179da6c9b3d" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.testSolenoid</definition>
+        <argsstring></argsstring>
+        <name>testSolenoid</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Test des bobines du {0}. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="525" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="525" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="258" endline="276">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1a419304b9107134f10dc4b155581aa087" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.txtAnswer</definition>
+        <argsstring></argsstring>
+        <name>txtAnswer</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Réponse : . </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="534" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="534" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1aec4481f3887107f375c6a9d5644a3d2e" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.txtMessageSended</definition>
+        <argsstring></argsstring>
+        <name>txtMessageSended</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Message envoyé : . </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="543" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="543" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1messages_text_1aa2c6c9e22c64621ad6e50951e6233abd" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.messagesText.verifSerialPort</definition>
+        <argsstring></argsstring>
+        <name>verifSerialPort</name>
+        <briefdescription>
+<para>Recherche une chaîne localisée semblable à Vérification sur le port série {0}.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="552" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="552" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ae3dae0077a9b7fe533abd3d9591e0733" compoundref="_c_ctalk_8cs" startline="109" endline="136">DeviceLibrary.CccTalk.IsCcTalkPort</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_device_library_1_1messages_text_1a1e2f14ed8076fd6c18e8a09511f2e25e" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.messagesText.messagesText</definition>
+        <argsstring>()</argsstring>
+        <name>messagesText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="32" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="32" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="267">
+        <label>Resources</label>
+      </node>
+      <node id="266">
+        <label>DeviceLibrary.messagesText</label>
+        <link refid="class_device_library_1_1messages_text"/>
+        <childnode refid="267" relation="usage">
+          <edgelabel>resourceMan</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="25" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="25" bodyend="557"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1messages_text_1a1b8c8f4de98cd13953372dac6cf288da" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>activationCV</name></member>
+      <member refid="class_device_library_1_1messages_text_1a755549427f23616566b9993e8ea52a22" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>buildCode</name></member>
+      <member refid="class_device_library_1_1messages_text_1aae08998942f40ad4e17d68f70572f27b" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>busOKfinded</name></member>
+      <member refid="class_device_library_1_1messages_text_1a5aba326853a8c8f79f70053306ee819c" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>callDll</name></member>
+      <member refid="class_device_library_1_1messages_text_1adc962171c994c63312d316f13b046d2c" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>ccTalkInstance</name></member>
+      <member refid="class_device_library_1_1messages_text_1ac961f592dd67ea083a505482617c823b" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>cmdMotorPelicano</name></member>
+      <member refid="class_device_library_1_1messages_text_1aa5a99445dd360fad1b310b74d9be7bf6" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>cmdMotorPelicanoInProgress</name></member>
+      <member refid="class_device_library_1_1messages_text_1a5ae581131aa224503a54e4a29aa82916" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>cmdMotorPelicanoMode</name></member>
+      <member refid="class_device_library_1_1messages_text_1a11e70bc1bf9a2de56400fbab90cb153f" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>cmdSelfTest</name></member>
+      <member refid="class_device_library_1_1messages_text_1abcb12fd4a215b678e9b5abda167ce8f6" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>Culture</name></member>
+      <member refid="class_device_library_1_1messages_text_1ada1347a59a5832cbebb4ed1fe62a76d4" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>dataBaseVersion</name></member>
+      <member refid="class_device_library_1_1messages_text_1ab25fcc8955786b9eb2cc6a0eeb512a0e" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>deactivationCV</name></member>
+      <member refid="class_device_library_1_1messages_text_1ab9931d675639d2f20b12a5b9d7247d76" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>delayPolling</name></member>
+      <member refid="class_device_library_1_1messages_text_1a616c0d5ff9f3a4f77f95b8402e3d17b5" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>echo</name></member>
+      <member refid="class_device_library_1_1messages_text_1a2f05f0441e8bb2a403b65e2ed0839e2d" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>equipementID</name></member>
+      <member refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>erreur</name></member>
+      <member refid="class_device_library_1_1messages_text_1a9b8554d38ab9c2799d5405e2f894cf82" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>erreurCmd</name></member>
+      <member refid="class_device_library_1_1messages_text_1a9bd55afe4b9caa13b0d861fc4c3ff24f" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>erreurPollingPriority</name></member>
+      <member refid="class_device_library_1_1messages_text_1a54b35fb372930fed5dc13a77e060396c" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>erreurPort</name></member>
+      <member refid="class_device_library_1_1messages_text_1aa59ba4427bc96cde7bd3f125a279f09c" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>errGetInhibitStatus</name></member>
+      <member refid="class_device_library_1_1messages_text_1a56487b103b700f2efc304a3ab0a75d1a" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>errInhibitStatus</name></member>
+      <member refid="class_device_library_1_1messages_text_1ad9c4ce7df2d9a97fb037a6b2fe1a01fe" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>errMasterInhibitStatus</name></member>
+      <member refid="class_device_library_1_1messages_text_1a457477e9ee134856647bf051d74293ea" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>errMotorPelicano</name></member>
+      <member refid="class_device_library_1_1messages_text_1a2ff352411ad8af876fe7fb650e091aa5" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getBuildCode</name></member>
+      <member refid="class_device_library_1_1messages_text_1a76120e98024c293607801a782c164899" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getByte</name></member>
+      <member refid="class_device_library_1_1messages_text_1ab9e7a38bdab6ee7cce1c2f701e1e5fa1" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getDataBaseVersion</name></member>
+      <member refid="class_device_library_1_1messages_text_1afd4b16d2d28ef8fc8e9152e92ee3875f" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getEquipementID</name></member>
+      <member refid="class_device_library_1_1messages_text_1ae354123829e86b8cf6e13deaa2cda560" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getInhibitStatus</name></member>
+      <member refid="class_device_library_1_1messages_text_1a98d96d1497375fafe0595cd8b05cfd35" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getManufacturer</name></member>
+      <member refid="class_device_library_1_1messages_text_1ab90f77c2226516821994a2f6c1618ba9" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getMasterInhibt</name></member>
+      <member refid="class_device_library_1_1messages_text_1ad09a1b8efb45bbb4d1f9724decdb84d9" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getPolling</name></member>
+      <member refid="class_device_library_1_1messages_text_1a38c36d19079298c6c9dbd63befe471bc" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getProductCode</name></member>
+      <member refid="class_device_library_1_1messages_text_1adf25abdc6ae9b774a1acf5ca9c3e774c" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getSN</name></member>
+      <member refid="class_device_library_1_1messages_text_1a57d987d8f74d2176c72e5f6e29b42fc2" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getSWRev</name></member>
+      <member refid="class_device_library_1_1messages_text_1a41967611d2c8b9d237599dd156a13dd8" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>getText</name></member>
+      <member refid="class_device_library_1_1messages_text_1a4e9189c04771bbd6e96ba7f9d5d515fc" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>hello</name></member>
+      <member refid="class_device_library_1_1messages_text_1a4beee20720447145e0de98bb1cf44e66" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>inhibitStatus</name></member>
+      <member refid="class_device_library_1_1messages_text_1ac37e35f9f795175e6dca7d0b49b33637" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>inhibitStatusResult</name></member>
+      <member refid="class_device_library_1_1messages_text_1a2f62050bea514c3f25710deb511535dc" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>manufacturer</name></member>
+      <member refid="class_device_library_1_1messages_text_1a1e2f14ed8076fd6c18e8a09511f2e25e" prot="package" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>messagesText</name></member>
+      <member refid="class_device_library_1_1messages_text_1af19cd4177e26f024d4d1a709f51c63b9" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>noccTalkDevice</name></member>
+      <member refid="class_device_library_1_1messages_text_1ac150c27572b319dde35b8ac2b76e5801" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>polling</name></member>
+      <member refid="class_device_library_1_1messages_text_1af981c9675348c68009065abaf1a00b28" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>productCode</name></member>
+      <member refid="class_device_library_1_1messages_text_1a639a4669a24e5f9579bdd3815268d806" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>readAnswerDevice</name></member>
+      <member refid="class_device_library_1_1messages_text_1aac828c24757eef357df7ede8980d5f5d" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>readEcho</name></member>
+      <member refid="class_device_library_1_1messages_text_1a67ab60e4967f1994dff349daef89a099" prot="private" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>resourceCulture</name></member>
+      <member refid="class_device_library_1_1messages_text_1a99415a4cb30ae294b1ad2b89f4f03a2c" prot="private" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>resourceMan</name></member>
+      <member refid="class_device_library_1_1messages_text_1a031636cf4621ff551aa62648e5c08b4b" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>ResourceManager</name></member>
+      <member refid="class_device_library_1_1messages_text_1a3bce2e18d1b8dbc3d29446f4c1fc7cc7" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>search_ccTalk</name></member>
+      <member refid="class_device_library_1_1messages_text_1a848d1437acc274997c7e914263ed490a" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>selfTest</name></member>
+      <member refid="class_device_library_1_1messages_text_1a6cdf49693beb3766d1b9a2ca4c582a43" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>sendCmd</name></member>
+      <member refid="class_device_library_1_1messages_text_1a36eee29e70368828dc0fb2ff7ec98ac0" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>sendMasterInhibitStatus</name></member>
+      <member refid="class_device_library_1_1messages_text_1a3e4012cb4d076ab167356a3e9319aa36" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>serialNumber</name></member>
+      <member refid="class_device_library_1_1messages_text_1a8290edf9a6414b63b8276cb192fd2975" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>starLine</name></member>
+      <member refid="class_device_library_1_1messages_text_1aba7fce2b30af5a62fecfce3f6920ac80" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>swRev</name></member>
+      <member refid="class_device_library_1_1messages_text_1a93f4723ab6c2e8f342ace9d99b302555" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>testMotor</name></member>
+      <member refid="class_device_library_1_1messages_text_1a19dcdd2a0c76cdbc8f4c7179da6c9b3d" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>testSolenoid</name></member>
+      <member refid="class_device_library_1_1messages_text_1a419304b9107134f10dc4b155581aa087" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>txtAnswer</name></member>
+      <member refid="class_device_library_1_1messages_text_1aec4481f3887107f375c6a9d5644a3d2e" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>txtMessageSended</name></member>
+      <member refid="class_device_library_1_1messages_text_1aa2c6c9e22c64621ad6e50951e6233abd" prot="public" virt="non-virtual"><scope>DeviceLibrary::messagesText</scope><name>verifSerialPort</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

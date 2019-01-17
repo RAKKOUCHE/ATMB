@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_event_8cs" kind="file">
+    <compoundname>CEvent.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_c_event" prot="public">DeviceLibrary::CEvent</innerclass>
+    <innerclass refid="class_device_library_1_1_c_event_1_1_fire_event_arg" prot="public">DeviceLibrary::CEvent::FireEventArg</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="class_device_library_1_1_c_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_device_library_1_1_c_event" kindref="compound">CEvent</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" kindref="member">Reason</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a2d8903297c687d6ee3f010d98c1624a3" kindref="member">MONEYINTRODUCTED</ref>,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a227f7186426f2e265a08a62825b92623" kindref="member">COINVALIDATORERROR</ref>,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a1e6108a5eb452674d7f51aedbd45a29f" kindref="member">CASHCLOSED</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38adfa418a7f626fcbd28a514d80ca04317" kindref="member">CASHOPENED</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a01e41b57f4a2a1f8a8fcae7f10bdfcdf" kindref="member">HOPPERERROR</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a3f3d91fc4089282534619aac3104f86e" kindref="member">HOPPERDISPENSED</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38ab4c0de530a8fd3dcb909097545348413" kindref="member">HOPPERHWLEVELCHANGED</ref>,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38aa1cad118fd6cf8b1861931f36e4a6671" kindref="member">HOPPERSWLEVELCHANGED</ref>,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a31ce8fea7e7cedf03c7e099848c4af0e" kindref="member">HOPPEREMPTIED</ref>,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a9dcc1c5b5cf3e0ea458e2cba804a3f47" kindref="member">BNRERREUR</ref>,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a923f08f7add65912e3ca5f0c5485a421" kindref="member">BNRMODULEMANQUANT</ref>,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a5d0a68601bfeb09556fec3789dc8a376" kindref="member">BNRMODULEREINSERE</ref>,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a3607195dbfd35a89a066f20d2452d093" kindref="member">BNRRAZMETER</ref>,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38af50fa11a2d7d6a9f548b30556d1d9930" kindref="member">BNRDISPENSE</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a2333bc4483264edfaa52d998946b2d7a" kindref="member">CASHBOXREMOVED</ref>,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a02329a248129261e531c515aabab49eb" kindref="member">DLLLREADY</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="class_device_library_1_1_c_event_1_1_fire_event_arg" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_device_library_1_1_c_event_1_1_fire_event_arg" kindref="compound">FireEventArg</ref><sp/>:<sp/>EventArgs</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109" refid="class_device_library_1_1_c_event_1_1_fire_event_arg_1aa9a7b4b1c547cb94b03c76203ca37583" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" kindref="member">Reason</ref><sp/><ref refid="class_device_library_1_1_c_event_1_1_fire_event_arg_1aa9a7b4b1c547cb94b03c76203ca37583" kindref="member">reason</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_device_library_1_1_c_event_1_1_fire_event_arg_1a2f1215379bf37c87f8d3389157fbafb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_event_1_1_fire_event_arg_1a2f1215379bf37c87f8d3389157fbafb0" kindref="member">donnee</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="class_device_library_1_1_c_event_1a22d3312ef4a62257d6d6da4641812352" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" kindref="member">Reason</ref><sp/><ref refid="class_device_library_1_1_c_event_1a22d3312ef4a62257d6d6da4641812352" kindref="member">reason</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_device_library_1_1_c_event_1af86d6bd8d5fad398a9f3db82bb526d06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_event_1af86d6bd8d5fad398a9f3db82bb526d06" kindref="member">nameOfDevice</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="class_device_library_1_1_c_event_1a0c03eb076bccc1854d9128f712bcf39a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_event_1a0c03eb076bccc1854d9128f712bcf39a" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs"/>
+  </compounddef>
+</doxygen>

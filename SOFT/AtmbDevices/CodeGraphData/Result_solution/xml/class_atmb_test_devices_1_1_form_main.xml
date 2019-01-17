@@ -1,0 +1,2088 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_atmb_test_devices_1_1_form_main" kind="class" prot="public">
+    <compoundname>AtmbTestDevices::FormMain</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1adbcf4583de64387e0cc385346f2edc65" prot="public" static="no" mutable="no">
+        <type><ref refid="class_atmb_test_devices_1_1_form2" kindref="compound">Form2</ref></type>
+        <definition>Form2 AtmbTestDevices.FormMain.form2</definition>
+        <argsstring></argsstring>
+        <name>form2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1ae8d576698d3b516adac632273824b886" compoundref="_form1_8cs" startline="623" endline="631">AtmbTestDevices.FormMain.FormMain_Shown</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1afda4538f6620f4bf4fe874653d20923c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_device_library_1_1_c_devices_manager" kindref="compound">CDevicesManager</ref></type>
+        <definition>CDevicesManager AtmbTestDevices.FormMain.deviceManage</definition>
+        <argsstring></argsstring>
+        <name>deviceManage</name>
+        <briefdescription>
+<para>Instanciation de la classe principale de la dll </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="28" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" compoundref="_form1_8cs" startline="413" endline="444">AtmbTestDevices.FormMain.ButtonCounters_Click</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a30543b292b44a148a0f2722e5638188c" compoundref="_form1_8cs" startline="480" endline="518">AtmbTestDevices.FormMain.ButtonHoppers_Click</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1ae8d576698d3b516adac632273824b886" compoundref="_form1_8cs" startline="623" endline="631">AtmbTestDevices.FormMain.FormMain_Shown</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a11a2e934f71cfc15a6104770fa5386ac" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtmbTestDevices.FormMain.ToPayByClient</definition>
+        <argsstring></argsstring>
+        <name>ToPayByClient</name>
+        <briefdescription>
+<para>Montant à payer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="33" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a159173de586d4afe6e8107ec890fc9a9" compoundref="_form1_8cs" startline="55" endline="73">AtmbTestDevices.FormMain.TBAmountToPay_Leave</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a782dd69ead2a2e6a2e3630af7ae0d360" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtmbTestDevices.FormMain.ToDispenseBNR</definition>
+        <argsstring></argsstring>
+        <name>ToDispenseBNR</name>
+        <briefdescription>
+<para>Montant à distribuer par le BNR </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="38" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1ae94bd3318936fe6aa04722b92494ab36" compoundref="_form1_8cs" startline="582" endline="585">AtmbTestDevices.FormMain.BtnBNRDispense_Click</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a947dcb53f232cd2a3ed29e16219ea834" compoundref="_form1_8cs" startline="605" endline="613">AtmbTestDevices.FormMain.TextBoxBNRDspense_Leave</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a79cceea313ca1aac5c13be925f49382e" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint AtmbTestDevices.FormMain.toLoadInLoader</definition>
+        <argsstring></argsstring>
+        <name>toLoadInLoader</name>
+        <briefdescription>
+<para>Nombre de billets dans le loader. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="43" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a797fb6ea581c9393f6274639d1d14f98" compoundref="_form1_8cs" startline="667" endline="670">AtmbTestDevices.FormMain.ButtonLSetMeterLoader_Click</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a8eee2f2f3757e0e93dc936585000223b" compoundref="_form1_8cs" startline="650" endline="658">AtmbTestDevices.FormMain.TextBoxLoaderNumberBillet_Leave</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1afa34f078012395d516eda29362539ed4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtmbTestDevices.FormMain.isMontantPercuReset</definition>
+        <argsstring></argsstring>
+        <name>isMontantPercuReset</name>
+        <briefdescription>
+<para>Indique si le montant perçu doit être remis à zéro. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="48" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1ae8d576698d3b516adac632273824b886" compoundref="_form1_8cs" startline="623" endline="631">AtmbTestDevices.FormMain.FormMain_Shown</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a159173de586d4afe6e8107ec890fc9a9" compoundref="_form1_8cs" startline="55" endline="73">AtmbTestDevices.FormMain.TBAmountToPay_Leave</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a67cfa6eeed26beacd68d19dc72abd320" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer AtmbTestDevices.FormMain.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Variable nécessaire au concepteur. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="8" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a720cc75d79f5a19781f21c5fd826f1f7" compoundref="_form1_8_designer_8cs" startline="14" endline="21">AtmbTestDevices.FormMain.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a381bd5e9474d33dee7d72ec0a27034cb" prot="private" static="no" mutable="no">
+        <type>System.IO.Ports.SerialPort</type>
+        <definition>System.IO.Ports.SerialPort AtmbTestDevices.FormMain.serialPort</definition>
+        <argsstring></argsstring>
+        <name>serialPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="844" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="844" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1afb940efccb5afb31a62ca5502ad1bcdc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox AtmbTestDevices.FormMain.tbToPay</definition>
+        <argsstring></argsstring>
+        <name>tbToPay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="845" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="845" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a159173de586d4afe6e8107ec890fc9a9" compoundref="_form1_8cs" startline="55" endline="73">AtmbTestDevices.FormMain.TBAmountToPay_Leave</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ab5d464be4bafa4432160439902422355" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label AtmbTestDevices.FormMain.labelAmountToPay</definition>
+        <argsstring></argsstring>
+        <name>labelAmountToPay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="846" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="846" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1aca5487d903e1f4503fd2abf17291288d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.buttonExit</definition>
+        <argsstring></argsstring>
+        <name>buttonExit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="847" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="847" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a058ac4960a16335bc0e3a6a60d91ac76" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip AtmbTestDevices.FormMain.statusStrip</definition>
+        <argsstring></argsstring>
+        <name>statusStrip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="848" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="848" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ab91fe628eb5a6ad5c53f49af373734aa" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel AtmbTestDevices.FormMain.toolStripStatusLabel1</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="849" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="849" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a9f0477ebfd747f464d11e23e505cef8d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label AtmbTestDevices.FormMain.labelAmountReceived</definition>
+        <argsstring></argsstring>
+        <name>labelAmountReceived</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="850" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="850" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ada5a6fef06b8e96c2e53b0561fa25da5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox AtmbTestDevices.FormMain.tbReceived</definition>
+        <argsstring></argsstring>
+        <name>tbReceived</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="851" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="851" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a0efda7c3d588984b3da48be2416bf08a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label AtmbTestDevices.FormMain.labelAmountRemaining</definition>
+        <argsstring></argsstring>
+        <name>labelAmountRemaining</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="852" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="852" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ab40af45287f6ae38965e040c0d341496" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox AtmbTestDevices.FormMain.tbRemaining</definition>
+        <argsstring></argsstring>
+        <name>tbRemaining</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="853" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="853" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a0db9aefeace49b3d5b7083b1fe92400d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox AtmbTestDevices.FormMain.tbDenomination</definition>
+        <argsstring></argsstring>
+        <name>tbDenomination</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="854" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="854" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1adb0b654ec3d679f82652b65693d95006" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label AtmbTestDevices.FormMain.labelDenomination</definition>
+        <argsstring></argsstring>
+        <name>labelDenomination</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="855" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="855" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ac7c5685437f6903b426cd8548b2628fc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel AtmbTestDevices.FormMain.stripLabelCom</definition>
+        <argsstring></argsstring>
+        <name>stripLabelCom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="856" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="856" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a3bf8faf2478cded31e436e8fdc8a4cea" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel AtmbTestDevices.FormMain.stripLabelCashReaderStatus</definition>
+        <argsstring></argsstring>
+        <name>stripLabelCashReaderStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="857" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="857" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a13dfb7818da23608efa3fe18f8f2ecdf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.buttonHoppers</definition>
+        <argsstring></argsstring>
+        <name>buttonHoppers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="858" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="858" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a2ee385d2a308c1741b5befa0d3249d0e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.buttonCounters</definition>
+        <argsstring></argsstring>
+        <name>buttonCounters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="859" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="859" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a541e956ddbd185d7a41b3e4ce54699aa" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.buttonRAZCompteurs</definition>
+        <argsstring></argsstring>
+        <name>buttonRAZCompteurs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="860" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="860" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a5cdf1cf41f610651fed55a913dece965" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ContextMenuStrip</type>
+        <definition>System.Windows.Forms.ContextMenuStrip AtmbTestDevices.FormMain.contextMenuStripClear</definition>
+        <argsstring></argsstring>
+        <name>contextMenuStripClear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="861" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="861" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a86e715ec3e834d53560f32997167a8d5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripMenuItem</type>
+        <definition>System.Windows.Forms.ToolStripMenuItem AtmbTestDevices.FormMain.toolStripMenuItem1</definition>
+        <argsstring></argsstring>
+        <name>toolStripMenuItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="862" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="862" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a1e22e63486378ba82d8b0c5277d53f84" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox AtmbTestDevices.FormMain.groupBoxPieces</definition>
+        <argsstring></argsstring>
+        <name>groupBoxPieces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="863" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="863" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a8d5052453bf0d4e31aaf4f94f2e502cd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView AtmbTestDevices.FormMain.dataGridViewCompteurs</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewCompteurs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="864" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="864" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a89c184c9139ca6fe9434fb1bd3d68b0c" compoundref="_form1_8_designer_8cs" startline="29" endline="841">AtmbTestDevices.FormMain.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1aed346cfbb46f2468d8adaa92e4006606" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView AtmbTestDevices.FormMain.dataGridViewHopper</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewHopper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="865" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="865" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a30543b292b44a148a0f2722e5638188c" compoundref="_form1_8cs" startline="480" endline="518">AtmbTestDevices.FormMain.ButtonHoppers_Click</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a7c4cbcd51d72a06222948161c75c2290" compoundref="_form1_8cs" startline="451" endline="473">AtmbTestDevices.FormMain.DataGridViewHopper_CellClick</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1ad877489042d96780917783dbbd071def" compoundref="_form1_8cs" startline="525" endline="543">AtmbTestDevices.FormMain.DataGridViewHopper_CellValueChanged</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a89c184c9139ca6fe9434fb1bd3d68b0c" compoundref="_form1_8_designer_8cs" startline="29" endline="841">AtmbTestDevices.FormMain.InitializeComponent</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a17866d816fede8d7063fdf145dee5ce2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox AtmbTestDevices.FormMain.tbInfo</definition>
+        <argsstring></argsstring>
+        <name>tbInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="866" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="866" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a5b7e036654c838b28a610855a35f6f16" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox AtmbTestDevices.FormMain.groupBox1</definition>
+        <argsstring></argsstring>
+        <name>groupBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="867" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="867" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a5ba05588035dc4bc100f747eeea92be6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView AtmbTestDevices.FormMain.dataGridView1</definition>
+        <argsstring></argsstring>
+        <name>dataGridView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="868" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="868" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a89c184c9139ca6fe9434fb1bd3d68b0c" compoundref="_form1_8_designer_8cs" startline="29" endline="841">AtmbTestDevices.FormMain.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a3bc06b39eb71d60dd7f26671fa576b77" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.dataGridViewTextBoxColumn1</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="869" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="869" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1aada24dec559cbea68a465cc7ccb33bca" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.dataGridViewTextBoxColumn2</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="870" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="870" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a90e52fa371a06e6893f81fb3c5df8b95" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox AtmbTestDevices.FormMain.textBox1</definition>
+        <argsstring></argsstring>
+        <name>textBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="871" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="871" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1af53c83fb0e9327d71f9a7d43f3d41862" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.butttonEndofTransacton</definition>
+        <argsstring></argsstring>
+        <name>butttonEndofTransacton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="872" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="872" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1aac3b7b7319f0db76064b22aab0506ddf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView AtmbTestDevices.FormMain.dataGridView2</definition>
+        <argsstring></argsstring>
+        <name>dataGridView2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="873" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="873" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a89c184c9139ca6fe9434fb1bd3d68b0c" compoundref="_form1_8_designer_8cs" startline="29" endline="841">AtmbTestDevices.FormMain.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a334846063819f03f55a59bc0a5546b2a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.dataGridViewTextBoxColumn3</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="874" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="874" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a2aed1a848ff8592e58a425920c4d05dd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.dataGridViewTextBoxColumn4</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="875" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="875" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1acdb28c3b3e15715608b8bb88f53b5f8a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewCheckBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewCheckBoxColumn AtmbTestDevices.FormMain.dataGridViewCheckBoxColumn1</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewCheckBoxColumn1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="876" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="876" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a65942bc7d114e4ef47082db5cf1521ce" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.dataGridViewTextBoxColumn5</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="877" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="877" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ae0a90ffa82719e1cce3dd5dee2074eec" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.dataGridViewTextBoxColumn6</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="878" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="878" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ae3fe8d0e9c4c334f6dcf91f479821f9e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.dataGridViewTextBoxColumn7</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="879" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="879" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a52ee2f4829f11b0f6715f9c632c5e90e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.dataGridViewTextBoxColumn8</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="880" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="880" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ab3072a22974a62f13ac416cdb82b098b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewCheckBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewCheckBoxColumn AtmbTestDevices.FormMain.dataGridViewCheckBoxColumn2</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewCheckBoxColumn2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="881" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="881" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1acdfad2ee4ab21a68bda671e03c46cc6e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.dataGridViewTextBoxColumn9</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="882" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="882" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ad7ebe936461b8b9b1ac6f20235878184" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewCheckBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewCheckBoxColumn AtmbTestDevices.FormMain.dataGridViewCheckBoxColumn3</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewCheckBoxColumn3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="883" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="883" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a24324933695a43aaabea04b44eba01be" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.BtnDispenseBNR</definition>
+        <argsstring></argsstring>
+        <name>BtnDispenseBNR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="884" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="884" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a9ab52be4677f7bb5d39833e79478823c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox AtmbTestDevices.FormMain.textBoxBnrDispense</definition>
+        <argsstring></argsstring>
+        <name>textBoxBnrDispense</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="885" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="885" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a947dcb53f232cd2a3ed29e16219ea834" compoundref="_form1_8cs" startline="605" endline="613">AtmbTestDevices.FormMain.TextBoxBNRDspense_Leave</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a1a55fcd379b8af0a3d5c1d47d322b26c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.Identifiant</definition>
+        <argsstring></argsstring>
+        <name>Identifiant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="886" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="886" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ade4e8bd99928b7e588e0846a313dadba" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.Valeur</definition>
+        <argsstring></argsstring>
+        <name>Valeur</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="887" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="887" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a5ba328c09fcc30e8131079562d401bb4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewCheckBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewCheckBoxColumn AtmbTestDevices.FormMain.Present</definition>
+        <argsstring></argsstring>
+        <name>Present</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="888" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="888" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1acc479bbeb0448205cc158dff24711398" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.ToDispense</definition>
+        <argsstring></argsstring>
+        <name>ToDispense</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="889" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="889" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a130f922acd9b8d5c12cce4dccab9a225" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.Dispensed</definition>
+        <argsstring></argsstring>
+        <name>Dispensed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="890" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="890" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a8e0cd5c096f7f1aa92560af50088b2ce" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.LevelSW</definition>
+        <argsstring></argsstring>
+        <name>LevelSW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="891" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="891" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a0a1dbea8e358c0c32019ab08b76a3910" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.LevelHW</definition>
+        <argsstring></argsstring>
+        <name>LevelHW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="892" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="892" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ae4415a039614b0a6ba3ae33dda96d6da" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewCheckBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewCheckBoxColumn AtmbTestDevices.FormMain.ToEmpty</definition>
+        <argsstring></argsstring>
+        <name>ToEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="893" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="893" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a74c992e81b8f4db48e396902cb6d6f4c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.Reload</definition>
+        <argsstring></argsstring>
+        <name>Reload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="894" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="894" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a81bab9bb19170317b594aa922778cf48" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewCheckBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewCheckBoxColumn AtmbTestDevices.FormMain.ToLoad</definition>
+        <argsstring></argsstring>
+        <name>ToLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="895" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="895" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a428477f263cd0448f9511ee6def07319" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox AtmbTestDevices.FormMain.textBoxLoaderNumberBilet</definition>
+        <argsstring></argsstring>
+        <name>textBoxLoaderNumberBilet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="896" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="896" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a8eee2f2f3757e0e93dc936585000223b" compoundref="_form1_8cs" startline="650" endline="658">AtmbTestDevices.FormMain.TextBoxLoaderNumberBillet_Leave</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ae05750e6eaf6e6acbf4ba793cd5bd4ff" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.buttonLSetMeterLoader</definition>
+        <argsstring></argsstring>
+        <name>buttonLSetMeterLoader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="897" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="897" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a082b5eaa13d784afae8a8669e8ea4fa0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.buttonTrieur</definition>
+        <argsstring></argsstring>
+        <name>buttonTrieur</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="898" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="898" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a1bb71854e1abf94c75ec5fd0dbafcaad" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label AtmbTestDevices.FormMain.labelCanal</definition>
+        <argsstring></argsstring>
+        <name>labelCanal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="899" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="899" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a7e4f01153f33c7bcd06936ed4e7ff926" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label AtmbTestDevices.FormMain.labelPath</definition>
+        <argsstring></argsstring>
+        <name>labelPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="900" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="900" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a44d290598079072188bbf511dd30ef1c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.NumericUpDown</type>
+        <definition>System.Windows.Forms.NumericUpDown AtmbTestDevices.FormMain.numericUpDownCanal</definition>
+        <argsstring></argsstring>
+        <name>numericUpDownCanal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="901" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="901" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1aa99d1e82381f7a79dc46bbbd35b1d091" compoundref="_form1_8cs" startline="677" endline="681">AtmbTestDevices.FormMain.ButtonTrieur_Click</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a89c184c9139ca6fe9434fb1bd3d68b0c" compoundref="_form1_8_designer_8cs" startline="29" endline="841">AtmbTestDevices.FormMain.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a28624c6f942d5414fbbfd7632767cbc7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.NumericUpDown</type>
+        <definition>System.Windows.Forms.NumericUpDown AtmbTestDevices.FormMain.numericUpDownPath</definition>
+        <argsstring></argsstring>
+        <name>numericUpDownPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="902" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="902" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a89c184c9139ca6fe9434fb1bd3d68b0c" compoundref="_form1_8_designer_8cs" startline="29" endline="841">AtmbTestDevices.FormMain.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a4ea8143bf9a93167f3403c426bd207c8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.buttonRetract</definition>
+        <argsstring></argsstring>
+        <name>buttonRetract</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="903" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="903" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ac78a66a42d3ff629cd3d1dad8e1a67be" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.buttonRollBack</definition>
+        <argsstring></argsstring>
+        <name>buttonRollBack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="904" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="904" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a0d00352606294bbc2b183273e84d2c11" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.Nom</definition>
+        <argsstring></argsstring>
+        <name>Nom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="905" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="905" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a6c34d1535bdfe99bd5fab6438676d658" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn AtmbTestDevices.FormMain.Montant</definition>
+        <argsstring></argsstring>
+        <name>Montant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="906" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="906" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1ac0344ca31df59ac9db5a387195ed3292" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewCheckBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewCheckBoxColumn AtmbTestDevices.FormMain.RAZ</definition>
+        <argsstring></argsstring>
+        <name>RAZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="907" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="907" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a6a8235d69c3aaf8e0edce540d63624bb" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.buttonCancel</definition>
+        <argsstring></argsstring>
+        <name>buttonCancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="908" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="908" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form_main_1a0c9d4c0040726b2716ea41fac051e72a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button AtmbTestDevices.FormMain.button1</definition>
+        <argsstring></argsstring>
+        <name>button1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="909" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="909" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a34a8677a0d5d339ab8b797c42362323e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AtmbTestDevices.FormMain.FormMain</definition>
+        <argsstring>()</argsstring>
+        <name>FormMain</name>
+        <briefdescription>
+<para>Initialise la fenetre principale. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="18" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="18" bodyend="21"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a89c184c9139ca6fe9434fb1bd3d68b0c" compoundref="_form1_8_designer_8cs" startline="29" endline="841">AtmbTestDevices.FormMain.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a159173de586d4afe6e8107ec890fc9a9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.TBAmountToPay_Leave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TBAmountToPay_Leave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Fonction executée à la fin de la saisie du montant à payer </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="55" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="55" bodyend="73"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1afa34f078012395d516eda29362539ed4" compoundref="_form1_8cs" startline="48">AtmbTestDevices.FormMain.isMontantPercuReset</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1afb940efccb5afb31a62ca5502ad1bcdc" compoundref="_form1_8_designer_8cs" startline="845">AtmbTestDevices.FormMain.tbToPay</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a11a2e934f71cfc15a6104770fa5386ac" compoundref="_form1_8cs" startline="33">AtmbTestDevices.FormMain.ToPayByClient</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1ab30f8fb034e93f93bc904a882fb55f02" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.ButtonExit_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ButtonExit_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Fonction executée lors du click sur le bouton quitter </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="80" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1afdba5d70d8a3a733000f84c60fff33d9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.TBAmountToPay_Enter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TBAmountToPay_Enter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Vide le champ de saisie. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="90" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.MsgFromdll</definition>
+        <argsstring>(object sender, CEvent.FireEventArg e)</argsstring>
+        <name>MsgFromdll</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type><ref refid="class_device_library_1_1_c_event_1_1_fire_event_arg" kindref="compound">CEvent.FireEventArg</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Fonction levée à chaque évenement provenant de la dll </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="100" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="100" bodyend="395"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" compoundref="_form1_8cs" startline="413" endline="444">AtmbTestDevices.FormMain.ButtonCounters_Click</references>
+        <references refid="class_device_library_1_1_c_event_1a0c03eb076bccc1854d9128f712bcf39a" compoundref="_c_event_8cs" startline="131">DeviceLibrary.CEvent.data</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1aed346cfbb46f2468d8adaa92e4006606" compoundref="_form1_8_designer_8cs" startline="865">AtmbTestDevices.FormMain.dataGridViewHopper</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1afda4538f6620f4bf4fe874653d20923c" compoundref="_form1_8cs" startline="28">AtmbTestDevices.FormMain.deviceManage</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="63">DeviceLibrary.CDevicesManager.Hoppers</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1afa34f078012395d516eda29362539ed4" compoundref="_form1_8cs" startline="48">AtmbTestDevices.FormMain.isMontantPercuReset</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="69">DeviceLibrary.CDevice.IsPresent</references>
+        <references refid="class_device_library_1_1_c_event_1af86d6bd8d5fad398a9f3db82bb526d06" compoundref="_c_event_8cs" startline="125">DeviceLibrary.CEvent.nameOfDevice</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a11a2e934f71cfc15a6104770fa5386ac" compoundref="_form1_8cs" startline="33">AtmbTestDevices.FormMain.ToPayByClient</references>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1ae8d576698d3b516adac632273824b886" compoundref="_form1_8cs" startline="623" endline="631">AtmbTestDevices.FormMain.FormMain_Shown</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a9d343b173348b2c8619bfb59c42af2ab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.FormMain_FormClosed</definition>
+        <argsstring>(object sender, FormClosedEventArgs e)</argsstring>
+        <name>FormMain_FormClosed</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>FormClosedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Quitte l&apos;applciation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="402" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="402" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.ButtonCounters_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ButtonCounters_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Lecture forcée des compteurs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="413" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="413" bodyend="444"/>
+        <references refid="class_device_library_1_1_c_coin_validator_1afdeb88b9e7e981afd51bd1322e9f89e9" compoundref="_c_coin_validator_8cs" startline="205">DeviceLibrary.CCoinValidator.canaux</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1afda4538f6620f4bf4fe874653d20923c" compoundref="_form1_8cs" startline="28">AtmbTestDevices.FormMain.deviceManage</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="63">DeviceLibrary.CDevicesManager.Hoppers</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" compoundref="_c_devices_manager_8cs" startline="68">DeviceLibrary.CDevicesManager.monnayeur</references>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a30543b292b44a148a0f2722e5638188c" compoundref="_form1_8cs" startline="480" endline="518">AtmbTestDevices.FormMain.ButtonHoppers_Click</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a06e68fbb519f5cd352713d658e84ed7a" compoundref="_form1_8cs" startline="560" endline="564">AtmbTestDevices.FormMain.ButtonRAZCompteurs_Click</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a7c4cbcd51d72a06222948161c75c2290" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.DataGridViewHopper_CellClick</definition>
+        <argsstring>(object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>DataGridViewHopper_CellClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Traite les flags dans les colonnes de la grille des hoppers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="451" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="451" bodyend="473"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1aed346cfbb46f2468d8adaa92e4006606" compoundref="_form1_8_designer_8cs" startline="865">AtmbTestDevices.FormMain.dataGridViewHopper</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a30543b292b44a148a0f2722e5638188c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.ButtonHoppers_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ButtonHoppers_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Traitement des hoppers </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="480" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="480" bodyend="518"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" compoundref="_form1_8cs" startline="413" endline="444">AtmbTestDevices.FormMain.ButtonCounters_Click</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1aed346cfbb46f2468d8adaa92e4006606" compoundref="_form1_8_designer_8cs" startline="865">AtmbTestDevices.FormMain.dataGridViewHopper</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1afda4538f6620f4bf4fe874653d20923c" compoundref="_form1_8cs" startline="28">AtmbTestDevices.FormMain.deviceManage</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="63">DeviceLibrary.CDevicesManager.Hoppers</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="69">DeviceLibrary.CDevice.IsPresent</references>
+        <references refid="class_device_library_1_1_c_hopper_1ac85d53246fc91db72631d1188db034bd" compoundref="_c_hopper_8cs" startline="120">DeviceLibrary.CHopper.name</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1ad877489042d96780917783dbbd071def" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.DataGridViewHopper_CellValueChanged</definition>
+        <argsstring>(object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>DataGridViewHopper_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Effectue le traitement des valeurs saisie dans la grille des hoppers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="525" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="525" bodyend="543"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1aed346cfbb46f2468d8adaa92e4006606" compoundref="_form1_8_designer_8cs" startline="865">AtmbTestDevices.FormMain.dataGridViewHopper</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a48e168981d5472cba8559d624e919783" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.ToolStripMenuItem1_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ToolStripMenuItem1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Efface les logs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="550" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="550" bodyend="553"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a06e68fbb519f5cd352713d658e84ed7a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.ButtonRAZCompteurs_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ButtonRAZCompteurs_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Remise à zéro des compteurs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="560" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="560" bodyend="564"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" compoundref="_form1_8cs" startline="413" endline="444">AtmbTestDevices.FormMain.ButtonCounters_Click</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a9ab385b37b95fe9261a5e1ee462d0dc4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.ButtonFinTrans_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ButtonFinTrans_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Cloture de la transaction en cours. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="571" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="571" bodyend="574"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1ae94bd3318936fe6aa04722b92494ab36" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.BtnBNRDispense_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BtnBNRDispense_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Envoie une demande de distribution u BNR </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="582" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="582" bodyend="585"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a782dd69ead2a2e6a2e3630af7ae0d360" compoundref="_form1_8cs" startline="38">AtmbTestDevices.FormMain.ToDispenseBNR</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1ab58fe3f93fdae75d5cb4151c159d06a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.TextBoxBNRDispense_Enter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TextBoxBNRDispense_Enter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Vide le champ de saisie du montant à distribuer par le BNR lorsque le champ recoit le focus. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="594" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="594" bodyend="597"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a947dcb53f232cd2a3ed29e16219ea834" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.TextBoxBNRDspense_Leave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TextBoxBNRDspense_Leave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Vérifie et reformat la saisie lorsque le champ de saisie pert le focus. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="605" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="605" bodyend="613"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a9ab52be4677f7bb5d39833e79478823c" compoundref="_form1_8_designer_8cs" startline="885">AtmbTestDevices.FormMain.textBoxBnrDispense</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a782dd69ead2a2e6a2e3630af7ae0d360" compoundref="_form1_8cs" startline="38">AtmbTestDevices.FormMain.ToDispenseBNR</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1ae8d576698d3b516adac632273824b886" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.FormMain_Shown</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>FormMain_Shown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>AFfiche une fenetre de patience lors de l&apos;affichage de la fenêtre principale. Active la fonction delegate recevant les messages de la dll. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="623" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="623" bodyend="631"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1afda4538f6620f4bf4fe874653d20923c" compoundref="_form1_8cs" startline="28">AtmbTestDevices.FormMain.deviceManage</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1adbcf4583de64387e0cc385346f2edc65" compoundref="_form1_8cs" startline="23">AtmbTestDevices.FormMain.form2</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1afa34f078012395d516eda29362539ed4" compoundref="_form1_8cs" startline="48">AtmbTestDevices.FormMain.isMontantPercuReset</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1ae88243fc18fe63708192018cdaa3145d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.TextBoxLoaderNumberBillet_Enter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TextBoxLoaderNumberBillet_Enter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Vide le champ du nombre de billets à enregistrer dans les compteurs du loader. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="639" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="639" bodyend="642"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a8eee2f2f3757e0e93dc936585000223b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.TextBoxLoaderNumberBillet_Leave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TextBoxLoaderNumberBillet_Leave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Vérifie et format le nombre de billets à enregistrer dans le compteur du loader. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="650" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="650" bodyend="658"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a428477f263cd0448f9511ee6def07319" compoundref="_form1_8_designer_8cs" startline="896">AtmbTestDevices.FormMain.textBoxLoaderNumberBilet</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a79cceea313ca1aac5c13be925f49382e" compoundref="_form1_8cs" startline="43">AtmbTestDevices.FormMain.toLoadInLoader</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a797fb6ea581c9393f6274639d1d14f98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.ButtonLSetMeterLoader_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ButtonLSetMeterLoader_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Demande à la dll d&apos;enregister le nombre de billets dans le compteur du loader. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="667" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="667" bodyend="670"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a79cceea313ca1aac5c13be925f49382e" compoundref="_form1_8cs" startline="43">AtmbTestDevices.FormMain.toLoadInLoader</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1aa99d1e82381f7a79dc46bbbd35b1d091" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.ButtonTrieur_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ButtonTrieur_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Fonction demandant la modification du chemin de sortie. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="677" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="677" bodyend="681"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a44d290598079072188bbf511dd30ef1c" compoundref="_form1_8_designer_8cs" startline="901">AtmbTestDevices.FormMain.numericUpDownCanal</references>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a7e2b206fbfd904c2d1ecf971ee02bbcd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.ButtonRetract_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ButtonRetract_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Encaisse les billets présents dans le bezel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="688" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="688" bodyend="691"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a755544de7f9eaa194d7ba40668292b3d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.BbuttonRollBack_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BbuttonRollBack_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Retourne les billets lus. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="698" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="698" bodyend="701"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a8debf4d47c33c1a988c867afb21d8f88" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.ButtonCancel_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ButtonCancel_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="703" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="703" bodyend="706"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a75e24ac0bb7d61a1165c17fd543d3eef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.Button1_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Button1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="708" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="708" bodyend="711"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a89c184c9139ca6fe9434fb1bd3d68b0c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.FormMain.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Méthode requise pour la prise en charge du concepteur - ne modifiez pas le contenu de cette méthode avec l&apos;éditeur de code. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="29" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="29" bodyend="841"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a5ba05588035dc4bc100f747eeea92be6" compoundref="_form1_8_designer_8cs" startline="868">AtmbTestDevices.FormMain.dataGridView1</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1aac3b7b7319f0db76064b22aab0506ddf" compoundref="_form1_8_designer_8cs" startline="873">AtmbTestDevices.FormMain.dataGridView2</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a8d5052453bf0d4e31aaf4f94f2e502cd" compoundref="_form1_8_designer_8cs" startline="864">AtmbTestDevices.FormMain.dataGridViewCompteurs</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1aed346cfbb46f2468d8adaa92e4006606" compoundref="_form1_8_designer_8cs" startline="865">AtmbTestDevices.FormMain.dataGridViewHopper</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a44d290598079072188bbf511dd30ef1c" compoundref="_form1_8_designer_8cs" startline="901">AtmbTestDevices.FormMain.numericUpDownCanal</references>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a28624c6f942d5414fbbfd7632767cbc7" compoundref="_form1_8_designer_8cs" startline="902">AtmbTestDevices.FormMain.numericUpDownPath</references>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a34a8677a0d5d339ab8b797c42362323e" compoundref="_form1_8cs" startline="18" endline="21">AtmbTestDevices.FormMain.FormMain</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form_main_1a720cc75d79f5a19781f21c5fd826f1f7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void AtmbTestDevices.FormMain.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Nettoyage des ressources utilisées. </para>        </briefdescription>
+        <detaileddescription>
+<para>&lt;bufferParam name=&quot;disposing&quot;&gt;true si les ressources managées doivent être supprimées ; sinon, false.&lt;/bufferParam&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" line="14" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.Designer.cs" bodystart="14" bodyend="21"/>
+        <references refid="class_atmb_test_devices_1_1_form_main_1a67cfa6eeed26beacd68d19dc72abd320" compoundref="_form1_8_designer_8cs" startline="8">AtmbTestDevices.FormMain.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Fenêtre principale du program de test de la dll <ref refid="namespace_device_library" kindref="compound">DeviceLibrary</ref> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="259">
+        <label>AtmbTestDevices.FormMain</label>
+        <link refid="class_atmb_test_devices_1_1_form_main"/>
+        <childnode refid="260" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="260">
+        <label>Form</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="263">
+        <label>AtmbTestDevices.Form2</label>
+        <link refid="class_atmb_test_devices_1_1_form2"/>
+        <childnode refid="262" relation="public-inheritance">
+        </childnode>
+        <childnode refid="264" relation="usage">
+          <edgelabel>panel1</edgelabel>
+          <edgelabel>label2</edgelabel>
+          <edgelabel>label3</edgelabel>
+          <edgelabel>components</edgelabel>
+        </childnode>
+      </node>
+      <node id="261">
+        <label>AtmbTestDevices.FormMain</label>
+        <link refid="class_atmb_test_devices_1_1_form_main"/>
+        <childnode refid="262" relation="public-inheritance">
+        </childnode>
+        <childnode refid="263" relation="usage">
+          <edgelabel>form2</edgelabel>
+        </childnode>
+        <childnode refid="264" relation="usage">
+          <edgelabel>dataGridViewCheckBoxColumn3</edgelabel>
+          <edgelabel>dataGridView2</edgelabel>
+          <edgelabel>dataGridViewTextBoxColumn2</edgelabel>
+          <edgelabel>stripLabelCashReaderStatus</edgelabel>
+          <edgelabel>tbDenomination</edgelabel>
+          <edgelabel>tbReceived</edgelabel>
+          <edgelabel>buttonExit</edgelabel>
+          <edgelabel>labelPath</edgelabel>
+          <edgelabel>ToEmpty</edgelabel>
+          <edgelabel>ToDispense</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="262">
+        <label>Form</label>
+      </node>
+      <node id="264">
+        <label>System</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="13" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" bodystart="12" bodyend="712"/>
+    <listofallmembers>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a755544de7f9eaa194d7ba40668292b3d" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>BbuttonRollBack_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ae94bd3318936fe6aa04722b92494ab36" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>BtnBNRDispense_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a24324933695a43aaabea04b44eba01be" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>BtnDispenseBNR</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a0c9d4c0040726b2716ea41fac051e72a" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>button1</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a75e24ac0bb7d61a1165c17fd543d3eef" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>Button1_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a6a8235d69c3aaf8e0edce540d63624bb" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>buttonCancel</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a8debf4d47c33c1a988c867afb21d8f88" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ButtonCancel_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a2ee385d2a308c1741b5befa0d3249d0e" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>buttonCounters</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ButtonCounters_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1aca5487d903e1f4503fd2abf17291288d" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>buttonExit</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ab30f8fb034e93f93bc904a882fb55f02" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ButtonExit_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a9ab385b37b95fe9261a5e1ee462d0dc4" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ButtonFinTrans_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a13dfb7818da23608efa3fe18f8f2ecdf" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>buttonHoppers</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a30543b292b44a148a0f2722e5638188c" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ButtonHoppers_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ae05750e6eaf6e6acbf4ba793cd5bd4ff" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>buttonLSetMeterLoader</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a797fb6ea581c9393f6274639d1d14f98" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ButtonLSetMeterLoader_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a541e956ddbd185d7a41b3e4ce54699aa" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>buttonRAZCompteurs</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a06e68fbb519f5cd352713d658e84ed7a" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ButtonRAZCompteurs_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a4ea8143bf9a93167f3403c426bd207c8" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>buttonRetract</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a7e2b206fbfd904c2d1ecf971ee02bbcd" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ButtonRetract_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ac78a66a42d3ff629cd3d1dad8e1a67be" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>buttonRollBack</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a082b5eaa13d784afae8a8669e8ea4fa0" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>buttonTrieur</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1aa99d1e82381f7a79dc46bbbd35b1d091" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ButtonTrieur_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1af53c83fb0e9327d71f9a7d43f3d41862" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>butttonEndofTransacton</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a67cfa6eeed26beacd68d19dc72abd320" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>components</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a5cdf1cf41f610651fed55a913dece965" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>contextMenuStripClear</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a5ba05588035dc4bc100f747eeea92be6" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridView1</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1aac3b7b7319f0db76064b22aab0506ddf" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridView2</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1acdb28c3b3e15715608b8bb88f53b5f8a" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewCheckBoxColumn1</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ab3072a22974a62f13ac416cdb82b098b" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewCheckBoxColumn2</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ad7ebe936461b8b9b1ac6f20235878184" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewCheckBoxColumn3</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a8d5052453bf0d4e31aaf4f94f2e502cd" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewCompteurs</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1aed346cfbb46f2468d8adaa92e4006606" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewHopper</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a7c4cbcd51d72a06222948161c75c2290" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>DataGridViewHopper_CellClick</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ad877489042d96780917783dbbd071def" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>DataGridViewHopper_CellValueChanged</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a3bc06b39eb71d60dd7f26671fa576b77" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewTextBoxColumn1</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1aada24dec559cbea68a465cc7ccb33bca" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewTextBoxColumn2</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a334846063819f03f55a59bc0a5546b2a" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewTextBoxColumn3</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a2aed1a848ff8592e58a425920c4d05dd" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewTextBoxColumn4</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a65942bc7d114e4ef47082db5cf1521ce" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewTextBoxColumn5</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ae0a90ffa82719e1cce3dd5dee2074eec" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewTextBoxColumn6</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ae3fe8d0e9c4c334f6dcf91f479821f9e" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewTextBoxColumn7</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a52ee2f4829f11b0f6715f9c632c5e90e" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewTextBoxColumn8</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1acdfad2ee4ab21a68bda671e03c46cc6e" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>dataGridViewTextBoxColumn9</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1afda4538f6620f4bf4fe874653d20923c" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>deviceManage</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a130f922acd9b8d5c12cce4dccab9a225" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>Dispensed</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a720cc75d79f5a19781f21c5fd826f1f7" prot="protected" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>Dispose</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1adbcf4583de64387e0cc385346f2edc65" prot="public" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>form2</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a34a8677a0d5d339ab8b797c42362323e" prot="public" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>FormMain</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a9d343b173348b2c8619bfb59c42af2ab" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>FormMain_FormClosed</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ae8d576698d3b516adac632273824b886" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>FormMain_Shown</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a5b7e036654c838b28a610855a35f6f16" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>groupBox1</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a1e22e63486378ba82d8b0c5277d53f84" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>groupBoxPieces</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a1a55fcd379b8af0a3d5c1d47d322b26c" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>Identifiant</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a89c184c9139ca6fe9434fb1bd3d68b0c" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>InitializeComponent</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1afa34f078012395d516eda29362539ed4" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>isMontantPercuReset</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a9f0477ebfd747f464d11e23e505cef8d" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>labelAmountReceived</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a0efda7c3d588984b3da48be2416bf08a" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>labelAmountRemaining</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ab5d464be4bafa4432160439902422355" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>labelAmountToPay</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a1bb71854e1abf94c75ec5fd0dbafcaad" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>labelCanal</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1adb0b654ec3d679f82652b65693d95006" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>labelDenomination</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a7e4f01153f33c7bcd06936ed4e7ff926" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>labelPath</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a0a1dbea8e358c0c32019ab08b76a3910" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>LevelHW</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a8e0cd5c096f7f1aa92560af50088b2ce" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>LevelSW</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a6c34d1535bdfe99bd5fab6438676d658" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>Montant</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>MsgFromdll</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a0d00352606294bbc2b183273e84d2c11" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>Nom</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a44d290598079072188bbf511dd30ef1c" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>numericUpDownCanal</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a28624c6f942d5414fbbfd7632767cbc7" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>numericUpDownPath</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a5ba328c09fcc30e8131079562d401bb4" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>Present</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ac0344ca31df59ac9db5a387195ed3292" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>RAZ</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a74c992e81b8f4db48e396902cb6d6f4c" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>Reload</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a381bd5e9474d33dee7d72ec0a27034cb" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>serialPort</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a058ac4960a16335bc0e3a6a60d91ac76" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>statusStrip</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a3bf8faf2478cded31e436e8fdc8a4cea" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>stripLabelCashReaderStatus</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ac7c5685437f6903b426cd8548b2628fc" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>stripLabelCom</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1afdba5d70d8a3a733000f84c60fff33d9" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>TBAmountToPay_Enter</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a159173de586d4afe6e8107ec890fc9a9" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>TBAmountToPay_Leave</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a0db9aefeace49b3d5b7083b1fe92400d" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>tbDenomination</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a17866d816fede8d7063fdf145dee5ce2" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>tbInfo</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ada5a6fef06b8e96c2e53b0561fa25da5" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>tbReceived</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ab40af45287f6ae38965e040c0d341496" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>tbRemaining</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1afb940efccb5afb31a62ca5502ad1bcdc" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>tbToPay</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a90e52fa371a06e6893f81fb3c5df8b95" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>textBox1</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a9ab52be4677f7bb5d39833e79478823c" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>textBoxBnrDispense</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ab58fe3f93fdae75d5cb4151c159d06a0" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>TextBoxBNRDispense_Enter</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a947dcb53f232cd2a3ed29e16219ea834" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>TextBoxBNRDspense_Leave</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a428477f263cd0448f9511ee6def07319" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>textBoxLoaderNumberBilet</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ae88243fc18fe63708192018cdaa3145d" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>TextBoxLoaderNumberBillet_Enter</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a8eee2f2f3757e0e93dc936585000223b" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>TextBoxLoaderNumberBillet_Leave</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1acc479bbeb0448205cc158dff24711398" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ToDispense</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a782dd69ead2a2e6a2e3630af7ae0d360" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ToDispenseBNR</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ae4415a039614b0a6ba3ae33dda96d6da" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ToEmpty</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a81bab9bb19170317b594aa922778cf48" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ToLoad</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a79cceea313ca1aac5c13be925f49382e" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>toLoadInLoader</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a86e715ec3e834d53560f32997167a8d5" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>toolStripMenuItem1</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a48e168981d5472cba8559d624e919783" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ToolStripMenuItem1_Click</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ab91fe628eb5a6ad5c53f49af373734aa" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>toolStripStatusLabel1</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1a11a2e934f71cfc15a6104770fa5386ac" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>ToPayByClient</name></member>
+      <member refid="class_atmb_test_devices_1_1_form_main_1ade4e8bd99928b7e588e0846a313dadba" prot="private" virt="non-virtual"><scope>AtmbTestDevices::FormMain</scope><name>Valeur</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

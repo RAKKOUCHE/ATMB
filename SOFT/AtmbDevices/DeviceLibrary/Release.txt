@@ -135,5 +135,10 @@
  * - Correction du bug
  * - Evenement avec le retour du détail des pièces lors du retrait de la caisse.
  *
+ * Rev. 09.01.19   2019 01 19<br>
+ * -------------------------------------
+ * ### Modifications
+ * - Gestion des erreurs de dll du BNR
+ * 
  *------------------------------------------------------------------------------
  */

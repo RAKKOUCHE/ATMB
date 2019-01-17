@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CCoinValidator::CCanal::CCoindID</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="group___headers_1gaf51d26810d3dd898c2c312ec8a48017a" prot="private" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte DeviceLibrary.CCoinValidator.CCanal.CCoindID.REQUESTCOINID</definition>
+        <argsstring></argsstring>
+        <name>REQUESTCOINID</name>
+        <initializer>= 184</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="35" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a88f2e0911379862d5e2da5fc10ce45a1" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_device_library_1_1_c_coin_validator_1_1_c_canal" kindref="compound">CCanal</ref></type>
+        <definition>readonly CCanal DeviceLibrary.CCoinValidator.CCanal.CCoindID.CanalOwner</definition>
+        <argsstring></argsstring>
+        <name>CanalOwner</name>
+        <briefdescription>
+<para>Instance du canal de la pièce. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="42" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a70d3e359c26598f32ff2175fd2fd77ff" compoundref="_c_coin_validator_8_c_canal_8cs" startline="114" endline="120">DeviceLibrary.CCoinValidator.CCanal.CCoindID.CCoindID</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ae1bc073e4de35124f9af75505bf75608" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CCoinValidator.CCanal.CCoindID.countryCode</definition>
+        <argsstring></argsstring>
+        <name>countryCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="44" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a26a2b02de8a702406234db971ec73f57" prot="private" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CCoinValidator.CCanal.CCoindID.valeurCent</definition>
+        <argsstring></argsstring>
+        <name>valeurCent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="55" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ae415d0f8d307a71296b4c2494fe823e4" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char DeviceLibrary.CCoinValidator.CCanal.CCoindID.issue</definition>
+        <argsstring></argsstring>
+        <name>issue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="66" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ace03774c9a68d3600a6e9528ce870066" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string DeviceLibrary.CCoinValidator.CCanal.CCoindID.CountryCode</definition>
+        <argsstring></argsstring>
+        <name>CountryCode</name>
+        <briefdescription>
+<para>Code d&apos;identification du pays émetteur. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="49" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a70d3e359c26598f32ff2175fd2fd77ff" compoundref="_c_coin_validator_8_c_canal_8cs" startline="114" endline="120">DeviceLibrary.CCoinValidator.CCanal.CCoindID.CCoindID</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a2b53e098a15a9aeb11750de6730d8423" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CCoinValidator.CCanal.CCoindID.ValeurCent</definition>
+        <argsstring></argsstring>
+        <name>ValeurCent</name>
+        <briefdescription>
+<para>Valeur de la pièces. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="60" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a70d3e359c26598f32ff2175fd2fd77ff" compoundref="_c_coin_validator_8_c_canal_8cs" startline="114" endline="120">DeviceLibrary.CCoinValidator.CCanal.CCoindID.CCoindID</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="395" endline="461">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a4b2d9ca3a055e4b85bd39904cf5b8d75" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>char</type>
+        <definition>char DeviceLibrary.CCoinValidator.CCanal.CCoindID.Issue</definition>
+        <argsstring></argsstring>
+        <name>Issue</name>
+        <briefdescription>
+<para>Version des données d&apos;identification. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="71" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="72" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a70d3e359c26598f32ff2175fd2fd77ff" compoundref="_c_coin_validator_8_c_canal_8cs" startline="114" endline="120">DeviceLibrary.CCoinValidator.CCanal.CCoindID.CCoindID</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</definition>
+        <argsstring>()</argsstring>
+        <name>GetCoinId</name>
+        <briefdescription>
+<para>Lit l&apos;identification de la pièce acceptée dans le canal passé en paramètre. </para>        </briefdescription>
+        <detaileddescription>
+<para>voir <ref refid="group___headers_1gaf51d26810d3dd898c2c312ec8a48017a" kindref="member">REQUESTCOINID</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="81" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="81" bodyend="108"/>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a88f2e0911379862d5e2da5fc10ce45a1" compoundref="_c_coin_validator_8_c_canal_8cs" startline="42">DeviceLibrary.CCoinValidator.CCanal.CCoindID.CanalOwner</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ace03774c9a68d3600a6e9528ce870066" compoundref="_c_coin_validator_8_c_canal_8cs" startline="50">DeviceLibrary.CCoinValidator.CCanal.CCoindID.CountryCode</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a16e378356891c42f61c6dd095248a449" compoundref="_c_coin_validator_8_c_canal_8cs" startline="226">DeviceLibrary.CCoinValidator.CCanal.CVOwner</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a4b2d9ca3a055e4b85bd39904cf5b8d75" compoundref="_c_coin_validator_8_c_canal_8cs" startline="72">DeviceLibrary.CCoinValidator.CCanal.CCoindID.Issue</references>
+        <references refid="group___headers_1gaf51d26810d3dd898c2c312ec8a48017a" compoundref="_c_coin_validator_8_c_canal_8cs" startline="35">DeviceLibrary.CCoinValidator.CCanal.CCoindID.REQUESTCOINID</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a26a2b02de8a702406234db971ec73f57" compoundref="_c_coin_validator_8_c_canal_8cs" startline="55">DeviceLibrary.CCoinValidator.CCanal.CCoindID.valeurCent</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a2b53e098a15a9aeb11750de6730d8423" compoundref="_c_coin_validator_8_c_canal_8cs" startline="61">DeviceLibrary.CCoinValidator.CCanal.CCoindID.ValeurCent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a70d3e359c26598f32ff2175fd2fd77ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.CCoinValidator.CCanal.CCoindID.CCoindID</definition>
+        <argsstring>(CCanal owner)</argsstring>
+        <name>CCoindID</name>
+        <param>
+          <type><ref refid="class_device_library_1_1_c_coin_validator_1_1_c_canal" kindref="compound">CCanal</ref></type>
+          <declname>owner</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Le canal correspondant</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="114" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="114" bodyend="120"/>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a88f2e0911379862d5e2da5fc10ce45a1" compoundref="_c_coin_validator_8_c_canal_8cs" startline="42">DeviceLibrary.CCoinValidator.CCanal.CCoindID.CanalOwner</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ace03774c9a68d3600a6e9528ce870066" compoundref="_c_coin_validator_8_c_canal_8cs" startline="50">DeviceLibrary.CCoinValidator.CCanal.CCoindID.CountryCode</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a4b2d9ca3a055e4b85bd39904cf5b8d75" compoundref="_c_coin_validator_8_c_canal_8cs" startline="72">DeviceLibrary.CCoinValidator.CCanal.CCoindID.Issue</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a2b53e098a15a9aeb11750de6730d8423" compoundref="_c_coin_validator_8_c_canal_8cs" startline="61">DeviceLibrary.CCoinValidator.CCanal.CCoindID.ValeurCent</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class gérant l&apos;identification des pièces </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="51">
+        <label>DeviceLibrary.CCoinValidator.CCanal.CCoindID</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d"/>
+        <childnode refid="52" relation="usage">
+          <edgelabel>CanalOwner</edgelabel>
+        </childnode>
+      </node>
+      <node id="58">
+        <label>DeviceLibrary.CDevice.CInserted</label>
+        <link refid="class_device_library_1_1_c_device_1_1_c_inserted"/>
+      </node>
+      <node id="56">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="57" relation="public-inheritance">
+        </childnode>
+        <childnode refid="58" relation="usage">
+          <edgelabel>denominationInserted</edgelabel>
+        </childnode>
+      </node>
+      <node id="57">
+        <label>IDisposable</label>
+      </node>
+      <node id="54">
+        <label>CcashReader</label>
+        <link refid="class_device_library_1_1_ccash_reader"/>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>CccTalk</label>
+        <link refid="class_device_library_1_1_ccc_talk"/>
+        <childnode refid="56" relation="public-inheritance">
+        </childnode>
+        <childnode refid="56" relation="public-inheritance">
+        </childnode>
+        <childnode refid="56" relation="public-inheritance">
+        </childnode>
+        <childnode refid="59" relation="usage">
+          <edgelabel>counters</edgelabel>
+        </childnode>
+      </node>
+      <node id="59">
+        <label>DeviceLibrary.CcoinsCounters</label>
+        <link refid="class_device_library_1_1_ccoins_counters"/>
+      </node>
+      <node id="62">
+        <label>DeviceLibrary.CCoinValidator.CCanal.CSorter</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter"/>
+        <childnode refid="52" relation="usage">
+          <edgelabel>CanalOwner</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>DeviceLibrary.CCoinValidator</label>
+        <link refid="class_device_library_1_1_c_coin_validator"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="52" relation="usage">
+          <edgelabel>canaux</edgelabel>
+        </childnode>
+        <childnode refid="60" relation="usage">
+          <edgelabel>errorCV</edgelabel>
+        </childnode>
+        <childnode refid="61" relation="usage">
+          <edgelabel>creditBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="60">
+        <label>DeviceLibrary.CCoinValidator.CErroCV</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v"/>
+      </node>
+      <node id="61">
+        <label>DeviceLibrary.CCoinValidator.CCVcreditBuffer</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer"/>
+        <childnode refid="53" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="52">
+        <label>DeviceLibrary.CCoinValidator.CCanal</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal"/>
+        <childnode refid="53" relation="usage">
+          <edgelabel>CVOwner</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>sorter</edgelabel>
+        </childnode>
+        <childnode refid="51" relation="usage">
+          <edgelabel>coinId</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="26" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="25" bodyend="121"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a88f2e0911379862d5e2da5fc10ce45a1" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CCoindID</scope><name>CanalOwner</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a70d3e359c26598f32ff2175fd2fd77ff" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CCoindID</scope><name>CCoindID</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ace03774c9a68d3600a6e9528ce870066" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CCoindID</scope><name>CountryCode</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ae1bc073e4de35124f9af75505bf75608" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CCoindID</scope><name>countryCode</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CCoindID</scope><name>GetCoinId</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a4b2d9ca3a055e4b85bd39904cf5b8d75" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CCoindID</scope><name>Issue</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ae415d0f8d307a71296b4c2494fe823e4" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CCoindID</scope><name>issue</name></member>
+      <member refid="group___headers_1gaf51d26810d3dd898c2c312ec8a48017a" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CCoindID</scope><name>REQUESTCOINID</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a26a2b02de8a702406234db971ec73f57" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CCoindID</scope><name>valeurCent</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a2b53e098a15a9aeb11750de6730d8423" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCanal::CCoindID</scope><name>ValeurCent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

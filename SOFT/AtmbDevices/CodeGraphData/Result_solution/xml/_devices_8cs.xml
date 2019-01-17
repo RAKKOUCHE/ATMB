@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_devices_8cs" kind="file">
+    <compoundname>Devices.cs</compoundname>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+<para>Fichier contenant l&apos;enumération des adresses de périphériques ccTalk. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>28 11 2018 </para></simplesect>
+<simplesect kind="version"><para>1.0.0 </para></simplesect>
+<simplesect kind="author"><para>Rachid AKKOUCHE </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5ee" kindref="member">DefaultDevicesAddress</ref><sp/>:<sp/>byte</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeabe55b6387170df0ca68f41225268e842" kindref="member">Broadcast</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeac2ca16d048ec66e04bca283eab048ec2" kindref="member">Host</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeae7ca2ac311799e100facb48c3eb68f0c" kindref="member">CoinAcceptor</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eea62d9ee7c53ac2f13981473d3726fff0d" kindref="member">Hopper1</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eead0dff3c87b9df482bd72fe74540f1cd2" kindref="member">Hopper2</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeaf7e4b0d671d2bf68185cbd1df4efb5de" kindref="member">Hopper3</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeac530ff713fe1452d8af103010292645c" kindref="member">Hopper4</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eea09319275a0c8433b4519d8ffaccea176" kindref="member">Hopper5</ref><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eea7314f2bbd8282a0f78819c044d111de3" kindref="member">Hopper6</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeada60e631fd13097c6e9bdfeedd6f8208" kindref="member">Hopper7</ref><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeaf3b7b7b5c3d1f64a2fae629aab6c77f3" kindref="member">Hopper8</ref><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeadd3eb9957f43759b85cc6d50ea901967" kindref="member">BNA</ref><sp/>=<sp/>128,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eea20b4973bd557458c9cbd72e612a3f307" kindref="member">BNR</ref><sp/>=<sp/>129,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Devices.cs"/>
+  </compounddef>
+</doxygen>

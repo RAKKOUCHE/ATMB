@@ -401,7 +401,7 @@ namespace AtmbTestDevices
         /// <param name="e"></param>
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            deviceManage.Dispose();
+            //            deviceManage.Dispose();
             Application.Exit();
         }
 

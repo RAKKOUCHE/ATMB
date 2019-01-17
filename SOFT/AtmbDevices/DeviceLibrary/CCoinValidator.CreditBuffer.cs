@@ -25,25 +25,7 @@ namespace DeviceLibrary
 
             private byte eventCounter;
 
-            /// <summary>
-            /// Compteur d'évenements crédits ou erreurs
-            /// </summary>
-            public byte EventCounter
-            {
-                get => eventCounter;
-                set => eventCounter = value;
-            }
-
             private byte[,] result;
-
-            /// <summary>
-            /// Buffer contenant les informations sur les évenements.
-            /// </summary>
-            public byte[,] Result
-            {
-                get => result;
-                set => result = value;
-            }
 
             /// <summary>
             /// Contructeur
@@ -53,6 +35,24 @@ namespace DeviceLibrary
                 owner = Owner;
                 EventCounter = 0;
                 Result = new byte[,] { { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 } };
+            }
+
+            /// <summary>
+            /// Compteur d'évenements crédits ou erreurs
+            /// </summary>
+            public byte EventCounter
+            {
+                get => eventCounter;
+                set => eventCounter = value;
+            }
+
+            /// <summary>
+            /// Buffer contenant les informations sur les évenements.
+            /// </summary>
+            public byte[,] Result
+            {
+                get => result;
+                set => result = value;
             }
 
             /// <summary>

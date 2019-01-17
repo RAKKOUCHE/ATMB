@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_pelicano_8_header_8cs" kind="file">
+    <compoundname>CPelicano.Header.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_c_pelicano" prot="public">DeviceLibrary::CPelicano</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+<para>Fichier contenant l&apos;énumération des commandes ccTalk spécifiques au Pelicano. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>28 11 2018 </para></simplesect>
+<simplesect kind="version"><para>1.0.0 </para></simplesect>
+<simplesect kind="author"><para>Rachid AKKOUCHE </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal">CPelicano<sp/>:<sp/>CCoinValidator</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="group___headers_1gab5d74ee46128a469010ae43a40b9b777" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___headers_1gaf4bdeeddb7c89dd2b54f86978f5e9866" kindref="member">Header</ref><sp/>:<sp/>byte</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab5d74ee46128a469010ae43a40b9b777af7401a2b001f90c26bb2be51b83799b3" kindref="member">READOPTOSTATES</ref><sp/>=<sp/>236,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab5d74ee46128a469010ae43a40b9b777a33964bfc1d0f61c0365163eb22258215" kindref="member">REQUESTOPTIONFLAG</ref><sp/>=<sp/>213,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab5d74ee46128a469010ae43a40b9b777a221df10672b3ce141072caba2151c103" kindref="member">SETGETACCEPTLIMIT</ref><sp/>=<sp/>135,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.Header.cs"/>
+  </compounddef>
+</doxygen>

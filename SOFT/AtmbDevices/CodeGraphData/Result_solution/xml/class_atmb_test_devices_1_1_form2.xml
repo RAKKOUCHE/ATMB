@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_atmb_test_devices_1_1_form2" kind="class" prot="public">
+    <compoundname>AtmbTestDevices::Form2</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form2_1a92db7f0138247615d9b02cb18f996f28" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer AtmbTestDevices.Form2.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" line="8" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form2_1afec2b85430c76f00bfb3df897ce69c75" compoundref="_form2_8_designer_8cs" startline="14" endline="21">AtmbTestDevices.Form2.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form2_1aeb95c3e9f61a1631aa72f04071262d08" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label AtmbTestDevices.Form2.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" line="99" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form2_1acb089eb6f5cb135dbb6ee9acccd46b77" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel AtmbTestDevices.Form2.panel1</definition>
+        <argsstring></argsstring>
+        <name>panel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" line="100" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atmb_test_devices_1_1_form2_1aac83f2f1669d401b813bc754a66e9393" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label AtmbTestDevices.Form2.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" line="101" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form2_1a1a33a31859cc3f5d4fb79b42efbc88a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AtmbTestDevices.Form2.Form2</definition>
+        <argsstring>()</argsstring>
+        <name>Form2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.cs" line="7" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.cs" bodystart="7" bodyend="10"/>
+        <references refid="class_atmb_test_devices_1_1_form2_1aed05a4452461cd69bdf3e40a2165bf8d" compoundref="_form2_8_designer_8cs" startline="29" endline="96">AtmbTestDevices.Form2.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form2_1afec2b85430c76f00bfb3df897ce69c75" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void AtmbTestDevices.Form2.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" line="14" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" bodystart="14" bodyend="21"/>
+        <references refid="class_atmb_test_devices_1_1_form2_1a92db7f0138247615d9b02cb18f996f28" compoundref="_form2_8_designer_8cs" startline="8">AtmbTestDevices.Form2.components</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_form2_1aed05a4452461cd69bdf3e40a2165bf8d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmbTestDevices.Form2.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" line="29" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.Designer.cs" bodystart="29" bodyend="96"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form2_1a1a33a31859cc3f5d4fb79b42efbc88a8" compoundref="_form2_8cs" startline="7" endline="10">AtmbTestDevices.Form2.Form2</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="254">
+        <label>AtmbTestDevices.Form2</label>
+        <link refid="class_atmb_test_devices_1_1_form2"/>
+        <childnode refid="255" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="255">
+        <label>Form</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="256">
+        <label>AtmbTestDevices.Form2</label>
+        <link refid="class_atmb_test_devices_1_1_form2"/>
+        <childnode refid="257" relation="public-inheritance">
+        </childnode>
+        <childnode refid="258" relation="usage">
+          <edgelabel>panel1</edgelabel>
+          <edgelabel>label2</edgelabel>
+          <edgelabel>label3</edgelabel>
+          <edgelabel>components</edgelabel>
+        </childnode>
+      </node>
+      <node id="257">
+        <label>Form</label>
+      </node>
+      <node id="258">
+        <label>System</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.cs" line="6" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.cs" bodystart="5" bodyend="11"/>
+    <listofallmembers>
+      <member refid="class_atmb_test_devices_1_1_form2_1a92db7f0138247615d9b02cb18f996f28" prot="private" virt="non-virtual"><scope>AtmbTestDevices::Form2</scope><name>components</name></member>
+      <member refid="class_atmb_test_devices_1_1_form2_1afec2b85430c76f00bfb3df897ce69c75" prot="protected" virt="non-virtual"><scope>AtmbTestDevices::Form2</scope><name>Dispose</name></member>
+      <member refid="class_atmb_test_devices_1_1_form2_1a1a33a31859cc3f5d4fb79b42efbc88a8" prot="public" virt="non-virtual"><scope>AtmbTestDevices::Form2</scope><name>Form2</name></member>
+      <member refid="class_atmb_test_devices_1_1_form2_1aed05a4452461cd69bdf3e40a2165bf8d" prot="private" virt="non-virtual"><scope>AtmbTestDevices::Form2</scope><name>InitializeComponent</name></member>
+      <member refid="class_atmb_test_devices_1_1_form2_1aeb95c3e9f61a1631aa72f04071262d08" prot="private" virt="non-virtual"><scope>AtmbTestDevices::Form2</scope><name>label2</name></member>
+      <member refid="class_atmb_test_devices_1_1_form2_1aac83f2f1669d401b813bc754a66e9393" prot="private" virt="non-virtual"><scope>AtmbTestDevices::Form2</scope><name>label3</name></member>
+      <member refid="class_atmb_test_devices_1_1_form2_1acb089eb6f5cb135dbb6ee9acccd46b77" prot="private" virt="non-virtual"><scope>AtmbTestDevices::Form2</scope><name>panel1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

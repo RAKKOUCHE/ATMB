@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_atmb_test_devices_1_1_program" kind="class" prot="package">
+    <compoundname>AtmbTestDevices::Program</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_atmb_test_devices_1_1_program_1a8322eb6674d3fb343e191849f2976a63" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void AtmbTestDevices.Program.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>Point d&apos;entrée principal de l&apos;application. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Program.cs" line="12" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Program.cs" bodystart="12" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Program.cs" line="7" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Program.cs" bodystart="6" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_atmb_test_devices_1_1_program_1a8322eb6674d3fb343e191849f2976a63" prot="private" virt="non-virtual"><scope>AtmbTestDevices::Program</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

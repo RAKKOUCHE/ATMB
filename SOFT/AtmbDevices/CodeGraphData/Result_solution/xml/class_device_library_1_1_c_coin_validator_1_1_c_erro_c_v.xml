@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CCoinValidator::CErroCV</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v_1a645b37f5a1414ee05ef237a4afbd8e43" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CCoinValidator.CErroCV.code</definition>
+        <argsstring></argsstring>
+        <name>code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.cs" line="30" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v_1a0d512c6ac4b9a6e46c8161b4e9cf9828" prot="public" static="no" mutable="no">
+        <type><ref refid="group___erreurs_1ga68c5b73cc3b337502d9f92154d933591" kindref="member">CVErrorCodes</ref></type>
+        <definition>CVErrorCodes DeviceLibrary.CCoinValidator.CErroCV.errorText</definition>
+        <argsstring></argsstring>
+        <name>errorText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.cs" line="35" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe des erreurs du monnayeur. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.cs" line="26" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.cs" bodystart="25" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v_1a645b37f5a1414ee05ef237a4afbd8e43" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CErroCV</scope><name>code</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v_1a0d512c6ac4b9a6e46c8161b4e9cf9828" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CErroCV</scope><name>errorText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

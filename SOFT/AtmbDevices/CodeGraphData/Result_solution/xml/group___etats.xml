@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group___etats" kind="group">
+    <compoundname>Etats</compoundname>
+    <title>Etats</title>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___etats_1ga0ba00823ea47953aa70abd2626137de2" prot="public" static="no">
+        <name>Etat</name>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2abb47b9b1d888741b1d94f3f060281299" prot="public">
+          <name>STATE_INIT</name>
+          <briefdescription>
+<para>Initialisation du BNR. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa31e7f2a1fe3aaab2484740d51878a3d" prot="public">
+          <name>STATE_OPEN_API</name>
+          <briefdescription>
+<para>Ouverture de la communication entre le BNR et le PC. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2aac8722b851146a23c4e0a59d1bd4b99d" prot="public">
+          <name>STATE_RESET</name>
+          <briefdescription>
+<para>Initialisation hardware. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2adfe9cb852c1d673d49f08b8ab56f8042" prot="public">
+          <name>STATE_SETDATETIME</name>
+          <briefdescription>
+<para>Enregistrement de la date. </para>          </briefdescription>
+          <detaileddescription>
+<para>Nécessaire pour les versions antéreures du BNR</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a98a681af6d6caeb049e0a306a46849fb" prot="public">
+          <name>STATE_GETMODULE</name>
+          <briefdescription>
+<para>Lecture de la liste des modules. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a5fe7aa1c693d66ec83b4b57414702906" prot="public">
+          <name>STATE_GETSTATUS</name>
+          <briefdescription>
+<para>Lecture de l&apos;état du BNR. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a305313efbf5f85ddfa770a6418ce1d3d" prot="public">
+          <name>STATE_DISABLE</name>
+          <briefdescription>
+<para>Etat pour désactiver le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2adf784599ba944861cdd7d1010080f9b9" prot="public">
+          <name>STATE_ENABLE</name>
+          <briefdescription>
+<para>Etat pour activer le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a429322f04df2897f3895ce1875fa421d" prot="public">
+          <name>STATE_DISPENSE</name>
+          <briefdescription>
+<para>Etat pour distribuer un montant. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a518a96054e2f013840d5b3a76b5f231a" prot="public">
+          <name>STATE_DENOMINATE</name>
+          <briefdescription>
+<para>Test la disponibilité du montant. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a591bddc3af4fb48b4fb92a1b498a892e" prot="public">
+          <name>STATE_GETLCUS</name>
+          <briefdescription>
+<para>Création de la liste des unités logiques. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a400ddd2b05277bc7d75580c437a1fe2e" prot="public">
+          <name>STATE_ROLLBACK</name>
+          <briefdescription>
+<para>Les billets sont rendus. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a238625dce187682a7f0893e0df431779" prot="public">
+          <name>STATE_RETRACT</name>
+          <briefdescription>
+<para>Reprend les billets </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a667adf1721ecf31975b473ea51005d04" prot="public">
+          <name>STATE_IDLE</name>
+          <briefdescription>
+<para>BNR en attente. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa1cbf7ab92312cb40dc586242a8bc03e" prot="public">
+          <name>STATE_STOP</name>
+          <briefdescription>
+<para>Arrêt du BNR. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.Etat.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.Etat.cs" bodystart="19" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___etats_1ga33c79ff59c961c2e1bbf95838e5d6871" prot="public" static="no">
+        <name>Etat</name>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871abb47b9b1d888741b1d94f3f060281299" prot="public">
+          <name>STATE_INIT</name>
+          <briefdescription>
+<para>Etat pour l&apos;initialisation du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aac8722b851146a23c4e0a59d1bd4b99d" prot="public">
+          <name>STATE_RESET</name>
+          <briefdescription>
+<para>Etat pour le reset du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a0e7f32f0542fad5503628ce6a034fbd0" prot="public">
+          <name>STATE_SIMPLEPOLL</name>
+          <briefdescription>
+<para>Etat pour un polling de vérification. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871adf379b50230aa8921db41fc267a6a01a" prot="public">
+          <name>STATE_GETPOLLINGDELAY</name>
+          <briefdescription>
+<para>Etat pour obtenir le delai maximum entre 2 lectures du buffer des crédits et des codes erreurs. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871ae5a739c65ca46caf6d8d388f3ae3f215" prot="public">
+          <name>STATE_SETPOLLINGDELAY</name>
+          <briefdescription>
+<para>Etat pour fixer le délai de lectures entre 2 lectures du buffer des crédits et des codes erreurs. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a5fe7aa1c693d66ec83b4b57414702906" prot="public">
+          <name>STATE_GETSTATUS</name>
+          <briefdescription>
+<para>Etat pour la lecture du status du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a1ef6b5f52c14078101e5e3667d47737b" prot="public">
+          <name>STATE_GETMANUFACTURERID</name>
+          <briefdescription>
+<para>Etat pour la lecture de l&apos;identification du fabricant du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a8a6438b30205094505f9334a05dfb181" prot="public">
+          <name>STATE_GETEQUIPEMENTCATEGORY</name>
+          <briefdescription>
+<para>Etat pour la lecture de la catégorie du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a265206139b5c776e496bbe0560ccfc99" prot="public">
+          <name>STATE_GETPRODUCTCODE</name>
+          <briefdescription>
+<para>Etat pour la lecture du code produit du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a4a67b9a79581b431503084482a07723f" prot="public">
+          <name>STATE_GETBUILDCODE</name>
+          <briefdescription>
+<para>Etat pour la lecture du code de production du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aa8ecbe1a24b3fa5a9b22c7c3d5af26f2" prot="public">
+          <name>STATE_GETDATABASEVERSION</name>
+          <briefdescription>
+<para>Etat pour la lecture de version des données du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a247eb9a3665774bf7214dd78c11416e7" prot="public">
+          <name>STATE_GETSERIALNUMBER</name>
+          <briefdescription>
+<para>Etat pour la lecture du numéro de série du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a76b19450787b4b3caffafa35d8216920" prot="public">
+          <name>STATE_GETSOFTWAREREVISION</name>
+          <briefdescription>
+<para>Etat pour la lecture de la révision software du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a705114ed45d23f5474f073c83ed34198" prot="public">
+          <name>STATE_TESTSOLENOID</name>
+          <briefdescription>
+<para>Etat pour le test des activateurs du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871af24075f047ffa05c28715458f60f6c2e" prot="public">
+          <name>STATE_TRASHEMPTY</name>
+          <briefdescription>
+<para>Etat pour vider le container du Pelicano. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a842db363f372d4400c74da269105c6f1" prot="public">
+          <name>STATE_SETSPEEDMOTOR</name>
+          <briefdescription>
+<para>Etat pour définir la vitesse de rotation du disque du pelicano. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aab26c5005c0ee5838edc28975e09a61a" prot="public">
+          <name>STATE_GETSPEEDMOTOR</name>
+          <briefdescription>
+<para>Etat pour la lecture de la vitesse de rotation du disque du Pelciano. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a4714312431af83bc3474f314b18fae80" prot="public">
+          <name>STATE_GETPOCKET</name>
+          <briefdescription>
+<para>Etat pour la lecture du temps entre 2 trous du disque du Pelciano. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a869a56a581e853e5d15226930e13ff5d" prot="public">
+          <name>STATE_CHECKTRASHDOOR</name>
+          <briefdescription>
+<para>Etat pour lire l&apos;état de la trappe du container du Pelicano. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a3a9f94ad405119ae73f2c6410d1cd9f2" prot="public">
+          <name>STATE_CHECKLOWERSENSOR</name>
+          <briefdescription>
+<para>Etat pour vérifier l&apos;état des senseurs de sortie du Pelicano. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871afb0753c5cac9583b20e52e08e97b44d6" prot="public">
+          <name>STATE_SELF_TEST</name>
+          <briefdescription>
+<para>Etat pour effectuer un test interne du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a73daf91486dd909820faca0e91882beb" prot="public">
+          <name>STATE_SETINHIBITSTATUS</name>
+          <briefdescription>
+<para>Etat pour fixer l&apos;inhibition des canaux du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a50fe44dca28a30766a5649bf8b9afe9e" prot="public">
+          <name>STATE_GETINHIBITSTATUS</name>
+          <briefdescription>
+<para>Etat pour la lecture de l&apos;inhibiton des canaux périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871affadcf3cb0d39b38a8f3ca88f7388901" prot="public">
+          <name>STATE_GETCREDITBUFFER</name>
+          <briefdescription>
+<para>Etat pour la lecture du buffer de credits ou des codes d&apos;erreur du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a9c1c69e1319855b5d761830ce685c96a" prot="public">
+          <name>STATE_SETMASTERINHIBIT</name>
+          <briefdescription>
+<para>Etat pour activer ou désactiver le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871afc72fc11a904ff5f61cec6c9c34f2115" prot="public">
+          <name>STATE_DISABLEMASTER</name>
+          <briefdescription>
+<para>Etat pour désactiver le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a12de40f0f8ff40b07c2ebc106d6626dc" prot="public">
+          <name>STATE_ENABLEMASTER</name>
+          <briefdescription>
+<para>Etat pour activer le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a16a0d4edbb28a34848d155e347f50d07" prot="public">
+          <name>STATE_GETMASTERINHIBT</name>
+          <briefdescription>
+<para>Etat pour la lecture de l&apos;inhibition générale du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871abd893617ba11bba9f46a4e7dde1e14ba" prot="public">
+          <name>STATE_SETOVERRIDE</name>
+          <briefdescription>
+<para>Etat pour enregistre l&apos;octet d&apos;override du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a549141cb843ccc9e63a5a27d689e4f8a" prot="public">
+          <name>STATE_GETOVERRIDE</name>
+          <briefdescription>
+<para>Etat pour la lecture de l&apos;octet d&apos;override du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a119e95d1b7ccb2fe9684fab70ff434a4" prot="public">
+          <name>STATE_GETOPTION</name>
+          <briefdescription>
+<para>Etat pour la lecture des options du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aebb524d9d2939864e4b98146fa2eda6f" prot="public">
+          <name>STATE_SETSORTERPATH</name>
+          <briefdescription>
+<para>Etat pour l&apos;enregistrement des chemins de tri pour un canal du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aa9682c56a455bd2f1a9f57e32e7639fc" prot="public">
+          <name>STATE_GETSORTERPATH</name>
+          <briefdescription>
+<para>Etat pour la lecture des chemins de tri pour un canal du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aa3c6eabffd1821f7c63dc12015ca8fb1" prot="public">
+          <name>STATE_SETDEFAULTSORTERPATH</name>
+          <briefdescription>
+<para>Etat pour l&apos;enregistrement du chemin de tri par defaut pour le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a59085e963dfd65a5fbe264fccc6c6d2e" prot="public">
+          <name>STATE_GETDEFAULTSORTERPATH</name>
+          <briefdescription>
+<para>Etat pour la lecture du chemin de tri par defaut pour le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a3b1dbe60c4b27db6a2570d8267c81a93" prot="public">
+          <name>STATE_GETCOINID</name>
+          <briefdescription>
+<para>Etat pour la lecture de l&apos;identification de la pièce reconnue dans un canal du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871ae7d6e6ee885540e3f876a92a7e57b96c" prot="public">
+          <name>STATE_ACCEPTLIMIT</name>
+          <briefdescription>
+<para>Etat pour fixer les limites de pièces à accepter pour une transaction dans un périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871af4dadaba24e538c246b8c3dd3833ab7e" prot="public">
+          <name>STATE_COMMSREVISION</name>
+          <briefdescription>
+<para>Etat pour lire la version ccTalk utiliser par le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a3f4ffd4998d3212972d11f59c018692c" prot="public">
+          <name>STATE_CHECKCREDIBUFFER</name>
+          <briefdescription>
+<para>Etat pour analyser le buffer de crédit. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a667adf1721ecf31975b473ea51005d04" prot="public">
+          <name>STATE_IDLE</name>
+          <briefdescription>
+<para>Etat quand le périphérique est inactif. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aa1cbf7ab92312cb40dc586242a8bc03e" prot="public">
+          <name>STATE_STOP</name>
+          <briefdescription>
+<para>Arrêt de la tâche. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.Etat.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.Etat.cs" bodystart="22" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___etats_1ga5f54d84c3b2a93420c8ff69b1351c77a" prot="public" static="no">
+        <name>Etat</name>
+        <enumvalue id="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aabb47b9b1d888741b1d94f3f060281299" prot="public">
+          <name>STATE_INIT</name>
+          <briefdescription>
+<para>Initialisation du hopper </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aaac8722b851146a23c4e0a59d1bd4b99d" prot="public">
+          <name>STATE_RESET</name>
+          <briefdescription>
+<para>Reset du hopper </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aa429322f04df2897f3895ce1875fa421d" prot="public">
+          <name>STATE_DISPENSE</name>
+          <briefdescription>
+<para>Traitement d&apos;une demande de distribution </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aaff94b4df37ab98dfd6aeecb2f7b43e30" prot="public">
+          <name>STATE_GETEQUIPEMENCATEGORY</name>
+          <briefdescription>
+<para>Lit la catégorie du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aa8920d1130a04c5762b9f97e77a763045" prot="public">
+          <name>STATE_GETOPTOSTATE</name>
+          <briefdescription>
+<para>Lit l&apos;état des opto-coupleurs. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aa3f50973a7aa2ac45ba9b9d65129c35f2" prot="public">
+          <name>STATE_DISPENSEINPROGRESS</name>
+          <briefdescription>
+<para>Distribution en cours </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aaeffe17b6965a363aff8e39b905e87aaf" prot="public">
+          <name>STATE_ENDDISPENSE</name>
+          <briefdescription>
+<para>Traitement fin de distribution </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aa37dadab829ca289cf7f571fda1fc156d" prot="public">
+          <name>STATE_CHECKLEVEL</name>
+          <briefdescription>
+<para>Vérification des niveaux du hopper, </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aa667adf1721ecf31975b473ea51005d04" prot="public">
+          <name>STATE_IDLE</name>
+          <briefdescription>
+<para>Inactif </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aaa1cbf7ab92312cb40dc586242a8bc03e" prot="public">
+          <name>STATE_STOP</name>
+          <briefdescription>
+<para>interrompt la tâche. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Etat.cs" line="24" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Etat.cs" bodystart="23" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Groupe des états des machines d&apos;états des périphériques. </para>    </briefdescription>
+    <detaileddescription>
+<para>Etat de la machine d&apos;état du BNR. </para><para>Etat de la machine d&apos;état du CV. </para><para>Etat de la machine d&apos;état des hoppers </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

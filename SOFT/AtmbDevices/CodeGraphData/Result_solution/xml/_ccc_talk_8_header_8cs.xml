@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_ccc_talk_8_header_8cs" kind="file">
+    <compoundname>CccTalk.Header.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_ccc_talk" prot="public">DeviceLibrary::CccTalk</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+<para>Fichier contenant l&apos;énumération des commandes communes à tous les périphériques ccTalk. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>28 11 2018 </para></simplesect>
+<simplesect kind="version"><para>1.0.0 </para></simplesect>
+<simplesect kind="author"><para>Rachid AKKOUCHE </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="class_device_library_1_1_ccc_talk" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">abstract</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal"><ref refid="class_device_library_1_1_ccc_talk" kindref="compound">CccTalk</ref><sp/>:<sp/><ref refid="class_device_library_1_1_c_device" kindref="compound">CDevice</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="group___headers_1ga22f8eb6526627d4203e53ce7dbd3052a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___headers_1ga22f8eb6526627d4203e53ce7dbd3052a" kindref="member">Header</ref><sp/>:<sp/>byte</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf6daafc242a3bea0cfdf8deaac4cbdfe" kindref="member">FACTORYSETUP</ref><sp/>=<sp/>255,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa28989b1e5d1316cb7695aa363f531a97" kindref="member">SIMPLEPOLL</ref><sp/>=<sp/>254,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa909355816ff6e7e959619e23789f2227" kindref="member">ADDRESSPOLL</ref><sp/>=<sp/>253,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa44aba6ad436073d338560f89aa8f6154" kindref="member">ADDRESSCLASH</ref><sp/>=<sp/>252,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa2dcd6749aa763943ba4b2f6b62962505" kindref="member">ADDRESSCHANGE</ref><sp/>=<sp/>251,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa4ddfc0abc8dafde9a696ba71824c1f72" kindref="member">ADDRESSRANDOM</ref><sp/>=<sp/>250,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa0b86a65dca9c484a7bde9fca38803f0b" kindref="member">REQUESTVARIABLESET</ref><sp/>=<sp/>247,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aab513d3b7fc4b96e054937fb6fbbb0729" kindref="member">REQUESTMANUFACTURERID</ref><sp/>=<sp/>246,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aae7716221fdaec83804880e8765cf7d10" kindref="member">REQUESTEQUIPEMENTCATEGORYID</ref><sp/>=<sp/>245,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaaf384971e229ef28c276b9779bd81388" kindref="member">REQUESTPRODUCTCODE</ref><sp/>=<sp/>244,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa3227e2092fc0766e61a1a732de61062d" kindref="member">REQUESTSN</ref><sp/>=<sp/>242,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa7e17eee28297a1c7131d78d335dc3dc7" kindref="member">REQUESTSWREV</ref><sp/>=<sp/>241,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa9163ec519df517704db337f07ea927d6" kindref="member">OPERATEMOTOR</ref><sp/>=<sp/>239,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf7401a2b001f90c26bb2be51b83799b3" kindref="member">READOPTOSTATES</ref><sp/>=<sp/>236,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa4236a0843d4f19fe52b9c493eb437802" kindref="member">ENTERNEWPINNUMBER</ref><sp/>=<sp/>219,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf8106609f05a253f413197be056fba71" kindref="member">ENTERPINNUMBER</ref><sp/>=<sp/>218,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aad598c36cca844abd31f22322ef8670c7" kindref="member">REQUESTDATASTORAGEAVAILABILITY</ref><sp/>=<sp/>216,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf4d3266005046022ff52ffa5c3f3f0c3" kindref="member">READDATABLOCK</ref><sp/>=<sp/>215,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf42de9fb76d8e85f35c258b77e2ff02a" kindref="member">WRITEDATABLOCK</ref><sp/>=<sp/>214,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa3ea83e192f7d50bb0bd2b51a5f4883e1" kindref="member">REQUESTBUILDCODE</ref><sp/>=<sp/>192,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaaa233eaf5d8e09ef8ca6c3c120ee0388" kindref="member">REQUESTBASEYEAR</ref><sp/>=<sp/>170,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aadd771b5014d8dfb2d691b886c0d0154c" kindref="member">REQUESTADDRESSMODE</ref><sp/>=<sp/>169,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aae924a1d3fed578124d2542b501b9d5be" kindref="member">MODIFYVARIABLESET</ref><sp/>=<sp/>165,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa7179596553bfb00fe3a54fb1c4f46d2e" kindref="member">SWITCHENCRYPTIONCODE</ref><sp/>=<sp/>137,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa175f64a90ae2bf6edd145a17609268a1" kindref="member">STOREENCRYPTIONCODE</ref><sp/>=<sp/>136,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa802706a9238e2928077f97736854bad4" kindref="member">BUSY</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa3860aef5aa76641c6959d1a5de94b216" kindref="member">NAK</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa233ae98d8a18c499eb4b798360aa02ef" kindref="member">REQUESTCOMMSREVISION</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aafb4cfb0ac631109fa01bdbd70ba8e166" kindref="member">CLEARCOMMSSTATUSVARIABLES</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaacaa18d8173ad7149b61185d29c4f3bb" kindref="member">REQUESTCOMMSSTATUSVARIABLES</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aab87acc3ce509b6e2b20a564607eb06d8" kindref="member">RESETDEVICE</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.Header.cs"/>
+  </compounddef>
+</doxygen>

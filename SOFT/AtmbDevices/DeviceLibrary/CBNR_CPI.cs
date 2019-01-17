@@ -18,103 +18,17 @@ namespace DeviceLibrary
     /// </summary>
     public partial class CBNR_CPI : CDevice
     {
-        /// <summary>
-        /// Instance du bnr.
-        /// </summary>
-        public static Bnr bnr;
+        #region VARIABLES
 
         /// <summary>
-        ///
+        /// Délai maximum accordé pour effectur un reset
         /// </summary>
-        public class CitemsDispensed
-        {
-            /// <summary>
-            /// Nombres de billets de la dénominations distribués
-            /// </summary>
-            public int numberBills;
-
-            /// <summary>
-            /// Valeur de la dénomination.
-            /// </summary>
-            public int BillValue;
-
-            /// <summary>
-            /// Montant des billets de cette denominations distribués.
-            /// </summary>
-            public int amount;
-        }
+        private const int BnrResetTimeOutInMS = 60000;
 
         /// <summary>
-        /// Class contenant le resultat d'une opération de distribution.
+        /// Instance de la class Cerror.
         /// </summary>
-        public class CResultDispense
-        {
-            /// <summary>
-            /// List contenant les montants par devise distribuée.
-            /// </summary>
-            public List<CitemsDispensed> listValue;
-
-            /// <summary>
-            /// Montant total distribué.
-            /// </summary>
-            public int Montant;
-
-            /// <summary>
-            ///
-            /// </summary>
-            public CResultDispense()
-            {
-                listValue = new List<CitemsDispensed>();
-            }
-        }
-
-        /// <summary>
-        /// Class indiquant la présence ou non d'un module.
-        /// </summary>
-        /// <remarks>Cette classe est utlisée pour les retraits et les insertions des modles.</remarks>
-        private class CModulePosition
-        {
-            /// <summary>
-            /// Nom du module.
-            /// </summary>
-            public string name;
-
-            /// <summary>
-            /// Flag indiquant
-            /// </summary>
-            public bool isPresent;
-
-            /// <summary>
-            /// Indique si un module a été reinséré.
-            /// </summary>
-            public bool isReinserted;
-
-            /// <summary>
-            /// Renvoi le nom du module.
-            /// </summary>
-            /// <returns></returns>
-            public override string ToString()
-            {
-                return name;
-            }
-
-            /// <summary>
-            /// Constructeur
-            /// </summary>
-            /// <param name="name">Indique le nom du module contenu dans l'instance de la classe.</param>
-            /// <param name="isPresent">Initialise la présence du module.</param>
-            public CModulePosition(string name, bool isPresent)
-            {
-                this.name = name;
-                this.isPresent = isPresent;
-                isReinserted = false;
-            }
-        }
-
-        /// <summary>
-        /// Liste contenant l'état des modules.
-        /// </summary>
-        private static List<CModulePosition> listModulePosition;
+        private static Cerror errorInfo;
 
         /// <summary>
         /// Liste contenant la liste des unités logiques.
@@ -122,19 +36,102 @@ namespace DeviceLibrary
         private static Mei.Bnr.CashUnit.LogicalCashUnit[] listLCU;
 
         /// <summary>
+        /// Liste contenant l'état des modules.
+        /// </summary>
+        private static List<CModulePosition> listModulePosition;
+
+        /// <summary>
+        /// Delain maximum pour effectuer une opération.
+        /// </summary>
+        internal const int BnrDefaultOperationTimeOutInMS = 10000;
+
+        /// <summary>
+        /// Instance du bnr.
+        /// </summary>
+        public static Bnr bnr;
+
+        /// <summary>
+        /// Evénement permettant de gérer les function asynchrone.
+        /// </summary>
+        public static AutoResetEvent ev;
+
+        /// <summary>
+        /// Flag indiquant si les billets sont présentés à l'usager.
+        /// </summary>
+        public static bool isCashPresent;
+
+        /// <summary>
+        /// Flag indiquant si les billets ont été repris.
+        /// </summary>
+        public static bool isCashTaken;
+
+        /// <summary>
         /// Indique si la demande de denomination est possible.
         /// </summary>
         public static bool isDispensable;
 
         /// <summary>
-        /// Code produit du périphérique.
+        /// Thread utilisé pour le BNR
         /// </summary>
-        public override string ProductCode
+        public readonly Thread bnrTask;
+
+        #endregion VARIABLES
+
+        #region PROPRIETEES
+
+        private static Etat state;
+
+        private int amountToDispense;
+
+        private int divider;
+
+        private bool isBNRToBeActivated;
+
+        private bool isBNRToBeDeactivated;
+
+        /// <summary>
+        /// Etat de la machine d'état gérant le BNR.
+        /// </summary>
+        public static Etat State
         {
-            get
-            {
-                return bnr.SystemConfiguration.BnrType.ToString();
-            }
+            get => state;
+            set => state = value;
+        }
+
+        /// <summary>
+        /// Montant à distribuer ou dont on veur vérifier la disponibilité.
+        /// </summary>
+        public int AmountToDispense
+        {
+            get => amountToDispense;
+            set => amountToDispense = value;
+        }
+
+        /// <summary>
+        /// Montant du billet de plus faible valeur;
+        /// </summary>
+        public int Divider
+        {
+            get => divider;
+            set => divider = value;
+        }
+
+        /// <summary>
+        /// Indique si le monnayeur doit être adtivé.
+        /// </summary>
+        public bool IsBNRToBeActivated
+        {
+            get => isBNRToBeActivated;
+            set => isBNRToBeActivated = value;
+        }
+
+        /// <summary>
+        /// Indique si le monnayeur doit être adtivé.
+        /// </summary>
+        public bool IsBNRToBeDeactivated
+        {
+            get => isBNRToBeDeactivated;
+            set => isBNRToBeDeactivated = value;
         }
 
         /// <summary>
@@ -149,124 +146,40 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Délai maximum accordé pour effectur un reset
+        /// Code produit du périphérique.
         /// </summary>
-        private const int BnrResetTimeOutInMS = 60000;
-
-        /// <summary>
-        /// Delain maximum pour effectuer une opération.
-        /// </summary>
-        public const int BnrDefaultOperationTimeOutInMS = 10000;
-
-        private static Etat state;
-
-        /// <summary>
-        /// Etat de la machine d'état du BNR.
-        /// </summary>
-        public static Etat State
+        public override string ProductCode
         {
-            get => state;
-            set => state = value;
+            get
+            {
+                return bnr.SystemConfiguration.BnrType.ToString();
+            }
         }
 
-        private int amountToDispense;
+        #endregion PROPRIETEES
+
+        #region METHODES
 
         /// <summary>
-        /// Montant à distribuer ou dont on veur vérifier la disponibilité.
+        /// Constructeur
         /// </summary>
-        public int AmountToDispense
-        {
-            get => amountToDispense;
-            set => amountToDispense = value;
-        }
-
-        /// <summary>
-        /// Thread utilisé pour le BNR
-        /// </summary>
-        public readonly Thread bnrTask;
-
-        /// <summary>
-        /// Evénement permettant de gérer les function asynchrone.
-        /// </summary>
-        public static AutoResetEvent ev;
-
-        /// <summary>
-        /// Instance de la class Cerror.
-        /// </summary>
-        private static Cerror errorInfo;
-
-        private bool isBNRToBeDeactivated;
-
-        /// <summary>
-        /// Indique si le monnayeur doit être adtivé.
-        /// </summary>
-        public bool IsBNRToBeDeactivated
-        {
-            get => isBNRToBeDeactivated;
-            set => isBNRToBeDeactivated = value;
-        }
-
-        /// <summary>
-        /// Flag indiquant si les billets sont présentés à l'usager.
-        /// </summary>
-        public static bool isCashPresent;
-
-        /// <summary>
-        /// Flag indiquant si les billets ont été repris.
-        /// </summary>
-        public static bool isCashTaken;
-
-        private bool isBNRToBeActivated;
-
-        /// <summary>
-        /// Indique si le monnayeur doit être adtivé.
-        /// </summary>
-        public bool IsBNRToBeActivated
-        {
-            get => isBNRToBeActivated;
-            set => isBNRToBeActivated = value;
-        }
-
-        private int divider;
-
-        /// <summary>
-        /// Montant du billet de plus faible valeur;
-        /// </summary>
-        public int Divider
-        {
-            get => divider;
-            set => divider = value;
-        }
-
-        /// <summary>
-        ///Vérifie la possibilité de distribuer le montant indiqué en paramètre et le distribue le cas échéant.
-        /// </summary>
-        /// <param name="amount">Montant à distribuer.</param>
-        public void CheckAndDispense(int amount)
+        public CBNR_CPI()
         {
             try
             {
-                if ((amount > 0) && (bnr != null) && IsPresent)
-                {
-                    AmountToDispense = amount;
-                    isDispensable = false;
-                    while (State != Etat.STATE_IDLE)
-                        ;
-                    State = Etat.STATE_DENOMINATE;
-                    while (State != Etat.STATE_IDLE)
-                        ;
-                    if (isDispensable)
-                    {
-                        State = Etat.STATE_DISPENSE;
-                        while (State != Etat.STATE_IDLE)
-                            ;
-                    }
-                }
+                IsPresent = false;
+                bnr = new Bnr();
+                listModulePosition = new List<CModulePosition>();
+                State = Etat.STATE_INIT;
+                ev = new AutoResetEvent(true);
+                bnrTask = new Thread(Task);
+                bnrTask.Start();
             }
             catch (Exception E)
             {
                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
+            evReady.WaitOne(90000);
         }
 
         /// <summary>
@@ -304,12 +217,235 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// Levée à la fin d; une opération.
+        /// </summary>
+        /// <param name="identificationId"></param>
+        /// <param name="operationId"></param>
+        /// <param name="result"></param>
+        /// <param name="extendedResult"></param>
+        /// <param name="Data"></param>
+        private static void Bnr_OperationCompletedEvent(int identificationId, OperationId operationId, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)
+        {
+            CDevicesManager.Log.Debug("complete - IdentificationId : {0} OperationId : {1} BnrXfsErrorCode : {2} BnrXfsErrorCode : {3} Data : {4}",
+    identificationId, operationId.ToString(), result.ToString(), extendedResult.ToString(), Data?.ToString());
+
+            switch (operationId)
+            {
+                case OperationId.BnrAutomaticBillTransfer:
+                    break;
+
+                case OperationId.BnrEject:
+                    break;
+
+                case OperationId.BnrConfigureCashUnit:
+                    break;
+
+                case OperationId.BnrPark:
+                    break;
+
+                case OperationId.BnrModulePark:
+                    break;
+
+                case OperationId.BnrSelfTest:
+                    break;
+
+                case OperationId.BnrCalibrateWithCoupon:
+                    break;
+
+                case OperationId.BnrDeleteDenomination:
+                    break;
+
+                case OperationId.BnrAddDenomination:
+                    break;
+
+                case OperationId.BnrModuleUpdateFirmware:
+                    break;
+
+                case OperationId.BnrNoOperation:
+                    break;
+
+                case OperationId.Retract:
+                    break;
+
+                case OperationId.Reject:
+                    break;
+
+                case OperationId.Present:
+                {
+                    break;
+                }
+                case OperationId.Empty:
+                    break;
+
+                case OperationId.CashInRollBack:
+                {
+                    denominationInserted.TotalAmount -= ((XfsCashOrder)Data).Denomination.Amount;
+                    break;
+                }
+                case OperationId.CashInEnd:
+                    break;
+
+                case OperationId.CashIn:
+                    break;
+
+                case OperationId.CashInStart:
+
+                    break;
+
+                case OperationId.UpdateDenomination:
+                    break;
+
+                case OperationId.QueryDenomination:
+                    break;
+
+                case OperationId.SetDateTime:
+                    break;
+
+                case OperationId.GetDateTime:
+                    break;
+
+                case OperationId.UpdateCashUnit:
+                    break;
+
+                case OperationId.QueryCashUnit:
+                    break;
+
+                case OperationId.Dispense:
+                {
+                    break;
+                }
+                case OperationId.Denominate:
+                {
+                    isDispensable = result == BnrXfsErrorCode.Success;
+                    break;
+                }
+                case OperationId.Reset:
+                {
+                    try
+                    {
+                        if (result != BnrXfsErrorCode.Success)
+                        {
+                            HardwareError(DeviceStatus.UserError);
+                        }
+                        else
+                        {
+                            foreach (CModulePosition modulePosition in listModulePosition)
+                            {
+                                if (modulePosition.isReinserted == true)
+                                {
+                                    modulePosition.isReinserted = false;
+
+                                    CEvent eventStatus = new CEvent()
+                                    {
+                                        reason = CEvent.Reason.BNRRAZMETER,
+                                        nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
+                                        data = modulePosition.name,
+                                    };
+                                    if (modulePosition.name == "CB")
+                                    {
+                                        CDevicesManager.Log.Info("Raz des compteurs de la caisse du BNR.");
+                                        bnr.ResetCashboxCuContent(true);
+                                        lock (eventListLock)
+                                        {
+                                            eventsList.Add(eventStatus);
+                                        }
+                                    }
+                                    if (modulePosition.name == "LO1")
+                                    {
+                                        CDevicesManager.Log.Info("RAZ des compteurs du loader du BNR.");
+                                        bnr.SetLoaderCuContent("LO1", 0);
+                                        lock (eventListLock)
+                                        {
+                                            eventsList.Add(eventStatus);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception E)
+                    {
+                        CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    }
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
+            ev.Set();
+        }
+
+        /// <summary>
         /// Levée pour une opération sur un billet.
         /// </summary>
         /// <param name="cashInOrder"></param>
         private static void CashOccured(XfsCashOrder cashInOrder)
         {
-            CDevicesManager.Log.Debug("Cash occured {0}", cashInOrder.Denomination.Amount);
+        }
+
+        /// <summary>
+        /// Recherche de l'erreur et du module en erreur
+        /// </summary>
+        private static void HardwareError(DeviceStatus deviceStatus)
+        {
+            errorInfo.nameModule = string.Empty;
+            switch (deviceStatus)
+            {
+                case DeviceStatus.HardwareError:
+                {
+                    foreach (Module m in bnr.Modules)
+                    {
+                        if (m.Status.OperationalStatus != OperationalStatus.Operational)
+                        {
+                            errorInfo.nameModule = m.ToString();
+                            if (bnr.SystemStatusOverview.SystemStatus.ErrorCode != SystemErrorCode.NoError)
+                            {
+                                errorInfo.error = ERRORTYPE.BNR_OUVERT;
+                                break;
+                            }
+                            if (bnr.SystemStatusOverview.SystemStatus.BillTransportStatus != Mei.Bnr.BillTransportStatus.Ok)
+                            {
+                                errorInfo.error = ERRORTYPE.BOURRAGE;
+                                break;
+                            }
+                            if (bnr.SystemStatusOverview.SystemStatus.CashTypeStatus != Mei.Bnr.CashTypeStatus.Ok)
+                            {
+                                errorInfo.error = ERRORTYPE.TYPE_BILLET_ERREUR;
+                                break;
+                            }
+                            if (bnr.SystemStatusOverview.SystemStatus.SystemBillStorageStatus != SystemBillStorageStatus.Ok)
+                            {
+                                errorInfo.error = ERRORTYPE.STOCKAGE_ERREUR;
+                            }
+                        }
+                    }
+                    break;
+                }
+                case DeviceStatus.UserError:
+                {
+                    errorInfo.error = ERRORTYPE.BNR_OUVERT;
+                    break;
+                }
+                case DeviceStatus.OffLine:
+                    break;
+
+                case DeviceStatus.OnLine:
+                    break;
+
+                default:
+                    break;
+            }
+            lock (eventListLock)
+            {
+                eventsList.Add(new CEvent
+                {
+                    reason = CEvent.Reason.BNRERREUR,
+                    nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
+                    data = errorInfo
+                });
+            }
         }
 
         /// <summary>
@@ -583,242 +719,24 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Levée à la fin d; une opération.
+        /// Renvoi en caisse les billets présentés non pris.
         /// </summary>
-        /// <param name="identificationId"></param>
-        /// <param name="operationId"></param>
-        /// <param name="result"></param>
-        /// <param name="extendedResult"></param>
-        /// <param name="Data"></param>
-        private static void Bnr_OperationCompletedEvent(int identificationId, OperationId operationId, BnrXfsErrorCode result, BnrXfsErrorCode extendedResult, object Data)
-        {
-            CDevicesManager.Log.Debug("complete - IdentificationId : {0} OperationId : {1} BnrXfsErrorCode : {2} BnrXfsErrorCode : {3} Data : {4}",
-    identificationId, operationId.ToString(), result.ToString(), extendedResult.ToString(), Data?.ToString());
-
-            switch (operationId)
-            {
-                case OperationId.BnrAutomaticBillTransfer:
-                    break;
-
-                case OperationId.BnrEject:
-                    break;
-
-                case OperationId.BnrConfigureCashUnit:
-                    break;
-
-                case OperationId.BnrPark:
-                    break;
-
-                case OperationId.BnrModulePark:
-                    break;
-
-                case OperationId.BnrSelfTest:
-                    break;
-
-                case OperationId.BnrCalibrateWithCoupon:
-                    break;
-
-                case OperationId.BnrDeleteDenomination:
-                    break;
-
-                case OperationId.BnrAddDenomination:
-                    break;
-
-                case OperationId.BnrModuleUpdateFirmware:
-                    break;
-
-                case OperationId.BnrNoOperation:
-                    break;
-
-                case OperationId.Retract:
-                    break;
-
-                case OperationId.Reject:
-                    break;
-
-                case OperationId.Present:
-                {
-                    break;
-                }
-                case OperationId.Empty:
-                    break;
-
-                case OperationId.CashInRollBack:
-                {
-                    denominationInserted.TotalAmount -= ((XfsCashOrder)Data).Denomination.Amount;
-                    break;
-                }
-                case OperationId.CashInEnd:
-                    break;
-
-                case OperationId.CashIn:
-                    break;
-
-                case OperationId.CashInStart:
-
-                    break;
-
-                case OperationId.UpdateDenomination:
-                    break;
-
-                case OperationId.QueryDenomination:
-                    break;
-
-                case OperationId.SetDateTime:
-                    break;
-
-                case OperationId.GetDateTime:
-                    break;
-
-                case OperationId.UpdateCashUnit:
-                    break;
-
-                case OperationId.QueryCashUnit:
-                    break;
-
-                case OperationId.Dispense:
-                {
-                    break;
-                }
-                case OperationId.Denominate:
-                {
-                    isDispensable = result == BnrXfsErrorCode.Success;
-                    break;
-                }
-                case OperationId.Reset:
-                {
-                    try
-                    {
-                        if (result != BnrXfsErrorCode.Success)
-                        {
-                            HardwareError(DeviceStatus.UserError);
-                        }
-                        else
-                        {
-                            foreach (CModulePosition modulePosition in listModulePosition)
-                            {
-                                if (modulePosition.isReinserted == true)
-                                {
-                                    modulePosition.isReinserted = false;
-
-                                    CEvent eventStatus = new CEvent()
-                                    {
-                                        reason = CEvent.Reason.BNRRAZMETER,
-                                        nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
-                                        data = modulePosition.name,
-                                    };
-                                    if (modulePosition.name == "CB")
-                                    {
-                                        CDevicesManager.Log.Info("Raz des compteurs de la caisse du BNR.");
-                                        bnr.ResetCashboxCuContent(true);
-                                        lock (eventListLock)
-                                        {
-                                            eventsList.Add(eventStatus);
-                                        }
-                                    }
-                                    if (modulePosition.name == "LO1")
-                                    {
-                                        CDevicesManager.Log.Info("RAZ des compteurs du loader du BNR.");
-                                        bnr.SetLoaderCuContent("LO1", 0);
-                                        lock (eventListLock)
-                                        {
-                                            eventsList.Add(eventStatus);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception E)
-                    {
-                        CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                    }
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
-            }
-            ev.Set();
-        }
-
-        /// <summary>
-        /// Recherche de l'erreur et du module en erreur
-        /// </summary>
-        private static void HardwareError(DeviceStatus deviceStatus)
-        {
-            errorInfo.nameModule = string.Empty;
-            switch (deviceStatus)
-            {
-                case DeviceStatus.HardwareError:
-                {
-                    foreach (Module m in bnr.Modules)
-                    {
-                        if (m.Status.OperationalStatus != OperationalStatus.Operational)
-                        {
-                            errorInfo.nameModule = m.ToString();
-                            if (bnr.SystemStatusOverview.SystemStatus.ErrorCode != SystemErrorCode.NoError)
-                            {
-                                errorInfo.error = ERRORTYPE.BNR_OUVERT;
-                                break;
-                            }
-                            if (bnr.SystemStatusOverview.SystemStatus.BillTransportStatus != Mei.Bnr.BillTransportStatus.Ok)
-                            {
-                                errorInfo.error = ERRORTYPE.BOURRAGE;
-                                break;
-                            }
-                            if (bnr.SystemStatusOverview.SystemStatus.CashTypeStatus != Mei.Bnr.CashTypeStatus.Ok)
-                            {
-                                errorInfo.error = ERRORTYPE.TYPE_BILLET_ERREUR;
-                                break;
-                            }
-                            if (bnr.SystemStatusOverview.SystemStatus.SystemBillStorageStatus != SystemBillStorageStatus.Ok)
-                            {
-                                errorInfo.error = ERRORTYPE.STOCKAGE_ERREUR;
-                            }
-                        }
-                    }
-                    break;
-                }
-                case DeviceStatus.UserError:
-                {
-                    errorInfo.error = ERRORTYPE.BNR_OUVERT;
-                    break;
-                }
-                case DeviceStatus.OffLine:
-                    break;
-
-                case DeviceStatus.OnLine:
-                    break;
-
-                default:
-                    break;
-            }
-            lock (eventListLock)
-            {
-                eventsList.Add(new CEvent
-                {
-                    reason = CEvent.Reason.BNRERREUR,
-                    nameOfDevice = bnr.SystemConfiguration.BnrType.ToString(),
-                    data = errorInfo
-                });
-            }
-        }
-
-        /// <summary>
-        /// Initialisation de la classe du BNR.
-        /// </summary>
-        public override void Init()
+        private void Retract()
         {
             try
             {
-                Bnr.OperationCompletedEvent += new OperationCompleted(Bnr_OperationCompletedEvent);
-                Bnr.CashOccuredEvent += new CashOccured(CashOccured);
-                Bnr.IntermediateOccuredEvent += new IntermediateOccured(IntermediateOccured);
-                Bnr.StatusOccuredEvent += new StatusOccured(StatusOccured);
-                IsBNRToBeActivated = false;
-                errorInfo = new Cerror();
+                if (isCashPresent)
+                {
+                    ev.Reset();
+                    bnr.CancelWaitingCashTaken();
+                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
+                    ev.Reset();
+                    bnr.Retract();
+                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
+                    ev.Reset();
+                    bnr.Reject();
+                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
+                }
             }
             catch (Exception E)
             {
@@ -855,24 +773,49 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Renvoi en caisse les billets présentés non pris.
+        ///Vérifie la possibilité de distribuer le montant indiqué en paramètre et le distribue le cas échéant.
         /// </summary>
-        private void Retract()
+        /// <param name="amount">Montant à distribuer.</param>
+        public void CheckAndDispense(int amount)
         {
             try
             {
-                if (isCashPresent)
+                if ((amount > 0) && (bnr != null) && IsPresent)
                 {
-                    ev.Reset();
-                    bnr.CancelWaitingCashTaken();
-                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
-                    ev.Reset();
-                    bnr.Retract();
-                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
-                    ev.Reset();
-                    bnr.Reject();
-                    ev.WaitOne(BnrDefaultOperationTimeOutInMS);
+                    AmountToDispense = amount;
+                    isDispensable = false;
+                    while (State != Etat.STATE_IDLE)
+                        ;
+                    State = Etat.STATE_DENOMINATE;
+                    while (State != Etat.STATE_IDLE)
+                        ;
+                    if (isDispensable)
+                    {
+                        State = Etat.STATE_DISPENSE;
+                        while (State != Etat.STATE_IDLE)
+                            ;
+                    }
                 }
+            }
+            catch (Exception E)
+            {
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Initialisation de la classe du BNR.
+        /// </summary>
+        public override void Init()
+        {
+            try
+            {
+                Bnr.OperationCompletedEvent += new OperationCompleted(Bnr_OperationCompletedEvent);
+                Bnr.CashOccuredEvent += new CashOccured(CashOccured);
+                Bnr.IntermediateOccuredEvent += new IntermediateOccured(IntermediateOccured);
+                Bnr.StatusOccuredEvent += new StatusOccured(StatusOccured);
+                IsBNRToBeActivated = false;
+                errorInfo = new Cerror();
             }
             catch (Exception E)
             {
@@ -928,7 +871,7 @@ namespace DeviceLibrary
                             {
                                 IsPresent = false;
                                 CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-                                errorInfo.error = ERRORTYPE.DLL_NOT_FREE;
+                                errorInfo.error = ERRORTYPE.DLL_BNR_NOT_FREE;
                                 errorInfo.nameModule = string.Empty;
                                 lock (eventListLock)
                                 {
@@ -1155,26 +1098,6 @@ namespace DeviceLibrary
             }
         }
 
-        /// <summary>
-        /// Constructeur
-        /// </summary>
-        public CBNR_CPI()
-        {
-            try
-            {
-                IsPresent = false;
-                bnr = new Bnr();
-                listModulePosition = new List<CModulePosition>();
-                State = Etat.STATE_INIT;
-                ev = new AutoResetEvent(true);
-                bnrTask = new Thread(Task);
-                bnrTask.Start();
-            }
-            catch (Exception E)
-            {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
-            }
-            evReady.WaitOne(90000);
-        }
+        #endregion METHODES
     }
 }

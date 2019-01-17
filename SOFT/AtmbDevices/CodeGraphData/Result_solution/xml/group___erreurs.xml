@@ -1,0 +1,1152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group___erreurs" kind="group">
+    <compoundname>Erreurs</compoundname>
+    <title>Erreurs</title>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___erreurs_1ga179570d2d8f6f95d52ccafb98d20c790" prot="public" static="no">
+        <name>SelfTestResult</name>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ae0aa021e21dddbd6d8cecec71e9cf564" prot="public">
+          <name>OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>OK </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a82728633b7a7c49ed136d5c3aa605861" prot="public">
+          <name>ERRORCHECKSUM</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Erreur de checksum </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790aa4c8c213e52281611bbc2d726f23959a" prot="public">
+          <name>ERRORCOILMEASUREMENT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Erreur sur une bobine de mesure. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a4ef2b74a0cc5d6393ce608c54b1861f0" prot="public">
+          <name>ERRORCREDITSENSOR</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Erreur sur le senseur de crédit. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a45609713be805992c730f031ff8f54ca" prot="public">
+          <name>ERRORPIEZOSENSOR</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Erreur sur le sensor piezzo. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790abe71e29807fc8e2627732f98b625dd63" prot="public">
+          <name>ERRORREFLECTIVESENSOR</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Erreur sur le réflecteur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a06c7dd879850f00fcce4a46b4f0f4baf" prot="public">
+          <name>ERRORDIAMETERSENSOR</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>Erreur sur les senseurs de diamètre. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790afd502fbfb573105b14080349c146d0da" prot="public">
+          <name>ERRORONWAKEUPSENSOR</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>Erreur sur le sensor d&apos;éveil </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790afc13d39d093e34a09c0a0314e20048ee" prot="public">
+          <name>ERROREXITSENSOR</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>Erreur sur le senseur de sortie </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a0c4861a28780ce88a698758dde79d029" prot="public">
+          <name>NVRAMCHECKSUM</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para>Erreur sur le checkcum de la mémoire flash. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790adbe12f65a0cd3985f952f395ee8ff65d" prot="public">
+          <name>ERRORKEYPAD</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para>Erreur sur le clavier. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a543b5fd5ff186ca8f13b355ac0edc446" prot="public">
+          <name>ERRORBUTTON</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para>Code sur un bouton de contact. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a921d7ae7f037c6fc8b9dc65cd11562eb" prot="public">
+          <name>ERRORDISPLAY</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para>Erreur sur l&apos;afficheur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a07bcbb954c85682dc9897bbce2f4465c" prot="public">
+          <name>COINAUDITERROR</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para>Erreur sur l&apos;audit des pièces. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ad7821dc039e60525debddf85ce046024" prot="public">
+          <name>ERRORONREJECTSENSOR</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para>Erreur sur le senseur de rejet. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ac83370dde56d0f3b5313682a04ad7670" prot="public">
+          <name>ERRORONCOINRETURNMECH</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para>Erreur sur le système de rejet. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790af032d38e084b27c8bc8fc272c9b1d9ad" prot="public">
+          <name>ERRORCOSMECH</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para>Erreur sur le système anti-fishing </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ae1ae427e9a19c79560a4298b49ad7aad" prot="public">
+          <name>ERRORRIM</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+<para>Erreur sur le senseur RIM </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ac4c0edc9040440850d32e07b63e99e71" prot="public">
+          <name>ERRORTHERMISTOR</name>
+          <initializer>= 22</initializer>
+          <briefdescription>
+<para>Erreur sur le thermistor. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ae48b541e05c3de25f7c19f32e905421e" prot="public">
+          <name>ERRORMOTOR</name>
+          <initializer>= 23</initializer>
+          <briefdescription>
+<para>Erreur moteur </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a2b062c09a10f709598a9a3b22349fb13" prot="public">
+          <name>ERRORPAYOUTSENSOR</name>
+          <initializer>= 26</initializer>
+          <briefdescription>
+<para>Erreur sur le senseur de sortie du hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790aeecc3076ef1f092d654d0572732d8fae" prot="public">
+          <name>ERRORLEVELSENSOR</name>
+          <initializer>= 27</initializer>
+          <briefdescription>
+<para>Erreur sur un senseur de niveau. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a188f9098e533155473b37511e1608b41" prot="public">
+          <name>ERRORDATABLOCKCHECSUM</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+<para>Erreur sur le checksum d&apos;un blco de données. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a98fbededc5219d4233faf4f4dfecb8b8" prot="public">
+          <name>ERRORINTERNALCOM</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+<para>Port série interne en défaut </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a5b756a3101dde017415ebfb924123352" prot="public">
+          <name>ERRORPOWERSUPPLY</name>
+          <initializer>= 33</initializer>
+          <briefdescription>
+<para>Alimentation en dehors des valeurs limits. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ac7f53b99909b3d23ed52c89a2c4251a1" prot="public">
+          <name>ERRORTEMP</name>
+          <initializer>= 34</initializer>
+          <briefdescription>
+<para>La température externe est en dehors des valeurs limites définie dans le spécification du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a6ad548781f29d837560c33c17f76bcbf" prot="public">
+          <name>ERRORDCE</name>
+          <initializer>= 35</initializer>
+          <briefdescription>
+<para>Erreur dans le systeme 2 entrées. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790afd6e0d70f810e3936dca24e2c9e88366" prot="public">
+          <name>ERRORBVSENSOR</name>
+          <initializer>= 36</initializer>
+          <briefdescription>
+<para>Erreur senseur dans le lecteur de billets. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ae2320146778712445e1bda765a3827e4" prot="public">
+          <name>ERRORBVTRANSPORT</name>
+          <initializer>= 37</initializer>
+          <briefdescription>
+<para>Erreur dans le déplacement du billet dans le lecteur de billets. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a80572a1d9e446f50c294b206b8724b87" prot="public">
+          <name>ERRORSTACKER</name>
+          <initializer>= 38</initializer>
+          <briefdescription>
+<para>Defaut dans l&apos;empileur </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a2cd8c522b6febe25beae6dd244557faa" prot="public">
+          <name>BILLJAMMED</name>
+          <initializer>= 39</initializer>
+          <briefdescription>
+<para>Bourrage billet </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790aae684db02df998c0503f38b901302cb3" prot="public">
+          <name>ERRORTESTRAM</name>
+          <initializer>= 40</initializer>
+          <briefdescription>
+<para>Erreur dans la RAM. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a8cc746f58e0de79fe992db40e266fc89" prot="public">
+          <name>ERRORSTRINGSENSOR</name>
+          <initializer>= 41</initializer>
+          <briefdescription>
+<para>Erreur dans le système anti-fishing du lecteur de billet. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a233e99ec360a60f14d17ad4e088398ee" prot="public">
+          <name>ERRORACCEPTGATEOPEN</name>
+          <initializer>= 42</initializer>
+          <briefdescription>
+<para>Erreur la porte d&apos;acceptation est ouverte. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790aef82674b077701d481db50067a39dadf" prot="public">
+          <name>ERRORACCEPTGATECLOSE</name>
+          <initializer>= 43</initializer>
+          <briefdescription>
+<para>Erreur la porte d&apos;acceptation est fermée. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a3f14cb8d189627ff94c09e37485d5e4d" prot="public">
+          <name>STACKERMISSING</name>
+          <initializer>= 44</initializer>
+          <briefdescription>
+<para>L&apos;empileur est absent. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a3753cc88724c8753903f0c00fb2a70ec" prot="public">
+          <name>STACKERFULL</name>
+          <initializer>= 45</initializer>
+          <briefdescription>
+<para>L&apos;empileur est plein. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a64b9b8a79fbd8e516d73d947f23789f5" prot="public">
+          <name>ERRORERASEFLASHMEM</name>
+          <initializer>= 46</initializer>
+          <briefdescription>
+<para>Echec de l&apos;effacement de la mémoire flash. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a47a8bac7b81fb8860aa60a0c27abfa9e" prot="public">
+          <name>ERRORWRITEFLASHMEM</name>
+          <initializer>= 47</initializer>
+          <briefdescription>
+<para>Echec de l&apos;écriture de la mémoire flash. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a6971f8ba4fd456e6028307790060416e" prot="public">
+          <name>ERRORSLAVEDEVICE</name>
+          <initializer>= 48</initializer>
+          <briefdescription>
+<para>Defaut de communication avec le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a5f416c3c0f2315e101772fb4afa19159" prot="public">
+          <name>ERROROPTOSENSOR</name>
+          <initializer>= 49</initializer>
+          <briefdescription>
+<para>Erreur sur un optocoupleur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790abc304fceb86fed05a9c1480ae161e105" prot="public">
+          <name>ERRORBATTERY</name>
+          <initializer>= 50</initializer>
+          <briefdescription>
+<para>Erreur batterie </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a2e7bbba7a345ba75be6d7afa5099e4b2" prot="public">
+          <name>ERRORDOOROPEN</name>
+          <initializer>= 51</initializer>
+          <briefdescription>
+<para>La porte est restée ouverte </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790aaccb25b7024f8a8457070b5f219cc8cb" prot="public">
+          <name>ERRORMICROSWITCH</name>
+          <initializer>= 52</initializer>
+          <briefdescription>
+<para>Erreur sur un microswitch. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a452e48f2270532eeb8a7d1a08b2bffa9" prot="public">
+          <name>ERRORRTC</name>
+          <initializer>= 53</initializer>
+          <briefdescription>
+<para>Erreur sur l&apos;horloge en temps réel. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a17067ea1451de42b4bf3752122768b55" prot="public">
+          <name>ERRORFW</name>
+          <initializer>= 54</initializer>
+          <briefdescription>
+<para>Erreur Firmware. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a742a02b5a464f1e436fe1ce890b537a8" prot="public">
+          <name>ERRORINIT</name>
+          <initializer>= 55</initializer>
+          <briefdescription>
+<para>Erreur d&apos;initialisation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a83c9f2a51be490451be24a146c1d808b" prot="public">
+          <name>ERRORCURRENTSUPPLY</name>
+          <initializer>= 56</initializer>
+          <briefdescription>
+<para>Le périphérique est utilisé en dehors des limites de courant deéfinie par le fabricant. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790ad7e9c71913cffcaabd565eaee9cf52b8" prot="public">
+          <name>FORCEBOOTLOADERMODE</name>
+          <initializer>= 57</initializer>
+          <briefdescription>
+<para>Mode bootloader forcé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a5fd22f0fcfa09dee2ad29a0653ed7963" prot="public">
+          <name>COINJAM</name>
+          <initializer>= 253</initializer>
+          <briefdescription>
+<para>Bourrage pièces. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790acaf20830f50dde044b5d55b78bd4ccfe" prot="public">
+          <name>DISKBLOCKED</name>
+          <initializer>= 254</initializer>
+          <briefdescription>
+<para>Débloqué. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a17871c6d9d47f1e52c2681e98a1a9143" prot="public">
+          <name>ERRORUNKNOW</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+<para>Erreur inconnue. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.SelfTestResult.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.SelfTestResult.cs" bodystart="22" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___erreurs_1ga68c5b73cc3b337502d9f92154d933591" prot="public" static="no">
+        <name>CVErrorCodes</name>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aaa9c9eda6c5391fd16db81029c49c6f5" prot="public">
+          <name>MONNAYEUR_OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Pas d&apos;erreur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a4a3172fa5d33d5089aa41cf83c8099f8" prot="public">
+          <name>REJECTCOIN</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Pièce non reconnue. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a236caf0a304503bf0fca29ee75e1d863" prot="public">
+          <name>INHIBITEDCOIN</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Pièces refusée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ae56f4cf37b6999372dc21bb47e82d73c" prot="public">
+          <name>MULTIPLEWINDOWS</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Plusieurs canaux reconnaissent la pièce. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a875eb06a96859ac39b2ff14d3a5360de" prot="public">
+          <name>WAKEUP_TO</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Delai de réveil dépassé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a1de1001e85495d060e5fe77182345937" prot="public">
+          <name>VALIDATION_TO</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Temps d&apos;identification dépassé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ae8e1da986224d6127b836dee5515b989" prot="public">
+          <name>CREDITSENSOR_TO</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>Délai de passage devant le sensor de crédit dépassé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aad786ab20e40eca4baf577f142271223" prot="public">
+          <name>SORTEROPTO_TO</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>Délaide passage devant le sensor du trieur dépassé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a67eeaa2b6e727735860ab0fa45da5cf6" prot="public">
+          <name>TOOCLOSECOIN</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>2 pièces trop rapprochées pour l&apos;dentification. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a488417ec04b13c6dcf02bdecb8597051" prot="public">
+          <name>ACCEPTGATENOTREADY</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para>La porte d&apos;acceptation n&apos;est pas prête. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aa5c66915ba05071d42f5262814f1f154" prot="public">
+          <name>CREDITSENSORNOTREADY</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para>Le sensor de crédit n&apos;est pas prêt. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aeb24605f73e423b795d431b13e81789d" prot="public">
+          <name>SORTERNOTREADY</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para>Le trieur n&apos;est pas prêt. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a5f05f23aa23d4394442a22d01092b185" prot="public">
+          <name>REJECTCOINNOTCLEARED</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para>Le passage de rejet est occupé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a529f5ada9f1b5031cdb17562a57bf07c" prot="public">
+          <name>VALIDATORSENSORNOTREADY</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para>Le sensor de validation n&apos;est pas prêt. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad9dfefcc80c822a24a0ad3380eb36cf2" prot="public">
+          <name>CREDITSENSORBLOCKED</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para>Le sensor de crédit est bloqué. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad5ffb15a2080554273173e94ab156096" prot="public">
+          <name>SORTEROPTOBLOCKED</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para>Le sensor optique du trieur est bloqué. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591afd097e798482607f42e03a4fe28a4040" prot="public">
+          <name>CREDITSEQERROR</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para>Séquence de crédit erronée. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad092fef941ebaf843780f10dc910af1c" prot="public">
+          <name>COINGOINGBACK</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para>Retour en arrière de la pièce. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a561dba7292ec10b3dd57fc75609c82d8" prot="public">
+          <name>COINTOOFAST</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para>Passage trop rapide. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a44c9d0c8f952ac7cd9976e8d9cb0b5ac" prot="public">
+          <name>COINTOOSLOW</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para>Passage trop lent. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a8fe88ac7acc89aaabdb1bd870fd7ceb2" prot="public">
+          <name>COSMECHACTIVED</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para>Le mechanisme anti pêche activé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591abcdd757e0380f69f13dff8be4d7d247f" prot="public">
+          <name>DCEOPTO_TO</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+<para>Dual coin entry opto delai dépassé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a31c99e9aae78a22cd697c80f35779083" prot="public">
+          <name>DCEOPTONOTSEE</name>
+          <initializer>= 22</initializer>
+          <briefdescription>
+<para>Opto DCE non vu. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a6fd6e43dc5f964d3b48ad0c245d9dc50" prot="public">
+          <name>CREDITSENSORREACHEDEARLY</name>
+          <initializer>= 23</initializer>
+          <briefdescription>
+<para>Credit sensor atteint trop tôt. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aed7cae4a3226e4da365e7c9c5a8d347f" prot="public">
+          <name>REJECTEDCOIN2</name>
+          <initializer>= 24</initializer>
+          <briefdescription>
+<para>Pièce rejetée. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a21aa9d7cf65b4208ae81a40097ce9d26" prot="public">
+          <name>REJECTSLUG</name>
+          <initializer>= 25</initializer>
+          <briefdescription>
+<para>Fausse pièce rejetée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a8823666fd9f278f2700a27f91799b65d" prot="public">
+          <name>REJECTSENSORBLOCKED</name>
+          <initializer>= 26</initializer>
+          <briefdescription>
+<para>Sensor de rejet bloqué. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591acd4f575618900c07705e0f3ed6a72a16" prot="public">
+          <name>GAMESOVERLOAD</name>
+          <initializer>= 27</initializer>
+          <briefdescription>
+<para>Montant nécessaire introduit trop lentement. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591acb5a7731b62453102c5cd6211bc6a6f8" prot="public">
+          <name>MAXCOINMETERPULSESEXCEEDED</name>
+          <initializer>= 28</initializer>
+          <briefdescription>
+<para>Nombre maximum d&apos;impulsions dépassé </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a713b07a2ec4a9014b2fdb72c5d8d8980" prot="public">
+          <name>ACCEPTGATEOPENNOTCLOSED</name>
+          <initializer>= 29</initializer>
+          <briefdescription>
+<para>Porte d&apos;acceptation ouverte. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad697f2db067ec6160ac3c98dbd7acbc3" prot="public">
+          <name>ACCEPTGATECLOSEDNOTOPEN</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+<para>Porte d&apos;acceptation non ouverte. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a1f2e8ea805df9a9e6a9128576e2f342b" prot="public">
+          <name>MANIFOLDTIMEOUT</name>
+          <initializer>= 31</initializer>
+          <briefdescription>
+<para>Délai dans le séparateur trop long. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a30272f8d3111e39e72b1bea11c4a2906" prot="public">
+          <name>MANIFOLDOPTOBLOCKED</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+<para>Opto coupleur du séparateur bloqué. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a833a2d147bee60b116f24d87b3da8b82" prot="public">
+          <name>MANIFOLDNOTREADY</name>
+          <initializer>= 33</initializer>
+          <briefdescription>
+<para>Séparateur pas prêt. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a3a1f7e69b7e5e5c269e0fa7e97b0bf0a" prot="public">
+          <name>SECURITYSTATUSCHANGED</name>
+          <initializer>= 34</initializer>
+          <briefdescription>
+<para>Les critères de sécurité ont changé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a9f9cc74325b5bb6e924cd0772df6d6a6" prot="public">
+          <name>MOTOREXCEPTION</name>
+          <initializer>= 35</initializer>
+          <briefdescription>
+<para>Problem sur le moteur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ab04c310e6eb59f7ae1eb525e552bbe4f" prot="public">
+          <name>SWALLOWEDCOIN</name>
+          <initializer>= 36</initializer>
+          <briefdescription>
+<para>Pièce avalée. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ada03008cb56819752dd1fe201c4c1be9" prot="public">
+          <name>COIN2FAST</name>
+          <initializer>= 37</initializer>
+          <briefdescription>
+<para>Passage trop rapide. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad4f375ed800d463da94afc540bf8d22e" prot="public">
+          <name>COIN2SLOW</name>
+          <initializer>= 38</initializer>
+          <briefdescription>
+<para>Passage trop lent. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aa6c8fed14ab5411a4efe88068c4a99d9" prot="public">
+          <name>COININCORRECTLYSORTED</name>
+          <initializer>= 39</initializer>
+          <briefdescription>
+<para>Tri incorrecte. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591afdbe0522298a7ecd540a24a4d368442a" prot="public">
+          <name>EXTERNALLIGHTATTACK</name>
+          <initializer>= 40</initializer>
+          <briefdescription>
+<para>Tentative de fraude à la lumiere </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a69b954ad6ad0a788c70a17bc2f280d31" prot="public">
+          <name>INHIBITEDCOIN_1</name>
+          <initializer>= 128</initializer>
+          <briefdescription>
+<para>Pièce 1 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a07d7f9cdabc4510272dfc11e1bdbf3b7" prot="public">
+          <name>INHIBITEDCOIN_2</name>
+          <initializer>= 129</initializer>
+          <briefdescription>
+<para>Pièce 2 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a0c8fb65b7cf54e6352781e7869fd5b2e" prot="public">
+          <name>INHIBITEDCOIN_3</name>
+          <initializer>= 130</initializer>
+          <briefdescription>
+<para>Pièce 3 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a9931e14f9728388be7cea22a76d96df9" prot="public">
+          <name>INHIBITEDCOIN_4</name>
+          <initializer>= 131</initializer>
+          <briefdescription>
+<para>Pièce 4 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a583bc6ef29caaddcc110fb91d70869e2" prot="public">
+          <name>INHIBITEDCOIN_5</name>
+          <initializer>= 132</initializer>
+          <briefdescription>
+<para>Pièce 5 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ab9f53cc85987fb6065b91f00ab23b0bb" prot="public">
+          <name>INHIBITEDCOIN_6</name>
+          <initializer>= 133</initializer>
+          <briefdescription>
+<para>Pièce 6 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a8af6d4f0fcb2fb94e876a61fb37d727b" prot="public">
+          <name>INHIBITEDCOIN_7</name>
+          <initializer>= 134</initializer>
+          <briefdescription>
+<para>Pièce 7 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a3cf9f08f6eae082afd768c3a97e841c8" prot="public">
+          <name>INHIBITEDCOIN_8</name>
+          <initializer>= 135</initializer>
+          <briefdescription>
+<para>Pièce 8 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aab7979ee88a0c918182eb43826f2ebee" prot="public">
+          <name>INHIBITEDCOIN_9</name>
+          <initializer>= 136</initializer>
+          <briefdescription>
+<para>Pièce 9 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ac609cf3e7418d787d165294c64e7f7f2" prot="public">
+          <name>INHIBITEDCOIN_10</name>
+          <initializer>= 137</initializer>
+          <briefdescription>
+<para>Pièce 10 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a5b0f85525816fde9150d1954f0f6a7c4" prot="public">
+          <name>INHIBITEDCOIN_11</name>
+          <initializer>= 138</initializer>
+          <briefdescription>
+<para>Pièce 11 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a587f525dad0c2d05cb8b00d0e2ea41ca" prot="public">
+          <name>INHIBITEDCOIN_12</name>
+          <initializer>= 139</initializer>
+          <briefdescription>
+<para>Pièce 12 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a2eacff30716ef2759d575926dc60fc85" prot="public">
+          <name>INHIBITEDCOIN_13</name>
+          <initializer>= 140</initializer>
+          <briefdescription>
+<para>Pièce 13 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a15a3c52c2473d645b8af3e70e3c3941e" prot="public">
+          <name>INHIBITEDCOIN_14</name>
+          <initializer>= 141</initializer>
+          <briefdescription>
+<para>Pièce 14 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a09c9109be00bc6033478fde72cd77403" prot="public">
+          <name>INHIBITEDCOIN_15</name>
+          <initializer>= 142</initializer>
+          <briefdescription>
+<para>Pièce 15 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a943bd83bbd39776c12e6e50a34bafb20" prot="public">
+          <name>INHIBITEDCOIN_16</name>
+          <initializer>= 143</initializer>
+          <briefdescription>
+<para>Pièce 16 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a78ad72ba807b0a50814dd29b3d7ea6bc" prot="public">
+          <name>INHIBITEDCOIN_17</name>
+          <initializer>= 144</initializer>
+          <briefdescription>
+<para>Pièce 17 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad7108d43a2cb300a36f3cdc179eb6a47" prot="public">
+          <name>INHIBITEDCOIN_18</name>
+          <initializer>= 145</initializer>
+          <briefdescription>
+<para>Pièce 18 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591afa829333e824a07d4a8ebcca5e1a51cb" prot="public">
+          <name>INHIBITEDCOIN_19</name>
+          <initializer>= 146</initializer>
+          <briefdescription>
+<para>Pièce 19 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a5f2a72bd8d3110eb145e95b2da42a9c9" prot="public">
+          <name>INHIBITEDCOIN_20</name>
+          <initializer>= 147</initializer>
+          <briefdescription>
+<para>Pièce 20 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a8447ec5ec7ae09fb62e8c9fae3dcb03f" prot="public">
+          <name>INHIBITEDCOIN_21</name>
+          <initializer>= 148</initializer>
+          <briefdescription>
+<para>Pièce 21 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a120f40242976f7da2c4375de7e738ae1" prot="public">
+          <name>INHIBITEDCOIN_22</name>
+          <initializer>= 149</initializer>
+          <briefdescription>
+<para>Pièce 22 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a3e9edbe8264331eee676a0f9e5f40e01" prot="public">
+          <name>INHIBITEDCOIN_23</name>
+          <initializer>= 150</initializer>
+          <briefdescription>
+<para>Pièce 23 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a1bcc40b7e814ef95f0781079a0fed830" prot="public">
+          <name>INHIBITEDCOIN_24</name>
+          <initializer>= 151</initializer>
+          <briefdescription>
+<para>Pièce 24 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a83da0b1354428b08469d611ebd7cc209" prot="public">
+          <name>INHIBITEDCOIN_25</name>
+          <initializer>= 152</initializer>
+          <briefdescription>
+<para>Pièce 25 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a2ee2098b225ed3267340fcb4cf8bef7f" prot="public">
+          <name>INHIBITEDCOIN_26</name>
+          <initializer>= 153</initializer>
+          <briefdescription>
+<para>Pièce 26 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591afd42c8c1e81adbaae30e5d950d87fc91" prot="public">
+          <name>INHIBITEDCOIN_27</name>
+          <initializer>= 154</initializer>
+          <briefdescription>
+<para>Pièce 27 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a92bbc06e80c7891c058dd4f82f21cc84" prot="public">
+          <name>INHIBITEDCOIN_28</name>
+          <initializer>= 155</initializer>
+          <briefdescription>
+<para>Pièce 28 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a847a981b702782737c4d8d68ae43df96" prot="public">
+          <name>INHIBITEDCOIN_29</name>
+          <initializer>= 156</initializer>
+          <briefdescription>
+<para>Pièce 29 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a9eacc103c55f026c6d4c55d9145dc46c" prot="public">
+          <name>INHIBITEDCOIN_30</name>
+          <initializer>= 157</initializer>
+          <briefdescription>
+<para>Pièce 30 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a7650c785d588d5d802dc392398b5731a" prot="public">
+          <name>INHIBITEDCOIN_31</name>
+          <initializer>= 158</initializer>
+          <briefdescription>
+<para>Pièce 31 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a0e534ed5f2068211f3b791d94aada1e2" prot="public">
+          <name>INHIBITEDCOIN_32</name>
+          <initializer>= 159</initializer>
+          <briefdescription>
+<para>Pièce 32 inhibée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a05062f9114d515e6e34b9b781a68e042" prot="public">
+          <name>DATABLOCKREQUESTED</name>
+          <initializer>= 253</initializer>
+          <briefdescription>
+<para>Bloc de données requis </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aa0d2119ea2041bc3e038f9f5f6f5f7b1" prot="public">
+          <name>COINRETURNMECHACTIVATED</name>
+          <initializer>= 254</initializer>
+          <briefdescription>
+<para>Mechanisme de rejet activé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a9993b5434242a3193a7a92cfe80b28ab" prot="public">
+          <name>UNSPECIFIEDALARM</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+<para>Alarme inconnue. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CVErrorCodes.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CVErrorCodes.cs" bodystart="22" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___erreurs_1gad4b59816effbf70353c1e53e3cdeb5ad" prot="public" static="no">
+        <name>HopperError</name>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5adad6b1011b161db4657e24302a071fe8ae" prot="public">
+          <name>NON_IDENTIFIEE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Aucune erreur ou erreur non identifiée. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5ada6f836722e3e4f3c3a219159530d2e965" prot="public">
+          <name>MOTORREVERSED</name>
+          <briefdescription>
+<para>Moteur inversé suite à une surconsomation. Probablement du à un bourrage. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5ada352f5cd9841dc6e7e999caee1c876c11" prot="public">
+          <name>MAXCURRENTEXCEEDED</name>
+          <briefdescription>
+<para>Consomation de courant hors limite du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5ada3597b58c77eec0e7e44fa0f3be8c8e65" prot="public">
+          <name>OPTOBLOCKEDPERMANENTLY</name>
+          <briefdescription>
+<para>Optocoupleur obstrué en permanence. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5adad8dffe032a7fbd1f7291f20a1d24fff9" prot="public">
+          <name>OPTOSHORTCIRCUIT</name>
+          <briefdescription>
+<para>Optocoupleur en court-circuit. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5adae24020ff08165f92b4d9649daecd0842" prot="public">
+          <name>CHECKSUMA</name>
+          <briefdescription>
+<para>Erreur de checksum dans le bloc de donné A. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5ada61592fb0b332b2fcc7d57d8efade7246" prot="public">
+          <name>CHECKSUMB</name>
+          <briefdescription>
+<para>Erreur de checksum dans le bloc de donné B. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5ada18179929e477a9f8fd21d888e8f7a326" prot="public">
+          <name>CHECKSUMC</name>
+          <briefdescription>
+<para>Erreur de checksum dans le bloc de donné C. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5ada51a993adb4ff5f07953ff92ac1fa14a9" prot="public">
+          <name>CHECKSUMD</name>
+          <briefdescription>
+<para>Erreur de checksum dans le bloc de donné D. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5ada84c9b37d0d3499483dae26abd03c62d3" prot="public">
+          <name>OPTOPATHBLOCKED</name>
+          <briefdescription>
+<para>Optocoupleur obstrué. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5adaced9f2887aace32933e6db874aa8d6e5" prot="public">
+          <name>OPTOSHORTCIRCUITIDLE</name>
+          <briefdescription>
+<para>Optocoupleur en court-circuit </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___erreurs_1ggad4b59816effbf70353c1e53e3cdeb5adab77007e73cc2dd997f4ab2846a075e01" prot="public">
+          <name>POWERFAIL</name>
+          <briefdescription>
+<para>Chute de tension pendant l&apos;écriture dans la mémoire. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" bodystart="19" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Groupe des codes erreur renvoyés par les périphériques </para>    </briefdescription>
+    <detaileddescription>
+<para>Liste des fautes possibles retournées par un self test. </para><para>summary&gt; Enumération des codes erreurs retournés par le monnayeur. /summary&gt;</para><para>Liste des erreurs hopper </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

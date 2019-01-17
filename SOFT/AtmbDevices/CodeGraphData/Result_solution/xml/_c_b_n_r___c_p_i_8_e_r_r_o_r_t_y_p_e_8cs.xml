@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_b_n_r___c_p_i_8_e_r_r_o_r_t_y_p_e_8cs" kind="file">
+    <compoundname>CBNR_CPI.ERRORTYPE.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_c_b_n_r___c_p_i" prot="public">DeviceLibrary::CBNR_CPI</innerclass>
+    <innerclass refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror" prot="public">DeviceLibrary::CBNR_CPI::Cerror</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal">CBNR_CPI</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6" kindref="member">ERRORTYPE</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a74267bafd04517c1609ee13ee212fedd" kindref="member">BOURRAGE</ref>,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a803d54558e4199ba24c8be70e1f52311" kindref="member">BNR_OUVERT</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a1e19d31872ac2b29666b368a8991126e" kindref="member">TYPE_BILLET_ERREUR</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6ac35c5714821eb5c6280e90a382b14dd8" kindref="member">STOCKAGE_ERREUR</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a923f08f7add65912e3ca5f0c5485a421" kindref="member">BNRMODULEMANQUANT</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a7207152f8928bac043d8b31f036860ba" kindref="member">BNRMODULERINSERE</ref>,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a5226ca9add71653091a92356a0d595c6" kindref="member">BILLREFUSED</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a89fc88b4ea328df0265d54402b192763" kindref="member">NOTDISTRIBUABLE</ref>,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6abaca053458cae8e2055325f552416a70" kindref="member">NOTDISPENSED</ref>,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a37bf2e5807933cef82be4158f5e90e91" kindref="member">DLL_NOT_FREE</ref>,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror" kindref="compound">Cerror</ref></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75" refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror_1ad8e1fd30ca2c6555c1ae823d7d186620" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror_1ad8e1fd30ca2c6555c1ae823d7d186620" kindref="member">nameModule</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror_1a8a10e407be4db3d74a5de4a0975c6553" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6" kindref="member">ERRORTYPE</ref><sp/><ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror_1a8a10e407be4db3d74a5de4a0975c6553" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.ERRORTYPE.cs"/>
+  </compounddef>
+</doxygen>

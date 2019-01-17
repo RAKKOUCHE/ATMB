@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CBNR_CPI::CResultDispense</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense_1af5afd845c3d2cdc7bd87a535d4822427" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed" kindref="compound">CitemsDispensed</ref> &gt;</type>
+        <definition>List&lt;CitemsDispensed&gt; DeviceLibrary.CBNR_CPI.CResultDispense.listValue</definition>
+        <argsstring></argsstring>
+        <name>listValue</name>
+        <briefdescription>
+<para>List contenant les montants par devise distribuée. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CResultDispense.cs" line="21" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CResultDispense.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense_1ad364a7a71e8e5d1d8b59f39b0d125696" compoundref="_c_b_n_r___c_p_i_8_c_result_dispense_8cs" startline="31" endline="34">DeviceLibrary.CBNR_CPI.CResultDispense.CResultDispense</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense_1a33050428f1d89dd2e3e0a78c1b1625db" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CBNR_CPI.CResultDispense.Montant</definition>
+        <argsstring></argsstring>
+        <name>Montant</name>
+        <briefdescription>
+<para>Montant total distribué. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CResultDispense.cs" line="26" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CResultDispense.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense_1ad364a7a71e8e5d1d8b59f39b0d125696" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.CBNR_CPI.CResultDispense.CResultDispense</definition>
+        <argsstring>()</argsstring>
+        <name>CResultDispense</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CResultDispense.cs" line="31" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CResultDispense.cs" bodystart="31" bodyend="34"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense_1af5afd845c3d2cdc7bd87a535d4822427" compoundref="_c_b_n_r___c_p_i_8_c_result_dispense_8cs" startline="21">DeviceLibrary.CBNR_CPI.CResultDispense.listValue</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class contenant le resultat d&apos;une opération de distribution. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CResultDispense.cs" line="17" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CResultDispense.cs" bodystart="16" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense_1ad364a7a71e8e5d1d8b59f39b0d125696" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CResultDispense</scope><name>CResultDispense</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense_1af5afd845c3d2cdc7bd87a535d4822427" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CResultDispense</scope><name>listValue</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense_1a33050428f1d89dd2e3e0a78c1b1625db" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CResultDispense</scope><name>Montant</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

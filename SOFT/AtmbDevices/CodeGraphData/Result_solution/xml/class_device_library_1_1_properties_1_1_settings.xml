@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_properties_1_1_settings" kind="class" prot="package">
+    <compoundname>DeviceLibrary::Properties::Settings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ApplicationSettingsBase</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_properties_1_1_settings_1ab31b1a0cde6d4937f98945ae64fb0135" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_device_library_1_1_properties_1_1_settings" kindref="compound">Settings</ref></type>
+        <definition>Settings DeviceLibrary.Properties.Settings.defaultInstance</definition>
+        <argsstring></argsstring>
+        <name>defaultInstance</name>
+        <initializer>= ((<ref refid="class_device_library_1_1_properties_1_1_settings" kindref="compound">Settings</ref>)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new <ref refid="class_device_library_1_1_properties_1_1_settings" kindref="compound">Settings</ref>())))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" line="18" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_device_library_1_1_properties_1_1_settings_1ad8abbc7ce59b50502a14f196541084bb" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_device_library_1_1_properties_1_1_settings" kindref="compound">Settings</ref></type>
+        <definition>Settings DeviceLibrary.Properties.Settings.Default</definition>
+        <argsstring></argsstring>
+        <name>Default</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_properties_1_1_settings_1a83fb9cdb9ca3dc19dee00d2911e82e66" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal DeviceLibrary.Properties.Settings.Total</definition>
+        <argsstring></argsstring>
+        <name>Total</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" line="29" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_properties_1_1_settings_1aaac42c9e23b79c22b0748364dad77ab3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal DeviceLibrary.Properties.Settings.TotalCoins</definition>
+        <argsstring></argsstring>
+        <name>TotalCoins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" line="41" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_properties_1_1_settings_1a9602c7090ca89d757b9f54a96cc927bf" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal DeviceLibrary.Properties.Settings.TotalBill</definition>
+        <argsstring></argsstring>
+        <name>TotalBill</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" line="53" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_properties_1_1_settings_1a59a922c4bd450819c5a0a43597a8d689" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal DeviceLibrary.Properties.Settings.CVCanal1</definition>
+        <argsstring></argsstring>
+        <name>CVCanal1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" line="65" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_properties_1_1_settings_1aad8f6a5ca2cb8107e7508748e1729008" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal DeviceLibrary.Properties.Settings.CVCanal2</definition>
+        <argsstring></argsstring>
+        <name>CVCanal2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" line="77" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_properties_1_1_settings_1a1ffd586a03c988cd83bb0265835bf945" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string DeviceLibrary.Properties.Settings.CVCanal3</definition>
+        <argsstring></argsstring>
+        <name>CVCanal3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" line="89" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="282">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+      <node id="281">
+        <label>DeviceLibrary.Properties.Settings</label>
+        <link refid="class_device_library_1_1_properties_1_1_settings"/>
+        <childnode refid="282" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="284">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+      <node id="283">
+        <label>DeviceLibrary.Properties.Settings</label>
+        <link refid="class_device_library_1_1_properties_1_1_settings"/>
+        <childnode refid="284" relation="public-inheritance">
+        </childnode>
+        <childnode refid="283" relation="usage">
+          <edgelabel>defaultInstance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" line="16" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties/Settings.Designer.cs" bodystart="16" bodyend="97"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_properties_1_1_settings_1a59a922c4bd450819c5a0a43597a8d689" prot="public" virt="non-virtual"><scope>DeviceLibrary::Properties::Settings</scope><name>CVCanal1</name></member>
+      <member refid="class_device_library_1_1_properties_1_1_settings_1aad8f6a5ca2cb8107e7508748e1729008" prot="public" virt="non-virtual"><scope>DeviceLibrary::Properties::Settings</scope><name>CVCanal2</name></member>
+      <member refid="class_device_library_1_1_properties_1_1_settings_1a1ffd586a03c988cd83bb0265835bf945" prot="public" virt="non-virtual"><scope>DeviceLibrary::Properties::Settings</scope><name>CVCanal3</name></member>
+      <member refid="class_device_library_1_1_properties_1_1_settings_1ad8abbc7ce59b50502a14f196541084bb" prot="public" virt="non-virtual"><scope>DeviceLibrary::Properties::Settings</scope><name>Default</name></member>
+      <member refid="class_device_library_1_1_properties_1_1_settings_1ab31b1a0cde6d4937f98945ae64fb0135" prot="private" virt="non-virtual"><scope>DeviceLibrary::Properties::Settings</scope><name>defaultInstance</name></member>
+      <member refid="class_device_library_1_1_properties_1_1_settings_1a83fb9cdb9ca3dc19dee00d2911e82e66" prot="public" virt="non-virtual"><scope>DeviceLibrary::Properties::Settings</scope><name>Total</name></member>
+      <member refid="class_device_library_1_1_properties_1_1_settings_1a9602c7090ca89d757b9f54a96cc927bf" prot="public" virt="non-virtual"><scope>DeviceLibrary::Properties::Settings</scope><name>TotalBill</name></member>
+      <member refid="class_device_library_1_1_properties_1_1_settings_1aaac42c9e23b79c22b0748364dad77ab3" prot="public" virt="non-virtual"><scope>DeviceLibrary::Properties::Settings</scope><name>TotalCoins</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

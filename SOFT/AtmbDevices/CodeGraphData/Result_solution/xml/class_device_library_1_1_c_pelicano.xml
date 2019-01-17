@@ -1,0 +1,760 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_pelicano" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CPelicano</compoundname>
+    <basecompoundref refid="class_device_library_1_1_c_coin_validator" prot="public" virt="non-virtual">DeviceLibrary.CCoinValidator</basecompoundref>
+    <basecompoundref refid="class_device_library_1_1_c_coin_validator" prot="public" virt="non-virtual">DeviceLibrary.CCoinValidator</basecompoundref>
+    <basecompoundref refid="class_device_library_1_1_c_coin_validator" prot="public" virt="non-virtual">DeviceLibrary.CCoinValidator</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807" prot="private" static="no">
+        <name>CcmdMotors</name>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a23c52262460cd1ff6467c114d9c186af" prot="public">
+          <name>TRASH1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Ouve la trappe de rejet, fait tourner le moteur et referme la trappe de rejet. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a9383cea35fd39c81f4d7748cdda6b033" prot="public">
+          <name>TRASH2</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>non utilisé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807ae5542331a5d673ecfbc3d82c59dcf0d7" prot="public">
+          <name>TRASH3</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Non utilisé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a4e3f4e3431c7d01a332f5be79ff5f138" prot="public">
+          <name>CPR</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Non documentée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a4334e3cc610ce73ca1592d310a6898f6" prot="public">
+          <name>SETSPEED</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para>Definie la vitesse de rotation du disque </para>          </briefdescription>
+          <detaileddescription>
+<para>100 = 3 pièces, 133 = 4 pièces, ect...</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a5e8bf0ac0d68cad93dbd2e4038c7b469" prot="public">
+          <name>GETSPEED</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para>Lit la vitesse de rotation du disque. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a5b0a02d56e8e8e279462f86e87499096" prot="public">
+          <name>GETPOCKETIME</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para>Lit le délai entre 2 trous du disque par pas de 4ms. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumération des commandes du moteur du Pelicano </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.CmdMotors.cs" line="18" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.CmdMotors.cs" bodystart="17" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_device_library_1_1_c_pelicano_1a22d2da90fc2d834d678d8f0dfe2f8ecd" prot="private" static="no">
+        <name>OptionFlag</name>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1a22d2da90fc2d834d678d8f0dfe2f8ecda40aa75f8e8cfdf7b660c5620e953229f" prot="public">
+          <name>UNSUPPORTED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Limitation de l&apos;acceptation non implémentée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1a22d2da90fc2d834d678d8f0dfe2f8ecda38e00e00fd4b081268cb0d9083899116" prot="public">
+          <name>SUPPORTED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Limitation de l&apos;acceptation implémentée </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumération des status de la limitation de l&apos;acceptation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="21" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="20" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___headers_1gab5d74ee46128a469010ae43a40b9b777" prot="private" static="no">
+        <name>Header</name>
+        <enumvalue id="group___headers_1ggab5d74ee46128a469010ae43a40b9b777af7401a2b001f90c26bb2be51b83799b3" prot="public">
+          <name>READOPTOSTATES</name>
+          <initializer>= 236</initializer>
+          <briefdescription>
+<para>Lecture des optocoupleurs à la sortie des pièces. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab5d74ee46128a469010ae43a40b9b777a33964bfc1d0f61c0365163eb22258215" prot="public">
+          <name>REQUESTOPTIONFLAG</name>
+          <initializer>= 213</initializer>
+          <briefdescription>
+<para>Lecture des caractèristiques d&apos;acceptation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab5d74ee46128a469010ae43a40b9b777a221df10672b3ce141072caba2151c103" prot="public">
+          <name>SETGETACCEPTLIMIT</name>
+          <initializer>= 135</initializer>
+          <briefdescription>
+<para>Fixe ou lit les limites d&apos;acceptation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.Header.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.Header.cs" bodystart="22" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="class_device_library_1_1_c_pelicano_1a87743bbef8551b7349239f48892309c5" prot="protected" static="no">
+        <name>CoinPresent</name>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1a87743bbef8551b7349239f48892309c5adee032dd5e2484a63525689d39d84689" prot="public">
+          <name>NOCOIN</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Pas de pièce dans le container. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_pelicano_1a87743bbef8551b7349239f48892309c5a83c62b7383233ba727dc0f29fa198e22" prot="public">
+          <name>COINPRESENT</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Au monis une pièce présent dans le container. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumération des présences de pièces dans le bac. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="37" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="36" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_pelicano_1a44de54981281c21505a984d808c0f991" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CPelicano.isPelicanoInitialized</definition>
+        <argsstring></argsstring>
+        <name>isPelicanoInitialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="49" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_pelicano_1a55818a243dcf442962f624b997611bb9" prot="private" static="no" mutable="no">
+        <type><ref refid="group___etats_1ga33c79ff59c961c2e1bbf95838e5d6871" kindref="member">Etat</ref></type>
+        <definition>Etat DeviceLibrary.CPelicano.nextState</definition>
+        <argsstring></argsstring>
+        <name>nextState</name>
+        <briefdescription>
+<para>Contient le prochaine etat. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="63" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_pelicano_1a16ebf823cb16c9cf1b575fb366f6692f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_device_library_1_1_c_pelicano_1a87743bbef8551b7349239f48892309c5" kindref="member">CoinPresent</ref></type>
+        <definition>CoinPresent DeviceLibrary.CPelicano.coinInContainer</definition>
+        <argsstring></argsstring>
+        <name>coinInContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="65" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="65" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1aef2cd2553815e501b455b7304e3b80fe" compoundref="_c_pelicano_8cs" startline="486" endline="501">DeviceLibrary.CPelicano.CPelicano</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_device_library_1_1_c_pelicano_1aa931a9d0e044e85d6060c392b88c357c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CPelicano.IsPelicanoInitialized</definition>
+        <argsstring></argsstring>
+        <name>IsPelicanoInitialized</name>
+        <briefdescription>
+<para>Indique si le Pelicano est initialisé. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="54" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1aef2cd2553815e501b455b7304e3b80fe" compoundref="_c_pelicano_8cs" startline="486" endline="501">DeviceLibrary.CPelicano.CPelicano</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_pelicano_1ab713ffb697fd137013a1e2ade48406e2" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_device_library_1_1_c_pelicano_1a87743bbef8551b7349239f48892309c5" kindref="member">CoinPresent</ref></type>
+        <definition>CoinPresent DeviceLibrary.CPelicano.CoinInContainer</definition>
+        <argsstring></argsstring>
+        <name>CoinInContainer</name>
+        <briefdescription>
+<para>Contient l&apos;indicateur de présence de pièce dans le container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="70" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1aef2cd2553815e501b455b7304e3b80fe" compoundref="_c_pelicano_8cs" startline="486" endline="501">DeviceLibrary.CPelicano.CPelicano</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_pelicano_1a4c21a4fe99ac28fed816dc5cb07fc794" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override byte</type>
+        <definition>override byte DeviceLibrary.CPelicano.OptoStates</definition>
+        <argsstring></argsstring>
+        <name>OptoStates</name>
+        <briefdescription>
+<para>Verification des opto-coupleurs </para>        </briefdescription>
+        <detaileddescription>
+<para>Header 236</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="80" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_pelicano_1a6e253f817850a645a19b01f88dbf4d79" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CPelicano.IsCoinPresent</definition>
+        <argsstring></argsstring>
+        <name>IsCoinPresent</name>
+        <briefdescription>
+<para>Vérifie si une pièce est présente dans le cointainer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true si au moins une pièce est présente dans le bol<linebreak/>
+false s&apos;il n&apos;y a pas de pièce </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="113" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="114" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_pelicano_1a44c6d1dceb201b80116505cedc4c3bcd" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_device_library_1_1_c_pelicano_1a22d2da90fc2d834d678d8f0dfe2f8ecd" kindref="member">OptionFlag</ref></type>
+        <definition>OptionFlag DeviceLibrary.CPelicano.AcceptLimitFeature</definition>
+        <argsstring></argsstring>
+        <name>AcceptLimitFeature</name>
+        <briefdescription>
+<para>Retourne le traitement d&apos;une limite d&apos;acceptation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>UNSUPPORTED si l&apos;option de limit d&apos;acceptation est désactivée.<linebreak/>
+SUPPORTED si l&apos;option de limit d&apos;acceptation est activée. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="146" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="147" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_pelicano_1a74a1a52309b0331bb2f6510c698a7183" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override int</type>
+        <definition>override int DeviceLibrary.CPelicano.SerialNumber</definition>
+        <argsstring></argsstring>
+        <name>SerialNumber</name>
+        <briefdescription>
+<para>Lecture du numéro de série du Pelicano </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Le numéro de série</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="168" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_pelicano_1a7f5c785d7c8107df1bc22912700438bc" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CPelicano.SpeedMotor</definition>
+        <argsstring></argsstring>
+        <name>SpeedMotor</name>
+        <briefdescription>
+<para>Renvoie la vitesse du moteur. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>La vitesse du moteur en pourcentage.<linebreak/>
+0 si la command ne renvoit rien. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="287" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="288" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_device_library_1_1_c_pelicano_1a198335c1be40a2a255c60eb0b507d313" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CPelicano.PocketTime</definition>
+        <argsstring></argsstring>
+        <name>PocketTime</name>
+        <briefdescription>
+<para>Renvoie le pocket time </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Le délai entre 2 trous dans le disque * 4 ms.<linebreak/>
+0 si la fonction ne retourne pas la valeur </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="331" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="332" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_pelicano_1aeddf0e0eb3b4b86bdcde077601c05879" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CPelicano.ActivateMotor</definition>
+        <argsstring>(CcmdMotors command, byte data=0)</argsstring>
+        <name>ActivateMotor</name>
+        <param>
+          <type><ref refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807" kindref="member">CcmdMotors</ref></type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>data</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Commande moteur du pelicano. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sous-command de la fonction.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vitesse en pourcentage.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Donnée dépendant de la sous command.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="196" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="196" bodyend="229"/>
+        <references refid="class_device_library_1_1messages_text_1ac961f592dd67ea083a505482617c823b" compoundref="messages_text_8_designer_8cs" startline="111">DeviceLibrary.messagesText.cmdMotorPelicano</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1messages_text_1a457477e9ee134856647bf051d74293ea" compoundref="messages_text_8_designer_8cs" startline="255">DeviceLibrary.messagesText.errMotorPelicano</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ac49c45b7dd286e8e7f4bc3999c833740" compoundref="_c_pelicano_8cs" startline="259" endline="278">DeviceLibrary.CPelicano.CPRStart</referencedby>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ac026ccd1409c2242f5200a8eb79fce82" compoundref="_c_pelicano_8cs" startline="234" endline="252">DeviceLibrary.CPelicano.TrashCycle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_pelicano_1ac026ccd1409c2242f5200a8eb79fce82" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CPelicano.TrashCycle</definition>
+        <argsstring>(CcmdMotors level=CcmdMotors.TRASH1)</argsstring>
+        <name>TrashCycle</name>
+        <param>
+          <type><ref refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807" kindref="member">CcmdMotors</ref></type>
+          <declname>level</declname>
+          <defval>CcmdMotors.TRASH1</defval>
+        </param>
+        <briefdescription>
+<para>Active le moteur en mode trash. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="234" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="234" bodyend="252"/>
+        <references refid="class_device_library_1_1_c_pelicano_1aeddf0e0eb3b4b86bdcde077601c05879" compoundref="_c_pelicano_8cs" startline="196" endline="229">DeviceLibrary.CPelicano.ActivateMotor</references>
+        <references refid="class_device_library_1_1messages_text_1aa5a99445dd360fad1b310b74d9be7bf6" compoundref="messages_text_8_designer_8cs" startline="120">DeviceLibrary.messagesText.cmdMotorPelicanoInProgress</references>
+        <references refid="class_device_library_1_1messages_text_1a5ae581131aa224503a54e4a29aa82916" compoundref="messages_text_8_designer_8cs" startline="129">DeviceLibrary.messagesText.cmdMotorPelicanoMode</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1aef2cd2553815e501b455b7304e3b80fe" compoundref="_c_pelicano_8cs" startline="486" endline="501">DeviceLibrary.CPelicano.CPelicano</referencedby>
+        <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_pelicano_1ac49c45b7dd286e8e7f4bc3999c833740" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CPelicano.CPRStart</definition>
+        <argsstring>()</argsstring>
+        <name>CPRStart</name>
+        <briefdescription>
+<para>Active le moteur en mode CPR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="259" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="259" bodyend="278"/>
+        <references refid="class_device_library_1_1_c_pelicano_1aeddf0e0eb3b4b86bdcde077601c05879" compoundref="_c_pelicano_8cs" startline="196" endline="229">DeviceLibrary.CPelicano.ActivateMotor</references>
+        <references refid="class_device_library_1_1messages_text_1aa5a99445dd360fad1b310b74d9be7bf6" compoundref="messages_text_8_designer_8cs" startline="120">DeviceLibrary.messagesText.cmdMotorPelicanoInProgress</references>
+        <references refid="class_device_library_1_1messages_text_1a5ae581131aa224503a54e4a29aa82916" compoundref="messages_text_8_designer_8cs" startline="129">DeviceLibrary.messagesText.cmdMotorPelicanoMode</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1messages_text_1a457477e9ee134856647bf051d74293ea" compoundref="messages_text_8_designer_8cs" startline="255">DeviceLibrary.messagesText.errMotorPelicano</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void DeviceLibrary.CPelicano.Task</definition>
+        <argsstring>()</argsstring>
+        <name>Task</name>
+        <reimplements refid="class_device_library_1_1_c_coin_validator_1ad9b8f287ccf87c7e71b93518e493aa8a">Task</reimplements>
+        <briefdescription>
+<para>Tâche de la machine d&apos;état du Pelicano </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="352" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="352" bodyend="481"/>
+        <references refid="class_device_library_1_1_c_pelicano_1a44c6d1dceb201b80116505cedc4c3bcd" compoundref="_c_pelicano_8cs" startline="147">DeviceLibrary.CPelicano.AcceptLimitFeature</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1a8547317bb187fe7e1fa247b64bc94ed1" compoundref="_c_coin_validator_8cs" startline="112">DeviceLibrary.CCoinValidator.BackEventCounter</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1a0fce3a5cb9d620de02a2d6bfd89d72b1" compoundref="_c_coin_validator_8cs" startline="178">DeviceLibrary.CCoinValidator.creditBuffer</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a54e1fef4fc72a0f5eed0cc4843db9573" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="32">DeviceLibrary.CCoinValidator.CCVcreditBuffer.EventCounter</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1a394bb70d5bee7bb9abbe32e332a49071" compoundref="_c_coin_validator_8cs" startline="157">DeviceLibrary.CCoinValidator.ExitSensor</references>
+        <references refid="class_device_library_1_1_c_pelicano_1a6e253f817850a645a19b01f88dbf4d79" compoundref="_c_pelicano_8cs" startline="114">DeviceLibrary.CPelicano.IsCoinPresent</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1a3726a3a290ece84279964b0c857020bf" compoundref="_c_coin_validator_8cs" startline="223">DeviceLibrary.CCoinValidator.IsCVInitialized</references>
+        <references refid="class_device_library_1_1_ccash_reader_1ad6efa8899adedbb445d7f7cb4af0c159" compoundref="_ccash_reader_8cs" startline="68">DeviceLibrary.CcashReader.MasterInhibitStatus</references>
+        <references refid="class_device_library_1_1_c_pelicano_1a55818a243dcf442962f624b997611bb9" compoundref="_c_pelicano_8cs" startline="63">DeviceLibrary.CPelicano.nextState</references>
+        <references refid="class_device_library_1_1_c_pelicano_1a4c21a4fe99ac28fed816dc5cb07fc794" compoundref="_c_pelicano_8cs" startline="81">DeviceLibrary.CPelicano.OptoStates</references>
+        <references refid="class_device_library_1_1_c_pelicano_1a198335c1be40a2a255c60eb0b507d313" compoundref="_c_pelicano_8cs" startline="332">DeviceLibrary.CPelicano.PocketTime</references>
+        <references refid="class_device_library_1_1_ccash_reader_1a5378d4373a02c46261c7f611af60a89c" compoundref="_ccash_reader_8cs" startline="95">DeviceLibrary.CcashReader.PollingDelay</references>
+        <references refid="class_device_library_1_1_c_pelicano_1a7f5c785d7c8107df1bc22912700438bc" compoundref="_c_pelicano_8cs" startline="288">DeviceLibrary.CPelicano.SpeedMotor</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1a38527f741c0cee761a37bff50bafbd20" compoundref="_c_coin_validator_8cs" startline="197">DeviceLibrary.CCoinValidator.State</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a008701f9d063afbd16fae6db1a3992c2" compoundref="_c_devices_manager_8cs" startline="48">DeviceLibrary.CDevicesManager.ToPay</references>
+        <references refid="class_device_library_1_1_c_pelicano_1ac026ccd1409c2242f5200a8eb79fce82" compoundref="_c_pelicano_8cs" startline="234" endline="252">DeviceLibrary.CPelicano.TrashCycle</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1aec2db3e243a0eb073f5392c41ee0c354" compoundref="_c_coin_validator_8cs" startline="146">DeviceLibrary.CCoinValidator.TrashLid</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_pelicano_1aef2cd2553815e501b455b7304e3b80fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.CPelicano.CPelicano</definition>
+        <argsstring>()</argsstring>
+        <name>CPelicano</name>
+        <briefdescription>
+<para>Constructeur </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" line="486" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.cs" bodystart="486" bodyend="501"/>
+        <references refid="class_device_library_1_1_c_pelicano_1a16ebf823cb16c9cf1b575fb366f6692f" compoundref="_c_pelicano_8cs" startline="65">DeviceLibrary.CPelicano.coinInContainer</references>
+        <references refid="class_device_library_1_1_c_pelicano_1ab713ffb697fd137013a1e2ade48406e2" compoundref="_c_pelicano_8cs" startline="71">DeviceLibrary.CPelicano.CoinInContainer</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1a394bb70d5bee7bb9abbe32e332a49071" compoundref="_c_coin_validator_8cs" startline="157">DeviceLibrary.CCoinValidator.ExitSensor</references>
+        <references refid="class_device_library_1_1_c_pelicano_1aa931a9d0e044e85d6060c392b88c357c" compoundref="_c_pelicano_8cs" startline="55">DeviceLibrary.CPelicano.IsPelicanoInitialized</references>
+        <references refid="class_device_library_1_1_c_pelicano_1ac026ccd1409c2242f5200a8eb79fce82" compoundref="_c_pelicano_8cs" startline="234" endline="252">DeviceLibrary.CPelicano.TrashCycle</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1aec2db3e243a0eb073f5392c41ee0c354" compoundref="_c_coin_validator_8cs" startline="146">DeviceLibrary.CCoinValidator.TrashLid</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe du Pelicano. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="212">
+        <label>DeviceLibrary.CPelicano</label>
+        <link refid="class_device_library_1_1_c_pelicano"/>
+        <childnode refid="213" relation="public-inheritance">
+        </childnode>
+        <childnode refid="213" relation="public-inheritance">
+        </childnode>
+        <childnode refid="213" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="217" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>IDisposable</label>
+      </node>
+      <node id="214">
+        <label>CcashReader</label>
+        <link refid="class_device_library_1_1_ccash_reader"/>
+        <childnode refid="215" relation="public-inheritance">
+        </childnode>
+        <childnode refid="215" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="215">
+        <label>CccTalk</label>
+        <link refid="class_device_library_1_1_ccc_talk"/>
+        <childnode refid="216" relation="public-inheritance">
+        </childnode>
+        <childnode refid="216" relation="public-inheritance">
+        </childnode>
+        <childnode refid="216" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>CCoinValidator</label>
+        <link refid="class_device_library_1_1_c_coin_validator"/>
+        <childnode refid="214" relation="public-inheritance">
+        </childnode>
+        <childnode refid="214" relation="public-inheritance">
+        </childnode>
+        <childnode refid="214" relation="public-inheritance">
+        </childnode>
+        <childnode refid="214" relation="public-inheritance">
+        </childnode>
+        <childnode refid="214" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="218">
+        <label>DeviceLibrary.CPelicano</label>
+        <link refid="class_device_library_1_1_c_pelicano"/>
+        <childnode refid="219" relation="public-inheritance">
+        </childnode>
+        <childnode refid="219" relation="public-inheritance">
+        </childnode>
+        <childnode refid="219" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="231">
+        <label>DeviceLibrary.CCoinValidator.CCanal.CCoindID</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d"/>
+        <childnode refid="226" relation="usage">
+          <edgelabel>CanalOwner</edgelabel>
+        </childnode>
+      </node>
+      <node id="224">
+        <label>DeviceLibrary.CDevice.CInserted</label>
+        <link refid="class_device_library_1_1_c_device_1_1_c_inserted"/>
+      </node>
+      <node id="222">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="223" relation="public-inheritance">
+        </childnode>
+        <childnode refid="224" relation="usage">
+          <edgelabel>denominationInserted</edgelabel>
+        </childnode>
+      </node>
+      <node id="223">
+        <label>IDisposable</label>
+      </node>
+      <node id="220">
+        <label>CcashReader</label>
+        <link refid="class_device_library_1_1_ccash_reader"/>
+        <childnode refid="221" relation="public-inheritance">
+        </childnode>
+        <childnode refid="221" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="221">
+        <label>CccTalk</label>
+        <link refid="class_device_library_1_1_ccc_talk"/>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+        <childnode refid="225" relation="usage">
+          <edgelabel>counters</edgelabel>
+        </childnode>
+      </node>
+      <node id="225">
+        <label>DeviceLibrary.CcoinsCounters</label>
+        <link refid="class_device_library_1_1_ccoins_counters"/>
+      </node>
+      <node id="230">
+        <label>DeviceLibrary.CCoinValidator.CCanal.CSorter</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter"/>
+        <childnode refid="226" relation="usage">
+          <edgelabel>CanalOwner</edgelabel>
+        </childnode>
+      </node>
+      <node id="219">
+        <label>CCoinValidator</label>
+        <link refid="class_device_library_1_1_c_coin_validator"/>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="226" relation="usage">
+          <edgelabel>canaux</edgelabel>
+        </childnode>
+        <childnode refid="228" relation="usage">
+          <edgelabel>errorCV</edgelabel>
+        </childnode>
+        <childnode refid="229" relation="usage">
+          <edgelabel>creditBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="227">
+        <label>DeviceLibrary.CCoinValidator</label>
+        <link refid="class_device_library_1_1_c_coin_validator"/>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="226" relation="usage">
+          <edgelabel>canaux</edgelabel>
+        </childnode>
+        <childnode refid="228" relation="usage">
+          <edgelabel>errorCV</edgelabel>
+        </childnode>
+        <childnode refid="229" relation="usage">
+          <edgelabel>creditBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="228">
+        <label>DeviceLibrary.CCoinValidator.CErroCV</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v"/>
+      </node>
+      <node id="229">
+        <label>DeviceLibrary.CCoinValidator.CCVcreditBuffer</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer"/>
+        <childnode refid="227" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="226">
+        <label>DeviceLibrary.CCoinValidator.CCanal</label>
+        <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal"/>
+        <childnode refid="227" relation="usage">
+          <edgelabel>CVOwner</edgelabel>
+        </childnode>
+        <childnode refid="230" relation="usage">
+          <edgelabel>sorter</edgelabel>
+        </childnode>
+        <childnode refid="231" relation="usage">
+          <edgelabel>coinId</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.CmdMotors.cs" line="13" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.CmdMotors.cs" bodystart="12" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_pelicano_1a44c6d1dceb201b80116505cedc4c3bcd" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>AcceptLimitFeature</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1aeddf0e0eb3b4b86bdcde077601c05879" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>ActivateMotor</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a8547317bb187fe7e1fa247b64bc94ed1" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>BackEventCounter</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ae73c18703dae000c9f725a44fae17f1a" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>BuildCode</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1afdeb88b9e7e981afd51bd1322e9f89e9" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>canaux</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CccTalk</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CcmdMotors</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1addb8e79d5a3377a2aadef60fc1b19a53" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CCoinValidator</name></member>
+      <member refid="class_device_library_1_1_c_device_1a1ea11e47275e8d7baaa1f60a64c41d83" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CDevice</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a31cbd99fe83d5483df49f401350c8a45" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>ChannelInProgress</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CheckCreditBuffer</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CheckState</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1ab713ffb697fd137013a1e2ade48406e2" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CoinInContainer</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1a16ebf823cb16c9cf1b575fb366f6692f" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>coinInContainer</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1a87743bbef8551b7349239f48892309c5" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CoinPresent</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1af78c9d598eaebc02a257d52353ab257c" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CommsRevision</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a3810c0aa448865e19afff87a946fee5d" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>counters</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>counterSerializer</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>countersFile</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1aef2cd2553815e501b455b7304e3b80fe" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CPelicano</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1ac49c45b7dd286e8e7f4bc3999c833740" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CPRStart</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a0fce3a5cb9d620de02a2d6bfd89d72b1" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>creditBuffer</name></member>
+      <member refid="group___erreurs_1ga68c5b73cc3b337502d9f92154d933591" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CVErrorCodes</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a62ce7ca9d0cc8ef92edb58f06a34add1" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CVStatus</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1ada11d6936d839ad456e2bd9e66f3eb31" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>CVTask</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a8e3e78f989d6549af291def41d6f2498" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>DataBaseVersion</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1afefab5e609c6d57f388a90d3386adb8d" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>defaultSorterPath</name></member>
+      <member refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>denominationInserted</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>DeviceAddress</name></member>
+      <member refid="class_device_library_1_1_c_device_1acc529f16bc467bfa601e41dc205825f4" prot="protected" virt="virtual"><scope>DeviceLibrary::CPelicano</scope><name>Dispose</name></member>
+      <member refid="class_device_library_1_1_c_device_1abb1407e4a9ad3eca3ed3e8e92ead69fe" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>Dispose</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a3cb80b7a82cc363e0dcefd1f31ced8a2" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>EquipementCategory</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a03b7719015059d51c015f7a95f3b9cca" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>errorCV</name></member>
+      <member refid="group___etats_1ga33c79ff59c961c2e1bbf95838e5d6871" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>Etat</name></member>
+      <member refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>eventListLock</name></member>
+      <member refid="class_device_library_1_1_c_device_1a93829459e8bc284d9f8bd56edf59e152" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>eventsList</name></member>
+      <member refid="class_device_library_1_1_c_device_1a788260097f3f2693b2b0ac5d0ef9383a" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>evReady</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a394bb70d5bee7bb9abbe32e332a49071" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>ExitSensor</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ad5c6d1287d0c049bdbf4fda8cb19c1ef" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>fileCounterName</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>GetByte</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>GetInhibitMask</name></member>
+      <member refid="group___headers_1gab5d74ee46128a469010ae43a40b9b777" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>Header</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a566a8b5bf9b1f377c5439f06a6d58178" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>InhibitMask</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a789dcffa38ad9d646e32c448632ceaff" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>InhibitStatus</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a8dac668c2fb07489dc8ac5ecc06c2d94" prot="public" virt="virtual"><scope>DeviceLibrary::CPelicano</scope><name>Init</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>IsCmdccTalkSended</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1a6e253f817850a645a19b01f88dbf4d79" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>IsCoinPresent</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a3726a3a290ece84279964b0c857020bf" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>IsCVInitialized</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a6fe7522091654bc85951ad9f234b7585" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>IsCVToBeActivated</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1af41e76ebe686da650b5a12ab034309ec" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>IsCVToBeDeactivated</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>IsDeviceReseted</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1aa931a9d0e044e85d6060c392b88c357c" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>IsPelicanoInitialized</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1a44de54981281c21505a984d808c0f991" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>isPelicanoInitialized</name></member>
+      <member refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>IsPresent</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1ab4d515bda1d8e8679ed7dc4cc3f5c40c" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>LowerSensor</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a73a84f7534b5b9ff129897b86d483f48" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>Manufacturer</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>MasterDisable</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>MasterEnable</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1ad6efa8899adedbb445d7f7cb4af0c159" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>MasterInhibitStatus</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1aabbbe46d911d826c39712d8aecd10786" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>mutexCCTalk</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1a55818a243dcf442962f624b997611bb9" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>nextState</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a68f118167bcdf23f194ef02b779d4333" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>numChannel</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1a22d2da90fc2d834d678d8f0dfe2f8ecd" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>OptionFlag</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1a4c21a4fe99ac28fed816dc5cb07fc794" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>OptoStates</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a065e536f9d47a78ab3bbc5fd2990ada0" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>OverrideMask</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a6febc69e244b62d2527286c2483f5a66" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>OverrideStatus</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1a198335c1be40a2a255c60eb0b507d313" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>PocketTime</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a5378d4373a02c46261c7f611af60a89c" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>PollingDelay</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a1768cb2711e0f8d8fd45d9d28aeb1cf6" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>PollingPriority</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>PortSerie</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1abd92229809b4474129b15e638fd56da7" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>ProductCode</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a9e6bea86795ec29fde4e6071256eff76" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>ResetCounters</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1a40798e7b17783bffe4d59b67ef57a430" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>SelfTest</name></member>
+      <member refid="group___erreurs_1ga179570d2d8f6f95d52ccafb98d20c790" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>SelfTestResult</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1a74a1a52309b0331bb2f6510c698a7183" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>SerialNumber</name></member>
+      <member refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>SetInhibitStatus</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a941fe54c9299c2f3d78f865a3c7dc720" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>SetOverrideStatus</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a576e09f74dc509dcd7919eceae9cc7de" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>SimplePoll</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1ab293634863b100aad9f167f189b49f19" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>sorterPath</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1a7f5c785d7c8107df1bc22912700438bc" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>SpeedMotor</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a38527f741c0cee761a37bff50bafbd20" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>State</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1ac45ed64d9685ac636e48b00510c7654e" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>Status</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a687a695bef6d7f25f8fe7148948d04bc" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>SWRev</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" prot="public" virt="virtual"><scope>DeviceLibrary::CPelicano</scope><name>Task</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>TestSolenoid</name></member>
+      <member refid="class_device_library_1_1_c_pelicano_1ac026ccd1409c2242f5200a8eb79fce82" prot="private" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>TrashCycle</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1aec7d217f486dbce4458a64bc071fa19d" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>TrashDoor</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1aec2db3e243a0eb073f5392c41ee0c354" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>TrashLid</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1a538e6fc08186ba969f190503cdc828c2" prot="public" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>VariablesSet</name></member>
+      <member refid="class_device_library_1_1_ccc_talk_1a43ca834802480b1171030f7ad063c559" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CPelicano</scope><name>verrou</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

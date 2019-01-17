@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_hopper_8_etat_8cs" kind="file">
+    <compoundname>CHopper.Etat.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_c_hopper" prot="public">DeviceLibrary::CHopper</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+<para>Fichier contenant l&apos;énumération des états de la machine d&apos;état des hoppers. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>28 11 2018 </para></simplesect>
+<simplesect kind="version"><para>1.0.0 </para></simplesect>
+<simplesect kind="author"><para>Rachid AKKOUCHE </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal">CHopper<sp/>:<sp/>CccTalk</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="group___etats_1ga5f54d84c3b2a93420c8ff69b1351c77a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___etats_1ga5f54d84c3b2a93420c8ff69b1351c77a" kindref="member">Etat</ref><sp/>:<sp/>byte</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aabb47b9b1d888741b1d94f3f060281299" kindref="member">STATE_INIT</ref>,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aaac8722b851146a23c4e0a59d1bd4b99d" kindref="member">STATE_RESET</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aa429322f04df2897f3895ce1875fa421d" kindref="member">STATE_DISPENSE</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aaff94b4df37ab98dfd6aeecb2f7b43e30" kindref="member">STATE_GETEQUIPEMENCATEGORY</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aa8920d1130a04c5762b9f97e77a763045" kindref="member">STATE_GETOPTOSTATE</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aa3f50973a7aa2ac45ba9b9d65129c35f2" kindref="member">STATE_DISPENSEINPROGRESS</ref>,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aaeffe17b6965a363aff8e39b905e87aaf" kindref="member">STATE_ENDDISPENSE</ref>,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aa37dadab829ca289cf7f571fda1fc156d" kindref="member">STATE_CHECKLEVEL</ref>,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aa667adf1721ecf31975b473ea51005d04" kindref="member">STATE_IDLE</ref>,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga5f54d84c3b2a93420c8ff69b1351c77aaa1cbf7ab92312cb40dc586242a8bc03e" kindref="member">STATE_STOP</ref>,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Etat.cs"/>
+  </compounddef>
+</doxygen>

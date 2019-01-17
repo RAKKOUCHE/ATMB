@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_hopper_8_header_8cs" kind="file">
+    <compoundname>CHopper.Header.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_c_hopper" prot="public">DeviceLibrary::CHopper</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+<para>Fichier contenant l&apos;énumération des commandes ccTalk pour les hoppers. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>28 11 2018 </para></simplesect>
+<simplesect kind="version"><para>1.0.0 </para></simplesect>
+<simplesect kind="author"><para>Rachid AKKOUCHE </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal">CHopper<sp/>:<sp/>CccTalk</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="group___headers_1gab8e15517b29b9562c7d7e8616d61c855" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___headers_1ga22f8eb6526627d4203e53ce7dbd3052a" kindref="member">Header</ref><sp/>:<sp/>byte</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a4825c2517fdde4d526de02666fd27c5c" kindref="member">REQUESTHIGHLOWSTATUS</ref><sp/>=<sp/>217,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a2443533d40c7fd63fffb95385894bf77" kindref="member">MODIFYPAYOUTABSOLUTECOUNT</ref><sp/>=<sp/>208,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855aed33fd598b7b9183cf33f46a57889b2a" kindref="member">REQUESTPAYOUTABSOLUTECOUNT</ref><sp/>=<sp/>207,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a7b21bd88ed5c233104fe92303501113c" kindref="member">MODIFYPAYOUTCAPACITY</ref><sp/>=<sp/>187,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a7ba5c462ff3d7dcf46912956b29def0c" kindref="member">REQUESTPAYOUTCAPACITY</ref><sp/>=<sp/>186,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ac2ddb98fb918c6472784f387bfc739c0" kindref="member">MODIFYPAYOUTFLOAT</ref><sp/>=<sp/>175,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a86ec4dd896616de2522b741b3ee3c983" kindref="member">REQUESTPAYOUTFLOAT</ref><sp/>=<sp/>174,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855afccebf5298d1c1e7db4e5c4ea96a8a76" kindref="member">EMERGENCYSTOP</ref><sp/>=<sp/>172,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a2751d29dc0030efbf6bb9434ec9ba968" kindref="member">REQUESTHOPPERCOIN</ref><sp/>=<sp/>171,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a74205479553e32f9c1896d8eee4ef6bd" kindref="member">REQUESTHOPPERDISPENSECOUNT</ref><sp/>=<sp/>168,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ab539a90bcfde6ce366c0723b0d0163a8" kindref="member">DISPENSEHOPPERCOINS</ref><sp/>=<sp/>167,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ac873dcc3fe0f16c7e169b542a5ce9121" kindref="member">REQUESTHOPPERSTATUS</ref><sp/>=<sp/>166,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ae924a1d3fed578124d2542b501b9d5be" kindref="member">MODIFYVARIABLESET</ref><sp/>=<sp/>165,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a1c7e15da01d0f3d0d6c3699f4428ae19" kindref="member">ENABLEHOPPER</ref><sp/>=<sp/>164,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a94aba60ee791b51c24268564d6d4db34" kindref="member">TESTHOPPER</ref><sp/>=<sp/>163,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ab3b80d8e35f9bf8fd78fbb4ebf2e065d" kindref="member">PUMPRNG</ref><sp/>=<sp/>161,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855aaa3f8f4acd8572ce7e9f4fe87954b6c0" kindref="member">REQUESTCIPHERKEY</ref><sp/>=<sp/>160,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a3f0803c91adce917551e3653ce6ab02b" kindref="member">DISPENSEHOPPERVALUE</ref><sp/>=<sp/>134,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855af4cf967e4b4c084bb9148099781b3a49" kindref="member">REQUESTHOPPERPOLLINGVALUE</ref><sp/>=<sp/>133,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ab7f6a886cf52347442b934ad59273c7d" kindref="member">EMERGENCYSTOPVALUE</ref><sp/>=<sp/>132,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a6ad8e7feb8e305d7b549b257c70d3ddf" kindref="member">REQUESTHOPPERCOINVALUE</ref><sp/>=<sp/>131,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a954b2d7e92fb3c676e4246f551a03871" kindref="member">REQUESTINDEXEDDHOPPERDISPENSECOUNT</ref><sp/>=<sp/>130,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855aa0d004c8327a3e8b0ae5165246991c25" kindref="member">REQUESTENCRYPTEDHOPPERSTATUS</ref><sp/>=<sp/>109,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Header.cs"/>
+  </compounddef>
+</doxygen>

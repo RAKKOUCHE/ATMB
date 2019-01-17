@@ -38,8 +38,10 @@ D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\DeviceLibrary.dll
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\DeviceLibrary.pdb
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\DeviceLibrary.dll.CodeAnalysisLog.xml
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\DeviceLibrary.dll.lastcodeanalysissucceeded
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\BnrCtlDotNet40.dll
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\NLog.dll
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\NLog.xml
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.csprojAssemblyReference.cache
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.messagesText.resources
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.Properties.Resources.resources
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.csproj.GenerateResource.cache
@@ -47,5 +49,3 @@ D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.csproj.Co
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.csproj.CopyComplete
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.dll
 D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.pdb
-D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\Debug\BnrCtlDotNet40.dll
-D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\Debug\DeviceLibrary.csprojAssemblyReference.cache

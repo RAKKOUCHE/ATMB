@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_pelicano_8_cmd_motors_8cs" kind="file">
+    <compoundname>CPelicano.CmdMotors.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_c_pelicano" prot="public">DeviceLibrary::CPelicano</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+<para>Fichier contenant l&apos;énumération des commandes moteurs du Pelicano. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>28 11 2018 </para></simplesect>
+<simplesect kind="version"><para>1.0.0 </para></simplesect>
+<simplesect kind="author"><para>Rachid AKKOUCHE </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="class_device_library_1_1_c_pelicano" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal"><ref refid="class_device_library_1_1_c_pelicano" kindref="compound">CPelicano</ref><sp/>:<sp/><ref refid="class_device_library_1_1_c_coin_validator" kindref="compound">CCoinValidator</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807" kindref="member">CcmdMotors</ref><sp/>:<sp/>byte</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a23c52262460cd1ff6467c114d9c186af" kindref="member">TRASH1</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a9383cea35fd39c81f4d7748cdda6b033" kindref="member">TRASH2</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807ae5542331a5d673ecfbc3d82c59dcf0d7" kindref="member">TRASH3</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a4e3f4e3431c7d01a332f5be79ff5f138" kindref="member">CPR</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a4334e3cc610ce73ca1592d310a6898f6" kindref="member">SETSPEED</ref><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a5e8bf0ac0d68cad93dbd2e4038c7b469" kindref="member">GETSPEED</ref><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_pelicano_1abbf55f1fb82f7704cbac8781bfd6b807a5b0a02d56e8e8e279462f86e87499096" kindref="member">GETPOCKETIME</ref><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.CmdMotors.cs"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,696 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group___headers" kind="group">
+    <compoundname>Headers</compoundname>
+    <title>Headers</title>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___headers_1gaf4bdeeddb7c89dd2b54f86978f5e9866" prot="protected" static="no">
+        <name>Header</name>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866ae528792c78a8f0df73cb539242c9db57" prot="public">
+          <name>REQUESTPOLLINGPRIORITY</name>
+          <initializer>= 249</initializer>
+          <briefdescription>
+<para>Délai recommandé pour vérifier le buffer de crédits et de code d&apos;erreur </para>          </briefdescription>
+          <detaileddescription>
+<para>Au dela de ce délai le périphérique devrait être désactivé</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866ae268218a830fbe959f8a433163e8187a" prot="public">
+          <name>PERFORMSELFTEST</name>
+          <initializer>= 232</initializer>
+          <briefdescription>
+<para>Cette commande effectue un test interne. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866a57fa2152134db32c8ccf2c03fd965489" prot="public">
+          <name>MODIFYINHIBITSTATUS</name>
+          <initializer>= 231</initializer>
+          <briefdescription>
+<para>Cette commande envoie un masque d&apos;inhibition. Chaque bit correspondant à un canal </para>          </briefdescription>
+          <detaileddescription>
+<para>0 = desactivé, 1 = activé</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866a86d5eb66e4f787072c88909f8de0ee99" prot="public">
+          <name>REQUESTINHIBITSTATUS</name>
+          <initializer>= 230</initializer>
+          <briefdescription>
+<para>Demande le masque d&apos;inhibition </para>          </briefdescription>
+          <detaileddescription>
+<para>voir <ref refid="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866a57fa2152134db32c8ccf2c03fd965489" kindref="member">MODIFYINHIBITSTATUS</ref> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866aa932deef49f85794660b6e9b0fd2f426" prot="public">
+          <name>MODIFYMASTERINHIBITSTATUS</name>
+          <initializer>= 228</initializer>
+          <briefdescription>
+<para>Cette commande envoie un masque d&apos;inhibition géneral au périphérique. </para>          </briefdescription>
+          <detaileddescription>
+<para>Seul le bit de poid faible est pris en considération</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866a9feb77035916af7a4a90c7e62047cee0" prot="public">
+          <name>REQUESTMASTERINHIBITSTATUS</name>
+          <initializer>= 227</initializer>
+          <briefdescription>
+<para>Cette commande demande le masque d&apos;inhibition géneral du périphérique </para>          </briefdescription>
+          <detaileddescription>
+<para>voir <ref refid="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866aa932deef49f85794660b6e9b0fd2f426" kindref="member">MODIFYMASTERINHIBITSTATUS</ref></para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.Header.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CcashReader.Header.cs" bodystart="19" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___headers_1ga22f8eb6526627d4203e53ce7dbd3052a" prot="public" static="no">
+        <name>Header</name>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf6daafc242a3bea0cfdf8deaac4cbdfe" prot="public">
+          <name>FACTORYSETUP</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+<para>Commande d&apos;ajustement ou de test interne. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa28989b1e5d1316cb7695aa363f531a97" prot="public">
+          <name>SIMPLEPOLL</name>
+          <initializer>= 254</initializer>
+          <briefdescription>
+<para>Commande vérifiant la communication entre le host et le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa909355816ff6e7e959619e23789f2227" prot="public">
+          <name>ADDRESSPOLL</name>
+          <initializer>= 253</initializer>
+          <briefdescription>
+<para>Commande broadcast permettant de déterminer l&apos;adresse utilisée par chaque périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa44aba6ad436073d338560f89aa8f6154" prot="public">
+          <name>ADDRESSCLASH</name>
+          <initializer>= 252</initializer>
+          <briefdescription>
+<para>Commande permettant de vérifier si plusieurs périphériques partagent la même adresse. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa2dcd6749aa763943ba4b2f6b62962505" prot="public">
+          <name>ADDRESSCHANGE</name>
+          <initializer>= 251</initializer>
+          <briefdescription>
+<para>Commande effectuant le chamgement d&apos;adresse. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa4ddfc0abc8dafde9a696ba71824c1f72" prot="public">
+          <name>ADDRESSRANDOM</name>
+          <initializer>= 250</initializer>
+          <briefdescription>
+<para>Détermine un adresse alátoire pour le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa0b86a65dca9c484a7bde9fca38803f0b" prot="public">
+          <name>REQUESTVARIABLESET</name>
+          <initializer>= 247</initializer>
+          <briefdescription>
+<para>Cette commande demande les variables du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aab513d3b7fc4b96e054937fb6fbbb0729" prot="public">
+          <name>REQUESTMANUFACTURERID</name>
+          <initializer>= 246</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;identification du fabricant du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aae7716221fdaec83804880e8765cf7d10" prot="public">
+          <name>REQUESTEQUIPEMENTCATEGORYID</name>
+          <initializer>= 245</initializer>
+          <briefdescription>
+<para>Cette commande demande la catégorie à laquelle appartient le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaaf384971e229ef28c276b9779bd81388" prot="public">
+          <name>REQUESTPRODUCTCODE</name>
+          <initializer>= 244</initializer>
+          <briefdescription>
+<para>Cette commande demande le code du produit du péripherique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa3227e2092fc0766e61a1a732de61062d" prot="public">
+          <name>REQUESTSN</name>
+          <initializer>= 242</initializer>
+          <briefdescription>
+<para>Cette commande demande le numéro de série du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa7e17eee28297a1c7131d78d335dc3dc7" prot="public">
+          <name>REQUESTSWREV</name>
+          <initializer>= 241</initializer>
+          <briefdescription>
+<para>Cette commande demande la révision du software du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa9163ec519df517704db337f07ea927d6" prot="public">
+          <name>OPERATEMOTOR</name>
+          <initializer>= 239</initializer>
+          <briefdescription>
+<para>Cette commande active les moteurs du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf7401a2b001f90c26bb2be51b83799b3" prot="public">
+          <name>READOPTOSTATES</name>
+          <initializer>= 236</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;etat des optocoupleurs du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa4236a0843d4f19fe52b9c493eb437802" prot="public">
+          <name>ENTERNEWPINNUMBER</name>
+          <initializer>= 219</initializer>
+          <briefdescription>
+<para>Cette commande change le code pin du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf8106609f05a253f413197be056fba71" prot="public">
+          <name>ENTERPINNUMBER</name>
+          <initializer>= 218</initializer>
+          <briefdescription>
+<para>Cette commande transmet le code PIN au périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aad598c36cca844abd31f22322ef8670c7" prot="public">
+          <name>REQUESTDATASTORAGEAVAILABILITY</name>
+          <initializer>= 216</initializer>
+          <briefdescription>
+<para>Cette commande demande les informations sur le stockage des données dans le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf4d3266005046022ff52ffa5c3f3f0c3" prot="public">
+          <name>READDATABLOCK</name>
+          <initializer>= 215</initializer>
+          <briefdescription>
+<para>Cette commande lit un bloc de donnée dans le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaf42de9fb76d8e85f35c258b77e2ff02a" prot="public">
+          <name>WRITEDATABLOCK</name>
+          <initializer>= 214</initializer>
+          <briefdescription>
+<para>Cette commande lit un bloc de donnée dans le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa3ea83e192f7d50bb0bd2b51a5f4883e1" prot="public">
+          <name>REQUESTBUILDCODE</name>
+          <initializer>= 192</initializer>
+          <briefdescription>
+<para>Cette commande demande le code de production au périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaaa233eaf5d8e09ef8ca6c3c120ee0388" prot="public">
+          <name>REQUESTBASEYEAR</name>
+          <initializer>= 170</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;année de référence au périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aadd771b5014d8dfb2d691b886c0d0154c" prot="public">
+          <name>REQUESTADDRESSMODE</name>
+          <initializer>= 169</initializer>
+          <briefdescription>
+<para>Cette commande demande le mode utilisé pour l&apos;adresse du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aae924a1d3fed578124d2542b501b9d5be" prot="public">
+          <name>MODIFYVARIABLESET</name>
+          <initializer>= 165</initializer>
+          <briefdescription>
+<para>Cette commande enregistre les variables dans le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa7179596553bfb00fe3a54fb1c4f46d2e" prot="public">
+          <name>SWITCHENCRYPTIONCODE</name>
+          <initializer>= 137</initializer>
+          <briefdescription>
+<para>Cette commande change le code de chiffrage du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa175f64a90ae2bf6edd145a17609268a1" prot="public">
+          <name>STOREENCRYPTIONCODE</name>
+          <initializer>= 136</initializer>
+          <briefdescription>
+<para>Cette commande enregistre le code de chiffrage du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa802706a9238e2928077f97736854bad4" prot="public">
+          <name>BUSY</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>Réponse renvoyé par le périphérique s&apos;il ne peut traiter la commande parce-qu&apos;il est occupé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa3860aef5aa76641c6959d1a5de94b216" prot="public">
+          <name>NAK</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Réponse renvoyé par le périphérique s&apos;il ne comprend pas la commande. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aa233ae98d8a18c499eb4b798360aa02ef" prot="public">
+          <name>REQUESTCOMMSREVISION</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Cette commande demande le niveau ccTalk du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aafb4cfb0ac631109fa01bdbd70ba8e166" prot="public">
+          <name>CLEARCOMMSSTATUSVARIABLES</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>R.A.Z. des incidents de communications. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aaacaa18d8173ad7149b61185d29c4f3bb" prot="public">
+          <name>REQUESTCOMMSSTATUSVARIABLES</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Cette commande demande les informations sur les incidents de communication du périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga22f8eb6526627d4203e53ce7dbd3052aab87acc3ce509b6e2b20a564607eb06d8" prot="public">
+          <name>RESETDEVICE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Cette commande effectue un reset sur le périphérique. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.Header.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.Header.cs" bodystart="19" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___headers_1ga5672baec375c16b1ec7bdb4b85cebaa9" prot="protected" static="no">
+        <name>Header</name>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9a9ce2b30cbcbda60f1a4e9d2cd5526d20" prot="public">
+          <name>REQUESTSTATUS</name>
+          <initializer>= 248</initializer>
+          <briefdescription>
+<para>Cette commande demande le status du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9a085cadf3ee4fec13527da4cbdb2f9e0c" prot="public">
+          <name>REQUESTDATABASEVER</name>
+          <initializer>= 243</initializer>
+          <briefdescription>
+<para>Cette commande demande la base de donnée de calibration du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9add5d1a1bac3f18225ae7c4dd94fbbec1" prot="public">
+          <name>TESTSOLENOID</name>
+          <initializer>= 240</initializer>
+          <briefdescription>
+<para>Cette commande active un ou plusieurs activateurs du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9a684e258f63334d457d2d4c2502820a6e" prot="public">
+          <name>TESTOUTPUTLINES</name>
+          <initializer>= 238</initializer>
+          <briefdescription>
+<para>Cette commande active les lignes de sorties du monnayyeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9aa5e7b8fd4be5bf778c447908e8d8008e" prot="public">
+          <name>READINPUTLINES</name>
+          <initializer>= 237</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;état des lignes d&apos;entrées du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9af7401a2b001f90c26bb2be51b83799b3" prot="public">
+          <name>READOPTOSTATES</name>
+          <initializer>= 236</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;état des optocoupleurs du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9a492365d426f17a41c4cbd8a9c4846bf9" prot="public">
+          <name>READBUFFERCREDIT</name>
+          <initializer>= 229</initializer>
+          <briefdescription>
+<para>Cette commande demande la lecture du buffer de crédit ou des codes d&apos;erreur du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9ac95be1f63c78dc1b65f01227ec227359" prot="public">
+          <name>MODIFYOVERRIDESTATUS</name>
+          <initializer>= 222</initializer>
+          <briefdescription>
+<para>Cette commande enregistre l&apos;octet d&apos;override des tris du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9adbe07970434b8affd947c208a125a2ec" prot="public">
+          <name>REQUESTOVERRIDESTATUS</name>
+          <initializer>= 221</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;octet d&apos;override des tris du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9a33964bfc1d0f61c0365163eb22258215" prot="public">
+          <name>REQUESTOPTIONFLAG</name>
+          <initializer>= 213</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;octet des options des tris du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9ad756e6025d036867d08303eb2f842430" prot="public">
+          <name>MODIFYSORTERPATH</name>
+          <initializer>= 210</initializer>
+          <briefdescription>
+<para>Cette commande enregistre les chemins de tris d&apos;un canal du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9ada6d464dd6ed1209fdad7db02f4d644c" prot="public">
+          <name>MODIFYDEFAULTSORTERPATH</name>
+          <initializer>= 189</initializer>
+          <briefdescription>
+<para>Cette commande enregistre le chemin de tri par défaut du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9ad5e22c5779cc7122c156c913d6602b6a" prot="public">
+          <name>REQUESTDEFAULTSORTERPATH</name>
+          <initializer>= 188</initializer>
+          <briefdescription>
+<para>Cette commande demande le chemin de tri par défaut du monnayeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9ab6f00a60b1b3cb6b3d3bbe852a099ecc" prot="public">
+          <name>SETACCEPTLIMIT</name>
+          <initializer>= 135</initializer>
+          <briefdescription>
+<para>Cette commande enregistre les limites d&apos;acceptation du monnayeur par transaction. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.Header.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.Header.cs" bodystart="22" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___headers_1gab8e15517b29b9562c7d7e8616d61c855" prot="public" static="no">
+        <name>Header</name>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a4825c2517fdde4d526de02666fd27c5c" prot="public">
+          <name>REQUESTHIGHLOWSTATUS</name>
+          <initializer>= 217</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;état des sondes de niveau du hopper </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a2443533d40c7fd63fffb95385894bf77" prot="public">
+          <name>MODIFYPAYOUTABSOLUTECOUNT</name>
+          <initializer>= 208</initializer>
+          <briefdescription>
+<para>Cette commande modifie le compteur interne du hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855aed33fd598b7b9183cf33f46a57889b2a" prot="public">
+          <name>REQUESTPAYOUTABSOLUTECOUNT</name>
+          <initializer>= 207</initializer>
+          <briefdescription>
+<para>Cette commande demande le compteur interne du hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a7b21bd88ed5c233104fe92303501113c" prot="public">
+          <name>MODIFYPAYOUTCAPACITY</name>
+          <initializer>= 187</initializer>
+          <briefdescription>
+<para>Cette commande modifie la capacité maximum du hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a7ba5c462ff3d7dcf46912956b29def0c" prot="public">
+          <name>REQUESTPAYOUTCAPACITY</name>
+          <initializer>= 186</initializer>
+          <briefdescription>
+<para>Cette commande demande la capacité maximum du hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ac2ddb98fb918c6472784f387bfc739c0" prot="public">
+          <name>MODIFYPAYOUTFLOAT</name>
+          <initializer>= 175</initializer>
+          <briefdescription>
+<para>Cette commande modifie le niveau des pièces devant rester dans le hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a86ec4dd896616de2522b741b3ee3c983" prot="public">
+          <name>REQUESTPAYOUTFLOAT</name>
+          <initializer>= 174</initializer>
+          <briefdescription>
+<para>Cette commande demande le niveau des pièces devant rester dans le hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855afccebf5298d1c1e7db4e5c4ea96a8a76" prot="public">
+          <name>EMERGENCYSTOP</name>
+          <initializer>= 172</initializer>
+          <briefdescription>
+<para>Cette commande arrête immédiatement la distribution et renvoie le nombre de pièce restant à payer. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a2751d29dc0030efbf6bb9434ec9ba968" prot="public">
+          <name>REQUESTHOPPERCOIN</name>
+          <initializer>= 171</initializer>
+          <briefdescription>
+<para>Cette commande demande le nom des pièces que le hopper gère. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a74205479553e32f9c1896d8eee4ef6bd" prot="public">
+          <name>REQUESTHOPPERDISPENSECOUNT</name>
+          <initializer>= 168</initializer>
+          <briefdescription>
+<para>Cette commande demande le nombre de pièces distribuées par le hopper </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ab539a90bcfde6ce366c0723b0d0163a8" prot="public">
+          <name>DISPENSEHOPPERCOINS</name>
+          <initializer>= 167</initializer>
+          <briefdescription>
+<para>Cette commande lance la distribution des pièces. </para>          </briefdescription>
+          <detaileddescription>
+<para>La distribution ne peut s&apos;effectuer que par la séquence décrite dans la documentation du hopper.</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ac873dcc3fe0f16c7e169b542a5ce9121" prot="public">
+          <name>REQUESTHOPPERSTATUS</name>
+          <initializer>= 166</initializer>
+          <briefdescription>
+<para>Cette commande demande les informations sur les pièces distribuées dans l&apos;opération en cours ou venant de se terminer. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ae924a1d3fed578124d2542b501b9d5be" prot="public">
+          <name>MODIFYVARIABLESET</name>
+          <initializer>= 165</initializer>
+          <briefdescription>
+<para>Cette commande enregistre les données variables dans le hopper </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a1c7e15da01d0f3d0d6c3699f4428ae19" prot="public">
+          <name>ENABLEHOPPER</name>
+          <initializer>= 164</initializer>
+          <briefdescription>
+<para>Active le hopper. </para>          </briefdescription>
+          <detaileddescription>
+<para>Le hopper ne peut être activé que par le code 165</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a94aba60ee791b51c24268564d6d4db34" prot="public">
+          <name>TESTHOPPER</name>
+          <initializer>= 163</initializer>
+          <briefdescription>
+<para>Cette commande demande les informations sur l&apos;état du hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ab3b80d8e35f9bf8fd78fbb4ebf2e065d" prot="public">
+          <name>PUMPRNG</name>
+          <initializer>= 161</initializer>
+          <briefdescription>
+<para>Cette commande prépare en interne le chiffrage du hopper. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855aaa3f8f4acd8572ce7e9f4fe87954b6c0" prot="public">
+          <name>REQUESTCIPHERKEY</name>
+          <initializer>= 160</initializer>
+          <briefdescription>
+<para>Cette commande demande la clé de chiffrage. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a3f0803c91adce917551e3653ce6ab02b" prot="public">
+          <name>DISPENSEHOPPERVALUE</name>
+          <initializer>= 134</initializer>
+          <briefdescription>
+<para>Cette commande demande une distribution par valeur. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855af4cf967e4b4c084bb9148099781b3a49" prot="public">
+          <name>REQUESTHOPPERPOLLINGVALUE</name>
+          <initializer>= 133</initializer>
+          <briefdescription>
+<para>Cette commande demande les informations sur les montants distribués dans l&apos;opération en cours ou venant de se terminer. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855ab7f6a886cf52347442b934ad59273c7d" prot="public">
+          <name>EMERGENCYSTOPVALUE</name>
+          <initializer>= 132</initializer>
+          <briefdescription>
+<para>Cette commande arrête immédiatement la distribution et renvoie le montant restant à payer. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a6ad8e7feb8e305d7b549b257c70d3ddf" prot="public">
+          <name>REQUESTHOPPERCOINVALUE</name>
+          <initializer>= 131</initializer>
+          <briefdescription>
+<para>Cette commande demande le nom de la pièce et la valeur. </para>          </briefdescription>
+          <detaileddescription>
+<para>Commande fonctionnant sur les hoppers multiple.</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855a954b2d7e92fb3c676e4246f551a03871" prot="public">
+          <name>REQUESTINDEXEDDHOPPERDISPENSECOUNT</name>
+          <initializer>= 130</initializer>
+          <briefdescription>
+<para>Cette commande demande le nombre de pièce d&apos;un type distribué </para>          </briefdescription>
+          <detaileddescription>
+<para>Cette commande est reservée aux hopperx multiple</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab8e15517b29b9562c7d7e8616d61c855aa0d004c8327a3e8b0ae5165246991c25" prot="public">
+          <name>REQUESTENCRYPTEDHOPPERSTATUS</name>
+          <initializer>= 109</initializer>
+          <briefdescription>
+<para>Cette commande demande l&apos;état du chiffrage du hopper </para>          </briefdescription>
+          <detaileddescription>
+<para>Non documenté pour des raisons de sécurité.</para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Header.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Header.cs" bodystart="19" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___headers_1gab5d74ee46128a469010ae43a40b9b777" prot="private" static="no">
+        <name>Header</name>
+        <enumvalue id="group___headers_1ggab5d74ee46128a469010ae43a40b9b777af7401a2b001f90c26bb2be51b83799b3" prot="public">
+          <name>READOPTOSTATES</name>
+          <initializer>= 236</initializer>
+          <briefdescription>
+<para>Lecture des optocoupleurs à la sortie des pièces. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab5d74ee46128a469010ae43a40b9b777a33964bfc1d0f61c0365163eb22258215" prot="public">
+          <name>REQUESTOPTIONFLAG</name>
+          <initializer>= 213</initializer>
+          <briefdescription>
+<para>Lecture des caractèristiques d&apos;acceptation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___headers_1ggab5d74ee46128a469010ae43a40b9b777a221df10672b3ce141072caba2151c103" prot="public">
+          <name>SETGETACCEPTLIMIT</name>
+          <initializer>= 135</initializer>
+          <briefdescription>
+<para>Fixe ou lit les limites d&apos;acceptation. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.Header.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CPelicano.Header.cs" bodystart="22" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___headers_1gaf51d26810d3dd898c2c312ec8a48017a" prot="private" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte DeviceLibrary.CCoinValidator.CCanal.CCoindID.REQUESTCOINID</definition>
+        <argsstring></argsstring>
+        <name>REQUESTCOINID</name>
+        <initializer>= 184</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="35" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Groupe des commandes ccTalk. </para>    </briefdescription>
+    <detaileddescription>
+<para>Enumeration des concernant concernant les moyens de paiement </para><para>Enumération des commandes communnes à tous les périphériques ccTalk. </para><para>Command ccTalk demandant l&apos;identification de la pièce du canal. </para><para>Liste des headers spécifiques au monnayeur </para><para>Enumération des commandes spécifiques aux hoppers </para><para>Enumération des commandes spécifiques au Pelicano </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

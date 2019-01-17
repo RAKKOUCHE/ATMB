@@ -87,11 +87,6 @@ namespace DeviceLibrary
         public class CHopperError
         {
             /// <summary>
-            /// Numéro du hopper
-            /// </summary>
-            public string nameOfHopper;
-
-            /// <summary>
             /// Code d'erreur du hopper
             /// </summary>
             public HopperError Code;
@@ -100,6 +95,11 @@ namespace DeviceLibrary
             /// Indique si le hopper est nécessaire pour le fonctionnement du système.
             /// </summary>
             public bool isHopperCritical;
+
+            /// <summary>
+            /// Numéro du hopper
+            /// </summary>
+            public string nameOfHopper;
         }
     }
 }

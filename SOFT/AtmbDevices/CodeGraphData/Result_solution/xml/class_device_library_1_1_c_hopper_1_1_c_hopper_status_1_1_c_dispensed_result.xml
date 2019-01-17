@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CHopper::CHopperStatus::CDispensedResult</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a38e46b868af79495c1f404a9522b4087" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.nameOfHopper</definition>
+        <argsstring></argsstring>
+        <name>nameOfHopper</name>
+        <briefdescription>
+<para>Numéro du hopper. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" line="31" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a2eac4efe6ef793ea361f0f2c5baf5326" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinsRemaining</definition>
+        <argsstring></argsstring>
+        <name>CoinsRemaining</name>
+        <briefdescription>
+<para>Nombre de pièce restant à payer. </para>        </briefdescription>
+        <detaileddescription>
+<para>remarks&gt;Passe à zéro à la fin de la distribtion quelque soit la raison.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" line="37" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a8266bc3a0c5a4c268d57f5ed83d0882f" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinsPaid</definition>
+        <argsstring></argsstring>
+        <name>CoinsPaid</name>
+        <briefdescription>
+<para>Nombre de pièces distribuées. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" line="42" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a2a472fae256a38b6fa595a8a2047a4c6" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinsUnpaid</definition>
+        <argsstring></argsstring>
+        <name>CoinsUnpaid</name>
+        <briefdescription>
+<para>Nombre de pièces non distribuées </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" line="47" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a575da9fcadfa091789d482ce63a10d6f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.MontantPaid</definition>
+        <argsstring></argsstring>
+        <name>MontantPaid</name>
+        <briefdescription>
+<para>Montant distribué </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" line="52" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a0c4e306c0e2bfd89d578c4de56978f70" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.MontantUnpaid</definition>
+        <argsstring></argsstring>
+        <name>MontantUnpaid</name>
+        <briefdescription>
+<para>Montant non distribué </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" line="57" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a6aae05e36efc56b7879b36cae19836fd" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.CoinToDispense</definition>
+        <argsstring></argsstring>
+        <name>CoinToDispense</name>
+        <briefdescription>
+<para>Nombre de pièces devant être distribuées </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" line="62" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a50cf9d9c803868a3d5df1a5359c4efd4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CHopper.CHopperStatus.CDispensedResult.AmountToDispense</definition>
+        <argsstring></argsstring>
+        <name>AmountToDispense</name>
+        <briefdescription>
+<para>Montant </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" line="67" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe des resultats d&apos;une distribution. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" line="27" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Status.cs" bodystart="26" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a50cf9d9c803868a3d5df1a5359c4efd4" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperStatus::CDispensedResult</scope><name>AmountToDispense</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a8266bc3a0c5a4c268d57f5ed83d0882f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperStatus::CDispensedResult</scope><name>CoinsPaid</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a2eac4efe6ef793ea361f0f2c5baf5326" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperStatus::CDispensedResult</scope><name>CoinsRemaining</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a2a472fae256a38b6fa595a8a2047a4c6" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperStatus::CDispensedResult</scope><name>CoinsUnpaid</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a6aae05e36efc56b7879b36cae19836fd" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperStatus::CDispensedResult</scope><name>CoinToDispense</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a575da9fcadfa091789d482ce63a10d6f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperStatus::CDispensedResult</scope><name>MontantPaid</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a0c4e306c0e2bfd89d578c4de56978f70" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperStatus::CDispensedResult</scope><name>MontantUnpaid</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a38e46b868af79495c1f404a9522b4087" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperStatus::CDispensedResult</scope><name>nameOfHopper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

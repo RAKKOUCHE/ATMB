@@ -61,7 +61,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Les dlls sont occupées.
             /// </summary>
-            DLL_NOT_FREE,
+            DLL_BNR_NOT_FREE,
         }
 
         /// <summary>
@@ -70,14 +70,14 @@ namespace DeviceLibrary
         public class Cerror
         {
             /// <summary>
-            /// Nom du module.
-            /// </summary>
-            public string nameModule;
-
-            /// <summary>
             /// Code de l'error.
             /// </summary>
             public ERRORTYPE error;
+
+            /// <summary>
+            /// Nom du module.
+            /// </summary>
+            public string nameModule;
         }
     }
 }

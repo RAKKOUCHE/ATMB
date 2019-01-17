@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_devices_manager_1_1_c_cash_received" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CDevicesManager::CCashReceived</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1ae2eaaa20b2c7fba9ba04efc6b46c3fb8" prot="public" static="no" mutable="no">
+        <type>List&lt; int &gt;</type>
+        <definition>List&lt;int&gt; DeviceLibrary.CDevicesManager.CCashReceived.listValueIntroduced</definition>
+        <argsstring></argsstring>
+        <name>listValueIntroduced</name>
+        <briefdescription>
+<para>Liste contenant chaque denomination introduite. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.CCashReceived.cs" line="25" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.CCashReceived.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1ae40da3f5b7c74b6b2642f3bb86b8f1e1" compoundref="_c_devices_manager_8_c_cash_received_8cs" startline="35" endline="40">DeviceLibrary.CDevicesManager.CCashReceived.CCashReceived</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1a8916c3682d78dc794f78fd4aabff2288" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CDevicesManager.CCashReceived.amountIntroduced</definition>
+        <argsstring></argsstring>
+        <name>amountIntroduced</name>
+        <briefdescription>
+<para>Montant total introduit dnas la transaction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.CCashReceived.cs" line="30" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.CCashReceived.cs" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1ae40da3f5b7c74b6b2642f3bb86b8f1e1" compoundref="_c_devices_manager_8_c_cash_received_8cs" startline="35" endline="40">DeviceLibrary.CDevicesManager.CCashReceived.CCashReceived</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1ae40da3f5b7c74b6b2642f3bb86b8f1e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.CDevicesManager.CCashReceived.CCashReceived</definition>
+        <argsstring>()</argsstring>
+        <name>CCashReceived</name>
+        <briefdescription>
+<para>Contructeur. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.CCashReceived.cs" line="35" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.CCashReceived.cs" bodystart="35" bodyend="40"/>
+        <references refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1a8916c3682d78dc794f78fd4aabff2288" compoundref="_c_devices_manager_8_c_cash_received_8cs" startline="30">DeviceLibrary.CDevicesManager.CCashReceived.amountIntroduced</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1ae2eaaa20b2c7fba9ba04efc6b46c3fb8" compoundref="_c_devices_manager_8_c_cash_received_8cs" startline="25">DeviceLibrary.CDevicesManager.CCashReceived.listValueIntroduced</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class concernant les montants introduits. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.CCashReceived.cs" line="21" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.CCashReceived.cs" bodystart="20" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1a8916c3682d78dc794f78fd4aabff2288" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager::CCashReceived</scope><name>amountIntroduced</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1ae40da3f5b7c74b6b2642f3bb86b8f1e1" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager::CCashReceived</scope><name>CCashReceived</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1ae2eaaa20b2c7fba9ba04efc6b46c3fb8" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager::CCashReceived</scope><name>listValueIntroduced</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

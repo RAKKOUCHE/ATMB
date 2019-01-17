@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_device_library" kind="namespace">
+    <compoundname>DeviceLibrary</compoundname>
+    <innerclass refid="class_device_library_1_1_c_b_n_r___c_p_i" prot="public">DeviceLibrary::CBNR_CPI</innerclass>
+    <innerclass refid="class_device_library_1_1_ccash_reader" prot="public">DeviceLibrary::CcashReader</innerclass>
+    <innerclass refid="class_device_library_1_1_ccoins_counters" prot="public">DeviceLibrary::CcoinsCounters</innerclass>
+    <innerclass refid="class_device_library_1_1_ccc_talk" prot="public">DeviceLibrary::CccTalk</innerclass>
+    <innerclass refid="class_device_library_1_1_c_coin_validator" prot="public">DeviceLibrary::CCoinValidator</innerclass>
+    <innerclass refid="class_device_library_1_1_c_device" prot="public">DeviceLibrary::CDevice</innerclass>
+    <innerclass refid="class_device_library_1_1_c_devices_manager" prot="public">DeviceLibrary::CDevicesManager</innerclass>
+    <innerclass refid="class_device_library_1_1_c_event" prot="public">DeviceLibrary::CEvent</innerclass>
+    <innerclass refid="class_device_library_1_1_c_hopper" prot="public">DeviceLibrary::CHopper</innerclass>
+    <innerclass refid="class_device_library_1_1_c_memory_storage" prot="public">DeviceLibrary::CMemoryStorage</innerclass>
+    <innerclass refid="class_device_library_1_1_c_pelicano" prot="public">DeviceLibrary::CPelicano</innerclass>
+    <innerclass refid="class_device_library_1_1messages_text" prot="public">DeviceLibrary::messagesText</innerclass>
+    <innerclass refid="class_device_library_1_1_resource1" prot="package">DeviceLibrary::Resource1</innerclass>
+    <innernamespace refid="namespace_device_library_1_1_properties">DeviceLibrary::Properties</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5ee" prot="public" static="no">
+        <name>DefaultDevicesAddress</name>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeabe55b6387170df0ca68f41225268e842" prot="public">
+          <name>Broadcast</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Adresse pour un message sur tous les périphériques </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeac2ca16d048ec66e04bca283eab048ec2" prot="public">
+          <name>Host</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Adresse master </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeae7ca2ac311799e100facb48c3eb68f0c" prot="public">
+          <name>CoinAcceptor</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Adresse par defaut du validateur </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eea62d9ee7c53ac2f13981473d3726fff0d" prot="public">
+          <name>Hopper1</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Adresse par defaut du hopper 1 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eead0dff3c87b9df482bd72fe74540f1cd2" prot="public">
+          <name>Hopper2</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Adresse par defaut du hopper 2 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeaf7e4b0d671d2bf68185cbd1df4efb5de" prot="public">
+          <name>Hopper3</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Adresse par defaut du hopper 3 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeac530ff713fe1452d8af103010292645c" prot="public">
+          <name>Hopper4</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>Adresse par defaut du hopper 4 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eea09319275a0c8433b4519d8ffaccea176" prot="public">
+          <name>Hopper5</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>Adresse par defaut du hopper 5 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eea7314f2bbd8282a0f78819c044d111de3" prot="public">
+          <name>Hopper6</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>Adresse par defaut du hopper 6 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeada60e631fd13097c6e9bdfeedd6f8208" prot="public">
+          <name>Hopper7</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para>Adresse par defaut du hopper 7 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeaf3b7b7b5c3d1f64a2fae629aab6c77f3" prot="public">
+          <name>Hopper8</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para>Adresse par defaut du hopper 8 </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eeadd3eb9957f43759b85cc6d50ea901967" prot="public">
+          <name>BNA</name>
+          <initializer>= 128</initializer>
+          <briefdescription>
+<para>Adresse pour un BNA </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_device_library_1a4ca177654b0e196e5a5f5275fb4ea5eea20b4973bd557458c9cbd72e612a3f307" prot="public">
+          <name>BNR</name>
+          <initializer>= 129</initializer>
+          <briefdescription>
+<para>Adresse pour un BNR </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumération des périphériques et leurs adresses. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Devices.cs" line="13" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Devices.cs" bodystart="12" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CitemsDispensed.cs" line="8" column="1"/>
+  </compounddef>
+</doxygen>

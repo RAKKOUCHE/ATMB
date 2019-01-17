@@ -14,9 +14,9 @@ namespace DeviceLibrary
         public class CInserted
         {
             /// <summary>
-            /// Montant nominal en centimes de la pièce insérée
+            /// Sauvegarde du montant total inséré depuis le début de la transaction.
             /// </summary>
-            public int ValeurCent;
+            public int BackTotalAmount;
 
             /// <summary>
             /// Canal correpsondant à la pièce insérée
@@ -34,9 +34,9 @@ namespace DeviceLibrary
             public int TotalAmount;
 
             /// <summary>
-            /// Sauvegarde du montant total inséré depuis le début de la transaction.
+            /// Montant nominal en centimes de la pièce insérée
             /// </summary>
-            public int BackTotalAmount;
+            public int ValeurCent;
         }
     }
 }

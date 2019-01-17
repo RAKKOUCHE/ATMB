@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_68daad2f88856611294c6c833047fa9f" kind="dir">
+    <compoundname>D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary</compoundname>
+    <innerdir refid="dir_99b3c330c1878980e656563df91662c4">D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/Properties</innerdir>
+    <innerfile refid="_c_b_n_r___c_p_i_8_citems_dispensed_8cs">CBNR_CPI.CitemsDispensed.cs</innerfile>
+    <innerfile refid="_c_b_n_r___c_p_i_8_c_module_position_8cs">CBNR_CPI.CModulePosition.cs</innerfile>
+    <innerfile refid="_c_b_n_r___c_p_i_8_c_result_dispense_8cs">CBNR_CPI.CResultDispense.cs</innerfile>
+    <innerfile refid="_c_b_n_r___c_p_i_8cs">CBNR_CPI.cs</innerfile>
+    <innerfile refid="_c_b_n_r___c_p_i_8_e_r_r_o_r_t_y_p_e_8cs">CBNR_CPI.ERRORTYPE.cs</innerfile>
+    <innerfile refid="_c_b_n_r___c_p_i_8_etat_8cs">CBNR_CPI.Etat.cs</innerfile>
+    <innerfile refid="_ccash_reader_8cs">CcashReader.cs</innerfile>
+    <innerfile refid="_ccash_reader_8_header_8cs">CcashReader.Header.cs</innerfile>
+    <innerfile refid="_ccc_talk_8_ccoins_counters_8cs">CccTalk.CcoinsCounters.cs</innerfile>
+    <innerfile refid="_ccc_talk_8_header_8cs">CccTalk.Header.cs</innerfile>
+    <innerfile refid="_ccc_talk_8_self_test_result_8cs">CccTalk.SelfTestResult.cs</innerfile>
+    <innerfile refid="_c_coin_validator_8_c_canal_8cs">CCoinValidator.CCanal.cs</innerfile>
+    <innerfile refid="_c_coin_validator_8_credit_buffer_8cs">CCoinValidator.CreditBuffer.cs</innerfile>
+    <innerfile refid="_c_coin_validator_8cs">CCoinValidator.cs</innerfile>
+    <innerfile refid="_c_coin_validator_8_c_v_error_codes_8cs">CCoinValidator.CVErrorCodes.cs</innerfile>
+    <innerfile refid="_c_coin_validator_8_etat_8cs">CCoinValidator.Etat.cs</innerfile>
+    <innerfile refid="_c_coin_validator_8_header_8cs">CCoinValidator.Header.cs</innerfile>
+    <innerfile refid="_c_ctalk_8cs">CCtalk.cs</innerfile>
+    <innerfile refid="_c_device_8cs">CDevice.cs</innerfile>
+    <innerfile refid="_c_devices_manager_8_c_cash_received_8cs">CDevicesManager.CCashReceived.cs</innerfile>
+    <innerfile refid="_c_devices_manager_8cs">CDevicesManager.cs</innerfile>
+    <innerfile refid="_c_event_8cs">CEvent.cs</innerfile>
+    <innerfile refid="_c_hopper_8_c_empty_count_8cs">CHopper.CEmptyCount.cs</innerfile>
+    <innerfile refid="_c_hopper_8_c_level_8cs">CHopper.CLevel.cs</innerfile>
+    <innerfile refid="_c_hopper_8cs">CHopper.cs</innerfile>
+    <innerfile refid="_c_hopper_8_error_8cs">CHopper.Error.cs</innerfile>
+    <innerfile refid="_c_hopper_8_etat_8cs">CHopper.Etat.cs</innerfile>
+    <innerfile refid="_c_hopper_8_header_8cs">CHopper.Header.cs</innerfile>
+    <innerfile refid="_c_hopper_8_level_8cs">CHopper.Level.cs</innerfile>
+    <innerfile refid="_c_hopper_8_registre_8cs">CHopper.Registre.cs</innerfile>
+    <innerfile refid="_c_hopper_8_status_8cs">CHopper.Status.cs</innerfile>
+    <innerfile refid="_c_hopper_8_variable_set_8cs">CHopper.VariableSet.cs</innerfile>
+    <innerfile refid="_c_inserted_8cs">CInserted.cs</innerfile>
+    <innerfile refid="_c_memory_storage_8cs">CMemoryStorage.cs</innerfile>
+    <innerfile refid="_c_pelicano_8_cmd_motors_8cs">CPelicano.CmdMotors.cs</innerfile>
+    <innerfile refid="_c_pelicano_8cs">CPelicano.cs</innerfile>
+    <innerfile refid="_c_pelicano_8_header_8cs">CPelicano.Header.cs</innerfile>
+    <innerfile refid="_devices_8cs">Devices.cs</innerfile>
+    <innerfile refid="messages_text_8_designer_8cs">messagesText.Designer.cs</innerfile>
+    <innerfile refid="_resource1_8_designer_8cs">Resource1.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/"/>
+  </compounddef>
+</doxygen>

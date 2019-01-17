@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_coin_validator_8_c_v_error_codes_8cs" kind="file">
+    <compoundname>CCoinValidator.CVErrorCodes.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_c_coin_validator" prot="public">DeviceLibrary::CCoinValidator</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+<para>Fichier contenant la classe CVErrorCodes. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>28 11 2018 </para></simplesect>
+<simplesect kind="version"><para>1.0.0 </para></simplesect>
+<simplesect kind="author"><para>Rachid AKKOUCHE </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal">CCoinValidator<sp/>:<sp/>CcashReader</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="group___erreurs_1ga68c5b73cc3b337502d9f92154d933591" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___erreurs_1ga68c5b73cc3b337502d9f92154d933591" kindref="member">CVErrorCodes</ref><sp/>:<sp/>byte</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aaa9c9eda6c5391fd16db81029c49c6f5" kindref="member">MONNAYEUR_OK</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a4a3172fa5d33d5089aa41cf83c8099f8" kindref="member">REJECTCOIN</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a236caf0a304503bf0fca29ee75e1d863" kindref="member">INHIBITEDCOIN</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ae56f4cf37b6999372dc21bb47e82d73c" kindref="member">MULTIPLEWINDOWS</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a875eb06a96859ac39b2ff14d3a5360de" kindref="member">WAKEUP_TO</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a1de1001e85495d060e5fe77182345937" kindref="member">VALIDATION_TO</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ae8e1da986224d6127b836dee5515b989" kindref="member">CREDITSENSOR_TO</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aad786ab20e40eca4baf577f142271223" kindref="member">SORTEROPTO_TO</ref><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a67eeaa2b6e727735860ab0fa45da5cf6" kindref="member">TOOCLOSECOIN</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a488417ec04b13c6dcf02bdecb8597051" kindref="member">ACCEPTGATENOTREADY</ref><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aa5c66915ba05071d42f5262814f1f154" kindref="member">CREDITSENSORNOTREADY</ref><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aeb24605f73e423b795d431b13e81789d" kindref="member">SORTERNOTREADY</ref><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a5f05f23aa23d4394442a22d01092b185" kindref="member">REJECTCOINNOTCLEARED</ref><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a529f5ada9f1b5031cdb17562a57bf07c" kindref="member">VALIDATORSENSORNOTREADY</ref><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad9dfefcc80c822a24a0ad3380eb36cf2" kindref="member">CREDITSENSORBLOCKED</ref><sp/>=<sp/>14,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad5ffb15a2080554273173e94ab156096" kindref="member">SORTEROPTOBLOCKED</ref><sp/>=<sp/>15,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591afd097e798482607f42e03a4fe28a4040" kindref="member">CREDITSEQERROR</ref><sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad092fef941ebaf843780f10dc910af1c" kindref="member">COINGOINGBACK</ref><sp/>=<sp/>17,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a561dba7292ec10b3dd57fc75609c82d8" kindref="member">COINTOOFAST</ref><sp/>=<sp/>18,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a44c9d0c8f952ac7cd9976e8d9cb0b5ac" kindref="member">COINTOOSLOW</ref><sp/>=<sp/>19,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a8fe88ac7acc89aaabdb1bd870fd7ceb2" kindref="member">COSMECHACTIVED</ref><sp/>=<sp/>20,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591abcdd757e0380f69f13dff8be4d7d247f" kindref="member">DCEOPTO_TO</ref><sp/>=<sp/>21,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a31c99e9aae78a22cd697c80f35779083" kindref="member">DCEOPTONOTSEE</ref><sp/>=<sp/>22,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a6fd6e43dc5f964d3b48ad0c245d9dc50" kindref="member">CREDITSENSORREACHEDEARLY</ref><sp/>=<sp/>23,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aed7cae4a3226e4da365e7c9c5a8d347f" kindref="member">REJECTEDCOIN2</ref><sp/>=<sp/>24,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a21aa9d7cf65b4208ae81a40097ce9d26" kindref="member">REJECTSLUG</ref><sp/>=<sp/>25,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a8823666fd9f278f2700a27f91799b65d" kindref="member">REJECTSENSORBLOCKED</ref><sp/>=<sp/>26,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591acd4f575618900c07705e0f3ed6a72a16" kindref="member">GAMESOVERLOAD</ref><sp/>=<sp/>27,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591acb5a7731b62453102c5cd6211bc6a6f8" kindref="member">MAXCOINMETERPULSESEXCEEDED</ref><sp/>=<sp/>28,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a713b07a2ec4a9014b2fdb72c5d8d8980" kindref="member">ACCEPTGATEOPENNOTCLOSED</ref><sp/>=<sp/>29,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad697f2db067ec6160ac3c98dbd7acbc3" kindref="member">ACCEPTGATECLOSEDNOTOPEN</ref><sp/>=<sp/>30,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a1f2e8ea805df9a9e6a9128576e2f342b" kindref="member">MANIFOLDTIMEOUT</ref><sp/>=<sp/>31,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a30272f8d3111e39e72b1bea11c4a2906" kindref="member">MANIFOLDOPTOBLOCKED</ref><sp/>=<sp/>32,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a833a2d147bee60b116f24d87b3da8b82" kindref="member">MANIFOLDNOTREADY</ref><sp/>=<sp/>33,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a3a1f7e69b7e5e5c269e0fa7e97b0bf0a" kindref="member">SECURITYSTATUSCHANGED</ref><sp/>=<sp/>34,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a9f9cc74325b5bb6e924cd0772df6d6a6" kindref="member">MOTOREXCEPTION</ref><sp/>=<sp/>35,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ab04c310e6eb59f7ae1eb525e552bbe4f" kindref="member">SWALLOWEDCOIN</ref><sp/>=<sp/>36,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ada03008cb56819752dd1fe201c4c1be9" kindref="member">COIN2FAST</ref><sp/>=<sp/>37,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad4f375ed800d463da94afc540bf8d22e" kindref="member">COIN2SLOW</ref><sp/>=<sp/>38,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aa6c8fed14ab5411a4efe88068c4a99d9" kindref="member">COININCORRECTLYSORTED</ref><sp/>=<sp/>39,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591afdbe0522298a7ecd540a24a4d368442a" kindref="member">EXTERNALLIGHTATTACK</ref><sp/>=<sp/>40,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a69b954ad6ad0a788c70a17bc2f280d31" kindref="member">INHIBITEDCOIN_1</ref><sp/>=<sp/>128,</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a07d7f9cdabc4510272dfc11e1bdbf3b7" kindref="member">INHIBITEDCOIN_2</ref><sp/>=<sp/>129,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a0c8fb65b7cf54e6352781e7869fd5b2e" kindref="member">INHIBITEDCOIN_3</ref><sp/>=<sp/>130,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a9931e14f9728388be7cea22a76d96df9" kindref="member">INHIBITEDCOIN_4</ref><sp/>=<sp/>131,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a583bc6ef29caaddcc110fb91d70869e2" kindref="member">INHIBITEDCOIN_5</ref><sp/>=<sp/>132,</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ab9f53cc85987fb6065b91f00ab23b0bb" kindref="member">INHIBITEDCOIN_6</ref><sp/>=<sp/>133,</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a8af6d4f0fcb2fb94e876a61fb37d727b" kindref="member">INHIBITEDCOIN_7</ref><sp/>=<sp/>134,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a3cf9f08f6eae082afd768c3a97e841c8" kindref="member">INHIBITEDCOIN_8</ref><sp/>=<sp/>135,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aab7979ee88a0c918182eb43826f2ebee" kindref="member">INHIBITEDCOIN_9</ref><sp/>=<sp/>136,</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ac609cf3e7418d787d165294c64e7f7f2" kindref="member">INHIBITEDCOIN_10</ref><sp/>=<sp/>137,</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a5b0f85525816fde9150d1954f0f6a7c4" kindref="member">INHIBITEDCOIN_11</ref><sp/>=<sp/>138,</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a587f525dad0c2d05cb8b00d0e2ea41ca" kindref="member">INHIBITEDCOIN_12</ref><sp/>=<sp/>139,</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a2eacff30716ef2759d575926dc60fc85" kindref="member">INHIBITEDCOIN_13</ref><sp/>=<sp/>140,</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a15a3c52c2473d645b8af3e70e3c3941e" kindref="member">INHIBITEDCOIN_14</ref><sp/>=<sp/>141,</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a09c9109be00bc6033478fde72cd77403" kindref="member">INHIBITEDCOIN_15</ref><sp/>=<sp/>142,</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a943bd83bbd39776c12e6e50a34bafb20" kindref="member">INHIBITEDCOIN_16</ref><sp/>=<sp/>143,</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a78ad72ba807b0a50814dd29b3d7ea6bc" kindref="member">INHIBITEDCOIN_17</ref><sp/>=<sp/>144,</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad7108d43a2cb300a36f3cdc179eb6a47" kindref="member">INHIBITEDCOIN_18</ref><sp/>=<sp/>145,</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591afa829333e824a07d4a8ebcca5e1a51cb" kindref="member">INHIBITEDCOIN_19</ref><sp/>=<sp/>146,</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a5f2a72bd8d3110eb145e95b2da42a9c9" kindref="member">INHIBITEDCOIN_20</ref><sp/>=<sp/>147,</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a8447ec5ec7ae09fb62e8c9fae3dcb03f" kindref="member">INHIBITEDCOIN_21</ref><sp/>=<sp/>148,</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a120f40242976f7da2c4375de7e738ae1" kindref="member">INHIBITEDCOIN_22</ref><sp/>=<sp/>149,</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a3e9edbe8264331eee676a0f9e5f40e01" kindref="member">INHIBITEDCOIN_23</ref><sp/>=<sp/>150,</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a1bcc40b7e814ef95f0781079a0fed830" kindref="member">INHIBITEDCOIN_24</ref><sp/>=<sp/>151,</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a83da0b1354428b08469d611ebd7cc209" kindref="member">INHIBITEDCOIN_25</ref><sp/>=<sp/>152,</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a2ee2098b225ed3267340fcb4cf8bef7f" kindref="member">INHIBITEDCOIN_26</ref><sp/>=<sp/>153,</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591afd42c8c1e81adbaae30e5d950d87fc91" kindref="member">INHIBITEDCOIN_27</ref><sp/>=<sp/>154,</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a92bbc06e80c7891c058dd4f82f21cc84" kindref="member">INHIBITEDCOIN_28</ref><sp/>=<sp/>155,</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a847a981b702782737c4d8d68ae43df96" kindref="member">INHIBITEDCOIN_29</ref><sp/>=<sp/>156,</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a9eacc103c55f026c6d4c55d9145dc46c" kindref="member">INHIBITEDCOIN_30</ref><sp/>=<sp/>157,</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a7650c785d588d5d802dc392398b5731a" kindref="member">INHIBITEDCOIN_31</ref><sp/>=<sp/>158,</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a0e534ed5f2068211f3b791d94aada1e2" kindref="member">INHIBITEDCOIN_32</ref><sp/>=<sp/>159,</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a05062f9114d515e6e34b9b781a68e042" kindref="member">DATABLOCKREQUESTED</ref><sp/>=<sp/>253,</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aa0d2119ea2041bc3e038f9f5f6f5f7b1" kindref="member">COINRETURNMECHACTIVATED</ref><sp/>=<sp/>254,</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a9993b5434242a3193a7a92cfe80b28ab" kindref="member">UNSPECIFIEDALARM</ref><sp/>=<sp/>255,</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="405"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CVErrorCodes.cs"/>
+  </compounddef>
+</doxygen>

@@ -54,10 +54,12 @@ D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\fr\AtmbTestDevices.re
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\DeviceLibrary.dll
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\NLog.dll
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\DeviceLibrary.pdb
+D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\DeviceLibrary.xml
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\DeviceLibrary.dll.config
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\NLog.xml
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.csprojAssemblyReference.cache
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.FormMain.resources
+D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.Form2.resources
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.Properties.Resources.resources
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.FormMain.en.resources
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.FormMain.fr.resources
@@ -68,6 +70,4 @@ D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\fr\AtmbTestDevices.re
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.csproj.CopyComplete
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.exe
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.pdb
-D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\DeviceLibrary.xml
 D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\bin\Debug\BnrCtlDotNet40.dll
-D:\Projets\ATMB\SOFT\AtmbDevices\AtmbTestDevices\obj\Debug\AtmbTestDevices.Form2.resources

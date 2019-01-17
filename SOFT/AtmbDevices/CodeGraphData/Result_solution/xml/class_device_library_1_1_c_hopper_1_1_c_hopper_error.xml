@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_hopper_1_1_c_hopper_error" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CHopper::CHopperError</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1a156c6efcbd4e501253ee2a02e31b2c84" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CHopper.CHopperError.nameOfHopper</definition>
+        <argsstring></argsstring>
+        <name>nameOfHopper</name>
+        <briefdescription>
+<para>Numéro du hopper </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" line="92" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1aebf09aca893b91f93b62c431ebdebb18" prot="public" static="no" mutable="no">
+        <type><ref refid="group___erreurs_1gad4b59816effbf70353c1e53e3cdeb5ad" kindref="member">HopperError</ref></type>
+        <definition>HopperError DeviceLibrary.CHopper.CHopperError.Code</definition>
+        <argsstring></argsstring>
+        <name>Code</name>
+        <briefdescription>
+<para>Code d&apos;erreur du hopper </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" line="97" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a26e1f1fb8a30b65d591b53eb6d049acf" compoundref="_c_hopper_8cs" startline="1216" endline="1362">DeviceLibrary.CHopper.Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1a3807ac7aa4c86af85a302c53d4c515de" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DeviceLibrary.CHopper.CHopperError.isHopperCritical</definition>
+        <argsstring></argsstring>
+        <name>isHopperCritical</name>
+        <briefdescription>
+<para>Indique si le hopper est nécessaire pour le fonctionnement du système. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" line="102" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe contenant les informations sur une erreur survenue dans le hopper </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" line="88" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" bodystart="87" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1aebf09aca893b91f93b62c431ebdebb18" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperError</scope><name>Code</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1a3807ac7aa4c86af85a302c53d4c515de" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperError</scope><name>isHopperCritical</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1a156c6efcbd4e501253ee2a02e31b2c84" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperError</scope><name>nameOfHopper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
