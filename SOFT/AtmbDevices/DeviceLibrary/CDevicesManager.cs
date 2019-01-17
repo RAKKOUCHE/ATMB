@@ -686,6 +686,10 @@ namespace DeviceLibrary
             }
         }
 
+        /// <summary>
+        /// Le BNR a distribué des billets.
+        /// </summary>
+        /// <param name="evenment"></param>
         private void OnBNRDispensed(CEvent evenment)
         {
             try
@@ -693,6 +697,23 @@ namespace DeviceLibrary
                 CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
                 {
                     reason = CEvent.Reason.BNRDISPENSE,
+                    donnee = evenment,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception E)
+            {
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+            }
+        }
+
+        private void OnCashBoxRemoved(CEvent evenment)
+        {
+            try
+            {
+                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
+                {
+                    reason = CEvent.Reason.CASHBOXREMOVED,
                     donnee = evenment,
                 };
                 FireEvent(new object(), fireEventArgs);
@@ -851,15 +872,41 @@ namespace DeviceLibrary
         /// </summary>
         public void CashBoxRemoved()
         {
-            CccTalk.counters.totalAmountInCabinet -= CccTalk.counters.totalAmountInCB;
-            CccTalk.counters.totalAmountInCB = 0;
-            foreach(CCoinValidator.CCanal canal in monnayeur.canaux)
+            try
             {
-                canal.AmountCoinInCB = 0;
-                canal.CoinInInCB = 0;
+                CcoinsCounters.CCoinInCB coinInCashBox = new CcoinsCounters.CCoinInCB
+                {
+                    amountTotalInCB = CccTalk.counters.totalAmountInCB
+                };
+                CccTalk.counters.totalAmountInCabinet -= CccTalk.counters.totalAmountInCB;
+                CccTalk.counters.totalAmountInCB = 0;
+                foreach (CCoinValidator.CCanal canal in monnayeur.canaux)
+                {
+                    coinInCashBox.coin[canal.Number - 1] = new CcoinsCounters.CCoinInCB.CCoin
+                    {
+                        coinValue = canal.coinId.ValeurCent,
+                        coinInCB = canal.CoinInInCB,
+                        amountCoinInCB = canal.AmountCoinInCB
+                    };
+                    canal.CoinInInCB = 0;
+                    canal.AmountCoinInCB = 0;
+                }
+                lock (CDevice.eventListLock)
+                {
+                    CDevice.eventsList.Add(new CEvent
+                    {
+                        reason = CEvent.Reason.CASHBOXREMOVED,
+                        nameOfDevice = "CAISSE",
+                        data = coinInCashBox,
+                    });
+                }
+                CccTalk.counters.SaveCounters();
+            }
+            catch (Exception E)
+            {
+                Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
-
         /// <summary>
         /// Tâche principale de la dll
         /// </summary>
@@ -980,6 +1027,11 @@ namespace DeviceLibrary
                             case CEvent.Reason.BNRDISPENSE:
                             {
                                 OnBNRDispensed(CDevice.eventsList[0]);
+                                break;
+                            }
+                            case CEvent.Reason.CASHBOXREMOVED:
+                            {
+                                OnCashBoxRemoved(CDevice.eventsList[0]);
                                 break;
                             }
                             default:

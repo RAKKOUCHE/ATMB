@@ -17,6 +17,61 @@ namespace DeviceLibrary
     [Serializable()]
     public class CcoinsCounters
     {
+
+        /// <summary>
+        /// Class contenant les informations sur les pièces dans la caisse.
+        /// </summary>
+        public class CCoinInCB
+        {
+            /// <summary>
+            /// Class contenant les informationss sur les pièces.
+            /// </summary>
+            public class CCoin
+            {
+
+                /// <summary>
+                /// Nombre de pièces dans la caisse par canal du monnayeur
+                /// </summary>
+                public long coinInCB;
+
+                /// <summary>
+                /// Valeur de la pièces
+                /// </summary>
+                public long coinValue;
+
+                /// <summary>
+                /// Montant des pièces dans la caisse par canal du monnayeur.
+                /// </summary>
+                public long amountCoinInCB;
+
+                /// <summary>
+                /// Constructor
+                /// </summary>
+                public CCoin()
+                {
+                    coinInCB = coinValue = amountCoinInCB = 0;
+                }
+            }
+
+            /// <summary>
+            /// Tableau des informations sur les pièces.
+            /// </summary>
+            public CCoin[] coin;
+            /// <summary>
+            /// Total des pieces dans la caisse
+            /// </summary>
+            public long amountTotalInCB;
+
+            /// <summary>
+            /// Constructeur.
+            /// </summary>
+            public CCoinInCB()
+            {
+                coin = new CCoin[CCoinValidator.numChannel];
+                amountTotalInCB = 0;
+            }
+        }
+
         /// <summary>
         /// Montant total dans la caisse
         /// </summary>

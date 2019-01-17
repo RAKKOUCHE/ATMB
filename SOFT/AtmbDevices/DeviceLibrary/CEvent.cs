@@ -88,6 +88,11 @@ namespace DeviceLibrary
             BNRDISPENSE,
 
             /// <summary>
+            /// La caisse à monnaie a été retirée.
+            /// </summary>
+            CASHBOXREMOVED,
+
+            /// <summary>
             /// La dll est prête.
             /// </summary>
             DLLLREADY,

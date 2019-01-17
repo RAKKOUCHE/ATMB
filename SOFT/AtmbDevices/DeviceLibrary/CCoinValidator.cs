@@ -442,7 +442,7 @@ namespace DeviceLibrary
                         {
                             ++counters.coinInCashBox[creditBuffer.Result[i, 0] - 1];
                             counters.amountCoinInCashBox[creditBuffer.Result[i, 0] - 1] += denominationInserted.ValeurCent;
-                            counters.totalAmountInCB = denominationInserted.ValeurCent;
+                            counters.totalAmountInCB += denominationInserted.ValeurCent;
                         }
                         else
                         {

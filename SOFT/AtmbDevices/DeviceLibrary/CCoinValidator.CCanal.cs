@@ -276,7 +276,7 @@ namespace DeviceLibrary
             {
                 get => counters.coinInCashBox[Number - 1];
                 set => counters.coinInCashBox[Number - 1] = value;
-            } 
+            }
 
             /// <summary>
             /// Montant des pièces de ce canal en caisse.

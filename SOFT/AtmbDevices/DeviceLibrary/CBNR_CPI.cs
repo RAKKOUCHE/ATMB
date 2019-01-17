@@ -874,7 +874,7 @@ namespace DeviceLibrary
             }
             catch (Exception E)
             {
-                CDevicesManager. Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
             }
         }
 

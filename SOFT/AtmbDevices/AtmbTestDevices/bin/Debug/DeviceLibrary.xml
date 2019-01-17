@@ -551,6 +551,51 @@
             Class des compteurs
             </summary>
         </member>
+        <member name="T:DeviceLibrary.CcoinsCounters.CCoinInCB">
+            <summary>
+            Class contenant les informations sur les pièces dans la caisse.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin">
+            <summary>
+            Class contenant les informationss sur les pièces.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.coinInCB">
+            <summary>
+            Nombre de pièces dans la caisse par canal du monnayeur
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.coinValue">
+            <summary>
+            Valeur de la pièces
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.amountCoinInCB">
+            <summary>
+            Montant des pièces dans la caisse par canal du monnayeur.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CcoinsCounters.CCoinInCB.coin">
+            <summary>
+            Tableau des informations sur les pièces.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CcoinsCounters.CCoinInCB.amountTotalInCB">
+            <summary>
+            Total des pieces dans la caisse
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CcoinsCounters.CCoinInCB.#ctor">
+            <summary>
+            Constructeur.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CcoinsCounters.totalAmountInCB">
             <summary>
             Montant total dans la caisse
@@ -1833,6 +1878,11 @@
         <member name="F:DeviceLibrary.CEvent.Reason.BNRDISPENSE">
             <summary>
             Le BNR a distribué des billets.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.CASHBOXREMOVED">
+            <summary>
+            La caisse à monnaie a été retirée.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CEvent.Reason.DLLLREADY">
@@ -4345,6 +4395,12 @@
             Indique que le module est remis à zéro.
             </summary>
             <param name="evenement"></param>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.OnBNRDispensed(DeviceLibrary.CEvent)">
+            <summary>
+            Le BNR a distribué des billets.
+            </summary>
+            <param name="evenment"></param>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.BeginTransaction(System.Int32)">
             <summary>

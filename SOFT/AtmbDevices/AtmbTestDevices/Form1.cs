@@ -367,6 +367,22 @@ namespace AtmbTestDevices
                      };
                     break;
                 }
+                case CEvent.Reason.CASHBOXREMOVED:
+                {
+                    a = () =>
+                      {
+                          tbInfo.AppendText("Retrait de la caisse à monnaie:\r\n\r\n");
+                          CcoinsCounters.CCoinInCB coinInCB = (CcoinsCounters.CCoinInCB)((CEvent)e.donnee).data;
+                          foreach (CcoinsCounters.CCoinInCB.CCoin coin in coinInCB.coin)
+                          {
+                              tbInfo.AppendText($" - {coin.coinInCB}  pièces de {(decimal)coin.coinValue / 100:c2} : {(decimal)coin.amountCoinInCB / 100:c2}\r\n");
+                          }
+                          tbInfo.AppendText(string.Format("\r\nTotal retiré : {0:c2}\r\n", (decimal)coinInCB.amountTotalInCB / 100));
+                          tbInfo.AppendText("\r\nCompteur de la  caisse remis à zéro.\r\n\r\n");
+                          ButtonCounters_Click(sender, e);
+                      };
+                    break;
+                }
                 default:
                 {
                     a = () =>
@@ -687,6 +703,11 @@ namespace AtmbTestDevices
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
             deviceManage.CancelTransaction();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            deviceManage.CashBoxRemoved();
         }
     }
 }
