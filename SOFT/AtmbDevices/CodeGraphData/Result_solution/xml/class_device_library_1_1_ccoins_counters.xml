@@ -16,6 +16,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" line="77" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="384" endline="450">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_ccoins_counters_1a100257fb80add93f33d8cc6dec54400f" prot="public" static="no" mutable="no">
         <type>long</type>
@@ -99,6 +100,7 @@
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" line="107" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" bodystart="107" bodyend="-1"/>
         <referencedby refid="class_device_library_1_1_ccoins_counters_1a21642915e14253235bcd1f48e065d658" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="157" endline="173">DeviceLibrary.CcoinsCounters.CcoinsCounters</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="384" endline="450">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_ccoins_counters_1af660ed03f005088af19e254c486f3c70" prot="public" static="no" mutable="no">
         <type>long[]</type>
@@ -183,6 +185,7 @@
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" line="137" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" bodystart="137" bodyend="-1"/>
         <referencedby refid="class_device_library_1_1_ccoins_counters_1a21642915e14253235bcd1f48e065d658" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="157" endline="173">DeviceLibrary.CcoinsCounters.CcoinsCounters</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="384" endline="450">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_ccoins_counters_1a0b3b1b972743bade9c94aa02d83ca68d" prot="public" static="no" mutable="no">
         <type>long[]</type>
@@ -251,8 +254,8 @@
         <references refid="class_device_library_1_1_ccoins_counters_1a7e5058caf13293a4622949c84f6e46de" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="137">DeviceLibrary.CcoinsCounters.coinsInHopper</references>
         <references refid="class_device_library_1_1_ccoins_counters_1a8e83e083de56931f9827ea2a818a802f" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="147">DeviceLibrary.CcoinsCounters.coinsLoadedInHopper</references>
         <references refid="class_device_library_1_1_ccoins_counters_1ac4511e46f131ca0850740547325aef5b" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="127">DeviceLibrary.CcoinsCounters.coinsOut</references>
-        <references refid="class_device_library_1_1_c_hopper_1a109908437c130d0e5f081f13ab48c98c" compoundref="_c_hopper_8cs" startline="22">DeviceLibrary.CHopper.maxHopper</references>
-        <references refid="class_device_library_1_1_c_coin_validator_1a68f118167bcdf23f194ef02b779d4333" compoundref="_c_coin_validator_8cs" startline="99">DeviceLibrary.CCoinValidator.numChannel</references>
+        <references refid="class_device_library_1_1_c_hopper_1a109908437c130d0e5f081f13ab48c98c" compoundref="_c_hopper_8cs" startline="118">DeviceLibrary.CHopper.maxHopper</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1a68f118167bcdf23f194ef02b779d4333" compoundref="_c_coin_validator_8cs" startline="59">DeviceLibrary.CCoinValidator.numChannel</references>
         <references refid="class_device_library_1_1_ccoins_counters_1a100257fb80add93f33d8cc6dec54400f" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="82">DeviceLibrary.CcoinsCounters.totalAmountCashInCV</references>
         <references refid="class_device_library_1_1_ccoins_counters_1a94ba3ee5333d441ee3b2c3dc64191676" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="87">DeviceLibrary.CcoinsCounters.totalAmountCashOut</references>
         <references refid="class_device_library_1_1_ccoins_counters_1a3053567876536dc9be5e9197857b2442" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="97">DeviceLibrary.CcoinsCounters.totalAmountInCabinet</references>
@@ -269,7 +272,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" line="178" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" bodystart="178" bodyend="182"/>
-        <references refid="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" compoundref="_c_ctalk_8cs" startline="64">DeviceLibrary.CccTalk.countersFile</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" compoundref="_c_ctalk_8cs" startline="50">DeviceLibrary.CccTalk.countersFile</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -104,6 +104,13 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38acb45971c69cf7f27a2b446aa260ba0f8" prot="public">
+          <name>BNREMPTY</name>
+          <briefdescription>
+<para>Un module du bnr a été vidé. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <enumvalue id="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a2333bc4483264edfaa52d998946b2d7a" prot="public">
           <name>CASHBOXREMOVED</name>
           <briefdescription>
@@ -124,22 +131,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="19" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="18" bodyend="99"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="35" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="34" bodyend="120"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_device_library_1_1_c_event_1a22d3312ef4a62257d6d6da4641812352" prot="public" static="no" mutable="no">
-        <type><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" kindref="member">Reason</ref></type>
-        <definition>Reason DeviceLibrary.CEvent.reason</definition>
+      <memberdef kind="variable" id="class_device_library_1_1_c_event_1a0c03eb076bccc1854d9128f712bcf39a" prot="public" static="no" mutable="no">
+        <type>object</type>
+        <definition>object DeviceLibrary.CEvent.data</definition>
         <argsstring></argsstring>
-        <name>reason</name>
+        <name>data</name>
         <briefdescription>
-<para>Raison de l&apos;évenement. </para>        </briefdescription>
+<para>donnée concernant l&apos;évenenement. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>remarks&gt;Dépend du périphérique et de l&apos;évenement.</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="120" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="120" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="19" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form_main_8cs" startline="349" endline="668">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_event_1af86d6bd8d5fad398a9f3db82bb526d06" prot="public" static="no" mutable="no">
         <type>string</type>
@@ -152,34 +160,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="125" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="125" bodyend="-1"/>
-        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="24" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form_main_8cs" startline="349" endline="668">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_event_1a0c03eb076bccc1854d9128f712bcf39a" prot="public" static="no" mutable="no">
-        <type>object</type>
-        <definition>object DeviceLibrary.CEvent.data</definition>
+      <memberdef kind="variable" id="class_device_library_1_1_c_event_1a22d3312ef4a62257d6d6da4641812352" prot="public" static="no" mutable="no">
+        <type><ref refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" kindref="member">Reason</ref></type>
+        <definition>Reason DeviceLibrary.CEvent.reason</definition>
         <argsstring></argsstring>
-        <name>data</name>
+        <name>reason</name>
         <briefdescription>
-<para>donnée concernant l&apos;évenenement. </para>        </briefdescription>
+<para>Raison de l&apos;évenement. </para>        </briefdescription>
         <detaileddescription>
-<para>remarks&gt;Dépend du périphérique et de l&apos;évenement.</para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="131" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="131" bodyend="-1"/>
-        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="29" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Class contenant les informations sur u évenement. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="14" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="13" bodyend="132"/>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" line="14" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CEvent.cs" bodystart="13" bodyend="137"/>
     <listofallmembers>
       <member refid="class_device_library_1_1_c_event_1a0c03eb076bccc1854d9128f712bcf39a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent</scope><name>data</name></member>
       <member refid="class_device_library_1_1_c_event_1af86d6bd8d5fad398a9f3db82bb526d06" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent</scope><name>nameOfDevice</name></member>
-      <member refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent</scope><name>Reason</name></member>
       <member refid="class_device_library_1_1_c_event_1a22d3312ef4a62257d6d6da4641812352" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent</scope><name>reason</name></member>
+      <member refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" prot="public" virt="non-virtual"><scope>DeviceLibrary::CEvent</scope><name>Reason</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

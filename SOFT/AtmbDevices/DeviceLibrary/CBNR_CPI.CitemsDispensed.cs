@@ -29,7 +29,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Nombres de billets de la dénominations distribués
             /// </summary>
-            public int numberBills;
+            public int count;
         }
     }
 }

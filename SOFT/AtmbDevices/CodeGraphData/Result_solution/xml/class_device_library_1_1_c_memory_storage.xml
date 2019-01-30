@@ -43,10 +43,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="19" bodyend="40"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="56" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="55" bodyend="76"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_device_library_1_1_ccc_talk" kindref="compound">CccTalk</ref></type>
+        <definition>readonly CccTalk DeviceLibrary.CMemoryStorage.Owner</definition>
+        <argsstring></argsstring>
+        <name>Owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="16" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a1f469e7acead36a0223f798f5a2d9de9" compoundref="_c_memory_storage_8cs" startline="46" endline="50">DeviceLibrary.CMemoryStorage.CMemoryStorage</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" compoundref="_c_memory_storage_8cs" startline="144" endline="164">DeviceLibrary.CMemoryStorage.GetDataBlock</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="169" endline="188">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" compoundref="_c_memory_storage_8cs" startline="195" endline="217">DeviceLibrary.CMemoryStorage.SetDataBlock</referencedby>
+      </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_memory_storage_1a36ca55ce37eeb9bacea4e7b9321637f4" prot="private" static="no" mutable="no">
         <type><ref refid="class_device_library_1_1_c_memory_storage_1a212a4301a9ee4074c52046fc8b36fb7a" kindref="member">MemoryKeepType</ref></type>
         <definition>MemoryKeepType DeviceLibrary.CMemoryStorage.memoryType</definition>
@@ -58,8 +75,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="45" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="45" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="21" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="169" endline="188">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_memory_storage_1aea371e446f83e6b9f4c91b87572b367c" prot="private" static="no" mutable="no">
         <type>byte</type>
@@ -72,8 +89,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="50" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="50" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="26" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="169" endline="188">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_memory_storage_1ae0f59df95e6ae7ac41d3f652e4255fc6" prot="private" static="no" mutable="no">
         <type>byte</type>
@@ -86,8 +103,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="55" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="55" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="31" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="169" endline="188">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_memory_storage_1acc112449f46f8c40dd1286c65934a475" prot="private" static="no" mutable="no">
         <type>byte</type>
@@ -100,8 +117,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="60" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="60" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="36" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="169" endline="188">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_memory_storage_1afae386c58274790b4f02f98d55a6761a" prot="private" static="no" mutable="no">
         <type>byte</type>
@@ -114,25 +131,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="65" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="65" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" compoundref="_c_memory_storage_8cs" startline="195" endline="217">DeviceLibrary.CMemoryStorage.SetDataBlock</referencedby>
-      </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" prot="private" static="no" mutable="no">
-        <type>readonly <ref refid="class_device_library_1_1_ccc_talk" kindref="compound">CccTalk</ref></type>
-        <definition>readonly CccTalk DeviceLibrary.CMemoryStorage.Owner</definition>
-        <argsstring></argsstring>
-        <name>Owner</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="67" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="67" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1a1f469e7acead36a0223f798f5a2d9de9" compoundref="_c_memory_storage_8cs" startline="72" endline="76">DeviceLibrary.CMemoryStorage.CMemoryStorage</referencedby>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" compoundref="_c_memory_storage_8cs" startline="168" endline="188">DeviceLibrary.CMemoryStorage.GetDataBlock</referencedby>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="41" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="169" endline="188">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
         <referencedby refid="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" compoundref="_c_memory_storage_8cs" startline="195" endline="217">DeviceLibrary.CMemoryStorage.SetDataBlock</referencedby>
       </memberdef>
       </sectiondef>
@@ -149,7 +149,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="106" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="107" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="82" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1_c_memory_storage_1a5149e18293f087e168b57cec9278357b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
         <type>byte</type>
@@ -162,8 +162,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="118" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="119" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" compoundref="_c_memory_storage_8cs" startline="168" endline="188">DeviceLibrary.CMemoryStorage.GetDataBlock</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="94" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="95" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" compoundref="_c_memory_storage_8cs" startline="144" endline="164">DeviceLibrary.CMemoryStorage.GetDataBlock</referencedby>
         <referencedby refid="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" compoundref="_c_memory_storage_8cs" startline="195" endline="217">DeviceLibrary.CMemoryStorage.SetDataBlock</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1_c_memory_storage_1ae098f13e143c3bcc40d3c68ee7d93297" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="130" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="131" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="106" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1_c_memory_storage_1aad3f07ff5ba905a568178e1418adbccf" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
         <type>byte</type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="142" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="143" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="118" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="119" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1_c_memory_storage_1a4a4f80a523648f2987095bd16740816f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
         <type>byte</type>
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="154" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="155" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="130" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="131" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -222,32 +222,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="72" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="72" bodyend="76"/>
-        <references refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" compoundref="_c_memory_storage_8cs" startline="67">DeviceLibrary.CMemoryStorage.Owner</references>
-      </memberdef>
-      <memberdef kind="function" id="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</definition>
-        <argsstring>()</argsstring>
-        <name>GetDataStorageAvailability</name>
-        <briefdescription>
-<para>Lit les informations sur la gestion de la mémoire de sauvegarde </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="81" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="81" bodyend="100"/>
-        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
-        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1a36ca55ce37eeb9bacea4e7b9321637f4" compoundref="_c_memory_storage_8cs" startline="45">DeviceLibrary.CMemoryStorage.memoryType</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" compoundref="_c_memory_storage_8cs" startline="67">DeviceLibrary.CMemoryStorage.Owner</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1aea371e446f83e6b9f4c91b87572b367c" compoundref="_c_memory_storage_8cs" startline="50">DeviceLibrary.CMemoryStorage.readBlocks</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1ae0f59df95e6ae7ac41d3f652e4255fc6" compoundref="_c_memory_storage_8cs" startline="55">DeviceLibrary.CMemoryStorage.readBytesPerBlock</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1acc112449f46f8c40dd1286c65934a475" compoundref="_c_memory_storage_8cs" startline="60">DeviceLibrary.CMemoryStorage.writeBlocks</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1afae386c58274790b4f02f98d55a6761a" compoundref="_c_memory_storage_8cs" startline="65">DeviceLibrary.CMemoryStorage.writeBytesPerBlock</references>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1a1f469e7acead36a0223f798f5a2d9de9" compoundref="_c_memory_storage_8cs" startline="72" endline="76">DeviceLibrary.CMemoryStorage.CMemoryStorage</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="46" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="46" bodyend="50"/>
+        <references refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="169" endline="188">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" compoundref="_c_memory_storage_8cs" startline="16">DeviceLibrary.CMemoryStorage.Owner</references>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -283,12 +260,35 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="168" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="168" bodyend="188"/>
-        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="144" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="144" bodyend="164"/>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="198">DeviceLibrary.CccTalk.DeviceAddress</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" compoundref="_c_memory_storage_8cs" startline="67">DeviceLibrary.CMemoryStorage.Owner</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1a5149e18293f087e168b57cec9278357b" compoundref="_c_memory_storage_8cs" startline="119">DeviceLibrary.CMemoryStorage.ReadBlocks</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" compoundref="_c_memory_storage_8cs" startline="16">DeviceLibrary.CMemoryStorage.Owner</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1a5149e18293f087e168b57cec9278357b" compoundref="_c_memory_storage_8cs" startline="95">DeviceLibrary.CMemoryStorage.ReadBlocks</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</definition>
+        <argsstring>()</argsstring>
+        <name>GetDataStorageAvailability</name>
+        <briefdescription>
+<para>Lit les informations sur la gestion de la mémoire de sauvegarde </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="169" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="169" bodyend="188"/>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="198">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1a36ca55ce37eeb9bacea4e7b9321637f4" compoundref="_c_memory_storage_8cs" startline="21">DeviceLibrary.CMemoryStorage.memoryType</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" compoundref="_c_memory_storage_8cs" startline="16">DeviceLibrary.CMemoryStorage.Owner</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1aea371e446f83e6b9f4c91b87572b367c" compoundref="_c_memory_storage_8cs" startline="26">DeviceLibrary.CMemoryStorage.readBlocks</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1ae0f59df95e6ae7ac41d3f652e4255fc6" compoundref="_c_memory_storage_8cs" startline="31">DeviceLibrary.CMemoryStorage.readBytesPerBlock</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1acc112449f46f8c40dd1286c65934a475" compoundref="_c_memory_storage_8cs" startline="36">DeviceLibrary.CMemoryStorage.writeBlocks</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1afae386c58274790b4f02f98d55a6761a" compoundref="_c_memory_storage_8cs" startline="41">DeviceLibrary.CMemoryStorage.writeBytesPerBlock</references>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a1f469e7acead36a0223f798f5a2d9de9" compoundref="_c_memory_storage_8cs" startline="46" endline="50">DeviceLibrary.CMemoryStorage.CMemoryStorage</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -325,12 +325,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" line="195" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CMemoryStorage.cs" bodystart="195" bodyend="217"/>
-        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="198">DeviceLibrary.CccTalk.DeviceAddress</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" compoundref="_c_memory_storage_8cs" startline="67">DeviceLibrary.CMemoryStorage.Owner</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1a5149e18293f087e168b57cec9278357b" compoundref="_c_memory_storage_8cs" startline="119">DeviceLibrary.CMemoryStorage.ReadBlocks</references>
-        <references refid="class_device_library_1_1_c_memory_storage_1afae386c58274790b4f02f98d55a6761a" compoundref="_c_memory_storage_8cs" startline="65">DeviceLibrary.CMemoryStorage.writeBytesPerBlock</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" compoundref="_c_memory_storage_8cs" startline="16">DeviceLibrary.CMemoryStorage.Owner</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1a5149e18293f087e168b57cec9278357b" compoundref="_c_memory_storage_8cs" startline="95">DeviceLibrary.CMemoryStorage.ReadBlocks</references>
+        <references refid="class_device_library_1_1_c_memory_storage_1afae386c58274790b4f02f98d55a6761a" compoundref="_c_memory_storage_8cs" startline="41">DeviceLibrary.CMemoryStorage.writeBytesPerBlock</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -338,43 +338,43 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="208">
-        <label>DeviceLibrary.CDevice.CInserted</label>
-        <link refid="class_device_library_1_1_c_device_1_1_c_inserted"/>
-      </node>
-      <node id="205">
+      <node id="207">
         <label>DeviceLibrary.CccTalk</label>
         <link refid="class_device_library_1_1_ccc_talk"/>
-        <childnode refid="206" relation="public-inheritance">
+        <childnode refid="208" relation="public-inheritance">
         </childnode>
-        <childnode refid="206" relation="public-inheritance">
+        <childnode refid="208" relation="public-inheritance">
         </childnode>
-        <childnode refid="206" relation="public-inheritance">
+        <childnode refid="208" relation="public-inheritance">
         </childnode>
-        <childnode refid="209" relation="usage">
+        <childnode refid="211" relation="usage">
           <edgelabel>counters</edgelabel>
         </childnode>
       </node>
-      <node id="206">
+      <node id="208">
         <label>CDevice</label>
         <link refid="class_device_library_1_1_c_device"/>
-        <childnode refid="207" relation="public-inheritance">
+        <childnode refid="209" relation="public-inheritance">
         </childnode>
-        <childnode refid="208" relation="usage">
+        <childnode refid="210" relation="usage">
           <edgelabel>denominationInserted</edgelabel>
         </childnode>
       </node>
-      <node id="207">
+      <node id="209">
         <label>IDisposable</label>
       </node>
-      <node id="209">
+      <node id="211">
         <label>DeviceLibrary.CcoinsCounters</label>
         <link refid="class_device_library_1_1_ccoins_counters"/>
       </node>
-      <node id="204">
+      <node id="210">
+        <label>DeviceLibrary.CInserted</label>
+        <link refid="class_device_library_1_1_c_inserted"/>
+      </node>
+      <node id="206">
         <label>DeviceLibrary.CMemoryStorage</label>
         <link refid="class_device_library_1_1_c_memory_storage"/>
-        <childnode refid="205" relation="usage">
+        <childnode refid="207" relation="usage">
           <edgelabel>Owner</edgelabel>
         </childnode>
       </node>
@@ -385,18 +385,18 @@
       <member refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" prot="public" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>GetDataBlock</name></member>
       <member refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" prot="public" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>GetDataStorageAvailability</name></member>
       <member refid="class_device_library_1_1_c_memory_storage_1a212a4301a9ee4074c52046fc8b36fb7a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>MemoryKeepType</name></member>
-      <member refid="class_device_library_1_1_c_memory_storage_1a36ca55ce37eeb9bacea4e7b9321637f4" prot="private" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>memoryType</name></member>
       <member refid="class_device_library_1_1_c_memory_storage_1a2c8371a87602ea9abac9191c69ba0c8e" prot="public" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>MemoryType</name></member>
+      <member refid="class_device_library_1_1_c_memory_storage_1a36ca55ce37eeb9bacea4e7b9321637f4" prot="private" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>memoryType</name></member>
       <member refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" prot="private" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>Owner</name></member>
-      <member refid="class_device_library_1_1_c_memory_storage_1a5149e18293f087e168b57cec9278357b" prot="public" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>ReadBlocks</name></member>
       <member refid="class_device_library_1_1_c_memory_storage_1aea371e446f83e6b9f4c91b87572b367c" prot="private" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>readBlocks</name></member>
-      <member refid="class_device_library_1_1_c_memory_storage_1ae0f59df95e6ae7ac41d3f652e4255fc6" prot="private" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>readBytesPerBlock</name></member>
+      <member refid="class_device_library_1_1_c_memory_storage_1a5149e18293f087e168b57cec9278357b" prot="public" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>ReadBlocks</name></member>
       <member refid="class_device_library_1_1_c_memory_storage_1ae098f13e143c3bcc40d3c68ee7d93297" prot="public" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>ReadBytesPerBlock</name></member>
+      <member refid="class_device_library_1_1_c_memory_storage_1ae0f59df95e6ae7ac41d3f652e4255fc6" prot="private" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>readBytesPerBlock</name></member>
       <member refid="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" prot="public" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>SetDataBlock</name></member>
       <member refid="class_device_library_1_1_c_memory_storage_1aad3f07ff5ba905a568178e1418adbccf" prot="public" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>WriteBlocks</name></member>
       <member refid="class_device_library_1_1_c_memory_storage_1acc112449f46f8c40dd1286c65934a475" prot="private" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>writeBlocks</name></member>
-      <member refid="class_device_library_1_1_c_memory_storage_1afae386c58274790b4f02f98d55a6761a" prot="private" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>writeBytesPerBlock</name></member>
       <member refid="class_device_library_1_1_c_memory_storage_1a4a4f80a523648f2987095bd16740816f" prot="public" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>WriteBytesPerBlock</name></member>
+      <member refid="class_device_library_1_1_c_memory_storage_1afae386c58274790b4f02f98d55a6761a" prot="private" virt="non-virtual"><scope>DeviceLibrary::CMemoryStorage</scope><name>writeBytesPerBlock</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

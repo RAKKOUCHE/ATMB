@@ -37,6 +37,7 @@
     <innerfile refid="_c_hopper_8_variable_set_8cs">CHopper.VariableSet.cs</innerfile>
     <innerfile refid="_c_inserted_8cs">CInserted.cs</innerfile>
     <innerfile refid="_c_memory_storage_8cs">CMemoryStorage.cs</innerfile>
+    <innerfile refid="_c_module_emptied_8cs">CModuleEmptied.cs</innerfile>
     <innerfile refid="_c_pelicano_8_cmd_motors_8cs">CPelicano.CmdMotors.cs</innerfile>
     <innerfile refid="_c_pelicano_8cs">CPelicano.cs</innerfile>
     <innerfile refid="_c_pelicano_8_header_8cs">CPelicano.Header.cs</innerfile>

@@ -2,8 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
   <compounddef id="_c_inserted_8cs" kind="file">
     <compoundname>CInserted.cs</compoundname>
-    <innerclass refid="class_device_library_1_1_c_device" prot="public">DeviceLibrary::CDevice</innerclass>
-    <innerclass refid="class_device_library_1_1_c_device_1_1_c_inserted" prot="public">DeviceLibrary::CDevice::CInserted</innerclass>
+    <innerclass refid="class_device_library_1_1_c_inserted" prot="public">DeviceLibrary::CInserted</innerclass>
     <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
     <briefdescription>
 <para>Fichier contenant la classe CInserted. </para>    </briefdescription>
@@ -16,22 +15,19 @@
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
 <codeline lineno="8"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">abstract</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal">CDevice</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="14" refid="class_device_library_1_1_c_device_1_1_c_inserted" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_device_library_1_1_c_device_1_1_c_inserted" kindref="compound">CInserted</ref></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="19" refid="class_device_library_1_1_c_device_1_1_c_inserted_1ab9c8961b8a31a68caeb666da2763b167" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_device_1_1_c_inserted_1ab9c8961b8a31a68caeb666da2763b167" kindref="member">ValeurCent</ref>;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="class_device_library_1_1_c_device_1_1_c_inserted_1a16ccb19a7c0e506b326db99edcb09e01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>byte<sp/><ref refid="class_device_library_1_1_c_device_1_1_c_inserted_1a16ccb19a7c0e506b326db99edcb09e01" kindref="member">CVChannel</ref>;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="class_device_library_1_1_c_device_1_1_c_inserted_1a66163183a1fdfe890af777cb3560b288" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>byte<sp/><ref refid="class_device_library_1_1_c_device_1_1_c_inserted_1a66163183a1fdfe890af777cb3560b288" kindref="member">CVPath</ref>;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="class_device_library_1_1_c_device_1_1_c_inserted_1af8489940b66b948f63c38c86051416be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_device_1_1_c_inserted_1af8489940b66b948f63c38c86051416be" kindref="member">TotalAmount</ref>;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="class_device_library_1_1_c_device_1_1_c_inserted_1abf2e8e8167ae9f39731fc7d74f48db48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_device_1_1_c_inserted_1abf2e8e8167ae9f39731fc7d74f48db48" kindref="member">BackTotalAmount</ref>;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12" refid="class_device_library_1_1_c_inserted" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_device_library_1_1_c_inserted" kindref="compound">CInserted</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="class_device_library_1_1_c_inserted_1acd277c0e1642386ea19a67d2cff191be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_inserted_1acd277c0e1642386ea19a67d2cff191be" kindref="member">BackTotalAmount</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_device_library_1_1_c_inserted_1aac27d56560142f96e77ea41541aa5c7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>byte<sp/><ref refid="class_device_library_1_1_c_inserted_1aac27d56560142f96e77ea41541aa5c7d" kindref="member">CVChannel</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_device_library_1_1_c_inserted_1ac027d9fef6fd0abf18eea6ea77088a2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>byte<sp/><ref refid="class_device_library_1_1_c_inserted_1ac027d9fef6fd0abf18eea6ea77088a2a" kindref="member">CVPath</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_device_library_1_1_c_inserted_1a1e77007006714234054467ef0f205f28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_inserted_1a1e77007006714234054467ef0f205f28" kindref="member">TotalAmount</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_device_library_1_1_c_inserted_1ae61683e54952a86faee96a9287522ee4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_inserted_1ae61683e54952a86faee96a9287522ee4" kindref="member">ValeurCent</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs"/>
   </compounddef>

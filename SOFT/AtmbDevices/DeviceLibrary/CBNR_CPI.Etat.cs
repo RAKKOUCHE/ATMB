@@ -49,15 +49,15 @@ namespace DeviceLibrary
             /// </summary>
             STATE_GETSTATUS,
 
-            /// <summary>
-            /// Etat pour désactiver le périphérique.
-            /// </summary>
-            STATE_DISABLE,
+            ///// <summary>
+            ///// Etat pour désactiver le périphérique.
+            ///// </summary>
+            //STATE_DISABLE,
 
-            /// <summary>
-            /// Etat pour activer le périphérique.
-            /// </summary>
-            STATE_ENABLE,
+            ///// <summary>
+            ///// Etat pour activer le périphérique.
+            ///// </summary>
+            //STATE_ENABLE,
 
             /// <summary>
             /// Etat pour distribuer un montant.
@@ -83,6 +83,41 @@ namespace DeviceLibrary
             /// Reprend les billets
             /// </summary>
             STATE_RETRACT,
+
+            /// <summary>
+            /// Fixe le compteur du loader.
+            /// </summary>
+            STATE_UPDATE_LOADER_METER,
+
+            /// <summary>
+            /// Recharge des recyclers.
+            /// </summary>
+            STATE_RELOAD_RECYCLER,
+
+            /// <summary>
+            /// Démarre une transaction.
+            /// </summary>
+            STATE_CASHIN_START,
+
+            /// <summary>
+            /// Prépare le BNR à recevoir des billets.
+            /// </summary>
+            STATE_CAHSIN,
+
+            /// <summary>
+            /// Annule l'opération en cours.
+            /// </summary>
+            STATE_CANCEL,
+
+            /// <summary>
+            /// Cloture la transaction
+            /// </summary>
+            STATE_CASHIN_END,
+
+            /// <summary>
+            /// Transfert du contenu des modules en caisse.
+            /// </summary>
+            STATE_EMPTY,
 
             /// <summary>
             /// BNR en attente.

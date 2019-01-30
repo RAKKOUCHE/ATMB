@@ -3,14 +3,13 @@
   <compounddef id="class_device_library_1_1_c_devices_manager" kind="class" prot="public">
     <compoundname>DeviceLibrary::CDevicesManager</compoundname>
     <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
-    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
     <innerclass refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received" prot="public">DeviceLibrary::CDevicesManager::CCashReceived</innerclass>
       <sectiondef kind="private-static-attrib">
-      <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1ade92059fe5a981518bc569c433c05385" prot="private" static="yes" mutable="no">
+      <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1aee0669d5624a6a0fb0f638a1a9941e2b" prot="private" static="yes" mutable="no">
         <type>readonly XmlDocument</type>
-        <definition>readonly XmlDocument DeviceLibrary.CDevicesManager.parametersFile</definition>
+        <definition>readonly XmlDocument DeviceLibrary.CDevicesManager.ParametersFile</definition>
         <argsstring></argsstring>
-        <name>parametersFile</name>
+        <name>ParametersFile</name>
         <initializer>= new XmlDocument()</initializer>
         <briefdescription>
 <para>Instance de la classe XmlDocument permettant la lecture des fichiers XML. </para>        </briefdescription>
@@ -34,13 +33,15 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="33" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="33" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="903" endline="940">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af18337108d515626ddb56bf1789a3d2e" compoundref="_c_devices_manager_8cs" startline="945" endline="952">DeviceLibrary.CDevicesManager.BNRBillRetract</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" compoundref="_c_devices_manager_8cs" startline="957" endline="965">DeviceLibrary.CDevicesManager.BNRBillRollBack</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" compoundref="_c_devices_manager_8cs" startline="979" endline="989">DeviceLibrary.CDevicesManager.CancelTransaction</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af18337108d515626ddb56bf1789a3d2e" compoundref="_c_devices_manager_8cs" startline="1006" endline="1021">DeviceLibrary.CDevicesManager.BNRBillRetract</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" compoundref="_c_devices_manager_8cs" startline="1026" endline="1042">DeviceLibrary.CDevicesManager.BNRBillRollBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a55a2595eaddb2907cea1ba69a178b660" compoundref="_c_devices_manager_8cs" startline="1097" endline="1111">DeviceLibrary.CDevicesManager.BNRReloadRecycler</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ab3b1bd2212d8ab4b33e0ced4d4419c7c" compoundref="_c_devices_manager_8cs" startline="1117" endline="1132">DeviceLibrary.CDevicesManager.BNRSetLoaderMeter</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9f7e3b6b7033452c066bcbe896607c80" compoundref="_c_devices_manager_8cs" startline="1137" endline="1151">DeviceLibrary.CDevicesManager.BNRTransfertLoaderRecyclersInCB</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" compoundref="_c_devices_manager_8cs" startline="1156" endline="1166">DeviceLibrary.CDevicesManager.CancelTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="150" endline="236">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1ab69ead1f91d966ffac4421bab04d7852" prot="private" static="no" mutable="no">
         <type>readonly Thread</type>
@@ -54,7 +55,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="38" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="38" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-static-attrib">
@@ -70,7 +71,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="43" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="43" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1a008701f9d063afbd16fae6db1a3992c2" prot="package" static="yes" mutable="no">
         <type>int</type>
@@ -84,12 +85,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="48" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="48" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="903" endline="940">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" compoundref="_c_devices_manager_8cs" startline="957" endline="965">DeviceLibrary.CDevicesManager.BNRBillRollBack</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" compoundref="_c_devices_manager_8cs" startline="979" endline="989">DeviceLibrary.CDevicesManager.CancelTransaction</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="963" endline="1001">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" compoundref="_c_devices_manager_8cs" startline="1026" endline="1042">DeviceLibrary.CDevicesManager.BNRBillRollBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" compoundref="_c_devices_manager_8cs" startline="1156" endline="1166">DeviceLibrary.CDevicesManager.CancelTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="150" endline="236">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
         <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-attrib">
@@ -105,8 +106,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="53" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="53" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="903" endline="940">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a778ba9ee3fd8972814be5673fdfb60db" compoundref="_c_devices_manager_8cs" startline="348" endline="363">DeviceLibrary.CDevicesManager.OnCashClose</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="963" endline="1001">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a778ba9ee3fd8972814be5673fdfb60db" compoundref="_c_devices_manager_8cs" startline="362" endline="377">DeviceLibrary.CDevicesManager.OnCashClose</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1a10652b4e74c018888e46d77b44cf1ce9" prot="package" static="no" mutable="no">
         <type>string</type>
@@ -120,7 +122,52 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="58" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="58" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1a91ff62e15338b5b14249615bb40dd341" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CDevicesManager.alternateDevise</definition>
+        <argsstring></argsstring>
+        <name>alternateDevise</name>
+        <briefdescription>
+<para>Seconde devise acceptée. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="63" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1aca682fa0e485eceb4925b748b513134a" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CDevicesManager.mainDevise</definition>
+        <argsstring></argsstring>
+        <name>mainDevise</name>
+        <briefdescription>
+<para>Devise principale </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="68" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="901" endline="1380">DeviceLibrary.CBNR_CPI.Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1a62197fd9306501b9dd819bd18a86fccd" prot="public" static="yes" mutable="no">
+        <type>decimal</type>
+        <definition>decimal DeviceLibrary.CDevicesManager.tauxDeChange</definition>
+        <argsstring></argsstring>
+        <name>tauxDeChange</name>
+        <briefdescription>
+<para>Taux de conversion à appliquer pour la devise secondaire. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="73" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="73" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -135,15 +182,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="63" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="63" bodyend="-1"/>
-        <referencedby refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" compoundref="_form1_8cs" startline="413" endline="444">AtmbTestDevices.FormMain.ButtonCounters_Click</referencedby>
-        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a30543b292b44a148a0f2722e5638188c" compoundref="_form1_8cs" startline="480" endline="518">AtmbTestDevices.FormMain.ButtonHoppers_Click</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a34a6ca3de6a47af6f78771ff05206e87" compoundref="_c_devices_manager_8cs" startline="1129" endline="1185">DeviceLibrary.CDevicesManager.Dispose</referencedby>
-        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form1_8cs" startline="100" endline="395">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1ade39ebe65c6d9b8ba4a7935c89a0f32f" compoundref="_c_devices_manager_8cs" startline="556" endline="636">DeviceLibrary.CDevicesManager.ReadParamHopper</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a930edf39df8f01578f9a4d3d55ebf1bc" compoundref="_c_devices_manager_8cs" startline="1073" endline="1080">DeviceLibrary.CDevicesManager.ResetCounters</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="78" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="78" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" compoundref="_form_main_8cs" startline="91" endline="122">AtmbTestDevices.FormMain.ButtonCounters_Click</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a30543b292b44a148a0f2722e5638188c" compoundref="_form_main_8cs" startline="159" endline="205">AtmbTestDevices.FormMain.ButtonHoppers_Click</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa3edfeb4721c3d33e5c1ca708bc9d118" compoundref="_c_devices_manager_8cs" startline="1171" endline="1178">DeviceLibrary.CDevicesManager.ccTalkCountersResets</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="150" endline="236">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af3eccd449132a0e6561c07685958e542" compoundref="_c_devices_manager_8cs" startline="1250" endline="1306">DeviceLibrary.CDevicesManager.Dispose</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form_main_8cs" startline="349" endline="668">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ade39ebe65c6d9b8ba4a7935c89a0f32f" compoundref="_c_devices_manager_8cs" startline="592" endline="672">DeviceLibrary.CDevicesManager.ReadParamHopper</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" prot="public" static="no" mutable="no">
         <type><ref refid="class_device_library_1_1_c_coin_validator" kindref="compound">CCoinValidator</ref></type>
@@ -156,12 +203,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="68" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="68" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="903" endline="940">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
-        <referencedby refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" compoundref="_form1_8cs" startline="413" endline="444">AtmbTestDevices.FormMain.ButtonCounters_Click</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1acb9b7f647f7ca372051492560ea7fc85" compoundref="_c_devices_manager_8cs" startline="994" endline="1030">DeviceLibrary.CDevicesManager.CashBoxRemoved</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="83" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="83" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="963" endline="1001">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1abfbac0c12306e6b790c6dc832a936234" compoundref="_c_devices_manager_8cs" startline="1047" endline="1083">DeviceLibrary.CDevicesManager.BNRCashBoxRemoved</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" compoundref="_form_main_8cs" startline="91" endline="122">AtmbTestDevices.FormMain.ButtonCounters_Click</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="event">
@@ -176,23 +223,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="80" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="80" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1abcfed3749aff233df6c41849c8192850" compoundref="_c_devices_manager_8cs" startline="228" endline="243">DeviceLibrary.CDevicesManager.OnBNRDispensed</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a761cfb095d56e00ec6f89f6374591cef" compoundref="_c_devices_manager_8cs" startline="248" endline="263">DeviceLibrary.CDevicesManager.OnBNRErreur</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6a8eeadddea0c11a5b9f1ac3b56be09e" compoundref="_c_devices_manager_8cs" startline="269" endline="284">DeviceLibrary.CDevicesManager.OnbnrModuleReinsere</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad598d4a8eaf78fa130df9a8edbf7515f" compoundref="_c_devices_manager_8cs" startline="290" endline="305">DeviceLibrary.CDevicesManager.OnBNRResetModule</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad6899efe8ae1e945a5c4ea6791267a57" compoundref="_c_devices_manager_8cs" startline="311" endline="326">DeviceLibrary.CDevicesManager.OnBRNModuleRemoved</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a4b48353ed25192d2a4ee8c7fe93ed6ea" compoundref="_c_devices_manager_8cs" startline="328" endline="343">DeviceLibrary.CDevicesManager.OnCashBoxRemoved</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a778ba9ee3fd8972814be5673fdfb60db" compoundref="_c_devices_manager_8cs" startline="348" endline="363">DeviceLibrary.CDevicesManager.OnCashClose</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a80a442b9fa68ed9791adbc7b13c8cd98" compoundref="_c_devices_manager_8cs" startline="368" endline="383">DeviceLibrary.CDevicesManager.OnCashOpen</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a0a113fdda969a3d94e09b5f1ac8fbf54" compoundref="_c_devices_manager_8cs" startline="389" endline="404">DeviceLibrary.CDevicesManager.OnCVError</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a65f85225203f76bb9bd5db0e6f53e282" compoundref="_c_devices_manager_8cs" startline="409" endline="425">DeviceLibrary.CDevicesManager.OnDllReady</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa9bec486871cefa0e177121ec0c8cd13" compoundref="_c_devices_manager_8cs" startline="431" endline="446">DeviceLibrary.CDevicesManager.OnHopperDispensed</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a07945482a7a21471f60672c01b8a19a7" compoundref="_c_devices_manager_8cs" startline="452" endline="467">DeviceLibrary.CDevicesManager.OnHopperEmptied</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8c6efc3c0f6e6664990edf0c92f6f237" compoundref="_c_devices_manager_8cs" startline="473" endline="488">DeviceLibrary.CDevicesManager.OnHopperError</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa18aded58c64b857ef55e6d393d481ff" compoundref="_c_devices_manager_8cs" startline="494" endline="509">DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa1cc70b8bdfacf1f80e54fa230fd5477" compoundref="_c_devices_manager_8cs" startline="515" endline="530">DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad66242c0d494fbb018d3da25334bfcb7" compoundref="_c_devices_manager_8cs" startline="535" endline="551">DeviceLibrary.CDevicesManager.OnMoneyReceived</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="95" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="95" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1abcfed3749aff233df6c41849c8192850" compoundref="_c_devices_manager_8cs" startline="242" endline="257">DeviceLibrary.CDevicesManager.OnBNRDispensed</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a761cfb095d56e00ec6f89f6374591cef" compoundref="_c_devices_manager_8cs" startline="262" endline="277">DeviceLibrary.CDevicesManager.OnBNRErreur</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6a8eeadddea0c11a5b9f1ac3b56be09e" compoundref="_c_devices_manager_8cs" startline="283" endline="298">DeviceLibrary.CDevicesManager.OnbnrModuleReinsere</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad598d4a8eaf78fa130df9a8edbf7515f" compoundref="_c_devices_manager_8cs" startline="304" endline="319">DeviceLibrary.CDevicesManager.OnBNRResetModule</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad6899efe8ae1e945a5c4ea6791267a57" compoundref="_c_devices_manager_8cs" startline="325" endline="340">DeviceLibrary.CDevicesManager.OnBRNModuleRemoved</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a4b48353ed25192d2a4ee8c7fe93ed6ea" compoundref="_c_devices_manager_8cs" startline="342" endline="357">DeviceLibrary.CDevicesManager.OnCashBoxRemoved</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a778ba9ee3fd8972814be5673fdfb60db" compoundref="_c_devices_manager_8cs" startline="362" endline="377">DeviceLibrary.CDevicesManager.OnCashClose</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a80a442b9fa68ed9791adbc7b13c8cd98" compoundref="_c_devices_manager_8cs" startline="382" endline="397">DeviceLibrary.CDevicesManager.OnCashOpen</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a0a113fdda969a3d94e09b5f1ac8fbf54" compoundref="_c_devices_manager_8cs" startline="403" endline="418">DeviceLibrary.CDevicesManager.OnCVError</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a65f85225203f76bb9bd5db0e6f53e282" compoundref="_c_devices_manager_8cs" startline="423" endline="439">DeviceLibrary.CDevicesManager.OnDllReady</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa9bec486871cefa0e177121ec0c8cd13" compoundref="_c_devices_manager_8cs" startline="445" endline="460">DeviceLibrary.CDevicesManager.OnHopperDispensed</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a07945482a7a21471f60672c01b8a19a7" compoundref="_c_devices_manager_8cs" startline="466" endline="481">DeviceLibrary.CDevicesManager.OnHopperEmptied</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8c6efc3c0f6e6664990edf0c92f6f237" compoundref="_c_devices_manager_8cs" startline="487" endline="502">DeviceLibrary.CDevicesManager.OnHopperError</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa18aded58c64b857ef55e6d393d481ff" compoundref="_c_devices_manager_8cs" startline="508" endline="523">DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa1cc70b8bdfacf1f80e54fa230fd5477" compoundref="_c_devices_manager_8cs" startline="529" endline="544">DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a7cc31e2791cb13cd6abbe19316913e4d" compoundref="_c_devices_manager_8cs" startline="550" endline="566">DeviceLibrary.CDevicesManager.OnModuleEmptied</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad66242c0d494fbb018d3da25334bfcb7" compoundref="_c_devices_manager_8cs" startline="571" endline="587">DeviceLibrary.CDevicesManager.OnMoneyReceived</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -207,8 +255,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="89" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="90" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1a8dac668c2fb07489dc8ac5ecc06c2d94" compoundref="_c_coin_validator_8cs" startline="466" endline="485">DeviceLibrary.CCoinValidator.Init</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="104" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="105" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a8dac668c2fb07489dc8ac5ecc06c2d94" compoundref="_c_coin_validator_8cs" startline="752" endline="771">DeviceLibrary.CCoinValidator.Init</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -246,7 +294,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="75" column="1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="90" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -259,24 +307,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="833" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="833" bodyend="896"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="884" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="884" bodyend="956"/>
+        <references refid="class_device_library_1_1_c_devices_manager_1a91ff62e15338b5b14249615bb40dd341" compoundref="_c_devices_manager_8cs" startline="63">DeviceLibrary.CDevicesManager.alternateDevise</references>
         <references refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" compoundref="_c_devices_manager_8cs" startline="33">DeviceLibrary.CDevicesManager.bnX</references>
         <references refid="class_device_library_1_1messages_text_1a5aba326853a8c8f79f70053306ee819c" compoundref="messages_text_8_designer_8cs" startline="93">DeviceLibrary.messagesText.callDll</references>
-        <references refid="class_device_library_1_1_ccc_talk_1a3810c0aa448865e19afff87a946fee5d" compoundref="_c_ctalk_8cs" startline="59">DeviceLibrary.CccTalk.counters</references>
-        <references refid="class_device_library_1_1_ccc_talk_1aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f" compoundref="_c_ctalk_8cs" startline="69">DeviceLibrary.CccTalk.counterSerializer</references>
-        <references refid="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" compoundref="_c_ctalk_8cs" startline="64">DeviceLibrary.CccTalk.countersFile</references>
+        <references refid="class_device_library_1_1_ccc_talk_1a3810c0aa448865e19afff87a946fee5d" compoundref="_c_ctalk_8cs" startline="40">DeviceLibrary.CccTalk.counters</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f" compoundref="_c_ctalk_8cs" startline="45">DeviceLibrary.CccTalk.counterSerializer</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" compoundref="_c_ctalk_8cs" startline="50">DeviceLibrary.CccTalk.countersFile</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="31">DeviceLibrary.CDevice.eventListLock</references>
-        <references refid="class_device_library_1_1_ccc_talk_1ad5c6d1287d0c049bdbf4fda8cb19c1ef" compoundref="_c_ctalk_8cs" startline="23">DeviceLibrary.CccTalk.fileCounterName</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="63">DeviceLibrary.CDevicesManager.Hoppers</references>
+        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="33">DeviceLibrary.CDevice.eventListLock</references>
+        <references refid="class_device_library_1_1_ccc_talk_1ad5c6d1287d0c049bdbf4fda8cb19c1ef" compoundref="_c_ctalk_8cs" startline="35">DeviceLibrary.CccTalk.fileCounterName</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="78">DeviceLibrary.CDevicesManager.Hoppers</references>
         <references refid="class_device_library_1_1_c_devices_manager_1acd589381ca60b7094434f8524efea016" compoundref="_c_devices_manager_8cs" startline="43">DeviceLibrary.CDevicesManager.Log</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" compoundref="_c_devices_manager_8cs" startline="68">DeviceLibrary.CDevicesManager.monnayeur</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1aca682fa0e485eceb4925b748b513134a" compoundref="_c_devices_manager_8cs" startline="68">DeviceLibrary.CDevicesManager.mainDevise</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" compoundref="_c_devices_manager_8cs" startline="83">DeviceLibrary.CDevicesManager.monnayeur</references>
         <references refid="class_device_library_1_1_c_devices_manager_1ab69ead1f91d966ffac4421bab04d7852" compoundref="_c_devices_manager_8cs" startline="38">DeviceLibrary.CDevicesManager.msgTask</references>
         <references refid="class_device_library_1_1_c_devices_manager_1a10652b4e74c018888e46d77b44cf1ce9" compoundref="_c_devices_manager_8cs" startline="58">DeviceLibrary.CDevicesManager.ParamFileName</references>
-        <references refid="class_device_library_1_1_ccc_talk_1abd92229809b4474129b15e638fd56da7" compoundref="_c_ctalk_8cs" startline="329">DeviceLibrary.CccTalk.ProductCode</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1ade39ebe65c6d9b8ba4a7935c89a0f32f" compoundref="_c_devices_manager_8cs" startline="556" endline="636">DeviceLibrary.CDevicesManager.ReadParamHopper</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a83b922baef8338338cff42eadbc534b3" compoundref="_c_devices_manager_8cs" startline="641" endline="680">DeviceLibrary.CDevicesManager.SetSortersAndHoppersToLoad</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</references>
+        <references refid="class_device_library_1_1_ccc_talk_1abd92229809b4474129b15e638fd56da7" compoundref="_c_ctalk_8cs" startline="250">DeviceLibrary.CccTalk.ProductCode</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ade39ebe65c6d9b8ba4a7935c89a0f32f" compoundref="_c_devices_manager_8cs" startline="592" endline="672">DeviceLibrary.CDevicesManager.ReadParamHopper</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a83b922baef8338338cff42eadbc534b3" compoundref="_c_devices_manager_8cs" startline="677" endline="716">DeviceLibrary.CDevicesManager.SetSortersAndHoppersToLoad</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a62197fd9306501b9dd819bd18a86fccd" compoundref="_c_devices_manager_8cs" startline="73">DeviceLibrary.CDevicesManager.tauxDeChange</references>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -301,17 +352,16 @@
 </para><para>Provoque l&apos;ouverture des moyens de paiement.</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="903" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="903" bodyend="940"/>
-        <references refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" compoundref="_c_devices_manager_8cs" startline="33">DeviceLibrary.CDevicesManager.bnX</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="963" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="963" bodyend="1001"/>
         <references refid="class_device_library_1_1_c_devices_manager_1a60166c124500dc5c13daba3998f7c60a" compoundref="_c_devices_manager_8cs" startline="53">DeviceLibrary.CDevicesManager.cashReceived</references>
-        <references refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" compoundref="_c_device_8cs" startline="36">DeviceLibrary.CDevice.denominationInserted</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" compoundref="_c_devices_manager_8cs" startline="1044" endline="1056">DeviceLibrary.CDevicesManager.EndTransaction</references>
+        <references refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" compoundref="_c_device_8cs" startline="28">DeviceLibrary.CDevice.denominationInserted</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" compoundref="_c_devices_manager_8cs" startline="1192" endline="1204">DeviceLibrary.CDevicesManager.EndTransaction</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="31">DeviceLibrary.CDevice.eventListLock</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" compoundref="_c_devices_manager_8cs" startline="68">DeviceLibrary.CDevicesManager.monnayeur</references>
+        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="33">DeviceLibrary.CDevice.eventListLock</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" compoundref="_c_devices_manager_8cs" startline="83">DeviceLibrary.CDevicesManager.monnayeur</references>
         <references refid="class_device_library_1_1_c_devices_manager_1a008701f9d063afbd16fae6db1a3992c2" compoundref="_c_devices_manager_8cs" startline="48">DeviceLibrary.CDevicesManager.ToPay</references>
-        <references refid="class_device_library_1_1_c_device_1_1_c_inserted_1af8489940b66b948f63c38c86051416be" compoundref="_c_inserted_8cs" startline="34">DeviceLibrary.CDevice.CInserted.TotalAmount</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" compoundref="_c_devices_manager_8cs" startline="957" endline="965">DeviceLibrary.CDevicesManager.BNRBillRollBack</referencedby>
+        <references refid="class_device_library_1_1_c_inserted_1a1e77007006714234054467ef0f205f28" compoundref="_c_inserted_8cs" startline="32">DeviceLibrary.CInserted.TotalAmount</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" compoundref="_c_devices_manager_8cs" startline="1026" endline="1042">DeviceLibrary.CDevicesManager.BNRBillRollBack</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1af18337108d515626ddb56bf1789a3d2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -324,11 +374,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="945" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="945" bodyend="952"/>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="51">DeviceLibrary.CBNR_CPI.bnr</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1006" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1006" bodyend="1021"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="68">DeviceLibrary.CBNR_CPI.bnr</references>
         <references refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" compoundref="_c_devices_manager_8cs" startline="33">DeviceLibrary.CDevicesManager.bnX</references>
-        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="69">DeviceLibrary.CDevice.IsPresent</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="96">DeviceLibrary.CBNR_CPI.State</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="64">DeviceLibrary.CDevice.IsPresent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="117">DeviceLibrary.CBNR_CPI.State</references>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -341,13 +392,31 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="957" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="957" bodyend="965"/>
-        <references refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="903" endline="940">DeviceLibrary.CDevicesManager.BeginTransaction</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="51">DeviceLibrary.CBNR_CPI.bnr</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1026" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1026" bodyend="1042"/>
+        <references refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="963" endline="1001">DeviceLibrary.CDevicesManager.BeginTransaction</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="68">DeviceLibrary.CBNR_CPI.bnr</references>
         <references refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" compoundref="_c_devices_manager_8cs" startline="33">DeviceLibrary.CDevicesManager.bnX</references>
-        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="69">DeviceLibrary.CDevice.IsPresent</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="96">DeviceLibrary.CBNR_CPI.State</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="64">DeviceLibrary.CDevice.IsPresent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="117">DeviceLibrary.CBNR_CPI.State</references>
         <references refid="class_device_library_1_1_c_devices_manager_1a008701f9d063afbd16fae6db1a3992c2" compoundref="_c_devices_manager_8cs" startline="48">DeviceLibrary.CDevicesManager.ToPay</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1abfbac0c12306e6b790c6dc832a936234" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CDevicesManager.BNRCashBoxRemoved</definition>
+        <argsstring>()</argsstring>
+        <name>BNRCashBoxRemoved</name>
+        <briefdescription>
+<para>Remise à zéro des compteurs de la caisse </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1047" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1047" bodyend="1083"/>
+        <references refid="class_device_library_1_1_c_coin_validator_1afdeb88b9e7e981afd51bd1322e9f89e9" compoundref="_c_coin_validator_8cs" startline="64">DeviceLibrary.CCoinValidator.canaux</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="33">DeviceLibrary.CDevice.eventListLock</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" compoundref="_c_devices_manager_8cs" startline="83">DeviceLibrary.CDevicesManager.monnayeur</references>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1ad684c34a4cb3c82f18decc6c35f29414" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -372,110 +441,30 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="971" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="971" bodyend="974"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1089" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1089" bodyend="1092"/>
       </memberdef>
-      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a55a2595eaddb2907cea1ba69a178b660" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void DeviceLibrary.CDevicesManager.CancelTransaction</definition>
+        <definition>void DeviceLibrary.CDevicesManager.BNRReloadRecycler</definition>
         <argsstring>()</argsstring>
-        <name>CancelTransaction</name>
+        <name>BNRReloadRecycler</name>
         <briefdescription>
-<para>Abandonne la transaction et retourne le montant introduit </para>        </briefdescription>
+<para>Fonction permettant le rechargment des recyclers. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="979" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="979" bodyend="989"/>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="51">DeviceLibrary.CBNR_CPI.bnr</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1097" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1097" bodyend="1111"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="68">DeviceLibrary.CBNR_CPI.bnr</references>
         <references refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" compoundref="_c_devices_manager_8cs" startline="33">DeviceLibrary.CDevicesManager.bnX</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" compoundref="_c_devices_manager_8cs" startline="1044" endline="1056">DeviceLibrary.CDevicesManager.EndTransaction</references>
-        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="69">DeviceLibrary.CDevice.IsPresent</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="96">DeviceLibrary.CBNR_CPI.State</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a008701f9d063afbd16fae6db1a3992c2" compoundref="_c_devices_manager_8cs" startline="48">DeviceLibrary.CDevicesManager.ToPay</references>
-      </memberdef>
-      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1acb9b7f647f7ca372051492560ea7fc85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void DeviceLibrary.CDevicesManager.CashBoxRemoved</definition>
-        <argsstring>()</argsstring>
-        <name>CashBoxRemoved</name>
-        <briefdescription>
-<para>Remise à zéro des compteurs de la caisse </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="994" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="994" bodyend="1030"/>
-        <references refid="class_device_library_1_1_c_coin_validator_1afdeb88b9e7e981afd51bd1322e9f89e9" compoundref="_c_coin_validator_8cs" startline="205">DeviceLibrary.CCoinValidator.canaux</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="31">DeviceLibrary.CDevice.eventListLock</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" compoundref="_c_devices_manager_8cs" startline="68">DeviceLibrary.CDevicesManager.monnayeur</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="64">DeviceLibrary.CDevice.IsPresent</references>
       </memberdef>
-      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1aa4f84b72137675bc5cb0c98ffc51d4e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1ab3b1bd2212d8ab4b33e0ced4d4419c7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void DeviceLibrary.CDevicesManager.Dispose</definition>
-        <argsstring>()</argsstring>
-        <name>Dispose</name>
-        <briefdescription>
-<para>Libère les ressources. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1035" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1035" bodyend="1039"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a83668b6047b684d8a44b668f7c173a46" compoundref="_c_devices_manager_8cs" startline="1121" endline="1124">DeviceLibrary.CDevicesManager.~CDevicesManager</referencedby>
-      </memberdef>
-      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void DeviceLibrary.CDevicesManager.EndTransaction</definition>
-        <argsstring>()</argsstring>
-        <name>EndTransaction</name>
-        <briefdescription>
-<para>Cloture la transaction en cours </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1044" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1044" bodyend="1056"/>
-        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="31">DeviceLibrary.CDevice.eventListLock</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="903" endline="940">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" compoundref="_c_devices_manager_8cs" startline="979" endline="989">DeviceLibrary.CDevicesManager.CancelTransaction</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a65f85225203f76bb9bd5db0e6f53e282" compoundref="_c_devices_manager_8cs" startline="409" endline="425">DeviceLibrary.CDevicesManager.OnDllReady</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
-      </memberdef>
-      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a3cbd9f50c3f86d90f10f2f3a66a3717c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>string</type>
-        <definition>string DeviceLibrary.CDevicesManager.GetSerialPort</definition>
-        <argsstring>()</argsstring>
-        <name>GetSerialPort</name>
-        <briefdescription>
-<para>Renvoi le nom du port série utilisé par le bus ccTalk </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1061" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1061" bodyend="1068"/>
-        <references refid="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" compoundref="_c_ctalk_8cs" startline="49">DeviceLibrary.CccTalk.PortSerie</references>
-      </memberdef>
-      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a930edf39df8f01578f9a4d3d55ebf1bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void DeviceLibrary.CDevicesManager.ResetCounters</definition>
-        <argsstring>()</argsstring>
-        <name>ResetCounters</name>
-        <briefdescription>
-<para>Remise à zéro des compteurs. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1073" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1073" bodyend="1080"/>
-        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="63">DeviceLibrary.CDevicesManager.Hoppers</references>
-      </memberdef>
-      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a111269aeb8c8c7c8c5e78cfc8c016489" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void DeviceLibrary.CDevicesManager.SetLoaderNumber</definition>
+        <definition>void DeviceLibrary.CDevicesManager.BNRSetLoaderMeter</definition>
         <argsstring>(uint numberOfBill)</argsstring>
-        <name>SetLoaderNumber</name>
+        <name>BNRSetLoaderMeter</name>
         <param>
           <type>uint</type>
           <declname>numberOfBill</declname>
@@ -488,13 +477,114 @@
 <parametername>numberOfBill</parametername>
 </parameternamelist>
 <parameterdescription>
-</parameterdescription>
+<para>Nombre de billets dans le loader.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1086" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1086" bodyend="1089"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1117" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1117" bodyend="1132"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="68">DeviceLibrary.CBNR_CPI.bnr</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" compoundref="_c_devices_manager_8cs" startline="33">DeviceLibrary.CDevicesManager.bnX</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="64">DeviceLibrary.CDevice.IsPresent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a9f7e3b6b7033452c066bcbe896607c80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CDevicesManager.BNRTransfertLoaderRecyclersInCB</definition>
+        <argsstring>()</argsstring>
+        <name>BNRTransfertLoaderRecyclersInCB</name>
+        <briefdescription>
+<para>Transfert les billets du loader et des recyclers dans la caisse du BNR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1137" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1137" bodyend="1151"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="68">DeviceLibrary.CBNR_CPI.bnr</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" compoundref="_c_devices_manager_8cs" startline="33">DeviceLibrary.CDevicesManager.bnX</references>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="64">DeviceLibrary.CDevice.IsPresent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CDevicesManager.CancelTransaction</definition>
+        <argsstring>()</argsstring>
+        <name>CancelTransaction</name>
+        <briefdescription>
+<para>Abandonne la transaction et retourne le montant introduit </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1156" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1156" bodyend="1166"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="68">DeviceLibrary.CBNR_CPI.bnr</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" compoundref="_c_devices_manager_8cs" startline="33">DeviceLibrary.CDevicesManager.bnX</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="150" endline="236">DeviceLibrary.CDevicesManager.ChangeBack</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" compoundref="_c_devices_manager_8cs" startline="1192" endline="1204">DeviceLibrary.CDevicesManager.EndTransaction</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="64">DeviceLibrary.CDevice.IsPresent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="117">DeviceLibrary.CBNR_CPI.State</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a008701f9d063afbd16fae6db1a3992c2" compoundref="_c_devices_manager_8cs" startline="48">DeviceLibrary.CDevicesManager.ToPay</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1aa3edfeb4721c3d33e5c1ca708bc9d118" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CDevicesManager.ccTalkCountersResets</definition>
+        <argsstring>()</argsstring>
+        <name>ccTalkCountersResets</name>
+        <briefdescription>
+<para>Remise à zéro des compteurs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1171" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1171" bodyend="1178"/>
+        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="78">DeviceLibrary.CDevicesManager.Hoppers</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1aa4f84b72137675bc5cb0c98ffc51d4e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CDevicesManager.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+<para>Libère les ressources. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1183" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1183" bodyend="1187"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a83668b6047b684d8a44b668f7c173a46" compoundref="_c_devices_manager_8cs" startline="1313" endline="1316">DeviceLibrary.CDevicesManager.~CDevicesManager</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CDevicesManager.EndTransaction</definition>
+        <argsstring>()</argsstring>
+        <name>EndTransaction</name>
+        <briefdescription>
+<para>Cloture la transaction en cours </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1192" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1192" bodyend="1204"/>
+        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="33">DeviceLibrary.CDevice.eventListLock</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="963" endline="1001">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" compoundref="_c_devices_manager_8cs" startline="1156" endline="1166">DeviceLibrary.CDevicesManager.CancelTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a65f85225203f76bb9bd5db0e6f53e282" compoundref="_c_devices_manager_8cs" startline="423" endline="439">DeviceLibrary.CDevicesManager.OnDllReady</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a3cbd9f50c3f86d90f10f2f3a66a3717c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string DeviceLibrary.CDevicesManager.GetSerialPort</definition>
+        <argsstring>()</argsstring>
+        <name>GetSerialPort</name>
+        <briefdescription>
+<para>Renvoi le nom du port série utilisé par le bus ccTalk </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1209" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1209" bodyend="1216"/>
+        <references refid="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" compoundref="_c_ctalk_8cs" startline="60">DeviceLibrary.CccTalk.PortSerie</references>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1af8b27e93e6a4fbce10494e95723c91ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -530,7 +620,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1096" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1096" bodyend="1114"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1223" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1223" bodyend="1241"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
       </memberdef>
       </sectiondef>
@@ -546,24 +636,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="135" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="135" bodyend="222"/>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="51">DeviceLibrary.CBNR_CPI.bnr</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1abf507423a1030786740a972b0de9ee29" compoundref="_c_b_n_r___c_p_i_8cs" startline="46">DeviceLibrary.CBNR_CPI.BnrDefaultOperationTimeOutInMS</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="150" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="150" bodyend="236"/>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" compoundref="_c_b_n_r___c_p_i_8cs" startline="68">DeviceLibrary.CBNR_CPI.bnr</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1abf507423a1030786740a972b0de9ee29" compoundref="_c_b_n_r___c_p_i_8cs" startline="61">DeviceLibrary.CBNR_CPI.BnrDefaultOperationTimeOutInMS</references>
         <references refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" compoundref="_c_devices_manager_8cs" startline="33">DeviceLibrary.CDevicesManager.bnX</references>
-        <references refid="class_device_library_1_1_c_hopper_1a11dafc48a8a680909486f10a61b80de1" compoundref="_c_hopper_8cs" startline="494">DeviceLibrary.CHopper.CoinsToDistribute</references>
-        <references refid="class_device_library_1_1_c_hopper_1a78903783271cadf2c222e983c46009f5" compoundref="_c_hopper_8cs" startline="174">DeviceLibrary.CHopper.CoinValue</references>
-        <references refid="class_device_library_1_1_c_hopper_1a35d6ef570273f2447ecb5b3b750ef561" compoundref="_c_hopper_8cs" startline="589">DeviceLibrary.CHopper.deviceLevel</references>
+        <references refid="class_device_library_1_1_c_hopper_1a11dafc48a8a680909486f10a61b80de1" compoundref="_c_hopper_8cs" startline="329">DeviceLibrary.CHopper.CoinsToDistribute</references>
+        <references refid="class_device_library_1_1_c_hopper_1a78903783271cadf2c222e983c46009f5" compoundref="_c_hopper_8cs" startline="338">DeviceLibrary.CHopper.CoinValue</references>
+        <references refid="class_device_library_1_1_c_hopper_1a35d6ef570273f2447ecb5b3b750ef561" compoundref="_c_hopper_8cs" startline="123">DeviceLibrary.CHopper.deviceLevel</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_level_1aba24f93fda726ac162db3e96387a7478" compoundref="_c_hopper_8_c_level_8cs" startline="99">DeviceLibrary.CHopper.CLevel.hardLevel</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="63">DeviceLibrary.CDevicesManager.Hoppers</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1aeb362dd8b6d987e24b2f5a8b26b3e110" compoundref="_c_b_n_r___c_p_i_8cs" startline="71">DeviceLibrary.CBNR_CPI.isDispensable</references>
-        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="69">DeviceLibrary.CDevice.IsPresent</references>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_level_1aaf0763243fa69af88492f6a45c3bffa3" compoundref="_c_hopper_8_c_level_8cs" startline="94">DeviceLibrary.CHopper.CLevel.softLevel</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="96">DeviceLibrary.CBNR_CPI.State</references>
-        <references refid="class_device_library_1_1_c_hopper_1aa9f1e8689d187df5894527e7c02dc875" compoundref="_c_hopper_8cs" startline="249">DeviceLibrary.CHopper.State</references>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_level_1aba24f93fda726ac162db3e96387a7478" compoundref="_c_hopper_8_c_level_8cs" startline="21">DeviceLibrary.CHopper.CLevel.hardLevel</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="78">DeviceLibrary.CDevicesManager.Hoppers</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1aeb362dd8b6d987e24b2f5a8b26b3e110" compoundref="_c_b_n_r___c_p_i_8cs" startline="78">DeviceLibrary.CBNR_CPI.isDispensable</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="64">DeviceLibrary.CDevice.IsPresent</references>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_level_1aaf0763243fa69af88492f6a45c3bffa3" compoundref="_c_hopper_8_c_level_8cs" startline="32">DeviceLibrary.CHopper.CLevel.softLevel</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="117">DeviceLibrary.CBNR_CPI.State</references>
+        <references refid="class_device_library_1_1_c_hopper_1aa9f1e8689d187df5894527e7c02dc875" compoundref="_c_hopper_8cs" startline="680">DeviceLibrary.CHopper.State</references>
         <references refid="class_device_library_1_1_c_devices_manager_1a008701f9d063afbd16fae6db1a3992c2" compoundref="_c_devices_manager_8cs" startline="48">DeviceLibrary.CDevicesManager.ToPay</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" compoundref="_c_devices_manager_8cs" startline="979" endline="989">DeviceLibrary.CDevicesManager.CancelTransaction</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" compoundref="_c_devices_manager_8cs" startline="1156" endline="1166">DeviceLibrary.CDevicesManager.CancelTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1abcfed3749aff233df6c41849c8192850" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -588,10 +678,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="228" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="228" bodyend="243"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="242" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="242" bodyend="257"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a761cfb095d56e00ec6f89f6374591cef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -608,10 +698,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="248" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="248" bodyend="263"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="262" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="262" bodyend="277"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a6a8eeadddea0c11a5b9f1ac3b56be09e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -636,10 +726,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="269" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="269" bodyend="284"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="283" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="283" bodyend="298"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1ad598d4a8eaf78fa130df9a8edbf7515f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -664,10 +754,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="290" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="290" bodyend="305"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="304" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="304" bodyend="319"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1ad6899efe8ae1e945a5c4ea6791267a57" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -692,10 +782,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="311" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="311" bodyend="326"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="325" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="325" bodyend="340"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a4b48353ed25192d2a4ee8c7fe93ed6ea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -712,10 +802,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="328" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="328" bodyend="343"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="342" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="342" bodyend="357"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a778ba9ee3fd8972814be5673fdfb60db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -728,11 +818,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="348" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="348" bodyend="363"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="362" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="362" bodyend="377"/>
         <references refid="class_device_library_1_1_c_devices_manager_1a60166c124500dc5c13daba3998f7c60a" compoundref="_c_devices_manager_8cs" startline="53">DeviceLibrary.CDevicesManager.cashReceived</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a80a442b9fa68ed9791adbc7b13c8cd98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -745,10 +835,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="368" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="368" bodyend="383"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="382" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="382" bodyend="397"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a0a113fdda969a3d94e09b5f1ac8fbf54" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -773,10 +863,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="389" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="389" bodyend="404"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="403" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="403" bodyend="418"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a65f85225203f76bb9bd5db0e6f53e282" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -789,11 +879,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="409" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="409" bodyend="425"/>
-        <references refid="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" compoundref="_c_devices_manager_8cs" startline="1044" endline="1056">DeviceLibrary.CDevicesManager.EndTransaction</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="423" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="423" bodyend="439"/>
+        <references refid="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" compoundref="_c_devices_manager_8cs" startline="1192" endline="1204">DeviceLibrary.CDevicesManager.EndTransaction</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1aa9bec486871cefa0e177121ec0c8cd13" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -818,10 +908,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="431" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="431" bodyend="446"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="445" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="445" bodyend="460"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a07945482a7a21471f60672c01b8a19a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -846,10 +936,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="452" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="452" bodyend="467"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="466" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="466" bodyend="481"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a8c6efc3c0f6e6664990edf0c92f6f237" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -874,10 +964,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="473" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="473" bodyend="488"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="487" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="487" bodyend="502"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1aa18aded58c64b857ef55e6d393d481ff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -902,10 +992,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="494" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="494" bodyend="509"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="508" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="508" bodyend="523"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1aa1cc70b8bdfacf1f80e54fa230fd5477" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -930,10 +1020,38 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="515" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="515" bodyend="530"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="529" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="529" bodyend="544"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a7cc31e2791cb13cd6abbe19316913e4d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CDevicesManager.OnModuleEmptied</definition>
+        <argsstring>(CEvent evenement)</argsstring>
+        <name>OnModuleEmptied</name>
+        <param>
+          <type><ref refid="class_device_library_1_1_c_event" kindref="compound">CEvent</ref></type>
+          <declname>evenement</declname>
+        </param>
+        <briefdescription>
+<para>Evenement levé pour la fin du vidage d&apos;un module. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evenement</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="550" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="550" bodyend="566"/>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1ad66242c0d494fbb018d3da25334bfcb7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -950,10 +1068,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="535" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="535" bodyend="551"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="571" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="571" bodyend="587"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="80">DeviceLibrary.CDevicesManager.FireEvent</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" compoundref="_c_devices_manager_8cs" startline="95">DeviceLibrary.CDevicesManager.FireEvent</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1ade39ebe65c6d9b8ba4a7935c89a0f32f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -966,10 +1084,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="556" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="556" bodyend="636"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="592" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="592" bodyend="672"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="63">DeviceLibrary.CDevicesManager.Hoppers</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="78">DeviceLibrary.CDevicesManager.Hoppers</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a83b922baef8338338cff42eadbc534b3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -982,9 +1100,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="641" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="641" bodyend="680"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="677" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="677" bodyend="716"/>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -997,37 +1115,38 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="685" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="685" bodyend="824"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="721" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="721" bodyend="875"/>
         <references refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" compoundref="_c_devices_manager_8cs" startline="33">DeviceLibrary.CDevicesManager.bnX</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</references>
-        <references refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" compoundref="_c_device_8cs" startline="36">DeviceLibrary.CDevice.denominationInserted</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" compoundref="_c_devices_manager_8cs" startline="1044" endline="1056">DeviceLibrary.CDevicesManager.EndTransaction</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a60166c124500dc5c13daba3998f7c60a" compoundref="_c_devices_manager_8cs" startline="53">DeviceLibrary.CDevicesManager.cashReceived</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="150" endline="236">DeviceLibrary.CDevicesManager.ChangeBack</references>
+        <references refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" compoundref="_c_device_8cs" startline="28">DeviceLibrary.CDevice.denominationInserted</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" compoundref="_c_devices_manager_8cs" startline="1192" endline="1204">DeviceLibrary.CDevicesManager.EndTransaction</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="31">DeviceLibrary.CDevice.eventListLock</references>
-        <references refid="class_device_library_1_1_c_device_1a93829459e8bc284d9f8bd56edf59e152" compoundref="_c_device_8cs" startline="26">DeviceLibrary.CDevice.eventsList</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1ac86209e3f2612e5bfa0654576a66b9fa" compoundref="_c_b_n_r___c_p_i_8cs" startline="132">DeviceLibrary.CBNR_CPI.IsBNRToBeDeactivated</references>
-        <references refid="class_device_library_1_1_c_coin_validator_1af41e76ebe686da650b5a12ab034309ec" compoundref="_c_coin_validator_8cs" startline="123">DeviceLibrary.CCoinValidator.IsCVToBeDeactivated</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" compoundref="_c_devices_manager_8cs" startline="68">DeviceLibrary.CDevicesManager.monnayeur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1abcfed3749aff233df6c41849c8192850" compoundref="_c_devices_manager_8cs" startline="228" endline="243">DeviceLibrary.CDevicesManager.OnBNRDispensed</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a761cfb095d56e00ec6f89f6374591cef" compoundref="_c_devices_manager_8cs" startline="248" endline="263">DeviceLibrary.CDevicesManager.OnBNRErreur</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a6a8eeadddea0c11a5b9f1ac3b56be09e" compoundref="_c_devices_manager_8cs" startline="269" endline="284">DeviceLibrary.CDevicesManager.OnbnrModuleReinsere</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1ad598d4a8eaf78fa130df9a8edbf7515f" compoundref="_c_devices_manager_8cs" startline="290" endline="305">DeviceLibrary.CDevicesManager.OnBNRResetModule</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1ad6899efe8ae1e945a5c4ea6791267a57" compoundref="_c_devices_manager_8cs" startline="311" endline="326">DeviceLibrary.CDevicesManager.OnBRNModuleRemoved</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a4b48353ed25192d2a4ee8c7fe93ed6ea" compoundref="_c_devices_manager_8cs" startline="328" endline="343">DeviceLibrary.CDevicesManager.OnCashBoxRemoved</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a778ba9ee3fd8972814be5673fdfb60db" compoundref="_c_devices_manager_8cs" startline="348" endline="363">DeviceLibrary.CDevicesManager.OnCashClose</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a80a442b9fa68ed9791adbc7b13c8cd98" compoundref="_c_devices_manager_8cs" startline="368" endline="383">DeviceLibrary.CDevicesManager.OnCashOpen</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a0a113fdda969a3d94e09b5f1ac8fbf54" compoundref="_c_devices_manager_8cs" startline="389" endline="404">DeviceLibrary.CDevicesManager.OnCVError</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a65f85225203f76bb9bd5db0e6f53e282" compoundref="_c_devices_manager_8cs" startline="409" endline="425">DeviceLibrary.CDevicesManager.OnDllReady</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1aa9bec486871cefa0e177121ec0c8cd13" compoundref="_c_devices_manager_8cs" startline="431" endline="446">DeviceLibrary.CDevicesManager.OnHopperDispensed</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a07945482a7a21471f60672c01b8a19a7" compoundref="_c_devices_manager_8cs" startline="452" endline="467">DeviceLibrary.CDevicesManager.OnHopperEmptied</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1a8c6efc3c0f6e6664990edf0c92f6f237" compoundref="_c_devices_manager_8cs" startline="473" endline="488">DeviceLibrary.CDevicesManager.OnHopperError</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1aa18aded58c64b857ef55e6d393d481ff" compoundref="_c_devices_manager_8cs" startline="494" endline="509">DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1aa1cc70b8bdfacf1f80e54fa230fd5477" compoundref="_c_devices_manager_8cs" startline="515" endline="530">DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged</references>
-        <references refid="class_device_library_1_1_c_devices_manager_1ad66242c0d494fbb018d3da25334bfcb7" compoundref="_c_devices_manager_8cs" startline="535" endline="551">DeviceLibrary.CDevicesManager.OnMoneyReceived</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="96">DeviceLibrary.CBNR_CPI.State</references>
+        <references refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" compoundref="_c_device_8cs" startline="33">DeviceLibrary.CDevice.eventListLock</references>
+        <references refid="class_device_library_1_1_c_device_1a93829459e8bc284d9f8bd56edf59e152" compoundref="_c_device_8cs" startline="38">DeviceLibrary.CDevice.eventsList</references>
+        <references refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" compoundref="_c_device_8cs" startline="64">DeviceLibrary.CDevice.IsPresent</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" compoundref="_c_devices_manager_8cs" startline="83">DeviceLibrary.CDevicesManager.monnayeur</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1abcfed3749aff233df6c41849c8192850" compoundref="_c_devices_manager_8cs" startline="242" endline="257">DeviceLibrary.CDevicesManager.OnBNRDispensed</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a761cfb095d56e00ec6f89f6374591cef" compoundref="_c_devices_manager_8cs" startline="262" endline="277">DeviceLibrary.CDevicesManager.OnBNRErreur</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a6a8eeadddea0c11a5b9f1ac3b56be09e" compoundref="_c_devices_manager_8cs" startline="283" endline="298">DeviceLibrary.CDevicesManager.OnbnrModuleReinsere</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ad598d4a8eaf78fa130df9a8edbf7515f" compoundref="_c_devices_manager_8cs" startline="304" endline="319">DeviceLibrary.CDevicesManager.OnBNRResetModule</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ad6899efe8ae1e945a5c4ea6791267a57" compoundref="_c_devices_manager_8cs" startline="325" endline="340">DeviceLibrary.CDevicesManager.OnBRNModuleRemoved</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a4b48353ed25192d2a4ee8c7fe93ed6ea" compoundref="_c_devices_manager_8cs" startline="342" endline="357">DeviceLibrary.CDevicesManager.OnCashBoxRemoved</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a778ba9ee3fd8972814be5673fdfb60db" compoundref="_c_devices_manager_8cs" startline="362" endline="377">DeviceLibrary.CDevicesManager.OnCashClose</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a80a442b9fa68ed9791adbc7b13c8cd98" compoundref="_c_devices_manager_8cs" startline="382" endline="397">DeviceLibrary.CDevicesManager.OnCashOpen</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a0a113fdda969a3d94e09b5f1ac8fbf54" compoundref="_c_devices_manager_8cs" startline="403" endline="418">DeviceLibrary.CDevicesManager.OnCVError</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a65f85225203f76bb9bd5db0e6f53e282" compoundref="_c_devices_manager_8cs" startline="423" endline="439">DeviceLibrary.CDevicesManager.OnDllReady</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1aa9bec486871cefa0e177121ec0c8cd13" compoundref="_c_devices_manager_8cs" startline="445" endline="460">DeviceLibrary.CDevicesManager.OnHopperDispensed</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a07945482a7a21471f60672c01b8a19a7" compoundref="_c_devices_manager_8cs" startline="466" endline="481">DeviceLibrary.CDevicesManager.OnHopperEmptied</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a8c6efc3c0f6e6664990edf0c92f6f237" compoundref="_c_devices_manager_8cs" startline="487" endline="502">DeviceLibrary.CDevicesManager.OnHopperError</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1aa18aded58c64b857ef55e6d393d481ff" compoundref="_c_devices_manager_8cs" startline="508" endline="523">DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1aa1cc70b8bdfacf1f80e54fa230fd5477" compoundref="_c_devices_manager_8cs" startline="529" endline="544">DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1a7cc31e2791cb13cd6abbe19316913e4d" compoundref="_c_devices_manager_8cs" startline="550" endline="566">DeviceLibrary.CDevicesManager.OnModuleEmptied</references>
+        <references refid="class_device_library_1_1_c_devices_manager_1ad66242c0d494fbb018d3da25334bfcb7" compoundref="_c_devices_manager_8cs" startline="571" endline="587">DeviceLibrary.CDevicesManager.OnMoneyReceived</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" compoundref="_c_b_n_r___c_p_i_8cs" startline="117">DeviceLibrary.CBNR_CPI.State</references>
         <references refid="class_device_library_1_1_c_devices_manager_1a008701f9d063afbd16fae6db1a3992c2" compoundref="_c_devices_manager_8cs" startline="48">DeviceLibrary.CDevicesManager.ToPay</references>
-        <references refid="class_device_library_1_1_c_device_1_1_c_inserted_1af8489940b66b948f63c38c86051416be" compoundref="_c_inserted_8cs" startline="34">DeviceLibrary.CDevice.CInserted.TotalAmount</references>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <references refid="class_device_library_1_1_c_inserted_1a1e77007006714234054467ef0f205f28" compoundref="_c_inserted_8cs" startline="32">DeviceLibrary.CInserted.TotalAmount</references>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a83668b6047b684d8a44b668f7c173a46" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -1040,14 +1159,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1121" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1121" bodyend="1124"/>
-        <references refid="class_device_library_1_1_c_devices_manager_1aa4f84b72137675bc5cb0c98ffc51d4e2" compoundref="_c_devices_manager_8cs" startline="1035" endline="1039">DeviceLibrary.CDevicesManager.Dispose</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1313" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1313" bodyend="1316"/>
+        <references refid="class_device_library_1_1_c_devices_manager_1aa4f84b72137675bc5cb0c98ffc51d4e2" compoundref="_c_devices_manager_8cs" startline="1183" endline="1187">DeviceLibrary.CDevicesManager.Dispose</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
-      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1a34a6ca3de6a47af6f78771ff05206e87" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+      <memberdef kind="function" id="class_device_library_1_1_c_devices_manager_1af3eccd449132a0e6561c07685958e542" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>virtual void DeviceLibrary.CDevicesManager.Dispose</definition>
+        <definition>void DeviceLibrary.CDevicesManager.Dispose</definition>
         <argsstring>(bool disposing)</argsstring>
         <name>Dispose</name>
         <param>
@@ -1060,8 +1179,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1129" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1129" bodyend="1185"/>
-        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="63">DeviceLibrary.CDevicesManager.Hoppers</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" line="1250" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.cs" bodystart="1250" bodyend="1306"/>
+        <references refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" compoundref="_c_devices_manager_8cs" startline="78">DeviceLibrary.CDevicesManager.Hoppers</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1069,183 +1188,191 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="111">
+      <node id="112">
         <label>IDisposable</label>
       </node>
-      <node id="110">
+      <node id="111">
         <label>DeviceLibrary.CDevicesManager</label>
         <link refid="class_device_library_1_1_c_devices_manager"/>
-        <childnode refid="111" relation="public-inheritance">
-        </childnode>
-        <childnode refid="111" relation="public-inheritance">
+        <childnode refid="112" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="122">
+      <node id="123">
         <label>DeviceLibrary.CCoinValidator.CCanal.CCoindID</label>
         <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d"/>
-        <childnode refid="120" relation="usage">
+        <childnode refid="121" relation="usage">
           <edgelabel>CanalOwner</edgelabel>
         </childnode>
       </node>
-      <node id="127">
+      <node id="129">
         <label>DeviceLibrary.CBNR_CPI.Cerror</label>
         <link refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror"/>
       </node>
-      <node id="118">
-        <label>DeviceLibrary.CDevice.CInserted</label>
-        <link refid="class_device_library_1_1_c_device_1_1_c_inserted"/>
-      </node>
-      <node id="125">
+      <node id="126">
         <label>DeviceLibrary.CBNR_CPI</label>
         <link refid="class_device_library_1_1_c_b_n_r___c_p_i"/>
-        <childnode refid="117" relation="public-inheritance">
+        <childnode refid="118" relation="public-inheritance">
         </childnode>
-        <childnode refid="117" relation="public-inheritance">
+        <childnode refid="118" relation="public-inheritance">
         </childnode>
-        <childnode refid="117" relation="public-inheritance">
+        <childnode refid="118" relation="public-inheritance">
         </childnode>
-        <childnode refid="117" relation="public-inheritance">
+        <childnode refid="118" relation="public-inheritance">
         </childnode>
-        <childnode refid="126" relation="usage">
+        <childnode refid="127" relation="usage">
+          <edgelabel>moduleEmptied</edgelabel>
+        </childnode>
+        <childnode refid="128" relation="usage">
           <edgelabel>bnr</edgelabel>
           <edgelabel>listLCU</edgelabel>
         </childnode>
-        <childnode refid="127" relation="usage">
+        <childnode refid="129" relation="usage">
           <edgelabel>errorInfo</edgelabel>
         </childnode>
       </node>
-      <node id="117">
+      <node id="118">
         <label>CDevice</label>
         <link refid="class_device_library_1_1_c_device"/>
-        <childnode refid="113" relation="public-inheritance">
+        <childnode refid="114" relation="public-inheritance">
         </childnode>
-        <childnode refid="118" relation="usage">
+        <childnode refid="119" relation="usage">
           <edgelabel>denominationInserted</edgelabel>
         </childnode>
       </node>
-      <node id="113">
+      <node id="114">
         <label>IDisposable</label>
       </node>
-      <node id="115">
+      <node id="116">
         <label>CcashReader</label>
         <link refid="class_device_library_1_1_ccash_reader"/>
-        <childnode refid="116" relation="public-inheritance">
+        <childnode refid="117" relation="public-inheritance">
         </childnode>
-        <childnode refid="116" relation="public-inheritance">
+        <childnode refid="117" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="116">
+      <node id="117">
         <label>CccTalk</label>
         <link refid="class_device_library_1_1_ccc_talk"/>
-        <childnode refid="117" relation="public-inheritance">
+        <childnode refid="118" relation="public-inheritance">
         </childnode>
-        <childnode refid="117" relation="public-inheritance">
+        <childnode refid="118" relation="public-inheritance">
         </childnode>
-        <childnode refid="117" relation="public-inheritance">
+        <childnode refid="118" relation="public-inheritance">
         </childnode>
-        <childnode refid="119" relation="usage">
+        <childnode refid="120" relation="usage">
           <edgelabel>counters</edgelabel>
         </childnode>
       </node>
-      <node id="119">
+      <node id="120">
         <label>DeviceLibrary.CcoinsCounters</label>
         <link refid="class_device_library_1_1_ccoins_counters"/>
       </node>
-      <node id="121">
+      <node id="119">
+        <label>DeviceLibrary.CInserted</label>
+        <link refid="class_device_library_1_1_c_inserted"/>
+      </node>
+      <node id="122">
         <label>DeviceLibrary.CCoinValidator.CCanal.CSorter</label>
         <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter"/>
-        <childnode refid="120" relation="usage">
+        <childnode refid="121" relation="usage">
           <edgelabel>CanalOwner</edgelabel>
         </childnode>
       </node>
-      <node id="128">
+      <node id="130">
         <label>DeviceLibrary.CDevicesManager.CCashReceived</label>
         <link refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received"/>
       </node>
-      <node id="126">
+      <node id="128">
         <label>Bnr</label>
       </node>
-      <node id="114">
+      <node id="115">
         <label>DeviceLibrary.CCoinValidator</label>
         <link refid="class_device_library_1_1_c_coin_validator"/>
-        <childnode refid="115" relation="public-inheritance">
+        <childnode refid="116" relation="public-inheritance">
         </childnode>
-        <childnode refid="115" relation="public-inheritance">
+        <childnode refid="116" relation="public-inheritance">
         </childnode>
-        <childnode refid="115" relation="public-inheritance">
+        <childnode refid="116" relation="public-inheritance">
         </childnode>
-        <childnode refid="115" relation="public-inheritance">
+        <childnode refid="116" relation="public-inheritance">
         </childnode>
-        <childnode refid="115" relation="public-inheritance">
+        <childnode refid="116" relation="public-inheritance">
         </childnode>
-        <childnode refid="120" relation="usage">
+        <childnode refid="121" relation="usage">
           <edgelabel>canaux</edgelabel>
         </childnode>
-        <childnode refid="123" relation="usage">
+        <childnode refid="124" relation="usage">
           <edgelabel>errorCV</edgelabel>
         </childnode>
-        <childnode refid="124" relation="usage">
+        <childnode refid="125" relation="usage">
           <edgelabel>creditBuffer</edgelabel>
         </childnode>
       </node>
-      <node id="123">
+      <node id="127">
+        <label>DeviceLibrary.CModuleEmptied</label>
+        <link refid="class_device_library_1_1_c_module_emptied"/>
+      </node>
+      <node id="124">
         <label>DeviceLibrary.CCoinValidator.CErroCV</label>
         <link refid="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v"/>
       </node>
-      <node id="124">
+      <node id="125">
         <label>DeviceLibrary.CCoinValidator.CCVcreditBuffer</label>
         <link refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer"/>
-        <childnode refid="114" relation="usage">
+        <childnode refid="115" relation="usage">
           <edgelabel>owner</edgelabel>
         </childnode>
       </node>
-      <node id="112">
+      <node id="113">
         <label>DeviceLibrary.CDevicesManager</label>
         <link refid="class_device_library_1_1_c_devices_manager"/>
-        <childnode refid="113" relation="public-inheritance">
+        <childnode refid="114" relation="public-inheritance">
         </childnode>
-        <childnode refid="113" relation="public-inheritance">
-        </childnode>
-        <childnode refid="114" relation="usage">
+        <childnode refid="115" relation="usage">
           <edgelabel>monnayeur</edgelabel>
         </childnode>
-        <childnode refid="125" relation="usage">
+        <childnode refid="126" relation="usage">
           <edgelabel>bnX</edgelabel>
         </childnode>
-        <childnode refid="128" relation="usage">
+        <childnode refid="130" relation="usage">
           <edgelabel>cashReceived</edgelabel>
         </childnode>
       </node>
-      <node id="120">
+      <node id="121">
         <label>DeviceLibrary.CCoinValidator.CCanal</label>
         <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal"/>
-        <childnode refid="114" relation="usage">
+        <childnode refid="115" relation="usage">
           <edgelabel>CVOwner</edgelabel>
         </childnode>
-        <childnode refid="121" relation="usage">
+        <childnode refid="122" relation="usage">
           <edgelabel>sorter</edgelabel>
         </childnode>
-        <childnode refid="122" relation="usage">
+        <childnode refid="123" relation="usage">
           <edgelabel>coinId</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
     <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.CCashReceived.cs" line="16" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CDevicesManager.CCashReceived.cs" bodystart="15" bodyend="42"/>
     <listofallmembers>
+      <member refid="class_device_library_1_1_c_devices_manager_1a91ff62e15338b5b14249615bb40dd341" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>alternateDevise</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>BeginTransaction</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1af18337108d515626ddb56bf1789a3d2e" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>BNRBillRetract</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>BNRBillRollBack</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1abfbac0c12306e6b790c6dc832a936234" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>BNRCashBoxRemoved</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1ad684c34a4cb3c82f18decc6c35f29414" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>BNRDispense</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1a55a2595eaddb2907cea1ba69a178b660" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>BNRReloadRecycler</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1ab3b1bd2212d8ab4b33e0ced4d4419c7c" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>BNRSetLoaderMeter</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1a9f7e3b6b7033452c066bcbe896607c80" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>BNRTransfertLoaderRecyclersInCB</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>bnX</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>CancelTransaction</name></member>
-      <member refid="class_device_library_1_1_c_devices_manager_1acb9b7f647f7ca372051492560ea7fc85" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>CashBoxRemoved</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a60166c124500dc5c13daba3998f7c60a" prot="package" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>cashReceived</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1aa3edfeb4721c3d33e5c1ca708bc9d118" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>ccTalkCountersResets</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>CDevicesManager</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>ChangeBack</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1aa4f84b72137675bc5cb0c98ffc51d4e2" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>Dispose</name></member>
-      <member refid="class_device_library_1_1_c_devices_manager_1a34a6ca3de6a47af6f78771ff05206e87" prot="protected" virt="virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>Dispose</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1af3eccd449132a0e6561c07685958e542" prot="protected" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>Dispose</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1ad9c6710d07fe7a877826f235b5576e81" prot="package" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>EnableChannelsCV</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>EndTransaction</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>FireEvent</name></member>
@@ -1253,6 +1380,7 @@
       <member refid="class_device_library_1_1_c_devices_manager_1a3cbd9f50c3f86d90f10f2f3a66a3717c" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>GetSerialPort</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>Hoppers</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1acd589381ca60b7094434f8524efea016" prot="package" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>Log</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1aca682fa0e485eceb4925b748b513134a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>mainDevise</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>monnayeur</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1ab69ead1f91d966ffac4421bab04d7852" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>msgTask</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1abcfed3749aff233df6c41849c8192850" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>OnBNRDispensed</name></member>
@@ -1270,15 +1398,15 @@
       <member refid="class_device_library_1_1_c_devices_manager_1a8c6efc3c0f6e6664990edf0c92f6f237" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>OnHopperError</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1aa18aded58c64b857ef55e6d393d481ff" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>OnHopperHardLevelChanged</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1aa1cc70b8bdfacf1f80e54fa230fd5477" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>OnHopperSoftLevelChanged</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1a7cc31e2791cb13cd6abbe19316913e4d" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>OnModuleEmptied</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1ad66242c0d494fbb018d3da25334bfcb7" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>OnMoneyReceived</name></member>
-      <member refid="class_device_library_1_1_c_devices_manager_1ade92059fe5a981518bc569c433c05385" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>parametersFile</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1aee0669d5624a6a0fb0f638a1a9941e2b" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>ParametersFile</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a10652b4e74c018888e46d77b44cf1ce9" prot="package" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>ParamFileName</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1ade39ebe65c6d9b8ba4a7935c89a0f32f" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>ReadParamHopper</name></member>
-      <member refid="class_device_library_1_1_c_devices_manager_1a930edf39df8f01578f9a4d3d55ebf1bc" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>ResetCounters</name></member>
-      <member refid="class_device_library_1_1_c_devices_manager_1a111269aeb8c8c7c8c5e78cfc8c016489" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>SetLoaderNumber</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1af8b27e93e6a4fbce10494e95723c91ec" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>SetSorterPath</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a83b922baef8338338cff42eadbc534b3" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>SetSortersAndHoppersToLoad</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>Task</name></member>
+      <member refid="class_device_library_1_1_c_devices_manager_1a62197fd9306501b9dd819bd18a86fccd" prot="public" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>tauxDeChange</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a008701f9d063afbd16fae6db1a3992c2" prot="package" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>ToPay</name></member>
       <member refid="class_device_library_1_1_c_devices_manager_1a83668b6047b684d8a44b668f7c173a46" prot="private" virt="non-virtual"><scope>DeviceLibrary::CDevicesManager</scope><name>~CDevicesManager</name></member>
     </listofallmembers>

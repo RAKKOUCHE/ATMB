@@ -14,20 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="42" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="42" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id_1a0f682ecabc038f13d5f18db721c55cc8" prot="public" static="no" mutable="no">
-        <type>long</type>
-        <definition>long DeviceLibrary.CHopper.CHopperCoinId.ValeurCent</definition>
-        <argsstring></argsstring>
-        <name>ValeurCent</name>
-        <briefdescription>
-<para>Valeur en centimes. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="47" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="47" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="1364" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="1364" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id_1a7a0db9cd285047301297d776c0f97975" prot="public" static="no" mutable="no">
         <type>char</type>
@@ -40,14 +27,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="52" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="52" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="1369" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="1369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id_1a0f682ecabc038f13d5f18db721c55cc8" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long DeviceLibrary.CHopper.CHopperCoinId.ValeurCent</definition>
+        <argsstring></argsstring>
+        <name>ValeurCent</name>
+        <briefdescription>
+<para>Valeur en centimes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="1374" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="1374" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Identification de la dénomination de la pièce gerée par le hopper </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="38" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="37" bodyend="53"/>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="1360" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="1359" bodyend="1375"/>
     <listofallmembers>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id_1a2539177528efbfaf371d5854f21a2bc3" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperCoinId</scope><name>CountryCode</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id_1a7a0db9cd285047301297d776c0f97975" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperCoinId</scope><name>Issue</name></member>

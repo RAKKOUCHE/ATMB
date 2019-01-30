@@ -1,17 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
   <compound refid="class_device_library_1_1_c_b_n_r___c_p_i" kind="class"><name>DeviceLibrary::CBNR_CPI</name>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6" kind="enum"><name>ERRORTYPE</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a74267bafd04517c1609ee13ee212fedd" kind="enumvalue"><name>BOURRAGE</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a803d54558e4199ba24c8be70e1f52311" kind="enumvalue"><name>BNR_OUVERT</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a1e19d31872ac2b29666b368a8991126e" kind="enumvalue"><name>TYPE_BILLET_ERREUR</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6ac35c5714821eb5c6280e90a382b14dd8" kind="enumvalue"><name>STOCKAGE_ERREUR</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a923f08f7add65912e3ca5f0c5485a421" kind="enumvalue"><name>BNRMODULEMANQUANT</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a7207152f8928bac043d8b31f036860ba" kind="enumvalue"><name>BNRMODULERINSERE</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a5226ca9add71653091a92356a0d595c6" kind="enumvalue"><name>BILLREFUSED</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a89fc88b4ea328df0265d54402b192763" kind="enumvalue"><name>NOTDISTRIBUABLE</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6abaca053458cae8e2055325f552416a70" kind="enumvalue"><name>NOTDISPENSED</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a694cd0beb7d2d868926725fe041610b6a37bf2e5807933cef82be4158f5e90e91" kind="enumvalue"><name>DLL_NOT_FREE</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa30601841081b8e3098af92faf9a08b3" kind="enum"><name>Errortype</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa30601841081b8e3098af92faf9a08b3a74267bafd04517c1609ee13ee212fedd" kind="enumvalue"><name>BOURRAGE</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa30601841081b8e3098af92faf9a08b3a803d54558e4199ba24c8be70e1f52311" kind="enumvalue"><name>BNR_OUVERT</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa30601841081b8e3098af92faf9a08b3a1e19d31872ac2b29666b368a8991126e" kind="enumvalue"><name>TYPE_BILLET_ERREUR</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa30601841081b8e3098af92faf9a08b3ac35c5714821eb5c6280e90a382b14dd8" kind="enumvalue"><name>STOCKAGE_ERREUR</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa30601841081b8e3098af92faf9a08b3a8b9add2e60501cb2f9f3ccbc75571806" kind="enumvalue"><name>BNRLOADERMETERMISING</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa30601841081b8e3098af92faf9a08b3a5226ca9add71653091a92356a0d595c6" kind="enumvalue"><name>BILLREFUSED</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa30601841081b8e3098af92faf9a08b3a89fc88b4ea328df0265d54402b192763" kind="enumvalue"><name>NOTDISTRIBUABLE</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa30601841081b8e3098af92faf9a08b3abaca053458cae8e2055325f552416a70" kind="enumvalue"><name>NOTDISPENSED</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa30601841081b8e3098af92faf9a08b3aa6be0f4de3b1375eec345cb1275abc2f" kind="enumvalue"><name>DLL_BNR_NOT_FREE</name></member>
     <member refid="group___etats_1ga0ba00823ea47953aa70abd2626137de2" kind="enum"><name>Etat</name></member>
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2abb47b9b1d888741b1d94f3f060281299" kind="enumvalue"><name>STATE_INIT</name></member>
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa31e7f2a1fe3aaab2484740d51878a3d" kind="enumvalue"><name>STATE_OPEN_API</name></member>
@@ -26,55 +25,64 @@
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a591bddc3af4fb48b4fb92a1b498a892e" kind="enumvalue"><name>STATE_GETLCUS</name></member>
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a400ddd2b05277bc7d75580c437a1fe2e" kind="enumvalue"><name>STATE_ROLLBACK</name></member>
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a238625dce187682a7f0893e0df431779" kind="enumvalue"><name>STATE_RETRACT</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2ab051e9033349ebe782e71f7ae46fed90" kind="enumvalue"><name>STATE_UPDATE_LOADER_METER</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a601288ba5c613f5f916fda5a2913c3ed" kind="enumvalue"><name>STATE_RELOAD_RECYCLER</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2ad170878a2a3bab7f90ca525ecb595be8" kind="enumvalue"><name>STATE_CASHIN_START</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa1d900c04765a9868f930fdca4168d78" kind="enumvalue"><name>STATE_CAHSIN</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2ade52132e716806d9e9013583462b0064" kind="enumvalue"><name>STATE_CANCEL</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a8031041785ebe28fdf4c951353b02788" kind="enumvalue"><name>STATE_CASHIN_END</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a8baa1c1e6fd48641506cd1ce715cb3f9" kind="enumvalue"><name>STATE_EMPTY</name></member>
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a667adf1721ecf31975b473ea51005d04" kind="enumvalue"><name>STATE_IDLE</name></member>
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa1cbf7ab92312cb40dc586242a8bc03e" kind="enumvalue"><name>STATE_STOP</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ad647e3af47d102142dad0875cb157a1b" kind="variable"><name>BnrResetTimeOutInMS</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a7e1d3882525016aa1f76e25c4be579ff" kind="variable"><name>amountToDispense</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aa3703e473b03e84ba9e16ca8f5d8286d" kind="variable"><name>divider</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1af2afdc0eeff983b1c5dc559087d16828" kind="variable"><name>isBNRToBeActivated</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a533562b0067874521f375d091caab7f0" kind="variable"><name>isBNRToBeDeactivated</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a34352151f1084be74e89f794645c57e9" kind="variable"><name>errorInfo</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a9edc8d02f93ea1c72aa825d223c2e27d" kind="variable"><name>isCashPresent</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4736e081da4dbf79840d0d1fd6429a90" kind="variable"><name>isCashTaken</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ab1d4e2711c0a804c9a3cb0d965e837da" kind="variable"><name>isLoaderMetersUpdade</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2430aea41fc4ec38fc8c5582c1931c11" kind="variable"><name>listLCU</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2da64fcf168fa7a4ca34279baad49a3b" kind="variable"><name>listModulePosition</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a6bc4beea85d3106df5e4aa24be69acf1" kind="variable"><name>state</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1abf507423a1030786740a972b0de9ee29" kind="variable"><name>BnrDefaultOperationTimeOutInMS</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aff3334499cf6bc8d3aebc7b1963cd1d1" kind="variable"><name>moduleEmptied</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a955df92fafa6aaa49c0d372b583446e2" kind="variable"><name>bnr</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1abb143e397152929e3a4c4e676dbd32b4" kind="variable"><name>ev</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a9edc8d02f93ea1c72aa825d223c2e27d" kind="variable"><name>isCashPresent</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4736e081da4dbf79840d0d1fd6429a90" kind="variable"><name>isCashTaken</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aeb362dd8b6d987e24b2f5a8b26b3e110" kind="variable"><name>isDispensable</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a130d0182f8554ab35c1a2a3867ca0118" kind="variable"><name>isReloadInProgress</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a29b15f5a62dba8efc02a27d4f7056541" kind="variable"><name>bnrTask</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ad2a44fee2a4fecf9ed94ca7efd039749" kind="variable"><name>loaderMeter</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a3595c697c0ae8ca1a26319887ea75320" kind="variable"><name>Manufacturer</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a592e60a2019f8472baf3d5f8509bace5" kind="variable"><name>ProductCode</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ae8e145eb7e30ae3ca2a7d6058655c6aa" kind="property"><name>Divider</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a656500677b897b366d2b3a59490948b9" kind="property"><name>State</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1adc772d10be3ccec6618a845eee1bafc3" kind="property"><name>AmountToDispense</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ae8e145eb7e30ae3ca2a7d6058655c6aa" kind="property"><name>Divider</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a5a7adb449d1abe12f2f20088647f5212" kind="property"><name>IsBNRToBeActivated</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ac86209e3f2612e5bfa0654576a66b9fa" kind="property"><name>IsBNRToBeDeactivated</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a3595c697c0ae8ca1a26319887ea75320" kind="property"><name>Manufacturer</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a592e60a2019f8472baf3d5f8509bace5" kind="property"><name>ProductCode</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a501f8ddf6f74b7aa224910a0cda369ec" kind="property"><name>SearchDivider</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" kind="function"><name>CBNR_CPI</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4ade41b0290eee442ca90765ec2523b7" kind="function"><name>CheckAndDispense</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aaa7f1d3f3f732e8debe539f8bafa9e02" kind="function"><name>Empty</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" kind="function"><name>Init</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1aeb0d24fdcf995789e2bf4310ad46011a" kind="function"><name>Reloadrecycler</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" kind="function"><name>Task</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" kind="function"><name>Bnr_OperationCompletedEvent</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a70a1e05eda188ac2746ead3fff39a54d" kind="function"><name>Bnr_OperationCompletedEvent</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a8b16fa3971351e495d8728e5c1920144" kind="function"><name>CashOccured</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1ae87f89fac1d9bd0a973deebec343fed2" kind="function"><name>HardwareError</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a1880d22aaebed7609c1ccdb7586e20cb" kind="function"><name>IntermediateOccured</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0ece0c0f3ee26d82e13583dcbe2a2dc6" kind="function"><name>IntermediateOccured</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a91cd8e697d25e926b73cda537ec4f7d4" kind="function"><name>RollBack</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" kind="function"><name>StatusOccured</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1a87f99167dfc7b15e42f28e302a29e06d" kind="function"><name>Retract</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1abe2d64822c6158adae8bd2bfcc1f6207" kind="function"><name>RollBack</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_coin_validator_1_1_c_canal" kind="class"><name>DeviceLibrary::CCoinValidator::CCanal</name>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a16e378356891c42f61c6dd095248a449" kind="variable"><name>CVOwner</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a60362bd25be7b0e1c79f341f699c7712" kind="variable"><name>Number</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1aa0429a7f94ebb7834798dfc6a89a416b" kind="variable"><name>coinId</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a06ad33cc59b95dfcb34289665b264293" kind="variable"><name>sorter</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1afb856c5c29944f7c7ea587d849450e31" kind="variable"><name>hopperToLoad</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a57e1e00717ed5843c3972601136aefdb" kind="property"><name>HopperToLoad</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1aa3225d03280ea8aa74e82fb5b219b4c4" kind="property"><name>CoinIn</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a9084a4766be33eab2d883a16f3943f36" kind="property"><name>MontantIn</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a76728a2b51f4f90c9d76ed20b40ce00f" kind="property"><name>CoinInInCB</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1aa0429a7f94ebb7834798dfc6a89a416b" kind="variable"><name>coinId</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a60362bd25be7b0e1c79f341f699c7712" kind="variable"><name>Number</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a06ad33cc59b95dfcb34289665b264293" kind="variable"><name>sorter</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a491369891b88e8601a94c2a251c7cc7c" kind="property"><name>AmountCoinInCB</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1aa3225d03280ea8aa74e82fb5b219b4c4" kind="property"><name>CoinIn</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a76728a2b51f4f90c9d76ed20b40ce00f" kind="property"><name>CoinInInCB</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a57e1e00717ed5843c3972601136aefdb" kind="property"><name>HopperToLoad</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1a9084a4766be33eab2d883a16f3943f36" kind="property"><name>MontantIn</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1afc9ce7fde69bcbbeb779acf793541239" kind="function"><name>CCanal</name></member>
   </compound>
   <compound refid="class_device_library_1_1_ccash_reader" kind="class"><name>DeviceLibrary::CcashReader</name>
@@ -88,24 +96,25 @@
     <member refid="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866a86d5eb66e4f787072c88909f8de0ee99" kind="enumvalue"><name>REQUESTINHIBITSTATUS</name></member>
     <member refid="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866aa932deef49f85794660b6e9b0fd2f426" kind="enumvalue"><name>MODIFYMASTERINHIBITSTATUS</name></member>
     <member refid="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866a9feb77035916af7a4a90c7e62047cee0" kind="enumvalue"><name>REQUESTMASTERINHIBITSTATUS</name></member>
-    <member refid="class_device_library_1_1_ccash_reader_1aad999e0bfdf242bd6ef804776097ab5c" kind="variable"><name>priorityUnit</name></member>
+    <member refid="class_device_library_1_1_ccash_reader_1af64d6e18d2fdf29231d928f6a7c54978" kind="variable"><name>PriorityUnit</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1abc43fa1d691915d39d3d843d3bf64ff9" kind="variable"><name>inhibitMask</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1a0c089e70bf0c8496d46937b95a13ce8b" kind="variable"><name>pollingDelay</name></member>
-    <member refid="class_device_library_1_1_ccash_reader_1a566a8b5bf9b1f377c5439f06a6d58178" kind="property"><name>InhibitMask</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1ad6efa8899adedbb445d7f7cb4af0c159" kind="property"><name>MasterInhibitStatus</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1a5378d4373a02c46261c7f611af60a89c" kind="property"><name>PollingDelay</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1a1768cb2711e0f8d8fd45d9d28aeb1cf6" kind="property"><name>PollingPriority</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1a40798e7b17783bffe4d59b67ef57a430" kind="property"><name>SelfTest</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" kind="function"><name>SetMasterInhibit</name></member>
+    <member refid="class_device_library_1_1_ccash_reader_1aa4791d131c5b1f88cff388bbf9792e30" kind="function"><name>GetInhibitMask</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" kind="function"><name>GetInhibitMask</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" kind="function"><name>MasterDisable</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" kind="function"><name>MasterEnable</name></member>
+    <member refid="class_device_library_1_1_ccash_reader_1a3c611d128d79fc207313c11d1ab7cc1a" kind="function"><name>SetInhibitMask</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" kind="function"><name>SetInhibitStatus</name></member>
     <member refid="class_device_library_1_1_ccash_reader_1a75203eaeadfdee235e6046e240da1f21" kind="function"><name>Task</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received" kind="class"><name>DeviceLibrary::CDevicesManager::CCashReceived</name>
-    <member refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1ae2eaaa20b2c7fba9ba04efc6b46c3fb8" kind="variable"><name>listValueIntroduced</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1a8916c3682d78dc794f78fd4aabff2288" kind="variable"><name>amountIntroduced</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1ae2eaaa20b2c7fba9ba04efc6b46c3fb8" kind="variable"><name>listValueIntroduced</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1_1_c_cash_received_1ae40da3f5b7c74b6b2642f3bb86b8f1e1" kind="function"><name>CCashReceived</name></member>
   </compound>
   <compound refid="class_device_library_1_1_ccc_talk" kind="class"><name>DeviceLibrary::CccTalk</name>
@@ -194,35 +203,35 @@
     <member refid="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a5fd22f0fcfa09dee2ad29a0653ed7963" kind="enumvalue"><name>COINJAM</name></member>
     <member refid="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790acaf20830f50dde044b5d55b78bd4ccfe" kind="enumvalue"><name>DISKBLOCKED</name></member>
     <member refid="group___erreurs_1gga179570d2d8f6f95d52ccafb98d20c790a17871c6d9d47f1e52c2681e98a1a9143" kind="enumvalue"><name>ERRORUNKNOW</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1ad5c6d1287d0c049bdbf4fda8cb19c1ef" kind="variable"><name>fileCounterName</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1a43ca834802480b1171030f7ad063c559" kind="variable"><name>verrou</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1ac86c8d06c56d9ece1591d3de08fd5529" kind="variable"><name>deviceAddress</name></member>
     <member refid="class_device_library_1_1_ccc_talk_1ace0437474b7114a98a0f250f82136f50" kind="variable"><name>sizeOfBufferOut</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1ac86c8d06c56d9ece1591d3de08fd5529" kind="variable"><name>deviceAddress</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1a43ca834802480b1171030f7ad063c559" kind="variable"><name>verrou</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1ad5c6d1287d0c049bdbf4fda8cb19c1ef" kind="variable"><name>fileCounterName</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1a3810c0aa448865e19afff87a946fee5d" kind="variable"><name>counters</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f" kind="variable"><name>counterSerializer</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" kind="variable"><name>countersFile</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1aabbbe46d911d826c39712d8aecd10786" kind="variable"><name>mutexCCTalk</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" kind="variable"><name>PortSerie</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1ae73c18703dae000c9f725a44fae17f1a" kind="property"><name>BuildCode</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1af78c9d598eaebc02a257d52353ab257c" kind="property"><name>CommsRevision</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1a3cb80b7a82cc363e0dcefd1f31ced8a2" kind="property"><name>EquipementCategory</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1a687a695bef6d7f25f8fe7148948d04bc" kind="property"><name>SWRev</name></member>
     <member refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" kind="property"><name>DeviceAddress</name></member>
     <member refid="class_device_library_1_1_ccc_talk_1a73a84f7534b5b9ff129897b86d483f48" kind="property"><name>Manufacturer</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1ae73c18703dae000c9f725a44fae17f1a" kind="property"><name>BuildCode</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1abd92229809b4474129b15e638fd56da7" kind="property"><name>ProductCode</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1a3cb80b7a82cc363e0dcefd1f31ced8a2" kind="property"><name>EquipementCategory</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1a6b615dcccbe32e3c9166b0fdb0a74236" kind="property"><name>SerialNumber</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1a687a695bef6d7f25f8fe7148948d04bc" kind="property"><name>SWRev</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1af78c9d598eaebc02a257d52353ab257c" kind="property"><name>CommsRevision</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1a576e09f74dc509dcd7919eceae9cc7de" kind="property"><name>SimplePoll</name></member>
     <member refid="class_device_library_1_1_ccc_talk_1a4ea55bd396398405345e50cb699c0ead" kind="property"><name>OptoStates</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1acda9f65e6498cce0d3e51ad1b587ede4" kind="variable"><name>PortSerie</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1aabbbe46d911d826c39712d8aecd10786" kind="variable"><name>mutexCCTalk</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1a3810c0aa448865e19afff87a946fee5d" kind="variable"><name>counters</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1ada638d9c9c453de40591720409ef4b54" kind="variable"><name>countersFile</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1aa8d3dfce2d2f9f1f2c9ca524d1fbcc8f" kind="variable"><name>counterSerializer</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1abd92229809b4474129b15e638fd56da7" kind="property"><name>ProductCode</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1a6b615dcccbe32e3c9166b0fdb0a74236" kind="property"><name>SerialNumber</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1a576e09f74dc509dcd7919eceae9cc7de" kind="property"><name>SimplePoll</name></member>
     <member refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" kind="function"><name>CccTalk</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" kind="function"><name>IsCmdccTalkSended</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" kind="function"><name>IsDeviceReseted</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1a671d74ee89768f479f386a9a016e747a" kind="function"><name>Init</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1ae3dae0077a9b7fe533abd3d9591e0733" kind="function"><name>IsCcTalkPort</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1a58a0185454ad0e063699aae15c5df79e" kind="function"><name>ZeroMemory</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1a97a1b7f01d0949a63f66d07ee5baa022" kind="function"><name>CheckSum</name></member>
-    <member refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" kind="function"><name>GetASCII</name></member>
     <member refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" kind="function"><name>GetByte</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1a63936f361c9f38f30b8167d6f2d51ad9" kind="function"><name>CheckSum</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" kind="function"><name>GetASCII</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1ad99a0d37ec8ff0907b75d95aa4106b84" kind="function"><name>IsCcTalkPort</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1a4f8f602b57c29e64489c7d31a1fc06b3" kind="function"><name>ZeroMemory</name></member>
     <member refid="class_device_library_1_1_ccc_talk_1a9e6bea86795ec29fde4e6071256eff76" kind="function"><name>ResetCounters</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1a671d74ee89768f479f386a9a016e747a" kind="function"><name>Init</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" kind="function"><name>IsCmdccTalkSended</name></member>
+    <member refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" kind="function"><name>IsDeviceReseted</name></member>
   </compound>
   <compound refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin" kind="class"><name>DeviceLibrary::CcoinsCounters::CCoinInCB::CCoin</name>
     <member refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin_1a3ce86034daa293761b30eefa65cf75c2" kind="variable"><name>coinInCB</name></member>
@@ -234,13 +243,13 @@
     <member refid="group___headers_1gaf51d26810d3dd898c2c312ec8a48017a" kind="variable"><name>REQUESTCOINID</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a88f2e0911379862d5e2da5fc10ce45a1" kind="variable"><name>CanalOwner</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ae1bc073e4de35124f9af75505bf75608" kind="variable"><name>countryCode</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a26a2b02de8a702406234db971ec73f57" kind="variable"><name>valeurCent</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ae415d0f8d307a71296b4c2494fe823e4" kind="variable"><name>issue</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a26a2b02de8a702406234db971ec73f57" kind="variable"><name>valeurCent</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1ace03774c9a68d3600a6e9528ce870066" kind="property"><name>CountryCode</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a2b53e098a15a9aeb11750de6730d8423" kind="property"><name>ValeurCent</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a4b2d9ca3a055e4b85bd39904cf5b8d75" kind="property"><name>Issue</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" kind="function"><name>GetCoinId</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a2b53e098a15a9aeb11750de6730d8423" kind="property"><name>ValeurCent</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a70d3e359c26598f32ff2175fd2fd77ff" kind="function"><name>CCoindID</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" kind="function"><name>GetCoinId</name></member>
   </compound>
   <compound refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b" kind="class"><name>DeviceLibrary::CcoinsCounters::CCoinInCB</name>
     <member refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1a6a188267272acc337f425ad7f7f0be79" kind="variable"><name>coin</name></member>
@@ -272,12 +281,12 @@
     <member refid="class_device_library_1_1_c_coin_validator_1a62ce7ca9d0cc8ef92edb58f06a34add1ae0aa021e21dddbd6d8cecec71e9cf564" kind="enumvalue"><name>OK</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1a62ce7ca9d0cc8ef92edb58f06a34add1a09784ba0e9f8a177ad98970e07381792" kind="enumvalue"><name>COINRETURNACTIVATED</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1a62ce7ca9d0cc8ef92edb58f06a34add1a00b18151c2f99ce38f6a179e84697b04" kind="enumvalue"><name>COSACTIVATED</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1aec7d217f486dbce4458a64bc071fa19d" kind="enum"><name>TrashDoor</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1aec7d217f486dbce4458a64bc071fa19da110ccf2f5d2ff4eda1fd1a494293467d" kind="enumvalue"><name>CLOSED</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1aec7d217f486dbce4458a64bc071fa19daa38bd5138bf35514df41a1795ebbf5c3" kind="enumvalue"><name>OPEN</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1ab4d515bda1d8e8679ed7dc4cc3f5c40c" kind="enum"><name>LowerSensor</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1ab4d515bda1d8e8679ed7dc4cc3f5c40ca88c189a42c87aa49d667fc8ab76bc323" kind="enumvalue"><name>FREE</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1ab4d515bda1d8e8679ed7dc4cc3f5c40ca802706a9238e2928077f97736854bad4" kind="enumvalue"><name>BUSY</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1aec7d217f486dbce4458a64bc071fa19d" kind="enum"><name>TrashDoor</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1aec7d217f486dbce4458a64bc071fa19da110ccf2f5d2ff4eda1fd1a494293467d" kind="enumvalue"><name>CLOSED</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1aec7d217f486dbce4458a64bc071fa19daa38bd5138bf35514df41a1795ebbf5c3" kind="enumvalue"><name>OPEN</name></member>
     <member refid="group___headers_1ga5672baec375c16b1ec7bdb4b85cebaa9" kind="enum"><name>Header</name></member>
     <member refid="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9a9ce2b30cbcbda60f1a4e9d2cd5526d20" kind="enumvalue"><name>REQUESTSTATUS</name></member>
     <member refid="group___headers_1gga5672baec375c16b1ec7bdb4b85cebaa9a085cadf3ee4fec13527da4cbdb2f9e0c" kind="enumvalue"><name>REQUESTDATABASEVER</name></member>
@@ -331,8 +340,8 @@
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a3a1f7e69b7e5e5c269e0fa7e97b0bf0a" kind="enumvalue"><name>SECURITYSTATUSCHANGED</name></member>
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a9f9cc74325b5bb6e924cd0772df6d6a6" kind="enumvalue"><name>MOTOREXCEPTION</name></member>
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ab04c310e6eb59f7ae1eb525e552bbe4f" kind="enumvalue"><name>SWALLOWEDCOIN</name></member>
-    <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ada03008cb56819752dd1fe201c4c1be9" kind="enumvalue"><name>COIN2FAST</name></member>
-    <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad4f375ed800d463da94afc540bf8d22e" kind="enumvalue"><name>COIN2SLOW</name></member>
+    <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a597454d42ebf950c40f24de12e4e5579" kind="enumvalue"><name>COIN2_FAST</name></member>
+    <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591af7990394a2f51ac3868347051c21961c" kind="enumvalue"><name>COIN2_SLOW</name></member>
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aa6c8fed14ab5411a4efe88068c4a99d9" kind="enumvalue"><name>COININCORRECTLYSORTED</name></member>
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591afdbe0522298a7ecd540a24a4d368442a" kind="enumvalue"><name>EXTERNALLIGHTATTACK</name></member>
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a69b954ad6ad0a788c70a17bc2f280d31" kind="enumvalue"><name>INHIBITEDCOIN_1</name></member>
@@ -412,77 +421,81 @@
     <member refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a3f4ffd4998d3212972d11f59c018692c" kind="enumvalue"><name>STATE_CHECKCREDIBUFFER</name></member>
     <member refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871a667adf1721ecf31975b473ea51005d04" kind="enumvalue"><name>STATE_IDLE</name></member>
     <member refid="group___etats_1gga33c79ff59c961c2e1bbf95838e5d6871aa1cbf7ab92312cb40dc586242a8bc03e" kind="enumvalue"><name>STATE_STOP</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1ad4f8b45095565d006a339281155919eb" kind="variable"><name>backEventCounter</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a30fbde585ede120ce65387f605720e99" kind="variable"><name>channelInProgress</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1afefab5e609c6d57f388a90d3386adb8d" kind="variable"><name>defaultSorterPath</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1a03b7719015059d51c015f7a95f3b9cca" kind="variable"><name>errorCV</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a68f118167bcdf23f194ef02b779d4333" kind="variable"><name>numChannel</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a666b623d469f472ea1bc244beb17a94f" kind="variable"><name>exitSensor</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1ad7b9ba1eee53a6659e3ff82579286876" kind="variable"><name>isCVInitialized</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a6a02cde01bde78d88605f59d0d7786b6" kind="variable"><name>isCVToBeActivated</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1aa386173f3a0821f2f9ba7e5eb0255fe6" kind="variable"><name>isCVToBeDeactivated</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a27d54af696ee06dcd90be73fcd41893e" kind="variable"><name>overrideMask</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1ab293634863b100aad9f167f189b49f19" kind="variable"><name>sorterPath</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1af17b6b34b30360010bc77030844502bc" kind="variable"><name>state</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a280a3ac5987ea2e17d87b5e32f830508" kind="variable"><name>trashLid</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1a0fce3a5cb9d620de02a2d6bfd89d72b1" kind="variable"><name>creditBuffer</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a68f118167bcdf23f194ef02b779d4333" kind="variable"><name>numChannel</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1afdeb88b9e7e981afd51bd1322e9f89e9" kind="variable"><name>canaux</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1ada11d6936d839ad456e2bd9e66f3eb31" kind="variable"><name>CVTask</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1ab293634863b100aad9f167f189b49f19" kind="variable"><name>sorterPath</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1ad4f8b45095565d006a339281155919eb" kind="variable"><name>backEventCounter</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1aa386173f3a0821f2f9ba7e5eb0255fe6" kind="variable"><name>isCVToBeDeactivated</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a6a02cde01bde78d88605f59d0d7786b6" kind="variable"><name>isCVToBeActivated</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a280a3ac5987ea2e17d87b5e32f830508" kind="variable"><name>trashLid</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a666b623d469f472ea1bc244beb17a94f" kind="variable"><name>exitSensor</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a30fbde585ede120ce65387f605720e99" kind="variable"><name>channelInProgress</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a27d54af696ee06dcd90be73fcd41893e" kind="variable"><name>overrideMask</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1af17b6b34b30360010bc77030844502bc" kind="variable"><name>state</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1ad7b9ba1eee53a6659e3ff82579286876" kind="variable"><name>isCVInitialized</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a8547317bb187fe7e1fa247b64bc94ed1" kind="property"><name>BackEventCounter</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1af41e76ebe686da650b5a12ab034309ec" kind="property"><name>IsCVToBeDeactivated</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a6fe7522091654bc85951ad9f234b7585" kind="property"><name>IsCVToBeActivated</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1aec2db3e243a0eb073f5392c41ee0c354" kind="property"><name>TrashLid</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a394bb70d5bee7bb9abbe32e332a49071" kind="property"><name>ExitSensor</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1a31cbd99fe83d5483df49f401350c8a45" kind="property"><name>ChannelInProgress</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a065e536f9d47a78ab3bbc5fd2990ada0" kind="property"><name>OverrideMask</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a38527f741c0cee761a37bff50bafbd20" kind="property"><name>State</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a3726a3a290ece84279964b0c857020bf" kind="property"><name>IsCVInitialized</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1a8e3e78f989d6549af291def41d6f2498" kind="property"><name>DataBaseVersion</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a6febc69e244b62d2527286c2483f5a66" kind="property"><name>OverrideStatus</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1afb55c903f65180ee964200e8a8d1bf98" kind="property"><name>DefaultSorterPath</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a065e536f9d47a78ab3bbc5fd2990ada0" kind="property"><name>OverrideMask</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a6febc69e244b62d2527286c2483f5a66" kind="property"><name>OverrideStatus</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1ac45ed64d9685ac636e48b00510c7654e" kind="property"><name>Status</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a538e6fc08186ba969f190503cdc828c2" kind="property"><name>VariablesSet</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" kind="function"><name>TestSolenoid</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a941fe54c9299c2f3d78f865a3c7dc720" kind="function"><name>SetOverrideStatus</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" kind="function"><name>CheckCreditBuffer</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a8dac668c2fb07489dc8ac5ecc06c2d94" kind="function"><name>Init</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" kind="function"><name>CheckState</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1ad9b8f287ccf87c7e71b93518e493aa8a" kind="function"><name>Task</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a8547317bb187fe7e1fa247b64bc94ed1" kind="property"><name>BackEventCounter</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a394bb70d5bee7bb9abbe32e332a49071" kind="property"><name>ExitSensor</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a3726a3a290ece84279964b0c857020bf" kind="property"><name>IsCVInitialized</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a38527f741c0cee761a37bff50bafbd20" kind="property"><name>State</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1aec2db3e243a0eb073f5392c41ee0c354" kind="property"><name>TrashLid</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a6fe7522091654bc85951ad9f234b7585" kind="property"><name>IsCVToBeActivated</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1af41e76ebe686da650b5a12ab034309ec" kind="property"><name>IsCVToBeDeactivated</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1addb8e79d5a3377a2aadef60fc1b19a53" kind="function"><name>CCoinValidator</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" kind="function"><name>CheckState</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a902fc52e8ee7764e0f8daa6b049ed528" kind="function"><name>GetVariablesSet</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a8dac668c2fb07489dc8ac5ecc06c2d94" kind="function"><name>Init</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1ad9b8f287ccf87c7e71b93518e493aa8a" kind="function"><name>Task</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1a941fe54c9299c2f3d78f865a3c7dc720" kind="function"><name>SetOverrideStatus</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" kind="function"><name>TestSolenoid</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" kind="function"><name>CheckCreditBuffer</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer" kind="class"><name>DeviceLibrary::CCoinValidator::CCVcreditBuffer</name>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a831a1f2a114d6c17155f53fcfacfe55e" kind="variable"><name>owner</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1ab0a0005b014588135a657ace10e58bf5" kind="variable"><name>eventCounter</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a7d5e112872384b5613cae252eb00199b" kind="variable"><name>result</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a54e1fef4fc72a0f5eed0cc4843db9573" kind="property"><name>EventCounter</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a78845c21ba07dfdf73e85b1992ee94c0" kind="property"><name>Result</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1afe2f20c8e3af5841dbde8b6b7ec769c7" kind="function"><name>CCVcreditBuffer</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a5b758abc764a2f479895adaaedaf5d00" kind="function"><name>CCVcreditBuffer</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" kind="function"><name>GetBufferCredit</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a3bc2e0efb62c2bdfa23f5b317ce60361" kind="function"><name>GetResult</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a1e9597c79d7cc633be6c7965146ff4ef" kind="function"><name>SetResult</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_device" kind="class"><name>DeviceLibrary::CDevice</name>
+    <member refid="class_device_library_1_1_c_device_1a6aebfce66de1fe317c7b61c0e9914c60" kind="variable"><name>isPresent</name></member>
     <member refid="class_device_library_1_1_c_device_1a788260097f3f2693b2b0ac5d0ef9383a" kind="variable"><name>evReady</name></member>
-    <member refid="class_device_library_1_1_c_device_1a93829459e8bc284d9f8bd56edf59e152" kind="variable"><name>eventsList</name></member>
-    <member refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" kind="variable"><name>eventListLock</name></member>
     <member refid="class_device_library_1_1_c_device_1aa37ddd8fa2c4edfc974ce0865e20d37a" kind="variable"><name>denominationInserted</name></member>
-    <member refid="class_device_library_1_1_c_device_1a5d542b0634e0024751d1e6df6975e0b8" kind="property"><name>SerialNumber</name></member>
+    <member refid="class_device_library_1_1_c_device_1ac61bd97bf95bf2a676f6bdeb1948b75c" kind="variable"><name>eventListLock</name></member>
+    <member refid="class_device_library_1_1_c_device_1a93829459e8bc284d9f8bd56edf59e152" kind="variable"><name>eventsList</name></member>
+    <member refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" kind="property"><name>IsPresent</name></member>
     <member refid="class_device_library_1_1_c_device_1a15613af54894a9dd673f76ac539741b1" kind="property"><name>Manufacturer</name></member>
     <member refid="class_device_library_1_1_c_device_1adb37480555a37555da8fc17c73196fda" kind="property"><name>ProductCode</name></member>
-    <member refid="class_device_library_1_1_c_device_1a72aa72778cf6f58e44f7048f8f86fe2f" kind="property"><name>IsPresent</name></member>
-    <member refid="class_device_library_1_1_c_device_1a6aebfce66de1fe317c7b61c0e9914c60" kind="variable"><name>isPresent</name></member>
-    <member refid="class_device_library_1_1_c_device_1afe0c01625fcd84aeedf4092db374f1bf" kind="function"><name>Task</name></member>
-    <member refid="class_device_library_1_1_c_device_1ad0028a2572404e6a3f21fa1a56f6b136" kind="function"><name>Init</name></member>
+    <member refid="class_device_library_1_1_c_device_1a5d542b0634e0024751d1e6df6975e0b8" kind="property"><name>SerialNumber</name></member>
     <member refid="class_device_library_1_1_c_device_1a1ea11e47275e8d7baaa1f60a64c41d83" kind="function"><name>CDevice</name></member>
-    <member refid="class_device_library_1_1_c_device_1abb1407e4a9ad3eca3ed3e8e92ead69fe" kind="function"><name>Dispose</name></member>
     <member refid="class_device_library_1_1_c_device_1acc529f16bc467bfa601e41dc205825f4" kind="function"><name>Dispose</name></member>
+    <member refid="class_device_library_1_1_c_device_1abb1407e4a9ad3eca3ed3e8e92ead69fe" kind="function"><name>Dispose</name></member>
+    <member refid="class_device_library_1_1_c_device_1ad0028a2572404e6a3f21fa1a56f6b136" kind="function"><name>Init</name></member>
+    <member refid="class_device_library_1_1_c_device_1afe0c01625fcd84aeedf4092db374f1bf" kind="function"><name>Task</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_devices_manager" kind="class"><name>DeviceLibrary::CDevicesManager</name>
-    <member refid="class_device_library_1_1_c_devices_manager_1ade92059fe5a981518bc569c433c05385" kind="variable"><name>parametersFile</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1aee0669d5624a6a0fb0f638a1a9941e2b" kind="variable"><name>ParametersFile</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1ad6f9a2583a1225d2c522aae879444ef0" kind="variable"><name>bnX</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1ab69ead1f91d966ffac4421bab04d7852" kind="variable"><name>msgTask</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1acd589381ca60b7094434f8524efea016" kind="variable"><name>Log</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a008701f9d063afbd16fae6db1a3992c2" kind="variable"><name>ToPay</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a60166c124500dc5c13daba3998f7c60a" kind="variable"><name>cashReceived</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a10652b4e74c018888e46d77b44cf1ce9" kind="variable"><name>ParamFileName</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1a91ff62e15338b5b14249615bb40dd341" kind="variable"><name>alternateDevise</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1aca682fa0e485eceb4925b748b513134a" kind="variable"><name>mainDevise</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1a62197fd9306501b9dd819bd18a86fccd" kind="variable"><name>tauxDeChange</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1ae030c5d305a0d156e6f392ed95a12929" kind="variable"><name>Hoppers</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a5cfa44bdefe3c28126bd51eaeae7b808" kind="variable"><name>monnayeur</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a505205adcc4f492c28e1a3cdde57ade6" kind="event"><name>FireEvent</name></member>
@@ -492,14 +505,16 @@
     <member refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" kind="function"><name>BeginTransaction</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1af18337108d515626ddb56bf1789a3d2e" kind="function"><name>BNRBillRetract</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" kind="function"><name>BNRBillRollBack</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1abfbac0c12306e6b790c6dc832a936234" kind="function"><name>BNRCashBoxRemoved</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1ad684c34a4cb3c82f18decc6c35f29414" kind="function"><name>BNRDispense</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1a55a2595eaddb2907cea1ba69a178b660" kind="function"><name>BNRReloadRecycler</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1ab3b1bd2212d8ab4b33e0ced4d4419c7c" kind="function"><name>BNRSetLoaderMeter</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1a9f7e3b6b7033452c066bcbe896607c80" kind="function"><name>BNRTransfertLoaderRecyclersInCB</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a6d13017ed7033e67eeda23124ebaa52a" kind="function"><name>CancelTransaction</name></member>
-    <member refid="class_device_library_1_1_c_devices_manager_1acb9b7f647f7ca372051492560ea7fc85" kind="function"><name>CashBoxRemoved</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1aa3edfeb4721c3d33e5c1ca708bc9d118" kind="function"><name>ccTalkCountersResets</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1aa4f84b72137675bc5cb0c98ffc51d4e2" kind="function"><name>Dispose</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a3c74f4de6ac82cda4841a8d43da09ce8" kind="function"><name>EndTransaction</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a3cbd9f50c3f86d90f10f2f3a66a3717c" kind="function"><name>GetSerialPort</name></member>
-    <member refid="class_device_library_1_1_c_devices_manager_1a930edf39df8f01578f9a4d3d55ebf1bc" kind="function"><name>ResetCounters</name></member>
-    <member refid="class_device_library_1_1_c_devices_manager_1a111269aeb8c8c7c8c5e78cfc8c016489" kind="function"><name>SetLoaderNumber</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1af8b27e93e6a4fbce10494e95723c91ec" kind="function"><name>SetSorterPath</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" kind="function"><name>ChangeBack</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1abcfed3749aff233df6c41849c8192850" kind="function"><name>OnBNRDispensed</name></member>
@@ -517,37 +532,38 @@
     <member refid="class_device_library_1_1_c_devices_manager_1a8c6efc3c0f6e6664990edf0c92f6f237" kind="function"><name>OnHopperError</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1aa18aded58c64b857ef55e6d393d481ff" kind="function"><name>OnHopperHardLevelChanged</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1aa1cc70b8bdfacf1f80e54fa230fd5477" kind="function"><name>OnHopperSoftLevelChanged</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1a7cc31e2791cb13cd6abbe19316913e4d" kind="function"><name>OnModuleEmptied</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1ad66242c0d494fbb018d3da25334bfcb7" kind="function"><name>OnMoneyReceived</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1ade39ebe65c6d9b8ba4a7935c89a0f32f" kind="function"><name>ReadParamHopper</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a83b922baef8338338cff42eadbc534b3" kind="function"><name>SetSortersAndHoppersToLoad</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" kind="function"><name>Task</name></member>
     <member refid="class_device_library_1_1_c_devices_manager_1a83668b6047b684d8a44b668f7c173a46" kind="function"><name>~CDevicesManager</name></member>
-    <member refid="class_device_library_1_1_c_devices_manager_1a34a6ca3de6a47af6f78771ff05206e87" kind="function"><name>Dispose</name></member>
+    <member refid="class_device_library_1_1_c_devices_manager_1af3eccd449132a0e6561c07685958e542" kind="function"><name>Dispose</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result" kind="class"><name>DeviceLibrary::CHopper::CHopperStatus::CDispensedResult</name>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a38e46b868af79495c1f404a9522b4087" kind="variable"><name>nameOfHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a2eac4efe6ef793ea361f0f2c5baf5326" kind="variable"><name>CoinsRemaining</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a50cf9d9c803868a3d5df1a5359c4efd4" kind="variable"><name>AmountToDispense</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a8266bc3a0c5a4c268d57f5ed83d0882f" kind="variable"><name>CoinsPaid</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a2eac4efe6ef793ea361f0f2c5baf5326" kind="variable"><name>CoinsRemaining</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a2a472fae256a38b6fa595a8a2047a4c6" kind="variable"><name>CoinsUnpaid</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a6aae05e36efc56b7879b36cae19836fd" kind="variable"><name>CoinToDispense</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a575da9fcadfa091789d482ce63a10d6f" kind="variable"><name>MontantPaid</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a0c4e306c0e2bfd89d578c4de56978f70" kind="variable"><name>MontantUnpaid</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a6aae05e36efc56b7879b36cae19836fd" kind="variable"><name>CoinToDispense</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a50cf9d9c803868a3d5df1a5359c4efd4" kind="variable"><name>AmountToDispense</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result_1a38e46b868af79495c1f404a9522b4087" kind="variable"><name>nameOfHopper</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_hopper_1_1_c_empty_count" kind="class"><name>DeviceLibrary::CHopper::CEmptyCount</name>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_empty_count_1afadaec8d415014a84a134c64740d7414" kind="variable"><name>nameOfHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_empty_count_1a8ccb96ba708ceb8206e3ba99ebb201da" kind="variable"><name>counter</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_empty_count_1aa9438d053793ad17dfaaba410dff2af1" kind="variable"><name>amountCounter</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_empty_count_1adf61aa1680a4934d9e2e6ebc47734e5a" kind="variable"><name>delta</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_empty_count_1a30e4ea7873f253cbaa362dac6985043b" kind="variable"><name>amountDelta</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_empty_count_1a8ccb96ba708ceb8206e3ba99ebb201da" kind="variable"><name>counter</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_empty_count_1adf61aa1680a4934d9e2e6ebc47734e5a" kind="variable"><name>delta</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_empty_count_1afadaec8d415014a84a134c64740d7414" kind="variable"><name>nameOfHopper</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v" kind="class"><name>DeviceLibrary::CCoinValidator::CErroCV</name>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v_1a645b37f5a1414ee05ef237a4afbd8e43" kind="variable"><name>code</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v_1a0d512c6ac4b9a6e46c8161b4e9cf9828" kind="variable"><name>errorText</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror" kind="class"><name>DeviceLibrary::CBNR_CPI::Cerror</name>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror_1a494dead021dc764f07d5e056cdb2de4c" kind="variable"><name>error</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror_1ad8e1fd30ca2c6555c1ae823d7d186620" kind="variable"><name>nameModule</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_cerror_1a8a10e407be4db3d74a5de4a0975c6553" kind="variable"><name>error</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_event" kind="class"><name>DeviceLibrary::CEvent</name>
     <member refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38" kind="enum"><name>Reason</name></member>
@@ -565,17 +581,18 @@
     <member refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a5d0a68601bfeb09556fec3789dc8a376" kind="enumvalue"><name>BNRMODULEREINSERE</name></member>
     <member refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a3607195dbfd35a89a066f20d2452d093" kind="enumvalue"><name>BNRRAZMETER</name></member>
     <member refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38af50fa11a2d7d6a9f548b30556d1d9930" kind="enumvalue"><name>BNRDISPENSE</name></member>
+    <member refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38acb45971c69cf7f27a2b446aa260ba0f8" kind="enumvalue"><name>BNREMPTY</name></member>
     <member refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a2333bc4483264edfaa52d998946b2d7a" kind="enumvalue"><name>CASHBOXREMOVED</name></member>
     <member refid="class_device_library_1_1_c_event_1a05d1adbc7edc005721b60bf39a965d38a02329a248129261e531c515aabab49eb" kind="enumvalue"><name>DLLLREADY</name></member>
-    <member refid="class_device_library_1_1_c_event_1a22d3312ef4a62257d6d6da4641812352" kind="variable"><name>reason</name></member>
-    <member refid="class_device_library_1_1_c_event_1af86d6bd8d5fad398a9f3db82bb526d06" kind="variable"><name>nameOfDevice</name></member>
     <member refid="class_device_library_1_1_c_event_1a0c03eb076bccc1854d9128f712bcf39a" kind="variable"><name>data</name></member>
+    <member refid="class_device_library_1_1_c_event_1af86d6bd8d5fad398a9f3db82bb526d06" kind="variable"><name>nameOfDevice</name></member>
+    <member refid="class_device_library_1_1_c_event_1a22d3312ef4a62257d6d6da4641812352" kind="variable"><name>reason</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_hopper_1_1_c_hard_level_data" kind="class"><name>DeviceLibrary::CHopper::CHardLevelData</name>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1a1444b23b86902e452a455db0fbfc2f57" kind="variable"><name>nameOfHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1aca7f707d07cf10da61fb5ba5c247d1cd" kind="variable"><name>isHCritical</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1a721ace977b64e268deca83e13e8fd8cc" kind="variable"><name>coinsNumber</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1aca7f707d07cf10da61fb5ba5c247d1cd" kind="variable"><name>isHCritical</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1ae133eb4eac3921336823f13dd52f1893" kind="variable"><name>level</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1a1444b23b86902e452a455db0fbfc2f57" kind="variable"><name>nameOfHopper</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_hopper" kind="class"><name>DeviceLibrary::CHopper</name>
     <member refid="group___erreurs_1gad4b59816effbf70353c1e53e3cdeb5ad" kind="enum"><name>HopperError</name></member>
@@ -649,132 +666,132 @@
     <member refid="class_device_library_1_1_c_hopper_1a7892c052dbffb877fc65bbff569d5247a8722070d39c557fae8c3eae06ad557f3" kind="enumvalue"><name>HILEVEREACHED</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a7892c052dbffb877fc65bbff569d5247a012c43c20f7b466e1e68e45ff86eeba3" kind="enumvalue"><name>LOLEVELIMPLEMENTED</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a7892c052dbffb877fc65bbff569d5247a0fb3f62c68cdca890c8a5c51225659c7" kind="enumvalue"><name>HILEVELIMPLEMENTED</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a109908437c130d0e5f081f13ab48c98c" kind="variable"><name>maxHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ad9d867e3315d21fea58b64b696fa8d17" kind="variable"><name>errorHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ac85d53246fc91db72631d1188db034bd" kind="variable"><name>name</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1aa78b1d599715ada39ff0a032db1703a0" kind="variable"><name>isEmptyingInProgress</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a8d069f368b3dd2356d76b8244181168b" kind="variable"><name>AddressBaseHoper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ab4e4002ee1d9863f6eaf3e67526d4c9a" kind="variable"><name>variables</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ab1706fc6c299ceacbbc2d16a11229f41" kind="variable"><name>dispenseStatus</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1af41c804396bf26e0d2275a1d90f763e2" kind="variable"><name>Number</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a3896efcc3ac63f3c01d3871d8f74881d" kind="variable"><name>memoryStorage</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1aa38216ffa60bf350c59c59af0de3fa7b" kind="variable"><name>emptyCount</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1acfcffc972c7e842f7bf34140fd320a27" kind="variable"><name>HTask</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a35d6ef570273f2447ecb5b3b750ef561" kind="variable"><name>deviceLevel</name></member>
     <member refid="class_device_library_1_1_c_hopper_1abf74fc1cb2ec3ad25daa3cc88b4319a6" kind="variable"><name>pollDelayHopper</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a04f3beafff28e55c391bd6d95a3b6e8a" kind="variable"><name>polllDelayLevel</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1aceb28a1e174ca444bd58e2ef26da43f7" kind="variable"><name>hopperCoinID</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1aedce06780456d27a6ee74f2269c65841" kind="variable"><name>isInitialized</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a9e39760b91f3b17ef0aa261050d0eaa6" kind="variable"><name>isOnError</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a804bf86a37f07aac552758664c24cf5a" kind="variable"><name>coinValue</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a79ee64edae2c11afb1b896ee2aed6244" kind="variable"><name>state</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a32f9a99ef20b04e9cebc5ebc6dfa563c" kind="variable"><name>cipherKey</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1aa1cc0dfb33f3c1ea78e59a928f070af2" kind="variable"><name>isMaxCurrentExceeded</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a54232fce2e65721512d5c4af284b70cb" kind="variable"><name>isTOOccured</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a1d863d573d5f98af9d1fdd08193fbe3b" kind="variable"><name>isMotorReversed</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ac847d68d6bb9f81e3fedc440adefa16a" kind="variable"><name>isOptoPathBlocked</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a46a407fd60311e0aadcefcfec3d3adba" kind="variable"><name>isShortCircuit</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1afa8bdfc945c91990c85597e8369f3533" kind="variable"><name>isOptoPermanentlyBlocked</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a23f529de0e81bba3a6154b771a73becd" kind="variable"><name>isPowerUpDetected</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a2cee14ef3bca1fb11d52a03950d9c2cc" kind="variable"><name>isPayoutDisabled</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a8397071ed306791c872d1e5315d04059" kind="variable"><name>isOptoShorCircuit</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a7ed55547c986772ffa22364131ac23e2" kind="variable"><name>isSingleCoinMode</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a275ff1ceaa70d12d9359ba26ace802a0" kind="variable"><name>coinsToDistribute</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a804bf86a37f07aac552758664c24cf5a" kind="variable"><name>coinValue</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a29e12df2c261154d1765134515fbae5c" kind="variable"><name>defaultFilling</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1aceb28a1e174ca444bd58e2ef26da43f7" kind="variable"><name>hopperCoinID</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a8188becec5387ed7584617af4ccb2025" kind="variable"><name>isCheckSumAError</name></member>
     <member refid="class_device_library_1_1_c_hopper_1aa8866369ae3fa0188edc5665449ab3c9" kind="variable"><name>isCheckSumBError</name></member>
     <member refid="class_device_library_1_1_c_hopper_1aa95e9bb5f442de328c326253fa90afce" kind="variable"><name>isCheckSumCError</name></member>
     <member refid="class_device_library_1_1_c_hopper_1aaccd96845a35cdf1cb32d5e43da2c4a3" kind="variable"><name>isCheckSumDError</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a0bca87c63019430441bf2c80abf4fd2f" kind="variable"><name>isPowerFailMemoryWrite</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ac1ddb28d6e7d5a81993027423d8f961a" kind="variable"><name>isCritical</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a4b3c4212e5679271b63d8169dc09f4d9" kind="variable"><name>isDispensed</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1aedce06780456d27a6ee74f2269c65841" kind="variable"><name>isInitialized</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1aa1cc0dfb33f3c1ea78e59a928f070af2" kind="variable"><name>isMaxCurrentExceeded</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a1d863d573d5f98af9d1fdd08193fbe3b" kind="variable"><name>isMotorReversed</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a9e39760b91f3b17ef0aa261050d0eaa6" kind="variable"><name>isOnError</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ac847d68d6bb9f81e3fedc440adefa16a" kind="variable"><name>isOptoPathBlocked</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1afa8bdfc945c91990c85597e8369f3533" kind="variable"><name>isOptoPermanentlyBlocked</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a8397071ed306791c872d1e5315d04059" kind="variable"><name>isOptoShorCircuit</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a2cee14ef3bca1fb11d52a03950d9c2cc" kind="variable"><name>isPayoutDisabled</name></member>
     <member refid="class_device_library_1_1_c_hopper_1ae8d61afaaf0fc951912fef1e1cff0d78" kind="variable"><name>isPINEnabled</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a275ff1ceaa70d12d9359ba26ace802a0" kind="variable"><name>coinsToDistribute</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a0bca87c63019430441bf2c80abf4fd2f" kind="variable"><name>isPowerFailMemoryWrite</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a23f529de0e81bba3a6154b771a73becd" kind="variable"><name>isPowerUpDetected</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a46a407fd60311e0aadcefcfec3d3adba" kind="variable"><name>isShortCircuit</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a7ed55547c986772ffa22364131ac23e2" kind="variable"><name>isSingleCoinMode</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a54232fce2e65721512d5c4af284b70cb" kind="variable"><name>isTOOccured</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a0ac72d8ea33a3fc75f229737dfdc58f8" kind="variable"><name>levelEmptySoft</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a1defd2c7718d3cce8b500fd0b2fc8fda" kind="variable"><name>levelFullSoft</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a3a018aad81e03f3a0571edd2d970a8ca" kind="variable"><name>levelHISoft</name></member>
     <member refid="class_device_library_1_1_c_hopper_1ad1e1ed5e4dbfd8b30b8a06b6840ffa9d" kind="variable"><name>levelLOSoft</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a0ac72d8ea33a3fc75f229737dfdc58f8" kind="variable"><name>levelEmptySoft</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a29e12df2c261154d1765134515fbae5c" kind="variable"><name>defaultFilling</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a4b3c4212e5679271b63d8169dc09f4d9" kind="variable"><name>isDispensed</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ac1ddb28d6e7d5a81993027423d8f961a" kind="variable"><name>isCritical</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ae520933291a940b7586613fb1ad970a6" kind="property"><name>IsInitialized</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a78903783271cadf2c222e983c46009f5" kind="property"><name>CoinValue</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a3c755d041eabd52ba997d42822658f91" kind="property"><name>CoinsInHopper</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a79ee64edae2c11afb1b896ee2aed6244" kind="variable"><name>state</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1af1fc329df662baec693700a762f81b1d" kind="variable"><name>delaypollLevel</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a8d069f368b3dd2356d76b8244181168b" kind="variable"><name>AddressBaseHoper</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a109908437c130d0e5f081f13ab48c98c" kind="variable"><name>maxHopper</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a35d6ef570273f2447ecb5b3b750ef561" kind="variable"><name>deviceLevel</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ab1706fc6c299ceacbbc2d16a11229f41" kind="variable"><name>dispenseStatus</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1aa38216ffa60bf350c59c59af0de3fa7b" kind="variable"><name>emptyCount</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ad9d867e3315d21fea58b64b696fa8d17" kind="variable"><name>errorHopper</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1acfcffc972c7e842f7bf34140fd320a27" kind="variable"><name>HTask</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1aa78b1d599715ada39ff0a032db1703a0" kind="variable"><name>isEmptyingInProgress</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a3896efcc3ac63f3c01d3871d8f74881d" kind="variable"><name>memoryStorage</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ac85d53246fc91db72631d1188db034bd" kind="variable"><name>name</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1af41c804396bf26e0d2275a1d90f763e2" kind="variable"><name>Number</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ab4e4002ee1d9863f6eaf3e67526d4c9a" kind="variable"><name>variables</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a79d460fdbac28e0562e95fec2fc5e374" kind="property"><name>LevelStatus</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a0a7c83ec2bf3e3ac22e6585e6c0ff4ae" kind="property"><name>AmountInHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ab6a5f0c6c2bfb253f65d75d0f7006e5f" kind="property"><name>CoinsOut</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a341c4cee94631414e512d7edf2d3b2fc" kind="property"><name>AmountOut</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a5ace9c8caf38ba82416201a92908d426" kind="property"><name>CoinsLoadedInHopper</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a9a68e629bcbc3cfc2c6828516e2a152d" kind="property"><name>AmountLoadedInHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1aa9f1e8689d187df5894527e7c02dc875" kind="property"><name>State</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a045b85a17c558f578649aca5d387561b" kind="property"><name>IsMaxCurrentExceeded</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1adf2e0f18bd630e28e89aea2f45ef6a19" kind="property"><name>IsTOOccured</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a9e9bbbee8c2ec524e36442a66482d41f" kind="property"><name>IsMotorReversed</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1aba941b8ab4317792660483f287171363" kind="property"><name>IsOptoPathBlocked</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1aa52f0af92ae272576ec14a79c6356e96" kind="property"><name>IsShortCircuit</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ad7168dd39fa5f937164d357c3236321d" kind="property"><name>IsOptoPermanentlyBlocked</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a5a9d29bab15e199a614d991b6b860c5a" kind="property"><name>IsPowerUpDetected</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a5f728eaab6f916a56b0927cfef1c836f" kind="property"><name>IsPayoutDisabled</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1afca797bea58cb663b8b3784df7c9dc65" kind="property"><name>IsOptoShorCircuit</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ac8bdea555bab297e4533885935005ad9" kind="property"><name>IsSingleCoinMode</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a341c4cee94631414e512d7edf2d3b2fc" kind="property"><name>AmountOut</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ac3540ffaafc86345d05281840157f5ad" kind="property"><name>CoinId</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a3c755d041eabd52ba997d42822658f91" kind="property"><name>CoinsInHopper</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a5ace9c8caf38ba82416201a92908d426" kind="property"><name>CoinsLoadedInHopper</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ab6a5f0c6c2bfb253f65d75d0f7006e5f" kind="property"><name>CoinsOut</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a11dafc48a8a680909486f10a61b80de1" kind="property"><name>CoinsToDistribute</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a78903783271cadf2c222e983c46009f5" kind="property"><name>CoinValue</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ad75b00a2bcc10f3340ffb6b3735bea7a" kind="property"><name>DefaultFilling</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a1a49cc5d1094fa17df2b465c2c53f658" kind="property"><name>EmergecyStop</name></member>
     <member refid="class_device_library_1_1_c_hopper_1ab6b53cde806c99f06e7ab4e51044c68c" kind="property"><name>IsCheckSumAError</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a97fc7f01be900cd25941c1cc0d1ff053" kind="property"><name>IsCheckSumBError</name></member>
     <member refid="class_device_library_1_1_c_hopper_1abcd01eec19d5cefaaf8f7a8a748777c1" kind="property"><name>IsCheckSumCError</name></member>
     <member refid="class_device_library_1_1_c_hopper_1af21105cacff9feef51796a71f1066d6c" kind="property"><name>IsCheckSumDError</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ab6ddbdf218466891ec4df5b618f22b57" kind="property"><name>IsPowerFailMemoryWrite</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a08a82f43af4ac242d87e2a73734d9159" kind="property"><name>IsCritical</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a1cb25d14b95a28dcd510b354b784a4ab" kind="property"><name>IsDispensed</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a621e84f9419e3b7fd1c35f3f0a336a31" kind="property"><name>IsHighLevelImplemented</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a4f4d3bcff66d7377ab203313ab1778f8" kind="property"><name>IsHighLevelReached</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ae520933291a940b7586613fb1ad970a6" kind="property"><name>IsInitialized</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a15324622637cfb57c9a24f321d55a496" kind="property"><name>IsLowLevelImplemented</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a04e41e117c79e3ac0c3cd3dc38d3931e" kind="property"><name>IsLowLevelReached</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a045b85a17c558f578649aca5d387561b" kind="property"><name>IsMaxCurrentExceeded</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a9e9bbbee8c2ec524e36442a66482d41f" kind="property"><name>IsMotorReversed</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1aba941b8ab4317792660483f287171363" kind="property"><name>IsOptoPathBlocked</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ad7168dd39fa5f937164d357c3236321d" kind="property"><name>IsOptoPermanentlyBlocked</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1afca797bea58cb663b8b3784df7c9dc65" kind="property"><name>IsOptoShorCircuit</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a5f728eaab6f916a56b0927cfef1c836f" kind="property"><name>IsPayoutDisabled</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a6cba5628502ed179dc886abe0e553879" kind="property"><name>IsPINEnabled</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a11dafc48a8a680909486f10a61b80de1" kind="property"><name>CoinsToDistribute</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ab6ddbdf218466891ec4df5b618f22b57" kind="property"><name>IsPowerFailMemoryWrite</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a5a9d29bab15e199a614d991b6b860c5a" kind="property"><name>IsPowerUpDetected</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1aa52f0af92ae272576ec14a79c6356e96" kind="property"><name>IsShortCircuit</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ac8bdea555bab297e4533885935005ad9" kind="property"><name>IsSingleCoinMode</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1adf2e0f18bd630e28e89aea2f45ef6a19" kind="property"><name>IsTOOccured</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1aa319784d7be6861029637485981d5bc8" kind="property"><name>LevelEmptySoft</name></member>
     <member refid="class_device_library_1_1_c_hopper_1ade03b189fd3b60ae0be1b0ecc4b58177" kind="property"><name>LevelFullSoft</name></member>
     <member refid="class_device_library_1_1_c_hopper_1add0b0bb819e03109708b70ceecc31106" kind="property"><name>LevelHISoft</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a27713aed4b5a8f43ec2998ddec6ad5f2" kind="property"><name>LevelLOSoft</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1aa319784d7be6861029637485981d5bc8" kind="property"><name>LevelEmptySoft</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ad75b00a2bcc10f3340ffb6b3735bea7a" kind="property"><name>DefaultFilling</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a1cb25d14b95a28dcd510b354b784a4ab" kind="property"><name>IsDispensed</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a08a82f43af4ac242d87e2a73734d9159" kind="property"><name>IsCritical</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a79d460fdbac28e0562e95fec2fc5e374" kind="property"><name>LevelStatus</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a621e84f9419e3b7fd1c35f3f0a336a31" kind="property"><name>IsHighLevelImplemented</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a15324622637cfb57c9a24f321d55a496" kind="property"><name>IsLowLevelImplemented</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a4f4d3bcff66d7377ab203313ab1778f8" kind="property"><name>IsHighLevelReached</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a04e41e117c79e3ac0c3cd3dc38d3931e" kind="property"><name>IsLowLevelReached</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a1a49cc5d1094fa17df2b465c2c53f658" kind="property"><name>EmergecyStop</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ac3540ffaafc86345d05281840157f5ad" kind="property"><name>CoinId</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1af1fc329df662baec693700a762f81b1d" kind="variable"><name>delaypollLevel</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a6c3cbf56cd236d0867a96e5345f6b881" kind="function"><name>GetResetableCounter</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ad4e3e04686c9cabd002597ebd8fa3712" kind="function"><name>PumpRNG</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1adc0fd478490e3ef5e255f7bc2f64f506" kind="function"><name>DispenseCoins</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1acda4cf9b030e54786ba9b366fdf3f6e2" kind="function"><name>Init</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a70d416bc45d53fc08588ece6aa2d2c0e" kind="function"><name>CheckLevel</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1ae47327ae35305769239ffd9922081d57" kind="function"><name>Empty</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a25b43f1aafc2b92432077743ce07b39c" kind="function"><name>ToString</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1af02883320a4f999d393dc6917a14ab03" kind="function"><name>Dispense</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a2fa0700c53416b25e7cad3dd626a1753" kind="function"><name>SubCounters</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1aa36d7fe76437086718eee22bc8189d3b" kind="function"><name>LoadHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a26e1f1fb8a30b65d591b53eb6d049acf" kind="function"><name>Task</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1aa9f1e8689d187df5894527e7c02dc875" kind="property"><name>State</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a25c0ba824eb783ecdec6c6f53f90f243" kind="function"><name>CHopper</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a70d416bc45d53fc08588ece6aa2d2c0e" kind="function"><name>CheckLevel</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1af02883320a4f999d393dc6917a14ab03" kind="function"><name>Dispense</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1adc0fd478490e3ef5e255f7bc2f64f506" kind="function"><name>DispenseCoins</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ae47327ae35305769239ffd9922081d57" kind="function"><name>Empty</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a6c3cbf56cd236d0867a96e5345f6b881" kind="function"><name>GetResetableCounter</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1acda4cf9b030e54786ba9b366fdf3f6e2" kind="function"><name>Init</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1aa36d7fe76437086718eee22bc8189d3b" kind="function"><name>LoadHopper</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1ad4e3e04686c9cabd002597ebd8fa3712" kind="function"><name>PumpRNG</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a2fa0700c53416b25e7cad3dd626a1753" kind="function"><name>SubCounters</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a26e1f1fb8a30b65d591b53eb6d049acf" kind="function"><name>Task</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a25b43f1aafc2b92432077743ce07b39c" kind="function"><name>ToString</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1af87151928b070f2866b4782c1cf2c3eb" kind="function"><name>AddErrorHopperEvent</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a1c8de197528a0f954006105da4fd261f" kind="function"><name>EnableHopper</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1a7afeec608339100b06fcbfa6ab3b3b18" kind="function"><name>EventLevelHopper</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a1faca12f58535beec695d78479d29884" kind="function"><name>GetCipherKey</name></member>
     <member refid="class_device_library_1_1_c_hopper_1a2a1d5d6383c6ab9e5952f6cac14d65df" kind="function"><name>TestHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1a7afeec608339100b06fcbfa6ab3b3b18" kind="function"><name>EventLevelHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1af87151928b070f2866b4782c1cf2c3eb" kind="function"><name>AddErrorHopperEvent</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id" kind="class"><name>DeviceLibrary::CHopper::CHopperCoinId</name>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id_1a2539177528efbfaf371d5854f21a2bc3" kind="variable"><name>CountryCode</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id_1a0f682ecabc038f13d5f18db721c55cc8" kind="variable"><name>ValeurCent</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id_1a7a0db9cd285047301297d776c0f97975" kind="variable"><name>Issue</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id_1a0f682ecabc038f13d5f18db721c55cc8" kind="variable"><name>ValeurCent</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_hopper_1_1_c_hopper_error" kind="class"><name>DeviceLibrary::CHopper::CHopperError</name>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1a156c6efcbd4e501253ee2a02e31b2c84" kind="variable"><name>nameOfHopper</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1aebf09aca893b91f93b62c431ebdebb18" kind="variable"><name>Code</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1a3807ac7aa4c86af85a302c53d4c515de" kind="variable"><name>isHopperCritical</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1a156c6efcbd4e501253ee2a02e31b2c84" kind="variable"><name>nameOfHopper</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status" kind="class"><name>DeviceLibrary::CHopper::CHopperStatus</name>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1a8b03081a38d0f3bcc61df28ea5c7c0b7" kind="variable"><name>Owner</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1aaadbacb71036a8cf27ba859db73b3a58" kind="variable"><name>eventCounter</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1aec389f02671413541f70a5b3ead45768" kind="variable"><name>coinsRemaining</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1a71ff5c352c3accf5f7d23f60e60fa0f8" kind="variable"><name>coinsPaid</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1aec389f02671413541f70a5b3ead45768" kind="variable"><name>coinsRemaining</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1a7712acd52111b0c1605d135ee07ede27" kind="variable"><name>coinsUnpaid</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1ac1a6a71f2f93c75586758b64294f0576" kind="property"><name>EventCounter</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1ad5afd36f67df7e3028b4d6482ef06fe5" kind="property"><name>CoinsRemaining</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1a278b112ef6343808aed31d807aed4e18" kind="property"><name>CoinsPaid</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1ab29cd451630d154cc498f86bc2147c48" kind="property"><name>CoinsUnpaid</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1aaadbacb71036a8cf27ba859db73b3a58" kind="variable"><name>eventCounter</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1adccf8888101528fac1719c6ca6bb65a3" kind="variable"><name>dispensedResult</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1adee6f8f04f44591bd69e469ae255ac28" kind="function"><name>GetHopperStatus</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1a278b112ef6343808aed31d807aed4e18" kind="property"><name>CoinsPaid</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1ad5afd36f67df7e3028b4d6482ef06fe5" kind="property"><name>CoinsRemaining</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1ab29cd451630d154cc498f86bc2147c48" kind="property"><name>CoinsUnpaid</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1ac1a6a71f2f93c75586758b64294f0576" kind="property"><name>EventCounter</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1a4c22d7f49dade95cb88e239e94db7200" kind="function"><name>CHopperStatus</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1adee6f8f04f44591bd69e469ae255ac28" kind="function"><name>GetHopperStatus</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set" kind="class"><name>DeviceLibrary::CHopper::CHopperVariableSet</name>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ac3dba744da4997b49495d9e8ca58afe7" kind="enum"><name>CoinMode</name></member>
@@ -790,31 +807,37 @@
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a5f87389019fff53bde062e4a4a2d6d20af12ce2bca6832b6bcb08478fb3d50026" kind="enumvalue"><name>CONNECTORADDRESS</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70587f990581756edb70a831860db34" kind="variable"><name>Owner</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70eee8b3abcc1911f12385cf7fb7b50" kind="variable"><name>variableSetToRead</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a647daeae60e198f09fb13260712da8d4" kind="property"><name>VariableSetToRead</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa4c1c958c601e72ed8cd2de458eb2667" kind="variable"><name>ConnectorAddress</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1acc58c4f70b3937b7d14deb424ab66359" kind="variable"><name>CurrentLimit</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a294c17f77bad0c9c6f7650e31175c70a" kind="variable"><name>Maxcurrent</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ace5f02a03a9aabdcc89c127f4dae191b" kind="variable"><name>MotorStopDelay</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ac037fda02dafe626bf94859fdb16603a" kind="variable"><name>PayoutDelayTO</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a294c17f77bad0c9c6f7650e31175c70a" kind="variable"><name>Maxcurrent</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1abcf0096d6bdc192b80a459b33defc2ff" kind="variable"><name>Tension</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa4c1c958c601e72ed8cd2de458eb2667" kind="variable"><name>ConnectorAddress</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" kind="function"><name>GetVariableSet</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" kind="function"><name>SetVariable</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" kind="function"><name>CHopperVariableSet</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" kind="function"><name>GetVariableSet</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a00f3659c8de5e46b6d00f3ff25add7a1" kind="function"><name>GetVariableSetToRead</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" kind="function"><name>SetVariable</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aedf719c01fed6f60573449b76da99005" kind="function"><name>SetVariableSetToRead</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" kind="function"><name>GetVariable</name></member>
   </compound>
-  <compound refid="class_device_library_1_1_c_device_1_1_c_inserted" kind="class"><name>DeviceLibrary::CDevice::CInserted</name>
-    <member refid="class_device_library_1_1_c_device_1_1_c_inserted_1ab9c8961b8a31a68caeb666da2763b167" kind="variable"><name>ValeurCent</name></member>
-    <member refid="class_device_library_1_1_c_device_1_1_c_inserted_1a16ccb19a7c0e506b326db99edcb09e01" kind="variable"><name>CVChannel</name></member>
-    <member refid="class_device_library_1_1_c_device_1_1_c_inserted_1a66163183a1fdfe890af777cb3560b288" kind="variable"><name>CVPath</name></member>
-    <member refid="class_device_library_1_1_c_device_1_1_c_inserted_1af8489940b66b948f63c38c86051416be" kind="variable"><name>TotalAmount</name></member>
-    <member refid="class_device_library_1_1_c_device_1_1_c_inserted_1abf2e8e8167ae9f39731fc7d74f48db48" kind="variable"><name>BackTotalAmount</name></member>
+  <compound refid="class_device_library_1_1_c_inserted" kind="class"><name>DeviceLibrary::CInserted</name>
+    <member refid="class_device_library_1_1_c_inserted_1acd277c0e1642386ea19a67d2cff191be" kind="variable"><name>BackTotalAmount</name></member>
+    <member refid="class_device_library_1_1_c_inserted_1aac27d56560142f96e77ea41541aa5c7d" kind="variable"><name>CVChannel</name></member>
+    <member refid="class_device_library_1_1_c_inserted_1ac027d9fef6fd0abf18eea6ea77088a2a" kind="variable"><name>CVPath</name></member>
+    <member refid="class_device_library_1_1_c_inserted_1a1e77007006714234054467ef0f205f28" kind="variable"><name>TotalAmount</name></member>
+    <member refid="class_device_library_1_1_c_inserted_1ae61683e54952a86faee96a9287522ee4" kind="variable"><name>ValeurCent</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed" kind="class"><name>DeviceLibrary::CBNR_CPI::CitemsDispensed</name>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed_1a4cc3135eb876542ac69c9860628e2ce5" kind="variable"><name>amount</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed_1ae37c0c60b23789b610e316c75ee63a79" kind="variable"><name>BillValue</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed_1a7a8b24b344589944fcbf0b85ce260fe6" kind="variable"><name>numberBills</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed_1acb673eb6401e8ae703b819c8a0ce5069" kind="variable"><name>count</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_hopper_1_1_c_level" kind="class"><name>DeviceLibrary::CHopper::CLevel</name>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52" kind="enum"><name>HardLevel</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52a4c67bb3d8f85b3a1570dd8a5a8a26338" kind="enumvalue"><name>VIDE</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52ae0aa021e21dddbd6d8cecec71e9cf564" kind="enumvalue"><name>OK</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52a7ec21e24df39ba83c2d56f47d4932957" kind="enumvalue"><name>PLEIN</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52ab741d43a8209dcfcf03bb781061689a8" kind="enumvalue"><name>INCONNU</name></member>
     <member refid="group___niveaux_1ga236fd4e7d945cd014d736b3ca9487dd3" kind="enum"><name>SoftLevel</name></member>
     <member refid="group___niveaux_1gga236fd4e7d945cd014d736b3ca9487dd3a4c67bb3d8f85b3a1570dd8a5a8a26338" kind="enumvalue"><name>VIDE</name></member>
     <member refid="group___niveaux_1gga236fd4e7d945cd014d736b3ca9487dd3a366115ee6f4bf971e887e0fa4cd7d235" kind="enumvalue"><name>BAS</name></member>
@@ -822,14 +845,9 @@
     <member refid="group___niveaux_1gga236fd4e7d945cd014d736b3ca9487dd3a3e446a07216685e75b27a788840b51f5" kind="enumvalue"><name>HAUT</name></member>
     <member refid="group___niveaux_1gga236fd4e7d945cd014d736b3ca9487dd3a7ec21e24df39ba83c2d56f47d4932957" kind="enumvalue"><name>PLEIN</name></member>
     <member refid="group___niveaux_1gga236fd4e7d945cd014d736b3ca9487dd3ab741d43a8209dcfcf03bb781061689a8" kind="enumvalue"><name>INCONNU</name></member>
-    <member refid="group___niveaux_1ga103e99cf2377b2a34791cd09cd4a0a52" kind="enum"><name>HardLevel</name></member>
-    <member refid="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52a4c67bb3d8f85b3a1570dd8a5a8a26338" kind="enumvalue"><name>VIDE</name></member>
-    <member refid="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52ae0aa021e21dddbd6d8cecec71e9cf564" kind="enumvalue"><name>OK</name></member>
-    <member refid="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52a7ec21e24df39ba83c2d56f47d4932957" kind="enumvalue"><name>PLEIN</name></member>
-    <member refid="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52ab741d43a8209dcfcf03bb781061689a8" kind="enumvalue"><name>INCONNU</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1aba24f93fda726ac162db3e96387a7478" kind="variable"><name>hardLevel</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1a73e9298454995360eee357fe24489276" kind="variable"><name>ID</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1aaf0763243fa69af88492f6a45c3bffa3" kind="variable"><name>softLevel</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1aba24f93fda726ac162db3e96387a7478" kind="variable"><name>hardLevel</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1ad2e9dedf4ca74c90862cba4fd49342b3" kind="function"><name>CLevel</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_memory_storage" kind="class"><name>DeviceLibrary::CMemoryStorage</name>
@@ -838,27 +856,33 @@
     <member refid="class_device_library_1_1_c_memory_storage_1a212a4301a9ee4074c52046fc8b36fb7aa6ca056f5fe86139cd47875ac8d244a3e" kind="enumvalue"><name>VOLATILLOSTONPOWERDOWN</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1a212a4301a9ee4074c52046fc8b36fb7aaab49f8e53c5270f77a021603d479de15" kind="enumvalue"><name>PERMANENTLIMITED</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1a212a4301a9ee4074c52046fc8b36fb7aa5aa3ba7df83ac7f584293cb274ae3fa9" kind="enumvalue"><name>PERMANENTUNLIMITED</name></member>
+    <member refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" kind="variable"><name>Owner</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1a36ca55ce37eeb9bacea4e7b9321637f4" kind="variable"><name>memoryType</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1aea371e446f83e6b9f4c91b87572b367c" kind="variable"><name>readBlocks</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1ae0f59df95e6ae7ac41d3f652e4255fc6" kind="variable"><name>readBytesPerBlock</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1acc112449f46f8c40dd1286c65934a475" kind="variable"><name>writeBlocks</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1afae386c58274790b4f02f98d55a6761a" kind="variable"><name>writeBytesPerBlock</name></member>
-    <member refid="class_device_library_1_1_c_memory_storage_1a498c35a0002d38e192fd975fa79f2aa2" kind="variable"><name>Owner</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1a2c8371a87602ea9abac9191c69ba0c8e" kind="property"><name>MemoryType</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1a5149e18293f087e168b57cec9278357b" kind="property"><name>ReadBlocks</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1ae098f13e143c3bcc40d3c68ee7d93297" kind="property"><name>ReadBytesPerBlock</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1aad3f07ff5ba905a568178e1418adbccf" kind="property"><name>WriteBlocks</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1a4a4f80a523648f2987095bd16740816f" kind="property"><name>WriteBytesPerBlock</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1a1f469e7acead36a0223f798f5a2d9de9" kind="function"><name>CMemoryStorage</name></member>
-    <member refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" kind="function"><name>GetDataStorageAvailability</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" kind="function"><name>GetDataBlock</name></member>
+    <member refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" kind="function"><name>GetDataStorageAvailability</name></member>
     <member refid="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" kind="function"><name>SetDataBlock</name></member>
   </compound>
+  <compound refid="class_device_library_1_1_c_module_emptied" kind="class"><name>DeviceLibrary::CModuleEmptied</name>
+    <member refid="class_device_library_1_1_c_module_emptied_1af9a09f197352214b519be70d6eae51c9" kind="variable"><name>name</name></member>
+    <member refid="class_device_library_1_1_c_module_emptied_1a1c6070553d2eff86653efb9c6a8c5c49" kind="variable"><name>amount</name></member>
+    <member refid="class_device_library_1_1_c_module_emptied_1aa2f2fc8ff143bc8785e9f3863b325b6a" kind="variable"><name>count</name></member>
+    <member refid="class_device_library_1_1_c_module_emptied_1aa039f85ff7027e1c4f147823f03395e5" kind="function"><name>CModuleEmptied</name></member>
+  </compound>
   <compound refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position" kind="class"><name>DeviceLibrary::CBNR_CPI::CModulePosition</name>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a47db65c032d7771b202286ea92acb4da" kind="variable"><name>moduleName</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae73bcf354e9ccbfcd3b3440fb0ada120" kind="variable"><name>isPresent</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a68d9e4020041857065ee7126a3806bac" kind="variable"><name>isReinserted</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a7dd4660e4a31d0eefdf7cc34cf968326" kind="variable"><name>name</name></member>
-    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a90fc00e38d0b74caa5156642337a43c3" kind="function"><name>CModulePosition</name></member>
+    <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae6db3a0aeea6f11a068c2b47ce5a4236" kind="function"><name>CModulePosition</name></member>
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ac99b0457f06d7ed060871d6b3df7de17" kind="function"><name>ToString</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_pelicano" kind="class"><name>DeviceLibrary::CPelicano</name>
@@ -903,25 +927,25 @@
     <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_result_dispense_1ad364a7a71e8e5d1d8b59f39b0d125696" kind="function"><name>CResultDispense</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data" kind="class"><name>DeviceLibrary::CHopper::CSoftLevelData</name>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1a482dad4e6ff3cc0bb5668403777b485c" kind="variable"><name>nameOfHopper</name></member>
-    <member refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1adf260286c8daee8632a2a22f8dfcd4a5" kind="variable"><name>isHCritical</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1ab87611ef77ba688da1d00e03b135d8d1" kind="variable"><name>coinsNumber</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1adf260286c8daee8632a2a22f8dfcd4a5" kind="variable"><name>isHCritical</name></member>
     <member refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1ab04df342ae4e7632fe63517e0ed8c87f" kind="variable"><name>level</name></member>
+    <member refid="class_device_library_1_1_c_hopper_1_1_c_soft_level_data_1a482dad4e6ff3cc0bb5668403777b485c" kind="variable"><name>nameOfHopper</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter" kind="class"><name>DeviceLibrary::CCoinValidator::CCanal::CSorter</name>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1ab87aacccef226ff01940206f47b5383d" kind="enum"><name>Header</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1ab87aacccef226ff01940206f47b5383da8310c2b9a749f51805f8d47ddc05e515" kind="enumvalue"><name>REQUESTSORTERPATH</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1ab87aacccef226ff01940206f47b5383dad756e6025d036867d08303eb2f842430" kind="enumvalue"><name>MODIFYSORTERPATH</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a813192aa4c83e9f6da2fe07d8574fb67" kind="variable"><name>CanalOwner</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a7e949f5c8d4c595e2441ea0c4a3ea6eb" kind="property"><name>PathSorter</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a5bea1add34cd25f82f1d41085372cf24" kind="property"><name>SorterPath</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af13cd8846d559d2adf6e8a3864eb4dea" kind="variable"><name>OverPath</name></member>
-    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" kind="function"><name>SetSorterPath</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a5bea1add34cd25f82f1d41085372cf24" kind="property"><name>SorterPath</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a7e949f5c8d4c595e2441ea0c4a3ea6eb" kind="property"><name>PathSorter</name></member>
     <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1a5e51b3691ca398b85a836fb169813685" kind="function"><name>CSorter</name></member>
+    <member refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" kind="function"><name>SetSorterPath</name></member>
   </compound>
   <compound refid="class_device_library_1_1_c_event_1_1_fire_event_arg" kind="class"><name>DeviceLibrary::CEvent::FireEventArg</name>
-    <member refid="class_device_library_1_1_c_event_1_1_fire_event_arg_1aa9a7b4b1c547cb94b03c76203ca37583" kind="variable"><name>reason</name></member>
     <member refid="class_device_library_1_1_c_event_1_1_fire_event_arg_1a2f1215379bf37c87f8d3389157fbafb0" kind="variable"><name>donnee</name></member>
+    <member refid="class_device_library_1_1_c_event_1_1_fire_event_arg_1aa9a7b4b1c547cb94b03c76203ca37583" kind="variable"><name>reason</name></member>
   </compound>
   <compound refid="class_atmb_test_devices_1_1_form2" kind="class"><name>AtmbTestDevices::Form2</name>
     <member refid="class_atmb_test_devices_1_1_form2_1a92db7f0138247615d9b02cb18f996f28" kind="variable"><name>components</name></member>
@@ -933,12 +957,12 @@
     <member refid="class_atmb_test_devices_1_1_form2_1aed05a4452461cd69bdf3e40a2165bf8d" kind="function"><name>InitializeComponent</name></member>
   </compound>
   <compound refid="class_atmb_test_devices_1_1_form_main" kind="class"><name>AtmbTestDevices::FormMain</name>
-    <member refid="class_atmb_test_devices_1_1_form_main_1adbcf4583de64387e0cc385346f2edc65" kind="variable"><name>form2</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1afda4538f6620f4bf4fe874653d20923c" kind="variable"><name>deviceManage</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a11a2e934f71cfc15a6104770fa5386ac" kind="variable"><name>ToPayByClient</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1adbcf4583de64387e0cc385346f2edc65" kind="variable"><name>form2</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1afa34f078012395d516eda29362539ed4" kind="variable"><name>isMontantPercuReset</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a782dd69ead2a2e6a2e3630af7ae0d360" kind="variable"><name>ToDispenseBNR</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a79cceea313ca1aac5c13be925f49382e" kind="variable"><name>toLoadInLoader</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1afa34f078012395d516eda29362539ed4" kind="variable"><name>isMontantPercuReset</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a11a2e934f71cfc15a6104770fa5386ac" kind="variable"><name>ToPayByClient</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a67cfa6eeed26beacd68d19dc72abd320" kind="variable"><name>components</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a381bd5e9474d33dee7d72ec0a27034cb" kind="variable"><name>serialPort</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1afb940efccb5afb31a62ca5502ad1bcdc" kind="variable"><name>tbToPay</name></member>
@@ -993,7 +1017,7 @@
     <member refid="class_atmb_test_devices_1_1_form_main_1a74c992e81b8f4db48e396902cb6d6f4c" kind="variable"><name>Reload</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a81bab9bb19170317b594aa922778cf48" kind="variable"><name>ToLoad</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a428477f263cd0448f9511ee6def07319" kind="variable"><name>textBoxLoaderNumberBilet</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1ae05750e6eaf6e6acbf4ba793cd5bd4ff" kind="variable"><name>buttonLSetMeterLoader</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1af55e1019e9b85f6b098c70eacfe13207" kind="variable"><name>buttonLoaderMeter</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a082b5eaa13d784afae8a8669e8ea4fa0" kind="variable"><name>buttonTrieur</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a1bb71854e1abf94c75ec5fd0dbafcaad" kind="variable"><name>labelCanal</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a7e4f01153f33c7bcd06936ed4e7ff926" kind="variable"><name>labelPath</name></member>
@@ -1005,32 +1029,37 @@
     <member refid="class_atmb_test_devices_1_1_form_main_1a6c34d1535bdfe99bd5fab6438676d658" kind="variable"><name>Montant</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1ac0344ca31df59ac9db5a387195ed3292" kind="variable"><name>RAZ</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a6a8235d69c3aaf8e0edce540d63624bb" kind="variable"><name>buttonCancel</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a0c9d4c0040726b2716ea41fac051e72a" kind="variable"><name>button1</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a45ad36ac2062edccb4cac895aa3813c5" kind="variable"><name>buttonCashBoxRemove</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a00f21d0e87c94c0261818611e2429016" kind="variable"><name>buttonLoadRecycler</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a67104620da7981bbf258fcab95543764" kind="variable"><name>buttonAuditReport</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1ab362d03ef1166b7962333d047302f3c2" kind="variable"><name>buttonEmptyBnr</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a34a8677a0d5d339ab8b797c42362323e" kind="function"><name>FormMain</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a159173de586d4afe6e8107ec890fc9a9" kind="function"><name>TBAmountToPay_Leave</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1ab30f8fb034e93f93bc904a882fb55f02" kind="function"><name>ButtonExit_Click</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1afdba5d70d8a3a733000f84c60fff33d9" kind="function"><name>TBAmountToPay_Enter</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" kind="function"><name>MsgFromdll</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a9d343b173348b2c8619bfb59c42af2ab" kind="function"><name>FormMain_FormClosed</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" kind="function"><name>ButtonCounters_Click</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a7c4cbcd51d72a06222948161c75c2290" kind="function"><name>DataGridViewHopper_CellClick</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a30543b292b44a148a0f2722e5638188c" kind="function"><name>ButtonHoppers_Click</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1ad877489042d96780917783dbbd071def" kind="function"><name>DataGridViewHopper_CellValueChanged</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a48e168981d5472cba8559d624e919783" kind="function"><name>ToolStripMenuItem1_Click</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a06e68fbb519f5cd352713d658e84ed7a" kind="function"><name>ButtonRAZCompteurs_Click</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a9ab385b37b95fe9261a5e1ee462d0dc4" kind="function"><name>ButtonFinTrans_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a755544de7f9eaa194d7ba40668292b3d" kind="function"><name>BbuttonRollBack_Click</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1ae94bd3318936fe6aa04722b92494ab36" kind="function"><name>BtnBNRDispense_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a75e24ac0bb7d61a1165c17fd543d3eef" kind="function"><name>Button1_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a8debf4d47c33c1a988c867afb21d8f88" kind="function"><name>ButtonCancel_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1aff5ce77123c6ea515b53148335eafce8" kind="function"><name>ButtonCounters_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1af5a17d38ef8b6954fcb0e4bfcccc6a81" kind="function"><name>buttonEmptyBnr_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1ab30f8fb034e93f93bc904a882fb55f02" kind="function"><name>ButtonExit_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a9ab385b37b95fe9261a5e1ee462d0dc4" kind="function"><name>ButtonFinTrans_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a30543b292b44a148a0f2722e5638188c" kind="function"><name>ButtonHoppers_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a2ab0a31cb1fdff310dfb60dd3ba0b964" kind="function"><name>ButtonLoaderMeter_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1ab04d5a06060cb90c34b9852fd0b30edb" kind="function"><name>buttonLoadRecycler_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a06e68fbb519f5cd352713d658e84ed7a" kind="function"><name>ButtonRAZCompteurs_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a7e2b206fbfd904c2d1ecf971ee02bbcd" kind="function"><name>ButtonRetract_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1aa99d1e82381f7a79dc46bbbd35b1d091" kind="function"><name>ButtonTrieur_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a7c4cbcd51d72a06222948161c75c2290" kind="function"><name>DataGridViewHopper_CellClick</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1ad877489042d96780917783dbbd071def" kind="function"><name>DataGridViewHopper_CellValueChanged</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a9d343b173348b2c8619bfb59c42af2ab" kind="function"><name>FormMain_FormClosed</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1ae8d576698d3b516adac632273824b886" kind="function"><name>FormMain_Shown</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" kind="function"><name>MsgFromdll</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1afdba5d70d8a3a733000f84c60fff33d9" kind="function"><name>TBAmountToPay_Enter</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a159173de586d4afe6e8107ec890fc9a9" kind="function"><name>TBAmountToPay_Leave</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1ab58fe3f93fdae75d5cb4151c159d06a0" kind="function"><name>TextBoxBNRDispense_Enter</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a947dcb53f232cd2a3ed29e16219ea834" kind="function"><name>TextBoxBNRDspense_Leave</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1ae8d576698d3b516adac632273824b886" kind="function"><name>FormMain_Shown</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1ae88243fc18fe63708192018cdaa3145d" kind="function"><name>TextBoxLoaderNumberBillet_Enter</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a8eee2f2f3757e0e93dc936585000223b" kind="function"><name>TextBoxLoaderNumberBillet_Leave</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a797fb6ea581c9393f6274639d1d14f98" kind="function"><name>ButtonLSetMeterLoader_Click</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1aa99d1e82381f7a79dc46bbbd35b1d091" kind="function"><name>ButtonTrieur_Click</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a7e2b206fbfd904c2d1ecf971ee02bbcd" kind="function"><name>ButtonRetract_Click</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a755544de7f9eaa194d7ba40668292b3d" kind="function"><name>BbuttonRollBack_Click</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a8debf4d47c33c1a988c867afb21d8f88" kind="function"><name>ButtonCancel_Click</name></member>
-    <member refid="class_atmb_test_devices_1_1_form_main_1a75e24ac0bb7d61a1165c17fd543d3eef" kind="function"><name>Button1_Click</name></member>
+    <member refid="class_atmb_test_devices_1_1_form_main_1a48e168981d5472cba8559d624e919783" kind="function"><name>ToolStripMenuItem1_Click</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a89c184c9139ca6fe9434fb1bd3d68b0c" kind="function"><name>InitializeComponent</name></member>
     <member refid="class_atmb_test_devices_1_1_form_main_1a720cc75d79f5a19781f21c5fd826f1f7" kind="function"><name>Dispose</name></member>
   </compound>
@@ -1120,19 +1149,13 @@
     <member refid="class_device_library_1_1_properties_1_1_resources_1a6b56771b3cd56527ae897e8787ea8da3" kind="property"><name>Culture</name></member>
     <member refid="class_device_library_1_1_properties_1_1_resources_1ae8dcc0bcdd7aac165816bf43e4c9a786" kind="function"><name>Resources</name></member>
   </compound>
-  <compound refid="class_atmb_test_devices_1_1_properties_1_1_settings" kind="class"><name>AtmbTestDevices::Properties::Settings</name>
-    <member refid="class_atmb_test_devices_1_1_properties_1_1_settings_1ab922c9acbba1c82f721a1293be39483c" kind="variable"><name>defaultInstance</name></member>
-    <member refid="class_atmb_test_devices_1_1_properties_1_1_settings_1a5b05d16c6bfa607b700b99eaadce10fe" kind="property"><name>Default</name></member>
-  </compound>
   <compound refid="class_device_library_1_1_properties_1_1_settings" kind="class"><name>DeviceLibrary::Properties::Settings</name>
     <member refid="class_device_library_1_1_properties_1_1_settings_1ab31b1a0cde6d4937f98945ae64fb0135" kind="variable"><name>defaultInstance</name></member>
     <member refid="class_device_library_1_1_properties_1_1_settings_1ad8abbc7ce59b50502a14f196541084bb" kind="property"><name>Default</name></member>
-    <member refid="class_device_library_1_1_properties_1_1_settings_1a83fb9cdb9ca3dc19dee00d2911e82e66" kind="property"><name>Total</name></member>
-    <member refid="class_device_library_1_1_properties_1_1_settings_1aaac42c9e23b79c22b0748364dad77ab3" kind="property"><name>TotalCoins</name></member>
-    <member refid="class_device_library_1_1_properties_1_1_settings_1a9602c7090ca89d757b9f54a96cc927bf" kind="property"><name>TotalBill</name></member>
-    <member refid="class_device_library_1_1_properties_1_1_settings_1a59a922c4bd450819c5a0a43597a8d689" kind="property"><name>CVCanal1</name></member>
-    <member refid="class_device_library_1_1_properties_1_1_settings_1aad8f6a5ca2cb8107e7508748e1729008" kind="property"><name>CVCanal2</name></member>
-    <member refid="class_device_library_1_1_properties_1_1_settings_1a1ffd586a03c988cd83bb0265835bf945" kind="property"><name>CVCanal3</name></member>
+  </compound>
+  <compound refid="class_atmb_test_devices_1_1_properties_1_1_settings" kind="class"><name>AtmbTestDevices::Properties::Settings</name>
+    <member refid="class_atmb_test_devices_1_1_properties_1_1_settings_1ab922c9acbba1c82f721a1293be39483c" kind="variable"><name>defaultInstance</name></member>
+    <member refid="class_atmb_test_devices_1_1_properties_1_1_settings_1a5b05d16c6bfa607b700b99eaadce10fe" kind="property"><name>Default</name></member>
   </compound>
   <compound refid="namespace_atmb_test_devices" kind="namespace"><name>AtmbTestDevices</name>
   </compound>
@@ -1180,19 +1203,21 @@
   </compound>
   <compound refid="namespace_system_1_1_runtime_1_1_serialization_1_1_formatters_1_1_binary" kind="namespace"><name>System::Runtime::Serialization::Formatters::Binary</name>
   </compound>
+  <compound refid="namespace_system_1_1_security_1_1_cryptography" kind="namespace"><name>System::Security::Cryptography</name>
+  </compound>
   <compound refid="namespace_system_1_1_threading" kind="namespace"><name>System::Threading</name>
   </compound>
   <compound refid="namespace_system_1_1_windows_1_1_forms" kind="namespace"><name>System::Windows::Forms</name>
   </compound>
   <compound refid="namespace_system_1_1_xml" kind="namespace"><name>System::Xml</name>
   </compound>
-  <compound refid="_form1_8cs" kind="file"><name>Form1.cs</name>
-  </compound>
-  <compound refid="_form1_8_designer_8cs" kind="file"><name>Form1.Designer.cs</name>
-  </compound>
   <compound refid="_form2_8cs" kind="file"><name>Form2.cs</name>
   </compound>
   <compound refid="_form2_8_designer_8cs" kind="file"><name>Form2.Designer.cs</name>
+  </compound>
+  <compound refid="_form_main_8cs" kind="file"><name>FormMain.cs</name>
+  </compound>
+  <compound refid="_form_main_8_designer_8cs" kind="file"><name>FormMain.Designer.cs</name>
   </compound>
   <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
   </compound>
@@ -1264,6 +1289,8 @@
   </compound>
   <compound refid="_c_memory_storage_8cs" kind="file"><name>CMemoryStorage.cs</name>
   </compound>
+  <compound refid="_c_module_emptied_8cs" kind="file"><name>CModuleEmptied.cs</name>
+  </compound>
   <compound refid="_c_pelicano_8_cmd_motors_8cs" kind="file"><name>CPelicano.CmdMotors.cs</name>
   </compound>
   <compound refid="_c_pelicano_8cs" kind="file"><name>CPelicano.cs</name>
@@ -1303,6 +1330,13 @@
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a591bddc3af4fb48b4fb92a1b498a892e" kind="enumvalue"><name>STATE_GETLCUS</name></member>
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a400ddd2b05277bc7d75580c437a1fe2e" kind="enumvalue"><name>STATE_ROLLBACK</name></member>
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a238625dce187682a7f0893e0df431779" kind="enumvalue"><name>STATE_RETRACT</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2ab051e9033349ebe782e71f7ae46fed90" kind="enumvalue"><name>STATE_UPDATE_LOADER_METER</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a601288ba5c613f5f916fda5a2913c3ed" kind="enumvalue"><name>STATE_RELOAD_RECYCLER</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2ad170878a2a3bab7f90ca525ecb595be8" kind="enumvalue"><name>STATE_CASHIN_START</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa1d900c04765a9868f930fdca4168d78" kind="enumvalue"><name>STATE_CAHSIN</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2ade52132e716806d9e9013583462b0064" kind="enumvalue"><name>STATE_CANCEL</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a8031041785ebe28fdf4c951353b02788" kind="enumvalue"><name>STATE_CASHIN_END</name></member>
+    <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a8baa1c1e6fd48641506cd1ce715cb3f9" kind="enumvalue"><name>STATE_EMPTY</name></member>
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a667adf1721ecf31975b473ea51005d04" kind="enumvalue"><name>STATE_IDLE</name></member>
     <member refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa1cbf7ab92312cb40dc586242a8bc03e" kind="enumvalue"><name>STATE_STOP</name></member>
     <member refid="group___etats_1ga33c79ff59c961c2e1bbf95838e5d6871" kind="enum"><name>Etat</name></member>
@@ -1536,8 +1570,8 @@
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a3a1f7e69b7e5e5c269e0fa7e97b0bf0a" kind="enumvalue"><name>SECURITYSTATUSCHANGED</name></member>
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a9f9cc74325b5bb6e924cd0772df6d6a6" kind="enumvalue"><name>MOTOREXCEPTION</name></member>
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ab04c310e6eb59f7ae1eb525e552bbe4f" kind="enumvalue"><name>SWALLOWEDCOIN</name></member>
-    <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ada03008cb56819752dd1fe201c4c1be9" kind="enumvalue"><name>COIN2FAST</name></member>
-    <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad4f375ed800d463da94afc540bf8d22e" kind="enumvalue"><name>COIN2SLOW</name></member>
+    <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a597454d42ebf950c40f24de12e4e5579" kind="enumvalue"><name>COIN2_FAST</name></member>
+    <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591af7990394a2f51ac3868347051c21961c" kind="enumvalue"><name>COIN2_SLOW</name></member>
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aa6c8fed14ab5411a4efe88068c4a99d9" kind="enumvalue"><name>COININCORRECTLYSORTED</name></member>
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591afdbe0522298a7ecd540a24a4d368442a" kind="enumvalue"><name>EXTERNALLIGHTATTACK</name></member>
     <member refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a69b954ad6ad0a788c70a17bc2f280d31" kind="enumvalue"><name>INHIBITEDCOIN_1</name></member>
@@ -1597,11 +1631,6 @@
     <member refid="group___niveaux_1gga236fd4e7d945cd014d736b3ca9487dd3a3e446a07216685e75b27a788840b51f5" kind="enumvalue"><name>HAUT</name></member>
     <member refid="group___niveaux_1gga236fd4e7d945cd014d736b3ca9487dd3a7ec21e24df39ba83c2d56f47d4932957" kind="enumvalue"><name>PLEIN</name></member>
     <member refid="group___niveaux_1gga236fd4e7d945cd014d736b3ca9487dd3ab741d43a8209dcfcf03bb781061689a8" kind="enumvalue"><name>INCONNU</name></member>
-    <member refid="group___niveaux_1ga103e99cf2377b2a34791cd09cd4a0a52" kind="enum"><name>HardLevel</name></member>
-    <member refid="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52a4c67bb3d8f85b3a1570dd8a5a8a26338" kind="enumvalue"><name>VIDE</name></member>
-    <member refid="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52ae0aa021e21dddbd6d8cecec71e9cf564" kind="enumvalue"><name>OK</name></member>
-    <member refid="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52a7ec21e24df39ba83c2d56f47d4932957" kind="enumvalue"><name>PLEIN</name></member>
-    <member refid="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52ab741d43a8209dcfcf03bb781061689a8" kind="enumvalue"><name>INCONNU</name></member>
   </compound>
   <compound refid="dir_91727e0b70d94922b404536e976b1dc8" kind="dir"><name>D:/Projets/ATMB</name>
   </compound>

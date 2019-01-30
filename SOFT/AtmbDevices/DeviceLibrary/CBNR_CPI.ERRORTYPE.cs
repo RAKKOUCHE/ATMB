@@ -11,7 +11,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Enumération des erreurs du BNR.
         /// </summary>
-        public enum ERRORTYPE
+        public enum Errortype
         {
             /// <summary>
             /// Billet bloqué dans le BNR.
@@ -34,14 +34,9 @@ namespace DeviceLibrary
             STOCKAGE_ERREUR,
 
             /// <summary>
-            /// Un module a été retiré.
+            /// Les compteurs du loader n'ont pas été mis à jour.
             /// </summary>
-            BNRMODULEMANQUANT,
-
-            /// <summary>
-            /// Un module a été réinseré.
-            /// </summary>
-            BNRMODULERINSERE,
+            BNRLOADERMETERMISING,
 
             /// <summary>
             /// Indique qu'un billet a été refusé.
@@ -72,7 +67,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Code de l'error.
             /// </summary>
-            public ERRORTYPE error;
+            public Errortype error;
 
             /// <summary>
             /// Nom du module.

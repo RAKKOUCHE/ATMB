@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="24" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="23" bodyend="34"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="47" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="46" bodyend="57"/>
       </memberdef>
       <memberdef kind="enum" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a5f87389019fff53bde062e4a4a2d6d20" prot="public" static="no">
         <name>Variable</name>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="40" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="39" bodyend="75"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="63" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="62" bodyend="98"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -108,10 +108,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="80" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="80" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" compoundref="_c_hopper_8_variable_set_8cs" startline="181" endline="192">DeviceLibrary.CHopper.CHopperVariableSet.CHopperVariableSet</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="126" endline="140">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" compoundref="_c_hopper_8_variable_set_8cs" startline="161" endline="176">DeviceLibrary.CHopper.CHopperVariableSet.SetVariable</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" compoundref="_c_hopper_8_variable_set_8cs" startline="30" endline="41">DeviceLibrary.CHopper.CHopperVariableSet.CHopperVariableSet</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="145" endline="159">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" compoundref="_c_hopper_8_variable_set_8cs" startline="176" endline="191">DeviceLibrary.CHopper.CHopperVariableSet.SetVariable</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70eee8b3abcc1911f12385cf7fb7b50" prot="private" static="no" mutable="no">
         <type>byte[]</type>
@@ -124,28 +124,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="82" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="82" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="25" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a00f3659c8de5e46b6d00f3ff25add7a1" compoundref="_c_hopper_8_variable_set_8cs" startline="164" endline="167">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSetToRead</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aedf719c01fed6f60573449b76da99005" compoundref="_c_hopper_8_variable_set_8cs" startline="196" endline="199">DeviceLibrary.CHopper.CHopperVariableSet.SetVariableSetToRead</referencedby>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="property">
-      <memberdef kind="property" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a647daeae60e198f09fb13260712da8d4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
-        <type>byte[]</type>
-        <definition>byte [] DeviceLibrary.CHopper.CHopperVariableSet.VariableSetToRead</definition>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa4c1c958c601e72ed8cd2de458eb2667" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CHopper.CHopperVariableSet.ConnectorAddress</definition>
         <argsstring></argsstring>
-        <name>VariableSetToRead</name>
+        <name>ConnectorAddress</name>
+        <initializer>=&gt; <ref refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" kindref="member">GetVariable</ref>(Variable.CONNECTORADDRESS)</initializer>
         <briefdescription>
-<para>Buffer du résultat de la commande de lecture des variables du hopper. </para>        </briefdescription>
+<para>Lecture de l&apos;adresse physique du hopper </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="87" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="88" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" compoundref="_c_hopper_8_variable_set_8cs" startline="181" endline="192">DeviceLibrary.CHopper.CHopperVariableSet.CHopperVariableSet</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" compoundref="_c_hopper_8_variable_set_8cs" startline="147" endline="152">DeviceLibrary.CHopper.CHopperVariableSet.GetVariable</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="126" endline="140">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="103" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="103" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1acc58c4f70b3937b7d14deb424ab66359" prot="public" static="no" mutable="no">
         <type>double</type>
         <definition>double DeviceLibrary.CHopper.CHopperVariableSet.CurrentLimit</definition>
@@ -158,35 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="96" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="96" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ace5f02a03a9aabdcc89c127f4dae191b" prot="public" static="no" mutable="no">
-        <type>byte</type>
-        <definition>byte DeviceLibrary.CHopper.CHopperVariableSet.MotorStopDelay</definition>
-        <argsstring></argsstring>
-        <name>MotorStopDelay</name>
-        <initializer>=&gt; <ref refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" kindref="member">GetVariable</ref>(Variable.MOTORSTOPDELAY)</initializer>
-        <briefdescription>
-<para>Lecture du delai pour arrêter le moteur. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="101" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="101" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ac037fda02dafe626bf94859fdb16603a" prot="public" static="no" mutable="no">
-        <type>byte</type>
-        <definition>byte DeviceLibrary.CHopper.CHopperVariableSet.PayoutDelayTO</definition>
-        <argsstring></argsstring>
-        <name>PayoutDelayTO</name>
-        <initializer>=&gt; (byte)(<ref refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" kindref="member">GetVariable</ref>(Variable.PAYOUTTIMEOUT) / 3)</initializer>
-        <briefdescription>
-<para>Lecture du delay pour la distribution d&apos;un pièce. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="106" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="106" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="108" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a294c17f77bad0c9c6f7650e31175c70a" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -200,7 +170,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="111" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="111" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="113" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ace5f02a03a9aabdcc89c127f4dae191b" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CHopper.CHopperVariableSet.MotorStopDelay</definition>
+        <argsstring></argsstring>
+        <name>MotorStopDelay</name>
+        <initializer>=&gt; <ref refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" kindref="member">GetVariable</ref>(Variable.MOTORSTOPDELAY)</initializer>
+        <briefdescription>
+<para>Lecture du delai pour arrêter le moteur. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="118" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ac037fda02dafe626bf94859fdb16603a" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CHopper.CHopperVariableSet.PayoutDelayTO</definition>
+        <argsstring></argsstring>
+        <name>PayoutDelayTO</name>
+        <initializer>=&gt; (byte)(<ref refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" kindref="member">GetVariable</ref>(Variable.PAYOUTTIMEOUT) / 3)</initializer>
+        <briefdescription>
+<para>Lecture du delay pour la distribution d&apos;un pièce. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="123" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="123" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1abcf0096d6bdc192b80a459b33defc2ff" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -214,24 +212,30 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="116" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="116" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="128" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="128" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa4c1c958c601e72ed8cd2de458eb2667" prot="public" static="no" mutable="no">
-        <type>byte</type>
-        <definition>byte DeviceLibrary.CHopper.CHopperVariableSet.ConnectorAddress</definition>
-        <argsstring></argsstring>
-        <name>ConnectorAddress</name>
-        <initializer>=&gt; <ref refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" kindref="member">GetVariable</ref>(Variable.CONNECTORADDRESS)</initializer>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.CHopper.CHopperVariableSet.CHopperVariableSet</definition>
+        <argsstring>(CHopper owner)</argsstring>
+        <name>CHopperVariableSet</name>
+        <param>
+          <type><ref refid="class_device_library_1_1_c_hopper" kindref="compound">CHopper</ref></type>
+          <declname>owner</declname>
+        </param>
         <briefdescription>
-<para>Lecture de l&apos;adresse physique du hopper </para>        </briefdescription>
+<para>Consructeur </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="121" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="121" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="30" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="30" bodyend="41"/>
+        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70587f990581756edb70a831860db34" compoundref="_c_hopper_8_variable_set_8cs" startline="23">DeviceLibrary.CHopper.CHopperVariableSet.Owner</references>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aedf719c01fed6f60573449b76da99005" compoundref="_c_hopper_8_variable_set_8cs" startline="196" endline="199">DeviceLibrary.CHopper.CHopperVariableSet.SetVariableSetToRead</references>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
       <memberdef kind="function" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</definition>
@@ -243,14 +247,30 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="126" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="126" bodyend="140"/>
-        <references refid="class_device_library_1_1_c_hopper_1a8d069f368b3dd2356d76b8244181168b" compoundref="_c_hopper_8cs" startline="151">DeviceLibrary.CHopper.AddressBaseHoper</references>
-        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="145" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="145" bodyend="159"/>
+        <references refid="class_device_library_1_1_c_hopper_1a8d069f368b3dd2356d76b8244181168b" compoundref="_c_hopper_8cs" startline="113">DeviceLibrary.CHopper.AddressBaseHoper</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="198">DeviceLibrary.CccTalk.DeviceAddress</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70587f990581756edb70a831860db34" compoundref="_c_hopper_8_variable_set_8cs" startline="80">DeviceLibrary.CHopper.CHopperVariableSet.Owner</references>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a647daeae60e198f09fb13260712da8d4" compoundref="_c_hopper_8_variable_set_8cs" startline="88">DeviceLibrary.CHopper.CHopperVariableSet.VariableSetToRead</references>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" compoundref="_c_hopper_8_variable_set_8cs" startline="147" endline="152">DeviceLibrary.CHopper.CHopperVariableSet.GetVariable</referencedby>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a00f3659c8de5e46b6d00f3ff25add7a1" compoundref="_c_hopper_8_variable_set_8cs" startline="164" endline="167">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSetToRead</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70587f990581756edb70a831860db34" compoundref="_c_hopper_8_variable_set_8cs" startline="23">DeviceLibrary.CHopper.CHopperVariableSet.Owner</references>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" compoundref="_c_hopper_8_variable_set_8cs" startline="135" endline="140">DeviceLibrary.CHopper.CHopperVariableSet.GetVariable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a00f3659c8de5e46b6d00f3ff25add7a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>byte [] DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSetToRead</definition>
+        <argsstring>()</argsstring>
+        <name>GetVariableSetToRead</name>
+        <briefdescription>
+<para>Buffer du résultat de la commande de lecture des variables du hopper. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="164" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="164" bodyend="167"/>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70eee8b3abcc1911f12385cf7fb7b50" compoundref="_c_hopper_8_variable_set_8cs" startline="25">DeviceLibrary.CHopper.CHopperVariableSet.variableSetToRead</references>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" compoundref="_c_hopper_8_variable_set_8cs" startline="135" endline="140">DeviceLibrary.CHopper.CHopperVariableSet.GetVariable</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="145" endline="159">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -308,31 +328,30 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="161" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="161" bodyend="176"/>
-        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="176" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="176" bodyend="191"/>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="198">DeviceLibrary.CccTalk.DeviceAddress</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70587f990581756edb70a831860db34" compoundref="_c_hopper_8_variable_set_8cs" startline="80">DeviceLibrary.CHopper.CHopperVariableSet.Owner</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70587f990581756edb70a831860db34" compoundref="_c_hopper_8_variable_set_8cs" startline="23">DeviceLibrary.CHopper.CHopperVariableSet.Owner</references>
       </memberdef>
-      <memberdef kind="function" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>DeviceLibrary.CHopper.CHopperVariableSet.CHopperVariableSet</definition>
-        <argsstring>(CHopper owner)</argsstring>
-        <name>CHopperVariableSet</name>
+      <memberdef kind="function" id="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aedf719c01fed6f60573449b76da99005" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CHopper.CHopperVariableSet.SetVariableSetToRead</definition>
+        <argsstring>(byte[] value)</argsstring>
+        <name>SetVariableSetToRead</name>
         <param>
-          <type><ref refid="class_device_library_1_1_c_hopper" kindref="compound">CHopper</ref></type>
-          <declname>owner</declname>
+          <type>byte[]</type>
+          <declname>value</declname>
         </param>
         <briefdescription>
-<para>Consructeur </para>        </briefdescription>
+<para>Buffer du résultat de la commande de lecture des variables du hopper. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="181" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="181" bodyend="192"/>
-        <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70587f990581756edb70a831860db34" compoundref="_c_hopper_8_variable_set_8cs" startline="80">DeviceLibrary.CHopper.CHopperVariableSet.Owner</references>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a647daeae60e198f09fb13260712da8d4" compoundref="_c_hopper_8_variable_set_8cs" startline="88">DeviceLibrary.CHopper.CHopperVariableSet.VariableSetToRead</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="196" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="196" bodyend="199"/>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70eee8b3abcc1911f12385cf7fb7b50" compoundref="_c_hopper_8_variable_set_8cs" startline="25">DeviceLibrary.CHopper.CHopperVariableSet.variableSetToRead</references>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" compoundref="_c_hopper_8_variable_set_8cs" startline="30" endline="41">DeviceLibrary.CHopper.CHopperVariableSet.CHopperVariableSet</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -360,9 +379,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="147" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="147" bodyend="152"/>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="126" endline="140">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</references>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a647daeae60e198f09fb13260712da8d4" compoundref="_c_hopper_8_variable_set_8cs" startline="88">DeviceLibrary.CHopper.CHopperVariableSet.VariableSetToRead</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="135" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="135" bodyend="140"/>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="145" endline="159">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</references>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a00f3659c8de5e46b6d00f3ff25add7a1" compoundref="_c_hopper_8_variable_set_8cs" startline="164" endline="167">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSetToRead</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -370,139 +389,139 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="191">
+      <node id="193">
         <label>DeviceLibrary.CHopper.CHopperError</label>
         <link refid="class_device_library_1_1_c_hopper_1_1_c_hopper_error"/>
       </node>
-      <node id="194">
+      <node id="196">
         <label>DeviceLibrary.CHopper.CHopperStatus</label>
         <link refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status"/>
-        <childnode refid="183" relation="usage">
+        <childnode refid="185" relation="usage">
           <edgelabel>Owner</edgelabel>
         </childnode>
-        <childnode refid="195" relation="usage">
+        <childnode refid="197" relation="usage">
           <edgelabel>dispensedResult</edgelabel>
         </childnode>
       </node>
-      <node id="196">
+      <node id="198">
         <label>DeviceLibrary.CHopper.CHopperCoinId</label>
         <link refid="class_device_library_1_1_c_hopper_1_1_c_hopper_coin_id"/>
       </node>
-      <node id="187">
-        <label>DeviceLibrary.CDevice.CInserted</label>
-        <link refid="class_device_library_1_1_c_device_1_1_c_inserted"/>
-      </node>
-      <node id="190">
+      <node id="192">
         <label>DeviceLibrary.CccTalk</label>
         <link refid="class_device_library_1_1_ccc_talk"/>
-        <childnode refid="185" relation="public-inheritance">
+        <childnode refid="187" relation="public-inheritance">
         </childnode>
-        <childnode refid="185" relation="public-inheritance">
+        <childnode refid="187" relation="public-inheritance">
         </childnode>
-        <childnode refid="185" relation="public-inheritance">
+        <childnode refid="187" relation="public-inheritance">
         </childnode>
-        <childnode refid="188" relation="usage">
+        <childnode refid="190" relation="usage">
           <edgelabel>counters</edgelabel>
         </childnode>
       </node>
-      <node id="185">
+      <node id="187">
         <label>CDevice</label>
         <link refid="class_device_library_1_1_c_device"/>
-        <childnode refid="186" relation="public-inheritance">
+        <childnode refid="188" relation="public-inheritance">
         </childnode>
-        <childnode refid="187" relation="usage">
+        <childnode refid="189" relation="usage">
           <edgelabel>denominationInserted</edgelabel>
         </childnode>
       </node>
-      <node id="186">
+      <node id="188">
         <label>IDisposable</label>
       </node>
-      <node id="182">
+      <node id="184">
         <label>DeviceLibrary.CHopper.CHopperVariableSet</label>
         <link refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set"/>
-        <childnode refid="183" relation="usage">
+        <childnode refid="185" relation="usage">
           <edgelabel>Owner</edgelabel>
         </childnode>
       </node>
-      <node id="184">
+      <node id="186">
         <label>CccTalk</label>
         <link refid="class_device_library_1_1_ccc_talk"/>
-        <childnode refid="185" relation="public-inheritance">
+        <childnode refid="187" relation="public-inheritance">
         </childnode>
-        <childnode refid="185" relation="public-inheritance">
+        <childnode refid="187" relation="public-inheritance">
         </childnode>
-        <childnode refid="185" relation="public-inheritance">
+        <childnode refid="187" relation="public-inheritance">
         </childnode>
-        <childnode refid="188" relation="usage">
+        <childnode refid="190" relation="usage">
           <edgelabel>counters</edgelabel>
         </childnode>
       </node>
-      <node id="188">
+      <node id="190">
         <label>DeviceLibrary.CcoinsCounters</label>
         <link refid="class_device_library_1_1_ccoins_counters"/>
       </node>
-      <node id="195">
+      <node id="197">
         <label>DeviceLibrary.CHopper.CHopperStatus.CDispensedResult</label>
         <link refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1_1_c_dispensed_result"/>
       </node>
       <node id="189">
+        <label>DeviceLibrary.CInserted</label>
+        <link refid="class_device_library_1_1_c_inserted"/>
+      </node>
+      <node id="191">
         <label>DeviceLibrary.CMemoryStorage</label>
         <link refid="class_device_library_1_1_c_memory_storage"/>
-        <childnode refid="190" relation="usage">
+        <childnode refid="192" relation="usage">
           <edgelabel>Owner</edgelabel>
         </childnode>
       </node>
-      <node id="183">
+      <node id="185">
         <label>DeviceLibrary.CHopper</label>
         <link refid="class_device_library_1_1_c_hopper"/>
-        <childnode refid="184" relation="public-inheritance">
+        <childnode refid="186" relation="public-inheritance">
         </childnode>
-        <childnode refid="184" relation="public-inheritance">
+        <childnode refid="186" relation="public-inheritance">
         </childnode>
-        <childnode refid="184" relation="public-inheritance">
+        <childnode refid="186" relation="public-inheritance">
         </childnode>
-        <childnode refid="184" relation="public-inheritance">
+        <childnode refid="186" relation="public-inheritance">
         </childnode>
-        <childnode refid="184" relation="public-inheritance">
+        <childnode refid="186" relation="public-inheritance">
         </childnode>
-        <childnode refid="184" relation="public-inheritance">
+        <childnode refid="186" relation="public-inheritance">
         </childnode>
-        <childnode refid="184" relation="public-inheritance">
+        <childnode refid="186" relation="public-inheritance">
         </childnode>
-        <childnode refid="184" relation="public-inheritance">
-        </childnode>
-        <childnode refid="189" relation="usage">
-          <edgelabel>memoryStorage</edgelabel>
+        <childnode refid="186" relation="public-inheritance">
         </childnode>
         <childnode refid="191" relation="usage">
-          <edgelabel>errorHopper</edgelabel>
-        </childnode>
-        <childnode refid="192" relation="usage">
-          <edgelabel>deviceLevel</edgelabel>
+          <edgelabel>memoryStorage</edgelabel>
         </childnode>
         <childnode refid="193" relation="usage">
-          <edgelabel>emptyCount</edgelabel>
+          <edgelabel>errorHopper</edgelabel>
         </childnode>
         <childnode refid="194" relation="usage">
-          <edgelabel>dispenseStatus</edgelabel>
+          <edgelabel>emptyCount</edgelabel>
         </childnode>
-        <childnode refid="182" relation="usage">
-          <edgelabel>variables</edgelabel>
+        <childnode refid="195" relation="usage">
+          <edgelabel>deviceLevel</edgelabel>
         </childnode>
         <childnode refid="196" relation="usage">
+          <edgelabel>dispenseStatus</edgelabel>
+        </childnode>
+        <childnode refid="184" relation="usage">
+          <edgelabel>variables</edgelabel>
+        </childnode>
+        <childnode refid="198" relation="usage">
           <edgelabel>hopperCoinID</edgelabel>
         </childnode>
       </node>
-      <node id="193">
+      <node id="194">
         <label>DeviceLibrary.CHopper.CEmptyCount</label>
         <link refid="class_device_library_1_1_c_hopper_1_1_c_empty_count"/>
       </node>
-      <node id="192">
+      <node id="195">
         <label>DeviceLibrary.CHopper.CLevel</label>
         <link refid="class_device_library_1_1_c_hopper_1_1_c_level"/>
       </node>
     </collaborationgraph>
-    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="19" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="18" bodyend="193"/>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" line="19" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.VariableSet.cs" bodystart="18" bodyend="200"/>
     <listofallmembers>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>CHopperVariableSet</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ac3dba744da4997b49495d9e8ca58afe7" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>CoinMode</name></member>
@@ -510,15 +529,16 @@
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1acc58c4f70b3937b7d14deb424ab66359" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>CurrentLimit</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aa339a188e776babc55affb362c3bbec6" prot="private" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>GetVariable</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>GetVariableSet</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a00f3659c8de5e46b6d00f3ff25add7a1" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>GetVariableSetToRead</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a294c17f77bad0c9c6f7650e31175c70a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>Maxcurrent</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ace5f02a03a9aabdcc89c127f4dae191b" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>MotorStopDelay</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70587f990581756edb70a831860db34" prot="private" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>Owner</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ac037fda02dafe626bf94859fdb16603a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>PayoutDelayTO</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>SetVariable</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1aedf719c01fed6f60573449b76da99005" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>SetVariableSetToRead</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1abcf0096d6bdc192b80a459b33defc2ff" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>Tension</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a5f87389019fff53bde062e4a4a2d6d20" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>Variable</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1af70eee8b3abcc1911f12385cf7fb7b50" prot="private" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>variableSetToRead</name></member>
-      <member refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a647daeae60e198f09fb13260712da8d4" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHopperVariableSet</scope><name>VariableSetToRead</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

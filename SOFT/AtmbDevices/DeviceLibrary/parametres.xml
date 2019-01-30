@@ -22,11 +22,11 @@
     <!--Code ISO sur 3 lettres et taux de conversion des devises-->
     <Devises>
         <!--Code ISO de la devise principal-->
-        <Primaire>AAA</Primaire>
+        <Primaire>EUR</Primaire>
         <!--Code ISO de la devise secondaire-->
         <Secondaire>EUR</Secondaire>
         <!--Taux de conversion-->
-        <Taux>1.00</Taux>
+        <Taux>0,80</Taux>
     </Devises>
     <!--Paramètres du système de reconnaissance des pièces-->
     <CoinValidator>

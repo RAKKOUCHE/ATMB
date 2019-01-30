@@ -4,7 +4,7 @@
     <compoundname>Headers</compoundname>
     <title>Headers</title>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="group___headers_1gaf4bdeeddb7c89dd2b54f86978f5e9866" prot="protected" static="no">
+      <memberdef kind="enum" id="group___headers_1gaf4bdeeddb7c89dd2b54f86978f5e9866" prot="private" static="no">
         <name>Header</name>
         <enumvalue id="group___headers_1ggaf4bdeeddb7c89dd2b54f86978f5e9866ae528792c78a8f0df73cb539242c9db57" prot="public">
           <name>REQUESTPOLLINGPRIORITY</name>
@@ -684,8 +684,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="35" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="35" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" line="115" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CCanal.cs" bodystart="115" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="173" endline="200">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

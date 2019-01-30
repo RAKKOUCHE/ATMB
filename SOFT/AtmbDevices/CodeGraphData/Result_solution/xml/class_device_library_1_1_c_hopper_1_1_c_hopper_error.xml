@@ -3,19 +3,6 @@
   <compounddef id="class_device_library_1_1_c_hopper_1_1_c_hopper_error" kind="class" prot="public">
     <compoundname>DeviceLibrary::CHopper::CHopperError</compoundname>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1a156c6efcbd4e501253ee2a02e31b2c84" prot="public" static="no" mutable="no">
-        <type>string</type>
-        <definition>string DeviceLibrary.CHopper.CHopperError.nameOfHopper</definition>
-        <argsstring></argsstring>
-        <name>nameOfHopper</name>
-        <briefdescription>
-<para>Numéro du hopper </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" line="92" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" bodystart="92" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1aebf09aca893b91f93b62c431ebdebb18" prot="public" static="no" mutable="no">
         <type><ref refid="group___erreurs_1gad4b59816effbf70353c1e53e3cdeb5ad" kindref="member">HopperError</ref></type>
         <definition>HopperError DeviceLibrary.CHopper.CHopperError.Code</definition>
@@ -27,8 +14,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" line="97" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" bodystart="97" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_hopper_1a26e1f1fb8a30b65d591b53eb6d049acf" compoundref="_c_hopper_8cs" startline="1216" endline="1362">DeviceLibrary.CHopper.Task</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" line="92" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" bodystart="92" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a26e1f1fb8a30b65d591b53eb6d049acf" compoundref="_c_hopper_8cs" startline="1173" endline="1319">DeviceLibrary.CHopper.Task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1a3807ac7aa4c86af85a302c53d4c515de" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -37,6 +24,19 @@
         <name>isHopperCritical</name>
         <briefdescription>
 <para>Indique si le hopper est nécessaire pour le fonctionnement du système. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" line="97" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.Error.cs" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hopper_error_1a156c6efcbd4e501253ee2a02e31b2c84" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CHopper.CHopperError.nameOfHopper</definition>
+        <argsstring></argsstring>
+        <name>nameOfHopper</name>
+        <briefdescription>
+<para>Numéro du hopper </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>

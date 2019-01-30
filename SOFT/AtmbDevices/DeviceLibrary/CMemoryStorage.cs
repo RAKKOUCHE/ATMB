@@ -157,9 +157,9 @@ namespace DeviceLibrary
                     throw new Exception(string.Format("Impossible de lire les données dans le bloc {0} du périphérique {1}", BlockNumber, Owner.DeviceAddress));
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -181,9 +181,9 @@ namespace DeviceLibrary
                     writeBytesPerBlock = bufferIn[4];
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -210,9 +210,9 @@ namespace DeviceLibrary
                     throw new Exception(string.Format("Impossible d'écrire le bloc {0} dans le périphérique {1}", BlockNumber, Owner.DeviceAddress));
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
     }

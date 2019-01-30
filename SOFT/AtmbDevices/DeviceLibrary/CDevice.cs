@@ -40,7 +40,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Constructeur
         /// </summary>
-        public CDevice()
+        protected CDevice()
         {
             if (denominationInserted == null)
             {

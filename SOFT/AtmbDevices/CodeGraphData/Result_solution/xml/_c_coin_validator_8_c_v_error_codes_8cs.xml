@@ -93,9 +93,9 @@
 <codeline lineno="203"><highlight class="normal"></highlight></codeline>
 <codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ab04c310e6eb59f7ae1eb525e552bbe4f" kindref="member">SWALLOWEDCOIN</ref><sp/>=<sp/>36,</highlight></codeline>
 <codeline lineno="208"><highlight class="normal"></highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ada03008cb56819752dd1fe201c4c1be9" kindref="member">COIN2FAST</ref><sp/>=<sp/>37,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a597454d42ebf950c40f24de12e4e5579" kindref="member">COIN2_FAST</ref><sp/>=<sp/>37,</highlight></codeline>
 <codeline lineno="213"><highlight class="normal"></highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad4f375ed800d463da94afc540bf8d22e" kindref="member">COIN2SLOW</ref><sp/>=<sp/>38,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591af7990394a2f51ac3868347051c21961c" kindref="member">COIN2_SLOW</ref><sp/>=<sp/>38,</highlight></codeline>
 <codeline lineno="218"><highlight class="normal"></highlight></codeline>
 <codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591aa6c8fed14ab5411a4efe88068c4a99d9" kindref="member">COININCORRECTLYSORTED</ref><sp/>=<sp/>39,</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"></highlight></codeline>

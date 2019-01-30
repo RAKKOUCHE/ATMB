@@ -17,14 +17,14 @@ namespace DeviceLibrary
         /// Class d'un canal d'un périphérique de paiement
         /// </summary>
         /// \details Cette classe contient et gère les paramètres d'un canal*/
-        public partial class CCanal
+        public class CCanal
         {
-            private byte hopperToLoad;
-
             /// <summary>
             /// Instance propriètaire du canal
             /// </summary>
-            protected CCoinValidator CVOwner;
+            private CCoinValidator CVOwner;
+
+            private byte hopperToLoad;
 
             /// <summary>
             /// Identification de la pièce reconnue dans le canal
@@ -145,7 +145,7 @@ namespace DeviceLibrary
                 public string CountryCode
                 {
                     get => countryCode;
-                    set => countryCode = value;
+                    private set => countryCode = value;
                 }
 
                 /// <summary>
@@ -154,7 +154,7 @@ namespace DeviceLibrary
                 public char Issue
                 {
                     get => issue;
-                    set => issue = value;
+                    private set => issue = value;
                 }
 
                 /// <summary>
@@ -163,7 +163,7 @@ namespace DeviceLibrary
                 public byte ValeurCent
                 {
                     get => valeurCent;
-                    set => valeurCent = value;
+                    private set => valeurCent = value;
                 }
 
                 /// <summary>
@@ -193,9 +193,9 @@ namespace DeviceLibrary
                             }
                         }
                     }
-                    catch (Exception E)
+                    catch (Exception exception)
                     {
-                        CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                        CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                     }
                 }
             }
@@ -213,7 +213,7 @@ namespace DeviceLibrary
                 /// <summary>
                 /// Chemin de substitusion.
                 /// </summary>
-                public byte[] OverPath;
+                private byte[] OverPath;
 
                 /// <summary>
                 /// Constructeur
@@ -261,9 +261,9 @@ namespace DeviceLibrary
                             result = bufferIn[0];
                             Buffer.BlockCopy(bufferIn, 0, OverPath, 0, 3);
                         }
-                        catch (Exception E)
+                        catch (Exception exception)
                         {
-                            CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                            CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                         }
                         return result;
                     }
@@ -293,9 +293,9 @@ namespace DeviceLibrary
                             throw new Exception(string.Format(messagesText.erreurCmd, Header.MODIFYSORTERPATH, CanalOwner.CVOwner.DeviceAddress));
                         }
                     }
-                    catch (Exception E)
+                    catch (Exception exception)
                     {
-                        CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                        CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                     }
                 }
             }

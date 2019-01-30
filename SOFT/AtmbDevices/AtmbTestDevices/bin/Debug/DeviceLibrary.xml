@@ -4,6 +4,32 @@
         <name>DeviceLibrary</name>
     </assembly>
     <members>
+        <member name="T:DeviceLibrary.CModuleEmptied">
+            <summary>
+            Class contenant les informations d'un module vidé.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CModuleEmptied.name">
+            <summary>
+            Nom du module.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CModuleEmptied.amount">
+            <summary>
+            Montant transféré dans la caisse du BNR.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CModuleEmptied.count">
+            <summary>
+            Nombre de billets transférés.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CModuleEmptied.#ctor(System.String)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="moduleName">Nom du module.</param>
+        </member>
         <member name="T:DeviceLibrary.CBNR_CPI">
             <summary>
             Class du bnr
@@ -30,7 +56,7 @@
             Valeur de la dénomination.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.CitemsDispensed.numberBills">
+        <member name="F:DeviceLibrary.CBNR_CPI.CitemsDispensed.count">
             <summary>
             Nombres de billets de la dénominations distribués
             </summary>
@@ -40,6 +66,11 @@
             Class indiquant la présence ou non d'un module.
             </summary>
             <remarks>Cette classe est utlisée pour les retraits et les insertions des modles.</remarks>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.CModulePosition.moduleName">
+            <summary>
+            Nom du module.
+            </summary>
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.CModulePosition.isPresent">
             <summary>
@@ -51,16 +82,11 @@
             Indique si un module a été reinséré.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.CModulePosition.name">
-            <summary>
-            Nom du module.
-            </summary>
-        </member>
         <member name="M:DeviceLibrary.CBNR_CPI.CModulePosition.#ctor(System.String,System.Boolean)">
             <summary>
             Constructeur
             </summary>
-            <param name="name">Indique le nom du module contenu dans l'instance de la classe.</param>
+            <param name="moduleName">Indique le nom du module contenu dans l'instance de la classe.</param>
             <param name="isPresent">Initialise la présence du module.</param>
         </member>
         <member name="M:DeviceLibrary.CBNR_CPI.CModulePosition.ToString">
@@ -99,6 +125,21 @@
             Instance de la class Cerror.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.isCashPresent">
+            <summary>
+            Flag indiquant si les billets sont présentés à l'usager.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.isCashTaken">
+            <summary>
+            Flag indiquant si les billets ont été repris.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.isLoaderMetersUpdade">
+            <summary>
+            Flag indiauqnt si les compteurs du loader on été mis à jour.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CBNR_CPI.listLCU">
             <summary>
             Liste contenant la liste des unités logiques.
@@ -124,14 +165,9 @@
             Evénement permettant de gérer les function asynchrone.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.isCashPresent">
+        <member name="F:DeviceLibrary.CBNR_CPI.isCancelInProgress">
             <summary>
-            Flag indiquant si les billets sont présentés à l'usager.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.isCashTaken">
-            <summary>
-            Flag indiquant si les billets ont été repris.
+            Indique qu'une opéation d'annulation est en cours.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.isDispensable">
@@ -139,9 +175,19 @@
             Indique si la demande de denomination est possible.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.isReloadInProgress">
+            <summary>
+            Flag indiquant que la recharge des recyclers est en cours.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CBNR_CPI.bnrTask">
             <summary>
             Thread utilisé pour le BNR
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.loaderMeter">
+            <summary>
+            Indique le nombre de billets à enregister pour le loader.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CBNR_CPI.State">
@@ -157,16 +203,6 @@
         <member name="P:DeviceLibrary.CBNR_CPI.Divider">
             <summary>
             Montant du billet de plus faible valeur;
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CBNR_CPI.IsBNRToBeActivated">
-            <summary>
-            Indique si le monnayeur doit être adtivé.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CBNR_CPI.IsBNRToBeDeactivated">
-            <summary>
-            Indique si le monnayeur doit être adtivé.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CBNR_CPI.Manufacturer">
@@ -192,13 +228,13 @@
         </member>
         <member name="M:DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent(System.Int32,Mei.Bnr.OperationId,Mei.Bnr.BnrXfsErrorCode,Mei.Bnr.BnrXfsErrorCode,System.Object)">
             <summary>
-            Levée à la fin d; une opération.
+            Function delegate levée à la fin du opération asynchrone.
             </summary>
-            <param name="identificationId"></param>
-            <param name="operationId"></param>
-            <param name="result"></param>
-            <param name="extendedResult"></param>
-            <param name="Data"></param>
+            <param name="identificationId">Numéro de l'opération.</param>
+            <param name="operationId">Type d'opération.</param>
+            <param name="result">Resultat de l'opération.</param>
+            <param name="extendedResult">Compleément d'information le cas échéant.</param>
+            <param name="data">Information retournée par l'opération, Le type dépend de l'opéation.</param>
         </member>
         <member name="M:DeviceLibrary.CBNR_CPI.CashOccured(Mei.Bnr.XfsCashOrder)">
             <summary>
@@ -218,7 +254,12 @@
             <param name="identificationId"></param>
             <param name="operationId"></param>
             <param name="result"></param>
-            <param name="Data"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.RollBack">
+            <summary>
+            Retourne les billets en escrow.
+            </summary>
         </member>
         <member name="M:DeviceLibrary.CBNR_CPI.StatusOccured(Mei.Bnr.StatusChanged,Mei.Bnr.BnrXfsErrorCode,Mei.Bnr.BnrXfsErrorCode,System.Object)">
             <summary>
@@ -234,20 +275,25 @@
             Renvoi en caisse les billets présentés non pris.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CBNR_CPI.RollBack">
-            <summary>
-            Retourne les billets en escrow.
-            </summary>
-        </member>
         <member name="M:DeviceLibrary.CBNR_CPI.CheckAndDispense(System.Int32)">
              <summary>
             Vérifie la possibilité de distribuer le montant indiqué en paramètre et le distribue le cas échéant.
              </summary>
              <param name="amount">Montant à distribuer.</param>
         </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.Empty">
+            <summary>
+            Vide les recyclers et le loader dans la caisse.
+            </summary>
+        </member>
         <member name="M:DeviceLibrary.CBNR_CPI.Init">
             <summary>
             Initialisation de la classe du BNR.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CBNR_CPI.Reloadrecycler">
+            <summary>
+            Active la recharge des recyclers.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CBNR_CPI.Task">
@@ -255,57 +301,52 @@
             Machine d'état du BNR.
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CBNR_CPI.ERRORTYPE">
+        <member name="T:DeviceLibrary.CBNR_CPI.Errortype">
             <summary>
             Enumération des erreurs du BNR.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BOURRAGE">
+        <member name="F:DeviceLibrary.CBNR_CPI.Errortype.BOURRAGE">
             <summary>
             Billet bloqué dans le BNR.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNR_OUVERT">
+        <member name="F:DeviceLibrary.CBNR_CPI.Errortype.BNR_OUVERT">
             <summary>
             Le bnr est ouvert ou déverrouillé.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.TYPE_BILLET_ERREUR">
+        <member name="F:DeviceLibrary.CBNR_CPI.Errortype.TYPE_BILLET_ERREUR">
             <summary>
             Indique une erreurs sur le paramètrage d'un billet.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.STOCKAGE_ERREUR">
+        <member name="F:DeviceLibrary.CBNR_CPI.Errortype.STOCKAGE_ERREUR">
             <summary>
             Erreur de stockage des billets.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNRMODULEMANQUANT">
+        <member name="F:DeviceLibrary.CBNR_CPI.Errortype.BNRLOADERMETERMISING">
             <summary>
-            Un module a été retiré.
+            Les compteurs du loader n'ont pas été mis à jour.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BNRMODULERINSERE">
-            <summary>
-            Un module a été réinseré.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.BILLREFUSED">
+        <member name="F:DeviceLibrary.CBNR_CPI.Errortype.BILLREFUSED">
             <summary>
             Indique qu'un billet a été refusé.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.NOTDISTRIBUABLE">
+        <member name="F:DeviceLibrary.CBNR_CPI.Errortype.NOTDISTRIBUABLE">
             <summary>
             Indique que le montant n'est pas distribuable.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.NOTDISPENSED">
+        <member name="F:DeviceLibrary.CBNR_CPI.Errortype.NOTDISPENSED">
             <summary>
             Indique que le montant n'est pas distribué.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.ERRORTYPE.DLL_BNR_NOT_FREE">
+        <member name="F:DeviceLibrary.CBNR_CPI.Errortype.DLL_BNR_NOT_FREE">
             <summary>
             Les dlls sont occupées.
             </summary>
@@ -366,16 +407,6 @@
             Lecture de l'état du BNR.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_DISABLE">
-            <summary>
-            Etat pour désactiver le périphérique.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_ENABLE">
-            <summary>
-            Etat pour activer le périphérique.
-            </summary>
-        </member>
         <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_DISPENSE">
             <summary>
             Etat pour distribuer un montant.
@@ -399,6 +430,41 @@
         <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_RETRACT">
             <summary>
             Reprend les billets
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_UPDATE_LOADER_METER">
+            <summary>
+            Fixe le compteur du loader.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_RELOAD_RECYCLER">
+            <summary>
+            Recharge des recyclers.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_CASHIN_START">
+            <summary>
+            Démarre une transaction.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_CAHSIN">
+            <summary>
+            Prépare le BNR à recevoir des billets.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_CANCEL">
+            <summary>
+            Annule l'opération en cours.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_CASHIN_END">
+            <summary>
+            Cloture la transaction
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_EMPTY">
+            <summary>
+            Transfert du contenu des modules en caisse.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CBNR_CPI.Etat.STATE_IDLE">
@@ -476,14 +542,9 @@
             Périphérique activé
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CcashReader.priorityUnit">
+        <member name="F:DeviceLibrary.CcashReader.PriorityUnit">
             <summary>
             Tableau de conversion des unités dans la réponse au polling priority.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CcashReader.InhibitMask">
-            <summary>
-            Masque d'ihnibition (2 octets pour 16 canaux)
             </summary>
         </member>
         <member name="P:DeviceLibrary.CcashReader.MasterInhibitStatus">
@@ -524,6 +585,11 @@
             Les 7 bits de poids fort ne sont pas considérés.
             </remarks>
         </member>
+        <member name="M:DeviceLibrary.CcashReader.GetInhibitMask">
+            <summary>
+            Masque d'ihnibition (2 octets pour 16 canaux)
+            </summary>
+        </member>
         <member name="M:DeviceLibrary.CcashReader.GetInhibitMask(System.Byte[])">
             <summary>
             Retourne le mask d'inhibition des canaux
@@ -538,6 +604,11 @@
         <member name="M:DeviceLibrary.CcashReader.MasterEnable">
             <summary>
             Activation globale du moyen de paiement
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CcashReader.SetInhibitMask(System.Byte[])">
+            <summary>
+            Masque d'ihnibition (2 octets pour 16 canaux)
             </summary>
         </member>
         <member name="M:DeviceLibrary.CcashReader.SetInhibitStatus(System.Byte[])">
@@ -890,7 +961,7 @@
             Compteur d'évenements crédits ou erreurs
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CCoinValidator.CCVcreditBuffer.Result">
+        <member name="M:DeviceLibrary.CCoinValidator.CCVcreditBuffer.SetResult(System.Byte[0:,0:])">
             <summary>
             Buffer contenant les informations sur les évenements.
             </summary>
@@ -901,29 +972,49 @@
             </summary>
             <remarks>Header 229</remarks>
         </member>
+        <member name="M:DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetResult">
+            <summary>
+            Buffer contenant les informations sur les évenements.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CCoinValidator.defaultSorterPath">
             <summary>
             Chemin de tri par défaut.
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CCoinValidator.CErroCV">
-            <summary>
-            Classe des erreurs du monnayeur.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCoinValidator.CErroCV.code">
-             <summary>
-            
-             </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCoinValidator.CErroCV.errorText">
-             <summary>
-            
-             </summary>
-        </member>
         <member name="F:DeviceLibrary.CCoinValidator.errorCV">
             <summary>
             Instance de la classe des erreurs du monnayeurs.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.sorterPath">
+            <summary>
+            Chemin utilisé dans le trieur pour le canal
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.creditBuffer">
+            <summary>
+            Buffer contenant les informations sur les pièces lues ou les erreurs rencontrées
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.numChannel">
+            <summary>
+            Nombre de canaux du monnayeur.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.canaux">
+            <summary>
+            Tableau des canaux
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CVTask">
+            <summary>
+            Thread de gestion de la machine d'état du monnayeur.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CCoinValidator.#ctor">
+            <summary>
+            Constructeur de la class CCoinValidator
             </summary>
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.CVStatus">
@@ -946,21 +1037,6 @@
             Le système anti-fishing est activé.
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CCoinValidator.TrashDoor">
-            <summary>
-            Etats de la porte de rejet.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCoinValidator.TrashDoor.CLOSED">
-            <summary>
-            Trappe de sortie du Pelicano fermée.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCoinValidator.TrashDoor.OPEN">
-            <summary>
-            Trappe de sortie du Pelcano ouverte.
-            </summary>
-        </member>
         <member name="T:DeviceLibrary.CCoinValidator.LowerSensor">
             <summary>
             Etat des optos de sortie.
@@ -976,79 +1052,24 @@
             Un senseur de sortie est occupée.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CCoinValidator.numChannel">
+        <member name="T:DeviceLibrary.CCoinValidator.TrashDoor">
             <summary>
-            Nombre de canaux du monnayeur.
+            Etats de la porte de rejet.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CCoinValidator.backEventCounter">
+        <member name="F:DeviceLibrary.CCoinValidator.TrashDoor.CLOSED">
             <summary>
-            Tableau contenant l'identification des pièces.
+            Trappe de sortie du Pelicano fermée.
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CCoinValidator.BackEventCounter">
+        <member name="F:DeviceLibrary.CCoinValidator.TrashDoor.OPEN">
             <summary>
-            Sauvegarde du compteur d'événement.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCoinValidator.IsCVToBeDeactivated">
-            <summary>
-            Indique si le monnayeur doit être adtivé.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCoinValidator.IsCVToBeActivated">
-            <summary>
-            Indique si le monnayeur doit être adtivé.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCoinValidator.TrashLid">
-            <summary>
-            Contient l'indicateur d'ouverture du containner.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCoinValidator.ExitSensor">
-            <summary>
-            Indique si les optiques de sortie sont libre.
+            Trappe de sortie du Pelcano ouverte.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CCoinValidator.ChannelInProgress">
             <summary>
             Numéro du canal en cours d'utilisation.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCoinValidator.creditBuffer">
-            <summary>
-            Buffer contenant les informations sur les pièces lues ou les erreurs rencontrées
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCoinValidator.OverrideMask">
-            <summary>
-            Masque des chemins optionnels
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCoinValidator.State">
-            <summary>
-            Etat de la machie d'état.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCoinValidator.canaux">
-            <summary>
-            Tableau des canaux
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCoinValidator.CVTask">
-            <summary>
-            Thread de gestion de la machine d'état du monnayeur.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CCoinValidator.sorterPath">
-            <summary>
-            Chemin utilisé dans le trieur pour le canal
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CCoinValidator.IsCVInitialized">
-            <summary>
-            Flag indiquant si le monnayeur est initialisé.
             </summary>
         </member>
         <member name="P:DeviceLibrary.CCoinValidator.DataBaseVersion">
@@ -1057,18 +1078,17 @@
             </summary>
             <remarks>Header 243</remarks>
         </member>
-        <member name="M:DeviceLibrary.CCoinValidator.TestSolenoid(System.Byte)">
+        <member name="P:DeviceLibrary.CCoinValidator.DefaultSorterPath">
             <summary>
-            Active les activateurs du monnayeur
+            Renvoi le chemin de tri par défaut.
             </summary>
-            <param name="mask">Masque correspondant aux bobines a activé.</param>
-            <returns></returns>
+            <returns>Le chemin de tri par défaut. 0 en cas d'échec.</returns>
+            <remarks>Header 188</remarks>
         </member>
-        <member name="M:DeviceLibrary.CCoinValidator.SetOverrideStatus(System.Byte)">
+        <member name="P:DeviceLibrary.CCoinValidator.OverrideMask">
             <summary>
-            Modifie l'override status.
+            Masque des chemins optionnels
             </summary>
-            <remarks>Header 222</remarks>
         </member>
         <member name="P:DeviceLibrary.CCoinValidator.OverrideStatus">
             <summary>
@@ -1077,23 +1097,58 @@
             <returns>L'octet de l'override</returns>
             <remarks>Header 221</remarks>
         </member>
-        <member name="P:DeviceLibrary.CCoinValidator.DefaultSorterPath">
-            <summary>
-            Renvoi le chemin de tri par défaut.
-            </summary>
-            <returns>Le chemin de tri par défaut. 0 en cas d'échec.</returns>
-            <remarks>Header 188</remarks>
-        </member>
         <member name="P:DeviceLibrary.CCoinValidator.Status">
             <summary>
             Renvoi le status du coin validator
             </summary>
             <returns>status</returns>
         </member>
-        <member name="P:DeviceLibrary.CCoinValidator.VariablesSet">
+        <member name="P:DeviceLibrary.CCoinValidator.BackEventCounter">
             <summary>
-            Les donnees variables du monnaayeur.
+            Sauvegarde du compteur d'événement.
             </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.ExitSensor">
+            <summary>
+            Indique si les optiques de sortie sont libre.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.IsCVInitialized">
+            <summary>
+            Flag indiquant si le monnayeur est initialisé.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.State">
+            <summary>
+            Etat de la machie d'état.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.TrashLid">
+            <summary>
+            Contient l'indicateur d'ouverture du containner.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.IsCVToBeActivated">
+            <summary>
+            Indique si le monnayeur doit être adtivé.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CCoinValidator.IsCVToBeDeactivated">
+            <summary>
+            Indique si le monnayeur doit être adtivé.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CCoinValidator.SetOverrideStatus(System.Byte)">
+            <summary>
+            Modifie l'override status.
+            </summary>
+            <remarks>Header 222</remarks>
+        </member>
+        <member name="M:DeviceLibrary.CCoinValidator.TestSolenoid(System.Byte)">
+            <summary>
+            Active les activateurs du monnayeur
+            </summary>
+            <param name="mask">Masque correspondant aux bobines a activé.</param>
             <returns></returns>
         </member>
         <member name="M:DeviceLibrary.CCoinValidator.CheckCreditBuffer">
@@ -1101,14 +1156,20 @@
             Cette fonction analyse le buffer des crédits et des codes erreurs
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CCoinValidator.Init">
-            <summary>
-            Initialisation du monnayeur.
-            </summary>
-        </member>
         <member name="M:DeviceLibrary.CCoinValidator.CheckState">
             <summary>
             Traitement des états du monnayers.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CCoinValidator.GetVariablesSet">
+            <summary>
+            Les donnees variables du monnaayeur.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DeviceLibrary.CCoinValidator.Init">
+            <summary>
+            Initialisation du monnayeur.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CCoinValidator.Task">
@@ -1116,10 +1177,20 @@
             Tâche de la machine d'état du monnayeur.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CCoinValidator.#ctor">
+        <member name="T:DeviceLibrary.CCoinValidator.CErroCV">
             <summary>
-            Constructeur de la class CCoinValidator
+            Classe des erreurs du monnayeur.
             </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CErroCV.code">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:DeviceLibrary.CCoinValidator.CErroCV.errorText">
+             <summary>
+            
+             </summary>
         </member>
         <member name="T:DeviceLibrary.CCoinValidator.Header">
             \addtogroup Headers
@@ -1611,12 +1682,12 @@
             Pièce avalée.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COIN2FAST">
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COIN2_FAST">
             <summary>
             Passage trop rapide.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COIN2SLOW">
+        <member name="F:DeviceLibrary.CCoinValidator.CVErrorCodes.COIN2_SLOW">
             <summary>
             Passage trop lent.
             </summary>
@@ -1834,7 +1905,7 @@
             Contructeur.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevicesManager.parametersFile">
+        <member name="F:DeviceLibrary.CDevicesManager.ParametersFile">
             <summary>
             Instance de la classe XmlDocument permettant la lecture des fichiers XML.
             </summary>
@@ -1869,6 +1940,21 @@
             Nom du fichier des paramètres.
             </summary>
         </member>
+        <member name="F:DeviceLibrary.CDevicesManager.alternateDevise">
+            <summary>
+            Seconde devise acceptée.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevicesManager.mainDevise">
+            <summary>
+            Devise principale
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevicesManager.tauxDeChange">
+            <summary>
+            Taux de conversion à appliquer pour la devise secondaire.
+            </summary>
+        </member>
         <member name="F:DeviceLibrary.CDevicesManager.Hoppers">
             <summary>
             Liste des hoppers
@@ -1899,6 +1985,11 @@
         <member name="M:DeviceLibrary.CDevicesManager.ChangeBack">
             <summary>
             Effectue le rendu monnaie.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.EndTransaction">
+            <summary>
+            Cloture la transaction en cours
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.OnBNRDispensed(DeviceLibrary.CEvent)">
@@ -1981,6 +2072,12 @@
             </summary>
             <param name="evenement"></param>
         </member>
+        <member name="M:DeviceLibrary.CDevicesManager.OnModuleEmptied(DeviceLibrary.CEvent)">
+            <summary>
+            Evenement levé pour la fin du vidage d'un module.
+            </summary>
+            <param name="evenement"></param>
+        </member>
         <member name="M:DeviceLibrary.CDevicesManager.OnMoneyReceived(DeviceLibrary.CEvent)">
             <summary>
             Evémenment levé lors de l'introduction d'une pièce.
@@ -2023,20 +2120,41 @@
             Retourne les billets e escrow.
             </summary>
         </member>
+        <member name="M:DeviceLibrary.CDevicesManager.BNRCashBoxRemoved">
+            <summary>
+            Remise à zéro des compteurs de la caisse
+            </summary>
+        </member>
         <member name="M:DeviceLibrary.CDevicesManager.BNRDispense(System.Int32)">
             <summary>
             Envoi une demande de distribution au BNR
             </summary>
             <param name="amount">Montant à distribuer.</param>
         </member>
+        <member name="M:DeviceLibrary.CDevicesManager.BNRReloadRecycler">
+            <summary>
+            Fonction permettant le rechargment des recyclers.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.BNRSetLoaderMeter(System.UInt32)">
+            <summary>
+            Fixe le compteur de billets contenus dans le loader.
+            </summary>
+            <param name="numberOfBill">Nombre de billets dans le loader.</param>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.BNRTransfertLoaderRecyclersInCB">
+            <summary>
+            Transfert les billets du loader et des recyclers dans la caisse du BNR.
+            </summary>
+        </member>
         <member name="M:DeviceLibrary.CDevicesManager.CancelTransaction">
             <summary>
             Abandonne la transaction et retourne le montant introduit
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.CashBoxRemoved">
+        <member name="M:DeviceLibrary.CDevicesManager.ccTalkCountersResets">
             <summary>
-            Remise à zéro des compteurs de la caisse
+            Remise à zéro des compteurs.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.Dispose">
@@ -2044,26 +2162,15 @@
             Libère les ressources.
             </summary>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.EndTransaction">
+        <member name="M:DeviceLibrary.CDevicesManager.EndTransactionForced">
             <summary>
-            Cloture la transaction en cours
+            Cloture de force une transaction en cours.
             </summary>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.GetSerialPort">
             <summary>
             Renvoi le nom du port série utilisé par le bus ccTalk
             </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevicesManager.ResetCounters">
-            <summary>
-            Remise à zéro des compteurs.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevicesManager.SetLoaderNumber(System.UInt32)">
-            <summary>
-            Fixe le compteur de billets contenus dans le loader.
-            </summary>
-            <param name="numberOfBill"></param>
         </member>
         <member name="M:DeviceLibrary.CDevicesManager.SetSorterPath(System.Byte,System.Byte)">
             <summary>
@@ -2072,14 +2179,14 @@
             <param name="canal">Canal du monnayeur</param>
             <param name="sorter">chemin du trieur</param>
         </member>
-        <member name="M:DeviceLibrary.CDevicesManager.Finalize">
-            <summary>
-            Destructeur
-            </summary>
-        </member>
         <member name="M:DeviceLibrary.CDevicesManager.Dispose(System.Boolean)">
             <summary>
             Fonction libérant les ressources
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevicesManager.Finalize">
+            <summary>
+            Destructeur
             </summary>
         </member>
         <member name="T:DeviceLibrary.CEvent">
@@ -2176,6 +2283,11 @@
         <member name="F:DeviceLibrary.CEvent.Reason.BNRDISPENSE">
             <summary>
             Le BNR a distribué des billets.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CEvent.Reason.BNREMPTY">
+            <summary>
+            Un module du bnr a été vidé.
             </summary>
         </member>
         <member name="F:DeviceLibrary.CEvent.Reason.CASHBOXREMOVED">
@@ -2341,11 +2453,6 @@
             Lecture et conversion de la tension maximum.
             </summary>
         </member>
-        <member name="P:DeviceLibrary.CHopper.CHopperVariableSet.VariableSetToRead">
-            <summary>
-            Buffer du résultat de la commande de lecture des variables du hopper.
-            </summary>
-        </member>
         <member name="M:DeviceLibrary.CHopper.CHopperVariableSet.GetVariable(DeviceLibrary.CHopper.CHopperVariableSet.Variable)">
             <summary>
             Lecture d'une variable
@@ -2358,6 +2465,11 @@
             Lecture des variables.
             </summary>
         </member>
+        <member name="M:DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSetToRead">
+            <summary>
+            Buffer du résultat de la commande de lecture des variables du hopper.
+            </summary>
+        </member>
         <member name="M:DeviceLibrary.CHopper.CHopperVariableSet.SetVariable(System.Double,System.Byte,System.Byte,DeviceLibrary.CHopper.CHopperVariableSet.CoinMode)">
             <summary>
             Enregistrement des variables
@@ -2366,6 +2478,11 @@
             <param name="motorStopDelay">Delai pour arrêter le moteur après la distribution.</param>
             <param name="payoutTO">Le délai maximum pour la distribution d'une pièce.</param>
             <param name="singleCoinMode">Single coin ou non.</param>
+        </member>
+        <member name="M:DeviceLibrary.CHopper.CHopperVariableSet.SetVariableSetToRead(System.Byte[])">
+            <summary>
+            Buffer du résultat de la commande de lecture des variables du hopper.
+            </summary>
         </member>
         <member name="T:DeviceLibrary.CHopper.CLevel">
             <summary>
@@ -3413,106 +3530,34 @@
             interrompt la tâche.
             </summary>
         </member>
-        <member name="T:DeviceLibrary.CDevice">
-            <summary>
-            Classe abstraite parent de tous les périphériques
-            </summary>
-        </member>
-        <member name="T:DeviceLibrary.CDevice.CInserted">
+        <member name="T:DeviceLibrary.CInserted">
             <summary>
              Classe des pièces insérées
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.BackTotalAmount">
+        <member name="F:DeviceLibrary.CInserted.BackTotalAmount">
             <summary>
             Sauvegarde du montant total inséré depuis le début de la transaction.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.CVChannel">
+        <member name="F:DeviceLibrary.CInserted.CVChannel">
             <summary>
             Canal correpsondant à la pièce insérée
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.CVPath">
+        <member name="F:DeviceLibrary.CInserted.CVPath">
             <summary>
             Chemin de tri utilisé
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.TotalAmount">
+        <member name="F:DeviceLibrary.CInserted.TotalAmount">
             <summary>
             Montant inséré depuis le début de la transaction.
             </summary>
         </member>
-        <member name="F:DeviceLibrary.CDevice.CInserted.ValeurCent">
+        <member name="F:DeviceLibrary.CInserted.ValeurCent">
             <summary>
             Montant nominal en centimes de la pièce insérée
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.evReady">
-            <summary>
-            Event permenttant de savoir savoir si le BNR prêt.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.denominationInserted">
-             <summary>
-            
-             </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.eventListLock">
-            <summary>
-            Objet de verrouillage de l'accés à la liste des évenements.
-            </summary>
-        </member>
-        <member name="F:DeviceLibrary.CDevice.eventsList">
-            <summary>
-            Liste des évenement.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.#ctor">
-            <summary>
-            Constructeur
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.IsPresent">
-            <summary>
-            Flag indiquant si le hopper est detecté.
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.Manufacturer">
-            <summary>
-            Identifiant du  fabricant
-            </summary>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.ProductCode">
-            <summary>
-            Fonction demandant le code produit
-            </summary>
-            <returns>Une chaîne de caractères contenant le code produit</returns>
-        </member>
-        <member name="P:DeviceLibrary.CDevice.SerialNumber">
-            <summary>
-            Numéro de série du périphérique
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.Dispose(System.Boolean)">
-             <summary>
-            
-             </summary>
-             <param name="disposing"></param>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.Dispose">
-             <summary>
-            
-             </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.Init">
-            <summary>
-            Initialisation des périphériques.
-            </summary>
-        </member>
-        <member name="M:DeviceLibrary.CDevice.Task">
-            <summary>
-            Tâche du périphérique.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CMemoryStorage">
@@ -3963,8 +4008,8 @@
             <summary>
             Retourne le checksum du buffer
             </summary>
-            <param name="Buffer">Buffer sur lequel le calcul s'effectue</param>
-            <param name="Len">Longeur du buffer</param>
+            <param name="buffer">Buffer sur lequel le calcul s'effectue</param>
+            <param name="len">Longeur du buffer</param>
             <returns></returns>
         </member>
         <member name="M:DeviceLibrary.CccTalk.GetASCII(DeviceLibrary.CccTalk.Header)">
@@ -3978,15 +4023,15 @@
             <summary>
             Vérifie si un bus ccTalk est branché sur un port série.
             </summary>
-            <param name="NameOfPort">Nom du port série</param>
+            <param name="nameOfPort">Nom du port série</param>
             <returns>true si un bus ccTalk est detecté sur ce port série</returns>
         </member>
         <member name="M:DeviceLibrary.CccTalk.ZeroMemory(System.Byte[],System.Byte)">
             <summary>
             Vide le buffer passé en paramètre
             </summary>
-            <param name="Buffer">Buffer devant être vidé</param>
-            <param name="Len">Longueur du buffer</param>
+            <param name="buffer">Buffer devant être vidé</param>
+            <param name="len">Longueur du buffer</param>
         </member>
         <member name="M:DeviceLibrary.CccTalk.GetByte(System.Object)">
             <summary>
@@ -4010,10 +4055,10 @@
             <summary>
             Envoie une commande et recoit la réponse
             </summary>
-            <param name="Peripherique">Adresse du périphérique</param>
-            <param name="Commande">Header de la commande envoyée</param>
-            <param name="LenParam">Longeur des paramètres</param>
-            <param name="Parameter">Buffer des paramètres</param>
+            <param name="peripherique">Adresse du périphérique</param>
+            <param name="commande">Header de la commande envoyée</param>
+            <param name="lenParam">Longeur des paramètres</param>
+            <param name="parameter">Buffer des paramètres</param>
             <param name="answer">Objet contenant les paramètres de retour le cas échéant</param>
             <returns></returns>
         </member>
@@ -4290,6 +4335,78 @@
         <member name="F:DeviceLibrary.CccTalk.SelfTestResult.ERRORUNKNOW">
             <summary>
             Erreur inconnue.
+            </summary>
+        </member>
+        <member name="T:DeviceLibrary.CDevice">
+            <summary>
+            Classe abstraite parent de tous les périphériques
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.evReady">
+            <summary>
+            Event permenttant de savoir savoir si le BNR prêt.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.denominationInserted">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.eventListLock">
+            <summary>
+            Objet de verrouillage de l'accés à la liste des évenements.
+            </summary>
+        </member>
+        <member name="F:DeviceLibrary.CDevice.eventsList">
+            <summary>
+            Liste des évenement.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.#ctor">
+            <summary>
+            Constructeur
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.IsPresent">
+            <summary>
+            Flag indiquant si le hopper est detecté.
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.Manufacturer">
+            <summary>
+            Identifiant du  fabricant
+            </summary>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.ProductCode">
+            <summary>
+            Fonction demandant le code produit
+            </summary>
+            <returns>Une chaîne de caractères contenant le code produit</returns>
+        </member>
+        <member name="P:DeviceLibrary.CDevice.SerialNumber">
+            <summary>
+            Numéro de série du périphérique
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.Dispose(System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="disposing"></param>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.Init">
+            <summary>
+            Initialisation des périphériques.
+            </summary>
+        </member>
+        <member name="M:DeviceLibrary.CDevice.Task">
+            <summary>
+            Tâche du périphérique.
             </summary>
         </member>
         <member name="T:DeviceLibrary.CPelicano">

@@ -728,16 +728,16 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ada03008cb56819752dd1fe201c4c1be9" prot="public">
-          <name>COIN2FAST</name>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591a597454d42ebf950c40f24de12e4e5579" prot="public">
+          <name>COIN2_FAST</name>
           <initializer>= 37</initializer>
           <briefdescription>
 <para>Passage trop rapide. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591ad4f375ed800d463da94afc540bf8d22e" prot="public">
-          <name>COIN2SLOW</name>
+        <enumvalue id="group___erreurs_1gga68c5b73cc3b337502d9f92154d933591af7990394a2f51ac3868347051c21961c" prot="public">
+          <name>COIN2_SLOW</name>
           <initializer>= 38</initializer>
           <briefdescription>
 <para>Passage trop lent. </para>          </briefdescription>

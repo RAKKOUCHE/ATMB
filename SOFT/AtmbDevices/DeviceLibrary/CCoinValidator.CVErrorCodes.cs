@@ -209,12 +209,12 @@ namespace DeviceLibrary
             /// <summary>
             /// Passage trop rapide.
             /// </summary>
-            COIN2FAST = 37,
+            COIN2_FAST = 37,
 
             /// <summary>
             /// Passage trop lent.
             /// </summary>
-            COIN2SLOW = 38,
+            COIN2_SLOW = 38,
 
             /// <summary>
             /// Tri incorrecte.

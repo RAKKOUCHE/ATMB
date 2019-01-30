@@ -95,9 +95,9 @@ namespace DeviceLibrary
                         ExitSensor = ((result & 0x04) > 0) ? LowerSensor.BUSY : LowerSensor.FREE;
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return result;
             }
@@ -126,9 +126,9 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Error("Impossible de lire l'état des optocoupleurs du pelicano");
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return result;
             }
@@ -153,9 +153,9 @@ namespace DeviceLibrary
                     byte byResult = GetByte(CCoinValidator.Header.REQUESTOPTIONFLAG);
                     result = (byResult & 16) > 0 ? OptionFlag.SUPPORTED : OptionFlag.UNSUPPORTED;
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return result;
             }
@@ -178,9 +178,9 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Error(messagesText.erreurCmd, CccTalk.Header.REQUESTSN, DeviceAddress);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 CDevicesManager.Log.Info("Le numéro de série du {0} est {1}", DeviceAddress, bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 * bufferIn[2]) + (0x1000000 * bufferIn[3]));
                 return bufferIn[0] + (0x100 * bufferIn[1]) + 0x10000 * bufferIn[2] + (0x1000000 * bufferIn[3]);
@@ -221,9 +221,9 @@ namespace DeviceLibrary
                     return 0xFF;
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
             return 0;
         }
@@ -245,9 +245,9 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoInProgress);
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -271,9 +271,9 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoInProgress);
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -294,9 +294,9 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoMode, CcmdMotors.GETSPEED);
                     result = ActivateMotor(CcmdMotors.GETSPEED);
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return result;
             }
@@ -314,9 +314,9 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Info("La vitesse du moteur est fixée à {0}%", value);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
             }
         }
@@ -338,9 +338,9 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Info(messagesText.cmdMotorPelicanoMode, CcmdMotors.GETPOCKETIME);
                     result = ActivateMotor(CcmdMotors.GETPOCKETIME);
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return result;
             }
@@ -467,9 +467,9 @@ namespace DeviceLibrary
                     }
                     mutexCCTalk.ReleaseMutex();
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 finally
                 {

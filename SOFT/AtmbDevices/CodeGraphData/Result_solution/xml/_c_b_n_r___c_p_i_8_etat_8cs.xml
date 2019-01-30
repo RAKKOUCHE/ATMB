@@ -45,13 +45,27 @@
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a238625dce187682a7f0893e0df431779" kindref="member">STATE_RETRACT</ref>,</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a667adf1721ecf31975b473ea51005d04" kindref="member">STATE_IDLE</ref>,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2ab051e9033349ebe782e71f7ae46fed90" kindref="member">STATE_UPDATE_LOADER_METER</ref>,</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa1cbf7ab92312cb40dc586242a8bc03e" kindref="member">STATE_STOP</ref>,</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a601288ba5c613f5f916fda5a2913c3ed" kindref="member">STATE_RELOAD_RECYCLER</ref>,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2ad170878a2a3bab7f90ca525ecb595be8" kindref="member">STATE_CASHIN_START</ref>,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa1d900c04765a9868f930fdca4168d78" kindref="member">STATE_CAHSIN</ref>,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2ade52132e716806d9e9013583462b0064" kindref="member">STATE_CANCEL</ref>,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a8031041785ebe28fdf4c951353b02788" kindref="member">STATE_CASHIN_END</ref>,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a8baa1c1e6fd48641506cd1ce715cb3f9" kindref="member">STATE_EMPTY</ref>,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2a667adf1721ecf31975b473ea51005d04" kindref="member">STATE_IDLE</ref>,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa1cbf7ab92312cb40dc586242a8bc03e" kindref="member">STATE_STOP</ref>,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.Etat.cs"/>
   </compounddef>

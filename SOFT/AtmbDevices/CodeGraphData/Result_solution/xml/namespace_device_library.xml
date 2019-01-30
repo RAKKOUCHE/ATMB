@@ -11,7 +11,9 @@
     <innerclass refid="class_device_library_1_1_c_devices_manager" prot="public">DeviceLibrary::CDevicesManager</innerclass>
     <innerclass refid="class_device_library_1_1_c_event" prot="public">DeviceLibrary::CEvent</innerclass>
     <innerclass refid="class_device_library_1_1_c_hopper" prot="public">DeviceLibrary::CHopper</innerclass>
+    <innerclass refid="class_device_library_1_1_c_inserted" prot="public">DeviceLibrary::CInserted</innerclass>
     <innerclass refid="class_device_library_1_1_c_memory_storage" prot="public">DeviceLibrary::CMemoryStorage</innerclass>
+    <innerclass refid="class_device_library_1_1_c_module_emptied" prot="public">DeviceLibrary::CModuleEmptied</innerclass>
     <innerclass refid="class_device_library_1_1_c_pelicano" prot="public">DeviceLibrary::CPelicano</innerclass>
     <innerclass refid="class_device_library_1_1messages_text" prot="public">DeviceLibrary::messagesText</innerclass>
     <innerclass refid="class_device_library_1_1_resource1" prot="package">DeviceLibrary::Resource1</innerclass>

@@ -54,45 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="25" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="24" bodyend="55"/>
-      </memberdef>
-      <memberdef kind="enum" id="group___niveaux_1ga103e99cf2377b2a34791cd09cd4a0a52" prot="public" static="no">
-        <name>HardLevel</name>
-        <enumvalue id="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52a4c67bb3d8f85b3a1570dd8a5a8a26338" prot="public">
-          <name>VIDE</name>
-          <briefdescription>
-<para>Le périphérique est vide. </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52ae0aa021e21dddbd6d8cecec71e9cf564" prot="public">
-          <name>OK</name>
-          <briefdescription>
-<para>Aucune sonde n&apos;est activée. </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52a7ec21e24df39ba83c2d56f47d4932957" prot="public">
-          <name>PLEIN</name>
-          <briefdescription>
-<para>Le périphérique est plein </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52ab741d43a8209dcfcf03bb781061689a8" prot="public">
-          <name>INCONNU</name>
-          <briefdescription>
-<para>Les sondes n&apos;ont pas été encore interrogées. </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>Enumération des niveaux Hard </para>        </briefdescription>
-        <detaileddescription>
-<para>Determinés par la lecture des sondes de niveau du périphérique</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="62" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="61" bodyend="82"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="80" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="79" bodyend="110"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

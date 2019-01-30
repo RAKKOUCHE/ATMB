@@ -16,7 +16,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Enumeration des concernant concernant les moyens de paiement
         /// </summary>
-        protected new enum Header : byte
+        private new enum Header : byte
         {
             /// <summary>
             /// Délai recommandé pour vérifier le buffer de crédits et de code d'erreur

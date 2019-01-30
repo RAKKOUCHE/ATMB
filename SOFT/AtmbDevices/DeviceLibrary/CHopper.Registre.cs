@@ -11,6 +11,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Liste des réponses contenu dans le registre
         /// </summary>
+        [System.Flags]
         public enum RegistrePos : byte
         {
             /// <summary>

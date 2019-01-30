@@ -48,7 +48,7 @@
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" line="67" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CccTalk.CcoinsCounters.cs" bodystart="67" bodyend="71"/>
         <references refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1ae653db2845cfce2f2eb79a59130235b3" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="62">DeviceLibrary.CcoinsCounters.CCoinInCB.amountTotalInCB</references>
         <references refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1a6a188267272acc337f425ad7f7f0be79" compoundref="_ccc_talk_8_ccoins_counters_8cs" startline="57">DeviceLibrary.CcoinsCounters.CCoinInCB.coin</references>
-        <references refid="class_device_library_1_1_c_coin_validator_1a68f118167bcdf23f194ef02b779d4333" compoundref="_c_coin_validator_8cs" startline="99">DeviceLibrary.CCoinValidator.numChannel</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1a68f118167bcdf23f194ef02b779d4333" compoundref="_c_coin_validator_8cs" startline="59">DeviceLibrary.CCoinValidator.numChannel</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -56,14 +56,14 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="64">
+      <node id="65">
         <label>DeviceLibrary.CcoinsCounters.CCoinInCB</label>
         <link refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b"/>
-        <childnode refid="65" relation="usage">
+        <childnode refid="66" relation="usage">
           <edgelabel>coin</edgelabel>
         </childnode>
       </node>
-      <node id="65">
+      <node id="66">
         <label>DeviceLibrary.CcoinsCounters.CCoinInCB.CCoin</label>
         <link refid="class_device_library_1_1_ccoins_counters_1_1_c_coin_in_c_b_1_1_c_coin"/>
       </node>

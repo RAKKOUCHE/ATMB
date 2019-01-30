@@ -69,7 +69,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="66" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="66" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" compoundref="_ccash_reader_8cs" startline="225" endline="236">DeviceLibrary.CcashReader.MasterEnable</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" compoundref="_ccash_reader_8cs" startline="228" endline="239">DeviceLibrary.CcashReader.MasterEnable</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a755549427f23616566b9993e8ea52a22" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -96,7 +96,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="84" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="84" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="74" endline="102">DeviceLibrary.CccTalk.CccTalk</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="65" endline="93">DeviceLibrary.CccTalk.CccTalk</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a5aba326853a8c8f79f70053306ee819c" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -110,7 +110,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="93" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="93" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1adc962171c994c63312d316f13b046d2c" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -124,7 +124,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="102" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="102" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="74" endline="102">DeviceLibrary.CccTalk.CccTalk</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="65" endline="93">DeviceLibrary.CccTalk.CccTalk</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1ac961f592dd67ea083a505482617c823b" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -208,7 +208,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="156" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="156" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" compoundref="_ccash_reader_8cs" startline="209" endline="220">DeviceLibrary.CcashReader.MasterDisable</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" compoundref="_ccash_reader_8cs" startline="212" endline="223">DeviceLibrary.CcashReader.MasterDisable</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1ab9931d675639d2f20b12a5b9d7247d76" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -235,7 +235,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="174" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="174" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a2f05f0441e8bb2a403b65e2ed0839e2d" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -263,78 +263,86 @@
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="192" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="192" bodyend="-1"/>
         <referencedby refid="class_device_library_1_1_c_pelicano_1aeddf0e0eb3b4b86bdcde077601c05879" compoundref="_c_pelicano_8cs" startline="196" endline="229">DeviceLibrary.CPelicano.ActivateMotor</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="903" endline="940">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" compoundref="_c_b_n_r___c_p_i_8cs" startline="227" endline="378">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1acb9b7f647f7ca372051492560ea7fc85" compoundref="_c_devices_manager_8cs" startline="994" endline="1030">DeviceLibrary.CDevicesManager.CashBoxRemoved</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" compoundref="_c_b_n_r___c_p_i_8cs" startline="166" endline="183">DeviceLibrary.CBNR_CPI.CBNR_CPI</referencedby>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="74" endline="102">DeviceLibrary.CccTalk.CccTalk</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1addb8e79d5a3377a2aadef60fc1b19a53" compoundref="_c_coin_validator_8cs" startline="778" endline="807">DeviceLibrary.CCoinValidator.CCoinValidator</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="833" endline="896">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4ade41b0290eee442ca90765ec2523b7" compoundref="_c_b_n_r___c_p_i_8cs" startline="779" endline="804">DeviceLibrary.CBNR_CPI.CheckAndDispense</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="395" endline="461">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1a70d416bc45d53fc08588ece6aa2d2c0e" compoundref="_c_hopper_8cs" startline="981" endline="1085">DeviceLibrary.CHopper.CheckLevel</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1a25c0ba824eb783ecdec6c6f53f90f243" compoundref="_c_hopper_8cs" startline="1368" endline="1401">DeviceLibrary.CHopper.CHopper</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" compoundref="_c_hopper_8_variable_set_8cs" startline="181" endline="192">DeviceLibrary.CHopper.CHopperVariableSet.CHopperVariableSet</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="963" endline="1001">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a70a1e05eda188ac2746ead3fff39a54d" compoundref="_c_b_n_r___c_p_i_8cs" startline="229" endline="428">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af18337108d515626ddb56bf1789a3d2e" compoundref="_c_devices_manager_8cs" startline="1006" endline="1021">DeviceLibrary.CDevicesManager.BNRBillRetract</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8ff83839b54a090292259ba17f4cbdf9" compoundref="_c_devices_manager_8cs" startline="1026" endline="1042">DeviceLibrary.CDevicesManager.BNRBillRollBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1abfbac0c12306e6b790c6dc832a936234" compoundref="_c_devices_manager_8cs" startline="1047" endline="1083">DeviceLibrary.CDevicesManager.BNRCashBoxRemoved</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a55a2595eaddb2907cea1ba69a178b660" compoundref="_c_devices_manager_8cs" startline="1097" endline="1111">DeviceLibrary.CDevicesManager.BNRReloadRecycler</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ab3b1bd2212d8ab4b33e0ced4d4419c7c" compoundref="_c_devices_manager_8cs" startline="1117" endline="1132">DeviceLibrary.CDevicesManager.BNRSetLoaderMeter</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9f7e3b6b7033452c066bcbe896607c80" compoundref="_c_devices_manager_8cs" startline="1137" endline="1151">DeviceLibrary.CDevicesManager.BNRTransfertLoaderRecyclersInCB</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1af5bc4a1cd53059562ce0e09ce40e1dda" compoundref="_c_b_n_r___c_p_i_8cs" startline="168" endline="185">DeviceLibrary.CBNR_CPI.CBNR_CPI</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="65" endline="93">DeviceLibrary.CccTalk.CccTalk</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1addb8e79d5a3377a2aadef60fc1b19a53" compoundref="_c_coin_validator_8cs" startline="74" endline="103">DeviceLibrary.CCoinValidator.CCoinValidator</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af9ccfc35fb9d0d8b6c889ad5969788ab" compoundref="_c_devices_manager_8cs" startline="884" endline="956">DeviceLibrary.CDevicesManager.CDevicesManager</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="150" endline="236">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a4ade41b0290eee442ca90765ec2523b7" compoundref="_c_b_n_r___c_p_i_8cs" startline="802" endline="832">DeviceLibrary.CBNR_CPI.CheckAndDispense</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="384" endline="450">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a70d416bc45d53fc08588ece6aa2d2c0e" compoundref="_c_hopper_8cs" startline="837" endline="941">DeviceLibrary.CHopper.CheckLevel</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="455" endline="725">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a25c0ba824eb783ecdec6c6f53f90f243" compoundref="_c_hopper_8cs" startline="174" endline="207">DeviceLibrary.CHopper.CHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a3274b3d076c12d72a6d91ffcb0f9b042" compoundref="_c_hopper_8_variable_set_8cs" startline="30" endline="41">DeviceLibrary.CHopper.CHopperVariableSet.CHopperVariableSet</referencedby>
         <referencedby refid="class_device_library_1_1_c_pelicano_1ac49c45b7dd286e8e7f4bc3999c833740" compoundref="_c_pelicano_8cs" startline="259" endline="278">DeviceLibrary.CPelicano.CPRStart</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1adc0fd478490e3ef5e255f7bc2f64f506" compoundref="_c_hopper_8cs" startline="805" endline="823">DeviceLibrary.CHopper.DispenseCoins</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1ae47327ae35305769239ffd9922081d57" compoundref="_c_hopper_8cs" startline="1090" endline="1130">DeviceLibrary.CHopper.Empty</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1a1c8de197528a0f954006105da4fd261f" compoundref="_c_hopper_8cs" startline="741" endline="756">DeviceLibrary.CHopper.EnableHopper</referencedby>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="399" endline="427">DeviceLibrary.CccTalk.GetASCII</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="62" endline="83">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="376" endline="392">DeviceLibrary.CccTalk.GetByte</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1a1faca12f58535beec695d78479d29884" compoundref="_c_hopper_8cs" startline="783" endline="797">DeviceLibrary.CHopper.GetCipherKey</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="81" endline="108">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" compoundref="_c_memory_storage_8cs" startline="168" endline="188">DeviceLibrary.CMemoryStorage.GetDataBlock</referencedby>
-        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="81" endline="100">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1adee6f8f04f44591bd69e469ae255ac28" compoundref="_c_hopper_8_status_8cs" startline="147" endline="167">DeviceLibrary.CHopper.CHopperStatus.GetHopperStatus</referencedby>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" compoundref="_ccash_reader_8cs" startline="190" endline="204">DeviceLibrary.CcashReader.GetInhibitMask</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1a6c3cbf56cd236d0867a96e5345f6b881" compoundref="_c_hopper_8cs" startline="724" endline="736">DeviceLibrary.CHopper.GetResetableCounter</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="126" endline="140">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" compoundref="_c_b_n_r___c_p_i_8cs" startline="809" endline="824">DeviceLibrary.CBNR_CPI.Init</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1acda4cf9b030e54786ba9b366fdf3f6e2" compoundref="_c_hopper_8cs" startline="902" endline="958">DeviceLibrary.CHopper.Init</referencedby>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" compoundref="_c_ctalk_8cs" startline="510" endline="533">DeviceLibrary.CccTalk.IsDeviceReseted</referencedby>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" compoundref="_ccash_reader_8cs" startline="209" endline="220">DeviceLibrary.CcashReader.MasterDisable</referencedby>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" compoundref="_ccash_reader_8cs" startline="225" endline="236">DeviceLibrary.CcashReader.MasterEnable</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1abcfed3749aff233df6c41849c8192850" compoundref="_c_devices_manager_8cs" startline="228" endline="243">DeviceLibrary.CDevicesManager.OnBNRDispensed</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a761cfb095d56e00ec6f89f6374591cef" compoundref="_c_devices_manager_8cs" startline="248" endline="263">DeviceLibrary.CDevicesManager.OnBNRErreur</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6a8eeadddea0c11a5b9f1ac3b56be09e" compoundref="_c_devices_manager_8cs" startline="269" endline="284">DeviceLibrary.CDevicesManager.OnbnrModuleReinsere</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad598d4a8eaf78fa130df9a8edbf7515f" compoundref="_c_devices_manager_8cs" startline="290" endline="305">DeviceLibrary.CDevicesManager.OnBNRResetModule</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad6899efe8ae1e945a5c4ea6791267a57" compoundref="_c_devices_manager_8cs" startline="311" endline="326">DeviceLibrary.CDevicesManager.OnBRNModuleRemoved</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a4b48353ed25192d2a4ee8c7fe93ed6ea" compoundref="_c_devices_manager_8cs" startline="328" endline="343">DeviceLibrary.CDevicesManager.OnCashBoxRemoved</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a778ba9ee3fd8972814be5673fdfb60db" compoundref="_c_devices_manager_8cs" startline="348" endline="363">DeviceLibrary.CDevicesManager.OnCashClose</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a80a442b9fa68ed9791adbc7b13c8cd98" compoundref="_c_devices_manager_8cs" startline="368" endline="383">DeviceLibrary.CDevicesManager.OnCashOpen</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a0a113fdda969a3d94e09b5f1ac8fbf54" compoundref="_c_devices_manager_8cs" startline="389" endline="404">DeviceLibrary.CDevicesManager.OnCVError</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a65f85225203f76bb9bd5db0e6f53e282" compoundref="_c_devices_manager_8cs" startline="409" endline="425">DeviceLibrary.CDevicesManager.OnDllReady</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa9bec486871cefa0e177121ec0c8cd13" compoundref="_c_devices_manager_8cs" startline="431" endline="446">DeviceLibrary.CDevicesManager.OnHopperDispensed</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a07945482a7a21471f60672c01b8a19a7" compoundref="_c_devices_manager_8cs" startline="452" endline="467">DeviceLibrary.CDevicesManager.OnHopperEmptied</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8c6efc3c0f6e6664990edf0c92f6f237" compoundref="_c_devices_manager_8cs" startline="473" endline="488">DeviceLibrary.CDevicesManager.OnHopperError</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa18aded58c64b857ef55e6d393d481ff" compoundref="_c_devices_manager_8cs" startline="494" endline="509">DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa1cc70b8bdfacf1f80e54fa230fd5477" compoundref="_c_devices_manager_8cs" startline="515" endline="530">DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad66242c0d494fbb018d3da25334bfcb7" compoundref="_c_devices_manager_8cs" startline="535" endline="551">DeviceLibrary.CDevicesManager.OnMoneyReceived</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1ad4e3e04686c9cabd002597ebd8fa3712" compoundref="_c_hopper_8cs" startline="761" endline="778">DeviceLibrary.CHopper.PumpRNG</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1ade39ebe65c6d9b8ba4a7935c89a0f32f" compoundref="_c_devices_manager_8cs" startline="556" endline="636">DeviceLibrary.CDevicesManager.ReadParamHopper</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a87f99167dfc7b15e42f28e302a29e06d" compoundref="_c_b_n_r___c_p_i_8cs" startline="724" endline="745">DeviceLibrary.CBNR_CPI.Retract</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1abe2d64822c6158adae8bd2bfcc1f6207" compoundref="_c_b_n_r___c_p_i_8cs" startline="750" endline="773">DeviceLibrary.CBNR_CPI.RollBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1adc0fd478490e3ef5e255f7bc2f64f506" compoundref="_c_hopper_8cs" startline="964" endline="982">DeviceLibrary.CHopper.DispenseCoins</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1ae47327ae35305769239ffd9922081d57" compoundref="_c_hopper_8cs" startline="987" endline="1028">DeviceLibrary.CHopper.Empty</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a1c8de197528a0f954006105da4fd261f" compoundref="_c_hopper_8cs" startline="706" endline="721">DeviceLibrary.CHopper.EnableHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="350" endline="378">DeviceLibrary.CccTalk.GetASCII</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="61" endline="82">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="440" endline="456">DeviceLibrary.CccTalk.GetByte</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a1faca12f58535beec695d78479d29884" compoundref="_c_hopper_8cs" startline="744" endline="758">DeviceLibrary.CHopper.GetCipherKey</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d_1a9f0877f1a3ea6db0d8ae5db7945ae422" compoundref="_c_coin_validator_8_c_canal_8cs" startline="173" endline="200">DeviceLibrary.CCoinValidator.CCanal.CCoindID.GetCoinId</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1a7517e6ae450e6c26be181fa187d98ed0" compoundref="_c_memory_storage_8cs" startline="144" endline="164">DeviceLibrary.CMemoryStorage.GetDataBlock</referencedby>
+        <referencedby refid="class_device_library_1_1_c_memory_storage_1af329c7962b7095cc2f15dd5a22d0fcfd" compoundref="_c_memory_storage_8cs" startline="169" endline="188">DeviceLibrary.CMemoryStorage.GetDataStorageAvailability</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_status_1adee6f8f04f44591bd69e469ae255ac28" compoundref="_c_hopper_8_status_8cs" startline="108" endline="128">DeviceLibrary.CHopper.CHopperStatus.GetHopperStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" compoundref="_ccash_reader_8cs" startline="193" endline="207">DeviceLibrary.CcashReader.GetInhibitMask</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a6c3cbf56cd236d0867a96e5345f6b881" compoundref="_c_hopper_8cs" startline="1034" endline="1046">DeviceLibrary.CHopper.GetResetableCounter</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1a742f7336343a39cbc4ea994d3ee1e62c" compoundref="_c_hopper_8_variable_set_8cs" startline="145" endline="159">DeviceLibrary.CHopper.CHopperVariableSet.GetVariableSet</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a902fc52e8ee7764e0f8daa6b049ed528" compoundref="_c_coin_validator_8cs" startline="731" endline="747">DeviceLibrary.CCoinValidator.GetVariablesSet</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a247ebfca7ab34f17de14a9c86f1b5fbb" compoundref="_c_b_n_r___c_p_i_8cs" startline="848" endline="865">DeviceLibrary.CBNR_CPI.Init</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1acda4cf9b030e54786ba9b366fdf3f6e2" compoundref="_c_hopper_8cs" startline="1051" endline="1107">DeviceLibrary.CHopper.Init</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" compoundref="_c_ctalk_8cs" startline="576" endline="599">DeviceLibrary.CccTalk.IsDeviceReseted</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1acd4d9cf6f8ee0299f5521b6ff6fabc57" compoundref="_ccash_reader_8cs" startline="212" endline="223">DeviceLibrary.CcashReader.MasterDisable</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1aec351cc4aeaf3fd814808de16bbc97f7" compoundref="_ccash_reader_8cs" startline="228" endline="239">DeviceLibrary.CcashReader.MasterEnable</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1abcfed3749aff233df6c41849c8192850" compoundref="_c_devices_manager_8cs" startline="242" endline="257">DeviceLibrary.CDevicesManager.OnBNRDispensed</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a761cfb095d56e00ec6f89f6374591cef" compoundref="_c_devices_manager_8cs" startline="262" endline="277">DeviceLibrary.CDevicesManager.OnBNRErreur</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a6a8eeadddea0c11a5b9f1ac3b56be09e" compoundref="_c_devices_manager_8cs" startline="283" endline="298">DeviceLibrary.CDevicesManager.OnbnrModuleReinsere</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad598d4a8eaf78fa130df9a8edbf7515f" compoundref="_c_devices_manager_8cs" startline="304" endline="319">DeviceLibrary.CDevicesManager.OnBNRResetModule</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad6899efe8ae1e945a5c4ea6791267a57" compoundref="_c_devices_manager_8cs" startline="325" endline="340">DeviceLibrary.CDevicesManager.OnBRNModuleRemoved</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a4b48353ed25192d2a4ee8c7fe93ed6ea" compoundref="_c_devices_manager_8cs" startline="342" endline="357">DeviceLibrary.CDevicesManager.OnCashBoxRemoved</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a778ba9ee3fd8972814be5673fdfb60db" compoundref="_c_devices_manager_8cs" startline="362" endline="377">DeviceLibrary.CDevicesManager.OnCashClose</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a80a442b9fa68ed9791adbc7b13c8cd98" compoundref="_c_devices_manager_8cs" startline="382" endline="397">DeviceLibrary.CDevicesManager.OnCashOpen</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a0a113fdda969a3d94e09b5f1ac8fbf54" compoundref="_c_devices_manager_8cs" startline="403" endline="418">DeviceLibrary.CDevicesManager.OnCVError</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a65f85225203f76bb9bd5db0e6f53e282" compoundref="_c_devices_manager_8cs" startline="423" endline="439">DeviceLibrary.CDevicesManager.OnDllReady</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa9bec486871cefa0e177121ec0c8cd13" compoundref="_c_devices_manager_8cs" startline="445" endline="460">DeviceLibrary.CDevicesManager.OnHopperDispensed</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a07945482a7a21471f60672c01b8a19a7" compoundref="_c_devices_manager_8cs" startline="466" endline="481">DeviceLibrary.CDevicesManager.OnHopperEmptied</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a8c6efc3c0f6e6664990edf0c92f6f237" compoundref="_c_devices_manager_8cs" startline="487" endline="502">DeviceLibrary.CDevicesManager.OnHopperError</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa18aded58c64b857ef55e6d393d481ff" compoundref="_c_devices_manager_8cs" startline="508" endline="523">DeviceLibrary.CDevicesManager.OnHopperHardLevelChanged</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1aa1cc70b8bdfacf1f80e54fa230fd5477" compoundref="_c_devices_manager_8cs" startline="529" endline="544">DeviceLibrary.CDevicesManager.OnHopperSoftLevelChanged</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a7cc31e2791cb13cd6abbe19316913e4d" compoundref="_c_devices_manager_8cs" startline="550" endline="566">DeviceLibrary.CDevicesManager.OnModuleEmptied</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ad66242c0d494fbb018d3da25334bfcb7" compoundref="_c_devices_manager_8cs" startline="571" endline="587">DeviceLibrary.CDevicesManager.OnMoneyReceived</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1ad4e3e04686c9cabd002597ebd8fa3712" compoundref="_c_hopper_8cs" startline="1128" endline="1145">DeviceLibrary.CHopper.PumpRNG</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1ade39ebe65c6d9b8ba4a7935c89a0f32f" compoundref="_c_devices_manager_8cs" startline="592" endline="672">DeviceLibrary.CDevicesManager.ReadParamHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1aeb0d24fdcf995789e2bf4310ad46011a" compoundref="_c_b_n_r___c_p_i_8cs" startline="870" endline="896">DeviceLibrary.CBNR_CPI.Reloadrecycler</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a87f99167dfc7b15e42f28e302a29e06d" compoundref="_c_b_n_r___c_p_i_8cs" startline="775" endline="796">DeviceLibrary.CBNR_CPI.Retract</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a91cd8e697d25e926b73cda537ec4f7d4" compoundref="_c_b_n_r___c_p_i_8cs" startline="613" endline="636">DeviceLibrary.CBNR_CPI.RollBack</referencedby>
         <referencedby refid="class_device_library_1_1_c_memory_storage_1a8220a45c5b071e142269665113554702" compoundref="_c_memory_storage_8cs" startline="195" endline="217">DeviceLibrary.CMemoryStorage.SetDataBlock</referencedby>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="243" endline="257">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="169" endline="184">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1a941fe54c9299c2f3d78f865a3c7dc720" compoundref="_c_coin_validator_8cs" startline="282" endline="297">DeviceLibrary.CCoinValidator.SetOverrideStatus</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" compoundref="_c_coin_validator_8_c_canal_8cs" startline="195" endline="210">DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1af8b27e93e6a4fbce10494e95723c91ec" compoundref="_c_devices_manager_8cs" startline="1096" endline="1114">DeviceLibrary.CDevicesManager.SetSorterPath</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a83b922baef8338338cff42eadbc534b3" compoundref="_c_devices_manager_8cs" startline="641" endline="680">DeviceLibrary.CDevicesManager.SetSortersAndHoppersToLoad</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" compoundref="_c_hopper_8_variable_set_8cs" startline="161" endline="176">DeviceLibrary.CHopper.CHopperVariableSet.SetVariable</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="254" endline="268">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="164" endline="179">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a941fe54c9299c2f3d78f865a3c7dc720" compoundref="_c_coin_validator_8cs" startline="339" endline="354">DeviceLibrary.CCoinValidator.SetOverrideStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" compoundref="_c_coin_validator_8_c_canal_8cs" startline="285" endline="300">DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1af8b27e93e6a4fbce10494e95723c91ec" compoundref="_c_devices_manager_8cs" startline="1223" endline="1241">DeviceLibrary.CDevicesManager.SetSorterPath</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a83b922baef8338338cff42eadbc534b3" compoundref="_c_devices_manager_8cs" startline="677" endline="716">DeviceLibrary.CDevicesManager.SetSortersAndHoppersToLoad</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_hopper_variable_set_1ae3870e557927eb1461d5d8d6fd5af0f1" compoundref="_c_hopper_8_variable_set_8cs" startline="176" endline="191">DeviceLibrary.CHopper.CHopperVariableSet.SetVariable</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="645" endline="770">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
         <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="685" endline="824">DeviceLibrary.CDevicesManager.Task</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="829" endline="1099">DeviceLibrary.CBNR_CPI.Task</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1a26e1f1fb8a30b65d591b53eb6d049acf" compoundref="_c_hopper_8cs" startline="1216" endline="1362">DeviceLibrary.CHopper.Task</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1a2a1d5d6383c6ab9e5952f6cac14d65df" compoundref="_c_hopper_8cs" startline="828" endline="897">DeviceLibrary.CHopper.TestHopper</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="258" endline="276">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="901" endline="1380">DeviceLibrary.CBNR_CPI.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a26e1f1fb8a30b65d591b53eb6d049acf" compoundref="_c_hopper_8cs" startline="1173" endline="1319">DeviceLibrary.CHopper.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a2a1d5d6383c6ab9e5952f6cac14d65df" compoundref="_c_hopper_8cs" startline="763" endline="832">DeviceLibrary.CHopper.TestHopper</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="361" endline="379">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
         <referencedby refid="class_device_library_1_1_c_pelicano_1ac026ccd1409c2242f5200a8eb79fce82" compoundref="_c_pelicano_8cs" startline="234" endline="252">DeviceLibrary.CPelicano.TrashCycle</referencedby>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1a58a0185454ad0e063699aae15c5df79e" compoundref="_c_ctalk_8cs" startline="143" endline="156">DeviceLibrary.CccTalk.ZeroMemory</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a4f8f602b57c29e64489c7d31a1fc06b3" compoundref="_c_ctalk_8cs" startline="419" endline="432">DeviceLibrary.CccTalk.ZeroMemory</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a9b8554d38ab9c2799d5405e2f894cf82" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -348,11 +356,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="201" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="201" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="399" endline="427">DeviceLibrary.CccTalk.GetASCII</referencedby>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="376" endline="392">DeviceLibrary.CccTalk.GetByte</referencedby>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" compoundref="_c_ctalk_8cs" startline="510" endline="533">DeviceLibrary.CccTalk.IsDeviceReseted</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" compoundref="_c_coin_validator_8_c_canal_8cs" startline="195" endline="210">DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="258" endline="276">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="350" endline="378">DeviceLibrary.CccTalk.GetASCII</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="440" endline="456">DeviceLibrary.CccTalk.GetByte</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ae08ca2c67bd1598c43747b8e0b3a84c6" compoundref="_c_ctalk_8cs" startline="576" endline="599">DeviceLibrary.CccTalk.IsDeviceReseted</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter_1af570ab762e976409a29d22cc0a7c4c3e" compoundref="_c_coin_validator_8_c_canal_8cs" startline="285" endline="300">DeviceLibrary.CCoinValidator.CCanal.CSorter.SetSorterPath</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="361" endline="379">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a9bd55afe4b9caa13b0d861fc4c3ff24f" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -379,7 +387,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="219" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="219" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ae3dae0077a9b7fe533abd3d9591e0733" compoundref="_c_ctalk_8cs" startline="109" endline="136">DeviceLibrary.CccTalk.IsCcTalkPort</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ad99a0d37ec8ff0907b75d95aa4106b84" compoundref="_c_ctalk_8cs" startline="385" endline="412">DeviceLibrary.CccTalk.IsCcTalkPort</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1aa59ba4427bc96cde7bd3f125a279f09c" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -406,7 +414,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="237" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="237" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="243" endline="257">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="254" endline="268">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1ad9c4ce7df2d9a97fb037a6b2fe1a01fe" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -420,7 +428,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="246" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="246" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="169" endline="184">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="164" endline="179">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a457477e9ee134856647bf051d74293ea" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -462,7 +470,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="273" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="273" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="376" endline="392">DeviceLibrary.CccTalk.GetByte</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a5f67f62cb03d573225712813348408ad" compoundref="_c_ctalk_8cs" startline="440" endline="456">DeviceLibrary.CccTalk.GetByte</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1ab9e7a38bdab6ee7cce1c2f701e1e5fa1" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -502,7 +510,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="300" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="300" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" compoundref="_ccash_reader_8cs" startline="190" endline="204">DeviceLibrary.CcashReader.GetInhibitMask</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1a22cc54c81546b8e13ca08d5981c791cf" compoundref="_ccash_reader_8cs" startline="193" endline="207">DeviceLibrary.CcashReader.GetInhibitMask</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a98d96d1497375fafe0595cd8b05cfd35" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -594,7 +602,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="363" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="363" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="399" endline="427">DeviceLibrary.CccTalk.GetASCII</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1a0701f4a255e61b0d723105c7a5098d35" compoundref="_c_ctalk_8cs" startline="350" endline="378">DeviceLibrary.CccTalk.GetASCII</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a4e9189c04771bbd6e96ba7f9d5d515fc" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -621,7 +629,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="381" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="381" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="243" endline="257">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ae336729983d06e5d15b9935a5d380417" compoundref="_ccash_reader_8cs" startline="254" endline="268">DeviceLibrary.CcashReader.SetInhibitStatus</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1ac37e35f9f795175e6dca7d0b49b33637" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -661,7 +669,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="408" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="408" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1ac150c27572b319dde35b8ac2b76e5801" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -701,7 +709,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="435" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="435" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1aac828c24757eef357df7ede8980d5f5d" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -715,7 +723,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="444" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="444" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a3bce2e18d1b8dbc3d29446f4c1fc7cc7" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -729,7 +737,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="453" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="453" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="74" endline="102">DeviceLibrary.CccTalk.CccTalk</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1acb6f8e8dcdfa88d9cdc5b3ebf1ea0e90" compoundref="_c_ctalk_8cs" startline="65" endline="93">DeviceLibrary.CccTalk.CccTalk</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a848d1437acc274997c7e914263ed490a" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -756,7 +764,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="471" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="471" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a36eee29e70368828dc0fb2ff7ec98ac0" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -770,7 +778,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="480" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="480" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="169" endline="184">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
+        <referencedby refid="class_device_library_1_1_ccash_reader_1ad1a16d7f88c9baa25decb851b674387c" compoundref="_ccash_reader_8cs" startline="164" endline="179">DeviceLibrary.CcashReader.SetMasterInhibit</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a3e4012cb4d076ab167356a3e9319aa36" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -836,7 +844,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="525" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="525" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="258" endline="276">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1aca5a7f6d4805b9cd2df7b4d4fbdd0686" compoundref="_c_coin_validator_8cs" startline="361" endline="379">DeviceLibrary.CCoinValidator.TestSolenoid</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1a419304b9107134f10dc4b155581aa087" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -850,7 +858,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="534" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="534" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1aec4481f3887107f375c6a9d5644a3d2e" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -864,7 +872,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="543" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="543" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_device_library_1_1messages_text_1aa2c6c9e22c64621ad6e50951e6233abd" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
         <type>string</type>
@@ -878,7 +886,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" line="552" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/messagesText.Designer.cs" bodystart="552" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_ccc_talk_1ae3dae0077a9b7fe533abd3d9591e0733" compoundref="_c_ctalk_8cs" startline="109" endline="136">DeviceLibrary.CccTalk.IsCcTalkPort</referencedby>
+        <referencedby refid="class_device_library_1_1_ccc_talk_1ad99a0d37ec8ff0907b75d95aa4106b84" compoundref="_c_ctalk_8cs" startline="385" endline="412">DeviceLibrary.CccTalk.IsCcTalkPort</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-func">
@@ -901,13 +909,13 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="267">
+      <node id="271">
         <label>Resources</label>
       </node>
-      <node id="266">
+      <node id="270">
         <label>DeviceLibrary.messagesText</label>
         <link refid="class_device_library_1_1messages_text"/>
-        <childnode refid="267" relation="usage">
+        <childnode refid="271" relation="usage">
           <edgelabel>resourceMan</edgelabel>
         </childnode>
       </node>

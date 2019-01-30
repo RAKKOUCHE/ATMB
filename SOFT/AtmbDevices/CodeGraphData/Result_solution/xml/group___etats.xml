@@ -97,6 +97,55 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2ab051e9033349ebe782e71f7ae46fed90" prot="public">
+          <name>STATE_UPDATE_LOADER_METER</name>
+          <briefdescription>
+<para>Fixe le compteur du loader. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a601288ba5c613f5f916fda5a2913c3ed" prot="public">
+          <name>STATE_RELOAD_RECYCLER</name>
+          <briefdescription>
+<para>Recharge des recyclers. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2ad170878a2a3bab7f90ca525ecb595be8" prot="public">
+          <name>STATE_CASHIN_START</name>
+          <briefdescription>
+<para>Démarre une transaction. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2aa1d900c04765a9868f930fdca4168d78" prot="public">
+          <name>STATE_CAHSIN</name>
+          <briefdescription>
+<para>Prépare le BNR à recevoir des billets. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2ade52132e716806d9e9013583462b0064" prot="public">
+          <name>STATE_CANCEL</name>
+          <briefdescription>
+<para>Annule l&apos;opération en cours. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a8031041785ebe28fdf4c951353b02788" prot="public">
+          <name>STATE_CASHIN_END</name>
+          <briefdescription>
+<para>Cloture la transaction </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a8baa1c1e6fd48641506cd1ce715cb3f9" prot="public">
+          <name>STATE_EMPTY</name>
+          <briefdescription>
+<para>Transfert du contenu des modules en caisse. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <enumvalue id="group___etats_1gga0ba00823ea47953aa70abd2626137de2a667adf1721ecf31975b473ea51005d04" prot="public">
           <name>STATE_IDLE</name>
           <briefdescription>
@@ -117,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.Etat.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.Etat.cs" bodystart="19" bodyend="96"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.Etat.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.Etat.cs" bodystart="19" bodyend="131"/>
       </memberdef>
       <memberdef kind="enum" id="group___etats_1ga33c79ff59c961c2e1bbf95838e5d6871" prot="public" static="no">
         <name>Etat</name>

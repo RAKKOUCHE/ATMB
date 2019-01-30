@@ -38,23 +38,19 @@ namespace DeviceLibrary
         /// <summary>
         /// Tableau de conversion des unités dans la réponse au polling priority.
         /// </summary>
-        private static readonly int[] priorityUnit = { 0, 1, 10, 1000, 60000 };
+        private static readonly int[] PriorityUnit = { 0, 1, 10, 1000, 60000 };
 
         #endregion CONSTANTES
 
-        #region PROPRIETEES
+        #region VARIABLES
 
         private byte[] inhibitMask;
-        private int pollingDelay;
 
-        /// <summary>
-        /// Masque d'ihnibition (2 octets pour 16 canaux)
-        /// </summary>
-        protected byte[] InhibitMask
-        {
-            get => inhibitMask;
-            set => inhibitMask = value;
-        }
+        #endregion VARIABLES
+
+        #region PROPRIETEES
+
+        private int pollingDelay;
 
         /// <summary>
         /// Renvoi l'activation du monnayeur
@@ -72,16 +68,15 @@ namespace DeviceLibrary
                 try
                 {
                     CDevicesManager.Log.Info(messagesText.getMasterInhibt, DeviceAddress);
-                    ;
                     byte[] bufferIn = { (byte)InhibitStatus.DISABLED };
                     if (IsCmdccTalkSended(DeviceAddress, Header.REQUESTMASTERINHIBITSTATUS, 0, null, bufferIn))
                     {
                         result = (InhibitStatus)(bufferIn[0] & 0x01);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 CDevicesManager.Log.Info(messagesText.inhibitStatusResult, DeviceAddress, result);
                 return result;
@@ -119,12 +114,12 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Error(messagesText.noccTalkDevice);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
-                CDevicesManager.Log.Info(messagesText.delayPolling, DeviceAddress.ToString(), priorityUnit[bufferIn[0]] * bufferIn[1]);
-                return priorityUnit[bufferIn[0]] * bufferIn[1];
+                CDevicesManager.Log.Info(messagesText.delayPolling, DeviceAddress.ToString(), PriorityUnit[bufferIn[0]] * bufferIn[1]);
+                return PriorityUnit[bufferIn[0]] * bufferIn[1];
             }
         }
 
@@ -150,9 +145,9 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Error(messagesText.selfTest, DeviceAddress, result);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return result;
             }
@@ -177,17 +172,25 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Error(messagesText.errMasterInhibitStatus, DeviceAddress);
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
+        }
+
+        /// <summary>
+        /// Masque d'ihnibition (2 octets pour 16 canaux)
+        /// </summary>
+        protected byte[] GetInhibitMask()
+        {
+            return inhibitMask;
         }
 
         /// <summary>
         /// Retourne le mask d'inhibition des canaux
         /// </summary>
         /// <param name="mask">Buffer contenant les masks d'inhibitions</param>
-        public void GetInhibitMask(byte[] mask)
+        protected void GetInhibitMask(byte[] mask)
         {
             try
             {
@@ -197,42 +200,50 @@ namespace DeviceLibrary
                     throw new Exception(string.Format("Impossible de lire le mask 'd'inhibition du {0}", DeviceAddress));
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
         /// <summary>
         /// Desactive globalement le moyen de paiement
         /// </summary>
-        public void MasterDisable()
+        protected void MasterDisable()
         {
             try
             {
                 CDevicesManager.Log.Info(messagesText.deactivationCV, DeviceAddress);
                 SetMasterInhibit(InhibitStatus.DISABLED);
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
         /// <summary>
         /// Activation globale du moyen de paiement
         /// </summary>
-        public void MasterEnable()
+        protected void MasterEnable()
         {
             try
             {
                 CDevicesManager.Log.Info(messagesText.activationCV, DeviceAddress);
                 SetMasterInhibit(InhibitStatus.ENABLED);
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
+        }
+
+        /// <summary>
+        /// Masque d'ihnibition (2 octets pour 16 canaux)
+        /// </summary>
+        protected void SetInhibitMask(byte[] value)
+        {
+            inhibitMask = value;
         }
 
         /// <summary>
@@ -240,7 +251,7 @@ namespace DeviceLibrary
         /// </summary>
         /// <param name="mask">masque d'inhibiton</param>
         /// <remarks>Header 231</remarks>
-        public void SetInhibitStatus(byte[] mask)
+        protected void SetInhibitStatus(byte[] mask)
         {
             try
             {
@@ -250,9 +261,9 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Error(messagesText.errInhibitStatus, DeviceAddress);
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 

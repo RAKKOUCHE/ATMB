@@ -3,18 +3,31 @@
   <compounddef id="class_device_library_1_1_c_hopper_1_1_c_empty_count" kind="class" prot="public">
     <compoundname>DeviceLibrary::CHopper::CEmptyCount</compoundname>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_empty_count_1afadaec8d415014a84a134c64740d7414" prot="public" static="no" mutable="no">
-        <type>string</type>
-        <definition>string DeviceLibrary.CHopper.CEmptyCount.nameOfHopper</definition>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_empty_count_1aa9438d053793ad17dfaaba410dff2af1" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long DeviceLibrary.CHopper.CEmptyCount.amountCounter</definition>
         <argsstring></argsstring>
-        <name>nameOfHopper</name>
+        <name>amountCounter</name>
         <briefdescription>
-<para>Nom du hopper. </para>        </briefdescription>
+<para>Montant distribué pendant le vidage. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CEmptyCount.cs" line="19" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CEmptyCount.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_empty_count_1a30e4ea7873f253cbaa362dac6985043b" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long DeviceLibrary.CHopper.CEmptyCount.amountDelta</definition>
+        <argsstring></argsstring>
+        <name>amountDelta</name>
+        <briefdescription>
+<para>Différence entre le montant distribué et le montant dans les compteurs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CEmptyCount.cs" line="24" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CEmptyCount.cs" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_empty_count_1a8ccb96ba708ceb8206e3ba99ebb201da" prot="public" static="no" mutable="no">
         <type>long</type>
@@ -23,19 +36,6 @@
         <name>counter</name>
         <briefdescription>
 <para>Nombre de pièces comptées durant le vidage </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CEmptyCount.cs" line="24" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CEmptyCount.cs" bodystart="24" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_empty_count_1aa9438d053793ad17dfaaba410dff2af1" prot="public" static="no" mutable="no">
-        <type>long</type>
-        <definition>long DeviceLibrary.CHopper.CEmptyCount.amountCounter</definition>
-        <argsstring></argsstring>
-        <name>amountCounter</name>
-        <briefdescription>
-<para>Montant distribué pendant le vidage. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -55,13 +55,13 @@
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CEmptyCount.cs" line="34" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CEmptyCount.cs" bodystart="34" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_empty_count_1a30e4ea7873f253cbaa362dac6985043b" prot="public" static="no" mutable="no">
-        <type>long</type>
-        <definition>long DeviceLibrary.CHopper.CEmptyCount.amountDelta</definition>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_empty_count_1afadaec8d415014a84a134c64740d7414" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CHopper.CEmptyCount.nameOfHopper</definition>
         <argsstring></argsstring>
-        <name>amountDelta</name>
+        <name>nameOfHopper</name>
         <briefdescription>
-<para>Différence entre le montant distribué et le montant dans les compteurs. </para>        </briefdescription>
+<para>Nom du hopper. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>

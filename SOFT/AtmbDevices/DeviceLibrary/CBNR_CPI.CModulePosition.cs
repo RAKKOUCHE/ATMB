@@ -18,6 +18,11 @@ namespace DeviceLibrary
         private class CModulePosition
         {
             /// <summary>
+            /// Nom du module.
+            /// </summary>
+            public readonly string moduleName;
+
+            /// <summary>
             /// Flag indiquant si le module est présent.
             /// </summary>
             public bool isPresent;
@@ -28,18 +33,13 @@ namespace DeviceLibrary
             public bool isReinserted;
 
             /// <summary>
-            /// Nom du module.
-            /// </summary>
-            public string name;
-
-            /// <summary>
             /// Constructeur
             /// </summary>
-            /// <param name="name">Indique le nom du module contenu dans l'instance de la classe.</param>
+            /// <param name="moduleName">Indique le nom du module contenu dans l'instance de la classe.</param>
             /// <param name="isPresent">Initialise la présence du module.</param>
-            public CModulePosition(string name, bool isPresent)
+            public CModulePosition(string moduleName, bool isPresent)
             {
-                this.name = name;
+                this.moduleName = moduleName;
                 this.isPresent = isPresent;
                 isReinserted = false;
             }
@@ -50,7 +50,7 @@ namespace DeviceLibrary
             /// <returns></returns>
             public override string ToString()
             {
-                return name;
+                return moduleName;
             }
         }
     }

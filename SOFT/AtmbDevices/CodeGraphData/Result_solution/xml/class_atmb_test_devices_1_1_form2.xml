@@ -124,33 +124,33 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="254">
+      <node id="258">
         <label>AtmbTestDevices.Form2</label>
         <link refid="class_atmb_test_devices_1_1_form2"/>
-        <childnode refid="255" relation="public-inheritance">
+        <childnode refid="259" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="255">
+      <node id="259">
         <label>Form</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="256">
+      <node id="260">
         <label>AtmbTestDevices.Form2</label>
         <link refid="class_atmb_test_devices_1_1_form2"/>
-        <childnode refid="257" relation="public-inheritance">
+        <childnode refid="261" relation="public-inheritance">
         </childnode>
-        <childnode refid="258" relation="usage">
+        <childnode refid="262" relation="usage">
           <edgelabel>panel1</edgelabel>
           <edgelabel>label2</edgelabel>
           <edgelabel>label3</edgelabel>
           <edgelabel>components</edgelabel>
         </childnode>
       </node>
-      <node id="257">
+      <node id="261">
         <label>Form</label>
       </node>
-      <node id="258">
+      <node id="262">
         <label>System</label>
       </node>
     </collaborationgraph>

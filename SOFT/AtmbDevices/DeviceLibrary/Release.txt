@@ -140,5 +140,20 @@
  * ### Modifications
  * - Gestion des erreurs de dll du BNR
  * 
+ * Rev. 09.01.20   2019 01 28<br>
+ * -------------------------------------
+ * ### Bugs
+ * - Erreur dans le compteur du loader.
+ * 
+ * ### Modifications
+ * - Correction du bug sur le loader.
+ * - Le reset automatique du BNR ne peut être effectué sans une initialisation du compteur du loader.
+ * - Implémentation de la recharge des recyclers.
+ * - Limitation des fichiers logs à 7 fichiers avec 1 fichier par jour.
+ * - Utilisation des devises du fichier des paramètres.
+ * - Modificiation de la génération des nombres alátoires pour le hopper (plus sûr).
+ * - Implémentation du vidage des modules.
+ * - Consolidation de la machine d'état du BNR.
+ * 
  *------------------------------------------------------------------------------
  */

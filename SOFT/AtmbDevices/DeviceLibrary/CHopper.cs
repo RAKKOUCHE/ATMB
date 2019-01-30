@@ -7,6 +7,8 @@
 /// \author Rachid AKKOUCHE
 
 using System;
+using System.Security.Cryptography;
+
 using System.Threading;
 
 namespace DeviceLibrary
@@ -196,9 +198,9 @@ namespace DeviceLibrary
                     throw new Exception($"Hopper numéro {Number} non trouvé");
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 evReady.Set();
             }
             evReady.WaitOne(30000);
@@ -222,9 +224,9 @@ namespace DeviceLibrary
                         throw new Exception(string.Format("Erreur sur la detection des niveaux du hopper {0}", Number));
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return result;
             }
@@ -285,9 +287,9 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Debug("Le code pays de la pièce traitée par le hopper {0} est {1}, la valeur est de {2:C2}, la version est {3} ", Number, result.CountryCode, (decimal)result.ValeurCent / 100, result.Issue);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return result;
             }
@@ -712,9 +714,9 @@ namespace DeviceLibrary
                     throw new Exception(string.Format("Impossible d'autorisé la distribution sur le {0}", DeviceAddress));
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -749,9 +751,9 @@ namespace DeviceLibrary
                     throw new Exception("Impossible de récupérer la clé de chiffrement.");
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -770,30 +772,30 @@ namespace DeviceLibrary
                     if (isMaxCurrentExceeded = (bufferIn[0] & (byte)RegistrePos.MAXCURRENTEXCEEDED) > 0)
                     {
                         result = HopperError.MAXCURRENTEXCEEDED;
-                    };
+                    }
                     isTOOccured = (bufferIn[0] & (byte)RegistrePos.TOOCCURED) > 0;
                     if (isMotorReversed = (bufferIn[0] & (byte)RegistrePos.MOTORREVERSED) > 0)
                     {
                         result = HopperError.MOTORREVERSED;
-                    };
+                    }
                     if (isOptoPathBlocked = (bufferIn[0] & (byte)RegistrePos.OPTOPATHBLOCKED) > 0)
                     {
                         result = HopperError.OPTOPATHBLOCKED;
-                    };
+                    }
                     if (isShortCircuit = (bufferIn[0] & (byte)RegistrePos.OPTOSHORTCIRCUITIDLE) > 0)
                     {
                         result = HopperError.OPTOSHORTCIRCUITIDLE;
-                    };
+                    }
                     if (isOptoPermanentlyBlocked = (bufferIn[0] & (byte)RegistrePos.OPTOBLOCKEDPERMANENTLY) > 0)
                     {
                         result = HopperError.OPTOBLOCKEDPERMANENTLY;
-                    };
+                    }
                     isPowerUpDetected = (bufferIn[0] & (byte)RegistrePos.POWERUP) > 0;
                     isPayoutDisabled = (bufferIn[0] & (byte)RegistrePos.DISABLED) > 0;
                     if (isOptoShorCircuit = (bufferIn[1] & (byte)RegistrePos.OPTOSHORTCIRCUIT) > 0)
                     {
                         result = HopperError.OPTOSHORTCIRCUIT;
-                    };
+                    }
                     isSingleCoinMode = (bufferIn[1] & (byte)RegistrePos.SINGLEPAYOUT) > 0;
                     if (isCheckSumAError = (bufferIn[1] & (byte)RegistrePos.CHECKSUMA) > 0)
                     {
@@ -806,15 +808,15 @@ namespace DeviceLibrary
                     if (isCheckSumCError = (bufferIn[1] & (byte)RegistrePos.CHECKSUMC) > 0)
                     {
                         result = HopperError.CHECKSUMC;
-                    };
+                    }
                     if (isCheckSumDError = (bufferIn[1] & (byte)RegistrePos.CHECKSUMD) > 0)
                     {
                         result = HopperError.CHECKSUMD;
-                    };
+                    }
                     if (isPowerFailMemoryWrite = (bufferIn[1] & (byte)RegistrePos.POWERFAIL) > 0)
                     {
                         result = HopperError.POWERFAIL;
-                    };
+                    }
                     isPINEnabled = (bufferIn[1] & (byte)RegistrePos.PINNUMBER) > 0;
                 }
                 else
@@ -822,9 +824,9 @@ namespace DeviceLibrary
                     throw new Exception(string.Format("Impossible de lire les refistres du hopper {0}", DeviceAddress));
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
             return result;
         }
@@ -932,9 +934,9 @@ namespace DeviceLibrary
                     }
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -972,9 +974,9 @@ namespace DeviceLibrary
                 }
                 result = true;
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
             return result;
         }
@@ -999,7 +1001,8 @@ namespace DeviceLibrary
                     while (State != Etat.STATE_IDLE)
                     {
                         Thread.Sleep(10);
-                    };
+                    }
+
                     emptyCount.counter += dispenseStatus.CoinsPaid;
                     emptyCount.amountCounter = emptyCount.counter * CoinValue;
                     emptyCount.delta -= dispenseStatus.CoinsPaid;
@@ -1018,9 +1021,9 @@ namespace DeviceLibrary
                     });
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -1035,9 +1038,9 @@ namespace DeviceLibrary
             {
                 CDevicesManager.Log.Info("Le nombre de pièces distribuées par le {0} est {1}", Number, result);
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
             return result;
         }
@@ -1097,9 +1100,9 @@ namespace DeviceLibrary
                 CDevicesManager.Log.Info("Il reste {0} pièce(s) à distribuer par le {1}", dispenseStatus.CoinsRemaining, DeviceAddress);
                 EnableHopper();
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -1127,17 +1130,17 @@ namespace DeviceLibrary
             try
             {
                 CDevicesManager.Log.Info("Random number generator pumb");
-                Random rnd = new Random();
                 byte[] bufferParam = new byte[8];
-                rnd.NextBytes(bufferParam);
+                RandomNumberGenerator rnd = RandomNumberGenerator.Create();
+                rnd.GetBytes(bufferParam);
                 if (!IsCmdccTalkSended(DeviceAddress, Header.PUMPRNG, (byte)bufferParam.Length, bufferParam, null))
                 {
                     throw new Exception("Echec d'initialisation de la clé de chiffrement.");
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -1190,7 +1193,7 @@ namespace DeviceLibrary
                             if (isOnError = (errorHopper.Code = TestHopper()) != HopperError.NON_IDENTIFIEE)
                             {
                                 AddErrorHopperEvent();
-                            };
+                            }
                             state = ((CoinsToDistribute > 0) || ((CoinsToDistribute = dispenseStatus.CoinsRemaining) > 0)) ? Etat.STATE_DISPENSE : Etat.STATE_IDLE;
                             break;
                         }
@@ -1306,9 +1309,9 @@ namespace DeviceLibrary
                         }
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 mutexCCTalk.ReleaseMutex();
                 Thread.Sleep(pollDelayHopper);

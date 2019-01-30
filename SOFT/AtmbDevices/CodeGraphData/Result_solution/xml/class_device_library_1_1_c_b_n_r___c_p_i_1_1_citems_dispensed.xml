@@ -29,11 +29,11 @@
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CitemsDispensed.cs" line="27" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CitemsDispensed.cs" bodystart="27" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed_1a7a8b24b344589944fcbf0b85ce260fe6" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed_1acb673eb6401e8ae703b819c8a0ce5069" prot="public" static="no" mutable="no">
         <type>int</type>
-        <definition>int DeviceLibrary.CBNR_CPI.CitemsDispensed.numberBills</definition>
+        <definition>int DeviceLibrary.CBNR_CPI.CitemsDispensed.count</definition>
         <argsstring></argsstring>
-        <name>numberBills</name>
+        <name>count</name>
         <briefdescription>
 <para>Nombres de billets de la dénominations distribués </para>        </briefdescription>
         <detaileddescription>
@@ -51,7 +51,7 @@
     <listofallmembers>
       <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed_1a4cc3135eb876542ac69c9860628e2ce5" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CitemsDispensed</scope><name>amount</name></member>
       <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed_1ae37c0c60b23789b610e316c75ee63a79" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CitemsDispensed</scope><name>BillValue</name></member>
-      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed_1a7a8b24b344589944fcbf0b85ce260fe6" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CitemsDispensed</scope><name>numberBills</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_citems_dispensed_1acb673eb6401e8ae703b819c8a0ce5069" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CitemsDispensed</scope><name>count</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

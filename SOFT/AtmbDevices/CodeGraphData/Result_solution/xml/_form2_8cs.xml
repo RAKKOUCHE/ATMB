@@ -4,6 +4,7 @@
     <compoundname>Form2.cs</compoundname>
     <innerclass refid="class_atmb_test_devices_1_1_form2" prot="public">AtmbTestDevices::Form2</innerclass>
     <innernamespace refid="namespace_atmb_test_devices">AtmbTestDevices</innernamespace>
+    <innernamespace refid="namespace_system_1_1_windows_1_1_forms">System::Windows::Forms</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -11,7 +12,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Windows.Forms;</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AtmbTestDevices</highlight></codeline>
+<codeline lineno="3" refid="namespace_atmb_test_devices" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">AtmbTestDevices</highlight></codeline>
 <codeline lineno="4"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="5" refid="class_atmb_test_devices_1_1_form2" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal"><ref refid="class_atmb_test_devices_1_1_form2" kindref="compound">Form2</ref><sp/>:<sp/>Form</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>

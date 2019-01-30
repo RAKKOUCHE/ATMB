@@ -3,6 +3,44 @@
   <compounddef id="class_device_library_1_1_c_hopper_1_1_c_level" kind="class" prot="public">
     <compoundname>DeviceLibrary::CHopper::CLevel</compoundname>
       <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52" prot="public" static="no">
+        <name>HardLevel</name>
+        <enumvalue id="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52a4c67bb3d8f85b3a1570dd8a5a8a26338" prot="public">
+          <name>VIDE</name>
+          <briefdescription>
+<para>Le périphérique est vide. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52ae0aa021e21dddbd6d8cecec71e9cf564" prot="public">
+          <name>OK</name>
+          <briefdescription>
+<para>Aucune sonde n&apos;est activée. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52a7ec21e24df39ba83c2d56f47d4932957" prot="public">
+          <name>PLEIN</name>
+          <briefdescription>
+<para>Le périphérique est plein </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52ab741d43a8209dcfcf03bb781061689a8" prot="public">
+          <name>INCONNU</name>
+          <briefdescription>
+<para>Les sondes n&apos;ont pas été encore interrogées. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumération des niveaux Hard </para>        </briefdescription>
+        <detaileddescription>
+<para>Determinés par la lecture des sondes de niveau du périphérique</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="51" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="50" bodyend="71"/>
+      </memberdef>
       <memberdef kind="enum" id="group___niveaux_1ga236fd4e7d945cd014d736b3ca9487dd3" prot="public" static="no">
         <name>SoftLevel</name>
         <enumvalue id="group___niveaux_1gga236fd4e7d945cd014d736b3ca9487dd3a4c67bb3d8f85b3a1570dd8a5a8a26338" prot="public">
@@ -53,48 +91,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="25" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="24" bodyend="55"/>
-      </memberdef>
-      <memberdef kind="enum" id="group___niveaux_1ga103e99cf2377b2a34791cd09cd4a0a52" prot="public" static="no">
-        <name>HardLevel</name>
-        <enumvalue id="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52a4c67bb3d8f85b3a1570dd8a5a8a26338" prot="public">
-          <name>VIDE</name>
-          <briefdescription>
-<para>Le périphérique est vide. </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52ae0aa021e21dddbd6d8cecec71e9cf564" prot="public">
-          <name>OK</name>
-          <briefdescription>
-<para>Aucune sonde n&apos;est activée. </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52a7ec21e24df39ba83c2d56f47d4932957" prot="public">
-          <name>PLEIN</name>
-          <briefdescription>
-<para>Le périphérique est plein </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group___niveaux_1gga103e99cf2377b2a34791cd09cd4a0a52ab741d43a8209dcfcf03bb781061689a8" prot="public">
-          <name>INCONNU</name>
-          <briefdescription>
-<para>Les sondes n&apos;ont pas été encore interrogées. </para>          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>Enumération des niveaux Hard </para>        </briefdescription>
-        <detaileddescription>
-<para>Determinés par la lecture des sondes de niveau du périphérique</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="62" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="61" bodyend="82"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="80" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="79" bodyend="110"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_level_1aba24f93fda726ac162db3e96387a7478" prot="public" static="no" mutable="no">
+        <type><ref refid="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52" kindref="member">HardLevel</ref></type>
+        <definition>HardLevel DeviceLibrary.CHopper.CLevel.hardLevel</definition>
+        <argsstring></argsstring>
+        <name>hardLevel</name>
+        <briefdescription>
+<para>Variable contenant le niveau du périphérique par rapport à ses sondes hardware. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="21" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="150" endline="236">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a70d416bc45d53fc08588ece6aa2d2c0e" compoundref="_c_hopper_8cs" startline="837" endline="941">DeviceLibrary.CHopper.CheckLevel</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_level_1ad2e9dedf4ca74c90862cba4fd49342b3" compoundref="_c_hopper_8_c_level_8cs" startline="40" endline="44">DeviceLibrary.CHopper.CLevel.CLevel</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1af02883320a4f999d393dc6917a14ab03" compoundref="_c_hopper_8cs" startline="947" endline="956">DeviceLibrary.CHopper.Dispense</referencedby>
+      </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_level_1a73e9298454995360eee357fe24489276" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DeviceLibrary.CHopper.CLevel.ID</definition>
@@ -106,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="89" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="89" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="26" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_level_1aaf0763243fa69af88492f6a45c3bffa3" prot="public" static="no" mutable="no">
         <type><ref refid="group___niveaux_1ga236fd4e7d945cd014d736b3ca9487dd3" kindref="member">SoftLevel</ref></type>
@@ -119,28 +136,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="94" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="94" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1a70d416bc45d53fc08588ece6aa2d2c0e" compoundref="_c_hopper_8cs" startline="981" endline="1085">DeviceLibrary.CHopper.CheckLevel</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_level_1ad2e9dedf4ca74c90862cba4fd49342b3" compoundref="_c_hopper_8_c_level_8cs" startline="107" endline="111">DeviceLibrary.CHopper.CLevel.CLevel</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1af02883320a4f999d393dc6917a14ab03" compoundref="_c_hopper_8cs" startline="1145" endline="1154">DeviceLibrary.CHopper.Dispense</referencedby>
-      </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_level_1aba24f93fda726ac162db3e96387a7478" prot="public" static="no" mutable="no">
-        <type><ref refid="group___niveaux_1ga103e99cf2377b2a34791cd09cd4a0a52" kindref="member">HardLevel</ref></type>
-        <definition>HardLevel DeviceLibrary.CHopper.CLevel.hardLevel</definition>
-        <argsstring></argsstring>
-        <name>hardLevel</name>
-        <briefdescription>
-<para>Variable contenant le niveau du périphérique par rapport à ses sondes hardware. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="99" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="99" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="135" endline="222">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1a70d416bc45d53fc08588ece6aa2d2c0e" compoundref="_c_hopper_8cs" startline="981" endline="1085">DeviceLibrary.CHopper.CheckLevel</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_level_1ad2e9dedf4ca74c90862cba4fd49342b3" compoundref="_c_hopper_8_c_level_8cs" startline="107" endline="111">DeviceLibrary.CHopper.CLevel.CLevel</referencedby>
-        <referencedby refid="class_device_library_1_1_c_hopper_1af02883320a4f999d393dc6917a14ab03" compoundref="_c_hopper_8cs" startline="1145" endline="1154">DeviceLibrary.CHopper.Dispense</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="32" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a59b094f4468f0b7cbecc1e770689d98e" compoundref="_c_devices_manager_8cs" startline="150" endline="236">DeviceLibrary.CDevicesManager.ChangeBack</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1a70d416bc45d53fc08588ece6aa2d2c0e" compoundref="_c_hopper_8cs" startline="837" endline="941">DeviceLibrary.CHopper.CheckLevel</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1_1_c_level_1ad2e9dedf4ca74c90862cba4fd49342b3" compoundref="_c_hopper_8_c_level_8cs" startline="40" endline="44">DeviceLibrary.CHopper.CLevel.CLevel</referencedby>
+        <referencedby refid="class_device_library_1_1_c_hopper_1af02883320a4f999d393dc6917a14ab03" compoundref="_c_hopper_8cs" startline="947" endline="956">DeviceLibrary.CHopper.Dispense</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -155,7 +155,7 @@
           <defval>SoftLevel.INCONNU</defval>
         </param>
         <param>
-          <type><ref refid="group___niveaux_1ga103e99cf2377b2a34791cd09cd4a0a52" kindref="member">HardLevel</ref></type>
+          <type><ref refid="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52" kindref="member">HardLevel</ref></type>
           <declname>hardLevel</declname>
           <defval>HardLevel.INCONNU</defval>
         </param>
@@ -180,23 +180,23 @@
 </para><para>Le fait d&apos;avoir les niveaux à l&apos;état inconnu permet de provoqué un évenement permettant de déterminé le niveau actuel.</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="107" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="107" bodyend="111"/>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_level_1aba24f93fda726ac162db3e96387a7478" compoundref="_c_hopper_8_c_level_8cs" startline="99">DeviceLibrary.CHopper.CLevel.hardLevel</references>
-        <references refid="class_device_library_1_1_c_hopper_1_1_c_level_1aaf0763243fa69af88492f6a45c3bffa3" compoundref="_c_hopper_8_c_level_8cs" startline="94">DeviceLibrary.CHopper.CLevel.softLevel</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="40" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="40" bodyend="44"/>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_level_1aba24f93fda726ac162db3e96387a7478" compoundref="_c_hopper_8_c_level_8cs" startline="21">DeviceLibrary.CHopper.CLevel.hardLevel</references>
+        <references refid="class_device_library_1_1_c_hopper_1_1_c_level_1aaf0763243fa69af88492f6a45c3bffa3" compoundref="_c_hopper_8_c_level_8cs" startline="32">DeviceLibrary.CHopper.CLevel.softLevel</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Classe des niveaux des hopeprs. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="17" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="16" bodyend="112"/>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" line="17" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.CLevel.cs" bodystart="16" bodyend="111"/>
     <listofallmembers>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1ad2e9dedf4ca74c90862cba4fd49342b3" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CLevel</scope><name>CLevel</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1aba24f93fda726ac162db3e96387a7478" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CLevel</scope><name>hardLevel</name></member>
-      <member refid="group___niveaux_1ga103e99cf2377b2a34791cd09cd4a0a52" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CLevel</scope><name>HardLevel</name></member>
+      <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CLevel</scope><name>HardLevel</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1a73e9298454995360eee357fe24489276" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CLevel</scope><name>ID</name></member>
-      <member refid="group___niveaux_1ga236fd4e7d945cd014d736b3ca9487dd3" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CLevel</scope><name>SoftLevel</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_level_1aaf0763243fa69af88492f6a45c3bffa3" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CLevel</scope><name>softLevel</name></member>
+      <member refid="group___niveaux_1ga236fd4e7d945cd014d736b3ca9487dd3" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CLevel</scope><name>SoftLevel</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

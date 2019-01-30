@@ -39,26 +39,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="278">
+      <node id="286">
         <label>global::SystemConfiguration::ApplicationSettingsBase</label>
       </node>
-      <node id="277">
+      <node id="285">
         <label>AtmbTestDevices.Properties.Settings</label>
         <link refid="class_atmb_test_devices_1_1_properties_1_1_settings"/>
-        <childnode refid="278" relation="public-inheritance">
+        <childnode refid="286" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="280">
+      <node id="288">
         <label>global::SystemConfiguration::ApplicationSettingsBase</label>
       </node>
-      <node id="279">
+      <node id="287">
         <label>AtmbTestDevices.Properties.Settings</label>
         <link refid="class_atmb_test_devices_1_1_properties_1_1_settings"/>
-        <childnode refid="280" relation="public-inheritance">
+        <childnode refid="288" relation="public-inheritance">
         </childnode>
-        <childnode refid="279" relation="usage">
+        <childnode refid="287" relation="usage">
           <edgelabel>defaultInstance</edgelabel>
         </childnode>
       </node>

@@ -3,6 +3,24 @@
   <compounddef id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position" kind="class" prot="private">
     <compoundname>DeviceLibrary::CBNR_CPI::CModulePosition</compoundname>
       <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a47db65c032d7771b202286ea92acb4da" prot="public" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string DeviceLibrary.CBNR_CPI.CModulePosition.moduleName</definition>
+        <argsstring></argsstring>
+        <name>moduleName</name>
+        <briefdescription>
+<para>Nom du module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a70a1e05eda188ac2746ead3fff39a54d" compoundref="_c_b_n_r___c_p_i_8cs" startline="229" endline="428">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae6db3a0aeea6f11a068c2b47ce5a4236" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="40" endline="45">DeviceLibrary.CBNR_CPI.CModulePosition.CModulePosition</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="645" endline="770">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a2058b7d5ea48c5dea24ed2ff2945aab0" compoundref="_c_b_n_r___c_p_i_8cs" startline="901" endline="1380">DeviceLibrary.CBNR_CPI.Task</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ac99b0457f06d7ed060871d6b3df7de17" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="51" endline="54">DeviceLibrary.CBNR_CPI.CModulePosition.ToString</referencedby>
+      </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae73bcf354e9ccbfcd3b3440fb0ada120" prot="public" static="no" mutable="no">
         <type>bool</type>
         <definition>bool DeviceLibrary.CBNR_CPI.CModulePosition.isPresent</definition>
@@ -14,9 +32,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" line="23" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" bodystart="23" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a90fc00e38d0b74caa5156642337a43c3" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="40" endline="45">DeviceLibrary.CBNR_CPI.CModulePosition.CModulePosition</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" line="28" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae6db3a0aeea6f11a068c2b47ce5a4236" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="40" endline="45">DeviceLibrary.CBNR_CPI.CModulePosition.CModulePosition</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="645" endline="770">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a68d9e4020041857065ee7126a3806bac" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -29,37 +47,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" line="28" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" bodystart="28" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" compoundref="_c_b_n_r___c_p_i_8cs" startline="227" endline="378">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a90fc00e38d0b74caa5156642337a43c3" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="40" endline="45">DeviceLibrary.CBNR_CPI.CModulePosition.CModulePosition</referencedby>
-      </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a7dd4660e4a31d0eefdf7cc34cf968326" prot="public" static="no" mutable="no">
-        <type>string</type>
-        <definition>string DeviceLibrary.CBNR_CPI.CModulePosition.name</definition>
-        <argsstring></argsstring>
-        <name>name</name>
-        <briefdescription>
-<para>Nom du module. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" line="33" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" bodystart="33" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a69ee2686630815493f7dc1f39834099e" compoundref="_c_b_n_r___c_p_i_8cs" startline="227" endline="378">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a90fc00e38d0b74caa5156642337a43c3" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="40" endline="45">DeviceLibrary.CBNR_CPI.CModulePosition.CModulePosition</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="599" endline="719">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
-        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ac99b0457f06d7ed060871d6b3df7de17" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="51" endline="54">DeviceLibrary.CBNR_CPI.CModulePosition.ToString</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a70a1e05eda188ac2746ead3fff39a54d" compoundref="_c_b_n_r___c_p_i_8cs" startline="229" endline="428">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae6db3a0aeea6f11a068c2b47ce5a4236" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="40" endline="45">DeviceLibrary.CBNR_CPI.CModulePosition.CModulePosition</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a90fc00e38d0b74caa5156642337a43c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae6db3a0aeea6f11a068c2b47ce5a4236" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>DeviceLibrary.CBNR_CPI.CModulePosition.CModulePosition</definition>
-        <argsstring>(string name, bool isPresent)</argsstring>
+        <argsstring>(string moduleName, bool isPresent)</argsstring>
         <name>CModulePosition</name>
         <param>
           <type>string</type>
-          <declname>name</declname>
+          <declname>moduleName</declname>
         </param>
         <param>
           <type>bool</type>
@@ -70,7 +71,7 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>name</parametername>
+<parametername>moduleName</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Indique le nom du module contenu dans l&apos;instance de la classe.</para></parameterdescription>
@@ -87,9 +88,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" line="40" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" bodystart="40" bodyend="45"/>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae73bcf354e9ccbfcd3b3440fb0ada120" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="23">DeviceLibrary.CBNR_CPI.CModulePosition.isPresent</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a68d9e4020041857065ee7126a3806bac" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="28">DeviceLibrary.CBNR_CPI.CModulePosition.isReinserted</references>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a7dd4660e4a31d0eefdf7cc34cf968326" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="33">DeviceLibrary.CBNR_CPI.CModulePosition.name</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae73bcf354e9ccbfcd3b3440fb0ada120" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="28">DeviceLibrary.CBNR_CPI.CModulePosition.isPresent</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a68d9e4020041857065ee7126a3806bac" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="33">DeviceLibrary.CBNR_CPI.CModulePosition.isReinserted</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a47db65c032d7771b202286ea92acb4da" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="23">DeviceLibrary.CBNR_CPI.CModulePosition.moduleName</references>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ac99b0457f06d7ed060871d6b3df7de17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override string</type>
@@ -104,7 +105,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" line="51" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" bodystart="51" bodyend="54"/>
-        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a7dd4660e4a31d0eefdf7cc34cf968326" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="33">DeviceLibrary.CBNR_CPI.CModulePosition.name</references>
+        <references refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a47db65c032d7771b202286ea92acb4da" compoundref="_c_b_n_r___c_p_i_8_c_module_position_8cs" startline="23">DeviceLibrary.CBNR_CPI.CModulePosition.moduleName</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -113,10 +114,10 @@
 <para>Cette classe est utlisée pour les retraits et les insertions des modles.</para>    </detaileddescription>
     <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" line="19" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CBNR_CPI.CModulePosition.cs" bodystart="18" bodyend="55"/>
     <listofallmembers>
-      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a90fc00e38d0b74caa5156642337a43c3" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CModulePosition</scope><name>CModulePosition</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae6db3a0aeea6f11a068c2b47ce5a4236" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CModulePosition</scope><name>CModulePosition</name></member>
       <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ae73bcf354e9ccbfcd3b3440fb0ada120" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CModulePosition</scope><name>isPresent</name></member>
       <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a68d9e4020041857065ee7126a3806bac" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CModulePosition</scope><name>isReinserted</name></member>
-      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a7dd4660e4a31d0eefdf7cc34cf968326" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CModulePosition</scope><name>name</name></member>
+      <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1a47db65c032d7771b202286ea92acb4da" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CModulePosition</scope><name>moduleName</name></member>
       <member refid="class_device_library_1_1_c_b_n_r___c_p_i_1_1_c_module_position_1ac99b0457f06d7ed060871d6b3df7de17" prot="public" virt="non-virtual"><scope>DeviceLibrary::CBNR_CPI::CModulePosition</scope><name>ToString</name></member>
     </listofallmembers>
   </compounddef>

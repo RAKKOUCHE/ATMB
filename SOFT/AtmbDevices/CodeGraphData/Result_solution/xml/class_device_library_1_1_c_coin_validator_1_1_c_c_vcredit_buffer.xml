@@ -15,8 +15,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="24" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="24" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1afe2f20c8e3af5841dbde8b6b7ec769c7" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="51" endline="56">DeviceLibrary.CCoinValidator.CCVcreditBuffer.CCVcreditBuffer</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="62" endline="83">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a5b758abc764a2f479895adaaedaf5d00" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="33" endline="38">DeviceLibrary.CCoinValidator.CCVcreditBuffer.CCVcreditBuffer</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="61" endline="82">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1ab0a0005b014588135a657ace10e58bf5" prot="private" static="no" mutable="no">
         <type>byte</type>
@@ -42,7 +42,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="37" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="37" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="28" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a3bc2e0efb62c2bdfa23f5b317ce60361" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="87" endline="90">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetResult</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a1e9597c79d7cc633be6c7965146ff4ef" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="52" endline="55">DeviceLibrary.CCoinValidator.CCVcreditBuffer.SetResult</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -57,39 +59,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="31" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="32" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1afe2f20c8e3af5841dbde8b6b7ec769c7" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="51" endline="56">DeviceLibrary.CCoinValidator.CCVcreditBuffer.CCVcreditBuffer</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="395" endline="461">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="490" endline="760">DeviceLibrary.CCoinValidator.CheckState</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="62" endline="83">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="43" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a5b758abc764a2f479895adaaedaf5d00" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="33" endline="38">DeviceLibrary.CCoinValidator.CCVcreditBuffer.CCVcreditBuffer</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="384" endline="450">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1a70ec60896127aa561b1cdebccff5172b" compoundref="_c_coin_validator_8cs" startline="455" endline="725">DeviceLibrary.CCoinValidator.CheckState</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="61" endline="82">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
         <referencedby refid="class_device_library_1_1_c_pelicano_1ad961f865dbb16844a9d5e9d34c62c4b7" compoundref="_c_pelicano_8cs" startline="352" endline="481">DeviceLibrary.CPelicano.Task</referencedby>
-      </memberdef>
-      <memberdef kind="property" id="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a78845c21ba07dfdf73e85b1992ee94c0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
-        <type>byte[,]</type>
-        <definition>byte [,] DeviceLibrary.CCoinValidator.CCVcreditBuffer.Result</definition>
-        <argsstring></argsstring>
-        <name>Result</name>
-        <briefdescription>
-<para>Buffer contenant les informations sur les évenements. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="42" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="43" bodyend="-1"/>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1afe2f20c8e3af5841dbde8b6b7ec769c7" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="51" endline="56">DeviceLibrary.CCoinValidator.CCVcreditBuffer.CCVcreditBuffer</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="395" endline="461">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
-        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="62" endline="83">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1afe2f20c8e3af5841dbde8b6b7ec769c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a5b758abc764a2f479895adaaedaf5d00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>DeviceLibrary.CCoinValidator.CCVcreditBuffer.CCVcreditBuffer</definition>
-        <argsstring>(CCoinValidator Owner)</argsstring>
+        <argsstring>(CCoinValidator owner)</argsstring>
         <name>CCVcreditBuffer</name>
         <param>
           <type><ref refid="class_device_library_1_1_c_coin_validator" kindref="compound">CCoinValidator</ref></type>
-          <declname>Owner</declname>
+          <declname>owner</declname>
         </param>
         <briefdescription>
 <para>Contructeur </para>        </briefdescription>
@@ -97,10 +83,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="51" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="51" bodyend="56"/>
-        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a54e1fef4fc72a0f5eed0cc4843db9573" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="32">DeviceLibrary.CCoinValidator.CCVcreditBuffer.EventCounter</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="33" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="33" bodyend="38"/>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a54e1fef4fc72a0f5eed0cc4843db9573" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="44">DeviceLibrary.CCoinValidator.CCVcreditBuffer.EventCounter</references>
         <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a831a1f2a114d6c17155f53fcfacfe55e" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="24">DeviceLibrary.CCoinValidator.CCVcreditBuffer.owner</references>
-        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a78845c21ba07dfdf73e85b1992ee94c0" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="43">DeviceLibrary.CCoinValidator.CCVcreditBuffer.Result</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a1e9597c79d7cc633be6c7965146ff4ef" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="52" endline="55">DeviceLibrary.CCoinValidator.CCVcreditBuffer.SetResult</references>
       </memberdef>
       <memberdef kind="function" id="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -113,13 +99,51 @@
 <para>Header 229</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="62" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="62" bodyend="83"/>
-        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="36">DeviceLibrary.CccTalk.DeviceAddress</references>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="61" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="61" bodyend="82"/>
+        <references refid="class_device_library_1_1_ccc_talk_1aff70a9d7d6adc3e95593259d17751cb8" compoundref="_c_ctalk_8cs" startline="198">DeviceLibrary.CccTalk.DeviceAddress</references>
         <references refid="class_device_library_1_1messages_text_1a692ddbde572309d1f80363365fd514e9" compoundref="messages_text_8_designer_8cs" startline="192">DeviceLibrary.messagesText.erreur</references>
-        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a54e1fef4fc72a0f5eed0cc4843db9573" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="32">DeviceLibrary.CCoinValidator.CCVcreditBuffer.EventCounter</references>
-        <references refid="class_device_library_1_1_ccc_talk_1ab986f5ca49ce60e90442b54682f34b62" compoundref="_c_ctalk_8cs" startline="167" endline="252">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a54e1fef4fc72a0f5eed0cc4843db9573" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="44">DeviceLibrary.CCoinValidator.CCVcreditBuffer.EventCounter</references>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a3bc2e0efb62c2bdfa23f5b317ce60361" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="87" endline="90">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetResult</references>
+        <references refid="class_device_library_1_1_ccc_talk_1aa3cfdb129a8afc4a767e0856ca000b50" compoundref="_c_ctalk_8cs" startline="486" endline="571">DeviceLibrary.CccTalk.IsCmdccTalkSended</references>
         <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a831a1f2a114d6c17155f53fcfacfe55e" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="24">DeviceLibrary.CCoinValidator.CCVcreditBuffer.owner</references>
-        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a78845c21ba07dfdf73e85b1992ee94c0" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="43">DeviceLibrary.CCoinValidator.CCVcreditBuffer.Result</references>
+      </memberdef>
+      <memberdef kind="function" id="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a3bc2e0efb62c2bdfa23f5b317ce60361" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[,]</type>
+        <definition>byte [,] DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetResult</definition>
+        <argsstring>()</argsstring>
+        <name>GetResult</name>
+        <briefdescription>
+<para>Buffer contenant les informations sur les évenements. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="87" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="87" bodyend="90"/>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a7d5e112872384b5613cae252eb00199b" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="28">DeviceLibrary.CCoinValidator.CCVcreditBuffer.result</references>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="384" endline="450">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="61" endline="82">DeviceLibrary.CCoinValidator.CCVcreditBuffer.GetBufferCredit</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a1e9597c79d7cc633be6c7965146ff4ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeviceLibrary.CCoinValidator.CCVcreditBuffer.SetResult</definition>
+        <argsstring>(byte[,] value)</argsstring>
+        <name>SetResult</name>
+        <param>
+          <type>byte</type>
+          <declname>value</declname>
+          <array>[,]</array>
+        </param>
+        <briefdescription>
+<para>Buffer contenant les informations sur les évenements. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="52" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="52" bodyend="55"/>
+        <references refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a7d5e112872384b5613cae252eb00199b" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="28">DeviceLibrary.CCoinValidator.CCVcreditBuffer.result</references>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a5b758abc764a2f479895adaaedaf5d00" compoundref="_c_coin_validator_8_credit_buffer_8cs" startline="33" endline="38">DeviceLibrary.CCoinValidator.CCVcreditBuffer.CCVcreditBuffer</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -127,118 +151,119 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="97">
+      <node id="98">
         <label>DeviceLibrary.CCoinValidator.CCanal.CCoindID</label>
         <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_coind_i_d"/>
-        <childnode refid="95" relation="usage">
+        <childnode refid="96" relation="usage">
           <edgelabel>CanalOwner</edgelabel>
-        </childnode>
-      </node>
-      <node id="93">
-        <label>DeviceLibrary.CDevice.CInserted</label>
-        <link refid="class_device_library_1_1_c_device_1_1_c_inserted"/>
-      </node>
-      <node id="91">
-        <label>CDevice</label>
-        <link refid="class_device_library_1_1_c_device"/>
-        <childnode refid="92" relation="public-inheritance">
-        </childnode>
-        <childnode refid="93" relation="usage">
-          <edgelabel>denominationInserted</edgelabel>
         </childnode>
       </node>
       <node id="92">
-        <label>IDisposable</label>
-      </node>
-      <node id="89">
-        <label>CcashReader</label>
-        <link refid="class_device_library_1_1_ccash_reader"/>
-        <childnode refid="90" relation="public-inheritance">
-        </childnode>
-        <childnode refid="90" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="90">
-        <label>CccTalk</label>
-        <link refid="class_device_library_1_1_ccc_talk"/>
-        <childnode refid="91" relation="public-inheritance">
-        </childnode>
-        <childnode refid="91" relation="public-inheritance">
-        </childnode>
-        <childnode refid="91" relation="public-inheritance">
+        <label>CDevice</label>
+        <link refid="class_device_library_1_1_c_device"/>
+        <childnode refid="93" relation="public-inheritance">
         </childnode>
         <childnode refid="94" relation="usage">
+          <edgelabel>denominationInserted</edgelabel>
+        </childnode>
+      </node>
+      <node id="93">
+        <label>IDisposable</label>
+      </node>
+      <node id="90">
+        <label>CcashReader</label>
+        <link refid="class_device_library_1_1_ccash_reader"/>
+        <childnode refid="91" relation="public-inheritance">
+        </childnode>
+        <childnode refid="91" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>CccTalk</label>
+        <link refid="class_device_library_1_1_ccc_talk"/>
+        <childnode refid="92" relation="public-inheritance">
+        </childnode>
+        <childnode refid="92" relation="public-inheritance">
+        </childnode>
+        <childnode refid="92" relation="public-inheritance">
+        </childnode>
+        <childnode refid="95" relation="usage">
           <edgelabel>counters</edgelabel>
         </childnode>
       </node>
-      <node id="94">
+      <node id="95">
         <label>DeviceLibrary.CcoinsCounters</label>
         <link refid="class_device_library_1_1_ccoins_counters"/>
       </node>
-      <node id="96">
+      <node id="94">
+        <label>DeviceLibrary.CInserted</label>
+        <link refid="class_device_library_1_1_c_inserted"/>
+      </node>
+      <node id="97">
         <label>DeviceLibrary.CCoinValidator.CCanal.CSorter</label>
         <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal_1_1_c_sorter"/>
-        <childnode refid="95" relation="usage">
+        <childnode refid="96" relation="usage">
           <edgelabel>CanalOwner</edgelabel>
         </childnode>
       </node>
-      <node id="88">
+      <node id="89">
         <label>DeviceLibrary.CCoinValidator</label>
         <link refid="class_device_library_1_1_c_coin_validator"/>
-        <childnode refid="89" relation="public-inheritance">
+        <childnode refid="90" relation="public-inheritance">
         </childnode>
-        <childnode refid="89" relation="public-inheritance">
+        <childnode refid="90" relation="public-inheritance">
         </childnode>
-        <childnode refid="89" relation="public-inheritance">
+        <childnode refid="90" relation="public-inheritance">
         </childnode>
-        <childnode refid="89" relation="public-inheritance">
+        <childnode refid="90" relation="public-inheritance">
         </childnode>
-        <childnode refid="89" relation="public-inheritance">
+        <childnode refid="90" relation="public-inheritance">
         </childnode>
-        <childnode refid="95" relation="usage">
+        <childnode refid="96" relation="usage">
           <edgelabel>canaux</edgelabel>
         </childnode>
-        <childnode refid="98" relation="usage">
+        <childnode refid="99" relation="usage">
           <edgelabel>errorCV</edgelabel>
         </childnode>
-        <childnode refid="87" relation="usage">
+        <childnode refid="88" relation="usage">
           <edgelabel>creditBuffer</edgelabel>
         </childnode>
       </node>
-      <node id="98">
+      <node id="99">
         <label>DeviceLibrary.CCoinValidator.CErroCV</label>
         <link refid="class_device_library_1_1_c_coin_validator_1_1_c_erro_c_v"/>
       </node>
-      <node id="87">
+      <node id="88">
         <label>DeviceLibrary.CCoinValidator.CCVcreditBuffer</label>
         <link refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer"/>
-        <childnode refid="88" relation="usage">
+        <childnode refid="89" relation="usage">
           <edgelabel>owner</edgelabel>
         </childnode>
       </node>
-      <node id="95">
+      <node id="96">
         <label>DeviceLibrary.CCoinValidator.CCanal</label>
         <link refid="class_device_library_1_1_c_coin_validator_1_1_c_canal"/>
-        <childnode refid="88" relation="usage">
+        <childnode refid="89" relation="usage">
           <edgelabel>CVOwner</edgelabel>
         </childnode>
-        <childnode refid="96" relation="usage">
+        <childnode refid="97" relation="usage">
           <edgelabel>sorter</edgelabel>
         </childnode>
-        <childnode refid="97" relation="usage">
+        <childnode refid="98" relation="usage">
           <edgelabel>coinId</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="19" bodyend="84"/>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" line="20" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CCoinValidator.CreditBuffer.cs" bodystart="19" bodyend="91"/>
     <listofallmembers>
-      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1afe2f20c8e3af5841dbde8b6b7ec769c7" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCVcreditBuffer</scope><name>CCVcreditBuffer</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a5b758abc764a2f479895adaaedaf5d00" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCVcreditBuffer</scope><name>CCVcreditBuffer</name></member>
       <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1ab0a0005b014588135a657ace10e58bf5" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCVcreditBuffer</scope><name>eventCounter</name></member>
       <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a54e1fef4fc72a0f5eed0cc4843db9573" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCVcreditBuffer</scope><name>EventCounter</name></member>
       <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1aefd4b396be72cd71df3589250525b1a4" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCVcreditBuffer</scope><name>GetBufferCredit</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a3bc2e0efb62c2bdfa23f5b317ce60361" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCVcreditBuffer</scope><name>GetResult</name></member>
       <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a831a1f2a114d6c17155f53fcfacfe55e" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCVcreditBuffer</scope><name>owner</name></member>
-      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a78845c21ba07dfdf73e85b1992ee94c0" prot="public" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCVcreditBuffer</scope><name>Result</name></member>
       <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a7d5e112872384b5613cae252eb00199b" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCVcreditBuffer</scope><name>result</name></member>
+      <member refid="class_device_library_1_1_c_coin_validator_1_1_c_c_vcredit_buffer_1a1e9597c79d7cc633be6c7965146ff4ef" prot="private" virt="non-virtual"><scope>DeviceLibrary::CCoinValidator::CCVcreditBuffer</scope><name>SetResult</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

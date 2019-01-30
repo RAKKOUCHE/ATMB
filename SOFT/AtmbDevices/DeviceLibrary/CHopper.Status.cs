@@ -121,9 +121,9 @@ namespace DeviceLibrary
                         dispensedResult.MontantUnpaid = (int)(coinsUnpaid * Owner.CoinValue);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
             }
 

@@ -30,11 +30,11 @@ namespace DeviceLibrary
             /// <summary>
             /// Contructeur
             /// </summary>
-            public CCVcreditBuffer(CCoinValidator Owner)
+            public CCVcreditBuffer(CCoinValidator owner)
             {
-                owner = Owner;
+                this.owner = owner;
                 EventCounter = 0;
-                Result = new byte[,] { { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 } };
+                SetResult(new byte[,] { { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 } });
             }
 
             /// <summary>
@@ -43,16 +43,15 @@ namespace DeviceLibrary
             public byte EventCounter
             {
                 get => eventCounter;
-                set => eventCounter = value;
+                private set => eventCounter = value;
             }
 
             /// <summary>
             /// Buffer contenant les informations sur les évenements.
             /// </summary>
-            public byte[,] Result
+            private void SetResult(byte[,] value)
             {
-                get => result;
-                set => result = value;
+                result = value;
             }
 
             /// <summary>
@@ -68,18 +67,26 @@ namespace DeviceLibrary
                     if (owner.IsCmdccTalkSended(owner.DeviceAddress, Header.READBUFFERCREDIT, 0, null, bufferIn))
                     {
                         EventCounter = bufferIn[0];
-                        Buffer.BlockCopy(bufferIn, 1, Result, 0, 10);
-                        CDevicesManager.Log.Debug("Le buffer des credits ou des erreurs du {0} est pour (event counter : {1}) (result1 : {2}-{3}) (result2 : {4}-{5}) (result3 : {6}-{7}) (result4 : {8}-{9}) (result5 : {10}-{11})", owner.DeviceAddress, EventCounter, Result[0, 0], Result[0, 1], Result[1, 0], Result[1, 1], Result[2, 0], Result[2, 1], Result[3, 0], Result[3, 1], Result[4, 0], Result[4, 1]);
+                        Buffer.BlockCopy(bufferIn, 1, GetResult(), 0, 10);
+                        CDevicesManager.Log.Debug("Le buffer des credits ou des erreurs du {0} est pour (event counter : {1}) (result1 : {2}-{3}) (result2 : {4}-{5}) (result3 : {6}-{7}) (result4 : {8}-{9}) (result5 : {10}-{11})", owner.DeviceAddress, EventCounter, GetResult()[0, 0], GetResult()[0, 1], GetResult()[1, 0], GetResult()[1, 1], GetResult()[2, 0], GetResult()[2, 1], GetResult()[3, 0], GetResult()[3, 1], GetResult()[4, 0], GetResult()[4, 1]);
                     }
                     else
                     {
                         throw new Exception("Impossible de lire le buffer des crédits ou des codes erreurs.");
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
+            }
+
+            /// <summary>
+            /// Buffer contenant les informations sur les évenements.
+            /// </summary>
+            public byte[,] GetResult()
+            {
+                return result;
             }
         }
     }

@@ -62,7 +62,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Construteur de la class
         /// </summary>
-        public CccTalk()
+        protected CccTalk()
         {
             try
             {
@@ -86,9 +86,9 @@ namespace DeviceLibrary
                     }
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -106,9 +106,9 @@ namespace DeviceLibrary
                     buildCode = GetASCII(Header.REQUESTBUILDCODE);
                     CDevicesManager.Log.Info(messagesText.buildCode, DeviceAddress, buildCode);
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
 
                 return buildCode;
@@ -138,9 +138,9 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Error("Impossible de lire les informations de la version ccTalk dans le {0}", DeviceAddress);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return result;
             }
@@ -160,9 +160,9 @@ namespace DeviceLibrary
                     equipementCategory = GetASCII(Header.REQUESTEQUIPEMENTCATEGORYID);
                     CDevicesManager.Log.Info(messagesText.equipementID, DeviceAddress, equipementCategory);
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
 
                 return equipementCategory;
@@ -183,9 +183,9 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Info(messagesText.swRev, DeviceAddress, swRev);
                     return swRev;
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return "";
             }
@@ -214,9 +214,9 @@ namespace DeviceLibrary
                     manufacturer = GetASCII(Header.REQUESTMANUFACTURERID);
                     CDevicesManager.Log.Info(messagesText.manufacturer, DeviceAddress, manufacturer);
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return manufacturer;
             }
@@ -235,9 +235,9 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Info("Lecture de l'état des optos du {0}", DeviceAddress);
                     result = GetByte(Header.READOPTOSTATES);
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return result;
             }
@@ -257,9 +257,9 @@ namespace DeviceLibrary
                     productCode = GetASCII(Header.REQUESTPRODUCTCODE);
                     CDevicesManager.Log.Info(messagesText.productCode, DeviceAddress, productCode);
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return productCode;
             }
@@ -281,9 +281,9 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Error(messagesText.erreurCmd, Header.REQUESTSN, DeviceAddress);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 CDevicesManager.Log.Info("Le numéro de série du {0} est {1}", DeviceAddress, bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 * bufferIn[2]));
                 return bufferIn[0] + (0x100 * bufferIn[1]) + (0x10000 * bufferIn[2]);
@@ -308,9 +308,9 @@ namespace DeviceLibrary
                     }
                     CDevicesManager.Log.Error(messagesText.erreurCmd, Header.SIMPLEPOLL, DeviceAddress);
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
                 return false;
             }
@@ -319,27 +319,27 @@ namespace DeviceLibrary
         /// <summary>
         /// Retourne le checksum du buffer
         /// </summary>
-        /// <param name="Buffer">Buffer sur lequel le calcul s'effectue</param>
-        /// <param name="Len">Longeur du buffer</param>
+        /// <param name="buffer">Buffer sur lequel le calcul s'effectue</param>
+        /// <param name="len">Longeur du buffer</param>
         /// <returns></returns>
-        private byte CheckSum(byte[] Buffer, byte Len)
+        private static byte CheckSum(byte[] buffer, byte len)
         {
-            uint Result = 0;
+            uint result = 0;
             try
             {
-                for (byte Index = 0; Index < Len + 4; Index++)
+                for (byte index = 0; index < len + 4; index++)
                 {
-                    Result += Buffer[Index];
+                    result += buffer[index];
                 }
-                Result = 256 - (Result % 256);
+                result = 256 - (result % 256);
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
                 {
-                    CDevicesManager.Log.Error("{0} {1}", E.GetType(), E.Message);
+                    CDevicesManager.Log.Error("{0} {1}", exception.GetType(), exception.Message);
                 }
             }
-            return (byte)Result;
+            return (byte)result;
         }
 
         /// <summary>
@@ -370,9 +370,9 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Error(messagesText.erreurCmd, header, DeviceAddress);
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
             return result;
         }
@@ -380,31 +380,31 @@ namespace DeviceLibrary
         /// <summary>
         /// Vérifie si un bus ccTalk est branché sur un port série.
         /// </summary>
-        /// <param name="NameOfPort">Nom du port série</param>
+        /// <param name="nameOfPort">Nom du port série</param>
         /// <returns>true si un bus ccTalk est detecté sur ce port série</returns>
-        private bool IsCcTalkPort(string NameOfPort)
+        private bool IsCcTalkPort(string nameOfPort)
         {
-            CDevicesManager.Log.Info(messagesText.verifSerialPort, NameOfPort);
+            CDevicesManager.Log.Info(messagesText.verifSerialPort, nameOfPort);
             try
             {
                 byte[] bufferIn = { 0x00, 0xFF, 0x55, 0xAA };
                 byte[] bufferOut = { 0XFF, 0X00, 0XAA, 0X55 };
 
-                PortSerie.PortName = NameOfPort;
+                PortSerie.PortName = nameOfPort;
                 PortSerie.Open();
                 PortSerie.Write(bufferOut, 0, bufferOut.Length);
                 for (byte byIndex = 0; byIndex < bufferOut.Length; byIndex++)
                 {
                     bufferIn[byIndex] = (byte)PortSerie.ReadByte();
-                    if (!(bufferOut[byIndex] == bufferIn[byIndex]))
+                    if (bufferOut[byIndex] != bufferIn[byIndex])
                     {
-                        throw new Exception(string.Format(messagesText.erreurPort, NameOfPort));
+                        throw new Exception(string.Format(messagesText.erreurPort, nameOfPort));
                     }
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error("{0} {1}", E.GetType(), E.Message);
+                CDevicesManager.Log.Error("{0} {1}", exception.GetType(), exception.Message);
                 PortSerie.Close();
                 return false;
             }
@@ -414,20 +414,20 @@ namespace DeviceLibrary
         /// <summary>
         /// Vide le buffer passé en paramètre
         /// </summary>
-        /// <param name="Buffer">Buffer devant être vidé</param>
-        /// <param name="Len">Longueur du buffer</param>
-        private void ZeroMemory(byte[] Buffer, byte Len)
+        /// <param name="buffer">Buffer devant être vidé</param>
+        /// <param name="len">Longueur du buffer</param>
+        private void ZeroMemory(byte[] buffer, byte len)
         {
             try
             {
-                for (byte Index = 0; Index < Len; Index++)
+                for (byte index = 0; index < len; index++)
                 {
-                    Buffer[Index] = 0;
+                    buffer[index] = 0;
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -448,9 +448,9 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Error(messagesText.erreurCmd, header, DeviceAddress);
                 }
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
             return result[0];
         }
@@ -477,13 +477,13 @@ namespace DeviceLibrary
         /// <summary>
         /// Envoie une commande et recoit la réponse
         /// </summary>
-        /// <param name="Peripherique">Adresse du périphérique</param>
-        /// <param name="Commande">Header de la commande envoyée</param>
-        /// <param name="LenParam">Longeur des paramètres</param>
-        /// <param name="Parameter">Buffer des paramètres</param>
+        /// <param name="peripherique">Adresse du périphérique</param>
+        /// <param name="commande">Header de la commande envoyée</param>
+        /// <param name="lenParam">Longeur des paramètres</param>
+        /// <param name="parameter">Buffer des paramètres</param>
         /// <param name="answer">Objet contenant les paramètres de retour le cas échéant</param>
         /// <returns></returns>
-        public bool IsCmdccTalkSended(DefaultDevicesAddress Peripherique, object Commande, byte LenParam, byte[] Parameter, object answer)
+        public bool IsCmdccTalkSended(DefaultDevicesAddress peripherique, object commande, byte lenParam, byte[] parameter, object answer)
         {
             bool result = false;
             lock (verrou)
@@ -497,28 +497,28 @@ namespace DeviceLibrary
                     {
                         bufferIn[i] = 0XFF;
                     }
-                    CDevicesManager.Log.Info(messagesText.sendCmd, Commande.ToString(), Peripherique.ToString());
+                    CDevicesManager.Log.Info(messagesText.sendCmd, commande.ToString(), peripherique.ToString());
                     byte[] bufferOut = new byte[sizeOfBufferOut];
                     ZeroMemory(bufferOut, sizeOfBufferOut);
-                    bufferOut[0] = (byte)Peripherique;
-                    bufferOut[1] = LenParam;
+                    bufferOut[0] = (byte)peripherique;
+                    bufferOut[1] = lenParam;
                     bufferOut[2] = (byte)DefaultDevicesAddress.Host;
-                    bufferOut[3] = Convert.ToByte(Commande);
-                    if (LenParam > 0)
+                    bufferOut[3] = Convert.ToByte(commande);
+                    if (lenParam > 0)
                     {
-                        Buffer.BlockCopy(Parameter, 0, bufferOut, 4, LenParam);
+                        Buffer.BlockCopy(parameter, 0, bufferOut, 4, lenParam);
                     }
-                    bufferOut[4 + LenParam] = CheckSum(bufferOut, LenParam);
+                    bufferOut[4 + lenParam] = CheckSum(bufferOut, lenParam);
 
-                    for (byIndex = 0; byIndex < (LenParam + 5); byIndex++)
+                    for (byIndex = 0; byIndex < (lenParam + 5); byIndex++)
                     {
                         strLog += string.Format("{0} ", bufferOut[byIndex]);
                     }
                     CDevicesManager.Log.Debug(strLog);
-                    PortSerie.Write(bufferOut, 0, 5 + LenParam);
+                    PortSerie.Write(bufferOut, 0, 5 + lenParam);
                     CDevicesManager.Log.Debug(messagesText.readEcho);
                     strLog = messagesText.echo;
-                    for (byIndex = 0; byIndex < (LenParam + 5); byIndex++)
+                    for (byIndex = 0; byIndex < (lenParam + 5); byIndex++)
                     {
                         bufferIn[byIndex] = (byte)PortSerie.ReadByte();
                         strLog += string.Format("{0} ", bufferIn[byIndex]);
@@ -554,18 +554,18 @@ namespace DeviceLibrary
                     }
                     result = true;
                 }
-                catch (TimeoutException E)
+                catch (TimeoutException exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.noccTalkDevice, E.Message, PortSerie.PortName);
+                    CDevicesManager.Log.Error(messagesText.noccTalkDevice, exception.Message, PortSerie.PortName);
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
                     {
-                        CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                        CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                     }
                 }
                 CDevicesManager.Log.Debug(strLog);
-                CDevicesManager.Log.Debug("Commande {0} executée sur le {1}", Commande, Peripherique);
+                CDevicesManager.Log.Debug("Commande {0} executée sur le {1}", commande, peripherique);
             }
             return result;
         }
@@ -591,9 +591,9 @@ namespace DeviceLibrary
                 Thread.Sleep(200);
                 result = true;
             }
-            catch (Exception E)
+            catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
             return result;
         }

@@ -2,14 +2,14 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
   <compounddef id="namespace_atmb_test_devices" kind="namespace">
     <compoundname>AtmbTestDevices</compoundname>
-    <innerclass refid="class_atmb_test_devices_1_1_form_main" prot="public">AtmbTestDevices::FormMain</innerclass>
     <innerclass refid="class_atmb_test_devices_1_1_form2" prot="public">AtmbTestDevices::Form2</innerclass>
+    <innerclass refid="class_atmb_test_devices_1_1_form_main" prot="public">AtmbTestDevices::FormMain</innerclass>
     <innerclass refid="class_atmb_test_devices_1_1_program" prot="package">AtmbTestDevices::Program</innerclass>
     <innernamespace refid="namespace_atmb_test_devices_1_1_properties">AtmbTestDevices::Properties</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form1.cs" line="8" column="1"/>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/AtmbTestDevices/Form2.cs" line="4" column="1"/>
   </compounddef>
 </doxygen>

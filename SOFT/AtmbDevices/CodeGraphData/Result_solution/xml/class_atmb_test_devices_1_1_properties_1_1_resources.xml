@@ -78,10 +78,10 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="274">
+      <node id="278">
         <label>AtmbTestDevices.Properties.Resources</label>
         <link refid="class_atmb_test_devices_1_1_properties_1_1_resources"/>
-        <childnode refid="274" relation="usage">
+        <childnode refid="278" relation="usage">
           <edgelabel>resourceMan</edgelabel>
         </childnode>
       </node>

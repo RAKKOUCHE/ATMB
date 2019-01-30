@@ -104,6 +104,11 @@ namespace DeviceLibrary
             BNRDISPENSE,
 
             /// <summary>
+            /// Un module du bnr a été vidé.
+            /// </summary>
+            BNREMPTY,
+
+            /// <summary>
             /// La caisse à monnaie a été retirée.
             /// </summary>
             CASHBOXREMOVED,

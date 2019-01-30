@@ -78,13 +78,13 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="272">
+      <node id="276">
         <label>Resources</label>
       </node>
-      <node id="271">
+      <node id="275">
         <label>DeviceLibrary.Resource1</label>
         <link refid="class_device_library_1_1_resource1"/>
-        <childnode refid="272" relation="usage">
+        <childnode refid="276" relation="usage">
           <edgelabel>resourceMan</edgelabel>
         </childnode>
       </node>

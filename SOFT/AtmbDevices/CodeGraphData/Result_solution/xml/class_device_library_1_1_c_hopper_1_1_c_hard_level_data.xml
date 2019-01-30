@@ -3,18 +3,18 @@
   <compounddef id="class_device_library_1_1_c_hopper_1_1_c_hard_level_data" kind="class" prot="public">
     <compoundname>DeviceLibrary::CHopper::CHardLevelData</compoundname>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1a1444b23b86902e452a455db0fbfc2f57" prot="public" static="no" mutable="no">
-        <type>string</type>
-        <definition>string DeviceLibrary.CHopper.CHardLevelData.nameOfHopper</definition>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1a721ace977b64e268deca83e13e8fd8cc" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long DeviceLibrary.CHopper.CHardLevelData.coinsNumber</definition>
         <argsstring></argsstring>
-        <name>nameOfHopper</name>
+        <name>coinsNumber</name>
         <briefdescription>
-<para>Nom du hopper. </para>        </briefdescription>
+<para>Indique le nombre de pièces dans le hopper. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="89" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="89" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="1338" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="1338" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1aca7f707d07cf10da61fb5ba5c247d1cd" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -27,23 +27,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="94" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="94" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1a721ace977b64e268deca83e13e8fd8cc" prot="public" static="no" mutable="no">
-        <type>long</type>
-        <definition>long DeviceLibrary.CHopper.CHardLevelData.coinsNumber</definition>
-        <argsstring></argsstring>
-        <name>coinsNumber</name>
-        <briefdescription>
-<para>Indique le nombre de pièces dans le hopper. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="99" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="99" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="1343" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="1343" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1ae133eb4eac3921336823f13dd52f1893" prot="public" static="no" mutable="no">
-        <type><ref refid="group___niveaux_1ga103e99cf2377b2a34791cd09cd4a0a52" kindref="member">CLevel.HardLevel</ref></type>
+        <type><ref refid="class_device_library_1_1_c_hopper_1_1_c_level_1a103e99cf2377b2a34791cd09cd4a0a52" kindref="member">CLevel.HardLevel</ref></type>
         <definition>CLevel.HardLevel DeviceLibrary.CHopper.CHardLevelData.level</definition>
         <argsstring></argsstring>
         <name>level</name>
@@ -53,7 +40,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="104" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="104" bodyend="-1"/>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="1348" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="1348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1a1444b23b86902e452a455db0fbfc2f57" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DeviceLibrary.CHopper.CHardLevelData.nameOfHopper</definition>
+        <argsstring></argsstring>
+        <name>nameOfHopper</name>
+        <briefdescription>
+<para>Nom du hopper. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="1353" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="1353" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -61,19 +61,19 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="140">
+      <node id="142">
         <label>DeviceLibrary.CHopper.CHardLevelData</label>
         <link refid="class_device_library_1_1_c_hopper_1_1_c_hard_level_data"/>
-        <childnode refid="141" relation="usage">
+        <childnode refid="143" relation="usage">
           <edgelabel>level</edgelabel>
         </childnode>
       </node>
-      <node id="141">
+      <node id="143">
         <label>DeviceLibrary.CHopper.CLevel</label>
         <link refid="class_device_library_1_1_c_hopper_1_1_c_level"/>
       </node>
     </collaborationgraph>
-    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="85" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="84" bodyend="105"/>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" line="1334" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CHopper.cs" bodystart="1333" bodyend="1354"/>
     <listofallmembers>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1a721ace977b64e268deca83e13e8fd8cc" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHardLevelData</scope><name>coinsNumber</name></member>
       <member refid="class_device_library_1_1_c_hopper_1_1_c_hard_level_data_1aca7f707d07cf10da61fb5ba5c247d1cd" prot="public" virt="non-virtual"><scope>DeviceLibrary::CHopper::CHardLevelData</scope><name>isHCritical</name></member>

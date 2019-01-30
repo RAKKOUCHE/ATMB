@@ -32,11 +32,11 @@ namespace DeviceLibrary
                 try
                 {
                     Owner = owner;
-                    VariableSetToRead = new byte[] { 0, 0, 0, 0, 0, 0 };
+                    SetVariableSetToRead(new byte[] { 0, 0, 0, 0, 0, 0 });
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
             }
 
@@ -128,15 +128,6 @@ namespace DeviceLibrary
             public double Tension => Math.Round((0.2 + GetVariable(Variable.SUPPLYVOLTAGE) * 0.127), 2);
 
             /// <summary>
-            /// Buffer du résultat de la commande de lecture des variables du hopper.
-            /// </summary>
-            public byte[] VariableSetToRead
-            {
-                get => variableSetToRead;
-                set => variableSetToRead = value;
-            }
-
-            /// <summary>
             /// Lecture d'une variable
             /// </summary>
             /// <param name="variable">variable demandée</param>
@@ -145,7 +136,7 @@ namespace DeviceLibrary
             {
                 GetVariableSet();
                 CDevicesManager.Log.Debug("Variable demandée {0}", variable);
-                return VariableSetToRead[(int)variable];
+                return GetVariableSetToRead()[(int)variable];
             }
 
             /// <summary>
@@ -153,18 +144,26 @@ namespace DeviceLibrary
             /// </summary>
             public void GetVariableSet()
             {
-                CDevicesManager.Log.Info("Lecture des variables du hopper {0}", Owner.DeviceAddress - CHopper.AddressBaseHoper);
+                CDevicesManager.Log.Info("Lecture des variables du hopper {0}", Owner.DeviceAddress - AddressBaseHoper);
                 try
                 {
-                    if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, VariableSetToRead))
+                    if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, GetVariableSetToRead()))
                     {
-                        CDevicesManager.Log.Error("Impossible de lire le -variables set- du hopper {0} ", Owner.DeviceAddress - CHopper.AddressBaseHoper);
+                        CDevicesManager.Log.Error("Impossible de lire le -variables set- du hopper {0} ", Owner.DeviceAddress - AddressBaseHoper);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
+            }
+
+            /// <summary>
+            /// Buffer du résultat de la commande de lecture des variables du hopper.
+            /// </summary>
+            public byte[] GetVariableSetToRead()
+            {
+                return variableSetToRead;
             }
 
             /// <summary>
@@ -185,10 +184,18 @@ namespace DeviceLibrary
                         CDevicesManager.Log.Info("Erreur durant l'écriture des variables du {0}", Owner.DeviceAddress);
                     }
                 }
-                catch (Exception E)
+                catch (Exception exception)
                 {
-                    CDevicesManager.Log.Error(messagesText.erreur, E.GetType(), E.Message, E.StackTrace);
+                    CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
+            }
+
+            /// <summary>
+            /// Buffer du résultat de la commande de lecture des variables du hopper.
+            /// </summary>
+            public void SetVariableSetToRead(byte[] value)
+            {
+                variableSetToRead = value;
             }
         }
     }
