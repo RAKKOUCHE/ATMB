@@ -66,10 +66,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDispensedResult.cs" />
+    <Compile Include="CErrorCV.cs" />
+    <Compile Include="CHardLevelData.cs" />
+    <Compile Include="CHopperCoinId.cs" />
+    <Compile Include="CHopperSoftLevelData.cs" />
     <Compile Include="CModuleEmptied.cs" />
-    <Compile Include="CBNR_CPI.CitemsDispensed.cs" />
+    <Compile Include="CitemsDispensed.cs" />
     <Compile Include="CBNR_CPI.CModulePosition.cs" />
-    <Compile Include="CBNR_CPI.CResultDispense.cs" />
+    <Compile Include="CResultDispense.cs" />
     <Compile Include="CBNR_CPI.cs" />
     <Compile Include="CBNR_CPI.ERRORTYPE.cs" />
     <Compile Include="CBNR_CPI.Etat.cs" />

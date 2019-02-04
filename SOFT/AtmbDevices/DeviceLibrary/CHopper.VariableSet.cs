@@ -10,8 +10,6 @@ using System;
 
 namespace DeviceLibrary
 {
-    public partial class CHopper
-    {
         /// <summary>
         /// Classe des variables du hopper
         /// </summary>
@@ -59,6 +57,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Enumération des index des variables
             /// </summary>
+            [Flags]
             public enum Variable : byte
             {
                 /// <summary>
@@ -144,12 +143,12 @@ namespace DeviceLibrary
             /// </summary>
             public void GetVariableSet()
             {
-                CDevicesManager.Log.Info("Lecture des variables du hopper {0}", Owner.DeviceAddress - AddressBaseHoper);
+                CDevicesManager.Log.Info("Lecture des variables du hopper {0}", Owner.DeviceAddress - CHopper. AddressBaseHopper);
                 try
                 {
-                    if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, GetVariableSetToRead()))
+                    if (!CccTalk.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTVARIABLESET, 0, null, GetVariableSetToRead()))
                     {
-                        CDevicesManager.Log.Error("Impossible de lire le -variables set- du hopper {0} ", Owner.DeviceAddress - AddressBaseHoper);
+                        CDevicesManager.Log.Error("Impossible de lire le -variables set- du hopper {0} ", Owner.DeviceAddress - CHopper.AddressBaseHopper);
                     }
                 }
                 catch (Exception exception)
@@ -179,7 +178,7 @@ namespace DeviceLibrary
                 {
                     CDevicesManager.Log.Info("Enregistrement des variables du {0}", Owner.DeviceAddress);
                     byte[] bufferParam = { (byte)(currentLimit * 17.1), motorStopDelay, (byte)(payoutTO * 3), (byte)singleCoinMode };
-                    if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.MODIFYVARIABLESET, (byte)bufferParam.Length, bufferParam, null))
+                    if (!CccTalk.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.MODIFYVARIABLESET, (byte)bufferParam.Length, bufferParam, null))
                     {
                         CDevicesManager.Log.Info("Erreur durant l'écriture des variables du {0}", Owner.DeviceAddress);
                     }
@@ -198,5 +197,4 @@ namespace DeviceLibrary
                 variableSetToRead = value;
             }
         }
-    }
 }

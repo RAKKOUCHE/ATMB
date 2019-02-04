@@ -154,6 +154,6 @@
  * - Modificiation de la génération des nombres alátoires pour le hopper (plus sûr).
  * - Implémentation du vidage des modules.
  * - Consolidation de la machine d'état du BNR.
- * 
+ * - Implémentations de la sauvegarde du report et audit.
  *------------------------------------------------------------------------------
  */

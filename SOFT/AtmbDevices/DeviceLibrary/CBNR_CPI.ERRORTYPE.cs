@@ -1,5 +1,5 @@
-﻿/// \file CBNR_CPI.cs
-/// \brief Fichier contenant la classe CBNR_CPI
+﻿/// \file CBNR_CPI.ERRORTYPE.cs
+/// \brief Fichier contenant la classe ERRORTYPE
 /// \date 28 11 2018
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
@@ -58,7 +58,7 @@ namespace DeviceLibrary
             /// </summary>
             DLL_BNR_NOT_FREE,
         }
-
+    }
         /// <summary>
         /// Class des erreurs du BNR.
         /// </summary>
@@ -67,12 +67,11 @@ namespace DeviceLibrary
             /// <summary>
             /// Code de l'error.
             /// </summary>
-            public Errortype error;
+            public CBNR_CPI.Errortype error;
 
             /// <summary>
             /// Nom du module.
             /// </summary>
             public string nameModule;
-        }
     }
 }

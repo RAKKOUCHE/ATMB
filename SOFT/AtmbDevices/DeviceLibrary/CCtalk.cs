@@ -22,6 +22,9 @@ namespace DeviceLibrary
         /// </summary>
         private const byte sizeOfBufferOut = 32;
 
+        /// <summary>
+        /// Adresse par defaut du péripérique;
+        /// </summary>
         private DefaultDevicesAddress deviceAddress;
 
         /// <summary>
@@ -382,7 +385,7 @@ namespace DeviceLibrary
         /// </summary>
         /// <param name="nameOfPort">Nom du port série</param>
         /// <returns>true si un bus ccTalk est detecté sur ce port série</returns>
-        private bool IsCcTalkPort(string nameOfPort)
+        private static bool IsCcTalkPort(string nameOfPort)
         {
             CDevicesManager.Log.Info(messagesText.verifSerialPort, nameOfPort);
             try
@@ -416,7 +419,7 @@ namespace DeviceLibrary
         /// </summary>
         /// <param name="buffer">Buffer devant être vidé</param>
         /// <param name="len">Longueur du buffer</param>
-        private void ZeroMemory(byte[] buffer, byte len)
+        private static void ZeroMemory(byte[] buffer, byte len)
         {
             try
             {
@@ -483,7 +486,7 @@ namespace DeviceLibrary
         /// <param name="parameter">Buffer des paramètres</param>
         /// <param name="answer">Objet contenant les paramètres de retour le cas échéant</param>
         /// <returns></returns>
-        public bool IsCmdccTalkSended(DefaultDevicesAddress peripherique, object commande, byte lenParam, byte[] parameter, object answer)
+        public static bool  IsCmdccTalkSended(DefaultDevicesAddress peripherique, object commande, byte lenParam, byte[] parameter, object answer)
         {
             bool result = false;
             lock (verrou)

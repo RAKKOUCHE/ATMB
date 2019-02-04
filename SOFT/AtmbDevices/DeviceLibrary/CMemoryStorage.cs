@@ -152,7 +152,7 @@ namespace DeviceLibrary
                 }
                 byte[] bufferParam = { BlockNumber };
                 CDevicesManager.Log.Info("Lecture du bloc de données {0} du périphérique à l'adresse {1}", Owner.DeviceAddress);
-                if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.READDATABLOCK, (byte)bufferParam.Length, bufferParam, data))
+                if (!CccTalk.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.READDATABLOCK, (byte)bufferParam.Length, bufferParam, data))
                 {
                     throw new Exception(string.Format("Impossible de lire les données dans le bloc {0} du périphérique {1}", BlockNumber, Owner.DeviceAddress));
                 }
@@ -172,7 +172,7 @@ namespace DeviceLibrary
             {
                 byte[] bufferIn = { 0, 0, 0, 0, 0 };
                 CDevicesManager.Log.Info("Lecture des informations sur les capacités de lecture et écriture des données du {0} : ", Owner.DeviceAddress);
-                if (Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTDATASTORAGEAVAILABILITY, 0, null, bufferIn))
+                if (CccTalk.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.REQUESTDATASTORAGEAVAILABILITY, 0, null, bufferIn))
                 {
                     memoryType = (MemoryKeepType)bufferIn[0];
                     readBlocks = bufferIn[1];
@@ -205,7 +205,7 @@ namespace DeviceLibrary
                 byte[] bufferParam = new byte[lenParam + 1];
                 bufferParam[0] = BlockNumber;
                 Buffer.BlockCopy((byte[])data, 0, bufferParam, 1, writeBytesPerBlock);
-                if (!Owner.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.WRITEDATABLOCK, lenParam, bufferParam, null))
+                if (!CccTalk.IsCmdccTalkSended(Owner.DeviceAddress, CccTalk.Header.WRITEDATABLOCK, lenParam, bufferParam, null))
                 {
                     throw new Exception(string.Format("Impossible d'écrire le bloc {0} dans le périphérique {1}", BlockNumber, Owner.DeviceAddress));
                 }

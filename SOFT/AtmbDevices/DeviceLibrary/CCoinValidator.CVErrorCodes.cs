@@ -6,12 +6,7 @@
 
 namespace DeviceLibrary
 {
-    /// <summary>
-    /// Class gérant le monnayeur.
-    /// </summary>
-    public partial class CCoinValidator : CcashReader
-    {
-        /// \addtogroup Erreurs
+         /// \addtogroup Erreurs
         /// @{
         /// <summary>
         /// Groupe des codes erreur renvoyés par les périphériques
@@ -402,4 +397,3 @@ namespace DeviceLibrary
             UNSPECIFIEDALARM = 255,
         }
     }
-}

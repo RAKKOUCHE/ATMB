@@ -4,40 +4,33 @@
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
-using System;
 using System.Collections.Generic;
 
 namespace DeviceLibrary
 {
     /// <summary>
-    /// Class principale
+    /// Class concernant les montants introduits.
     /// </summary>
-    public partial class CDevicesManager : IDisposable
+    public class CCashReceived
     {
         /// <summary>
-        /// Class concernant les montants introduits.
+        /// Montant total introduit dnas la transaction.
         /// </summary>
-        public class CCashReceived
+        public int amountIntroduced;
+
+        /// <summary>
+        /// Liste contenant chaque denomination introduite.
+        /// </summary>
+        public List<int> listValueIntroduced;
+
+        /// <summary>
+        /// Contructeur.
+        /// </summary>
+        public CCashReceived()
         {
-            /// <summary>
-            /// Montant total introduit dnas la transaction.
-            /// </summary>
-            public int amountIntroduced;
-
-            /// <summary>
-            /// Liste contenant chaque denomination introduite.
-            /// </summary>
-            public List<int> listValueIntroduced;
-
-            /// <summary>
-            /// Contructeur.
-            /// </summary>
-            public CCashReceived()
-            {
-                listValueIntroduced = new List<int>();
-                listValueIntroduced.Clear();
-                amountIntroduced = 0;
-            }
+            listValueIntroduced = new List<int>();
+            listValueIntroduced.Clear();
+            amountIntroduced = 0;
         }
     }
 }

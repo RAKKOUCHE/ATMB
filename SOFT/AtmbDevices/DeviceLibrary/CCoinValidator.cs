@@ -26,7 +26,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Instance de la classe des erreurs du monnayeurs.
         /// </summary>
-        private CErroCV errorCV;
+        private CErrorCV errorCV;
 
         private LowerSensor exitSensor;
 
@@ -96,10 +96,10 @@ namespace DeviceLibrary
             }
             catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 evReady.Set();
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
-            evReady.WaitOne(60000);
+            evReady.WaitOne();
         }
 
         /// <summary>
@@ -694,6 +694,7 @@ namespace DeviceLibrary
                     }
                     case Etat.STATE_STOP:
                     {
+                        evReady.Set();
                         CVTask.Abort();
                         break;
                     }
@@ -758,7 +759,7 @@ namespace DeviceLibrary
             {
                 canaux[i] = new CCanal((byte)(i + 1), this);
             }
-            errorCV = new CErroCV();
+            errorCV = new CErrorCV();
             PollingDelay = 20;
             BackEventCounter = 0;
             creditBuffer = new CCVcreditBuffer(this);
@@ -781,22 +782,6 @@ namespace DeviceLibrary
                 CheckState();
                 Thread.Sleep(PollingDelay);
             }
-        }
-
-        /// <summary>
-        /// Classe des erreurs du monnayeur.
-        /// </summary>
-        public class CErroCV
-        {
-            /// <summary>
-            ///
-            /// </summary>
-            public byte code;
-
-            /// <summary>
-            ///
-            /// </summary>
-            public CVErrorCodes errorText;
         }
 
         /********************************************************************************/

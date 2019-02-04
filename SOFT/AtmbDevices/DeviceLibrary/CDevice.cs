@@ -25,7 +25,7 @@ namespace DeviceLibrary
         /// <summary>
         ///
         /// </summary>
-        public static CInserted denominationInserted;
+        internal static CInserted denominationInserted;
 
         /// <summary>
         /// Objet de verrouillage de l'accés à la liste des évenements.
@@ -54,7 +54,7 @@ namespace DeviceLibrary
             {
                 eventListLock = new object();
             }
-            evReady = new AutoResetEvent(false);
+            evReady = new AutoResetEvent(false);            
         }
 
         /// <summary>

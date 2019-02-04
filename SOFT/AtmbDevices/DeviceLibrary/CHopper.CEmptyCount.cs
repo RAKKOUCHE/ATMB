@@ -6,8 +6,6 @@
 
 namespace DeviceLibrary
 {
-    public partial class CHopper : CccTalk
-    {
         /// <summary>
         /// Class contenant les résultats du vidage du hopper.
         /// </summary>
@@ -39,4 +37,3 @@ namespace DeviceLibrary
             public string nameOfHopper;
         }
     }
-}

@@ -4,11 +4,14 @@
 /// \version 1.0.0
 /// \author Rachid AKKOUCHE
 
+using System;
+
 namespace DeviceLibrary
 {
     /// <summary>
     /// Enumération des périphériques et leurs adresses.
     /// </summary>
+    [Flags]
     public enum DefaultDevicesAddress : byte
     {
         /// <summary>

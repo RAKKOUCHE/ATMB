@@ -15,10 +15,47 @@ using System.Xml;
 
 namespace DeviceLibrary
 {
+
+    /// <summary>
+    /// Class contenant les informations sur les compteurs du BNR.
+    /// </summary>
+    public class CBNRCounters
+    {
+        /// <summary>
+        /// Liste contenant les informations sur les compteurs des unités logiques.
+        /// </summary>
+        public List<CcounterInfo> listCounters;
+
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        public CBNRCounters()
+        {
+            amountTotal = 0;
+        }
+
+        private int amountTotal;
+        /// <summary>
+        /// Montant total contenu dans le BNR.
+        /// </summary>
+        public int AmountTotal
+        {
+            get
+            {
+                amountTotal = 0;
+                foreach (CcounterInfo counterInfo in listCounters)
+                {
+                    amountTotal += counterInfo.amount;
+                }
+                return amountTotal;
+            }
+        }
+    }
+
     /// <summary>
     /// Class principale
     /// </summary>
-    public partial class CDevicesManager
+    public partial class CDevicesManager : IDisposable
     {
         #region VARIABLES
 
@@ -30,7 +67,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Instance du BNR
         /// </summary>
-        private readonly CBNR_CPI bnX;
+        public readonly CBNR_CPI bnX;
 
         /// <summary>
         /// Thread de la classe principale.
@@ -50,7 +87,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Instance de la classe CCashReceived.
         /// </summary>
-        internal CCashReceived cashReceived;
+        private CCashReceived cashReceived;
 
         /// <summary>
         /// Nom du fichier des paramètres.
@@ -83,11 +120,16 @@ namespace DeviceLibrary
         public CCoinValidator monnayeur;
 
         /// <summary>
+        /// Liste des compteurs du BNR.
+        /// </summary>
+        public CBNRCounters BNRCounters;
+
+        /// <summary>
         /// Prototype de la fonctio delegate recevant les messages de la dll.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public delegate void FireEventHandler(object sender, CEvent.FireEventArg e);
+        public delegate void FireEventHandler(object sender, FireEventArg e);
 
         /// <summary>
         /// Evenement levant un appel à la fonction déléguée.
@@ -149,7 +191,7 @@ namespace DeviceLibrary
         /// </summary>
         private void ChangeBack()
         {
-            Log.Debug("Change back");
+            Log.Trace("Change back");
             try
             {
                 //Calcul du montant à rendre.
@@ -163,13 +205,13 @@ namespace DeviceLibrary
                             //Recherche u plus petit billet disponible.
                             try
                             {
-                                while (CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE)
+                                while ((CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE) || (CBNR_CPI.bnr.TransactionStatus.CurrentTransaction != Mei.Bnr.TransactionType.None ))
                                     ;
                                 //Si le reste est supérieur au plus petit billet disponible, on provoquera une distribution de billet
-                                if (rest >= bnX.Divider)
+                                if (rest >= CBNR_CPI.Divider)
                                 {
                                     //Le montant à distribuer sera le reste modulo la valeur du plus petit billet
-                                    bnX.CheckAndDispense(bnX.AmountToDispense = rest / bnX.Divider * bnX.Divider);
+                                    bnX.CheckAndDispense(bnX.AmountToDispense = rest / CBNR_CPI.Divider * CBNR_CPI.Divider);
                                     rest -= bnX.AmountToDispense;
                                 }
                             }
@@ -184,8 +226,8 @@ namespace DeviceLibrary
                         //Verifie si le hopper est capable de distribuer.
                         //Comme les hoppers sont classés par ordre croissant de valeur, donc on distribue le minimum de pièces.
                         if (hopper.IsPresent &&
-                            (hopper.deviceLevel.softLevel != CHopper.CLevel.SoftLevel.VIDE) &&
-                            (hopper.deviceLevel.hardLevel != CHopper.CLevel.HardLevel.VIDE) &&
+                            (hopper.deviceLevel.softLevel != CLevel.SoftLevel.VIDE) &&
+                            (hopper.deviceLevel.hardLevel != CLevel.HardLevel.VIDE) &&
                             (hopper.CoinValue > 0) &&
                             (hopper.CoinValue <= rest))
                         {
@@ -213,17 +255,20 @@ namespace DeviceLibrary
                         }
                     }
                     //S'assure de la liberation de l'évenment et de la présentation des billets si nécessaire.
-                    if (CBNR_CPI.isDispensable)
+                    if (CBNR_CPI.bnr != null && bnX.IsPresent)
                     {
-                        try
+                        if (CBNR_CPI.isDispensable)
                         {
-                            CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
-                            CBNR_CPI.ev.Reset();
-                            CBNR_CPI.bnr.Present();
-                            CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
-                        }
-                        catch
-                        {
+                            try
+                            {
+                                CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                                CBNR_CPI.ev.Reset();
+                                CBNR_CPI.bnr.Present();
+                                CBNR_CPI.ev.WaitOne(CBNR_CPI.BnrDefaultOperationTimeOutInMS);
+                            }
+                            catch
+                            {
+                            }
                         }
                     }
                 }
@@ -231,6 +276,11 @@ namespace DeviceLibrary
             catch (Exception exception)
             {
                 Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+            if ((CBNR_CPI.bnr != null) && bnX.IsPresent)
+            {
+                while (CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE) ;
+                bnX.isReadyToSearchDivider = true;
             }
         }
 
@@ -240,6 +290,7 @@ namespace DeviceLibrary
         private void EndTransaction()
         {
             CBNR_CPI.ev.Set();
+            CBNR_CPI.isReloadInProgress = false;
             lock (CDevice.eventListLock)
             {
                 CEvent evenement = new CEvent
@@ -249,358 +300,6 @@ namespace DeviceLibrary
                     data = null,
                 };
                 CDevice.eventsList.Add(evenement);
-            }
-        }
-
-        /// <summary>
-        /// Le BNR a distribué des billets.
-        /// </summary>
-        /// <param name="evenment"></param>
-        private void OnBNRDispensed(CEvent evenment)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.BNRDISPENSE,
-                    donnee = evenment,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evénement levé quand une erreur s'est produte sur le BNR.
-        /// </summary>
-        private void OnBNRErreur(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.BNRERREUR,
-                    donnee = evenement,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evenment levé quand un module est réinséré.
-        /// </summary>
-        /// <param name="evenement"></param>
-        private void OnbnrModuleReinsere(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.BNRMODULEREINSERE,
-                    donnee = evenement,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Indique que le module est remis à zéro.
-        /// </summary>
-        /// <param name="evenement"></param>
-        private void OnBNRResetModule(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.BNRRAZMETER,
-                    donnee = evenement,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evenement levé si un module est retiré du BNR.
-        /// </summary>
-        /// <param name="evenement"></param>
-        private void OnBRNModuleRemoved(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.BNRMODULEMANQUANT,
-                    donnee = evenement,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        private void OnCashBoxRemoved(CEvent evenment)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.CASHBOXREMOVED,
-                    donnee = evenment,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evénement levé lors de la cloture de la transaction.
-        /// </summary>
-        private void OnCashClose()
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.CASHCLOSED,
-                    donnee = cashReceived,
-                };
-                FireEvent(new object(), fireEventArgs);
-                cashReceived = null;
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evénement levé lors de l'ouverture des moyens de paiement.
-        /// </summary>
-        private void OnCashOpen()
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.CASHOPENED,
-                    donnee = null,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evénement levé lors de la détection d'une erreur sur le monnayeur.
-        /// </summary>
-        /// <param name="evenement"></param>
-        private void OnCVError(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.COINVALIDATORERROR,
-                    donnee = evenement,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evénement levé lorsque la dll est prête.
-        /// </summary>
-        private void OnDllReady()
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.DLLLREADY,
-                    donnee = null,
-                };
-                FireEvent(new object(), fireEventArgs);
-                EndTransactionForced();
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evénement levé lorsque la distribution est terminée.
-        /// </summary>
-        /// <param name="evenement"></param>
-        private void OnHopperDispensed(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.HOPPERDISPENSED,
-                    donnee = evenement,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evénement levé lorsque le hopper est vidé.
-        /// </summary>
-        /// <param name="evenement"></param>
-        private void OnHopperEmptied(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.HOPPEREMPTIED,
-                    donnee = evenement,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evéenemnt levé lorsqu'une error est detectée sur un hopper.
-        /// </summary>
-        /// <param name="evenement"></param>
-        private void OnHopperError(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.HOPPERERROR,
-                    donnee = evenement,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evénement levé lorsqu'un changement d'état d'une sonde de niveau d'un hopper est detecté.
-        /// </summary>
-        /// <param name="evenement"></param>
-        private void OnHopperHardLevelChanged(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.HOPPERHWLEVELCHANGED,
-                    donnee = evenement
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper
-        /// </summary>
-        /// <param name="evenement"></param>
-        private void OnHopperSoftLevelChanged(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.HOPPERSWLEVELCHANGED,
-                    donnee = evenement,
-                };
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evenement levé pour la fin du vidage d'un module.
-        /// </summary>
-        /// <param name="evenement"></param>
-        private void OnModuleEmptied(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.BNREMPTY,
-                    donnee = evenement,
-                };
-                Console.Beep();
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-            }
-        }
-
-        /// <summary>
-        /// Evémenment levé lors de l'introduction d'une pièce.
-        /// </summary>
-        private void OnMoneyReceived(CEvent evenement)
-        {
-            try
-            {
-                CEvent.FireEventArg fireEventArgs = new CEvent.FireEventArg
-                {
-                    reason = CEvent.Reason.MONEYINTRODUCTED,
-                    donnee = evenement,
-                };
-                Console.Beep();
-                FireEvent(new object(), fireEventArgs);
-            }
-            catch (Exception exception)
-            {
-                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
@@ -734,6 +433,357 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// Le BNR a distribué des billets.
+        /// </summary>
+        /// <param name="evenment"></param>
+        private void OnBNRDispensed(CEvent evenment)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.BNRDISPENSE,
+                    donnee = evenment,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evénement levé quand une erreur s'est produte sur le BNR.
+        /// </summary>
+        private void OnBNRErreur(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.BNRERREUR,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evenment levé quand un module est réinséré.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnbnrModuleReinsere(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.BNRMODULEREINSERE,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Indique que le module est remis à zéro.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnBNRResetModule(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.BNRRAZMETER,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evenement levé si un module est retiré du BNR.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnBRNModuleRemoved(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.BNRMODULEMANQUANT,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        private void OnCashBoxRemoved(CEvent evenment)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.CASHBOXREMOVED,
+                    donnee = evenment,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evénement levé lors de la cloture de la transaction.
+        /// </summary>
+        private void OnCashClose()
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.CASHCLOSED,
+                    donnee = cashReceived,
+                };
+                FireEvent(new object(), fireEventArgs);
+                cashReceived = null;
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evénement levé lors de l'ouverture des moyens de paiement.
+        /// </summary>
+        private void OnCashOpen()
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.CASHOPENED,
+                    donnee = null,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evénement levé lors de la détection d'une erreur sur le monnayeur.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnCVError(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.COINVALIDATORERROR,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evénement levé lorsque la dll est prête.
+        /// </summary>
+        private void OnDllReady()
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.DLLLREADY,
+                    donnee = null,
+                };
+                FireEvent(new object(), fireEventArgs);
+                EndTransactionForced();
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evénement levé lorsque la distribution est terminée.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnHopperDispensed(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.HOPPERDISPENSED,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evénement levé lorsque le hopper est vidé.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnHopperEmptied(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.HOPPEREMPTIED,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evéenemnt levé lorsqu'une error est detectée sur un hopper.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnHopperError(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.HOPPERERROR,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evénement levé lorsqu'un changement d'état d'une sonde de niveau d'un hopper est detecté.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnHopperHardLevelChanged(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.HOPPERHWLEVELCHANGED,
+                    donnee = evenement
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evénement levé lorsqu'un niveau de pièces atteint une des limites fixées pour le hopper
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnHopperSoftLevelChanged(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.HOPPERSWLEVELCHANGED,
+                    donnee = evenement,
+                };
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evenement levé pour la fin du vidage d'un module.
+        /// </summary>
+        /// <param name="evenement"></param>
+        private void OnModuleEmptied(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.BNREMPTY,
+                    donnee = evenement,
+                };
+                Console.Beep();
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// Evémenment levé lors de l'introduction d'une pièce.
+        /// </summary>
+        private void OnMoneyReceived(CEvent evenement)
+        {
+            try
+            {
+                FireEventArg fireEventArgs = new FireEventArg
+                {
+                    reason = CEvent.Reason.MONEYINTRODUCTED,
+                    donnee = evenement,
+                };
+                Console.Beep();
+                FireEvent(new object(), fireEventArgs);
+            }
+            catch (Exception exception)
+            {
+                Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+            }
+        }
+        /// <summary>
         /// Tâche principale de la dll
         /// </summary>
         private void Task()
@@ -759,7 +809,7 @@ namespace DeviceLibrary
                                     cashReceived.listValueIntroduced.Add(CDevice.denominationInserted.ValeurCent);
                                     cashReceived.amountIntroduced += CDevice.denominationInserted.ValeurCent;
                                 }
-                                if ((ToPay - CDevice.denominationInserted.TotalAmount) < 1)
+                                if (!CBNR_CPI.isReloadInProgress && ((ToPay - CDevice.denominationInserted.TotalAmount) < 1))
                                 {
                                     //if (bnX != null)
                                     //{
@@ -775,7 +825,9 @@ namespace DeviceLibrary
                                     //    while (monnayeur.IsCVToBeDeactivated)
                                     //        ;
                                     //}
+
                                     EndTransaction();
+
                                 }
                                 else
                                 {
@@ -797,7 +849,7 @@ namespace DeviceLibrary
                             case CEvent.Reason.BNRERREUR:
                             {
                                 OnBNRErreur(CDevice.eventsList[0]);
-                                if ((bnX != null) && bnX.IsPresent && ((CBNR_CPI.Cerror)(CDevice.eventsList[0]).data).error == CBNR_CPI.Errortype.BILLREFUSED)
+                                if ((bnX != null) && bnX.IsPresent && ((Cerror)(CDevice.eventsList[0]).data).error == CBNR_CPI.Errortype.BILLREFUSED)
                                 {
                                     CBNR_CPI.State = CBNR_CPI.Etat.STATE_CAHSIN;
                                 }
@@ -908,77 +960,24 @@ namespace DeviceLibrary
         #endregion PRIVATE
 
         #region PUBLIC
-
         /// <summary>
-        /// Constructeur de la classe principale
+        /// Modifie le le chemin de tri du canal.
         /// </summary>
-        public CDevicesManager()
+        /// <param name="canal">Canal du monnayeur</param>
+        /// <param name="sorter">chemin du trieur</param>
+        public void SetSorterPath(byte canal, byte sorter)
         {
             try
             {
-                Log = LogManager.GetCurrentClassLogger();
-                Log.Info("\r\n\r\n\r\n{0}\r\n", messagesText.callDll);
-                ParamFileName = "parametres.xml";
-                ParamFileName = Directory.GetCurrentDirectory() + "\\" + ParamFileName;
-                ParametersFile.Load(ParamFileName);
-
-                mainDevise = ParametersFile.GetElementsByTagName("Primaire")[0].InnerText;
-                alternateDevise = ParametersFile.GetElementsByTagName("Secondaire")[0].InnerText;
-                tauxDeChange = decimal.Parse(ParametersFile.GetElementsByTagName("Taux")[0].InnerText);
-
-                CccTalk.counters = new CcoinsCounters();
-                CccTalk.counterSerializer = new BinaryFormatter();
-                if (!File.Exists(CccTalk.fileCounterName))
+                if (canal < 1 || canal > 16)
                 {
-                    CccTalk.countersFile = File.Create(CccTalk.fileCounterName);
-                    CccTalk.counterSerializer.Serialize(CccTalk.countersFile, CccTalk.counters);
-                    CccTalk.countersFile.Close();
+                    throw new Exception("Le numéro de canal doit être compris entre 1 et 16");
                 }
-                CccTalk.countersFile = File.Open(CccTalk.fileCounterName, FileMode.Open, FileAccess.ReadWrite);
-                CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
-                CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
-                try
+                if (sorter < 1 || sorter > 8)
                 {
-                    bnX = new CBNR_CPI();
+                    throw new Exception("Le numéro de chemin doit être compris entre 1 et 8");
                 }
-                catch (Exception exception)
-                {
-                    Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
-                }
-                monnayeur = new CCoinValidator();
-                if (monnayeur.ProductCode == "BV")
-                {
-                    monnayeur.CVTask.Abort();
-                    Thread.Sleep(100);
-                    monnayeur = new CPelicano();
-                    ((CPelicano)monnayeur).SpeedMotor = Convert.ToByte(ParametersFile.SelectSingleNode("/CashParameters/CoinValidator/SpeedMTR").InnerText);
-                }
-                SetSortersAndHoppersToLoad();
-
-                Hoppers = new List<CHopper>(8);
-                for (byte i = 1; i < 9; i++)
-                {
-                    Hoppers.Add(new CHopper(i));
-                }
-                ReadParamHopper();
-                foreach (CHopper hopper in Hoppers)
-                {
-                    hopper.State = CHopper.Etat.STATE_CHECKLEVEL;
-                }
-                Hoppers.Sort((x, y) => y.CoinValue.CompareTo(x.CoinValue));
-
-                lock (CDevice.eventListLock)
-                {
-                    CEvent evenement = new CEvent
-                    {
-                        reason = CEvent.Reason.DLLLREADY,
-                        nameOfDevice = "",
-                        data = null
-                    };
-                    CDevice.eventsList.Insert(0, evenement);
-                }
-                msgTask = new Thread(Task);
-                msgTask.Start();
+                monnayeur.canaux[canal].sorter.SetSorterPath(sorter);
             }
             catch (Exception exception)
             {
@@ -995,17 +994,17 @@ namespace DeviceLibrary
         {
             try
             {
+                CBNR_CPI.ev.Set();
                 if ((ToPay = value) > CDevice.denominationInserted.TotalAmount)
                 {
                     if (monnayeur != null)
                     {
                         monnayeur.IsCVToBeActivated = monnayeur.IsPresent;
                     }
-                    //if (bnX != null)
-                    //{
-                    //    bnX.IsBNRToBeActivated = bnX.IsPresent;
-                    //}
-                    CBNR_CPI.State = CBNR_CPI.Etat.STATE_CASHIN_START;
+                    if ((bnX != null) && bnX.IsPresent)
+                    {
+                        CBNR_CPI.State = CBNR_CPI.Etat.STATE_CASHIN_START;
+                    }
                     lock (CDevice.eventListLock)
                     {
                         CDevice.eventsList.Add(new CEvent
@@ -1029,6 +1028,58 @@ namespace DeviceLibrary
             {
                 Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
+        }
+
+        /// <summary>
+        /// Cloture de force une transaction en cours.
+        /// </summary>
+        public void EndTransactionForced()
+        {
+            CBNR_CPI.isCancelInProgress = true;
+            EndTransaction();
+            CBNR_CPI.isCancelInProgress = false;
+        }
+
+        /// <summary>
+        /// Remise à zéro des compteurs.
+        /// </summary>
+        public void CcTalkCountersResets()
+        {
+            CccTalk.ResetCounters();
+            foreach (CHopper hopper in Hoppers)
+            {
+                hopper.State = CHopper.Etat.STATE_CHECKLEVEL;
+            }
+        }
+
+        /// <summary>
+        /// Abandonne la transaction et retourne le montant introduit
+        /// </summary>
+        public void CancelTransaction()
+        {
+            ToPay = 0;
+            if (CBNR_CPI.bnr != null && bnX.IsPresent)
+            {
+                CBNR_CPI.isCancelInProgress = true;
+                CBNR_CPI.ev.Set();
+                Log.Debug("Postionne ROLLBACK");
+                CBNR_CPI.State = CBNR_CPI.Etat.STATE_ROLLBACK;
+                while (CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE) ;
+            }
+            //ChangeBack();
+            EndTransactionForced();
+        }
+
+        /// <summary>
+        /// Renvoi le nom du port série utilisé par le bus ccTalk
+        /// </summary>
+        public static string GetSerialPort()
+        {
+            if (CccTalk.PortSerie != null)
+            {
+                return CccTalk.PortSerie.PortName;
+            }
+            return string.Empty;
         }
 
         /// <summary>
@@ -1063,7 +1114,9 @@ namespace DeviceLibrary
                     throw new Exception("Pas de BNR  reconnu");
                 }
                 CBNR_CPI.ev.Set();
+                Log.Debug("DEBUT BILL ROLLBACK");
                 CBNR_CPI.State = CBNR_CPI.Etat.STATE_ROLLBACK;
+                Log.Debug("FIN BILL ROLLBACK");
                 while (CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE) ;
                 BeginTransaction(ToPay);
             }
@@ -1086,7 +1139,7 @@ namespace DeviceLibrary
                 };
                 CccTalk.counters.totalAmountInCabinet -= CccTalk.counters.totalAmountInCB;
                 CccTalk.counters.totalAmountInCB = 0;
-                foreach (CCoinValidator.CCanal canal in monnayeur.canaux)
+                foreach (CCanal canal in monnayeur.canaux)
                 {
                     coinInCashBox.coin[canal.Number - 1] = new CcoinsCounters.CCoinInCB.CCoin
                     {
@@ -1124,6 +1177,15 @@ namespace DeviceLibrary
         }
 
         /// <summary>
+        /// Génere un rapport sur le BNR à envoyer à CPI en cas de défaut de fonctionnment.
+        /// </summary>
+        public void BNRGenerateReport(string path)
+        {
+            bnX.ReportFilePathName = path;
+            CBNR_CPI.State = CBNR_CPI.Etat.STATE_REPORT;
+        }
+
+        /// <summary>
         /// Fonction permettant le rechargment des recyclers.
         /// </summary>
         public void BNRReloadRecycler()
@@ -1134,7 +1196,7 @@ namespace DeviceLibrary
                 {
                     throw new Exception("Pas de BNR reconnu");
                 }
-                bnX.Reloadrecycler();
+                CBNR_CPI.Reloadrecycler();
             }
             catch (Exception exception)
             {
@@ -1183,36 +1245,37 @@ namespace DeviceLibrary
         }
 
         /// <summary>
-        /// Abandonne la transaction et retourne le montant introduit
+        /// Lit les compteurs du BNR
         /// </summary>
-        public void CancelTransaction()
+        public void GetCountersBNR()
         {
-            ToPay = 0;
-            if (CBNR_CPI.bnr != null && bnX.IsPresent)
+            try
             {
-                CBNR_CPI.isCancelInProgress = true;
-                CBNR_CPI.ev.Set();
-                CBNR_CPI.State = CBNR_CPI.Etat.STATE_ROLLBACK;
-                while (CBNR_CPI.State != CBNR_CPI.Etat.STATE_IDLE) ;
+                if (bnX != null && bnX.IsPresent)
+                {
+                    BNRCounters = new CBNRCounters();
+                    bnX.GetBNRCounters();
+                    BNRCounters.listCounters = new List<CcounterInfo>();
+                    BNRCounters.listCounters = bnX.listCountersInfo;
+                    BNRCounters.listCounters.Sort((x, y) => x.unit.CompareTo(y.unit));
+                }
             }
-            ChangeBack();
-            EndTransactionForced();
-        }
-
-        /// <summary>
-        /// Remise à zéro des compteurs.
-        /// </summary>
-        public void ccTalkCountersResets()
-        {
-            CccTalk.ResetCounters();
-            foreach (CHopper hopper in Hoppers)
+            catch (Exception exception)
             {
-                hopper.State = CHopper.Etat.STATE_CHECKLEVEL;
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
         }
 
+        ///// <summary>
+        ///// Libère les ressources.
+        ///// </summary>
+        //public void Dispose()
+        //{
+        //    Dispose(true);
+        //    GC.SuppressFinalize(this);
+        //}
         /// <summary>
-        /// Libère les ressources.
+        /// Libère les ressources utilisées par la dll.
         /// </summary>
         public void Dispose()
         {
@@ -1220,46 +1283,80 @@ namespace DeviceLibrary
             GC.SuppressFinalize(this);
         }
 
-        /// <summary>
-        /// Cloture de force une transaction en cours.
-        /// </summary>
-        public void EndTransactionForced()
-        {
-            CBNR_CPI.isCancelInProgress = true;
-            EndTransaction();
-            CBNR_CPI.isCancelInProgress = false;
-        }
+        #endregion PUBLIC
 
         /// <summary>
-        /// Renvoi le nom du port série utilisé par le bus ccTalk
+        /// Constructeur de la classe principale
         /// </summary>
-        public string GetSerialPort()
-        {
-            if (CccTalk.PortSerie != null)
-            {
-                return CccTalk.PortSerie.PortName;
-            }
-            return string.Empty;
-        }
-
-        /// <summary>
-        /// Modifie le le chemin de tri du canal.
-        /// </summary>
-        /// <param name="canal">Canal du monnayeur</param>
-        /// <param name="sorter">chemin du trieur</param>
-        public void SetSorterPath(byte canal, byte sorter)
+        public CDevicesManager()
         {
             try
             {
-                if (canal < 1 || canal > 16)
+                Log = LogManager.GetCurrentClassLogger();
+                Log.Info("\r\n\r\n\r\n{0}\r\n", messagesText.callDll);
+                ParamFileName = "parametres.xml";
+                ParamFileName = Directory.GetCurrentDirectory() + "\\" + ParamFileName;
+                ParametersFile.Load(ParamFileName);
+
+                mainDevise = ParametersFile.GetElementsByTagName("Primaire")[0].InnerText;
+                alternateDevise = ParametersFile.GetElementsByTagName("Secondaire")[0].InnerText;
+                tauxDeChange = decimal.Parse(ParametersFile.GetElementsByTagName("Taux")[0].InnerText);
+
+                CccTalk.counters = new CcoinsCounters();
+                CccTalk.counterSerializer = new BinaryFormatter();
+                if (!File.Exists(CccTalk.fileCounterName))
                 {
-                    throw new Exception("Le numéro de canal doit être compris entre 1 et 16");
+                    CccTalk.countersFile = File.Create(CccTalk.fileCounterName);
+                    CccTalk.counterSerializer.Serialize(CccTalk.countersFile, CccTalk.counters);
+                    CccTalk.countersFile.Close();
                 }
-                if (sorter < 1 || sorter > 8)
+                CccTalk.countersFile = File.Open(CccTalk.fileCounterName, FileMode.Open, FileAccess.ReadWrite);
+                CccTalk.countersFile.Seek(0, SeekOrigin.Begin);
+                CccTalk.counters = (CcoinsCounters)CccTalk.counterSerializer.Deserialize(CccTalk.countersFile);
+                try
                 {
-                    throw new Exception("Le numéro de chemin doit être compris entre 1 et 8");
+                    bnX = new CBNR_CPI();
                 }
-                monnayeur.canaux[canal].sorter.SetSorterPath(sorter);
+                catch (Exception exception)
+                {
+                    Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
+                }
+                monnayeur = new CCoinValidator();
+                if (monnayeur.ProductCode == "BV")
+                {
+                    monnayeur.CVTask.Abort();
+                    Thread.Sleep(100);
+                    monnayeur = new CPelicano();
+                    ((CPelicano)monnayeur).SpeedMotor = Convert.ToByte(ParametersFile.SelectSingleNode("/CashParameters/CoinValidator/SpeedMTR").InnerText);
+                }
+                if (monnayeur.IsPresent)
+                {
+                    SetSortersAndHoppersToLoad();
+                }
+                Hoppers = new List<CHopper>(8);
+                for (byte i = 1; i < 9; i++)
+                {
+                    Hoppers.Add(new CHopper(i));
+                }
+                ReadParamHopper();
+                foreach (CHopper hopper in Hoppers)
+                {
+                    hopper.State = CHopper.Etat.STATE_CHECKLEVEL;
+                }
+                Hoppers.Sort((x, y) => y.CoinValue.CompareTo(x.CoinValue));
+
+                lock (CDevice.eventListLock)
+                {
+                    CEvent evenement = new CEvent
+                    {
+                        reason = CEvent.Reason.DLLLREADY,
+                        nameOfDevice = "",
+                        data = null
+                    };
+                    CDevice.eventsList.Insert(0, evenement);
+                }
+                msgTask = new Thread(Task);
+                msgTask.Start();
             }
             catch (Exception exception)
             {
@@ -1267,14 +1364,20 @@ namespace DeviceLibrary
             }
         }
 
-        #endregion PUBLIC
+        /// <summary>
+        /// Destructeur
+        /// </summary>
+        ~CDevicesManager()
+        {
+            Dispose(false);
+        }
 
         #region PROTECTED
 
         /// <summary>
         /// Fonction libérant les ressources
         /// </summary>
-        protected void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
             if (disposing)
             {
@@ -1325,22 +1428,20 @@ namespace DeviceLibrary
                 {
                 }
             }
-            bnX.Dispose();
-            monnayeur.Dispose();
+            if (bnX != null)
+            {
+                bnX.Dispose();
+            }
+            if (monnayeur != null)
+            {
+                monnayeur.Dispose();
+            }
             Log.Trace("Stop");
             Log.Trace("\r\n---------------------\r\n");
             LogManager.Shutdown();
         }
 
         #endregion PROTECTED
-
-        /// <summary>
-        /// Destructeur
-        /// </summary>
-        ~CDevicesManager()
-        {
-            Dispose(true);
-        }
 
         #endregion METHODES
     }

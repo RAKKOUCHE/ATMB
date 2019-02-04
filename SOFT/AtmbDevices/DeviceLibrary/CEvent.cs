@@ -119,20 +119,20 @@ namespace DeviceLibrary
             DLLLREADY,
         }
 
+    }
+    /// <summary>
+    /// Class d'évenement
+    /// </summary>
+    public class FireEventArg : EventArgs
+    {
         /// <summary>
-        /// Class d'évenement
+        /// Objet contenant les infomations concernant l'événement.
         /// </summary>
-        public class FireEventArg : EventArgs
-        {
-            /// <summary>
-            /// Objet contenant les infomations concernant l'événement.
-            /// </summary>
-            public object donnee;
+        public object donnee;
 
-            /// <summary>
-            /// Cause de l'événement.
-            /// </summary>
-            public Reason reason;
-        }
+        /// <summary>
+        /// Cause de l'événement.
+        /// </summary>
+        public CEvent.Reason reason;
     }
 }

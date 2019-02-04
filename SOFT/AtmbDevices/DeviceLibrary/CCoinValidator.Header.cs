@@ -19,7 +19,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Liste des headers spécifiques au monnayeur
         /// </summary>
-        protected new enum Header : byte
+        public new enum Header : byte
         {
             /// <summary>
             /// Cette commande demande le status du monnayeur.

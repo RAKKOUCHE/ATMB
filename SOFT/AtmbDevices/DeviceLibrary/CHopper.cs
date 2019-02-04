@@ -18,6 +18,7 @@ namespace DeviceLibrary
     /// </summary>
     public partial class CHopper : CccTalk
     {
+
         /// <summary>
         /// Delai en ms entre chaque pollinng du hopper
         /// </summary>
@@ -110,7 +111,7 @@ namespace DeviceLibrary
         /// donc l'adresse d'un hopper s'obtient par :
         /// Numéro du Hopper + (première adresse(3) - 1) : (Adresse de base : 2)
         /// </remarks>
-        public const byte AddressBaseHoper = 2;
+        public static readonly byte AddressBaseHopper = 2;
 
         /// <summary>
         /// Nombre maximum de hoppers
@@ -165,7 +166,7 @@ namespace DeviceLibrary
         /// <summary>
         /// Objet contenant l'ensemble des variables du hopper
         /// </summary>
-        public CHopperVariableSet variables;
+        private CHopperVariableSet variables;
 
         /// <summary>
         /// Constructeur
@@ -177,7 +178,7 @@ namespace DeviceLibrary
             {
                 CDevicesManager.Log.Debug("Instanciation  du hopper {0}", hopperNumber);
                 IsInitialized = false;
-                DeviceAddress = (DefaultDevicesAddress)(hopperNumber + AddressBaseHoper);
+                DeviceAddress = (DefaultDevicesAddress)(hopperNumber + AddressBaseHopper);
                 Number = hopperNumber;
 
                 if (!(IsPresent = SimplePoll))
@@ -200,10 +201,10 @@ namespace DeviceLibrary
             }
             catch (Exception exception)
             {
-                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 evReady.Set();
+                CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
             }
-            evReady.WaitOne(30000);
+            evReady.WaitOne();
         }
 
         /// <summary>
@@ -263,7 +264,7 @@ namespace DeviceLibrary
         /// Lecture des informations concernant la pièce gérée par le hopper
         /// </summary>
         /// <remarks>N'est pas pris en compte par la dll</remarks>
-        public CHopperCoinId CoinId
+        private CHopperCoinId CoinId
         {
             get
             {
@@ -877,7 +878,7 @@ namespace DeviceLibrary
                     if ((deviceLevel.softLevel != CLevel.SoftLevel.OK) && (CoinsInHopper >= LevelLOSoft) &&
                         (CoinsInHopper < LevelHISoft))
                     {
-                        CSoftLevelData eventData = new CSoftLevelData
+                        CHopperSoftLevelData eventData = new CHopperSoftLevelData
                         {
                             nameOfHopper = name,
                             isHCritical = IsCritical,
@@ -888,7 +889,7 @@ namespace DeviceLibrary
                     }
                     if ((deviceLevel.softLevel != CLevel.SoftLevel.VIDE) && (CoinsInHopper < LevelEmptySoft))
                     {
-                        CSoftLevelData eventData = new CSoftLevelData
+                        CHopperSoftLevelData eventData = new CHopperSoftLevelData
                         {
                             nameOfHopper = name,
                             isHCritical = IsCritical,
@@ -900,7 +901,7 @@ namespace DeviceLibrary
                     if ((deviceLevel.softLevel != CLevel.SoftLevel.BAS) && (CoinsInHopper >= LevelEmptySoft) &&
                             (CoinsInHopper < LevelLOSoft))
                     {
-                        CSoftLevelData eventData = new CSoftLevelData
+                        CHopperSoftLevelData eventData = new CHopperSoftLevelData
                         {
                             nameOfHopper = name,
                             isHCritical = IsCritical,
@@ -912,7 +913,7 @@ namespace DeviceLibrary
                     if ((deviceLevel.softLevel != CLevel.SoftLevel.HAUT) && (CoinsInHopper > LevelHISoft) &&
                         (CoinsInHopper < LevelFullSoft))
                     {
-                        CSoftLevelData eventData = new CSoftLevelData
+                        CHopperSoftLevelData eventData = new CHopperSoftLevelData
                         {
                             nameOfHopper = name,
                             isHCritical = IsCritical,
@@ -923,7 +924,7 @@ namespace DeviceLibrary
                     }
                     if ((deviceLevel.softLevel != CLevel.SoftLevel.PLEIN) && (LevelFullSoft < CoinsInHopper))
                     {
-                        CSoftLevelData eventData = new CSoftLevelData
+                        CHopperSoftLevelData eventData = new CHopperSoftLevelData
                         {
                             nameOfHopper = name,
                             isHCritical = IsCritical,
@@ -1077,13 +1078,13 @@ namespace DeviceLibrary
                 }
                 CDevicesManager.Log.Info("La tension sur le hopper {0} est de {1}", DeviceAddress, tension);
                 byte connectorAddress = variables.ConnectorAddress;
-                if ((connectorAddress + 1 + AddressBaseHoper) != (byte)DeviceAddress)
+                if ((connectorAddress + 1 + AddressBaseHopper) != (byte)DeviceAddress)
                 {
                     CDevicesManager.Log.Error("Une différence d'adresse existe entre l'adresse logiciel et l'adresse physique du connecteur pour le hopper {0}, l'adresse physique du connecteur est : {1}", DeviceAddress, connectorAddress);
                 }
                 else
                 {
-                    CDevicesManager.Log.Info("L'adresse physique du hopper est : {0} ", connectorAddress + 1 + AddressBaseHoper);
+                    CDevicesManager.Log.Info("L'adresse physique du hopper est : {0} ", connectorAddress + 1 + AddressBaseHopper);
                 }
                 CDevicesManager.Log.Info("Le numéro de série du Hopper {0} {1} ", Number, SerialNumber);
                 hopperCoinID = CoinId;
@@ -1326,80 +1327,6 @@ namespace DeviceLibrary
         {
             return name;
         }
-
-        /// <summary>
-        /// Class contenant les informations du message envoyé lors du changement d'état des niveaux soft.
-        /// </summary>
-        public class CHardLevelData
-        {
-            /// <summary>
-            /// Indique le nombre de pièces dans le hopper.
-            /// </summary>
-            public long coinsNumber;
-
-            /// <summary>
-            /// Indique si le hopper est critique.
-            /// </summary>
-            public bool isHCritical;
-
-            /// <summary>
-            /// Seuil atteint.
-            /// </summary>
-            public CLevel.HardLevel level;
-
-            /// <summary>
-            /// Nom du hopper.
-            /// </summary>
-            public string nameOfHopper;
-        }
-
-        /// <summary>
-        /// Identification de la dénomination de la pièce gerée par le hopper
-        /// </summary>
-        public class CHopperCoinId
-        {
-            /// <summary>
-            /// Région sur 2 caractères
-            /// </summary>
-            public string CountryCode;
-
-            /// <summary>
-            /// Révision du data set
-            /// </summary>
-            public char Issue;
-
-            /// <summary>
-            /// Valeur en centimes.
-            /// </summary>
-            public long ValeurCent;
-        }
-
-        /// <summary>
-        /// Class contenant les informations du message envoyé lors du changement d'état des niveaux soft.
-        /// </summary>
-        public class CSoftLevelData
-        {
-            /// <summary>
-            /// Indique le nombre de pièces dans le hopper.
-            /// </summary>
-            public long coinsNumber;
-
-            /// <summary>
-            /// Indique si le hopper est critique.
-            /// </summary>
-            public bool isHCritical;
-
-            /// <summary>
-            /// Seuil atteint.
-            /// </summary>
-            public CLevel.SoftLevel level;
-
-            /// <summary>
-            /// Nom du hopper
-            /// </summary>
-            public string nameOfHopper;
-        }
-
-        /*--------------------------------------------------------------*/
     }
+    /*--------------------------------------------------------------*/
 }

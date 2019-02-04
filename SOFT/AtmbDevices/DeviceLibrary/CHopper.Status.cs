@@ -8,12 +8,10 @@ using System;
 
 namespace DeviceLibrary
 {
-    public partial class CHopper : CccTalk
-    {
         /// <summary>
         /// Classe des status des hoppers
         /// </summary>
-        public class CHopperStatus
+        public partial class CHopperStatus
         {
             /// <summary>
             /// Propriétaire de la class
@@ -31,7 +29,7 @@ namespace DeviceLibrary
             /// <summary>
             /// Instance de la classe CDispenseResult.
             /// </summary>
-            public CDispensedResult dispensedResult;
+            public CHopperDispensedResult dispensedResult;
 
             /// <summary>
             /// Contructeur;
@@ -40,7 +38,7 @@ namespace DeviceLibrary
             public CHopperStatus(CHopper owner)
             {
                 Owner = owner;
-                dispensedResult = new CDispensedResult
+                dispensedResult = new CHopperDispensedResult
                 {
                     nameOfHopper = Owner.name
                 };
@@ -111,7 +109,7 @@ namespace DeviceLibrary
                 {
                     CDevicesManager.Log.Info("Lecture des status du {0}", Owner.DeviceAddress);
                     byte[] bufferIn = { 0, 0, 0, 0 };
-                    if (Owner.IsCmdccTalkSended(Owner.DeviceAddress, Header.REQUESTHOPPERSTATUS, 0, null, bufferIn))
+                    if (CccTalk.IsCmdccTalkSended(Owner.DeviceAddress, CHopper.Header.REQUESTHOPPERSTATUS, 0, null, bufferIn))
                     {
                         EventCounter = bufferIn[0];
                         dispensedResult.CoinsRemaining = coinsRemaining = bufferIn[1];
@@ -126,58 +124,5 @@ namespace DeviceLibrary
                     CDevicesManager.Log.Error(messagesText.erreur, exception.GetType(), exception.Message, exception.StackTrace);
                 }
             }
-
-            /// <summary>
-            /// Classe des resultats d'une distribution.
-            /// </summary>
-            public class CDispensedResult
-            {
-                /// <summary>
-                /// Montant
-                /// </summary>
-                public int AmountToDispense;
-
-                /// <summary>
-                /// Nombre de pièces distribuées.
-                /// </summary>
-                public byte CoinsPaid;
-
-                /// <summary>
-                /// Nombre de pièce restant à payer.
-                /// </summary>
-                ///<remarks>Passe à zéro à la fin de la distribtion quelque soit la raison.</remarks>
-                public byte CoinsRemaining;
-
-                /// <summary>
-                /// Nombre de pièces non distribuées
-                /// </summary>
-                public byte CoinsUnpaid;
-
-                /// <summary>
-                /// Nombre de pièces devant être distribuées
-                /// </summary>
-                public byte CoinToDispense;
-
-                /// <summary>
-                /// Montant distribué
-                /// </summary>
-                public int MontantPaid;
-
-                /// <summary>
-                /// Montant non distribué
-                /// </summary>
-                public int MontantUnpaid;
-
-                /// <summary>
-                /// Numéro du hopper.
-                /// </summary>
-                public string nameOfHopper;
-
-                /// <summary>
-                /// Constructeur
-                /// </summary>
-                /// <param name="hopperNumber"></param>
-            }
         }
-    }
 }

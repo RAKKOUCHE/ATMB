@@ -125,6 +125,16 @@ namespace DeviceLibrary
             STATE_IDLE,
 
             /// <summary>
+            /// Etat pour la génération du rapport historique du BNR.
+            /// </summary>
+            STATE_REPORT,
+
+            /// <summary>
+            /// Recherche la plus petite denomnation disponible
+            /// </summary>
+            STATE_SEARCHDIVIDER,
+            
+            /// <summary>
             /// Arrêt du BNR.
             /// </summary>
             STATE_STOP,
