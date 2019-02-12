@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_module_emptied" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CModuleEmptied</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_module_emptied_1af9a09f197352214b519be70d6eae51c9" prot="public" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string DeviceLibrary.CModuleEmptied.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>Nom du module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs" line="16" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_module_emptied_1aa039f85ff7027e1c4f147823f03395e5" compoundref="_c_module_emptied_8cs" startline="32" endline="35">DeviceLibrary.CModuleEmptied.CModuleEmptied</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_module_emptied_1a1c6070553d2eff86653efb9c6a8c5c49" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CModuleEmptied.amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <briefdescription>
+<para>Montant transféré dans la caisse du BNR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs" line="21" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form_main_8cs" startline="349" endline="668">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_module_emptied_1aa2f2fc8ff143bc8785e9f3863b325b6a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CModuleEmptied.count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+<para>Nombre de billets transférés. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs" line="26" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_device_library_1_1_c_module_emptied_1aa039f85ff7027e1c4f147823f03395e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeviceLibrary.CModuleEmptied.CModuleEmptied</definition>
+        <argsstring>(string moduleName)</argsstring>
+        <name>CModuleEmptied</name>
+        <param>
+          <type>string</type>
+          <declname>moduleName</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>moduleName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nom du module.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs" line="32" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs" bodystart="32" bodyend="35"/>
+        <references refid="class_device_library_1_1_c_module_emptied_1af9a09f197352214b519be70d6eae51c9" compoundref="_c_module_emptied_8cs" startline="16">DeviceLibrary.CModuleEmptied.name</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class contenant les informations d&apos;un module vidé. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs" line="12" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs" bodystart="11" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_module_emptied_1a1c6070553d2eff86653efb9c6a8c5c49" prot="public" virt="non-virtual"><scope>DeviceLibrary::CModuleEmptied</scope><name>amount</name></member>
+      <member refid="class_device_library_1_1_c_module_emptied_1aa039f85ff7027e1c4f147823f03395e5" prot="public" virt="non-virtual"><scope>DeviceLibrary::CModuleEmptied</scope><name>CModuleEmptied</name></member>
+      <member refid="class_device_library_1_1_c_module_emptied_1aa2f2fc8ff143bc8785e9f3863b325b6a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CModuleEmptied</scope><name>count</name></member>
+      <member refid="class_device_library_1_1_c_module_emptied_1af9a09f197352214b519be70d6eae51c9" prot="public" virt="non-virtual"><scope>DeviceLibrary::CModuleEmptied</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

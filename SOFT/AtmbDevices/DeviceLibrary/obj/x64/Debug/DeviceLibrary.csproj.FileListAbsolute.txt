@@ -1,0 +1,17 @@
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\x64\Debug\NLog.config
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\x64\Debug\DeviceLibrary.dll.config
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\x64\Debug\DeviceLibrary.dll
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\x64\Debug\DeviceLibrary.pdb
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\x64\Debug\DeviceLibrary.xml
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\x64\Debug\DeviceLibrary.dll.CodeAnalysisLog.xml
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\x64\Debug\DeviceLibrary.dll.lastcodeanalysissucceeded
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\x64\Debug\BnrCtlDotNet40.dll
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\x64\Debug\NLog.dll
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\bin\x64\Debug\NLog.xml
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\x64\Debug\DeviceLibrary.messagesText.resources
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\x64\Debug\DeviceLibrary.Properties.Resources.resources
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\x64\Debug\DeviceLibrary.csproj.GenerateResource.cache
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\x64\Debug\DeviceLibrary.csproj.CoreCompileInputs.cache
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\x64\Debug\DeviceLibrary.csproj.CopyComplete
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\x64\Debug\DeviceLibrary.dll
+D:\Projets\ATMB\SOFT\AtmbDevices\DeviceLibrary\obj\x64\Debug\DeviceLibrary.pdb

@@ -381,7 +381,10 @@ namespace DeviceLibrary
                     }
                     else
                     {
-                        State = Etat.STATE_CANCEL;
+                        if (state != Etat.STATE_CASHIN_END)
+                        {
+                            State = Etat.STATE_CANCEL;
+                        }
                     }
                     break;
                 }

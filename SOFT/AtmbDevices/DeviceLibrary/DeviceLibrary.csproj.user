@@ -11,4 +11,12 @@
     <StartAction>Program</StartAction>
     <StartProgram>D:\Projets\ATMB\SOFTWARE\AtmbTestDevices\AtmbTestDevices\bin\Release\AtmbTestDevices.exe</StartProgram>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <StartProgram>D:\Projets\ATMB\SOFTWARE\AtmbTestDevices\AtmbTestDevices\bin\Debug\AtmbTestDevices.exe</StartProgram>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <StartProgram>D:\Projets\ATMB\SOFTWARE\AtmbTestDevices\AtmbTestDevices\bin\Release\AtmbTestDevices.exe</StartProgram>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
 </Project>

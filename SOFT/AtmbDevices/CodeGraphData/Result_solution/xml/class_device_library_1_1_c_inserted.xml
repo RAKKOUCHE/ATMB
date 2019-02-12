@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_device_library_1_1_c_inserted" kind="class" prot="public">
+    <compoundname>DeviceLibrary::CInserted</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_device_library_1_1_c_inserted_1acd277c0e1642386ea19a67d2cff191be" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CInserted.BackTotalAmount</definition>
+        <argsstring></argsstring>
+        <name>BackTotalAmount</name>
+        <briefdescription>
+<para>Sauvegarde du montant total inséré depuis le début de la transaction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" line="17" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_inserted_1aac27d56560142f96e77ea41541aa5c7d" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CInserted.CVChannel</definition>
+        <argsstring></argsstring>
+        <name>CVChannel</name>
+        <briefdescription>
+<para>Canal correpsondant à la pièce insérée </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" line="22" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="384" endline="450">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_inserted_1ac027d9fef6fd0abf18eea6ea77088a2a" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte DeviceLibrary.CInserted.CVPath</definition>
+        <argsstring></argsstring>
+        <name>CVPath</name>
+        <briefdescription>
+<para>Chemin de tri utilisé </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" line="27" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_inserted_1a1e77007006714234054467ef0f205f28" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CInserted.TotalAmount</definition>
+        <argsstring></argsstring>
+        <name>TotalAmount</name>
+        <briefdescription>
+<para>Montant inséré depuis le début de la transaction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" line="32" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a9c6583e58c27d62ea39cbbfd664724f4" compoundref="_c_devices_manager_8cs" startline="963" endline="1001">DeviceLibrary.CDevicesManager.BeginTransaction</referencedby>
+        <referencedby refid="class_atmb_test_devices_1_1_form_main_1a09c9c024f5862c32c8c47c61752404bc" compoundref="_form_main_8cs" startline="349" endline="668">AtmbTestDevices.FormMain.MsgFromdll</referencedby>
+        <referencedby refid="class_device_library_1_1_c_devices_manager_1a73922ee2f14d484befd59f9d2c7c30d9" compoundref="_c_devices_manager_8cs" startline="721" endline="875">DeviceLibrary.CDevicesManager.Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_device_library_1_1_c_inserted_1ae61683e54952a86faee96a9287522ee4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DeviceLibrary.CInserted.ValeurCent</definition>
+        <argsstring></argsstring>
+        <name>ValeurCent</name>
+        <briefdescription>
+<para>Montant nominal en centimes de la pièce insérée </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" line="37" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a70a1e05eda188ac2746ead3fff39a54d" compoundref="_c_b_n_r___c_p_i_8cs" startline="229" endline="428">DeviceLibrary.CBNR_CPI.Bnr_OperationCompletedEvent</referencedby>
+        <referencedby refid="class_device_library_1_1_c_coin_validator_1ac3b462f2745990be15e78aef12ceb0ce" compoundref="_c_coin_validator_8cs" startline="384" endline="450">DeviceLibrary.CCoinValidator.CheckCreditBuffer</referencedby>
+        <referencedby refid="class_device_library_1_1_c_b_n_r___c_p_i_1a0566168fe5af91b8c78148984cb4bcab" compoundref="_c_b_n_r___c_p_i_8cs" startline="645" endline="770">DeviceLibrary.CBNR_CPI.StatusOccured</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe des pièces insérées </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" line="13" column="1" bodyfile="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CInserted.cs" bodystart="12" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_device_library_1_1_c_inserted_1acd277c0e1642386ea19a67d2cff191be" prot="public" virt="non-virtual"><scope>DeviceLibrary::CInserted</scope><name>BackTotalAmount</name></member>
+      <member refid="class_device_library_1_1_c_inserted_1aac27d56560142f96e77ea41541aa5c7d" prot="public" virt="non-virtual"><scope>DeviceLibrary::CInserted</scope><name>CVChannel</name></member>
+      <member refid="class_device_library_1_1_c_inserted_1ac027d9fef6fd0abf18eea6ea77088a2a" prot="public" virt="non-virtual"><scope>DeviceLibrary::CInserted</scope><name>CVPath</name></member>
+      <member refid="class_device_library_1_1_c_inserted_1a1e77007006714234054467ef0f205f28" prot="public" virt="non-virtual"><scope>DeviceLibrary::CInserted</scope><name>TotalAmount</name></member>
+      <member refid="class_device_library_1_1_c_inserted_1ae61683e54952a86faee96a9287522ee4" prot="public" virt="non-virtual"><scope>DeviceLibrary::CInserted</scope><name>ValeurCent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

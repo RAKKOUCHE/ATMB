@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_module_emptied_8cs" kind="file">
+    <compoundname>CModuleEmptied.cs</compoundname>
+    <innerclass refid="class_device_library_1_1_c_module_emptied" prot="public">DeviceLibrary::CModuleEmptied</innerclass>
+    <innernamespace refid="namespace_device_library">DeviceLibrary</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DeviceLibrary</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="class_device_library_1_1_c_module_emptied" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_device_library_1_1_c_module_emptied" kindref="compound">CModuleEmptied</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="class_device_library_1_1_c_module_emptied_1af9a09f197352214b519be70d6eae51c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>readonly<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_module_emptied_1af9a09f197352214b519be70d6eae51c9" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_device_library_1_1_c_module_emptied_1a1c6070553d2eff86653efb9c6a8c5c49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_module_emptied_1a1c6070553d2eff86653efb9c6a8c5c49" kindref="member">amount</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_device_library_1_1_c_module_emptied_1aa2f2fc8ff143bc8785e9f3863b325b6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_module_emptied_1aa2f2fc8ff143bc8785e9f3863b325b6a" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_device_library_1_1_c_module_emptied_1aa039f85ff7027e1c4f147823f03395e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_device_library_1_1_c_module_emptied_1aa039f85ff7027e1c4f147823f03395e5" kindref="member">CModuleEmptied</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>moduleName)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_device_library_1_1_c_module_emptied_1af9a09f197352214b519be70d6eae51c9" kindref="member">name</ref><sp/>=<sp/>moduleName;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Projets/ATMB/SOFT/AtmbDevices/DeviceLibrary/CModuleEmptied.cs"/>
+  </compounddef>
+</doxygen>

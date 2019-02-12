@@ -155,5 +155,14 @@
  * - Implémentation du vidage des modules.
  * - Consolidation de la machine d'état du BNR.
  * - Implémentations de la sauvegarde du report et audit.
+ *
+ * Rev. 09.01.21   2019 02 12<br>
+ * -------------------------------------
+ * ### Bugs
+ * - Erreur dans la clôture du rechargement.
+ * 
+ * ### Modifications
+ * - Correction du bug.
+ *
  *------------------------------------------------------------------------------
  */

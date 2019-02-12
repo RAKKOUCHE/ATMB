@@ -22,7 +22,7 @@
     <!--Code ISO sur 3 lettres et taux de conversion des devises-->
     <Devises>
         <!--Code ISO de la devise principal-->
-        <Primaire>EUR</Primaire>
+        <Primaire>AAA</Primaire>
         <!--Code ISO de la devise secondaire-->
         <Secondaire>EUR</Secondaire>
         <!--Taux de conversion-->
